@@ -1,0 +1,63 @@
+TOKEN:block_comment: ("/*" - "*/")
+#TOKEN:line_comment: ( "--"i | "--"i [^ "\n" "\r"]* ) 
+TOKEN:line_comment: ( "--"i [^ "\n" "\r"]* )
+TOKEN:whitespace:( [" " "\t" "\n" "\r"]+ )
+TOKEN:operator: (
+    ":=" | "+" | "-" | "*" | "/" | "**" | "||" | "PRIOR"i | "CONNECT_BY_ROOT"i |
+    "UNION"i | "UNION ALL"i | "INTERSECT"i | "MINUS"i | "MULTISET EXCEPT"i |
+    "MULTISET INTERSECT"i | "MULTISET UNION"i | "=" | "<>" | "!=" | "~=" |
+    "^=" | ">" | "<" | "<=" | ">=" | "IS NULL"i | "LIKE"i | "BETWEEN"i |
+    "IN"i | "NOT IN"i | "AND"i | "OR"i | "NOT"i | ".." | "ANY"i | "SOME"i |
+    "ALL"i | "EXISTS"i | "ESCAPE"i | "IS NOT NULL"i | "(+)" | "(" | ")"
+)
+TOKEN:number: (
+    #["0"-"9"]+ |
+    #["+" "-"]? ["0"-"9"]+
+    ["+" "-"]?["0"-"9"]*"."?["0"-"9"]+(["e" "E"]["+" "-"]?["0"-"9"]+)?
+)
+TOKEN:keyword: (
+    "BEGIN"i | "END"i | "IF"i | "THEN"i | "ELSE"i | "END IF"i | "SELECT"i |
+    "FROM"i | "AS"i | "WHERE"i | "PROCEDURE"i | "FUNCTION"i
+)
+#TOKEN:begin_stm: ( "BEGIN"i )
+
+
+TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
+ 
+TOKEN:separator: (
+     ";"
+)
+
+SKIP:whitespace
+SKIP:block_comment
+SKIP:line_comment
+
+#FOLD:block_comment: {
+#    fold_display_name:"LBL_Comment";
+#    expand_type_action_name:"Expand Comments";
+#    collapse_type_action_name:"Collapse Comments"; 
+#}
+#FOLD:block_comment: {
+#    fold_display_name:"LBL_HTML_Comment";
+#    expand_type_action_name:"LBL_Expand_HTML_Comment";
+#    collapse_type_action_name:"LBL_Collapse_HTML_Comment";
+#} 
+
+# Grammar 
+S = (Statement)*;
+Statement = WhileStatement | IfStatement | ExpressionStatement;
+WhileStatement = "while" "(" ConditionalExpression ")" Block;
+IfStatement = "if" "(" ConditionalExpression ")" "then" Block ["else" Block] ";";
+Block = <keyword, "begin"> (Statement)* <keyword, "end">;
+Block = (Statement)*;
+#gr_begin_stm = "BEGIN";
+ConditionalExpression = <identifier>;
+ExpressionStatement = <identifier>;
+
+FOLD:Block
+FOLD:block_comment: {
+    fold_display_name:"/*...*/";
+}
+
+BRACE "(:)"
+BRACE "[:]" 
