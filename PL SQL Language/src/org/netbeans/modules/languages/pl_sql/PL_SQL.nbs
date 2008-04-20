@@ -45,14 +45,16 @@ SKIP:line_comment
 
 # Grammar 
 S = (Statement)*;
-Statement = WhileStatement | IfStatement | ExpressionStatement;
-WhileStatement = "while" "(" ConditionalExpression ")" Block;
-IfStatement = "if" "(" ConditionalExpression ")" "then" Block ["else" Block] ";";
-Block = <keyword, "begin"> (Statement)* <keyword, "end">;
-Block = (Statement)*;
+Statement = Block;
+#Statement = WhileStatement | IfStatement | ExpressionStatement | Block;
+#WhileStatement = "while" "(" ConditionalExpression ")" Block;
+#IfStatement = "if" "(" ConditionalExpression ")" "then" Block ["else" Block] ";";
+#Block = <keyword, "begin"> (Statement)* <keyword, "end">;
+Block = <keyword, "BEGIN"> (<identifier> ";")+ <keyword, "end"> [";"];
+#Block = (Statement)*;
 #gr_begin_stm = "BEGIN";
-ConditionalExpression = <identifier>;
-ExpressionStatement = <identifier>;
+#ConditionalExpression = <identifier>;
+#ExpressionStatement = <identifier>;
 
 FOLD:Block
 FOLD:block_comment: {
