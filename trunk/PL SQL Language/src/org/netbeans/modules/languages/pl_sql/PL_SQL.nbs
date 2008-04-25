@@ -7,26 +7,30 @@ TOKEN:operator: (
     "UNION"i | "UNION ALL"i | "INTERSECT"i | "MINUS"i | "MULTISET EXCEPT"i |
     "MULTISET INTERSECT"i | "MULTISET UNION"i | "=" | "<>" | "!=" | "~=" |
     "^=" | ">" | "<" | "<=" | ">=" | "IS NULL"i | "LIKE"i | "BETWEEN"i |
-    "IN"i | "NOT IN"i | "AND"i | "OR"i | "NOT"i | ".." | "ANY"i | "SOME"i |
+    "IN"i | "NOT IN"i | "AND"i | "NOT"i | ".." | "ANY"i | "SOME"i |
     "ALL"i | "EXISTS"i | "ESCAPE"i | "IS NOT NULL"i | "(+)" | "(" | ")"
 )
+TOKEN:or_operator: ( "OR"i )
 TOKEN:number: (
     #["0"-"9"]+ |
     #["+" "-"]? ["0"-"9"]+
     ["+" "-"]?["0"-"9"]*"."?["0"-"9"]+(["e" "E"]["+" "-"]?["0"-"9"]+)?
 )
 TOKEN:keyword: (
-    "BEGIN"i | "END"i | "IF"i | "THEN"i | "ELSE"i | "END IF"i | "SELECT"i |
+    "IF"i | "ELSE"i | "END IF"i | "SELECT"i | "." |
     "FROM"i | "AS"i | "WHERE"i | "PROCEDURE"i | "FUNCTION"i
 )
-#TOKEN:begin_stm: ( "BEGIN"i )
-
+TOKEN:begin_keyword: ( "BEGIN"i )
+TOKEN:end_keyword: ( "END"i )
+TOKEN:declare_keyword: ( "DECLARE"i )
+TOKEN:exception_keyword: ( "EXCEPTION"i )
+TOKEN:when_keyword: ( "WHEN"i )
+TOKEN:then_keyword: ( "THEN"i )
 
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
  
-TOKEN:separator: (
-     ";"
-)
+TOKEN:separator: ( ";" )
+TOKEN:terminator: ( "/" )
 
 SKIP:whitespace
 SKIP:block_comment
@@ -44,22 +48,34 @@ SKIP:line_comment
 #} 
 
 # Grammar 
-S = (Statement)*;
-Statement = Block;
+S = (Source_Element)*;
+Source_Element = Anonymous_Block;
 #Statement = WhileStatement | IfStatement | ExpressionStatement | Block;
 #WhileStatement = "while" "(" ConditionalExpression ")" Block;
 #IfStatement = "if" "(" ConditionalExpression ")" "then" Block ["else" Block] ";";
 #Block = <keyword, "begin"> (Statement)* <keyword, "end">;
-Block = <keyword, "BEGIN"> (<identifier> ";")+ <keyword, "end"> [";"];
+Anonymous_Block = [Declare_Section]
+                  <begin_keyword>
+                  (Executable_Section)+
+                  [Exception_Section]
+                  <end_keyword> 
+                  [<separator>]["/"];
+Executable_Section = Statement | Anonymous_Block;
+Statement = Call_Statement;
+Call_Statement = <identifier> ["." <identifier>] ";";
+Declare_Section = [<declare_keyword>]
+                  (<identifier> <identifier> [":=" <number>] <separator>)+ ;
+Exception_Section = <exception_keyword> (Exception_Handler)+;
+Exception_Handler = <when_keyword> <identifier> (<or_operator> <identifier>)*
+                    <then_keyword> Executable_Section;
 #Block = (Statement)*;
 #gr_begin_stm = "BEGIN";
 #ConditionalExpression = <identifier>;
 #ExpressionStatement = <identifier>;
 
 FOLD:Block
-FOLD:block_comment: {
-    fold_display_name:"/*...*/";
-}
+FOLD:block_comment: { fold_display_name:"/*...*/"; }
+FOLD:Anonymous_Block: { fold_display_name:"begin...end"; }
 
 BRACE "(:)"
 BRACE "[:]" 

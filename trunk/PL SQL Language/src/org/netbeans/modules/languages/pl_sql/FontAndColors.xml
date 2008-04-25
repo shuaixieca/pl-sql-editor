@@ -5,12 +5,19 @@
     <fontcolor default="comment" name="block_comment"/>
     <fontcolor default="keyword" name="keyword"/>
     <fontcolor default="keyword" name="command"/>
-    <!--fontcolor default="keyword" name="begin_stm"/-->
+    <fontcolor default="keyword" name="begin_keyword"/>
+    <fontcolor default="keyword" name="end_keyword"/>
+    <fontcolor default="keyword" name="declare_keyword"/>
+    <fontcolor default="keyword" name="exception_keyword"/>
+    <fontcolor default="keyword" name="when_keyword"/>
+    <fontcolor default="keyword" name="then_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
+    <fontcolor default="separator" name="terminator"/>
     <fontcolor default="whitespace" name="whitespace"/>
     <fontcolor default="identifier" name="identifier"/>
     <fontcolor default="operator" name="operator"/>
+    <fontcolor default="operator" name="or_operator"/>
     <fontcolor default="error" name="error"/>
     <fontcolor default="number" name="number"/>
 </fontscolors>
