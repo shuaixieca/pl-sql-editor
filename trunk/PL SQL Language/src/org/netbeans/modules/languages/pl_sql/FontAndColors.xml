@@ -11,6 +11,8 @@
     <fontcolor default="keyword" name="exception_keyword"/>
     <fontcolor default="keyword" name="when_keyword"/>
     <fontcolor default="keyword" name="then_keyword"/>
+    <fontcolor default="keyword" name="not_null_keyword"/>
+    <fontcolor default="keyword" name="default_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
