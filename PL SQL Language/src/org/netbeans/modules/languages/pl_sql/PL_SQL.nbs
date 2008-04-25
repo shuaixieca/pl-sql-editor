@@ -27,6 +27,9 @@ TOKEN:exception_keyword: ( "EXCEPTION"i )
 TOKEN:when_keyword: ( "WHEN"i )
 TOKEN:then_keyword: ( "THEN"i )
 
+TOKEN:not_null_keyword: ( "NOT NULL"i )
+TOKEN:default_keyword: ( "DEFAULT"i )
+
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
  
 TOKEN:separator: ( ";" )
@@ -54,17 +57,21 @@ Source_Element = Anonymous_Block;
 #WhileStatement = "while" "(" ConditionalExpression ")" Block;
 #IfStatement = "if" "(" ConditionalExpression ")" "then" Block ["else" Block] ";";
 #Block = <keyword, "begin"> (Statement)* <keyword, "end">;
-Anonymous_Block = [Declare_Section]
-                  <begin_keyword>
-                  (Executable_Section)+
-                  [Exception_Section]
-                  <end_keyword> 
-                  [<separator>]["/"];
+Block = <begin_keyword>
+            (Executable_Section)+
+            [Exception_Section]
+        <end_keyword>[<separator>]["/"];
+Anonymous_Block = [Anonymous_Block_Declare_Section] Block;
 Executable_Section = Statement | Anonymous_Block;
 Statement = Call_Statement;
-Call_Statement = <identifier> ["." <identifier>] ";";
-Declare_Section = [<declare_keyword>]
-                  (<identifier> <identifier> [":=" <number>] <separator>)+ ;
+Call_Statement = <identifier> ("." <identifier>)* ";";
+Anonymous_Block_Declare_Section = <declare_keyword> (Variable_Declaration)+;
+Declare_Section = <identifier> <identifier> [":=" <number>] <separator> ;
+Variable_Declaration = <identifier> Data_Type 
+                       [[<not_null_keyword>] Variable_Def_Part Expression] <separator>;
+Variable_Def_Part = <operator, ":="> | <default_keyword>;
+Data_Type = <identifier>;
+Expression = <identifier>;
 Exception_Section = <exception_keyword> (Exception_Handler)+;
 Exception_Handler = <when_keyword> <identifier> (<or_operator> <identifier>)*
                     <then_keyword> Executable_Section;
@@ -73,9 +80,11 @@ Exception_Handler = <when_keyword> <identifier> (<or_operator> <identifier>)*
 #ConditionalExpression = <identifier>;
 #ExpressionStatement = <identifier>;
 
-FOLD:Block
+FOLD:Block: { fold_display_name:"begin...end"; }
 FOLD:block_comment: { fold_display_name:"/*...*/"; }
-FOLD:Anonymous_Block: { fold_display_name:"begin...end"; }
+#FOLD:Anonymous_Block: { fold_display_name:"begin...end"; }
 
 BRACE "(:)"
-BRACE "[:]" 
+BRACE "[:]"
+
+COMPLETE "/*:*/"
