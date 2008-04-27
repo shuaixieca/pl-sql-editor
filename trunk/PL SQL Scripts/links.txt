@@ -1,3 +1,4 @@
 http://wiki.netbeans.org/SchliemannNBSLanguageDescription
 http://www.psoug.org/reference/anonymous_blocks.html
 http://www.goldfish.org/books/O'Reilly%20Oracle%20PLSQL%20CD%20Bookshelf/prog2/ch15_03.htm
+http://erlybird.svn.sourceforge.net/viewvc/erlybird/
