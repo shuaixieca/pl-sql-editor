@@ -14,12 +14,17 @@ TOKEN:or_operator: ( "OR"i )
 TOKEN:and_operator: ( "AND"i )
 TOKEN:not_operator: ( "NOT"i )
 
-TOKEN:number: (
+TOKEN:number_unsigned: (
+    ["0"-"9"]*"."?["0"-"9"]+(["e" "E"]["+" "-"]?["0"-"9"]+)?
+)
+#TOKEN:number: (
     #["0"-"9"]+ |
     #["+" "-"]? ["0"-"9"]+
-    ["+" "-"]?["0"-"9"]*"."?["0"-"9"]+(["e" "E"]["+" "-"]?["0"-"9"]+)?
-)
-TOKEN:string: ( "\'" [^ "\'"]* "\'" )
+#    ["+" "-"]?["0"-"9"]*"."?["0"-"9"]+(["e" "E"]["+" "-"]?["0"-"9"]+)?
+#)
+TOKEN:string: ( "\'" ( 
+        ([^ "\'"])*([ "\'"][ "\'"])*([^ "\'"])*
+    )* "\'" )
 
 TOKEN:keyword: (
     "IF"i | "ELSE"i | "END IF"i | "SELECT"i | "." |
@@ -32,6 +37,7 @@ TOKEN:exception_keyword: ( "EXCEPTION"i )
 TOKEN:when_keyword: ( "WHEN"i )
 TOKEN:then_keyword: ( "THEN"i )
 TOKEN:not_null_keyword: ( "NOT NULL"i )
+TOKEN:null_keyword: ( "NULL"i )
 TOKEN:default_keyword: ( "DEFAULT"i )
 
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
@@ -78,11 +84,29 @@ Variable_Declaration = <identifier> Data_Type
 Variable_Def_Part = <operator, ":="> | <default_keyword>;
 Data_Type = <identifier>;
 
-Expression = Boolean_Expression | <string>;
-Expression_Part = <identifier> | <ext_identifier>; 
-Boolean_Expression = [<not_operator>] Expression_Part (Boolean_Expression_1)* ;
-Boolean_Expression_Part = <and_operator> | <or_operator>;
-Boolean_Expression_1 = Boolean_Expression_Part [<not_operator>] Expression_Part;
+Expression = Boolean_Expression | String_expression | Numeric_expression;
+#Expression_Part = <identifier> | <ext_identifier>; 
+#Boolean_Expression = [<not_operator>] Expression_Part (Boolean_Expression_1)* ;
+#Boolean_Expression_Part = <and_operator> | <or_operator>;
+#Boolean_Expression_1 = Boolean_Expression_Part [<not_operator>] Expression_Part;
+#Boolean_Expression_1 = Boolean_Expression_Part ( <operator> Boolean_Expression)*;
+
+String_expression = String_term (<operator, "||"> String_term)*;
+String_term = <string> | <identifier> | <ext_identifier>;
+
+Numeric_expression = [Numeric_operator1] Numeric_term (Numeric_operator1 Numeric_term)*;
+Numeric_operator1 = <operator, "+"> | <operator, "-">;
+Numeric_term = Numeric_factor (Numeric_operator2 Numeric_factor)*;
+Numeric_operator2 = <operator, "*"> | <operator, "/"> | <operator, "**">;
+Numeric_factor = <number_unsigned> | <identifier> | <ext_identifier>;
+
+Boolean_Expression = Expression_Part_Op;
+Expression_Part_Op = (Expression_Part)+;
+Expression_Part_Op = (Expression_Part Bool_Operator Expression_Part_Op)+;
+Expression_Part_Op = ((<not_operator>)? Expression_Part_Op)+ ;
+Expression_Part_Op = (<operator, "("> Expression_Part_Op <operator, ")"> (Expression_Part_Op)? )+;
+Expression_Part = <identifier> | <ext_identifier> | <null_keyword>;
+Bool_Operator = <and_operator> | <or_operator>;
 
 Exception_Section = <exception_keyword> (Exception_Handler)+;
 Exception_Handler = <when_keyword> <identifier> (<or_operator> <identifier>)*
