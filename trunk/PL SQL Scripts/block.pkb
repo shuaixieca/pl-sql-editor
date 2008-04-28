@@ -1,7 +1,10 @@
 declAre
-dede number; dede varchar2 not nulL :=  not (fgf.gf@sw or de.de) and not de;
+ dede number; 
+ dede varchar2 not nulL := noT fgf3dfrj.frr@s and dede.de and not f;
 -- line comment
-de poap;
+ de poap := de||'cdcd'''||dede||'d'||char;
+ num number := -d3-d.e-3.2e+10+43/de**dd+3**6;
+ num2 pom := null;
 begin
 null;
 end;
@@ -16,7 +19,9 @@ block
  comment */
     de.deed;
 declare
-ass cd := ' '' ';
+ass cd := '6h
+    g''''"s\s2df
+    aa''ad''''8''';
    ded de := 'ef                  
   v';
     begin
