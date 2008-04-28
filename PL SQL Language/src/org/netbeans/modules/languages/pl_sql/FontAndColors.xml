@@ -12,6 +12,7 @@
     <fontcolor default="keyword" name="when_keyword"/>
     <fontcolor default="keyword" name="then_keyword"/>
     <fontcolor default="keyword" name="not_null_keyword"/>
+    <fontcolor default="keyword" name="null_keyword"/>
     <fontcolor default="keyword" name="default_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
@@ -25,6 +26,7 @@
     <fontcolor default="operator" name="not_operator"/>
     <fontcolor default="error" name="error"/>
     <fontcolor default="number" name="number"/>
+    <fontcolor default="number" name="unsigned_number"/>
 </fontscolors>
 
 
