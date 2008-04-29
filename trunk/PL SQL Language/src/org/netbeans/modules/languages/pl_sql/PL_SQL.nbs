@@ -39,9 +39,17 @@ TOKEN:then_keyword: ( "THEN"i )
 TOKEN:not_null_keyword: ( "NOT NULL"i )
 TOKEN:null_keyword: ( "NULL"i )
 TOKEN:default_keyword: ( "DEFAULT"i )
+TOKEN:rowtype_keyword: ( "%ROWTYPE"i )
+TOKEN:type_keyword: ( "%TYPE"i )
+TOKEN:true_keyword: ( "TRUE"i )
+TOKEN:false_keyword: ( "FALSE"i )
 
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
-TOKEN:ext_identifier:( ["a"-"z" "A"-"Z"] ["." "@" "$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
+TOKEN:ext_identifier:( 
+    ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* ["." "@"]
+    ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* (["." "@"]?
+    ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]*)?
+)
  
 TOKEN:separator: ( ";" )
 TOKEN:terminator: ( "/" )
@@ -64,6 +72,7 @@ SKIP:line_comment
 # Grammar 
 S = (Source_Element)*;
 Source_Element = Anonymous_Block;
+Universal_Identifier = <identifier> | <ext_identifier>;
 #Statement = WhileStatement | IfStatement | ExpressionStatement | Block;
 #WhileStatement = "while" "(" ConditionalExpression ")" Block;
 #IfStatement = "if" "(" ConditionalExpression ")" "then" Block ["else" Block] ";";
@@ -75,39 +84,38 @@ Block = <begin_keyword>
 Anonymous_Block = [Anonymous_Block_Declare_Section] Block;
 Executable_Section = Statement | Inner_Anonymous_Block;
 Inner_Anonymous_Block = Anonymous_Block_Declare_Section Block;
-Statement = Call_Statement;
+Statement = Assigment_Statement | Call_Statement;
 Call_Statement = Expression_Part ";";
+Expression_Part = <identifier> | <ext_identifier> | <null_keyword>;
+
+Assigment_Statement = Universal_Identifier <operator, ":="> Expression <separator>;
 Anonymous_Block_Declare_Section = <declare_keyword> (Variable_Declaration)+;
 
 Variable_Declaration = <identifier> Data_Type 
-                       [[<not_null_keyword>] Variable_Def_Part Expression] <separator>;
+                       [Variable_Declaration_Part] <separator>;
+Variable_Declaration_Part = [<not_null_keyword>] Variable_Def_Part Expression_In_Declare;
 Variable_Def_Part = <operator, ":="> | <default_keyword>;
-Data_Type = <identifier>;
+Data_Type = Universal_Identifier;
 
 Expression = Boolean_Expression | String_expression | Numeric_expression;
-#Expression_Part = <identifier> | <ext_identifier>; 
-#Boolean_Expression = [<not_operator>] Expression_Part (Boolean_Expression_1)* ;
-#Boolean_Expression_Part = <and_operator> | <or_operator>;
-#Boolean_Expression_1 = Boolean_Expression_Part [<not_operator>] Expression_Part;
-#Boolean_Expression_1 = Boolean_Expression_Part ( <operator> Boolean_Expression)*;
+Expression_In_Declare = Expression | Special_expression;
+#Expression_In_Declare = String_expression | Boolean_Expression | Numeric_expression | Special_expression;# [Universal_Identifier];
+
+Special_expression = (<identifier> | <ext_identifier>) (<type_keyword> | <rowtype_keyword>);
 
 String_expression = String_term (<operator, "||"> String_term)*;
 String_term = <string> | <identifier> | <ext_identifier>;
 
 Numeric_expression = [Numeric_operator1] Numeric_term (Numeric_operator1 Numeric_term)*;
-Numeric_operator1 = <operator, "+"> | <operator, "-">;
+Numeric_operator1 = (<operator, "+"> | <operator, "-">) (<operator, "(">)*;
 Numeric_term = Numeric_factor (Numeric_operator2 Numeric_factor)*;
-Numeric_operator2 = <operator, "*"> | <operator, "/"> | <operator, "**">;
-Numeric_factor = <number_unsigned> | <identifier> | <ext_identifier>;
+Numeric_operator2 = (<operator, "*"> | <operator, "/"> | <operator, "**">) (<operator, "(">)*;
+Numeric_factor = (<number_unsigned> | <identifier> | <ext_identifier>) (<operator, ")">)*;
 
-Boolean_Expression = Expression_Part_Op;
-Expression_Part_Op = (Expression_Part)+;
-Expression_Part_Op = (Expression_Part Bool_Operator Expression_Part_Op)+;
-Expression_Part_Op = ((<not_operator>)? Expression_Part_Op)+ ;
-Expression_Part_Op = (<operator, "("> Expression_Part_Op <operator, ")"> (Expression_Part_Op)? )+;
-Expression_Part = <identifier> | <ext_identifier> | <null_keyword>;
-Bool_Operator = <and_operator> | <or_operator>;
-
+Boolean_Expression = [<not_operator>] Boolean_term (<or_operator> [<not_operator>] Boolean_term)*;
+Boolean_term = Boolean_factor (<and_operator> [<not_operator>] Boolean_factor)*;
+Boolean_factor = <true_keyword> | <false_keyword> | <identifier> | <ext_identifier>;
+		
 Exception_Section = <exception_keyword> (Exception_Handler)+;
 Exception_Handler = <when_keyword> <identifier> (<or_operator> <identifier>)*
                     <then_keyword> (Inner_Anonymous_Block | Block | Statement);
