@@ -14,6 +14,10 @@
     <fontcolor default="keyword" name="not_null_keyword"/>
     <fontcolor default="keyword" name="null_keyword"/>
     <fontcolor default="keyword" name="default_keyword"/>
+    <fontcolor default="keyword" name="rowtype_keyword"/>
+    <fontcolor default="keyword" name="type_keyword"/>
+    <fontcolor default="keyword" name="true_keyword"/>
+    <fontcolor default="keyword" name="false_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
