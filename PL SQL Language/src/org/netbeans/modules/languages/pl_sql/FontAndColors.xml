@@ -4,6 +4,7 @@
     <fontcolor default="comment" name="line_comment"/>
     <fontcolor default="comment" name="block_comment"/>
     <fontcolor default="keyword" name="keyword"/>
+    <fontcolor default="keyword" name="some_types"/>
     <fontcolor default="keyword" name="command"/>
     <fontcolor default="keyword" name="begin_keyword"/>
     <fontcolor default="keyword" name="end_keyword"/>
@@ -18,6 +19,7 @@
     <fontcolor default="keyword" name="type_keyword"/>
     <fontcolor default="keyword" name="true_keyword"/>
     <fontcolor default="keyword" name="false_keyword"/>
+    <fontcolor default="keyword" name="constant_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
