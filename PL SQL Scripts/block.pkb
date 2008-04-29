@@ -3,12 +3,10 @@ declAre
  dede varchar2 not nulL := not fgf3dfrj.frr@s and dede.de and not f;
 -- line comment
  de poap := de||'cdcd'''||dede||'d'||char;
- num number := -d3-d.e-3.2e+10+43/de**dd+3**6;
+ num NAtURaL := (-d3-d.e)*(3.2e+10+43)/de**dd+3**6;
  num2 pom := not nll and de;
- num4 po.m := notnukll%type;
- num5 pom := null.d@e%rowtype;
- num6 pom := not true or false and not true;
- num7 pum := fals;
+ num6 pom := (not in de >= sw and true or false and def) and not true;
+ num7 Constant PLS_integer default 'demo';
  num3 number := +d3-((d.e-3.2e20)+10+43)/(de**(dd+3)**6);
 begin
 null;
@@ -17,9 +15,13 @@ end;
 /
 
 decLARE
-ded de;
+    ded de;
+    v_empid    employees_temp.empid%TYPE := e3;
+    v_deptid   db.schema.employees_temp%ROWTYPE;
+    v_deptname employees_temp.deptname%TYPE;
 Begin
     ds;
+    ded := null;
 /*
 block
  comment */
