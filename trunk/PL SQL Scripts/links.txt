@@ -5,3 +5,7 @@ http://erlybird.svn.sourceforge.net/viewvc/erlybird/
 
 regex
 http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html
+
+antlr
+http://www.antlr.org/grammar/1107752678378/PLSQLGrammar.g
+http://www.antlr.org/grammar/1209225566284/PLSQL3.g
