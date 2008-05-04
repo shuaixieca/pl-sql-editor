@@ -4,7 +4,11 @@
     <fontcolor default="comment" name="line_comment"/>
     <fontcolor default="comment" name="block_comment"/>
     <fontcolor default="keyword" name="keyword"/>
-    <fontcolor default="keyword" name="some_types"/>
+    <fontcolor default="keyword" name="some_types"/>    
+    <fontcolor default="keyword" name="size_types"/>
+    <fontcolor default="keyword" name="scale_types"/>
+    <fontcolor default="keyword" name="char_types"/>
+    <fontcolor default="keyword" name="raw_type"/>
     <fontcolor default="keyword" name="command"/>
     <fontcolor default="keyword" name="begin_keyword"/>
     <fontcolor default="keyword" name="end_keyword"/>

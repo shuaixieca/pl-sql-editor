@@ -27,8 +27,22 @@ TOKEN:string: ( "\'" (
     )* "\'" )
 TOKEN:some_types: (
     "NATURAL"i | "PLS_INTEGER"i | "NATURALN"i | "POSITIVE"i | "POSITIVEN"i |
-    "SIGNTYPE"i | "SIMPLE_INTEGER"i
+    "SIGNTYPE"i | "SIMPLE_INTEGER"i | "INT"i | "INTEGER"i | "SMALLINT"i |
+    "BINARY_INTEGER"i | "REAL"i | "BINARY_DOUBLE"i | "BINARY_FLOAT"i |
+    "LONG"i | "LONG RAW"i | "ROWID"i | "UROWID"i | "BOOLEAN"i | "MLSLABEL"i
 )
+TOKEN:scale_types: ( ("NUMBER"i | "DEC"i | "DECIMAL"i | "NUMERIC"i)
+( ("(" "+"? ["0"-"9"]+ ")") |
+  ("(" "+"? ["0"-"9"]+ "," ["+" "-"]? ["0"-"9"]+ ")") )?
+)
+TOKEN:size_types: ( ("DOUBLE PRECISION"i | "FLOAT"i)
+( "(" "+"? ["0"-"9"]+ ")" )?
+)
+TOKEN:char_types: ( ("CHAR"i | "VARCHAR"i | "VARCHAR2"i | "NCHAR"i | "NVARCHAR2"i)
+( "(" "+"? ["0"-"9"]+ [" " "\t" "\n" "\r"]+ ("CHAR"i | "BYTE"i)? ")" )?
+)
+TOKEN:raw_type: ( "RAW"i "(" "+"? ["0"-"9"]+ ")" )
+
 TOKEN:keyword: (
     "IF"i | "ELSE"i | "END IF"i | "SELECT"i | "." |
     "FROM"i | "AS"i | "WHERE"i | "PROCEDURE"i | "FUNCTION"i
@@ -101,7 +115,8 @@ Variable_Declaration = <identifier> <constant_keyword> Data_Type
                        Variable_Declaration_Part <separator>;
 Variable_Declaration_Part = [<not_null_keyword>] Variable_Def_Part Expression;
 Variable_Def_Part = <operator, ":="> | <default_keyword>;
-Data_Type = <some_types> | Universal_Identifier | Special_datatype;
+Data_Type = <some_types> | <scale_types> | <size_types> | <char_types> | <raw_type> |
+            Universal_Identifier | Special_datatype;
 Special_datatype = (<identifier> | <ext_identifier>) (<type_keyword> | <rowtype_keyword>);
 
 #Expression = Boolean_expression | String_expression | Numeric_expression;
