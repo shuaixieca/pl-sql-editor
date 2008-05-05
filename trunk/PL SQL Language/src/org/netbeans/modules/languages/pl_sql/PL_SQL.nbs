@@ -29,7 +29,8 @@ TOKEN:some_types: (
     "NATURAL"i | "PLS_INTEGER"i | "NATURALN"i | "POSITIVE"i | "POSITIVEN"i |
     "SIGNTYPE"i | "SIMPLE_INTEGER"i | "INT"i | "INTEGER"i | "SMALLINT"i |
     "BINARY_INTEGER"i | "REAL"i | "BINARY_DOUBLE"i | "BINARY_FLOAT"i |
-    "LONG"i | "LONG RAW"i | "ROWID"i | "UROWID"i | "BOOLEAN"i | "MLSLABEL"i
+    "LONG"i | "LONG RAW"i | "ROWID"i | "UROWID"i | "BOOLEAN"i | "MLSLABEL"i |
+    "DATE"i | "BFILE"i | "BLOB"i | "CLOB"i | "NCLOB"i
 )
 TOKEN:scale_types: ( ("NUMBER"i | "DEC"i | "DECIMAL"i | "NUMERIC"i)
 ( ("(" "+"? ["0"-"9"]+ ")") |
@@ -38,10 +39,28 @@ TOKEN:scale_types: ( ("NUMBER"i | "DEC"i | "DECIMAL"i | "NUMERIC"i)
 TOKEN:size_types: ( ("DOUBLE PRECISION"i | "FLOAT"i)
 ( "(" "+"? ["0"-"9"]+ ")" )?
 )
-TOKEN:char_types: ( ("CHAR"i | "VARCHAR"i | "VARCHAR2"i | "NCHAR"i | "NVARCHAR2"i)
-( "(" "+"? ["0"-"9"]+ [" " "\t" "\n" "\r"]+ ("CHAR"i | "BYTE"i)? ")" )?
+TOKEN:char_types: ( 
+    ("VARCHAR"i | "VARCHAR2"i | "NCHAR"i | "NVARCHAR2"i)
+)
+TOKEN:char_type: ( 
+    ("CHAR"i)
+)
+TOKEN:byte_type: ( 
+    ("BYTE"i)
 )
 TOKEN:raw_type: ( "RAW"i "(" "+"? ["0"-"9"]+ ")" )
+TOKEN:timestamp_type: ( "TIMESTAMP"i
+    ( "(" "+"? ["0"-"9"] ")" )?
+)
+TOKEN:year_type: ( "YEAR"i
+    ( "(" "+"? ["0"-"4"] ")" )?
+)
+TOKEN:day_type: ( "DAY"i
+    ( "(" "+"? ["0"-"9"] ")" )?
+)
+TOKEN:second_type: ( "SECOND"i
+    ( "(" "+"? ["0"-"9"] ")" )?
+)
 
 TOKEN:keyword: (
     "IF"i | "ELSE"i | "END IF"i | "SELECT"i | "." |
@@ -57,20 +76,33 @@ TOKEN:not_null_keyword: ( "NOT NULL"i )
 TOKEN:null_keyword: ( "NULL"i )
 TOKEN:default_keyword: ( "DEFAULT"i )
 TOKEN:rowtype_keyword: ( "%ROWTYPE"i )
-TOKEN:type_keyword: ( "%TYPE"i )
+TOKEN:like_type_keyword: ( "%TYPE"i )
+TOKEN:type_keyword: ( "TYPE"i )
 TOKEN:true_keyword: ( "TRUE"i )
 TOKEN:false_keyword: ( "FALSE"i )
 TOKEN:constant_keyword: ( "CONSTANT"i )
-
+TOKEN:with_keyword: ( "WITH"i )
+TOKEN:local_keyword: ( "LOCAL"i )
+TOKEN:time_keyword: ( "TIME"i)
+TOKEN:zone_keyword: ( "ZONE"i)
+TOKEN:interval_keyword: ( "INTERVAL"i)
+TOKEN:to_keyword: ( "TO"i)
+TOKEN:month_keyword: ( "MONTH"i)
+TOKEN:subtype_keyword: ( "SUBTYPE"i )
+TOKEN:is_keyword: ( "IS"i )
+TOKEN:record_keyword: ( "RECORD"i )
+ 
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
 TOKEN:ext_identifier:( 
     ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* ["." "@"]
     ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* (["." "@"]?
     ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]*)?
 )
- 
+
 TOKEN:separator: ( ";" )
 TOKEN:terminator: ( "/" )
+TOKEN:comma: ( "," )
+
 
 SKIP:whitespace
 SKIP:block_comment
@@ -113,11 +145,26 @@ Variable_Declaration = <identifier> Data_Type
                        [Variable_Declaration_Part] <separator>;
 Variable_Declaration = <identifier> <constant_keyword> Data_Type 
                        Variable_Declaration_Part <separator>;
+Variable_Declaration = Subtype_datatype <separator>;
+Variable_Declaration = Record_datatype <separator>;
 Variable_Declaration_Part = [<not_null_keyword>] Variable_Def_Part Expression;
 Variable_Def_Part = <operator, ":="> | <default_keyword>;
-Data_Type = <some_types> | <scale_types> | <size_types> | <char_types> | <raw_type> |
+Data_Type = <some_types> | <scale_types> | <size_types> | Char_Types | <raw_type> |
+            Timestamp_Type | Interval_Year_Type | Interval_Day_Type | 
             Universal_Identifier | Special_datatype;
-Special_datatype = (<identifier> | <ext_identifier>) (<type_keyword> | <rowtype_keyword>);
+Char_Types = (<char_types> | <char_type>) ["(" ["+"] <number_unsigned> [<char_type> | <byte_type>] ")"];
+Timestamp_Type = <timestamp_type> | 
+    ( <timestamp_type> <with_keyword> [<local_keyword>] <time_keyword> <zone_keyword>);
+Interval_Year_Type = <interval_keyword> <year_type> <to_keyword> <month_keyword>;
+Interval_Day_Type = <interval_keyword> <day_type> <to_keyword> <second_type>;
+Subtype_datatype = <subtype_keyword> <identifier> <is_keyword> Data_Type [<not_null_keyword>];
+
+# Hack with ")" because of Expression(Universal_expression)
+Record_datatype = <type_keyword> <identifier> <is_keyword> <record_keyword>
+                  "(" Record_Field_Declaration ("," Record_Field_Declaration)* [")"] ;
+Record_Field_Declaration = <identifier> Data_Type [Variable_Declaration_Part];
+
+Special_datatype = (<identifier> | <ext_identifier>) (<like_type_keyword> | <rowtype_keyword>);
 
 #Expression = Boolean_expression | String_expression | Numeric_expression;
 Expression = Universal_expression | <null_keyword>;

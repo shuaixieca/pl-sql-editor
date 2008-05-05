@@ -8,7 +8,13 @@
     <fontcolor default="keyword" name="size_types"/>
     <fontcolor default="keyword" name="scale_types"/>
     <fontcolor default="keyword" name="char_types"/>
+    <fontcolor default="keyword" name="char_type"/>
+    <fontcolor default="keyword" name="byte_type"/>
     <fontcolor default="keyword" name="raw_type"/>
+    <fontcolor default="keyword" name="timestamp_type"/>
+    <fontcolor default="keyword" name="year_type"/>
+    <fontcolor default="keyword" name="day_type"/>
+    <fontcolor default="keyword" name="second_type"/>
     <fontcolor default="keyword" name="command"/>
     <fontcolor default="keyword" name="begin_keyword"/>
     <fontcolor default="keyword" name="end_keyword"/>
@@ -20,10 +26,21 @@
     <fontcolor default="keyword" name="null_keyword"/>
     <fontcolor default="keyword" name="default_keyword"/>
     <fontcolor default="keyword" name="rowtype_keyword"/>
+    <fontcolor default="keyword" name="like_type_keyword"/>
     <fontcolor default="keyword" name="type_keyword"/>
     <fontcolor default="keyword" name="true_keyword"/>
     <fontcolor default="keyword" name="false_keyword"/>
     <fontcolor default="keyword" name="constant_keyword"/>
+    <fontcolor default="keyword" name="with_keyword"/>
+    <fontcolor default="keyword" name="local_keyword"/>
+    <fontcolor default="keyword" name="time_keyword"/>
+    <fontcolor default="keyword" name="zone_keyword"/>
+    <fontcolor default="keyword" name="interval_keyword"/>
+    <fontcolor default="keyword" name="to_keyword"/>
+    <fontcolor default="keyword" name="month_keyword"/>
+    <fontcolor default="keyword" name="subtype_keyword"/>
+    <fontcolor default="keyword" name="is_keyword"/>
+    <fontcolor default="keyword" name="record_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
@@ -36,7 +53,7 @@
     <fontcolor default="operator" name="not_operator"/>
     <fontcolor default="error" name="error"/>
     <fontcolor default="number" name="number"/>
-    <fontcolor default="number" name="unsigned_number"/>
+    <fontcolor default="number" name="number_unsigned"/>
 </fontscolors>
 
 
