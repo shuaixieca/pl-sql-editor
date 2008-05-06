@@ -41,6 +41,26 @@
     <fontcolor default="keyword" name="subtype_keyword"/>
     <fontcolor default="keyword" name="is_keyword"/>
     <fontcolor default="keyword" name="record_keyword"/>
+    <fontcolor default="keyword" name="create_keyword"/>
+    <fontcolor default="keyword" name="replace_keyword"/>
+    <fontcolor default="keyword" name="function_keyword"/>
+    <fontcolor default="keyword" name="as_keyword"/>
+    <fontcolor default="keyword" name="return_keyword"/>
+    <fontcolor default="keyword" name="in_keyword"/>
+    <fontcolor default="keyword" name="out_keyword"/>
+    <fontcolor default="keyword" name="nocopy_keyword"/>
+    <fontcolor default="keyword" name="authid_keyword"/>
+    <fontcolor default="keyword" name="current_user_keyword"/>
+    <fontcolor default="keyword" name="definer_keyword"/>
+    <fontcolor default="keyword" name="deterministic_keyword"/>
+    <fontcolor default="keyword" name="parallel_enabled_keyword_keyword"/>
+    <fontcolor default="keyword" name="pipelined_keyword"/>
+    <fontcolor default="keyword" name="result_cache_keyword"/>
+    <fontcolor default="keyword" name="procedure_keyword"/>
+    <fontcolor default="keyword" name="if_keyword"/>
+    <fontcolor default="keyword" name="else_keyword"/>
+    <fontcolor default="keyword" name="elsif_keyword"/>
+    <fontcolor default="keyword" name="endif_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
