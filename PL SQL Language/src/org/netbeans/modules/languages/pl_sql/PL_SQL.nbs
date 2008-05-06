@@ -7,7 +7,7 @@ TOKEN:operator: (
     "UNION"i | "UNION ALL"i | "INTERSECT"i | "MINUS"i | "MULTISET EXCEPT"i |
     "MULTISET INTERSECT"i | "MULTISET UNION"i | "=" | "<>" | "!=" | "~=" |
     "^=" | ">" | "<" | "<=" | ">=" | "IS NULL"i | "LIKE"i | "BETWEEN"i |
-    "IN"i | "NOT IN"i | ".." | "ANY"i | "SOME"i |
+    "NOT IN"i | ".." | "ANY"i | "SOME"i |
     "ALL"i | "EXISTS"i | "ESCAPE"i | "IS NOT NULL"i | "(+)" | "(" | ")"
 )
 TOKEN:or_operator: ( "OR"i )
@@ -63,8 +63,8 @@ TOKEN:second_type: ( "SECOND"i
 )
 
 TOKEN:keyword: (
-    "IF"i | "ELSE"i | "END IF"i | "SELECT"i | "." |
-    "FROM"i | "AS"i | "WHERE"i | "PROCEDURE"i | "FUNCTION"i
+    "SELECT"i | "." |
+    "FROM"i | "WHERE"i
 )
 TOKEN:begin_keyword: ( "BEGIN"i )
 TOKEN:end_keyword: ( "END"i )
@@ -91,6 +91,26 @@ TOKEN:month_keyword: ( "MONTH"i)
 TOKEN:subtype_keyword: ( "SUBTYPE"i )
 TOKEN:is_keyword: ( "IS"i )
 TOKEN:record_keyword: ( "RECORD"i )
+TOKEN:create_keyword: ( "CREATE"i )
+TOKEN:replace_keyword: ( "REPLACE"i )
+TOKEN:function_keyword: ( "FUNCTION"i )
+TOKEN:as_keyword: ( "AS"i )
+TOKEN:return_keyword: ( "RETURN"i )
+TOKEN:in_keyword: ( "IN"i )
+TOKEN:out_keyword: ( "OUT"i )
+TOKEN:nocopy_keyword: ( "NOCOPY"i )
+TOKEN:authid_keyword: ( "AUTHID"i )
+TOKEN:current_user_keyword: ( "CURRENT_USER"i )
+TOKEN:definer_keyword: ( "DEFINER"i )
+TOKEN:deterministic_keyword: ( "DETERMINISTIC"i )
+TOKEN:parallel_enabled_keyword: ( "PARALLEL_ENABLED"i )
+TOKEN:pipelined_keyword: ( "PIPELINED"i )
+TOKEN:result_cache_keyword: ( "RESULT_CACHE"i )
+TOKEN:procedure_keyword: ( "PROCEDURE"i )
+TOKEN:if_keyword: ( "IF"i )
+TOKEN:else_keyword: ( "ELSE"i )
+TOKEN:elsif_keyword: ( "ELSIF"i )
+TOKEN:endif_keyword: ( "END IF"i )
  
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
 TOKEN:ext_identifier:( 
@@ -102,7 +122,7 @@ TOKEN:ext_identifier:(
 TOKEN:separator: ( ";" )
 TOKEN:terminator: ( "/" )
 TOKEN:comma: ( "," )
-
+TOKEN:param_value: ( "=>" )
 
 SKIP:whitespace
 SKIP:block_comment
@@ -121,23 +141,46 @@ SKIP:line_comment
 
 # Grammar 
 S = (Source_Element)*;
-Source_Element = Anonymous_Block;
+Source_Element = Anonymous_Block | ([Create_Replace_Part] (Function_Declaration | Procedure_Declaration));
 Universal_Identifier = <identifier> | <ext_identifier>;
 #Statement = WhileStatement | IfStatement | ExpressionStatement | Block;
 #WhileStatement = "while" "(" ConditionalExpression ")" Block;
 #IfStatement = "if" "(" ConditionalExpression ")" "then" Block ["else" Block] ";";
 #Block = <keyword, "begin"> (Statement)* <keyword, "end">;
+Create_Replace_Part = <create_keyword> [<or_operator> <replace_keyword>];
+As_Is_Part = <is_keyword> | <as_keyword>;
+Parameter_Type = <in_keyword> | (<out_keyword> [<nocopy_keyword>]) | (<in_keyword> <out_keyword> [<nocopy_keyword>]);
+Parameter_Declaration = "(" <identifier> [Parameter_Type] Data_Type [Variable_Def_Part Expression]
+                        ("," <identifier> [Parameter_Type] Data_Type [Variable_Def_Part Expression])* ")";
+Function_Spec = <function_keyword>
+                Universal_Identifier [Parameter_Declaration] 
+                <return_keyword> Data_Type [Invoker_Clause] (Function_Spec_Add2)*;
+Invoker_Clause = <authid_keyword> (<current_user_keyword> | <definer_keyword>);
+Function_Spec_Add2 = <deterministic_keyword> | <parallel_enabled_keyword> | <pipelined_keyword> | <result_cache_keyword>;
+Function_Declaration = Function_Spec As_Is_Part 
+                       (Variable_Declaration)* (Function_Declaration | Procedure_Declaration)* Block ;
+Procedure_Spec = <procedure_keyword> Universal_Identifier [Parameter_Declaration] 
+                 [Invoker_Clause];
+Procedure_Declaration = Procedure_Spec As_Is_Part
+                        (Variable_Declaration)* (Function_Declaration | Procedure_Declaration)* Block;
 Block = <begin_keyword>
             (Executable_Section)+
             [Exception_Section]
-        <end_keyword>[<separator>]["/"];
+        <end_keyword> [Universal_Identifier] [<separator>]
+        ["/"];
 Anonymous_Block = [Anonymous_Block_Declare_Section] Block;
 Executable_Section = Statement | Inner_Anonymous_Block;
 Inner_Anonymous_Block = Anonymous_Block_Declare_Section Block;
-Statement = Assigment_Statement | Call_Statement;
-Call_Statement = Expression_Part ";";
-Expression_Part = <identifier> | <ext_identifier> | <null_keyword>;
-
+Statement = Call_Statement | Assigment_Statement | (<null_keyword> <separator>) |
+            (<return_keyword> Expression <separator>) | If_Statement;
+If_Statement = <if_keyword> ["("] Expression [")"] <then_keyword> (Executable_Section)+
+               [<elsif_keyword> ["("] Expression [")"] <then_keyword> (Executable_Section)+]
+               [<else_keyword> (Executable_Section)+]
+               <endif_keyword> <separator>;
+# Hack with "(" and ")" because of Expression(Universal_expression)
+Call_Statement = Universal_Identifier <separator>;
+Call_Statement = Universal_Identifier ["("] Expression ("," Expression )* [")"] <separator>;
+Call_Statement = Universal_Identifier ["("] <identifier> "=>" Expression ("," <identifier> "=>" Expression )* [")"] <separator>;
 Assigment_Statement = Universal_Identifier <operator, ":="> Expression <separator>;
 Anonymous_Block_Declare_Section = <declare_keyword> (Variable_Declaration)+;
 
@@ -169,13 +212,13 @@ Special_datatype = (<identifier> | <ext_identifier>) (<like_type_keyword> | <row
 #Expression = Boolean_expression | String_expression | Numeric_expression;
 Expression = Universal_expression | <null_keyword>;
 #Expression_In_Declare = String_expression | Boolean_Expression | Numeric_expression | Special_expression;# [Universal_Identifier];
-
+Operator = <operator> | <in_keyword>;
 Universal_expression = [Universal_operators] Universal_term (Universal_operators Universal_term )*;
 Universal_term = Universal_factor (Universal_operators Universal_factor)*;
 Universal_factor = (<true_keyword> | <false_keyword> | <number_unsigned> |
                    <string> | <identifier> | <ext_identifier>) (<operator, ")">)*;
 Universal_operators = (<operator, "(">)* 
-                      (<operator> | <not_operator> | <and_operator> | <or_operator>)
+                      (Operator | <not_operator> | <and_operator> | <or_operator>)
                       (<operator, "(">)* 
                       [<not_operator>];
 
@@ -203,6 +246,9 @@ Exception_Handler = <when_keyword> <identifier> (<or_operator> <identifier>)*
 
 FOLD:Block: { fold_display_name:"begin...end"; }
 FOLD:block_comment: { fold_display_name:"/*...*/"; }
+FOLD:Function_Declaration: { fold_display_name:"function"; }
+FOLD:Procedure_Declaration: { fold_display_name:"procedure"; }
+FOLD:If_Statement: { fold_display_name:"if...end if"; }
 #FOLD:Anonymous_Block: { fold_display_name:"begin...end"; }
 
 BRACE "(:)"
