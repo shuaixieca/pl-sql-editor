@@ -3,12 +3,9 @@ TOKEN:block_comment: ("/*" - "*/")
 TOKEN:line_comment: ( "--"i [^ "\n" "\r"]* )
 TOKEN:whitespace:( [" " "\t" "\n" "\r"]+ )
 TOKEN:operator: (
-    ":=" | "+" | "-" | "*" | "/" | "**" | "||" | "PRIOR"i | "CONNECT_BY_ROOT"i |
-    "UNION"i | "UNION ALL"i | "INTERSECT"i | "MINUS"i | "MULTISET EXCEPT"i |
-    "MULTISET INTERSECT"i | "MULTISET UNION"i | "=" | "<>" | "!=" | "~=" |
-    "^=" | ">" | "<" | "<=" | ">=" | "LIKE"i | "BETWEEN"i |
-    ".." | "ANY"i | "SOME"i |
-    "ALL"i | "EXISTS"i | "ESCAPE"i | "(+)" | "(" | ")"
+    ":=" | "+" | "-" | "*" | "/" | "**" | "||" | "=" | "<>" | "!=" | "~=" |
+    "^=" | ">" | "<" | "<=" | ">=" |
+    ".." | "(+)" | "(" | ")" | "<<" | ">>"
 )
 TOKEN:or_operator: ( "OR"i )
 TOKEN:and_operator: ( "AND"i )
@@ -63,8 +60,11 @@ TOKEN:second_type: ( "SECOND"i
 )
 
 TOKEN:keyword: (
-    "SELECT"i | "." |
-    "FROM"i | "WHERE"i
+    "." | "FROM"i | "WHERE"i | "GROUP BY"i | "ORDER BY"i | "INTO"i |
+    "PRIOR"i | "CONNECT_BY_ROOT"i |
+    "UNION"i | "UNION ALL"i | "INTERSECT"i | "MINUS"i | "MULTISET EXCEPT"i |
+    "MULTISET INTERSECT"i | "MULTISET UNION"i | "BETWEEN"i |
+    "ANY"i | "SOME"i | "ALL"i | "EXISTS"i | "ESCAPE"i
 )
 TOKEN:begin_keyword: ( "BEGIN"i )
 TOKEN:end_keyword: ( "END"i )
@@ -114,6 +114,19 @@ TOKEN:endif_keyword: ( "END IF"i )
 TOKEN:is_null_keyword: ( "IS NULL"i )
 TOKEN:is_not_null_keyword: ( "IS NOT NULL"i )
 TOKEN:not_in_keyword: ( "NOT IN"i )
+TOKEN:goto_keyword: ( "GOTO"i )
+TOKEN:loop_keyword: ( "LOOP"i )
+TOKEN:end_loop_keyword: ( "END LOOP"i )
+TOKEN:while_keyword: ( "WHILE"i )
+TOKEN:for_keyword: ( "FOR"i )
+TOKEN:reverse_keyword: ( "REVERSE"i )
+TOKEN:select_keyword: ( "SELECT"i )
+TOKEN:count_keyword: ( "COUNT"i )
+TOKEN:exception_init_keyword: ( "EXCEPTION_INIT"i )
+TOKEN:like_keyword: ( "LIKE"i )
+TOKEN:raise_keyword: ( "RAISE"i )
+TOKEN:pragma_keyword: ( "PRAGMA"i )
+TOKEN:autonomous_transaction_keyword: ( "AUTONOMOUS_TRANSACTION"i )
  
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
 TOKEN:ext_identifier:( 
@@ -121,11 +134,14 @@ TOKEN:ext_identifier:(
     ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* (["." "@"]?
     ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]*)?
 )
+TOKEN:alias:( "\"" [^ "\""]+ "\""
+)
 
 TOKEN:separator: ( ";" )
 TOKEN:terminator: ( "/" )
 TOKEN:comma: ( "," )
 TOKEN:param_value: ( "=>" )
+TOKEN:quotation_mark: ( "\"" )
 
 SKIP:whitespace
 SKIP:block_comment
@@ -146,6 +162,7 @@ SKIP:line_comment
 S = (Source_Element)*;
 Source_Element = Anonymous_Block | ([Create_Replace_Part] (Function_Declaration | Procedure_Declaration));
 Universal_Identifier = <identifier> | <ext_identifier>;
+Label = "<<" <identifier> ">>";
 #Statement = WhileStatement | IfStatement | ExpressionStatement | Block;
 #WhileStatement = "while" "(" ConditionalExpression ")" Block;
 #IfStatement = "if" "(" ConditionalExpression ")" "then" Block ["else" Block] ";";
@@ -160,7 +177,7 @@ Function_Spec = <function_keyword>
                 <return_keyword> Data_Type [Invoker_Clause] (Function_Spec_Add2)*;
 Invoker_Clause = <authid_keyword> (<current_user_keyword> | <definer_keyword>);
 Function_Spec_Add2 = <deterministic_keyword> | <parallel_enabled_keyword> | <pipelined_keyword> | <result_cache_keyword>;
-Function_Declaration = Function_Spec As_Is_Part 
+Function_Declaration = Function_Spec As_Is_Part
                        (Variable_Declaration)* (Function_Declaration | Procedure_Declaration)* Block ;
 Procedure_Spec = <procedure_keyword> Universal_Identifier [Parameter_Declaration] 
                  [Invoker_Clause];
@@ -172,14 +189,32 @@ Block = <begin_keyword>
         <end_keyword> [Universal_Identifier] [<separator>]
         ["/"];
 Anonymous_Block = [Anonymous_Block_Declare_Section] Block;
-Executable_Section = Statement | Inner_Anonymous_Block;
-Inner_Anonymous_Block = Anonymous_Block_Declare_Section Block;
-Statement = (Expression | Assigment_Statement |
-            (<return_keyword> Expression ) | If_Statement ) <separator>;
-If_Statement = <if_keyword> ["("] Expression [")"] <then_keyword> (Executable_Section)+
-               [<elsif_keyword> ["("] Expression [")"] <then_keyword> (Executable_Section)+]
+Executable_Section = Statement | Anonymous_Block;
+Statement = (Label)* Statements <separator>;
+Statements = Expression | Assigment_Statement | Goto_Statement | Loop_Statement |
+             While_Loop_Statement | For_Loop_Statement | SQL_Statements |
+             Return_Statement | If_Statement | Raise_Statement;
+Count_Func = <count_keyword> "(" ((Expression)+ | "*") ")" ;
+SQL_Statements = Select_Statement;
+SQL_Uni_Part = (Expression | <alias> | <keyword> | "*" | "," | 
+               <as_keyword> | Count_Func | SQL_Statements | ("(" SQL_Statements ")"))+;
+Select_Statement = <select_keyword> SQL_Uni_Part;
+Goto_Statement = <goto_keyword> <identifier>;
+Return_Statement = <return_keyword> Expression;
+If_Statement = <if_keyword> Expression <then_keyword> (Executable_Section)+
+               [<elsif_keyword> Expression <then_keyword> (Executable_Section)+]
                [<else_keyword> (Executable_Section)+]
                <endif_keyword>;
+Loop_Statement = <loop_keyword> (Executable_Section)+ <end_loop_keyword> [<identifier>];
+While_Loop_Statement = <while_keyword> Expression Loop_Statement;
+For_Loop_Statement = <for_keyword> <identifier> <in_keyword> [<reverse_keyword>] 
+                     ((Expression (For_Loop_Statement_Part | Cursor_For_Loop_Statement1)) |
+                       Cursor_For_Loop_Statement2);
+For_Loop_Statement_Part =  ".." Expression Loop_Statement;
+Cursor_For_Loop_Statement1 = Loop_Statement;
+Cursor_For_Loop_Statement2 = "(" Select_Statement ")" Loop_Statement;
+Raise_Statement = <raise_keyword> [Universal_Identifier];
+Autonomous_Transaction_Pragma = (<pragma_keyword> <autonomous_transaction_keyword> ";");
 Assigment_Statement = Universal_Identifier <operator, ":="> Expression;
 Anonymous_Block_Declare_Section = <declare_keyword> (Variable_Declaration)+;
 
@@ -189,6 +224,9 @@ Variable_Declaration = <identifier> <constant_keyword> Data_Type
                        Variable_Declaration_Part <separator>;
 Variable_Declaration = Subtype_datatype <separator>;
 Variable_Declaration = Record_datatype <separator>;
+Variable_Declaration = <identifier> <exception_keyword> <separator>;
+Variable_Declaration = <pragma_keyword> (<autonomous_transaction_keyword> |
+<exception_init_keyword> "(" Expression "," Expression ")" ) <separator>;
 Variable_Declaration_Part = [<not_null_keyword>] Variable_Def_Part Expression;
 Variable_Def_Part = <operator, ":="> | <default_keyword>;
 Data_Type = <some_types> | <scale_types> | <size_types> | Char_Types | <raw_type> |
@@ -212,7 +250,8 @@ Expression = Universal_expression;
 #Expression_In_Declare = String_expression | Boolean_Expression | Numeric_expression | Special_expression;# [Universal_Identifier];
 Operator = "+" | "-" | "*" | "/" | "**" | "||" |
            "^=" | ">" | "<" | "<=" | ">=" | "=" | "<>" | "!=" | "~=" |
-           <and_operator> | <or_operator> | <in_keyword> | <not_in_keyword>;
+           <and_operator> | <or_operator> | <in_keyword> | <not_in_keyword> |
+           <like_keyword> ;
 Unary_Op = <not_operator> | "+" | "-";
 Postfix_Op = <is_null_keyword> | <is_not_null_keyword>;
 Universal_expression = [Unary_Op] Universal_factor [Postfix_Op] (Operator Universal_expression)*;
@@ -248,7 +287,7 @@ Boolean_factor = (<true_keyword> | <false_keyword> | <identifier> | <ext_identif
 		
 Exception_Section = <exception_keyword> (Exception_Handler)+;
 Exception_Handler = <when_keyword> <identifier> (<or_operator> <identifier>)*
-                    <then_keyword> (Inner_Anonymous_Block | Block | Statement);
+                    <then_keyword> (Anonymous_Block | Statement);
 #Block = (Statement)*;
 #gr_begin_stm = "BEGIN";
 #ConditionalExpression = <identifier>;
@@ -259,11 +298,13 @@ FOLD:block_comment: { fold_display_name:"/*...*/"; }
 FOLD:Function_Declaration: { fold_display_name:"function"; }
 FOLD:Procedure_Declaration: { fold_display_name:"procedure"; }
 FOLD:If_Statement: { fold_display_name:"if...end if"; }
+FOLD:Loop_Statement: { fold_display_name:"loop...end loop"; }
 #FOLD:Anonymous_Block: { fold_display_name:"begin...end"; }
 
 BRACE "(:)"
 BRACE "[:]"
 
 COMPLETE "/*:*/"
-
+COMPLETE "<<:>>"
+#COMPLETE "loop_keyword:end_loop_keyword"
 #INDENT "<begin_keyword>:<end_keyword>" 
