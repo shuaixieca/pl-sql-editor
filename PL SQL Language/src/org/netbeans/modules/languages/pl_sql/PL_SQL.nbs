@@ -6,9 +6,9 @@ TOKEN:operator: (
     ":=" | "+" | "-" | "*" | "/" | "**" | "||" | "PRIOR"i | "CONNECT_BY_ROOT"i |
     "UNION"i | "UNION ALL"i | "INTERSECT"i | "MINUS"i | "MULTISET EXCEPT"i |
     "MULTISET INTERSECT"i | "MULTISET UNION"i | "=" | "<>" | "!=" | "~=" |
-    "^=" | ">" | "<" | "<=" | ">=" | "IS NULL"i | "LIKE"i | "BETWEEN"i |
-    "NOT IN"i | ".." | "ANY"i | "SOME"i |
-    "ALL"i | "EXISTS"i | "ESCAPE"i | "IS NOT NULL"i | "(+)" | "(" | ")"
+    "^=" | ">" | "<" | "<=" | ">=" | "LIKE"i | "BETWEEN"i |
+    ".." | "ANY"i | "SOME"i |
+    "ALL"i | "EXISTS"i | "ESCAPE"i | "(+)" | "(" | ")"
 )
 TOKEN:or_operator: ( "OR"i )
 TOKEN:and_operator: ( "AND"i )
@@ -111,6 +111,9 @@ TOKEN:if_keyword: ( "IF"i )
 TOKEN:else_keyword: ( "ELSE"i )
 TOKEN:elsif_keyword: ( "ELSIF"i )
 TOKEN:endif_keyword: ( "END IF"i )
+TOKEN:is_null_keyword: ( "IS NULL"i )
+TOKEN:is_not_null_keyword: ( "IS NOT NULL"i )
+TOKEN:not_in_keyword: ( "NOT IN"i )
  
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
 TOKEN:ext_identifier:( 
@@ -171,17 +174,13 @@ Block = <begin_keyword>
 Anonymous_Block = [Anonymous_Block_Declare_Section] Block;
 Executable_Section = Statement | Inner_Anonymous_Block;
 Inner_Anonymous_Block = Anonymous_Block_Declare_Section Block;
-Statement = Call_Statement | Assigment_Statement | (<null_keyword> <separator>) |
-            (<return_keyword> Expression <separator>) | If_Statement;
+Statement = (Expression | Assigment_Statement |
+            (<return_keyword> Expression ) | If_Statement ) <separator>;
 If_Statement = <if_keyword> ["("] Expression [")"] <then_keyword> (Executable_Section)+
                [<elsif_keyword> ["("] Expression [")"] <then_keyword> (Executable_Section)+]
                [<else_keyword> (Executable_Section)+]
-               <endif_keyword> <separator>;
-# Hack with "(" and ")" because of Expression(Universal_expression)
-Call_Statement = Universal_Identifier <separator>;
-Call_Statement = Universal_Identifier ["("] Expression ("," Expression )* [")"] <separator>;
-Call_Statement = Universal_Identifier ["("] <identifier> "=>" Expression ("," <identifier> "=>" Expression )* [")"] <separator>;
-Assigment_Statement = Universal_Identifier <operator, ":="> Expression <separator>;
+               <endif_keyword>;
+Assigment_Statement = Universal_Identifier <operator, ":="> Expression;
 Anonymous_Block_Declare_Section = <declare_keyword> (Variable_Declaration)+;
 
 Variable_Declaration = <identifier> Data_Type 
@@ -202,25 +201,36 @@ Interval_Year_Type = <interval_keyword> <year_type> <to_keyword> <month_keyword>
 Interval_Day_Type = <interval_keyword> <day_type> <to_keyword> <second_type>;
 Subtype_datatype = <subtype_keyword> <identifier> <is_keyword> Data_Type [<not_null_keyword>];
 
-# Hack with ")" because of Expression(Universal_expression)
 Record_datatype = <type_keyword> <identifier> <is_keyword> <record_keyword>
-                  "(" Record_Field_Declaration ("," Record_Field_Declaration)* [")"] ;
+                  "(" Record_Field_Declaration ("," Record_Field_Declaration)* ")" ;
 Record_Field_Declaration = <identifier> Data_Type [Variable_Declaration_Part];
 
 Special_datatype = (<identifier> | <ext_identifier>) (<like_type_keyword> | <rowtype_keyword>);
 
 #Expression = Boolean_expression | String_expression | Numeric_expression;
-Expression = Universal_expression | <null_keyword>;
+Expression = Universal_expression;
 #Expression_In_Declare = String_expression | Boolean_Expression | Numeric_expression | Special_expression;# [Universal_Identifier];
-Operator = <operator> | <in_keyword>;
-Universal_expression = [Universal_operators] Universal_term (Universal_operators Universal_term )*;
-Universal_term = Universal_factor (Universal_operators Universal_factor)*;
-Universal_factor = (<true_keyword> | <false_keyword> | <number_unsigned> |
-                   <string> | <identifier> | <ext_identifier>) (<operator, ")">)*;
-Universal_operators = (<operator, "(">)* 
-                      (Operator | <not_operator> | <and_operator> | <or_operator>)
-                      (<operator, "(">)* 
-                      [<not_operator>];
+Operator = "+" | "-" | "*" | "/" | "**" | "||" |
+           "^=" | ">" | "<" | "<=" | ">=" | "=" | "<>" | "!=" | "~=" |
+           <and_operator> | <or_operator> | <in_keyword> | <not_in_keyword>;
+Unary_Op = <not_operator> | "+" | "-";
+Postfix_Op = <is_null_keyword> | <is_not_null_keyword>;
+Universal_expression = [Unary_Op] Universal_factor [Postfix_Op] (Operator Universal_expression)*;
+Universal_factor = <true_keyword> | <false_keyword> | <number_unsigned> |
+                   <string> | <null_keyword> |
+                   Universal_Identifier [Call_Statement_Param] |
+                   ("(" Universal_expression ("," Universal_expression )* ")");
+Call_Statement_Param = ("(" Universal_expression ("," Universal_expression )* ")") |
+                       ("(" <identifier> "=>" Universal_expression ("," <identifier> "=>" Universal_expression )* ")");
+
+#Universal_expression = [Call_Statement ","] [Universal_operators] Universal_term (Universal_operators Universal_term )*;
+#Universal_term = Universal_factor (Universal_operators Universal_factor)*;
+#Universal_factor = (<true_keyword> | <false_keyword> | <number_unsigned> |
+#                   <string> | <identifier> | <ext_identifier>) (<operator, ")">)*;
+#Universal_operators = (<operator, "(">)* 
+#                      (Operator | <not_operator> | <and_operator> | <or_operator>)
+#                      (<operator, "(">)* 
+#                      [<not_operator>];
 
 String_expression = String_term (<operator, "||"> String_term)*;
 String_term = <string> | <identifier> | <ext_identifier>;
