@@ -64,6 +64,19 @@
     <fontcolor default="keyword" name="is_null_keyword"/>
     <fontcolor default="keyword" name="is_not_null_keyword"/>
     <fontcolor default="keyword" name="not_in_keyword"/>
+    <fontcolor default="keyword" name="goto_keyword"/>
+    <fontcolor default="keyword" name="loop_keyword"/>
+    <fontcolor default="keyword" name="end_loop_keyword"/>
+    <fontcolor default="keyword" name="while_keyword"/>
+    <fontcolor default="keyword" name="for_keyword"/>
+    <fontcolor default="keyword" name="reverse_keyword"/>
+    <fontcolor default="keyword" name="select_keyword"/>
+    <fontcolor default="keyword" name="count_keyword"/>
+    <fontcolor default="keyword" name="exception_init_keyword"/>
+    <fontcolor default="keyword" name="like_keyword"/>
+    <fontcolor default="keyword" name="raise_keyword"/>
+    <fontcolor default="keyword" name="pragma_keyword"/>
+    <fontcolor default="keyword" name="autonomous_transaction_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
