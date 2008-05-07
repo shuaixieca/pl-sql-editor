@@ -61,6 +61,9 @@
     <fontcolor default="keyword" name="else_keyword"/>
     <fontcolor default="keyword" name="elsif_keyword"/>
     <fontcolor default="keyword" name="endif_keyword"/>
+    <fontcolor default="keyword" name="is_null_keyword"/>
+    <fontcolor default="keyword" name="is_not_null_keyword"/>
+    <fontcolor default="keyword" name="not_in_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
