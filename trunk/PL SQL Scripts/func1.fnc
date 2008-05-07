@@ -11,6 +11,17 @@ begin
 --return dbms_standard.client_ip_address;
 de := (not ('de')+true+false-((de**34)/(d.e)));
 de.de := de and true and not (21 + de) and de is null;
+for i in 1 .. 2+34
+loop
+    dbms_output.put_line('pos='||i);
+end loop abc;
+for cur in abc(1,2)
+loop
+for cur in abc
+loop
+abc;
+end loop;
+end loop;
 demo1 := apo not in (s and fr,ys+34,'date');
 demo2 := demo in (s and fr,ys+34,'date');
 a := a(a => a||'de');

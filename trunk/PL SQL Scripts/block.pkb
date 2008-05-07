@@ -12,7 +12,7 @@ begin
 null;
 ded.de;
   dede(de, dde);
-  
+  select count(1) from dual where a=abc order by abc;
   DBMS_OUTPUT.PUT_LINE(a,de);
   DBMS_OUTPUT.PUT_LINE(meeting.char);
 DBMS_OUTPUT.PUT_LINE(meeting => cshar, deee => do);
