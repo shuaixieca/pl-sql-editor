@@ -5,11 +5,17 @@ declAre
  de varchar2(100   char) := de||'cdcd'''||dede||'d'||chars;
  num NAtURaL := (-d3-d.e)*(3.2e+10+43)/de**dd+3**6;
  num2 float(45) := not nll and de;
- num6 rAw(45) := (not in de >= sw and true or false and def) and not true;
+ num6 rAw(45) := abc not in de >= sw and true or false and def and not true;
  num7 Constant PLS_integer default 'demo';
  num3 numbEr(23,-43) := +d3-((d.e-3.2e20)+10+43)/(de**(dd+3)**6);
 begin
 null;
+ded.de;
+  dede(de, dde);
+  
+  DBMS_OUTPUT.PUT_LINE(a,de);
+  DBMS_OUTPUT.PUT_LINE(meeting.char);
+DBMS_OUTPUT.PUT_LINE(meeting => cshar, deee => do);
 null.d := de*e3;
 end;
 /
