@@ -36,6 +36,8 @@ BEGIN
       RAISE DBERR20;
     END IF;
 
+close demo;
+
     -- test for CUBE ORGANIZED TABLES
     SELECT count(*) INTO cnt FROM sys.olap_tab$ WHERE awseq#=db_awnum;
     IF cnt > 0 THEN
@@ -54,8 +56,61 @@ BEGIN
 
     IF cnt > 0 THEN
       RAISE HASCOT;
+abc := CASE
+   WHEN salary <= 20000 THEN
+      give_bonus(employee_id, 1500)
+   WHEN salary > 20000 THEN
+      give_bonus(employee_id, 1000)
+   END;
     END IF;
 
+CASE employee_type
+WHEN 'S' THEN
+   award_salary_bonus(employee_id)
+WHEN 'H' THEN
+   award_hourly_bonus(employee_id)
+WHEN 'C' THEN
+   award_commissioned_bonus(employee_id)
+end case dem;
+CASE
+WHEN salary >= 10000 THEN
+CASE
+   WHEN salary <= 20000 THEN
+      give_bonus(employee_id, 1500);
+   WHEN salary > 20000 THEN
+    begin
+      give_bonus(employee_id, 1000);
+    begin
+      give_bonus(employee_id, 1000);
+    end;
+    end;
+   END CASE;
+WHEN salary > 40000 THEN
+      give_bonus(employee_id, 500);
+WHEN salary < 10000 THEN
+   give_bonus(employee_id,0);
+END case;
+
+CASE employee_type
+WHEN 'S' THEN
+   award_salary_bonus(employee_id);
+   award_salary_bonus(employee_id);
+WHEN 'H' THEN
+   award_hourly_bonus(employee_id);
+WHEN 'C' THEN
+   award_commissioned_bonus(employee_id);
+CASE 
+WHEN 'S' THEN
+   award_salary_bonus(employee_id);
+WHEN 'H' THEN
+   award_hourly_bonus(employee_id);
+WHEN 'C' THEN
+   award_commissioned_bonus(employee_id);
+ELSE
+   RAISE invalid_employee_type;
+END CASE;
+END CASE;
+    fetch abc into v,x;
     seq_name := db_name || '_S$';
     EXECUTE IMMEDIATE del_stmt1 USING db_awnum;
     EXECUTE IMMEDIATE del_stmt2 USING db_awnum;

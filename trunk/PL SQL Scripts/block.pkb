@@ -8,6 +8,12 @@ declAre
  num6 rAw(45) := abc not in de >= sw and true or false and def and not true;
  num7 Constant PLS_integer default 'demo';
  num3 numbEr(23,-43) := +d3-((d.e-3.2e20)+10+43)/(de**(dd+3)**6);
+   TYPE DeptFile IS TABLE OF c1%ROWTYPE index by pls_integer;  -- based on cursor
+
+TYPE JobList IS VARRAY(10) OF ref abc;  -- based on column
+TYPE JobList2 IS ref cursor return ab%type;
+   CURSOR c1(a varchar2 := 1, b demo.de) IS SELECT * FROM dept;
+   TYPE EmpFile IS VARRAY(150) OF emp%ROWTYPE;  -- based on database 
 begin
 null;
 ded.de;
