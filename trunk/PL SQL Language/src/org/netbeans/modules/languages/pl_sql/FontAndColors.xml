@@ -77,6 +77,44 @@
     <fontcolor default="keyword" name="raise_keyword"/>
     <fontcolor default="keyword" name="pragma_keyword"/>
     <fontcolor default="keyword" name="autonomous_transaction_keyword"/>
+    <fontcolor default="keyword" name="case_keyword"/>
+    <fontcolor default="keyword" name="end_case_keyword"/>
+    <fontcolor default="keyword" name="close_keyword"/>
+    <fontcolor default="keyword" name="table_keyword"/>
+    <fontcolor default="keyword" name="of_keyword"/>
+    <fontcolor default="keyword" name="index_keyword"/>
+    <fontcolor default="keyword" name="by_keyword"/>
+    <fontcolor default="keyword" name="varray_keyword"/>
+    <fontcolor default="keyword" name="varying_keyword"/>
+    <fontcolor default="keyword" name="array_keyword"/>
+    <fontcolor default="keyword" name="commit_keyword"/>
+    <fontcolor default="keyword" name="ref_keyword"/>
+    <fontcolor default="keyword" name="continue_keyword"/>
+    <fontcolor default="keyword" name="cursor_keyword"/>
+    <fontcolor default="keyword" name="delete_keyword"/>
+    <fontcolor default="keyword" name="execute_keyword"/>
+    <fontcolor default="keyword" name="immediate_keyword"/>
+    <fontcolor default="keyword" name="exit_keyword"/>
+    <fontcolor default="keyword" name="into_keyword"/>
+    <fontcolor default="keyword" name="using_keyword"/>
+    <fontcolor default="keyword" name="bulk_keyword"/>
+    <fontcolor default="keyword" name="collect_keyword"/>
+    <fontcolor default="keyword" name="fetch_keyword"/>
+    <fontcolor default="keyword" name="limit_keyword"/>
+    <fontcolor default="keyword" name="forall_keyword"/>
+    <fontcolor default="keyword" name="save_keyword"/>
+    <fontcolor default="keyword" name="exceptions_keyword"/>
+    <fontcolor default="keyword" name="indices_keyword"/>
+    <fontcolor default="keyword" name="values_keyword"/>
+    <fontcolor default="keyword" name="between_keyword"/>
+    <fontcolor default="keyword" name="inline_keyword"/>
+    <fontcolor default="keyword" name="insert_keyword"/>
+    <fontcolor default="keyword" name="lock_keyword"/>
+    <fontcolor default="keyword" name="merge_keyword"/>
+    <fontcolor default="keyword" name="open_keyword"/>
+    <fontcolor default="keyword" name="package_keyword"/>
+    <fontcolor default="keyword" name="body_keyword"/>
+    <fontcolor default="keyword" name="restrict_references_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
