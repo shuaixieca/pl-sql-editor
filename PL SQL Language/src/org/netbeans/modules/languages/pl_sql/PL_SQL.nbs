@@ -2,6 +2,7 @@ TOKEN:block_comment: ("/*" - "*/")
 #TOKEN:line_comment: ( "--"i | "--"i [^ "\n" "\r"]* ) 
 TOKEN:line_comment: ( "--"i [^ "\n" "\r"]* )
 TOKEN:whitespace:( [" " "\t" "\n" "\r"]+ )
+TOKEN:wrapped: ( "WRAPPED"i .+ )
 TOKEN:operator: (
     ":=" | "+" | "-" | "*" | "/" | "**" | "||" | "=" | "<>" | "!=" | "~=" |
     "^=" | ">" | "<" | "<=" | ">=" |
@@ -61,10 +62,10 @@ TOKEN:second_type: ( "SECOND"i
 
 TOKEN:keyword: (
     "." | "FROM"i | "WHERE"i | "GROUP BY"i | "ORDER BY"i | 
-    "PRIOR"i | "CONNECT_BY_ROOT"i |
+    "PRIOR"i | "CONNECT_BY_ROOT"i | "CONNECT"i | "START"i |
     "UNION"i | "UNION ALL"i | "INTERSECT"i | "MINUS"i | "MULTISET EXCEPT"i |
     "MULTISET INTERSECT"i | "MULTISET UNION"i | "BETWEEN"i |
-    "ANY"i | "SOME"i | "ALL"i | "EXISTS"i | "ESCAPE"i
+    "ANY"i | "SOME"i | "ALL"i | "ESCAPE"i
 )
 TOKEN:begin_keyword: ( "BEGIN"i )
 TOKEN:end_keyword: ( "END"i )
@@ -72,7 +73,7 @@ TOKEN:declare_keyword: ( "DECLARE"i )
 TOKEN:exception_keyword: ( "EXCEPTION"i )
 TOKEN:when_keyword: ( "WHEN"i )
 TOKEN:then_keyword: ( "THEN"i )
-TOKEN:not_null_keyword: ( "NOT NULL"i )
+TOKEN:not_null_keyword: ( "NOT"i [" " "\t" "\n" "\r"]+ "NULL"i )
 TOKEN:null_keyword: ( "NULL"i )
 TOKEN:default_keyword: ( "DEFAULT"i )
 TOKEN:rowtype_keyword: ( "%ROWTYPE"i )
@@ -110,13 +111,13 @@ TOKEN:procedure_keyword: ( "PROCEDURE"i )
 TOKEN:if_keyword: ( "IF"i )
 TOKEN:else_keyword: ( "ELSE"i )
 TOKEN:elsif_keyword: ( "ELSIF"i )
-TOKEN:endif_keyword: ( "END IF"i )
-TOKEN:is_null_keyword: ( "IS NULL"i )
-TOKEN:is_not_null_keyword: ( "IS NOT NULL"i )
-TOKEN:not_in_keyword: ( "NOT IN"i )
+TOKEN:endif_keyword: ( "END"i [" " "\t" "\n" "\r"]+ "IF"i )
+TOKEN:is_null_keyword: ( "IS"i [" " "\t" "\n" "\r"]+ "NULL"i )
+TOKEN:is_not_null_keyword: ( "IS"i [" " "\t" "\n" "\r"]+ "NOT"i [" " "\t" "\n" "\r"]+ "NULL"i )
+TOKEN:not_in_keyword: ( "NOT"i [" " "\t" "\n" "\r"]+ "IN"i )
 TOKEN:goto_keyword: ( "GOTO"i )
 TOKEN:loop_keyword: ( "LOOP"i )
-TOKEN:end_loop_keyword: ( "END LOOP"i )
+TOKEN:end_loop_keyword: ( "END"i [" " "\t" "\n" "\r"]+ "LOOP"i )
 TOKEN:while_keyword: ( "WHILE"i )
 TOKEN:for_keyword: ( "FOR"i )
 TOKEN:reverse_keyword: ( "REVERSE"i )
@@ -128,7 +129,7 @@ TOKEN:raise_keyword: ( "RAISE"i )
 TOKEN:pragma_keyword: ( "PRAGMA"i )
 TOKEN:autonomous_transaction_keyword: ( "AUTONOMOUS_TRANSACTION"i )
 TOKEN:case_keyword: ( "CASE"i )
-TOKEN:end_case_keyword: ( "END CASE"i )
+TOKEN:end_case_keyword: ( "END"i [" " "\t" "\n" "\r"]+ "CASE"i )
 TOKEN:close_keyword: ( "CLOSE"i )
 TOKEN:table_keyword: ( "TABLE"i )
 TOKEN:of_keyword: ( "OF"i )
@@ -165,6 +166,20 @@ TOKEN:open_keyword: ( "OPEN"i )
 TOKEN:package_keyword: ( "PACKAGE"i )
 TOKEN:body_keyword: ( "BODY"i )
 TOKEN:restrict_references_keyword: ( "RESTRICT_REFERENCES"i )
+TOKEN:returning_keyword: ( "RETURNING"i )
+TOKEN:rollback_keyword: ( "ROLLBACK"i )
+TOKEN:savepoint_keyword: ( "SAVEPOINT"i )
+TOKEN:serially_reusable_keyword: ( "SERIALLY_REUSABLE"i )
+TOKEN:set_keyword: ( "SET"i )
+TOKEN:transaction_keyword: ( "TRANSACTION"i )
+TOKEN:notfound_keyword: ( "%NOTFOUND"i )
+TOKEN:found_keyword: ( "%FOUND"i )
+TOKEN:isopen_keyword: ( "%ISOPEN"i )
+TOKEN:rowcount_keyword: ( "%ROWCOUNT"i )
+TOKEN:sqlcode_keyword: ( "SQLCODE"i )
+TOKEN:sqlerrm_keyword: ( "SQLERRM"i )
+TOKEN:update_keyword: ( "UPDATE"i )
+TOKEN:exists_keyword: ( "EXISTS"i )
   
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
 TOKEN:ext_identifier:( 
@@ -180,11 +195,11 @@ TOKEN:terminator: ( "/" )
 TOKEN:comma: ( "," )
 TOKEN:param_value: ( "=>" )
 TOKEN:quotation_mark: ( "\"" )
-#TOKEN:dot: ( "." )
 
 SKIP:whitespace
 SKIP:block_comment
 SKIP:line_comment
+SKIP:wrapped
 
 #FOLD:block_comment: {
 #    fold_display_name:"LBL_Comment";
@@ -239,30 +254,39 @@ Block = <begin_keyword>
         ["/"];
 Anonymous_Block = [Anonymous_Block_Declare_Section] Block;
 Executable_Section = Statement | Anonymous_Block;
+Executable_Case_Section = ((Label)* Statements [<separator>]) | Anonymous_Block;
 Statement = (Label)* Statements <separator>;
 Statements = Expression | Goto_Statement | Loop_Statement |
              While_Loop_Statement | For_Loop_Statement | SQL_Statements |
              Return_Statement | If_Statement | Raise_Statement | Close_Statement |
              Continue_Statement | Execute_Immediate_Statement | Exit_Statement |
              Fetch_Statement | Forall_Statement | Pragma_Inline_Statement |
-             Open_Statement;
+             Open_Statement | Update_Statement;
 Count_Func = <count_keyword> "(" ((Expression)+ | "*") ")" ;
 SQL_Statements = Select_Statement | Commit_Statement | Delete_Statement |
-                 Insert_Statement | Lock_Table_Statement | Merge_Statement;
+                 Insert_Statement | Lock_Table_Statement | Merge_Statement |
+                 Rollback_Statement | Savepoint_Statement | Set_Transaction_Statement;
 SQL_Uni_Part = (Expression | <alias> | <keyword> | "*" | "," | <into_keyword> |
                <as_keyword> | <values_keyword> | <between_keyword> | 
-               <bulk_keyword> | <collect_keyword> |
+               <bulk_keyword> | <collect_keyword> | <returning_keyword> |
+               <set_keyword> | <by_keyword> | <with_keyword> | <table_keyword> |
                Count_Func | SQL_Statements | ("(" SQL_Statements ")"))+;
+#SQL Statements
 Select_Statement = <select_keyword> SQL_Uni_Part;
 Commit_Statement = <commit_keyword> [SQL_Uni_Part];
 Delete_Statement = <delete_keyword> SQL_Uni_Part;
 Insert_Statement = <insert_keyword> SQL_Uni_Part;
 Lock_Table_Statement = <lock_keyword> <table_keyword> SQL_Uni_Part;
 Merge_Statement = <merge_keyword> SQL_Uni_Part;
+Rollback_Statement = <rollback_keyword> [SQL_Uni_Part];
+Savepoint_Statement = <savepoint_keyword> <identifier>;
+Set_Transaction_Statement = <set_keyword> <transaction_keyword> SQL_Uni_Part;
+Update_Statement = <update_keyword> SQL_Uni_Part;
+# PL/SQL Statements
 Goto_Statement = <goto_keyword> <identifier>;
-Return_Statement = <return_keyword> Expression;
+Return_Statement = <return_keyword> [Expression];
 If_Statement = <if_keyword> Expression <then_keyword> (Executable_Section)+
-               [<elsif_keyword> Expression <then_keyword> (Executable_Section)+]
+               (<elsif_keyword> Expression <then_keyword> (Executable_Section)+)*
                [<else_keyword> (Executable_Section)+]
                <endif_keyword>;
 Loop_Statement = <loop_keyword> (Executable_Section)+ <end_loop_keyword> [<identifier>];
@@ -276,17 +300,17 @@ Cursor_For_Loop_Statement2 = "(" Select_Statement ")" Loop_Statement;
 Raise_Statement = <raise_keyword> [Universal_Identifier];
 Case_Statement_Expression = Simple_Case_Statement_Expression | Searched_Case_Statement_Expression;
 Simple_Case_Statement_Expression= <case_keyword> Expression 
-                        (<when_keyword> Expression <then_keyword> Case_Statement_Expression_Part)+
-                        [<else_keyword> Case_Statement_Expression_Part]
+                        (<when_keyword> Expression <then_keyword> (Executable_Case_Section)+)+
+                        [<else_keyword> (Executable_Case_Section)+]
                         (<end_keyword> | (<end_case_keyword> [<identifier>]));
 Searched_Case_Statement_Expression = <case_keyword>
-                        (<when_keyword> Expression <then_keyword> Case_Statement_Expression_Part)+
-                        [<else_keyword> Case_Statement_Expression_Part]
+                        (<when_keyword> Expression <then_keyword> (Executable_Case_Section)+)+
+                        [<else_keyword> (Executable_Case_Section)+]
                           (<end_keyword> | (<end_case_keyword> [<identifier>]));
-Case_Statement_Expression_Part = ((Label)* Statements [<separator>])+ | Anonymous_Block;
 Close_Statement = <close_keyword> Universal_Identifier;
 Continue_Statement = <continue_keyword> [<identifier>] [<when_keyword> Expression];
 Execute_Immediate_Statement = <execute_keyword> <immediate_keyword> Expression
+                              [<return_keyword> | <returning_keyword>]
                               [Into_Clause | Bulk_Collect_Into_Clause]
                               [Using_Clause] ;
 Into_Clause = <into_keyword> Universal_Identifier ("," Universal_Identifier)*;
@@ -306,8 +330,10 @@ Bounds_Clause = (Expression ".." Expression) |
 Pragma_Inline_Statement = <pragma_keyword> <inline_keyword>
                           "(" <string> "," <string> ")";
 Open_Statement = <open_keyword> Universal_Identifier [Open_Params]
-                 [<for_keyword> (Select_Statement | <string>) [Using_Clause]];
+                 [<for_keyword> (Select_Statement | <string> | Universal_Identifier) [Using_Clause]];
 Open_Params = "(" Expression ("," Expression)* ")";
+Sqlcode_Function = <sqlcode_keyword>;
+Sqlerrm_Function = <sqlerrm_keyword> ["(" ["+"|"-"] <number_unsigned> ")"];
 #Assigment_Statement = Universal_Identifier <operator, ":="> Expression;
 Anonymous_Block_Declare_Section = <declare_keyword> 
                                   (Variable_Declaration)+ 
@@ -319,7 +345,7 @@ Variable_Declaration = <identifier> <constant_keyword> Data_Type
 Variable_Declaration = Subtype_datatype <separator>;
 Variable_Declaration = Record_Collection_datatype <separator>;
 Variable_Declaration = <identifier> <exception_keyword> <separator>;
-Variable_Declaration = <pragma_keyword> (<autonomous_transaction_keyword> |
+Variable_Declaration = <pragma_keyword> (<autonomous_transaction_keyword> | <serially_reusable_keyword> |
     (<exception_init_keyword> "(" Expression "," Expression ")") |
     (<restrict_references_keyword> "(" Expression ("," Expression)+ ")" ) ) <separator>;
 Variable_Declaration = Cursor_datatype <separator>;
@@ -355,19 +381,28 @@ Special_datatype = (<identifier> | <ext_identifier>) (<like_type_keyword> | <row
 #Expression = Boolean_expression | String_expression | Numeric_expression;
 Expression = Universal_expression;
 #Expression_In_Declare = String_expression | Boolean_Expression | Numeric_expression | Special_expression;# [Universal_Identifier];
-Operator = "+" | "-" | "*" | "/" | "**" | "||" | ":=" |
+In_NotIn_Expression = (<in_keyword> | <not_in_keyword>) 
+                      ( Universal_expression | ( "(" Select_Statement ")"));
+#                      (("(" (Select_Statement | (Universal_expression ("," Universal_expression)* ) ) ")")
+#                      | Universal_expression);
+Operator = "+" | "-" | "*" | "/" | "**" | "||" | ":=" | "." |
            "^=" | ">" | "<" | "<=" | ">=" | "=" | "<>" | "!=" | "~=" |
-           <and_operator> | <or_operator> | <in_keyword> | <not_in_keyword> |
-           <like_keyword> ;
+           <and_operator> | <or_operator> |
+           <like_keyword>;
 Unary_Op = <not_operator> | "+" | "-";
-Postfix_Op = <is_null_keyword> | <is_not_null_keyword>;
-Universal_expression = [Unary_Op] Universal_factor [Postfix_Op] (Operator Universal_expression)*;
+Postfix_Op = <is_null_keyword> | <is_not_null_keyword> | "(+)" ;
+Universal_expression = [Unary_Op] Universal_factor [Postfix_Op] (Operator (Universal_expression | ("(" Select_Statement ")") ))*;
+Universal_Operator = ("." ["*"]) | Operator ;
 Universal_factor = <true_keyword> | <false_keyword> | <number_unsigned> |
+                   <exists_keyword> | In_NotIn_Expression | 
                    <string> | <null_keyword> | Case_Statement_Expression |
-                   (Universal_Identifier | <replace_keyword>) [Call_Statement_Param] |
+                   Sub_Identifier [Call_Statement_Param [In_NotIn_Expression]] |
                    ("(" Universal_expression ("," Universal_expression )* ")");
+Sub_Identifier = Sub_Identifier_factor | <replace_keyword> | Sqlcode_Function | Sqlerrm_Function;
+Sub_Identifier_factor = Universal_Identifier [<notfound_keyword> | <found_keyword> |
+                        <isopen_keyword> | <rowcount_keyword> | In_NotIn_Expression];
 Call_Statement_Param = ("(" [Universal_expression ("," Universal_expression )*] ")") |
-                       ("(" <identifier> "=>" Universal_expression ("," <identifier> "=>" Universal_expression )* ")");
+                       ("(" <identifier> "=>" Universal_expression ("," <identifier> "=>" Universal_expression )* ")" );
 
 #Universal_expression = [Call_Statement ","] [Universal_operators] Universal_term (Universal_operators Universal_term )*;
 #Universal_term = Universal_factor (Universal_operators Universal_factor)*;
@@ -393,8 +428,8 @@ Boolean_term = Boolean_factor (<and_operator> (<operator, "(">)* [<not_operator>
 Boolean_factor = (<true_keyword> | <false_keyword> | <identifier> | <ext_identifier>) (<operator, ")">)*;
 		
 Exception_Section = <exception_keyword> (Exception_Handler)+;
-Exception_Handler = <when_keyword> <identifier> (<or_operator> <identifier>)*
-                    <then_keyword> (Anonymous_Block | (Statement)+);
+Exception_Handler = <when_keyword> Universal_Identifier (<or_operator> Universal_Identifier)*
+                    <then_keyword> (Executable_Section)+;
 #Block = (Statement)*;
 #gr_begin_stm = "BEGIN";
 #ConditionalExpression = <identifier>;
