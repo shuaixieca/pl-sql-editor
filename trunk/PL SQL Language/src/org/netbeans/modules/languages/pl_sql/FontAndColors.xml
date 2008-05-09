@@ -3,6 +3,7 @@
 <fontscolors>
     <fontcolor default="comment" name="line_comment"/>
     <fontcolor default="comment" name="block_comment"/>
+    <fontcolor default="comment" name="wrapped"/>    
     <fontcolor default="keyword" name="keyword"/>
     <fontcolor default="keyword" name="some_types"/>    
     <fontcolor default="keyword" name="size_types"/>
@@ -115,6 +116,20 @@
     <fontcolor default="keyword" name="package_keyword"/>
     <fontcolor default="keyword" name="body_keyword"/>
     <fontcolor default="keyword" name="restrict_references_keyword"/>
+    <fontcolor default="keyword" name="returning_keyword"/>
+    <fontcolor default="keyword" name="rollback_keyword"/>
+    <fontcolor default="keyword" name="savepoint_keyword"/>
+    <fontcolor default="keyword" name="serially_reusable_keyword"/>
+    <fontcolor default="keyword" name="set_keyword"/>
+    <fontcolor default="keyword" name="transaction_keyword"/>
+    <fontcolor default="keyword" name="notfound_keyword"/>
+    <fontcolor default="keyword" name="found_keyword"/>
+    <fontcolor default="keyword" name="isopen_keyword"/>
+    <fontcolor default="keyword" name="rowcount_keyword"/>
+    <fontcolor default="keyword" name="sqlcode_keyword"/>
+    <fontcolor default="keyword" name="sqlerrm_keyword"/>
+    <fontcolor default="keyword" name="update_keyword"/>
+    <fontcolor default="keyword" name="exists_keyword"/>    
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
