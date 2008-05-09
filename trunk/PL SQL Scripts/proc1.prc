@@ -20,7 +20,8 @@ elsif (tada and ura) then ura(a);
         feature_boolean := 0;
         feature_info    := null;
     end;
-  end if;
+  end 
+if;
 
 if ((ts_type.segment_space_management = 'AUTO') and
          (ts_type.tcount > 0)) then
@@ -45,6 +46,7 @@ end loop abc;
   aux_count      := 0;
 loop
 null;
+return (ssa+de());
 end loop;
     ts_info := ts_info ||
         '(Segment Space Management: ' || ts_type.segment_space_management ||
@@ -74,7 +76,8 @@ end loop;
        ', TS Count: ' || ts_type.tcount ||
        ', Size MB: '  || ts_type.size_mb || ') ';
 
-  end loop;
+  end
+loop;
 
   /* set the boolean and feature info.  the aux count is already set above */
   if (auto_seg_space) then
