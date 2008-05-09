@@ -80,8 +80,12 @@ CASE
    WHEN salary > 20000 THEN
     begin
       give_bonus(employee_id, 1000);
+      a := sqlerrm(34);
     begin
       give_bonus(employee_id, 1000);
+    update abc
+        set a =s+3
+    where id = 12;
     end;
     end;
    END CASE;
@@ -90,7 +94,9 @@ WHEN salary > 40000 THEN
 WHEN salary < 10000 THEN
    give_bonus(employee_id,0);
 END case;
-
+rollback;
+savepoint memo;
+set transaction use rollback 'ubs';
 CASE employee_type
 WHEN 'S' THEN
    award_salary_bonus(employee_id);
