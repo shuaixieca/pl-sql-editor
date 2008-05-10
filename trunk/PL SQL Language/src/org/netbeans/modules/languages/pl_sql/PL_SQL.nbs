@@ -196,6 +196,8 @@ TOKEN:comma: ( "," )
 TOKEN:param_value: ( "=>" )
 TOKEN:quotation_mark: ( "\"" )
 
+TOKEN:the_rest: ( . )
+
 SKIP:whitespace
 SKIP:block_comment
 SKIP:line_comment
@@ -271,8 +273,17 @@ SQL_Uni_Part = (Expression | <alias> | <keyword> | "*" | "," | <into_keyword> |
                <bulk_keyword> | <collect_keyword> | <returning_keyword> |
                <set_keyword> | <by_keyword> | <with_keyword> | <table_keyword> |
                Count_Func | SQL_Statements | ("(" SQL_Statements ")"))+;
+SQL_Not_Parsed = <alias> | <keyword> | <operator> | <into_keyword> |
+               <as_keyword> | <values_keyword> | <between_keyword> | 
+               <bulk_keyword> | <collect_keyword> | <returning_keyword> |
+               <set_keyword> | <by_keyword> | <with_keyword> | <table_keyword> |
+               <number_unsigned> | <count_keyword> | Universal_Identifier |
+               <string> | <comma> | <and_operator> | <or_operator> | <not_operator> |
+               <select_keyword> |
+               <the_rest>;
 #SQL Statements
-Select_Statement = <select_keyword> SQL_Uni_Part;
+#Select_Statement = <select_keyword> SQL_Uni_Part;
+Select_Statement = <select_keyword> (SQL_Not_Parsed)+;
 Commit_Statement = <commit_keyword> [SQL_Uni_Part];
 Delete_Statement = <delete_keyword> SQL_Uni_Part;
 Insert_Statement = <insert_keyword> SQL_Uni_Part;
