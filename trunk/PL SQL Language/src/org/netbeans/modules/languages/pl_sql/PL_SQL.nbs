@@ -264,35 +264,31 @@ Statements = Expression | Goto_Statement | Loop_Statement |
              Continue_Statement | Execute_Immediate_Statement | Exit_Statement |
              Fetch_Statement | Forall_Statement | Pragma_Inline_Statement |
              Open_Statement | Update_Statement;
-Count_Func = <count_keyword> "(" ((Expression)+ | "*") ")" ;
 SQL_Statements = Select_Statement | Commit_Statement | Delete_Statement |
                  Insert_Statement | Lock_Table_Statement | Merge_Statement |
                  Rollback_Statement | Savepoint_Statement | Set_Transaction_Statement;
-SQL_Uni_Part = (Expression | <alias> | <keyword> | "*" | "," | <into_keyword> |
-               <as_keyword> | <values_keyword> | <between_keyword> | 
+SQL_Operator = "+" | "-" | "*" | "/" | "**" | "||" | "=" | "<>" | "!=" | "~=" |
+               "^=" | ">" | "<" | "<=" | ">=" | "(+)" | ",";
+SQL_Not_Parsed = <alias> | <keyword> | SQL_Operator | <into_keyword> | <in_keyword> |
+               <as_keyword> | <values_keyword> | <between_keyword> | <some_types> |
                <bulk_keyword> | <collect_keyword> | <returning_keyword> |
                <set_keyword> | <by_keyword> | <with_keyword> | <table_keyword> |
-               Count_Func | SQL_Statements | ("(" SQL_Statements ")"))+;
-SQL_Not_Parsed = <alias> | <keyword> | <operator> | <into_keyword> |
-               <as_keyword> | <values_keyword> | <between_keyword> | 
-               <bulk_keyword> | <collect_keyword> | <returning_keyword> |
-               <set_keyword> | <by_keyword> | <with_keyword> | <table_keyword> |
-               <number_unsigned> | <count_keyword> | Universal_Identifier |
+               <number_unsigned> | <count_keyword> | Universal_Identifier | Case_Statement_Expression |
                <string> | <comma> | <and_operator> | <or_operator> | <not_operator> |
-               <select_keyword> |
+               <is_not_null_keyword> | <is_null_keyword> | <null_keyword> | <like_keyword> | 
+               SQL_Statements | SQL_Not_Parsed | ("(" (SQL_Not_Parsed)* ")") |
                <the_rest>;
 #SQL Statements
-#Select_Statement = <select_keyword> SQL_Uni_Part;
 Select_Statement = <select_keyword> (SQL_Not_Parsed)+;
-Commit_Statement = <commit_keyword> [SQL_Uni_Part];
-Delete_Statement = <delete_keyword> SQL_Uni_Part;
-Insert_Statement = <insert_keyword> SQL_Uni_Part;
-Lock_Table_Statement = <lock_keyword> <table_keyword> SQL_Uni_Part;
-Merge_Statement = <merge_keyword> SQL_Uni_Part;
-Rollback_Statement = <rollback_keyword> [SQL_Uni_Part];
+Commit_Statement = <commit_keyword> [SQL_Not_Parsed];
+Delete_Statement = <delete_keyword> (SQL_Not_Parsed)+;
+Insert_Statement = <insert_keyword> (SQL_Not_Parsed)+;
+Lock_Table_Statement = <lock_keyword> <table_keyword> SQL_Not_Parsed;
+Merge_Statement = <merge_keyword> (SQL_Not_Parsed)+;
+Rollback_Statement = <rollback_keyword> [SQL_Not_Parsed];
 Savepoint_Statement = <savepoint_keyword> <identifier>;
-Set_Transaction_Statement = <set_keyword> <transaction_keyword> SQL_Uni_Part;
-Update_Statement = <update_keyword> SQL_Uni_Part;
+Set_Transaction_Statement = <set_keyword> <transaction_keyword> (SQL_Not_Parsed)+;
+Update_Statement = <update_keyword> (SQL_Not_Parsed)+;
 # PL/SQL Statements
 Goto_Statement = <goto_keyword> <identifier>;
 Return_Statement = <return_keyword> [Expression];
@@ -405,7 +401,7 @@ Postfix_Op = <is_null_keyword> | <is_not_null_keyword> | "(+)" ;
 Universal_expression = [Unary_Op] Universal_factor [Postfix_Op] (Operator (Universal_expression | ("(" Select_Statement ")") ))*;
 Universal_Operator = ("." ["*"]) | Operator ;
 Universal_factor = <true_keyword> | <false_keyword> | <number_unsigned> |
-                   <exists_keyword> | In_NotIn_Expression | 
+                   In_NotIn_Expression | 
                    <string> | <null_keyword> | Case_Statement_Expression |
                    Sub_Identifier [Call_Statement_Param [In_NotIn_Expression]] |
                    ("(" Universal_expression ("," Universal_expression )* ")");
