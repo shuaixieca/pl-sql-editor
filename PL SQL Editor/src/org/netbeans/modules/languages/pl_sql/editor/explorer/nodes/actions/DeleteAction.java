@@ -46,7 +46,11 @@ public class DeleteAction extends CookieAction {
             DeleteCookieInterface delete = nd.getCookie(DeleteCookieInterface.class);
             if (delete != null) {
                 delete.Delete();
-                RefreshCookieInterface refresh = nd.getParentNode().getCookie(RefreshCookieInterface.class);
+                Node node = nd.getParentNode();
+                RefreshCookieInterface refresh = null;
+                if (node != null) {
+                    refresh = node.getCookie(RefreshCookieInterface.class);
+                }
                 try {
                     nd.destroy();
                     if (refresh != null) {

@@ -147,5 +147,6 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
 
     public void Delete() {
         this.RemoveConnection();
+        OConnectionRoot.RemoveConnection(this);
     }
 }
