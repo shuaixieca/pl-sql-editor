@@ -4,19 +4,17 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor;
 
-import java.awt.Dialog;
 import java.io.Serializable;
 import java.util.logging.Logger;
+import javax.swing.Action;
 import javax.swing.ButtonGroup;
-import javax.swing.JOptionPane;
-import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.OConnectionNode;
-import org.netbeans.modules.languages.pl_sql.editor.oracletree.OConnectionJPanel;
-import org.openide.DialogDescriptor;
-import org.openide.DialogDisplayer;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.OConnectionRootNode;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.AddAction;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteAction;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshAction;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.BeanTreeView;
-import org.openide.util.HelpCtx;
 import org.openide.util.NbBundle;
 import org.openide.windows.TopComponent;
 import org.openide.windows.WindowManager;
@@ -32,7 +30,6 @@ final class OracleTopComponent extends TopComponent implements ExplorerManager.P
     static final String ICON_PATH = "org/netbeans/modules/languages/pl_sql/editor/resources/Oracle.png";
     private static final String PREFERRED_ID = "OracleTopComponent";
     private final ExplorerManager mgr = new ExplorerManager();
-    private Dialog dlg;
 
     public ExplorerManager getExplorerManager() {
         return mgr;
@@ -40,11 +37,25 @@ final class OracleTopComponent extends TopComponent implements ExplorerManager.P
 
     private OracleTopComponent() {
         initComponents();
+        org.openide.awt.Actions.connect(AddjButton, (Action) new AddAction());
+        org.openide.awt.Actions.connect(DeletejButton, (Action) new DeleteAction());
+        org.openide.awt.Actions.connect(RefreshjButton, (Action) new RefreshAction());
+        // following line tells the top component which lookup should be associated with it
         associateLookup(ExplorerUtils.createLookup(mgr, getActionMap()));
-        ((BeanTreeView) DBView).setRootVisible(false);
-        //mgr.setRootContext(new AbstractNode(new MyChildren()));
-        //mgr.setRootContext(DBRootNode.GetDBRootNode());
-        mgr.setRootContext(OConnectionNode.GetRootNode());
+        //((BeanTreeView) DBView).setRootVisible(false);
+        mgr.setRootContext(OConnectionRootNode.GetRootNode());
+        /*
+        mgr.addPropertyChangeListener(new PropertyChangeListener() {
+
+            public void propertyChange(PropertyChangeEvent evt) {
+                OConnectionRoot ocr = getLookup().lookup(OConnectionRoot.class);
+                if (ocr != null) {
+                    RefreshjButton.setEnabled(true);
+                } else {
+                    RefreshjButton.setEnabled(false);
+                }
+            }
+        });*/
         setName(NbBundle.getMessage(OracleTopComponent.class, "CTL_OracleTopComponent"));
         setToolTipText(NbBundle.getMessage(OracleTopComponent.class, "HINT_OracleTopComponent"));
 //        setIcon(Utilities.loadImage(ICON_PATH, true));
@@ -79,11 +90,6 @@ final class OracleTopComponent extends TopComponent implements ExplorerManager.P
         AddjButton.setFocusable(false);
         AddjButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         AddjButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        AddjButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AddjButtonActionPerformed(evt);
-            }
-        });
         DBjToolBar.add(AddjButton);
 
         DeletejButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/netbeans/modules/languages/pl_sql/editor/resources/subtract.gif"))); // NOI18N
@@ -98,11 +104,6 @@ final class OracleTopComponent extends TopComponent implements ExplorerManager.P
         RefreshjButton.setFocusable(false);
         RefreshjButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         RefreshjButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        RefreshjButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RefreshjButtonActionPerformed(evt);
-            }
-        });
         DBjToolBar.add(RefreshjButton);
 
         BGroup.add(DBAjToggleButton);
@@ -147,16 +148,6 @@ final class OracleTopComponent extends TopComponent implements ExplorerManager.P
         gridBagConstraints.weighty = 100.0;
         add(DBView, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
-
-private void AddjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddjButtonActionPerformed
-    Object cls = getLookup().lookup(Object.class);
-    JOptionPane.showMessageDialog(null, "Object is " + cls.getClass().getName());
-}//GEN-LAST:event_AddjButtonActionPerformed
-
-private void RefreshjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefreshjButtonActionPerformed
-    OConnectionJPanel oc = new OConnectionJPanel();
-    oc.ShowDialog();
-}//GEN-LAST:event_RefreshjButtonActionPerformed
     private ButtonGroup BGroup = new ButtonGroup();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddjButton;

@@ -7,25 +7,30 @@ package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.OConnectionClass;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.OUser;
 import org.openide.nodes.ChildFactory;
 import org.openide.nodes.Node;
+import org.openide.util.WeakListeners;
 
 /**
  *
  * @author SUMsoft
  */
-public final class OConnectionNodeChildFactory extends ChildFactory<OConnectionNode> {
+public final class OConnectionNodeChildFactory extends ChildFactory<OConnectionNode>
+        implements ChangeListener {
 
-    private final OConnectionClass parent;
+    private final OConnectionClass parentInfo;
 
-    public OConnectionNodeChildFactory(OConnectionClass parent) {
-        this.parent = parent;
-    /*parentInfo.addChangeListener(
-    WeakListeners.create(ChangeListener.class, this, parentInfo));
-    
-    stateChanged(new ChangeEvent(parentInfo));*/
+    public OConnectionNodeChildFactory(OConnectionClass parentInfo) {
+        super();
+        this.parentInfo = parentInfo;
+        parentInfo.addChangeListener(
+                WeakListeners.create(ChangeListener.class, this, parentInfo));
+
+        stateChanged(new ChangeEvent(parentInfo));
     }
 
     @Override
@@ -47,8 +52,13 @@ public final class OConnectionNodeChildFactory extends ChildFactory<OConnectionN
     protected boolean createKeys(List<OConnectionNode> keys) {
         //List<OConnectionClass> ocsl = OConnectionClass.LoadAllConnections();
         //for (OConnectionClass ocs : ocsl) {
-        keys.add(new OConnectionNode(parent));
+        parentInfo.ReloadChilds();
+        keys.add(new OConnectionNode(parentInfo));
         //}
         return true;
+    }
+
+    public void stateChanged(ChangeEvent e) {
+        refresh(false);
     }
 }

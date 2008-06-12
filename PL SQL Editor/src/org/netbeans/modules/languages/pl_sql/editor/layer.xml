@@ -45,6 +45,7 @@ made subject to such option by the copyright holder.
     <folder name="Actions">
         <folder name="Window">
             <file name="org-netbeans-modules-languages-pl_sql-editor-OracleAction.instance"/>
+            <file name="org-netbeans-modules-languages-pl_sql-editor-explorer-nodes-actions-AddAction.instance"/>
         </folder>
     </folder>
     <folder name="Menu">
@@ -63,8 +64,15 @@ made subject to such option by the copyright holder.
             <folder name="explorer">
                 <file name="OracleTopComponent.wstcref" url="OracleTopComponentWstcref.xml">
                     <attr name="position" intvalue="1000"/>
-                </file>    
+                </file>
             </folder>
         </folder>
     </folder>
+    <!--folder name="Toolbars">
+        <folder name="Edit">
+            <file name="org-netbeans-modules-languages-pl_sql-editor-explorer-nodes-actions-RefreshAction.instance">
+                <attr name="position" intvalue="10"/>
+            </file>
+        </folder>
+    </folder-->
 </filesystem>
