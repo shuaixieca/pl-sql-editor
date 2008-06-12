@@ -98,5 +98,6 @@ public class OUser implements DeleteCookieInterface {
 
     public void Delete() {
         this.RemoveUser();
+        Parent.getUsers().remove(this);
     }
 }

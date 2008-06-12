@@ -70,7 +70,11 @@ public class OConnectionRoot implements RefreshCookieInterface, AddCookieInterfa
             res.add(occ);
         }
         return res;
-    //return Arrays.asList(Connections.toArray(new OConnectionClass[Connections.size()]));
+        //return Arrays.asList(Connections.toArray(new OConnectionClass[Connections.size()]));
+    }
+    
+    public static void RemoveConnection(OConnectionClass occ) {
+        Connections.remove(occ);
     }
 
     public void Add() {
