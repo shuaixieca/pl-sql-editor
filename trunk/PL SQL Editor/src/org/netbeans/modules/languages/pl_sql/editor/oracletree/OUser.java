@@ -8,13 +8,14 @@ import java.sql.SQLException;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 import oracle.jdbc.pool.OracleDataSource;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
 import org.openide.util.Exceptions;
 
 /**
  *
  * @author SUMsoft
  */
-public class OUser {
+public class OUser implements DeleteCookieInterface {
 
     private String UserName,  Password = "";
     private Boolean SavePassword = false;
@@ -22,7 +23,7 @@ public class OUser {
     private OConnectionClass Parent;
 
     private Preferences pref() {
-        return OConnectionClass.getPref_root().node(Parent.toString());
+        return OConnectionClass.getPref_root().node(Parent.getPrefNode());
     }
 
     public OUser(OConnectionClass OParent, String OUserName, String OPassword, Boolean OSavePassword, RoleTypes OConnectRole) {
@@ -31,6 +32,7 @@ public class OUser {
         if (OSavePassword) {
             Password = OPassword;
         }
+        //Password = OPassword;
         SavePassword = OSavePassword;
         ConnectRole = OConnectRole;
     }
@@ -69,6 +71,7 @@ public class OUser {
         if (SavePassword) {
             ods.setPassword(Password);
         }
+        //ods.setPassword(Password);
         if (ConnectRole != RoleTypes.normal) {
             java.util.Properties prop = new java.util.Properties();
             prop.put("internal_logon", ConnectRole.toString());
@@ -91,5 +94,9 @@ public class OUser {
 
     public String getPassword() {
         return Password;
+    }
+
+    public void Delete() {
+        this.RemoveUser();
     }
 }
