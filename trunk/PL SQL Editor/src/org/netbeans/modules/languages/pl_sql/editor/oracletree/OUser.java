@@ -4,7 +4,12 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.sql.SQLException;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 import oracle.jdbc.pool.OracleDataSource;
@@ -22,6 +27,7 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface {
     private Boolean SavePassword = false;
     private RoleTypes ConnectRole = RoleTypes.normal;
     private OConnectionClass Parent;
+    private List<PropertyChangeListener> listeners = Collections.synchronizedList(new LinkedList<PropertyChangeListener>());
 
     private Preferences pref() {
         return OConnectionClass.getPref_root().node(Parent.getPrefNode());
@@ -38,6 +44,22 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface {
         ConnectRole = OConnectRole;
     }
 
+    public void addPropertyChangeListener(PropertyChangeListener pcl) {
+        listeners.add(pcl);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener pcl) {
+        listeners.remove(pcl);
+    }
+
+    private void fire(String propertyName, Object old, Object nue) {
+        //Passing 0 below on purpose, so you only synchronize for one atomic call:
+        PropertyChangeListener[] pcls = (PropertyChangeListener[]) listeners.toArray(new PropertyChangeListener[0]);
+        for (int i = 0; i < pcls.length; i++) {
+            pcls[i].propertyChange(new PropertyChangeEvent(this, propertyName, old, nue));
+        }
+    }
+
     public void SaveUser() {
         Preferences pref_user = pref().node(getUserName());
         pref_user.put("UserName", getUserName());
@@ -51,6 +73,7 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface {
     public void RemoveUser() {
         try {
             pref().node(getUserName()).removeNode();
+            pref().flush();
         } catch (BackingStoreException ex) {
             Exceptions.printStackTrace(ex);
         }
@@ -114,7 +137,9 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface {
     }
 
     public void setUserName(String UserName) {
+        String oldUserName = this.UserName;
         this.UserName = UserName;
+        fire("UserName", oldUserName, UserName);
     }
 
     public void Delete() {
@@ -126,9 +151,15 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface {
         OConnectionJPanel oc = new OConnectionJPanel();
         oc.ShowEditUserDialog(this);
         if (oc.getIsSaved()) {
+            if (oc.getUserName().compareTo(this.getUserName()) != 0) {
+                this.RemoveUser();
+            }
             setUserName(oc.getUserName());
             setSavePassword(oc.getSaveUserPassword());
-            setPassword(oc.getPassword());
+            if (oc.getSaveUserPassword()) {
+                setPassword(oc.getPassword());
+            }
+            setConnectRole(oc.getConnectRole());
         }
     }
 }
