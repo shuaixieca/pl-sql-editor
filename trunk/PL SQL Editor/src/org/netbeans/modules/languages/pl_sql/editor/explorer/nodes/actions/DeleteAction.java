@@ -6,6 +6,7 @@ package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions;
 
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.openide.nodes.Node;
@@ -45,19 +46,25 @@ public class DeleteAction extends CookieAction {
         for (Node nd : arg0) {
             DeleteCookieInterface delete = nd.getCookie(DeleteCookieInterface.class);
             if (delete != null) {
-                delete.Delete();
-                Node node = nd.getParentNode();
-                RefreshCookieInterface refresh = null;
-                if (node != null) {
-                    refresh = node.getCookie(RefreshCookieInterface.class);
-                }
-                try {
-                    nd.destroy();
-                    if (refresh != null) {
-                        refresh.Refresh();
+                int ret = JOptionPane.showConfirmDialog(null,
+                        Utils.getBundle().getString("LBL_DeleteConfirmMsg") + " \"" + delete.toString() + "\"?",
+                        Utils.getBundle().getString("LBL_DeleteConfirmCaptionMsg"), JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE);
+                if (ret == JOptionPane.YES_OPTION) {
+                    delete.Delete();
+                    Node node = nd.getParentNode();
+                    RefreshCookieInterface refresh = null;
+                    if (node != null) {
+                        refresh = node.getCookie(RefreshCookieInterface.class);
                     }
-                } catch (IOException ex) {
-                    Exceptions.printStackTrace(ex);
+                    try {
+                        nd.destroy();
+                        if (refresh != null) {
+                            refresh.Refresh();
+                        }
+                    } catch (IOException ex) {
+                        Exceptions.printStackTrace(ex);
+                    }
                 }
             }
         }
