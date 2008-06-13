@@ -106,6 +106,7 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
     public void RemoveConnection() {
         try {
             pref_root.node(getPrefNode()).removeNode();
+            pref_root.flush();
         } catch (BackingStoreException ex) {
             Exceptions.printStackTrace(ex);
         }

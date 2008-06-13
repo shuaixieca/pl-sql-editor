@@ -4,6 +4,8 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import javax.swing.Action;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.EditAction;
@@ -16,6 +18,7 @@ import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
 import org.openide.nodes.PropertySupport;
 import org.openide.nodes.Sheet;
+import org.openide.util.WeakListeners;
 import org.openide.util.actions.SystemAction;
 import org.openide.util.lookup.Lookups;
 
@@ -23,10 +26,11 @@ import org.openide.util.lookup.Lookups;
  *
  * @author SUMsoft
  */
-public class OUserNode extends AbstractNode {
+public class OUserNode extends AbstractNode implements PropertyChangeListener {
 
     public OUserNode(OUser ou) {
         super(Children.LEAF, Lookups.singleton(ou));
+        ou.addPropertyChangeListener(WeakListeners.propertyChange(this, ou));
     }
 
     private OUser getOUser() {
@@ -46,7 +50,7 @@ public class OUserNode extends AbstractNode {
         } else {
             return new SystemAction[]{
                         SystemAction.get(EditAction.class),
-                        SystemAction.get(DeleteAction.class),                        
+                        SystemAction.get(DeleteAction.class),
                         null,
                         SystemAction.get(RefreshAction.class),
                         null,
@@ -75,7 +79,7 @@ public class OUserNode extends AbstractNode {
             Property SavePasswordProp = new PropertySupport.Reflection<Boolean>(obj, Boolean.class, "getSavePassword", null);
             SavePasswordProp.setName("Save password?");
             set.put(SavePasswordProp);
-            
+
             Property ConnectRoleProp = new PropertySupport.Reflection<RoleTypes>(obj, RoleTypes.class, "getConnectRole", null);
             ConnectRoleProp.setName("Connect as");
             set.put(ConnectRoleProp);
@@ -85,5 +89,11 @@ public class OUserNode extends AbstractNode {
 
         sheet.put(set);
         return sheet;
+    }
+
+    public void propertyChange(PropertyChangeEvent evt) {
+        if ("UserName".equals(evt.getPropertyName())) {
+            this.fireDisplayNameChange(null, getDisplayName());
+        }
     }
 }

@@ -461,6 +461,7 @@ public class OConnectionJPanel extends javax.swing.JPanel {
             setSavePassword(ocs.getSavePassword());
             setPassword(ocs.getPassword());
             setConnectAs(ocs.getConnectRole());
+            DisableDBControls();
             ShowDialogInternal("Edit Oracle user");
         }
     }
