@@ -4,13 +4,19 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.TreeSet;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 import javax.swing.event.ChangeListener;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.AddCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.EditCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.OUser;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.RoleTypes;
@@ -22,13 +28,15 @@ import org.openide.util.NbPreferences;
  *
  * @author SUMsoft
  */
-public class OConnectionClass implements RefreshCookieInterface, AddCookieInterface, DeleteCookieInterface {
+public class OConnectionClass implements RefreshCookieInterface, AddCookieInterface,
+        DeleteCookieInterface, EditCookieInterface {
 
     private String ServerName,  DatabaseName,  PrefNodeName;
     private int Port = 1521;
     private TreeSet<OUser> Users = new TreeSet<OUser>(new OUserComp());
     protected static Preferences pref_root = NbPreferences.forModule(OConnectionClass.class).node("OConnectionClass");
     private final ChangeSupport changeSupport = new ChangeSupport(this);
+    private List<PropertyChangeListener> listeners = Collections.synchronizedList(new LinkedList<PropertyChangeListener>());
 
     class OUserComp implements Comparator<OUser> {
 
@@ -38,11 +46,14 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
     }
 
     public OConnectionClass(String OPrefNodeName, String OServerName, int OPort, String ODatabaseName) {
-        PrefNodeName = OPrefNodeName;
+        if (OPrefNodeName == null) {
+            PrefNodeName = String.valueOf(this.toString().hashCode());
+        } else {
+            PrefNodeName = OPrefNodeName;
+        }
         ServerName = OServerName;
         Port = OPort;
         DatabaseName = ODatabaseName;
-        PrefNodeName = String.valueOf(this.toString().hashCode());
     }
 
     public OConnectionClass(String OPrefNodeName, String OServerName, int OPort, String ODatabaseName, String OUserName, String OPassword, Boolean OSavePassword, RoleTypes OConnectRole) {
@@ -61,6 +72,22 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
 
     protected void notifyChange() {
         changeSupport.fireChange();
+    }
+
+    public void addPropertyChangeListener(PropertyChangeListener pcl) {
+        listeners.add(pcl);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener pcl) {
+        listeners.remove(pcl);
+    }
+
+    private void fire(String propertyName, Object old, Object nue) {
+        //Passing 0 below on purpose, so you only synchronize for one atomic call:
+        PropertyChangeListener[] pcls = (PropertyChangeListener[]) listeners.toArray(new PropertyChangeListener[0]);
+        for (int i = 0; i < pcls.length; i++) {
+            pcls[i].propertyChange(new PropertyChangeEvent(this, propertyName, old, nue));
+        }
     }
 
     public void SaveConnection() {
@@ -109,6 +136,24 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
         return ServerName;
     }
 
+    public void setDatabaseName(String DatabaseName) {
+        String oldDatabaseName = this.DatabaseName;
+        this.DatabaseName = DatabaseName;
+        fire("DatabaseName", oldDatabaseName, DatabaseName);
+    }
+
+    public void setPort(int Port) {
+        int oldPort = this.Port;
+        this.Port = Port;
+        fire("Port", oldPort, Port);
+    }
+
+    public void setServerName(String ServerName) {
+        String OldServerName = this.ServerName;
+        this.ServerName = ServerName;
+        fire("ServerName", OldServerName, ServerName);
+    }
+
     public TreeSet<OUser> getUsers() {
         return Users;
     }
@@ -148,5 +193,15 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
     public void Delete() {
         this.RemoveConnection();
         OConnectionRoot.RemoveConnection(this);
+    }
+
+    public void Edit() {
+        OConnectionJPanel oc = new OConnectionJPanel();
+        oc.ShowEditConnDialog(this);
+        if (oc.getIsSaved()) {
+            setDatabaseName(oc.getDatabaseName());
+            setPort(oc.getPort());
+            setServerName(oc.getServerName());
+        }
     }
 }

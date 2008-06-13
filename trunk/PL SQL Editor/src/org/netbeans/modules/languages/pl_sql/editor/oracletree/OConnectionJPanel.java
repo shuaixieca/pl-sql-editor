@@ -12,9 +12,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import oracle.jdbc.OracleConnection;
@@ -214,6 +217,23 @@ public class OConnectionJPanel extends javax.swing.JPanel {
     private TestConnection tc = null;
     private boolean isSaved = false;
     private final String[] str = {"Test", "Save", "Cancel", "Help"};
+    private String OConnPrefNode = null;
+
+    public void setPassword(String str) {
+        this.PasswordjPasswordField.setText(str);
+    }
+
+    public void setSavePassword(Boolean b) {
+        this.SavePasswordjCheckBox.setSelected(b);
+    }
+
+    public void setUserName(String str) {
+        this.UserNamejTextField.setText(str);
+    }
+
+    public void setConnectAs(RoleTypes rt) {
+        this.ConnectAsjComboBox.setSelectedItem(rt);
+    }
 
     public void setDatabseName(String str) {
         this.DatabseNamejTextField.setText(str);
@@ -291,7 +311,7 @@ public class OConnectionJPanel extends javax.swing.JPanel {
             }
             if (e.getActionCommand().compareTo("Save") == 0) {
                 if (Validate()) {
-                    OConnectionClass ocs = new OConnectionClass(null, getServerName(), getPort(), getDatabaseName(),
+                    OConnectionClass ocs = new OConnectionClass(OConnPrefNode, getServerName(), getPort(), getDatabaseName(),
                             getUserName(), getPassword(), getSaveUserPassword(), getConnectRole());
                     ocs.SaveConnection();
                     ocs.SaveAllUsers();
@@ -412,6 +432,36 @@ public class OConnectionJPanel extends javax.swing.JPanel {
             setDatabseName(ocs.getDatabaseName());
             DisableDBControls();
             ShowDialogInternal("Add new Oracle user");
+        }
+    }
+
+    public void ShowEditConnDialog(OConnectionClass ocs) {
+        if (ocs != null) {
+            OConnPrefNode = ocs.getPrefNode();
+            setServerName(ocs.getServerName());
+            setPort(ocs.getPort());
+            setDatabseName(ocs.getDatabaseName());
+            if (ocs.getUsers().size() > 0) {
+                setUserName(ocs.getUsers().first().getUserName());
+                setSavePassword(ocs.getUsers().first().getSavePassword());
+                setPassword(ocs.getUsers().first().getPassword());
+                setConnectAs(ocs.getUsers().first().getConnectRole());
+            }
+            ShowDialogInternal("Edit Oracle connection");
+        }
+    }
+
+    public void ShowEditUserDialog(OUser ocs) {
+        if (ocs != null) {
+            OConnPrefNode = ocs.getParent().getPrefNode();
+            setServerName(ocs.getParent().getServerName());
+            setPort(ocs.getParent().getPort());
+            setDatabseName(ocs.getParent().getDatabaseName());
+            setUserName(ocs.getUserName());
+            setSavePassword(ocs.getSavePassword());
+            setPassword(ocs.getPassword());
+            setConnectAs(ocs.getConnectRole());
+            ShowDialogInternal("Edit Oracle user");
         }
     }
 

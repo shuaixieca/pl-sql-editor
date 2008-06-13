@@ -9,13 +9,14 @@ import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 import oracle.jdbc.pool.OracleDataSource;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.EditCookieInterface;
 import org.openide.util.Exceptions;
 
 /**
  *
  * @author SUMsoft
  */
-public class OUser implements DeleteCookieInterface {
+public class OUser implements EditCookieInterface, DeleteCookieInterface {
 
     private String UserName,  Password = "";
     private Boolean SavePassword = false;
@@ -57,7 +58,7 @@ public class OUser implements DeleteCookieInterface {
 
     @Override
     public String toString() {
-        return UserName;
+        return getUserName();
     }
 
     public OracleDataSource getOracleDataSource() throws SQLException {
@@ -96,8 +97,38 @@ public class OUser implements DeleteCookieInterface {
         return Password;
     }
 
+    public OConnectionClass getParent() {
+        return Parent;
+    }
+
+    public void setConnectRole(RoleTypes ConnectRole) {
+        this.ConnectRole = ConnectRole;
+    }
+
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    public void setSavePassword(Boolean SavePassword) {
+        this.SavePassword = SavePassword;
+    }
+
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
     public void Delete() {
         this.RemoveUser();
         Parent.getUsers().remove(this);
+    }
+
+    public void Edit() {
+        OConnectionJPanel oc = new OConnectionJPanel();
+        oc.ShowEditUserDialog(this);
+        if (oc.getIsSaved()) {
+            setUserName(oc.getUserName());
+            setSavePassword(oc.getSaveUserPassword());
+            setPassword(oc.getPassword());
+        }
     }
 }
