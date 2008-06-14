@@ -29,7 +29,7 @@ import org.openide.util.lookup.Lookups;
 public class OConnectionNode extends AbstractNode implements PropertyChangeListener {
 
     public OConnectionNode(OConnectionClass ocs) {
-        super(Children.create(new OConnectionNodeChildFactory(ocs), true), Lookups.singleton(ocs));
+        super(Children.create(new OConnectionNodeChildFactory(ocs), false), Lookups.singleton(ocs));
         //super(Children.create(new OConnectionNodeChildFactory(ocs), true));
         ocs.addPropertyChangeListener(WeakListeners.propertyChange(this, ocs));
     }

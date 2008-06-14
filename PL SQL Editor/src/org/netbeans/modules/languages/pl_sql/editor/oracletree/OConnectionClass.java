@@ -167,7 +167,7 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
         this.notifyChange();
     }
 
-    public void ReloadChilds() {
+    public synchronized void ReloadChilds() {
         Users.clear();
         try {
             Preferences pref = pref_root.node(getPrefNode());
