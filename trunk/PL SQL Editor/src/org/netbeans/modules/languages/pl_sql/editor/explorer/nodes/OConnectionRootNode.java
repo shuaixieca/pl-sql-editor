@@ -22,7 +22,7 @@ import org.openide.util.lookup.Lookups;
 public class OConnectionRootNode extends AbstractNode {
 
     public OConnectionRootNode(OConnectionRoot ocr) {
-        super(Children.create(new RootNodeChildFactory(ocr), true), Lookups.singleton(ocr));
+        super(Children.create(new RootNodeChildFactory(ocr), false), Lookups.singleton(ocr));
     }
 
     @Override
