@@ -7,7 +7,9 @@ package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import javax.swing.Action;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ConnectAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteAction;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DisconnectAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.EditAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshAction;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.OUser;
@@ -29,7 +31,8 @@ import org.openide.util.lookup.Lookups;
 public class OUserNode extends AbstractNode implements PropertyChangeListener {
 
     public OUserNode(OUser ou) {
-        super(Children.LEAF, Lookups.singleton(ou));
+        super(Children.create(new OUserNodeChildFactory(ou), true), Lookups.singleton(ou));
+        //super(Children.LEAF, Lookups.singleton(ou));
         ou.addPropertyChangeListener(WeakListeners.propertyChange(this, ou));
     }
 
@@ -39,8 +42,16 @@ public class OUserNode extends AbstractNode implements PropertyChangeListener {
 
     @Override
     public String getDisplayName() {
-
         return getOUser().toString();
+    }
+
+    @Override
+    public String getHtmlDisplayName() {
+        if (getOUser().getIsConnected()) {
+            return "<b>" + getDisplayName() + "</b>";
+        } else {
+            return null;
+        }
     }
 
     @Override
@@ -49,6 +60,8 @@ public class OUserNode extends AbstractNode implements PropertyChangeListener {
             return super.getActions(context);
         } else {
             return new SystemAction[]{
+                        SystemAction.get(ConnectAction.class),
+                        SystemAction.get(DisconnectAction.class),
                         SystemAction.get(EditAction.class),
                         SystemAction.get(DeleteAction.class),
                         null,
@@ -83,6 +96,10 @@ public class OUserNode extends AbstractNode implements PropertyChangeListener {
             Property ConnectRoleProp = new PropertySupport.Reflection<RoleTypes>(obj, RoleTypes.class, "getConnectRole", null);
             ConnectRoleProp.setName("Connect as");
             set.put(ConnectRoleProp);
+
+            Property IsConnectedProp = new PropertySupport.Reflection<Boolean>(obj, Boolean.class, "getIsConnected", null);
+            IsConnectedProp.setName("Connected");
+            set.put(IsConnectedProp);
         } catch (NoSuchMethodException ex) {
             ErrorManager.getDefault();
         }
@@ -91,9 +108,19 @@ public class OUserNode extends AbstractNode implements PropertyChangeListener {
         return sheet;
     }
 
+    @Override
+    public Action getPreferredAction() {
+        if (getOUser().getIsConnected()) {
+            return SystemAction.get(DisconnectAction.class);
+        } else {
+            return SystemAction.get(ConnectAction.class);
+        }
+    }
+
     public void propertyChange(PropertyChangeEvent evt) {
-        if ("UserName".equals(evt.getPropertyName())) {
-            this.fireDisplayNameChange(null, getDisplayName());
+        if ("UserName".equals(evt.getPropertyName()) ||
+                "IsConnected".equals(evt.getPropertyName())) {
+            this.fireDisplayNameChange(null, getHtmlDisplayName());
         }
     }
 }

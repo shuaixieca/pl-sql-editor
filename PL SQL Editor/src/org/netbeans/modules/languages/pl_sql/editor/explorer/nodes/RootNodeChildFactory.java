@@ -32,9 +32,9 @@ public final class RootNodeChildFactory extends ChildFactory<OConnectionNode>
     }
 
     @Override
-    public Node[] createNodesForKey(OConnectionNode key) {
+    public Node createNodeForKey(OConnectionNode key) {
         //DBNode nd = new DBNode(key.toString());
-        return new Node[]{key};
+        return key;
     }
 
     @Override

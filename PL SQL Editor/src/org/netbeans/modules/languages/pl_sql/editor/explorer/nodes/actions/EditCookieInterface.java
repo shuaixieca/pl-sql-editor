@@ -14,4 +14,5 @@ import org.openide.nodes.Node.Cookie;
 public interface EditCookieInterface extends Cookie {
 
     public void Edit();
+    public boolean getIsConnected();
 }

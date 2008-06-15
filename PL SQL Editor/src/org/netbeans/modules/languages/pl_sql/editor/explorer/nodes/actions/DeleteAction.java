@@ -93,8 +93,7 @@ public class DeleteAction extends CookieAction {
 
         Node node = activatedNodes[0];
         DeleteCookieInterface delete = node.getCookie(DeleteCookieInterface.class);
-        //if (server != null && server.isConnected()) {
-        if (delete != null) {
+        if (delete != null && !delete.getIsConnected()) {
             return true;
         }
 
