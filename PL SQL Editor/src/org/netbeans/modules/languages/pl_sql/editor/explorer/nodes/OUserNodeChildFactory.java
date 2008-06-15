@@ -42,7 +42,7 @@ public final class OUserNodeChildFactory extends ChildFactory<OObjectTypeNode>
 
     @Override
     protected boolean createKeys(List<OObjectTypeNode> keys) {
-        parentInfo.Connect();
+        //parentInfo.Connect();
         if (parentInfo.getIsConnected()) {
             keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.FUNCTION)));
             keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PROCEDURE)));
