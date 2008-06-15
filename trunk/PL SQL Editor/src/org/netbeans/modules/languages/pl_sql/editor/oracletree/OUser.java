@@ -12,22 +12,45 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
+import javax.swing.event.ChangeListener;
+import oracle.jdbc.OracleConnection;
 import oracle.jdbc.pool.OracleDataSource;
+import org.netbeans.api.progress.ProgressHandle;
+import org.netbeans.api.progress.ProgressHandleFactory;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ConnectCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DisconnectCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.EditCookieInterface;
+import org.openide.util.Cancellable;
+import org.openide.util.ChangeSupport;
 import org.openide.util.Exceptions;
+import org.openide.windows.IOProvider;
+import org.openide.windows.InputOutput;
 
 /**
  *
  * @author SUMsoft
  */
-public class OUser implements EditCookieInterface, DeleteCookieInterface {
+public class OUser implements EditCookieInterface, DeleteCookieInterface,
+        ConnectCookieInterface, DisconnectCookieInterface {
 
     private String UserName,  Password = "";
     private Boolean SavePassword = false;
     private RoleTypes ConnectRole = RoleTypes.normal;
     private OConnectionClass Parent;
     private List<PropertyChangeListener> listeners = Collections.synchronizedList(new LinkedList<PropertyChangeListener>());
+    private final ChangeSupport changeSupport = new ChangeSupport(this);
+    private OracleConnection conn;
+    private boolean IsConnected,  IsCanceled = false;
+    boolean progressed = false;
+    private ProgressHandle progressHandle = ProgressHandleFactory.createHandle(null, new Cancellable() {
+
+        public boolean cancel() {
+            IsCanceled = true;
+            OutputMsg("Canceled.", false);
+            return true;
+        }
+    });
 
     private Preferences pref() {
         return OConnectionClass.getPref_root().node(Parent.getPrefNode());
@@ -42,6 +65,18 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface {
         //Password = OPassword;
         SavePassword = OSavePassword;
         ConnectRole = OConnectRole;
+    }
+
+    public void addChangeListener(ChangeListener listener) {
+        changeSupport.addChangeListener(listener);
+    }
+
+    public void removeChangeListener(ChangeListener listener) {
+        changeSupport.removeChangeListener(listener);
+    }
+
+    protected void notifyChange() {
+        changeSupport.fireChange();
     }
 
     public void addPropertyChangeListener(PropertyChangeListener pcl) {
@@ -142,6 +177,16 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface {
         fire("UserName", oldUserName, UserName);
     }
 
+    public void setIsConnected(boolean b) {
+        boolean oldb = this.IsConnected;
+        this.IsConnected = b;
+        fire("IsConnected", oldb, b);
+    }
+
+    public boolean getIsConnected() {
+        return IsConnected;
+    }
+
     public void Delete() {
         this.RemoveUser();
         Parent.getUsers().remove(this);
@@ -160,6 +205,86 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface {
                 setPassword(oc.getPassword());
             }
             setConnectRole(oc.getConnectRole());
+        }
+    }
+
+    private InputOutput getio() {
+        return IOProvider.getDefault().getIO(Parent.toString(), false);
+    }
+
+    private synchronized void OutputMsg(String msg, boolean error) {
+        if (error) {
+            getio().select();
+            getio().getErr().println(msg);
+            getio().getErr().close();
+        } else {
+            getio().getOut().println(msg);
+            getio().getOut().close();
+        }
+    }
+
+    public synchronized void Connect() {
+        if (!IsConnected && !progressed) {
+            try {
+                boolean connect = true;
+                OracleDataSource ods = getOracleDataSource();
+                if (!getSavePassword()) {
+                    PasswordJPanel pjp = new PasswordJPanel();
+                    pjp.ShowDialog(getUserName());
+                    connect = pjp.getisOK();
+                    if (connect) {
+                        ods.setPassword(pjp.getPassword());
+                    }
+                }
+                if (connect) {
+                    String localmsg = "Connecting to " + Parent.toString() + " as \'" + UserName + "\' user.";
+                    progressHandle.setDisplayName(localmsg);
+                    OutputMsg(localmsg, false);
+                    try {
+                        progressHandle.start();
+                        progressed = true;
+                    } catch (IllegalStateException e) {
+                        progressed = false;
+                    }
+                    conn = (OracleConnection) ods.getConnection();
+                    setIsConnected(true);
+                    OutputMsg("Connected as \'" + UserName + "\' user.", false);
+                }
+            } catch (SQLException ex) {
+                setIsConnected(false);
+                if (!IsCanceled) {
+                    OutputMsg(ex.getMessage(), true);
+                }
+            } finally {
+                if (IsCanceled) {
+                    if (IsConnected) {
+                        try {
+                            conn.close();
+                        } catch (SQLException ex) {
+                            OutputMsg(ex.getMessage(), true);
+                        } finally {
+                            setIsConnected(false);
+                        }
+                    }
+                    IsCanceled = false;
+                }
+                if (progressed) {
+                    progressHandle.finish();
+                    progressed = false;
+                }
+            }
+        }
+    }
+
+    public synchronized void Disconnect() {
+        if (IsConnected) {
+            try {
+                conn.close();
+                OutputMsg("\'" + UserName + "\' user is disconnected.", false);
+            } catch (SQLException ex) {
+                OutputMsg(ex.getMessage(), true);
+            }
+            setIsConnected(false);
         }
     }
 }

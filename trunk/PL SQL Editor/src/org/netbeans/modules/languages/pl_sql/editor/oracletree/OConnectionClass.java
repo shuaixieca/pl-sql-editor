@@ -205,4 +205,13 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
             setServerName(oc.getServerName());
         }
     }
+
+    public boolean getIsConnected() {
+        for (OUser ou : Users) {
+            if (ou.getIsConnected()) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

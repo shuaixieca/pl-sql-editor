@@ -11,9 +11,9 @@ import org.openide.nodes.Node.Cookie;
  *
  * @author SUMsoft
  */
-public interface DeleteCookieInterface extends Cookie {
+public interface ConnectCookieInterface extends Cookie {
 
-    public void Delete();
+    public void Connect();
     public boolean getIsConnected();
     
 }

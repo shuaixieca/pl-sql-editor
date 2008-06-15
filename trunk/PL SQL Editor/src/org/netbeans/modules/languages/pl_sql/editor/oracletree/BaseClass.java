@@ -10,10 +10,6 @@ import java.util.Date;
  *
  * @author SUMsoft
  */
-enum ObjectTypes {
-
-    FUNCTION, PROCEDURE, PACKAGE, PACKAGE_BODY, TRIGGER, TYPE, TYPE_BODY
-};
 
 public class BaseClass {
 
