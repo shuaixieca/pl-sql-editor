@@ -249,6 +249,7 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface,
                     conn = (OracleConnection) ods.getConnection();
                     setIsConnected(true);
                     OutputMsg("Connected as \'" + UserName + "\' user.", false);
+                    this.notifyChange();
                 }
             } catch (SQLException ex) {
                 setIsConnected(false);
@@ -281,6 +282,7 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface,
             try {
                 conn.close();
                 OutputMsg("\'" + UserName + "\' user is disconnected.", false);
+                this.notifyChange();
             } catch (SQLException ex) {
                 OutputMsg(ex.getMessage(), true);
             }
