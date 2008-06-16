@@ -177,14 +177,19 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface,
         fire("UserName", oldUserName, UserName);
     }
 
-    public void setIsConnected(boolean b) {
+    public synchronized void setIsConnected(boolean b) {
         boolean oldb = this.IsConnected;
         this.IsConnected = b;
         fire("IsConnected", oldb, b);
+        Parent.fire("IsConnected", oldb, b);
     }
 
-    public boolean getIsConnected() {
+    public synchronized boolean getIsConnected() {
         return IsConnected;
+    }
+
+    public OracleConnection getConn() {
+        return conn;
     }
 
     public void Delete() {

@@ -6,6 +6,7 @@ package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
@@ -82,7 +83,7 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
         listeners.remove(pcl);
     }
 
-    private void fire(String propertyName, Object old, Object nue) {
+    protected void fire(String propertyName, Object old, Object nue) {
         //Passing 0 below on purpose, so you only synchronize for one atomic call:
         PropertyChangeListener[] pcls = (PropertyChangeListener[]) listeners.toArray(new PropertyChangeListener[0]);
         for (int i = 0; i < pcls.length; i++) {
@@ -168,18 +169,28 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
     }
 
     public synchronized void ReloadChilds() {
-        Users.clear();
-        try {
-            Preferences pref = pref_root.node(getPrefNode());
-            for (String u : pref.childrenNames()) {
-                Preferences pref_u = pref.node(u);
-                if (pref_u.get("ConnectRole", "").compareTo("") != 0) {
-                    OUser os = new OUser(this, pref_u.get("UserName", ""), pref_u.get("Password", ""), pref_u.getBoolean("SavePassword", false), RoleTypes.valueOf(pref_u.get("ConnectRole", "")));
-                    Users.add(os);
+        //Users.clear();
+        synchronized (Users) {
+            List<OUser> rem = new ArrayList<OUser>();
+            for (OUser ou : Users) {
+                if (!ou.getIsConnected()) {
+                    rem.add(ou);
                 }
             }
-        } catch (BackingStoreException ex) {
-            Exceptions.printStackTrace(ex);
+            Users.removeAll(rem);
+
+            try {
+                Preferences pref = pref_root.node(getPrefNode());
+                for (String u : pref.childrenNames()) {
+                    Preferences pref_u = pref.node(u);
+                    if (pref_u.get("ConnectRole", "").compareTo("") != 0) {
+                        OUser os = new OUser(this, pref_u.get("UserName", ""), pref_u.get("Password", ""), pref_u.getBoolean("SavePassword", false), RoleTypes.valueOf(pref_u.get("ConnectRole", "")));
+                        Users.add(os);
+                    }
+                }
+            } catch (BackingStoreException ex) {
+                Exceptions.printStackTrace(ex);
+            }
         }
     }
 

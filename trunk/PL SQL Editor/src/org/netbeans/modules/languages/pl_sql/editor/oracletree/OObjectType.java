@@ -4,7 +4,10 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.event.ChangeListener;
+import oracle.jdbc.OracleConnection;
 import org.openide.util.ChangeSupport;
 
 /**
@@ -14,10 +17,16 @@ import org.openide.util.ChangeSupport;
 public class OObjectType {
 
     private ObjectTypes objecttype;
+    private OracleConnection conn;
     private final ChangeSupport changeSupport = new ChangeSupport(this);
 
-    public OObjectType(ObjectTypes objecttype) {
+    public OObjectType(ObjectTypes objecttype, OracleConnection oc) {
         this.objecttype = objecttype;
+        this.conn = oc;
+    }
+
+    public ObjectTypes getObjecttype() {
+        return objecttype;
     }
 
     @Override
@@ -51,5 +60,15 @@ public class OObjectType {
 
     protected void notifyChange() {
         changeSupport.fireChange();
+    }
+
+    public List<BaseClass> LoadAllObjects() {
+        ObjectTreeSet ots = new ObjectTreeSet(this.objecttype, ObjectAccessed.User);
+        ots.LoadObjects(conn);
+        ArrayList<BaseClass> res = new ArrayList<BaseClass>();
+        for (BaseClass bc : ots) {
+            res.add(bc);
+        }
+        return res;
     }
 }

@@ -45,6 +45,15 @@ public class OConnectionNode extends AbstractNode implements PropertyChangeListe
     }
 
     @Override
+    public String getHtmlDisplayName() {
+        if (getOConnectionClass().getIsConnected()) {
+            return "<b>" + getDisplayName() + "</b>";
+        } else {
+            return null;
+        }
+    }
+
+    @Override
     public Action[] getActions(boolean context) {
         if (context) {
             return super.getActions(context);
@@ -95,7 +104,8 @@ public class OConnectionNode extends AbstractNode implements PropertyChangeListe
     }
 
     public void propertyChange(PropertyChangeEvent evt) {
-        if ("ServerName".equals(evt.getPropertyName()) || "Port".equals(evt.getPropertyName()) || "DatabaseName".equals(evt.getPropertyName())) {
+        if ("ServerName".equals(evt.getPropertyName()) || "Port".equals(evt.getPropertyName()) || "DatabaseName".equals(evt.getPropertyName()) ||
+                "IsConnected".equals(evt.getPropertyName())) {
             this.fireDisplayNameChange(null, getDisplayName());
         }
     }

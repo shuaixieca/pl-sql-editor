@@ -4,13 +4,12 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Comparator;
 import java.util.TreeSet;
-import oracle.jdbc.pool.OracleDataSource;
+import oracle.jdbc.OracleConnection;
 import org.openide.util.Exceptions;
 
 /**
@@ -40,15 +39,13 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
         SelObjectAccessed = OAccessed;
     }
 
-    public void LoadObjects(OracleDataSource ods) {
+    public void LoadObjects(OracleConnection conn) {
         this.clear();
-        Connection conn = null;
         Statement stmt = null;
         ResultSet rset = null;
         Statement stmt_src = null;
         ResultSet rset_src = null;
         try {
-            conn = ods.getConnection();
             if (conn.isClosed()) {
                 new SQLException("Connection is closed.");
             }

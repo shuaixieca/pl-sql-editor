@@ -44,13 +44,13 @@ public final class OUserNodeChildFactory extends ChildFactory<OObjectTypeNode>
     protected boolean createKeys(List<OObjectTypeNode> keys) {
         //parentInfo.Connect();
         if (parentInfo.getIsConnected()) {
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.FUNCTION)));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PROCEDURE)));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PACKAGE)));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PACKAGE_BODY)));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TYPE)));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TYPE_BODY)));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TRIGGER)));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.FUNCTION, parentInfo.getConn())));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PROCEDURE, parentInfo.getConn())));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PACKAGE, parentInfo.getConn())));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PACKAGE_BODY, parentInfo.getConn())));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TYPE, parentInfo.getConn())));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TYPE_BODY, parentInfo.getConn())));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TRIGGER, parentInfo.getConn())));
         }
         return true;
     }
