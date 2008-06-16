@@ -12,6 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
+import javax.swing.SwingUtilities;
 import javax.swing.event.ChangeListener;
 import oracle.jdbc.OracleConnection;
 import oracle.jdbc.pool.OracleDataSource;
@@ -24,6 +25,9 @@ import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.EditC
 import org.openide.util.Cancellable;
 import org.openide.util.ChangeSupport;
 import org.openide.util.Exceptions;
+import org.openide.util.RequestProcessor;
+import org.openide.util.RequestProcessor.Task;
+import org.openide.util.TaskListener;
 import org.openide.windows.IOProvider;
 import org.openide.windows.InputOutput;
 
@@ -43,6 +47,7 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface,
     private OracleConnection conn;
     private boolean IsConnected,  IsCanceled = false;
     boolean progressed = false;
+    private ConnectionTry ct = null;
     private ProgressHandle progressHandle = ProgressHandleFactory.createHandle(null, new Cancellable() {
 
         public boolean cancel() {
@@ -227,59 +232,36 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface,
             getio().getOut().close();
         }
     }
+    //private ProgressHandle progressHandle;
 
-    public synchronized void Connect() {
-        if (!IsConnected && !progressed) {
-            try {
-                boolean connect = true;
-                OracleDataSource ods = getOracleDataSource();
-                if (!getSavePassword()) {
-                    PasswordJPanel pjp = new PasswordJPanel();
-                    pjp.ShowDialog(getUserName());
-                    connect = pjp.getisOK();
-                    if (connect) {
-                        ods.setPassword(pjp.getPassword());
-                    }
-                }
-                if (connect) {
-                    String localmsg = "Connecting to " + Parent.toString() + " as \'" + UserName + "\' user.";
-                    progressHandle.setDisplayName(localmsg);
-                    OutputMsg(localmsg, false);
-                    try {
-                        progressHandle.start();
-                        progressed = true;
-                    } catch (IllegalStateException e) {
-                        progressed = false;
-                    }
-                    conn = (OracleConnection) ods.getConnection();
-                    setIsConnected(true);
-                    OutputMsg("Connected as \'" + UserName + "\' user.", false);
-                    this.notifyChange();
-                }
-            } catch (SQLException ex) {
-                setIsConnected(false);
-                if (!IsCanceled) {
-                    OutputMsg(ex.getMessage(), true);
-                }
-            } finally {
-                if (IsCanceled) {
-                    if (IsConnected) {
-                        try {
-                            conn.close();
-                        } catch (SQLException ex) {
-                            OutputMsg(ex.getMessage(), true);
-                        } finally {
-                            setIsConnected(false);
-                        }
-                    }
-                    IsCanceled = false;
-                }
-                if (progressed) {
-                    progressHandle.finish();
+    private void startProgress(final String msg) {
+        SwingUtilities.invokeLater(new Runnable() {
+
+            public void run() {
+                try {
+                    progressHandle.setDisplayName(msg);
+                    progressHandle.start();
+                    progressed = true;
+                } catch (IllegalStateException e) {
                     progressed = false;
                 }
             }
-        }
+        });
+    }
+
+    private void stopProgress() {
+        SwingUtilities.invokeLater(new Runnable() {
+
+            public void run() {
+                progressHandle.finish();
+            }
+        });
+
+    }
+
+    public synchronized void Connect() {
+        ct = new ConnectionTry();
+        ct.post();
     }
 
     public synchronized void Disconnect() {
@@ -291,7 +273,104 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface,
             } catch (SQLException ex) {
                 OutputMsg(ex.getMessage(), true);
             }
+
             setIsConnected(false);
+        }
+    }
+
+    class ConnectionTry {
+
+        private RequestProcessor rp;
+        private RequestProcessor.Task task;
+
+        public ConnectionTry() {
+            rp = new RequestProcessor(ConnectionTry.class.getName(), 1, true);
+
+            task = rp.create(new Runnable() {
+
+                public void run() {
+                    if (!IsConnected && !progressed) {
+                        try {
+                            boolean connect = true;
+                            OracleDataSource ods = getOracleDataSource();
+                            if (!getSavePassword()) {
+                                PasswordJPanel pjp = new PasswordJPanel();
+                                pjp.ShowDialog(getUserName());
+                                connect =
+                                        pjp.getisOK();
+                                if (connect) {
+                                    ods.setPassword(pjp.getPassword());
+                                }
+
+                            }
+                            if (connect) {
+                                String localmsg = "Connecting to " + Parent.toString() + " as \'" + UserName + "\' user.";
+                                //progressHandle.setDisplayName(localmsg);
+                                //progressHandle.start();
+                                startProgress(localmsg);
+
+                                OutputMsg(localmsg, false);
+                                conn =
+                                        (OracleConnection) ods.getConnection();
+                                setIsConnected(true);
+                                OutputMsg("Connected as \'" + UserName + "\' user.", false);
+                                notifyChange();
+                            }
+
+                        } catch (SQLException ex) {
+                            setIsConnected(false);
+                            if (!IsCanceled) {
+                                OutputMsg(ex.getMessage(), true);
+                            }
+
+                        } finally {
+                            if (IsCanceled) {
+                                if (IsConnected) {
+                                    try {
+                                        conn.close();
+                                    } catch (SQLException ex) {
+                                        OutputMsg(ex.getMessage(), true);
+                                    } finally {
+                                        setIsConnected(false);
+                                    }
+
+                                }
+                                IsCanceled = false;
+                            }
+
+                            if (progressed) {
+                                //progressHandle.finish();
+                                stopProgress();
+                                progressed =
+                                        false;
+                            }
+
+                        }
+                    }
+                }
+            });
+
+            task.addTaskListener(
+                    new TaskListener() {
+
+                        public void taskFinished(org.openide.util.Task arg0) {
+                            if (!IsCanceled) {
+                                //stopProgress(msg, connected);
+                                //ChangeTestButton();
+                                ct = null;
+                            }
+                        }
+                    });
+        }
+
+        public void post() {
+            rp.post(task);
+        }
+
+        public void stop() {
+            task.cancel();
+            IsCanceled = true;
+            ct = null;
         }
     }
 }

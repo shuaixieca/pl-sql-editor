@@ -9,7 +9,9 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.BaseClass;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.OObjectType;
+import org.openide.nodes.AbstractNode;
 import org.openide.nodes.ChildFactory;
+import org.openide.nodes.Children;
 import org.openide.nodes.Node;
 import org.openide.util.WeakListeners;
 
@@ -33,7 +35,11 @@ public final class OObjectTypeNodeChildFactory extends ChildFactory<OObjectNode>
 
     @Override
     public Node createNodeForKey(OObjectNode key) {
-        return key;
+        if (key != null) {
+            return key;
+        } else {
+            return new AbstractNode(Children.LEAF);
+        }
     }
 
     @Override

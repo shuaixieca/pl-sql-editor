@@ -419,6 +419,7 @@ public class OConnectionJPanel extends javax.swing.JPanel {
 
     public void ShowDialog(OConnectionClass ocs) {
         if (ocs != null) {
+            OConnPrefNode = ocs.getPrefNode();
             setServerName(ocs.getServerName());
             setPort(ocs.getPort());
             setDatabseName(ocs.getDatabaseName());
