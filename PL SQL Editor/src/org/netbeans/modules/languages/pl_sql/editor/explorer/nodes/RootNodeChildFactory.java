@@ -9,7 +9,9 @@ import java.util.List;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.OConnectionClass;
+import org.openide.nodes.AbstractNode;
 import org.openide.nodes.ChildFactory;
+import org.openide.nodes.Children;
 import org.openide.nodes.Node;
 import org.openide.util.WeakListeners;
 
@@ -34,7 +36,11 @@ public final class RootNodeChildFactory extends ChildFactory<OConnectionNode>
     @Override
     public Node createNodeForKey(OConnectionNode key) {
         //DBNode nd = new DBNode(key.toString());
-        return key;
+        if (key != null) {
+            return key;
+        } else {
+            return new AbstractNode(Children.LEAF);
+        }
     }
 
     @Override
