@@ -46,15 +46,15 @@ final class OracleTopComponent extends TopComponent implements ExplorerManager.P
         mgr.setRootContext(OConnectionRootNode.GetRootNode());
         /*
         mgr.addPropertyChangeListener(new PropertyChangeListener() {
-
-            public void propertyChange(PropertyChangeEvent evt) {
-                OConnectionRoot ocr = getLookup().lookup(OConnectionRoot.class);
-                if (ocr != null) {
-                    RefreshjButton.setEnabled(true);
-                } else {
-                    RefreshjButton.setEnabled(false);
-                }
-            }
+        
+        public void propertyChange(PropertyChangeEvent evt) {
+        OConnectionRoot ocr = getLookup().lookup(OConnectionRoot.class);
+        if (ocr != null) {
+        RefreshjButton.setEnabled(true);
+        } else {
+        RefreshjButton.setEnabled(false);
+        }
+        }
         });*/
         setName(NbBundle.getMessage(OracleTopComponent.class, "CTL_OracleTopComponent"));
         setToolTipText(NbBundle.getMessage(OracleTopComponent.class, "HINT_OracleTopComponent"));

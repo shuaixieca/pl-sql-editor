@@ -5,13 +5,13 @@
 package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
 import java.util.Date;
+import org.openide.cookies.EditCookie;
 
 /**
  *
  * @author SUMsoft
  */
-
-public class BaseClass {
+public class BaseClass implements EditCookie {
 
     private String Owner = null,  ObjectName,  ObjectSource,  Status;
     private ObjectTypes ObjectType;
@@ -57,5 +57,13 @@ public class BaseClass {
 
     public String getStatus() {
         return Status;
+    }
+
+    public void edit() {
+        //Lookup lookup = MimeLookup.getLookup("text/pl_sql");
+        //EditorKit ek = CloneableEditorSupport.getEditorKit("text/pl_sql");
+        //if (ek != null) {
+            throw new UnsupportedOperationException("ek.getContentType()");
+        //}
     }
 }

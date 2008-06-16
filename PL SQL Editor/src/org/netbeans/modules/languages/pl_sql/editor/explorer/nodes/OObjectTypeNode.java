@@ -16,8 +16,9 @@ import org.openide.util.lookup.Lookups;
 public class OObjectTypeNode extends AbstractNode {
 
     public OObjectTypeNode(OObjectType ot) {
-        super(Children.LEAF, Lookups.singleton(ot));
-    //ou.addPropertyChangeListener(WeakListeners.propertyChange(this, ou));
+        //super(Children.LEAF, Lookups.singleton(ot));
+        super(Children.create(new OObjectTypeNodeChildFactory(ot), true), Lookups.singleton(ot));
+    //ot.addPropertyChangeListener(WeakListeners.propertyChange(this, ou));
     }
 
     private OObjectType getOObjectType() {
