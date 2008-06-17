@@ -4,3 +4,4 @@ OpenIDE-Module-Layer: org/netbeans/modules/languages/pl_sql/editor/layer.xml
 OpenIDE-Module-Localizing-Bundle: org/netbeans/modules/languages/pl_sql/editor/Bundle.properties
 OpenIDE-Module-Specification-Version: 1.0
 
+

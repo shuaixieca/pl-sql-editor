@@ -47,6 +47,18 @@ public final class OObjectTypeNodeChildFactory extends ChildFactory<OObjectNode>
         List<BaseClass> l = parentInfo.LoadAllObjects();
         for (BaseClass bc : l) {
             keys.add(new OObjectNode(bc));
+            /*File f = new File("d:/Work/pl-sql-editor.svn/trunk/PL SQL Scripts/proc2.prc");
+            FileObject pf = null;
+            try {
+                pf = FileUtil.createData(f);
+            } catch (IOException ex) {
+                Exceptions.printStackTrace(ex);
+            }
+            try {
+                keys.add(new DataNode((DataObject) DataObject.find(pf), Children.LEAF));
+            } catch (IOException ex) {
+                Exceptions.printStackTrace(ex);
+            }*/
         }
         return true;
     }

@@ -6,6 +6,8 @@ package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
 import java.util.Date;
 import org.openide.cookies.EditCookie;
+import org.openide.loaders.DataLoader;
+import org.openide.loaders.DataLoaderPool;
 
 /**
  *
@@ -60,10 +62,14 @@ public class BaseClass implements EditCookie {
     }
 
     public void edit() {
+        for (DataLoader loader : DataLoaderPool.getDefault().toArray()) {
+            System.out.println(loader.getClass().getName());
+            System.out.println(loader.getRepresentationClassName());
+        }
         //Lookup lookup = MimeLookup.getLookup("text/pl_sql");
         //EditorKit ek = CloneableEditorSupport.getEditorKit("text/pl_sql");
         //if (ek != null) {
-            throw new UnsupportedOperationException("ek.getContentType()");
-        //}
+        //throw new UnsupportedOperationException("ek.getContentType()");
+    //}
     }
 }
