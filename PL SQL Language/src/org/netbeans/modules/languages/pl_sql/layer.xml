@@ -6,7 +6,7 @@
             <folder name="pl_sql">
                 <file name="language.nbs" url="PL_SQL.nbs">
                     <attr name="icon" stringvalue="org/netbeans/modules/languages/pl_sql/PL_SQL.png"/>
-                </file>                
+                </file>
                 <folder name="FontsColors">
                     <folder name="NetBeans">
                         <folder name="Defaults">
@@ -31,8 +31,8 @@
     <folder name="Services">
         <folder name="MIMEResolver">
             <file name="PL_SQL.xml" url="PL_SQL.xml"/>
-            <attr name="SystemFileSystem.localizingBundle" stringvalue="com.sumsoft.pl_sqleditor.Bundle"/>
-            <attr name="position" intvalue="250"/>
+            <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.modules.languages.pl_sql.Bundle"/>
+            <attr name="position" intvalue="1060"/>
         </folder>
     </folder>
 </filesystem>
