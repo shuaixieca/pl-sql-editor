@@ -31,8 +31,8 @@ import org.openide.util.lookup.Lookups;
 public class OUserNode extends AbstractNode implements PropertyChangeListener {
 
     public OUserNode(OUser ou) {
+        super(ou.getIsConnected() ? Children.create(new OUserNodeChildFactory(ou), true) : Children.LEAF, Lookups.singleton(ou));
         //super(Children.create(new OUserNodeChildFactory(ou), true), Lookups.singleton(ou));
-        super(Children.LEAF, Lookups.singleton(ou));
         ou.addPropertyChangeListener(WeakListeners.propertyChange(this, ou));
     }
 
@@ -129,7 +129,7 @@ public class OUserNode extends AbstractNode implements PropertyChangeListener {
         if ("UserName".equals(evt.getPropertyName()) ||
                 "IsConnected".equals(evt.getPropertyName())) {
             this.resetChildren();
-            this.fireDisplayNameChange(null, getHtmlDisplayName());            
+            this.fireDisplayNameChange(null, getHtmlDisplayName());
         }
     }
 }

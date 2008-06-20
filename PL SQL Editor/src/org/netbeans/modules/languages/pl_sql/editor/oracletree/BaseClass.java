@@ -4,10 +4,19 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Date;
+import javax.swing.JFileChooser;
+import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.openide.cookies.EditCookie;
-import org.openide.loaders.DataLoader;
-import org.openide.loaders.DataLoaderPool;
+import org.openide.cookies.OpenCookie;
+import org.openide.filesystems.FileObject;
+import org.openide.filesystems.FileUtil;
+import org.openide.loaders.DataObject;
+import org.openide.util.Exceptions;
+import org.openide.windows.WindowManager;
 
 /**
  *
@@ -62,10 +71,37 @@ public class BaseClass implements EditCookie {
     }
 
     public void edit() {
-        for (DataLoader loader : DataLoaderPool.getDefault().toArray()) {
-            System.out.println(loader.getClass().getName());
-            System.out.println(loader.getRepresentationClassName());
+        /*for (DataLoader loader : DataLoaderPool.getDefault().toArray()) {
+        System.out.println(loader.getClass().getName());
+        System.out.println(loader.getRepresentationClassName());
+        }*/
+        JFileChooser fc = new JFileChooser();
+        String filename = ObjectName + '.' + Utils.getFileExtensionByType(ObjectType);
+        fc.setSelectedFile(new File(filename));
+        int ret = fc.showSaveDialog(WindowManager.getDefault().getMainWindow());
+        File selFile = null;
+        selFile = fc.getSelectedFile();
+        if (selFile == null || ret == JFileChooser.CANCEL_OPTION) {
+            return;
         }
+        FileObject file;
+        DataObject dob;
+        try {
+            FileWriter fw = new FileWriter(selFile);
+            fw.write(this.ObjectSource);
+            fw.close();
+            //file = Repository.getDefault().getDefaultFileSystem().findResource(selFile.getCanonicalPath());
+            file = FileUtil.toFileObject(selFile);
+            dob = DataObject.find(file);
+            EditCookie cookie = dob.getCookie(EditCookie.class);
+            if (cookie != null) {
+                cookie.edit();
+            }
+
+        } catch (IOException ex) {
+            Exceptions.printStackTrace(ex);
+        }
+    //MyClass theInstance = (MyClass) cookie.instanceCreate();
     //JFileChooser chooser = new JFileChooser();
     //int returnVal = chooser.showSaveDialog(WindowManager.getDefault().getMainWindow());
 

@@ -22,11 +22,11 @@ import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.Conne
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DisconnectCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.EditCookieInterface;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshCookieInterface;
 import org.openide.util.Cancellable;
 import org.openide.util.ChangeSupport;
 import org.openide.util.Exceptions;
 import org.openide.util.RequestProcessor;
-import org.openide.util.RequestProcessor.Task;
 import org.openide.util.TaskListener;
 import org.openide.windows.IOProvider;
 import org.openide.windows.InputOutput;
@@ -35,7 +35,7 @@ import org.openide.windows.InputOutput;
  *
  * @author SUMsoft
  */
-public class OUser implements EditCookieInterface, DeleteCookieInterface,
+public class OUser implements RefreshCookieInterface, EditCookieInterface, DeleteCookieInterface,
         ConnectCookieInterface, DisconnectCookieInterface {
 
     private String UserName,  Password = "";
@@ -372,5 +372,15 @@ public class OUser implements EditCookieInterface, DeleteCookieInterface,
             IsCanceled = true;
             ct = null;
         }
+    }
+
+    public void Refresh() {
+        this.notifyChange();
+    }
+
+    @Override
+    protected void finalize() {
+        this.Disconnect();
+        this.conn = null;
     }
 }
