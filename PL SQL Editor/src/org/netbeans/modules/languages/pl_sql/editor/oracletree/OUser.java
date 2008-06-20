@@ -108,6 +108,11 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
         }
         pref_user.putBoolean("SavePassword", getSavePassword());
         pref_user.put("ConnectRole", getConnectRole().toString());
+        try {
+            pref_user.flush();
+        } catch (BackingStoreException ex) {
+            Exceptions.printStackTrace(ex);
+        }
     }
 
     public void RemoveUser() {

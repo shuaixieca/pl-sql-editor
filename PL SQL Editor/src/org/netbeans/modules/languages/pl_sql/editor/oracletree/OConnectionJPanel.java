@@ -317,6 +317,7 @@ public class OConnectionJPanel extends javax.swing.JPanel {
                     if (Validate()) {
                         if (getPassword().length() == 0) {
                             JOptionPane.showMessageDialog(dlg, "The Password is required", "Input Error", JOptionPane.ERROR_MESSAGE);
+                            return;
                         }
                         OConnectionClass ocs = new OConnectionClass(null, getServerName(), getPort(), getDatabaseName(),
                                 getUserName(), getPassword(), true, getConnectRole());
