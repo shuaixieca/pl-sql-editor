@@ -4,6 +4,7 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes;
 
+import java.awt.Image;
 import java.util.Date;
 import javax.swing.Action;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
@@ -20,12 +21,15 @@ import org.openide.nodes.Sheet;
 import org.openide.util.actions.SystemAction;
 import org.openide.util.lookup.Lookups;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.ObjectTypes;
+import org.openide.util.Utilities;
 
 /**
  *
  * @author SUMsoft
  */
 public class OObjectNode extends AbstractNode {
+    
+    private final String ERROR_BADGE_PATH = "org/netbeans/modules/languages/pl_sql/editor/resources/error_pix.png";
 
     public OObjectNode(BaseClass ot) {
         //super(Children.create(new OObjectTypeNodeChildFactory(ot), false), Lookups.singleton(ot));
@@ -46,7 +50,7 @@ public class OObjectNode extends AbstractNode {
 
     @Override
     public String getHtmlDisplayName() {
-        if (getBaseClass().getStatus().equalsIgnoreCase("INVALID")) {
+        if (! getBaseClass().isValid()) {
             return "<font color=\"#FF0000\">" + getDisplayName() + "</font>";
         } else {
             return null;
@@ -72,6 +76,19 @@ public class OObjectNode extends AbstractNode {
     @Override
     public Action getPreferredAction() {
         return SystemAction.get(EditAction.class);
+    }
+
+    @Override
+    public Image getIcon(int type) {
+        Image original = super.getIcon(type);
+        if (getBaseClass().isValid()) {
+            return original;
+        } else {
+            Image errorBadge =
+                    Utilities.loadImage(ERROR_BADGE_PATH);
+            return Utilities.mergeImages(original,
+                    errorBadge, 6, 6);
+        }
     }
 
     @Override

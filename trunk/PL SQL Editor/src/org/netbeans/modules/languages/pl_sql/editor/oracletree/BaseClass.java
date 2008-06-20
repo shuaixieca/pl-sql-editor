@@ -69,6 +69,10 @@ public class BaseClass implements EditCookie {
     public String getStatus() {
         return Status;
     }
+    
+    public boolean isValid() {
+        return Status.compareToIgnoreCase("VALID") == 0;
+    }
 
     public void edit() {
         /*for (DataLoader loader : DataLoaderPool.getDefault().toArray()) {
