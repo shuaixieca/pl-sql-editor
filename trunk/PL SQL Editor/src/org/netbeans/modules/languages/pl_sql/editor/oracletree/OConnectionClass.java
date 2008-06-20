@@ -32,7 +32,7 @@ import org.openide.util.NbPreferences;
 public class OConnectionClass implements RefreshCookieInterface, AddCookieInterface,
         DeleteCookieInterface, EditCookieInterface {
 
-    private String ServerName,  DatabaseName,  PrefNodeName;
+    private String ServerName,  DatabaseName,  PrefNodeName = null;
     private int Port = 1521;
     private TreeSet<OUser> Users = new TreeSet<OUser>(new OUserComp());
     protected static Preferences pref_root = NbPreferences.forModule(OConnectionClass.class).node("OConnectionClass");
@@ -47,14 +47,14 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
     }
 
     public OConnectionClass(String OPrefNodeName, String OServerName, int OPort, String ODatabaseName) {
+        ServerName = OServerName;
+        Port = OPort;
+        DatabaseName = ODatabaseName;        
         if (OPrefNodeName == null) {
             PrefNodeName = String.valueOf(this.toString().hashCode());
         } else {
             PrefNodeName = OPrefNodeName;
         }
-        ServerName = OServerName;
-        Port = OPort;
-        DatabaseName = ODatabaseName;
     }
 
     public OConnectionClass(String OPrefNodeName, String OServerName, int OPort, String ODatabaseName, String OUserName, String OPassword, Boolean OSavePassword, RoleTypes OConnectRole) {
@@ -96,6 +96,11 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
         pref.put("ServerName", ServerName);
         pref.putInt("Port", Port);
         pref.put("DatabaseName", DatabaseName);
+        try {
+            pref.flush();
+        } catch (BackingStoreException ex) {
+            Exceptions.printStackTrace(ex);
+        }
     }
 
     public void SaveAllUsers() {
