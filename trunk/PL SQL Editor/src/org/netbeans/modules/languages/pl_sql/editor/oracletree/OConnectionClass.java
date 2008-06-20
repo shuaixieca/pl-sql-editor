@@ -224,5 +224,5 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
             }
         }
         return false;
-    }
+    }    
 }
