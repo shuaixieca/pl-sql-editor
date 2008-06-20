@@ -6,9 +6,12 @@ package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions;
 
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
 import org.openide.nodes.Node;
 import org.openide.util.Exceptions;
 import org.openide.util.HelpCtx;
@@ -43,6 +46,7 @@ public class DeleteAction extends CookieAction {
     protected void performAction(Node[] arg0) {
         //Object cls = arg0[0];
         //JOptionPane.showMessageDialog(null, "Object is " + cls.getClass().getName());
+        Set<RefreshCookieInterface> refr = new HashSet<RefreshCookieInterface>();
         for (Node nd : arg0) {
             DeleteCookieInterface delete = nd.getCookie(DeleteCookieInterface.class);
             if (delete != null) {
@@ -51,8 +55,8 @@ public class DeleteAction extends CookieAction {
                         Utils.getBundle().getString("LBL_DeleteConfirmCaptionMsg"), JOptionPane.YES_NO_OPTION,
                         JOptionPane.QUESTION_MESSAGE);
                 if (ret == JOptionPane.YES_OPTION) {
-                    delete.Delete();
                     Node node = nd.getParentNode();
+                    delete.Delete();
                     RefreshCookieInterface refresh = null;
                     if (node != null) {
                         refresh = node.getCookie(RefreshCookieInterface.class);
@@ -60,12 +64,18 @@ public class DeleteAction extends CookieAction {
                     try {
                         nd.destroy();
                         if (refresh != null) {
-                            refresh.Refresh();
+                            refr.add(refresh);
+                        //refresh.Refresh();
                         }
                     } catch (IOException ex) {
                         Exceptions.printStackTrace(ex);
                     }
                 }
+            }
+        }
+        for (RefreshCookieInterface r : refr) {
+            if (r != null) {
+                r.Refresh();
             }
         }
     }
