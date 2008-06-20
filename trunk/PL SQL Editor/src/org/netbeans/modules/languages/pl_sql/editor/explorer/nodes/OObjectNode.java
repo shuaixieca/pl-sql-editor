@@ -6,6 +6,7 @@ package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes;
 
 import java.util.Date;
 import javax.swing.Action;
+import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshAction;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.BaseClass;
@@ -30,6 +31,7 @@ public class OObjectNode extends AbstractNode {
         //super(Children.create(new OObjectTypeNodeChildFactory(ot), false), Lookups.singleton(ot));
         //ot.addPropertyChangeListener(WeakListeners.propertyChange(this, ot));        
         super(Children.LEAF, Lookups.singleton(ot));
+        Utils.setOracleIconBase(this, ot.getObjectType(), false);
     }
 
     private BaseClass getBaseClass() {

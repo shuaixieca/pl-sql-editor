@@ -5,6 +5,7 @@
 package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions;
 
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.OUserNode;
 import org.openide.nodes.Node;
 import org.openide.util.HelpCtx;
 import org.openide.util.actions.CookieAction;
@@ -36,6 +37,10 @@ public class ConnectAction extends CookieAction {
         for (Node nd : arg0) {
             ConnectCookieInterface connect = nd.getCookie(ConnectCookieInterface.class);
             connect.Connect();
+            OUserNode oun = (OUserNode) nd;
+            if (oun != null) {
+                oun.resetChildren();
+            }
         }
     }
 

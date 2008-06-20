@@ -66,10 +66,14 @@ public class BaseClass implements EditCookie {
             System.out.println(loader.getClass().getName());
             System.out.println(loader.getRepresentationClassName());
         }
-        //Lookup lookup = MimeLookup.getLookup("text/pl_sql");
-        //EditorKit ek = CloneableEditorSupport.getEditorKit("text/pl_sql");
-        //if (ek != null) {
-        //throw new UnsupportedOperationException("ek.getContentType()");
+    //JFileChooser chooser = new JFileChooser();
+    //int returnVal = chooser.showSaveDialog(WindowManager.getDefault().getMainWindow());
+
+
+    //Lookup lookup = MimeLookup.getLookup("text/pl_sql");
+    //EditorKit ek = CloneableEditorSupport.getEditorKit("text/pl_sql");
+    //if (ek != null) {
+    //throw new UnsupportedOperationException("ek.getContentType()");
     //}
     }
 }

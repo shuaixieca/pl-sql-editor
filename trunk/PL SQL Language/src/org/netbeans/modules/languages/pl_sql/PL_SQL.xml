@@ -13,7 +13,6 @@ and open the template in the editor.
         <ext name="pks"/>
         <ext name="pkb"/>
         <ext name="trg"/>
-        <ext name="vw"/>
         <ext name="tps"/>
         <ext name="tpb"/>
         <resolver mime="text/pl_sql"/>

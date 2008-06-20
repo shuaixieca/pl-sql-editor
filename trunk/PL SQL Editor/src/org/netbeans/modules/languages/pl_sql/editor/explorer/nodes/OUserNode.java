@@ -31,9 +31,17 @@ import org.openide.util.lookup.Lookups;
 public class OUserNode extends AbstractNode implements PropertyChangeListener {
 
     public OUserNode(OUser ou) {
-        super(Children.create(new OUserNodeChildFactory(ou), true), Lookups.singleton(ou));
-        //super(Children.LEAF, Lookups.singleton(ou));
+        //super(Children.create(new OUserNodeChildFactory(ou), true), Lookups.singleton(ou));
+        super(Children.LEAF, Lookups.singleton(ou));
         ou.addPropertyChangeListener(WeakListeners.propertyChange(this, ou));
+    }
+
+    public void resetChildren() {
+        if (getOUser().getIsConnected()) {
+            this.setChildren(Children.create(new OUserNodeChildFactory(getOUser()), true));
+        } else {
+            this.setChildren(Children.LEAF);
+        }
     }
 
     private OUser getOUser() {
@@ -120,7 +128,8 @@ public class OUserNode extends AbstractNode implements PropertyChangeListener {
     public void propertyChange(PropertyChangeEvent evt) {
         if ("UserName".equals(evt.getPropertyName()) ||
                 "IsConnected".equals(evt.getPropertyName())) {
-            this.fireDisplayNameChange(null, getHtmlDisplayName());
+            this.resetChildren();
+            this.fireDisplayNameChange(null, getHtmlDisplayName());            
         }
     }
 }
