@@ -8,10 +8,10 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
+import java.util.prefs.Preferences;
 import javax.swing.JFileChooser;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.openide.cookies.EditCookie;
-import org.openide.cookies.OpenCookie;
 import org.openide.filesystems.FileObject;
 import org.openide.filesystems.FileUtil;
 import org.openide.loaders.DataObject;
@@ -27,14 +27,21 @@ public class BaseClass implements EditCookie {
     private String Owner = null,  ObjectName,  ObjectSource,  Status;
     private ObjectTypes ObjectType;
     private Date Created,  LastDDLTime;
+    private Preferences ParentPref;
 
-    public BaseClass(String OOwner, String OName, ObjectTypes OType, Date OCreated, Date OLastDDLTime, String OStatus) {
+    public BaseClass(String OOwner, String OName, ObjectTypes OType,
+            Date OCreated, Date OLastDDLTime, String OStatus, Preferences pref) {
         Owner = OOwner;
         ObjectName = OName;
         ObjectType = OType;
         Created = OCreated;
         LastDDLTime = OLastDDLTime;
         Status = OStatus;
+        ParentPref = pref;
+    }
+
+    public Preferences getPreferencesRoot() {
+        return ParentPref.node(this.toString());
     }
 
     @Override
@@ -44,6 +51,14 @@ public class BaseClass implements EditCookie {
         } else {
             return ObjectName;
         }
+    }
+
+    public String getLocalFile() {
+        return getPreferencesRoot().get("LocalFile", "");
+    }
+
+    public void setLocalFile(String LocalFile) {
+        getPreferencesRoot().put("LocalFile", LocalFile);
     }
 
     public String getObjectSource() {
@@ -69,23 +84,34 @@ public class BaseClass implements EditCookie {
     public String getStatus() {
         return Status;
     }
-    
+
     public boolean isValid() {
         return Status.compareToIgnoreCase("VALID") == 0;
     }
 
+    private File returnLocalFile() {
+        File f = new File(getLocalFile());
+        try {
+            String s = f.getPath();
+            if (s == null || s.equalsIgnoreCase("") || f.isDirectory() || !f.isFile()) {
+                throw new IOException();
+            }
+        } catch (IOException ex) {
+            JFileChooser fc = new JFileChooser();
+            String filename = this.toString() + '.' + Utils.getFileExtensionByType(ObjectType);
+            fc.setSelectedFile(new File(filename));
+            int ret = fc.showSaveDialog(WindowManager.getDefault().getMainWindow());
+            f = fc.getSelectedFile();
+            if (f == null || ret == JFileChooser.CANCEL_OPTION) {
+                return null;
+            }
+        }
+        return f;
+    }
+
     public void edit() {
-        /*for (DataLoader loader : DataLoaderPool.getDefault().toArray()) {
-        System.out.println(loader.getClass().getName());
-        System.out.println(loader.getRepresentationClassName());
-        }*/
-        JFileChooser fc = new JFileChooser();
-        String filename = ObjectName + '.' + Utils.getFileExtensionByType(ObjectType);
-        fc.setSelectedFile(new File(filename));
-        int ret = fc.showSaveDialog(WindowManager.getDefault().getMainWindow());
-        File selFile = null;
-        selFile = fc.getSelectedFile();
-        if (selFile == null || ret == JFileChooser.CANCEL_OPTION) {
+        File selFile = returnLocalFile();
+        if (selFile == null) {
             return;
         }
         FileObject file;
@@ -101,7 +127,7 @@ public class BaseClass implements EditCookie {
             if (cookie != null) {
                 cookie.edit();
             }
-
+            setLocalFile(selFile.getCanonicalPath());
         } catch (IOException ex) {
             Exceptions.printStackTrace(ex);
         }

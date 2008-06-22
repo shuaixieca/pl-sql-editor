@@ -14,7 +14,6 @@ import org.netbeans.modules.languages.pl_sql.editor.oracletree.OUser;
 import org.openide.nodes.ChildFactory;
 import org.openide.nodes.Node;
 import org.openide.util.WeakListeners;
-import sun.awt.windows.ThemeReader;
 
 /**
  *

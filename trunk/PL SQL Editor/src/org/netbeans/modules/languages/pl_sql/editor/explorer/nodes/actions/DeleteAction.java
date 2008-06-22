@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
+import org.openide.nodes.Children;
 import org.openide.nodes.Node;
 import org.openide.util.Exceptions;
 import org.openide.util.HelpCtx;
@@ -46,36 +47,28 @@ public class DeleteAction extends CookieAction {
     protected void performAction(Node[] arg0) {
         //Object cls = arg0[0];
         //JOptionPane.showMessageDialog(null, "Object is " + cls.getClass().getName());
-        Set<RefreshCookieInterface> refr = new HashSet<RefreshCookieInterface>();
-        for (Node nd : arg0) {
-            DeleteCookieInterface delete = nd.getCookie(DeleteCookieInterface.class);
-            if (delete != null) {
-                int ret = JOptionPane.showConfirmDialog(null,
-                        Utils.getBundle().getString("LBL_DeleteConfirmMsg") + " \"" + delete.toString() + "\"?",
-                        Utils.getBundle().getString("LBL_DeleteConfirmCaptionMsg"), JOptionPane.YES_NO_OPTION,
-                        JOptionPane.QUESTION_MESSAGE);
-                if (ret == JOptionPane.YES_OPTION) {
-                    Node node = nd.getParentNode();
-                    delete.Delete();
-                    RefreshCookieInterface refresh = null;
-                    if (node != null) {
-                        refresh = node.getCookie(RefreshCookieInterface.class);
-                    }
-                    try {
-                        nd.destroy();
-                        if (refresh != null) {
-                            refr.add(refresh);
-                        //refresh.Refresh();
-                        }
-                    } catch (IOException ex) {
-                        Exceptions.printStackTrace(ex);
-                    }
+        Node nd = arg0[0];
+        DeleteCookieInterface delete = nd.getCookie(DeleteCookieInterface.class);
+        if (delete != null) {
+            int ret = JOptionPane.showConfirmDialog(null,
+                    Utils.getBundle().getString("LBL_DeleteConfirmMsg") + " \"" + delete.toString() + "\"?",
+                    Utils.getBundle().getString("LBL_DeleteConfirmCaptionMsg"), JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE);
+            if (ret == JOptionPane.YES_OPTION) {
+                Node node = nd.getParentNode();
+                delete.Delete();
+                RefreshCookieInterface refresh = null;
+                if (node != null) {
+                    refresh = node.getCookie(RefreshCookieInterface.class);
                 }
-            }
-        }
-        for (RefreshCookieInterface r : refr) {
-            if (r != null) {
-                r.Refresh();
+                try {
+                    nd.destroy();
+                    if (refresh != null) {
+                        refresh.Refresh();
+                    }
+                } catch (IOException ex) {
+                    Exceptions.printStackTrace(ex);
+                }
             }
         }
     }
@@ -97,16 +90,14 @@ public class DeleteAction extends CookieAction {
 
     @Override
     protected boolean enable(Node[] activatedNodes) {
-        if (activatedNodes.length == 0) {
+        if (activatedNodes.length == 0 || activatedNodes.length > 1) {
             return false;
         }
-
         Node node = activatedNodes[0];
         DeleteCookieInterface delete = node.getCookie(DeleteCookieInterface.class);
         if (delete != null && !delete.getIsConnected()) {
             return true;
         }
-
         return false;
     }
 

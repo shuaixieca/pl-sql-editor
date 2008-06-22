@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Comparator;
 import java.util.TreeSet;
+import java.util.prefs.Preferences;
 import oracle.jdbc.OracleConnection;
 import org.openide.util.Exceptions;
 
@@ -16,11 +17,6 @@ import org.openide.util.Exceptions;
  *
  * @author SUMsoft
  */
-enum ObjectAccessed {
-
-    User, All, DBA
-};
-
 class BaseClassComp implements Comparator<BaseClass> {
 
     public int compare(BaseClass a, BaseClass b) {
@@ -32,11 +28,13 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
 
     private ObjectTypes AllObjType;
     private ObjectAccessed SelObjectAccessed;
+    private Preferences ParentPref;
 
-    public ObjectTreeSet(ObjectTypes OType, ObjectAccessed OAccessed) {
+    public ObjectTreeSet(ObjectTypes OType, ObjectAccessed OAccessed, Preferences pref) {
         super(new BaseClassComp());
         AllObjType = OType;
         SelObjectAccessed = OAccessed;
+        ParentPref = pref;
     }
 
     public void LoadObjects(OracleConnection conn) {
@@ -62,7 +60,9 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
                     break;
             }
             while (rset.next()) {
-                BaseClass bc = new BaseClass(rset.getString(5), rset.getString(1), AllObjType, rset.getDate(2), rset.getDate(3), rset.getString(4));
+                BaseClass bc = new BaseClass(rset.getString(5), rset.getString(1), 
+                        AllObjType, rset.getDate(2), rset.getDate(3), rset.getString(4), ParentPref);
+                //this.add(bc);
                 stmt_src = conn.createStatement();
                 switch (SelObjectAccessed) {
                     case User:
@@ -75,11 +75,12 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
                         rset_src = stmt_src.executeQuery("select t.text from dba_source t where t.name = '" + rset.getString(1) + "' and t.owner = '" + rset.getString(5) + "' and t.type = '" + AllObjType.toString().replace('_', ' ') + "' order by t.line asc");
                         break;
                 }
-                StringBuffer sb = new StringBuffer();
+                //StringBuffer sb = new StringBuffer();
+                StringBuilder sb = new StringBuilder();
                 while (rset_src.next()) {
                     sb.append(rset_src.getString(1));
                 }
-                if (sb != null) {
+                if (sb.length() > 0) {
                     bc.setObjectSource(sb.toString());
                 }
                 this.add(bc);
@@ -87,7 +88,9 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
                 stmt_src.close();
             }
         } catch (SQLException ex) {
-            Exceptions.printStackTrace(ex);
+            if (ex.getErrorCode() != 942) {
+                Exceptions.printStackTrace(ex);
+            }
         } finally {
             try {
 

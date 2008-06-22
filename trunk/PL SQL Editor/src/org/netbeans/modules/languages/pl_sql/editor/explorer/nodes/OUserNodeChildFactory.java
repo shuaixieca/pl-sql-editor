@@ -52,13 +52,13 @@ public final class OUserNodeChildFactory extends ChildFactory<OObjectTypeNode>
         parentInfo.Connect();
         }*/
         if (parentInfo.getIsConnected()) {
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.FUNCTION, parentInfo.getConn())));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PROCEDURE, parentInfo.getConn())));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PACKAGE, parentInfo.getConn())));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PACKAGE_BODY, parentInfo.getConn())));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TYPE, parentInfo.getConn())));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TYPE_BODY, parentInfo.getConn())));
-            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TRIGGER, parentInfo.getConn())));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.FUNCTION, parentInfo)));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PROCEDURE, parentInfo)));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PACKAGE, parentInfo)));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.PACKAGE_BODY, parentInfo)));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TYPE, parentInfo)));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TYPE_BODY, parentInfo)));
+            keys.add(new OObjectTypeNode(new OObjectType(ObjectTypes.TRIGGER, parentInfo)));
         }
         return true;
     }

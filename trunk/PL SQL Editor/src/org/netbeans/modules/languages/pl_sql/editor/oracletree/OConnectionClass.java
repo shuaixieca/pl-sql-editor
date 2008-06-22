@@ -35,7 +35,7 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
     private String ServerName,  DatabaseName,  PrefNodeName = null;
     private int Port = 1521;
     private TreeSet<OUser> Users = new TreeSet<OUser>(new OUserComp());
-    protected static Preferences pref_root = NbPreferences.forModule(OConnectionClass.class).node("OConnectionClass");
+    protected static final Preferences pref_root = NbPreferences.forModule(OConnectionClass.class).node("oroot");
     private final ChangeSupport changeSupport = new ChangeSupport(this);
     private List<PropertyChangeListener> listeners = Collections.synchronizedList(new LinkedList<PropertyChangeListener>());
 
@@ -60,7 +60,7 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
     public OConnectionClass(String OPrefNodeName, String OServerName, int OPort, String ODatabaseName, String OUserName, String OPassword, Boolean OSavePassword, RoleTypes OConnectRole) {
         this(OPrefNodeName, OServerName, OPort, ODatabaseName);
 
-        Users.add(new OUser(this, OUserName, OPassword, OSavePassword, OConnectRole));
+        Users.add(new OUser(this, OUserName, OPassword, OSavePassword, OConnectRole, ObjectAccessed.User));
     }
 
     public void addChangeListener(ChangeListener listener) {
@@ -189,7 +189,10 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
                 for (String u : pref.childrenNames()) {
                     Preferences pref_u = pref.node(u);
                     if (pref_u.get("ConnectRole", "").compareTo("") != 0) {
-                        OUser os = new OUser(this, pref_u.get("UserName", ""), pref_u.get("Password", ""), pref_u.getBoolean("SavePassword", false), RoleTypes.valueOf(pref_u.get("ConnectRole", "")));
+                        OUser os = new OUser(this, pref_u.get("UserName", ""), pref_u.get("Password", ""),
+                                pref_u.getBoolean("SavePassword", false), 
+                                RoleTypes.valueOf(pref_u.get("ConnectRole", "")),
+                                ObjectAccessed.valueOf(pref_u.get("Access", "User")));
                         Users.add(os);
                     }
                 }
@@ -208,6 +211,7 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
     }
 
     public void Delete() {
+        Users.clear();
         this.RemoveConnection();
         OConnectionRoot.RemoveConnection(this);
     }
