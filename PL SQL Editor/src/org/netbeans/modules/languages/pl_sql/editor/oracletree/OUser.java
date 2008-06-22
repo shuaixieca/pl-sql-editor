@@ -18,6 +18,7 @@ import oracle.jdbc.OracleConnection;
 import oracle.jdbc.pool.OracleDataSource;
 import org.netbeans.api.progress.ProgressHandle;
 import org.netbeans.api.progress.ProgressHandleFactory;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ChangeOAccessCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ConnectCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DisconnectCookieInterface;
@@ -36,7 +37,7 @@ import org.openide.windows.InputOutput;
  * @author SUMsoft
  */
 public class OUser implements RefreshCookieInterface, EditCookieInterface, DeleteCookieInterface,
-        ConnectCookieInterface, DisconnectCookieInterface {
+        ConnectCookieInterface, DisconnectCookieInterface, ChangeOAccessCookieInterface {
 
     private String UserName,  Password = "";
     private Boolean SavePassword = false;
@@ -46,8 +47,9 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
     private final ChangeSupport changeSupport = new ChangeSupport(this);
     private OracleConnection conn;
     private boolean IsConnected,  IsCanceled = false;
-    boolean progressed = false;
+    private boolean progressed = false;
     private ConnectionTry ct = null;
+    private ObjectAccessed oaccess = ObjectAccessed.User;
     private ProgressHandle progressHandle = ProgressHandleFactory.createHandle(null, new Cancellable() {
 
         public boolean cancel() {
@@ -57,11 +59,12 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
         }
     });
 
-    private Preferences pref() {
-        return OConnectionClass.getPref_root().node(Parent.getPrefNode());
+    public Preferences getPreferencesRoot() {
+        return OConnectionClass.getPref_root().node(Parent.getPrefNode()).node(getUserName());
     }
 
-    public OUser(OConnectionClass OParent, String OUserName, String OPassword, Boolean OSavePassword, RoleTypes OConnectRole) {
+    public OUser(OConnectionClass OParent, String OUserName, String OPassword,
+            Boolean OSavePassword, RoleTypes OConnectRole, ObjectAccessed OObjectAccessed) {
         Parent = OParent;
         UserName = OUserName;
         if (OSavePassword) {
@@ -70,6 +73,7 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
         //Password = OPassword;
         SavePassword = OSavePassword;
         ConnectRole = OConnectRole;
+        oaccess = OObjectAccessed;
     }
 
     public void addChangeListener(ChangeListener listener) {
@@ -101,13 +105,14 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
     }
 
     public void SaveUser() {
-        Preferences pref_user = pref().node(getUserName());
+        Preferences pref_user = getPreferencesRoot();
         pref_user.put("UserName", getUserName());
         if (getSavePassword()) {
             pref_user.put("Password", getPassword());
         }
         pref_user.putBoolean("SavePassword", getSavePassword());
         pref_user.put("ConnectRole", getConnectRole().toString());
+        pref_user.put("Access", getObjectAccessed().toString());
         try {
             pref_user.flush();
         } catch (BackingStoreException ex) {
@@ -117,8 +122,8 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
     public void RemoveUser() {
         try {
-            pref().node(getUserName()).removeNode();
-            pref().flush();
+            getPreferencesRoot().removeNode();
+            getPreferencesRoot().flush();
         } catch (BackingStoreException ex) {
             Exceptions.printStackTrace(ex);
         }
@@ -387,5 +392,16 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
     protected void finalize() {
         this.Disconnect();
         this.conn = null;
+    }
+
+    public void ChangeOAccess(ObjectAccessed oa) {
+        this.oaccess = oa;
+        Preferences pref_user = getPreferencesRoot();
+        pref_user.put("Access", getObjectAccessed().toString());
+        this.Refresh();
+    }
+
+    public ObjectAccessed getObjectAccessed() {
+        return oaccess;
     }
 }

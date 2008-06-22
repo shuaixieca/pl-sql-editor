@@ -4,14 +4,21 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.io.Serializable;
 import java.util.logging.Logger;
 import javax.swing.Action;
 import javax.swing.ButtonGroup;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.OConnectionRootNode;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.AddAction;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.AllOAccessAction;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ChangeOAccessCookieInterface;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DBAOAccessAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshAction;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.UserOAccessAction;
+import org.netbeans.modules.languages.pl_sql.editor.oracletree.OConnectionRoot;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.BeanTreeView;
@@ -40,22 +47,34 @@ final class OracleTopComponent extends TopComponent implements ExplorerManager.P
         org.openide.awt.Actions.connect(AddjButton, (Action) new AddAction());
         org.openide.awt.Actions.connect(DeletejButton, (Action) new DeleteAction());
         org.openide.awt.Actions.connect(RefreshjButton, (Action) new RefreshAction());
+
+        org.openide.awt.Actions.connect(UserjToggleButton, (Action) new UserOAccessAction());
+        org.openide.awt.Actions.connect(AlljToggleButton, (Action) new AllOAccessAction());
+        org.openide.awt.Actions.connect(DBAjToggleButton, (Action) new DBAOAccessAction());
         // following line tells the top component which lookup should be associated with it
         associateLookup(ExplorerUtils.createLookup(mgr, getActionMap()));
         //((BeanTreeView) DBView).setRootVisible(false);
         mgr.setRootContext(OConnectionRootNode.GetRootNode());
-        /*
+
         mgr.addPropertyChangeListener(new PropertyChangeListener() {
-        
-        public void propertyChange(PropertyChangeEvent evt) {
-        OConnectionRoot ocr = getLookup().lookup(OConnectionRoot.class);
-        if (ocr != null) {
-        RefreshjButton.setEnabled(true);
-        } else {
-        RefreshjButton.setEnabled(false);
-        }
-        }
-        });*/
+
+            public void propertyChange(PropertyChangeEvent evt) {
+                ChangeOAccessCookieInterface cng = getLookup().lookup(ChangeOAccessCookieInterface.class);
+                if (cng != null) {
+                    switch (cng.getObjectAccessed()) {
+                        case User:
+                            UserjToggleButton.setSelected(true);
+                            break;
+                        case All:
+                            AlljToggleButton.setSelected(true);
+                            break;
+                        case DBA:
+                            DBAjToggleButton.setSelected(true);
+                            break;
+                    }
+                }
+            }
+        });
         setName(NbBundle.getMessage(OracleTopComponent.class, "CTL_OracleTopComponent"));
         setToolTipText(NbBundle.getMessage(OracleTopComponent.class, "HINT_OracleTopComponent"));
 //        setIcon(Utilities.loadImage(ICON_PATH, true));

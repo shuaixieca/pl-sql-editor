@@ -5,6 +5,7 @@
 package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes;
 
 import java.awt.Image;
+import java.beans.PropertyEditor;
 import java.util.Date;
 import javax.swing.Action;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
@@ -28,7 +29,7 @@ import org.openide.util.Utilities;
  * @author SUMsoft
  */
 public class OObjectNode extends AbstractNode {
-    
+
     private final String ERROR_BADGE_PATH = "org/netbeans/modules/languages/pl_sql/editor/resources/error_pix.png";
 
     public OObjectNode(BaseClass ot) {
@@ -50,7 +51,7 @@ public class OObjectNode extends AbstractNode {
 
     @Override
     public String getHtmlDisplayName() {
-        if (! getBaseClass().isValid()) {
+        if (!getBaseClass().isValid()) {
             return "<font color=\"#FF0000\">" + getDisplayName() + "</font>";
         } else {
             return null;
@@ -92,6 +93,7 @@ public class OObjectNode extends AbstractNode {
     }
 
     @Override
+    @SuppressWarnings("unchecked") 
     protected Sheet createSheet() {
 
         Sheet sheet = Sheet.createDefault();
@@ -104,18 +106,22 @@ public class OObjectNode extends AbstractNode {
             Property CreatedProp = new PropertySupport.Reflection<Date>(obj, Date.class, "getCreated", null);
             Property LastDDLTimeProp = new PropertySupport.Reflection<Date>(obj, Date.class, "getLastDDLTime", null);
             Property StatusProp = new PropertySupport.Reflection<String>(obj, String.class, "getStatus", null);
+            PropertySupport.Reflection LocalFileProp = new PropertySupport.Reflection<String>(obj, String.class, "getLocalFile", "setLocalFile");
 
             ObjectNameProp.setName("Name");
             ObjectTypeProp.setName("Type");
             CreatedProp.setName("Created");
             LastDDLTimeProp.setName("Last DDL Time");
             StatusProp.setName("Status");
+            LocalFileProp.setName("Local File");
+            LocalFileProp.setPropertyEditorClass(LocalFileEditor.class);
 
             set.put(ObjectNameProp);
             set.put(ObjectTypeProp);
             set.put(CreatedProp);
             set.put(LastDDLTimeProp);
             set.put(StatusProp);
+            set.put(LocalFileProp);
 
         } catch (NoSuchMethodException ex) {
             ErrorManager.getDefault();
