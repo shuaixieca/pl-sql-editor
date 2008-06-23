@@ -5,10 +5,10 @@
 package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes;
 
 import java.awt.Image;
-import java.beans.PropertyEditor;
 import java.util.Date;
 import javax.swing.Action;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.CompileLocalFileAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshAction;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.BaseClass;
@@ -65,6 +65,7 @@ public class OObjectNode extends AbstractNode {
         } else {
             return new SystemAction[]{
                         SystemAction.get(EditAction.class),
+                        SystemAction.get(CompileLocalFileAction.class),
                         SystemAction.get(DeleteAction.class),
                         null,
                         SystemAction.get(RefreshAction.class),

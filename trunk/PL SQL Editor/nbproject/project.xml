@@ -128,7 +128,9 @@
                     </run-dependency>
                 </dependency>
             </module-dependencies>
-            <public-packages/>
+            <public-packages>
+                <package>org.netbeans.modules.languages.pl_sql.editor.api</package>
+            </public-packages>
         </data>
     </configuration>
 </project>

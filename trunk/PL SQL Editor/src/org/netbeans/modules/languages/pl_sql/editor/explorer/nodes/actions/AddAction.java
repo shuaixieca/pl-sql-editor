@@ -5,6 +5,7 @@
 package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions;
 
 import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.openide.nodes.Node;
@@ -38,9 +39,14 @@ public class AddAction extends CookieAction {
 
     @Override
     protected void performAction(Node[] arg0) {
-        //Object cls = arg0[0];
+        //Object cls = arg0[0];        
         //JOptionPane.showMessageDialog(null, "Object is " + cls.getClass().getName());
         Node nd = arg0[0];
+        /*Node found = nd.getChildren().findChild("svco");
+        if (found != null) {
+        JOptionPane.showMessageDialog(null, "Found " + found.getName());
+        return;
+        }*/
         AddCookieInterface add = nd.getCookie(AddCookieInterface.class);
         if (add != null) {
             add.Add();

@@ -6,7 +6,10 @@ package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.IOException;
+import java.sql.CallableStatement;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -31,6 +34,7 @@ import org.openide.util.RequestProcessor;
 import org.openide.util.TaskListener;
 import org.openide.windows.IOProvider;
 import org.openide.windows.InputOutput;
+import org.openide.windows.OutputListener;
 
 /**
  *
@@ -54,7 +58,7 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
         public boolean cancel() {
             IsCanceled = true;
-            OutputMsg("Canceled.", false);
+            OutputMsg("Canceled.", null, false);
             return true;
         }
     });
@@ -232,13 +236,29 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
         return IOProvider.getDefault().getIO(Parent.toString(), false);
     }
 
-    private synchronized void OutputMsg(String msg, boolean error) {
+    public synchronized void OutputMsg(String msg, OutputListener ol, boolean error) {
         if (error) {
             getio().select();
-            getio().getErr().println(msg);
+            if (ol != null) {
+                try {
+                    getio().getErr().println(msg, ol);
+                } catch (IOException ex) {
+                    Exceptions.printStackTrace(ex);
+                }
+            } else {
+                getio().getErr().println(msg);
+            }
             getio().getErr().close();
         } else {
-            getio().getOut().println(msg);
+            if (ol != null) {
+                try {
+                    getio().getOut().println(msg, ol);
+                } catch (IOException ex) {
+                    Exceptions.printStackTrace(ex);
+                }
+            } else {
+                getio().getOut().println(msg);
+            }
             getio().getOut().close();
         }
     }
@@ -269,6 +289,33 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
     }
 
+    private synchronized void EnableHints() {
+        if (IsConnected) {
+            CallableStatement st = null;
+            try {
+                st = conn.prepareCall("begin :1 := DBMS_DB_VERSION.VERSION; end;");
+                st.registerOutParameter(1, Types.INTEGER);
+                st.execute();
+                if (st.getInt(1) >= 10) {
+                    st.clearParameters();
+                    st.execute("ALTER SESSION SET PLSQL_WARNINGS='ENABLE:ALL'");
+                }
+
+            } catch (SQLException ex) {
+                // Do nothing because Oracle version < 9i
+                Exceptions.printStackTrace(ex);
+            } finally {
+                if (st != null) {
+                    try {
+                        st.close();
+                    } catch (SQLException ex) {
+                        Exceptions.printStackTrace(ex);
+                    }
+                }
+            }
+        }
+    }
+
     public synchronized void Connect() {
         ct = new ConnectionTry();
         ct.post();
@@ -278,10 +325,10 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
         if (IsConnected) {
             try {
                 conn.close();
-                OutputMsg("\'" + UserName + "\' user is disconnected.", false);
+                OutputMsg("\'" + UserName + "\' user is disconnected.", null, false);
                 this.notifyChange();
             } catch (SQLException ex) {
-                OutputMsg(ex.getMessage(), true);
+                OutputMsg(ex.getMessage(), null, true);
             }
 
             setIsConnected(false);
@@ -319,18 +366,19 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
                                 //progressHandle.start();
                                 startProgress(localmsg);
 
-                                OutputMsg(localmsg, false);
+                                OutputMsg(localmsg, null, false);
                                 conn =
                                         (OracleConnection) ods.getConnection();
                                 setIsConnected(true);
-                                OutputMsg("Connected as \'" + UserName + "\' user.", false);
+                                OutputMsg("Connected as \'" + UserName + "\' user.", null, false);
+                                EnableHints();
                                 notifyChange();
                             }
 
                         } catch (SQLException ex) {
                             setIsConnected(false);
                             if (!IsCanceled) {
-                                OutputMsg(ex.getMessage(), true);
+                                OutputMsg(ex.getMessage(), null, true);
                             }
 
                         } finally {
@@ -339,7 +387,7 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
                                     try {
                                         conn.close();
                                     } catch (SQLException ex) {
-                                        OutputMsg(ex.getMessage(), true);
+                                        OutputMsg(ex.getMessage(), null, true);
                                     } finally {
                                         setIsConnected(false);
                                     }
