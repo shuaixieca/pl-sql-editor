@@ -70,7 +70,7 @@ public class OObjectType implements RefreshCookieInterface, ChangeOAccessCookieI
 
     public List<BaseClass> LoadAllObjects() {
         ObjectTreeSet ots = new ObjectTreeSet(this.objecttype, this.ou.getObjectAccessed(), this.getPreferencesRoot());
-        ots.LoadObjects(ou.getConn());
+        ots.LoadObjects(ou, this);
         ArrayList<BaseClass> res = new ArrayList<BaseClass>();
         for (BaseClass bc : ots) {
             res.add(bc);

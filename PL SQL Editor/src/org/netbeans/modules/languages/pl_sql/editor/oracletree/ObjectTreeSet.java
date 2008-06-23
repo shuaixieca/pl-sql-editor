@@ -37,8 +37,9 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
         ParentPref = pref;
     }
 
-    public void LoadObjects(OracleConnection conn) {
+    public void LoadObjects(OUser ou, OObjectType ot) {
         this.clear();
+        OracleConnection conn = ou.getConn();
         Statement stmt = null;
         ResultSet rset = null;
         Statement stmt_src = null;
@@ -61,7 +62,7 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
             }
             while (rset.next()) {
                 BaseClass bc = new BaseClass(rset.getString(5), rset.getString(1), 
-                        AllObjType, rset.getDate(2), rset.getDate(3), rset.getString(4), ParentPref);
+                        AllObjType, rset.getDate(2), rset.getDate(3), rset.getString(4), ParentPref, ou, ot);
                 //this.add(bc);
                 stmt_src = conn.createStatement();
                 switch (SelObjectAccessed) {
@@ -81,6 +82,8 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
                     sb.append(rset_src.getString(1));
                 }
                 if (sb.length() > 0) {
+                    sb.insert(0, "create or replace ");
+                    //sb.append('/');
                     bc.setObjectSource(sb.toString());
                 }
                 this.add(bc);
