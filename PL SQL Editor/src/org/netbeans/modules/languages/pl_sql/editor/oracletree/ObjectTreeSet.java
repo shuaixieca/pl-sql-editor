@@ -62,7 +62,7 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
             }
             while (rset.next()) {
                 BaseClass bc = new BaseClass(rset.getString(5), rset.getString(1), 
-                        AllObjType, rset.getDate(2), rset.getDate(3), rset.getString(4), ParentPref, ou, ot);
+                        AllObjType, rset.getTimestamp(2), rset.getTimestamp(3), rset.getString(4), ParentPref, ou, ot);
                 //this.add(bc);
                 stmt_src = conn.createStatement();
                 switch (SelObjectAccessed) {

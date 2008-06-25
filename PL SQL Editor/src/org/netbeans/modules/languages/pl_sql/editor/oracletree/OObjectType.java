@@ -4,19 +4,24 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.prefs.Preferences;
+import javax.swing.JOptionPane;
 import javax.swing.event.ChangeListener;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.AddCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ChangeOAccessCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshCookieInterface;
 import org.openide.util.ChangeSupport;
+import org.openide.util.NotImplementedException;
 
 /**
  *
  * @author SUMsoft
  */
-public class OObjectType implements RefreshCookieInterface, ChangeOAccessCookieInterface {
+public class OObjectType implements RefreshCookieInterface, ChangeOAccessCookieInterface,
+        AddCookieInterface {
 
     private ObjectTypes objecttype;
     private OUser ou;
@@ -88,5 +93,22 @@ public class OObjectType implements RefreshCookieInterface, ChangeOAccessCookieI
 
     public ObjectAccessed getObjectAccessed() {
         return ou.getObjectAccessed();
+    }
+
+    public void Add() {
+        throw new NotImplementedException();
+        /*
+        String objname = JOptionPane.showInputDialog(null, "Please type new object name",
+                "Create new PL/SQL object", JOptionPane.QUESTION_MESSAGE);
+        if (objname == null || objname.length() == 0) {
+            return;
+        }
+        BaseClass bc = new BaseClass(null, objname.toUpperCase(), objecttype, null, null, null, getPreferencesRoot(), ou, this);
+        bc.setObjectSource("create or replace function f is begin null; end;");
+        bc.edit();
+        if (bc.isLocalFileExists()) {
+            bc.CompileLocalFile();
+            this.Refresh();
+        }*/
     }
 }
