@@ -8,6 +8,7 @@ import java.awt.Image;
 import java.util.Date;
 import javax.swing.Action;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.CompileAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.CompileLocalFileAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshAction;
@@ -65,6 +66,7 @@ public class OObjectNode extends AbstractNode {
         } else {
             return new SystemAction[]{
                         SystemAction.get(EditAction.class),
+                        SystemAction.get(CompileAction.class),
                         SystemAction.get(CompileLocalFileAction.class),
                         SystemAction.get(DeleteAction.class),
                         null,

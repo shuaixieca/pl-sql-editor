@@ -21,6 +21,10 @@ public class EditAction extends CookieAction {
         EditCookieInterface.class
     };
 
+    public EditAction() {
+        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0));
+    }
+
     @Override
     protected int mode() {
         return MODE_EXACTLY_ONE;

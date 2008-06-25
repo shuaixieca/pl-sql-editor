@@ -17,14 +17,14 @@ import org.openide.util.actions.CookieAction;
  *
  * @author SUMsoft
  */
-public class CompileLocalFileAction extends CookieAction {
+public class CompileAction extends CookieAction {
 
     private static final Class[] COOKIE_CLASSES = new Class[]{
-        CompileLocalFileCookieInterface.class
+        CompileCookieInterface.class
     };
 
-    public CompileLocalFileAction() {
-        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_F9, 0));
+    public CompileAction() {
+        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_F9, KeyEvent.CTRL_DOWN_MASK));
     }
 
     @Override
@@ -43,9 +43,9 @@ public class CompileLocalFileAction extends CookieAction {
         //JOptionPane.showMessageDialog(null, "Object is " + cls.getClass().getName());
         Set<RefreshCookieInterface> refr = new HashSet<RefreshCookieInterface>();
         for (Node nd : arg0) {
-            CompileLocalFileCookieInterface compile = nd.getCookie(CompileLocalFileCookieInterface.class);
-            if (compile != null && compile.isLocalFileExists()) {
-                compile.CompileLocalFile();
+            CompileCookieInterface compile = nd.getCookie(CompileCookieInterface.class);
+            if (compile != null) {
+                compile.Compile();
                 RefreshCookieInterface refresh = nd.getParentNode().getCookie(RefreshCookieInterface.class);
                 if (refresh != null) {
                     refr.add(refresh);
@@ -59,12 +59,12 @@ public class CompileLocalFileAction extends CookieAction {
 
     @Override
     public String getName() {
-        return Utils.getBundle().getString("LBL_CompileLocalFileAction");
+        return Utils.getBundle().getString("LBL_CompileAction");
     }
 
     @Override
     public HelpCtx getHelpCtx() {
-        return new HelpCtx(CompileLocalFileAction.class);
+        return new HelpCtx(CompileAction.class);
     }
 
     @Override
@@ -78,8 +78,8 @@ public class CompileLocalFileAction extends CookieAction {
             return false;
         }
         for (Node nd : activatedNodes) {
-            CompileLocalFileCookieInterface compile = nd.getCookie(CompileLocalFileCookieInterface.class);
-            if (compile == null || !compile.isLocalFileExists()) {
+            CompileCookieInterface compile = nd.getCookie(CompileCookieInterface.class);
+            if (compile == null) {
                 return false;
             }
         }

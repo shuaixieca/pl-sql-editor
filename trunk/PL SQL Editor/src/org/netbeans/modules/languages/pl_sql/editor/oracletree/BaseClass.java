@@ -16,6 +16,7 @@ import java.util.Date;
 import java.util.prefs.Preferences;
 import javax.swing.JFileChooser;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.CompileCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.CompileLocalFileCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshCookieInterface;
 import org.openide.cookies.EditCookie;
@@ -34,7 +35,8 @@ import org.openide.windows.WindowManager;
  *
  * @author SUMsoft
  */
-public class BaseClass implements EditCookie, CompileLocalFileCookieInterface, RefreshCookieInterface {
+public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
+        CompileCookieInterface, RefreshCookieInterface {
 
     private String Owner = null,  ObjectName,  ObjectSource,  Status;
     private ObjectTypes ObjectType;
@@ -213,7 +215,6 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface, R
                 ShowErrors(stmt, dob);
 
                 stmt.close();
-                this.Refresh();
             } catch (SQLException ex) {
                 while (ex != null) {
                     ou.OutputMsg(ex.getMessage(), null, true);
@@ -239,10 +240,12 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface, R
         ou.OutputMsg(w.getMessage(), null, true);
         w = w.getNextWarning();
         }*/
-        ResultSet rset = stmt.executeQuery("select t.line, t.position, t.text, initcap(t.attribute) from user_errors t where t.name = '" + ObjectName + "' order by t.sequence");
+        ResultSet rset = stmt.executeQuery("select t.line, t.position, t.text, initcap(t.attribute) from user_errors t where t.name = '" +
+                ObjectName + "' and t.type = '" + ObjectType.toString().replace('_', ' ') + "' order by t.sequence");
         while (rset.next()) {
             ou.OutputMsg(rset.getString(4) + ' ' + rset.getString(3) + " at [" + rset.getString(1) + ':' + rset.getString(2) + "]",
-                    new ErrorOutputListener(dob, rset.getInt(1), rset.getInt(2)), true);
+                    dob == null ? null : new ErrorOutputListener(dob, rset.getInt(1), rset.getInt(2)),
+                    rset.getString(4).equalsIgnoreCase("ERROR") ? true : false);
         }
         rset.close();
     }
@@ -274,5 +277,61 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface, R
 
     public void Refresh() {
         ot.Refresh();
+    }
+
+    public static String getCompileString(String ObjName, ObjectTypes ot) {
+        String ret = null;
+        switch (ot) {
+            case FUNCTION:
+                ret = "ALTER FUNCTION %1$s COMPILE";
+                break;
+            case PACKAGE:
+                ret = "ALTER PACKAGE %1$s COMPILE SPECIFICATION";
+                break;
+            case PACKAGE_BODY:
+                ret = "ALTER PACKAGE %1$s COMPILE BODY";
+                break;
+            case PROCEDURE:
+                ret = "ALTER PROCEDURE %1$s COMPILE";
+                break;
+            case TRIGGER:
+                ret = "ALTER TRIGGER %1$s COMPILE";
+                break;
+            case TYPE:
+                ret = "ALTER TYPE %1$s COMPILE SPECIFICATION";
+                break;
+            case TYPE_BODY:
+                ret = "ALTER TYPE %1$s COMPILE BODY";
+                break;
+        }
+        return String.format(ret, ObjName);
+    }
+
+    public void Compile() {
+        Statement stmt = null;
+        if (ou.getIsConnected()) {
+            try {
+                stmt = ou.getConn().createStatement();
+                ou.OutputMsg("", null, false);
+                ou.OutputMsg("Compiling " + toString() + "...", null, false);
+                stmt.execute(BaseClass.getCompileString(toString(), ObjectType));
+                ou.OutputMsg("Done.", null, false);
+                ShowErrors(stmt, null);
+                stmt.close();
+            } catch (SQLException ex) {
+                while (ex != null) {
+                    ou.OutputMsg(ex.getMessage(), null, true);
+                    ex = ex.getNextException();
+                }
+            } finally {
+                if (stmt != null) {
+                    try {
+                        stmt.close();
+                    } catch (SQLException ex) {
+                        Exceptions.printStackTrace(ex);
+                    }
+                }
+            }
+        }
     }
 }
