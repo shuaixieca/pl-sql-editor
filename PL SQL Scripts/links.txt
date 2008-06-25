@@ -10,3 +10,6 @@ http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html
 antlr
 http://www.antlr.org/grammar/1107752678378/PLSQLGrammar.g
 http://www.antlr.org/grammar/1209225566284/PLSQL3.g
+
+http://platform.netbeans.org/tutorials/nbm-idioms.html
+http://blogs.sun.com/geertjan/entry/parsing_html_for_links_and
