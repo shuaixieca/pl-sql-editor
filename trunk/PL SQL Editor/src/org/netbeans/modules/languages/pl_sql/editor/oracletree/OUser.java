@@ -13,6 +13,7 @@ import java.sql.Types;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Properties;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 import javax.swing.SwingUtilities;
@@ -30,6 +31,8 @@ import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.Refre
 import org.openide.util.Cancellable;
 import org.openide.util.ChangeSupport;
 import org.openide.util.Exceptions;
+import org.openide.util.Lookup;
+import org.openide.util.NbBundle;
 import org.openide.util.RequestProcessor;
 import org.openide.util.TaskListener;
 import org.openide.windows.IOProvider;
@@ -54,6 +57,7 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
     private boolean progressed = false;
     private ConnectionTry ct = null;
     private ObjectAccessed oaccess = ObjectAccessed.User;
+    private int OracleMajorVer;
     private ProgressHandle progressHandle = ProgressHandleFactory.createHandle(null, new Cancellable() {
 
         public boolean cancel() {
@@ -156,6 +160,10 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
             ods.setConnectionProperties(prop);
         }
         return ods;
+    }
+
+    public int getOracleMajorVer() {
+        return OracleMajorVer;
     }
 
     public RoleTypes getConnectRole() {
@@ -296,7 +304,8 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
                 st = conn.prepareCall("begin :1 := DBMS_DB_VERSION.VERSION; end;");
                 st.registerOutParameter(1, Types.INTEGER);
                 st.execute();
-                if (st.getInt(1) >= 10) {
+                OracleMajorVer = st.getInt(1);
+                if (OracleMajorVer >= 10) {
                     st.clearParameters();
                     st.execute("ALTER SESSION SET PLSQL_WARNINGS='ENABLE:ALL'");
                 }
@@ -366,6 +375,11 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
                                 //progressHandle.start();
                                 startProgress(localmsg);
 
+                                ods.setConnectionCachingEnabled(true);
+                                java.util.Properties props = new java.util.Properties();
+                                props.put(OracleConnection.CONNECTION_PROPERTY_THIN_VSESSION_PROGRAM, "ora");
+                                //props.put(OracleConnection.END_TO_END_MODULE_INDEX, "pl_sql");
+                                ods.setConnectionProperties(props);
                                 OutputMsg(localmsg, null, false);
                                 conn =
                                         (OracleConnection) ods.getConnection();

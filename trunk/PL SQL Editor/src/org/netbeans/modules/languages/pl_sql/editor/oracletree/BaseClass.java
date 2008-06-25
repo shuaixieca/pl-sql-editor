@@ -13,12 +13,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
+import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 import javax.swing.JFileChooser;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.CompileCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.CompileLocalFileCookieInterface;
+import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshCookieInterface;
+import org.openide.cookies.CloseCookie;
 import org.openide.cookies.EditCookie;
 import org.openide.cookies.LineCookie;
 import org.openide.cookies.SaveCookie;
@@ -36,7 +39,7 @@ import org.openide.windows.WindowManager;
  * @author SUMsoft
  */
 public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
-        CompileCookieInterface, RefreshCookieInterface {
+        CompileCookieInterface, RefreshCookieInterface, DeleteCookieInterface {
 
     private String Owner = null,  ObjectName,  ObjectSource,  Status;
     private ObjectTypes ObjectType;
@@ -122,7 +125,7 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
         return ret;
     }
 
-    private File returnLocalFile() {
+    public File returnLocalFile() {
         File f = new File(getLocalFile());
         try {
             String s = f.getPath();
@@ -240,12 +243,22 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
         ou.OutputMsg(w.getMessage(), null, true);
         w = w.getNextWarning();
         }*/
-        ResultSet rset = stmt.executeQuery("select t.line, t.position, t.text, initcap(t.attribute) from user_errors t where t.name = '" +
-                ObjectName + "' and t.type = '" + ObjectType.toString().replace('_', ' ') + "' order by t.sequence");
-        while (rset.next()) {
-            ou.OutputMsg(rset.getString(4) + ' ' + rset.getString(3) + " at [" + rset.getString(1) + ':' + rset.getString(2) + "]",
-                    dob == null ? null : new ErrorOutputListener(dob, rset.getInt(1), rset.getInt(2)),
-                    rset.getString(4).equalsIgnoreCase("ERROR") ? true : false);
+        ResultSet rset = null;
+        if (ou.getOracleMajorVer() >= 10) {
+            rset = stmt.executeQuery("select t.line, t.position, t.text, initcap(t.attribute) from user_errors t where t.name = '" +
+                    ObjectName + "' and t.type = '" + ObjectType.toString().replace('_', ' ') + "' order by t.sequence");
+            while (rset.next()) {
+                ou.OutputMsg(rset.getString(4) + ' ' + rset.getString(3) + " at [" + rset.getString(1) + ':' + rset.getString(2) + "]",
+                        dob == null ? null : new ErrorOutputListener(dob, rset.getInt(1), rset.getInt(2)),
+                        rset.getString(4).equalsIgnoreCase("ERROR") ? true : false);
+            }
+        } else {
+            rset = stmt.executeQuery("select t.line, t.position, t.text from user_errors t where t.name = '" +
+                    ObjectName + "' and t.type = '" + ObjectType.toString().replace('_', ' ') + "' order by t.sequence");
+            while (rset.next()) {
+                ou.OutputMsg(rset.getString(3) + " at [" + rset.getString(1) + ':' + rset.getString(2) + "]",
+                        dob == null ? null : new ErrorOutputListener(dob, rset.getInt(1), rset.getInt(2)), true);
+            }
         }
         rset.close();
     }
@@ -279,30 +292,74 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
         ot.Refresh();
     }
 
-    public static String getCompileString(String ObjName, ObjectTypes ot) {
+    public static String getCompileString(
+            String ObjName, ObjectTypes ot) {
         String ret = null;
         switch (ot) {
             case FUNCTION:
                 ret = "ALTER FUNCTION %1$s COMPILE";
                 break;
+
             case PACKAGE:
                 ret = "ALTER PACKAGE %1$s COMPILE SPECIFICATION";
                 break;
+
             case PACKAGE_BODY:
                 ret = "ALTER PACKAGE %1$s COMPILE BODY";
                 break;
+
             case PROCEDURE:
                 ret = "ALTER PROCEDURE %1$s COMPILE";
                 break;
+
             case TRIGGER:
                 ret = "ALTER TRIGGER %1$s COMPILE";
                 break;
+
             case TYPE:
                 ret = "ALTER TYPE %1$s COMPILE SPECIFICATION";
                 break;
+
             case TYPE_BODY:
                 ret = "ALTER TYPE %1$s COMPILE BODY";
                 break;
+
+        }
+        return String.format(ret, ObjName);
+    }
+
+    public static String getDropString(
+            String ObjName, ObjectTypes ot) {
+        String ret = null;
+        switch (ot) {
+            case FUNCTION:
+                ret = "DROP FUNCTION %1$s";
+                break;
+
+            case PACKAGE:
+                ret = "DROP PACKAGE %1$s";
+                break;
+
+            case PACKAGE_BODY:
+                ret = "DROP PACKAGE BODY %1$s";
+                break;
+
+            case PROCEDURE:
+                ret = "DROP PROCEDURE %1$s";
+                break;
+
+            case TRIGGER:
+                ret = "DROP TRIGGER %1$s";
+                break;
+
+            case TYPE:
+                ret = "DROP TYPE %1$s";
+                break;
+
+            case TYPE_BODY:
+                ret = "DROP TYPE BODY %1$s";
+                break;
+
         }
         return String.format(ret, ObjName);
     }
@@ -313,7 +370,8 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
             try {
                 stmt = ou.getConn().createStatement();
                 ou.OutputMsg("", null, false);
-                ou.OutputMsg("Compiling " + toString() + "...", null, false);
+                ou.OutputMsg("Compiling " + ObjectType.toString().replace('_', ' ').toLowerCase() +
+                        ' ' + toString() + "...", null, false);
                 stmt.execute(BaseClass.getCompileString(toString(), ObjectType));
                 ou.OutputMsg("Done.", null, false);
                 ShowErrors(stmt, null);
@@ -321,8 +379,10 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
             } catch (SQLException ex) {
                 while (ex != null) {
                     ou.OutputMsg(ex.getMessage(), null, true);
-                    ex = ex.getNextException();
+                    ex =
+                            ex.getNextException();
                 }
+
             } finally {
                 if (stmt != null) {
                     try {
@@ -333,5 +393,60 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
                 }
             }
         }
+    }
+
+    public void Delete() {
+        Statement stmt = null;
+        if (ou.getIsConnected()) {
+            try {
+                stmt = ou.getConn().createStatement();
+                ou.OutputMsg("", null, false);
+                ou.OutputMsg("Dropping " + ObjectType.toString().replace('_', ' ').toLowerCase() +
+                        ' ' + toString() + "...", null, false);
+                stmt.execute(BaseClass.getDropString(toString(), ObjectType));
+                ou.OutputMsg("Done.", null, false);
+                File f = new File(getLocalFile());
+                if (f.exists()) {
+                    try {
+                        FileObject file = FileUtil.toFileObject(f);
+                        DataObject dob = DataObject.find(file);
+                        CloseCookie cookie = dob.getCookie(CloseCookie.class);
+                        if (cookie != null) {
+                            cookie.close();
+                        }
+                    } catch (IOException e) {
+                        //Exceptions.printStackTrace(e);
+                    }
+                }
+
+                try {
+                    getPreferencesRoot().removeNode();
+                } catch (BackingStoreException ex) {
+                    Exceptions.printStackTrace(ex);
+                }
+                stmt.close();
+            } catch (SQLException ex) {
+                while (ex != null) {
+                    ou.OutputMsg(ex.getMessage(), null, true);
+                    ex =
+                            ex.getNextException();
+                }
+
+            } finally {
+                if (stmt != null) {
+                    try {
+                        stmt.close();
+                    } catch (SQLException ex) {
+                        Exceptions.printStackTrace(ex);
+                    }
+                }
+            }
+        }
+
+    }
+
+    public boolean getIsConnected() {
+        // to enable Delete action
+        return false;
     }
 }
