@@ -96,19 +96,17 @@ public class OObjectType implements RefreshCookieInterface, ChangeOAccessCookieI
     }
 
     public void Add() {
-        throw new NotImplementedException();
-        /*
         String objname = JOptionPane.showInputDialog(null, "Please type new object name",
                 "Create new PL/SQL object", JOptionPane.QUESTION_MESSAGE);
         if (objname == null || objname.length() == 0) {
             return;
         }
         BaseClass bc = new BaseClass(null, objname.toUpperCase(), objecttype, null, null, null, getPreferencesRoot(), ou, this);
-        bc.setObjectSource("create or replace function f is begin null; end;");
+        bc.setObjectSource(OObjectTypeTemplates.getTemplate(objecttype, objname));
         bc.edit();
         if (bc.isLocalFileExists()) {
             bc.CompileLocalFile();
             this.Refresh();
-        }*/
+        }
     }
 }
