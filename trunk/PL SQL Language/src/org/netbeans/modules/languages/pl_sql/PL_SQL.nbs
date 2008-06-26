@@ -1,8 +1,6 @@
 TOKEN:block_comment: ("/*" - "*/")
-#TOKEN:line_comment: ( "--"i | "--"i [^ "\n" "\r"]* ) 
 TOKEN:line_comment: ( "--"i [^ "\n" "\r"]* )
 TOKEN:whitespace:( [" " "\t" "\n" "\r"]+ )
-TOKEN:wrapped: ( "WRAPPED"i .+ )
 TOKEN:operator: (
     ":=" | "+" | "-" | "*" | "/" | "**" | "||" | "=" | "<>" | "!=" | "~=" |
     "^=" | ">" | "<" | "<=" | ">=" |
@@ -64,7 +62,7 @@ TOKEN:keyword: (
     "." | "FROM"i | "WHERE"i | "GROUP BY"i | "ORDER BY"i | 
     "PRIOR"i | "CONNECT_BY_ROOT"i | "CONNECT"i | "START"i |
     "UNION"i | "UNION ALL"i | "INTERSECT"i | "MINUS"i | "MULTISET EXCEPT"i |
-    "MULTISET INTERSECT"i | "MULTISET UNION"i | "BETWEEN"i |
+    "MULTISET INTERSECT"i | "MULTISET UNION"i |
     "ANY"i | "SOME"i | "ALL"i | "ESCAPE"i
 )
 TOKEN:begin_keyword: ( "BEGIN"i )
@@ -231,23 +229,27 @@ Parameter_Type = <in_keyword> | (<out_keyword> [<nocopy_keyword>]) | (<in_keywor
 Parameter_Declaration = "(" <identifier> [Parameter_Type] Data_Type [Variable_Def_Part Expression]
                         ("," <identifier> [Parameter_Type] Data_Type [Variable_Def_Part Expression])* ")";
 Function_Spec = <function_keyword>
-                Universal_Identifier [Parameter_Declaration] 
+                Function_Name [Parameter_Declaration] 
                 <return_keyword> Data_Type [Invoker_Clause] (Function_Spec_Add2)*;
+Function_Name = Universal_Identifier;
 Invoker_Clause = <authid_keyword> (<current_user_keyword> | <definer_keyword>);
 Function_Spec_Add2 = <deterministic_keyword> | <parallel_enabled_keyword> | <pipelined_keyword> | <result_cache_keyword>;
 Function_Declaration = Function_Spec As_Is_Part
                        (Variable_Declaration)* (Function_Declaration | Procedure_Declaration)* Block ;
-Procedure_Spec = <procedure_keyword> Universal_Identifier [Parameter_Declaration] 
+Procedure_Spec = <procedure_keyword> Procedure_Name [Parameter_Declaration] 
                  [Invoker_Clause];
+Procedure_Name = Universal_Identifier;
 Procedure_Declaration = Procedure_Spec As_Is_Part
                         (Variable_Declaration)* (Function_Declaration | Procedure_Declaration)* Block;
-Package_Spec = <package_keyword> Universal_Identifier [Invoker_Clause] As_Is_Part
+Package_Spec = <package_keyword> Package_Spec_Name [Invoker_Clause] As_Is_Part
                (Variable_Declaration | ((Function_Spec | Procedure_Spec) ";"))* 
                <end_keyword> [Universal_Identifier] [<separator>] ["/"];
-Package_Body = <package_keyword> <body_keyword> Universal_Identifier As_Is_Part
+Package_Spec_Name = Universal_Identifier;
+Package_Body = <package_keyword> <body_keyword> Package_Body_Name As_Is_Part
                (Variable_Declaration | Function_Declaration | Procedure_Declaration)*
                [<begin_keyword> (Executable_Section)+]
                <end_keyword> [Universal_Identifier] [<separator>] ["/"];
+Package_Body_Name = Universal_Identifier;
 
 Block = <begin_keyword>
             (Executable_Section)+
@@ -269,10 +271,11 @@ SQL_Statements = Select_Statement | Commit_Statement | Delete_Statement |
                  Rollback_Statement | Savepoint_Statement | Set_Transaction_Statement;
 SQL_Operator = "+" | "-" | "*" | "/" | "**" | "||" | "=" | "<>" | "!=" | "~=" |
                "^=" | ">" | "<" | "<=" | ">=" | "(+)" | ",";
-SQL_Not_Parsed = <alias> | <keyword> | SQL_Operator | <into_keyword> | <in_keyword> |
+SQL_Not_Parsed = <alias> | <keyword> | SQL_Operator | <into_keyword> | <in_keyword> | <not_in_keyword> |
                <as_keyword> | <values_keyword> | <between_keyword> | <some_types> |
                <bulk_keyword> | <collect_keyword> | <returning_keyword> |
                <set_keyword> | <by_keyword> | <with_keyword> | <table_keyword> |
+               <exists_keyword> | <replace_keyword> |
                <number_unsigned> | <count_keyword> | Universal_Identifier | Case_Statement_Expression |
                <string> | <comma> | <and_operator> | <or_operator> | <not_operator> |
                <is_not_null_keyword> | <is_null_keyword> | <null_keyword> | <like_keyword> | 
@@ -283,7 +286,7 @@ Select_Statement = <select_keyword> (SQL_Not_Parsed)+;
 Commit_Statement = <commit_keyword> [SQL_Not_Parsed];
 Delete_Statement = <delete_keyword> (SQL_Not_Parsed)+;
 Insert_Statement = <insert_keyword> (SQL_Not_Parsed)+;
-Lock_Table_Statement = <lock_keyword> <table_keyword> SQL_Not_Parsed;
+Lock_Table_Statement = <lock_keyword> <table_keyword> (SQL_Not_Parsed)+;
 Merge_Statement = <merge_keyword> (SQL_Not_Parsed)+;
 Rollback_Statement = <rollback_keyword> [SQL_Not_Parsed];
 Savepoint_Statement = <savepoint_keyword> <identifier>;
@@ -395,13 +398,12 @@ In_NotIn_Expression = (<in_keyword> | <not_in_keyword>)
 Operator = "+" | "-" | "*" | "/" | "**" | "||" | ":=" | "." |
            "^=" | ">" | "<" | "<=" | ">=" | "=" | "<>" | "!=" | "~=" |
            <and_operator> | <or_operator> |
-           <like_keyword>;
+           <like_keyword> | <between_keyword>;
 Unary_Op = <not_operator> | "+" | "-";
 Postfix_Op = <is_null_keyword> | <is_not_null_keyword> | "(+)" ;
 Universal_expression = [Unary_Op] Universal_factor [Postfix_Op] (Operator (Universal_expression | ("(" Select_Statement ")") ))*;
-Universal_Operator = ("." ["*"]) | Operator ;
 Universal_factor = <true_keyword> | <false_keyword> | <number_unsigned> |
-                   In_NotIn_Expression | 
+                   In_NotIn_Expression |
                    <string> | <null_keyword> | Case_Statement_Expression |
                    Sub_Identifier [Call_Statement_Param [In_NotIn_Expression]] |
                    ("(" Universal_expression ("," Universal_expression )* ")");
@@ -420,19 +422,19 @@ Call_Statement_Param = ("(" [Universal_expression ("," Universal_expression )*] 
 #                      (<operator, "(">)* 
 #                      [<not_operator>];
 
-String_expression = String_term (<operator, "||"> String_term)*;
-String_term = <string> | <identifier> | <ext_identifier>;
+#String_expression = String_term (<operator, "||"> String_term)*;
+#String_term = <string> | <identifier> | <ext_identifier>;
 
-Numeric_expression = [Numeric_operator1] Numeric_term (Numeric_operator1 Numeric_term)*;
-Numeric_operator1 = (<operator, "(">)* (<operator, "+"> | <operator, "-">) (<operator, "(">)*;
-Numeric_term = Numeric_factor (Numeric_operator2 Numeric_factor)*;
-Numeric_operator2 = (<operator, "*"> | <operator, "/"> | <operator, "**">) (<operator, "(">)*;
-Numeric_factor = (<number_unsigned> | <identifier> | <ext_identifier>) (<operator, ")">)*;
+#Numeric_expression = [Numeric_operator1] Numeric_term (Numeric_operator1 Numeric_term)*;
+#Numeric_operator1 = (<operator, "(">)* (<operator, "+"> | <operator, "-">) (<operator, "(">)*;
+#Numeric_term = Numeric_factor (Numeric_operator2 Numeric_factor)*;
+#Numeric_operator2 = (<operator, "*"> | <operator, "/"> | <operator, "**">) (<operator, "(">)*;
+#Numeric_factor = (<number_unsigned> | <identifier> | <ext_identifier>) (<operator, ")">)*;
 
-Boolean_expression = [(<operator, "(">)* <not_operator> (<operator, "(">)*] Boolean_term 
-                     (<or_operator> (<operator, "(">)* [<not_operator> (<operator, "(">)*] Boolean_term)*;
-Boolean_term = Boolean_factor (<and_operator> (<operator, "(">)* [<not_operator> (<operator, "(">)*] Boolean_factor)*;
-Boolean_factor = (<true_keyword> | <false_keyword> | <identifier> | <ext_identifier>) (<operator, ")">)*;
+#Boolean_expression = [(<operator, "(">)* <not_operator> (<operator, "(">)*] Boolean_term 
+#                     (<or_operator> (<operator, "(">)* [<not_operator> (<operator, "(">)*] Boolean_term)*;
+#Boolean_term = Boolean_factor (<and_operator> (<operator, "(">)* [<not_operator> (<operator, "(">)*] Boolean_factor)*;
+#Boolean_factor = (<true_keyword> | <false_keyword> | <identifier> | <ext_identifier>) (<operator, ")">)*;
 		
 Exception_Section = <exception_keyword> (Exception_Handler)+;
 Exception_Handler = <when_keyword> Universal_Identifier (<or_operator> Universal_Identifier)*
@@ -456,5 +458,33 @@ BRACE "[:]"
 
 COMPLETE "/*:*/"
 COMPLETE "<<:>>"
+COMPLETE "(:)"
+COMPLETE "[:]"
 #COMPLETE "loop_keyword:end_loop_keyword"
+
 #INDENT "<begin_keyword>:<end_keyword>" 
+INDENT "(:)"
+INDENT "[:]"
+INDENT "if:end if"
+
+NAVIGATOR:Function_Spec: {
+    display_name: "<html><font color=808080>function</font> $Function_Name$</html>";
+    icon: "org/netbeans/modules/languages/pl_sql/FunctionsObj.png";
+}
+NAVIGATOR:Procedure_Spec: {
+    display_name: "<html><font color=808080>procedure</font> $Procedure_Name$</html>";
+    icon: "org/netbeans/modules/languages/pl_sql/ProceduresObj.png";
+}
+NAVIGATOR:Package_Spec: {
+    display_name: "<html><font color=808080>package</font> $Package_Spec_Name$</html>";
+    icon: "org/netbeans/modules/languages/pl_sql/PackagesObj.png";
+}
+NAVIGATOR:Package_Body: {
+    display_name: "<html><font color=808080>package body</font> $Package_Body_Name$</html>";
+}
+#NAVIGATOR:Parameter_Declaration: {
+#    display_name: "<html><font color=808080>parameters</font></html>";
+#}
+#NAVIGATOR:Variable_Declaration: {
+#    display_name: "<html><font color=808080>variables</font></html>";
+#}
