@@ -179,9 +179,9 @@ TOKEN:sqlerrm_keyword: ( "SQLERRM"i )
 TOKEN:update_keyword: ( "UPDATE"i )
 TOKEN:exists_keyword: ( "EXISTS"i )
   
-TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* )
+TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z" "%"]* )
 TOKEN:ext_identifier:( 
-    ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* ["." "@"]
+    ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z" "%"]* ["." "@"]
     ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* (["." "@"]?
     ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]*)?
 )
@@ -332,7 +332,7 @@ Exit_Statement = <exit_keyword> [<identifier>] [<when_keyword> Expression];
 Fetch_Statement = <fetch_keyword> Expression 
                   ((Bulk_Collect_Into_Clause [<limit_keyword> Expression] ) | Into_Clause);
 Forall_Statement = <forall_keyword> <identifier> <in_keyword> Bounds_Clause
-                    SQL_Statements [<save_keyword> <exceptions_keyword>];
+                   [<save_keyword> <exceptions_keyword>] SQL_Statements;
 Bounds_Clause = (Expression ".." Expression) |
                 (<indices_keyword> <of_keyword> Universal_Identifier 
                 [<between_keyword> Expression <and_operator> Expression ]) |
