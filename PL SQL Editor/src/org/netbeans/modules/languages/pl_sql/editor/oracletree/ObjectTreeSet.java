@@ -37,6 +37,10 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
         ParentPref = pref;
     }
 
+    public ObjectAccessed getSelObjectAccessed() {
+        return SelObjectAccessed;
+    }
+
     public void LoadObjects(OUser ou, OObjectType ot) {
         this.clear();
         OracleConnection conn = ou.getConn();
@@ -61,35 +65,40 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
                     break;
             }
             while (rset.next()) {
-                BaseClass bc = new BaseClass(rset.getString(5), rset.getString(1), 
+                BaseClass bc = new BaseClass(rset.getString(5), rset.getString(1),
                         AllObjType, rset.getTimestamp(2), rset.getTimestamp(3), rset.getString(4), ParentPref, ou, ot);
-                //this.add(bc);
-                stmt_src = conn.createStatement();
-                switch (SelObjectAccessed) {
-                    case User:
-                        rset_src = stmt_src.executeQuery("select t.text from user_source t where t.name = '" + rset.getString(1) + "' and t.type = '" + AllObjType.toString().replace('_', ' ') + "' order by t.line asc");
-                        break;
-                    case All:
-                        rset_src = stmt_src.executeQuery("select t.text from all_source t where t.name = '" + rset.getString(1) + "' and t.owner = '" + rset.getString(5) + "' and t.type = '" + AllObjType.toString().replace('_', ' ') + "' order by t.line asc");
-                        break;
-                    case DBA:
-                        rset_src = stmt_src.executeQuery("select t.text from dba_source t where t.name = '" + rset.getString(1) + "' and t.owner = '" + rset.getString(5) + "' and t.type = '" + AllObjType.toString().replace('_', ' ') + "' order by t.line asc");
-                        break;
-                }
-                //StringBuffer sb = new StringBuffer();
-                StringBuilder sb = new StringBuilder();
-                while (rset_src.next()) {
-                    sb.append(rset_src.getString(1));
-                }
-                if (sb.length() > 0) {
-                    sb.insert(0, "create or replace ");
-                    //sb.append('/');
-                    bc.setObjectSource(sb.toString());
-                }
                 this.add(bc);
-                rset_src.close();
-                stmt_src.close();
+            /*stmt_src = conn.createStatement();
+            switch (SelObjectAccessed) {
+            case User:
+            rset_src = stmt_src.executeQuery("select t.text from user_source t where t.name = '" + rset.getString(1) + "' and t.type = '" + AllObjType.toString().replace('_', ' ') + "' order by t.line asc");
+            break;
+            case All:
+            rset_src = stmt_src.executeQuery("select t.text from all_source t where t.name = '" + rset.getString(1) + "' and t.owner = '" + rset.getString(5) + "' and t.type = '" + AllObjType.toString().replace('_', ' ') + "' order by t.line asc");
+            break;
+            case DBA:
+            rset_src = stmt_src.executeQuery("select t.text from dba_source t where t.name = '" + rset.getString(1) + "' and t.owner = '" + rset.getString(5) + "' and t.type = '" + AllObjType.toString().replace('_', ' ') + "' order by t.line asc");
+            break;
             }
+            //StringBuffer sb = new StringBuffer();
+            StringBuilder sb = new StringBuilder();
+            while (rset_src.next()) {
+            sb.append(rset_src.getString(1));
+            }
+            if (sb.length() > 0) {
+            sb.insert(0, "create or replace ");
+            //sb.append('/');
+            bc.setObjectSource(sb.toString());
+            }
+            this.add(bc);
+            rset_src.close();
+            stmt_src.close();*/
+            }
+            if (conn != null) {
+                conn.close();
+            }
+            SourcesTry inst = SourcesTry.getInstance(this, ou.getOracleDataSource());
+            inst.post();
         } catch (SQLException ex) {
             if (ex.getErrorCode() != 942) {
                 Exceptions.printStackTrace(ex);
@@ -108,6 +117,9 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
                 }
                 if (stmt != null) {
                     stmt.close();
+                }
+                if (conn != null) {
+                    conn.close();
                 }
             } catch (SQLException ex) {
                 Exceptions.printStackTrace(ex);

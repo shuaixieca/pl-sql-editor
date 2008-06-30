@@ -108,6 +108,7 @@ public class OUserNode extends AbstractNode implements PropertyChangeListener {
             Property IsConnectedProp = new PropertySupport.Reflection<Boolean>(obj, Boolean.class, "getIsConnected", null);
             IsConnectedProp.setName("Connected");
             set.put(IsConnectedProp);
+
         } catch (NoSuchMethodException ex) {
             ErrorManager.getDefault();
         }
