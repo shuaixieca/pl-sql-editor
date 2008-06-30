@@ -84,16 +84,24 @@ public class OConnectionNode extends AbstractNode implements PropertyChangeListe
 
         try {
             Property ServerNameProp = new PropertySupport.Reflection<String>(obj, String.class, "getServerName", null);
-            Property PortProp = new PropertySupport.Reflection<Integer>(obj, Integer.class, "getPort", null);
-            Property DatabaseNameProp = new PropertySupport.Reflection<String>(obj, String.class, "getDatabaseName", null);
-
             ServerNameProp.setName("Server Name");
-            PortProp.setName("Port");
-            DatabaseNameProp.setName("Database Name");
-
             set.put(ServerNameProp);
+            
+            Property PortProp = new PropertySupport.Reflection<Integer>(obj, Integer.class, "getPort", null);
+            PortProp.setName("Port");
             set.put(PortProp);
+            
+            Property DatabaseNameProp = new PropertySupport.Reflection<String>(obj, String.class, "getDatabaseName", null);
+            DatabaseNameProp.setName("Database Name");
             set.put(DatabaseNameProp);
+
+            Property OracleProductVersionProp = new PropertySupport.Reflection<String>(obj, String.class, "getOracleProductVersion", null);
+            OracleProductVersionProp.setName("Database Product");
+            set.put(OracleProductVersionProp);
+
+            Property OracleVersionProp = new PropertySupport.Reflection<String>(obj, String.class, "getOracleVersion", null);
+            OracleVersionProp.setName("Database Version");
+            set.put(OracleVersionProp);
 
         } catch (NoSuchMethodException ex) {
             ErrorManager.getDefault();

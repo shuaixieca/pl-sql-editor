@@ -49,7 +49,7 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
     public OConnectionClass(String OPrefNodeName, String OServerName, int OPort, String ODatabaseName) {
         ServerName = OServerName;
         Port = OPort;
-        DatabaseName = ODatabaseName;        
+        DatabaseName = ODatabaseName;
         if (OPrefNodeName == null) {
             PrefNodeName = String.valueOf(this.toString().hashCode());
         } else {
@@ -190,7 +190,7 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
                     Preferences pref_u = pref.node(u);
                     if (pref_u.get("ConnectRole", "").compareTo("") != 0) {
                         OUser os = new OUser(this, pref_u.get("UserName", ""), pref_u.get("Password", ""),
-                                pref_u.getBoolean("SavePassword", false), 
+                                pref_u.getBoolean("SavePassword", false),
                                 RoleTypes.valueOf(pref_u.get("ConnectRole", "")),
                                 ObjectAccessed.valueOf(pref_u.get("Access", "User")));
                         Users.add(os);
@@ -233,5 +233,25 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
             }
         }
         return false;
-    }    
+    }
+
+    public String getOracleVersion() {
+        String ret = "";
+        for (OUser ou : Users) {
+            if (ou.getIsConnected()) {
+                return ou.getOracleMajorVersion() == 0 ? "" : Integer.toString(ou.getOracleMajorVersion()) + '.' + Integer.toString(ou.getOracleMinorVersion());
+            }
+        }
+        return ret;
+    }
+
+    public String getOracleProductVersion() {
+        String ret = "";
+        for (OUser ou : Users) {
+            if (ou.getIsConnected()) {
+                return ou.getOracleProductVersion();
+            }
+        }
+        return ret;
+    }
 }

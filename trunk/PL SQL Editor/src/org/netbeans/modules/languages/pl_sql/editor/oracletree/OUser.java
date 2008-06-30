@@ -7,18 +7,16 @@ package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
-import java.sql.CallableStatement;
 import java.sql.SQLException;
-import java.sql.Types;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Properties;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 import javax.swing.SwingUtilities;
 import javax.swing.event.ChangeListener;
 import oracle.jdbc.OracleConnection;
+import oracle.jdbc.OracleDatabaseMetaData;
 import oracle.jdbc.pool.OracleDataSource;
 import org.netbeans.api.progress.ProgressHandle;
 import org.netbeans.api.progress.ProgressHandleFactory;
@@ -31,8 +29,6 @@ import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.Refre
 import org.openide.util.Cancellable;
 import org.openide.util.ChangeSupport;
 import org.openide.util.Exceptions;
-import org.openide.util.Lookup;
-import org.openide.util.NbBundle;
 import org.openide.util.RequestProcessor;
 import org.openide.util.TaskListener;
 import org.openide.windows.IOProvider;
@@ -57,12 +53,17 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
     private boolean progressed = false;
     private ConnectionTry ct = null;
     private ObjectAccessed oaccess = ObjectAccessed.User;
-    private int OracleMajorVer;
+    private int OracleMajorVersion;
+    private int OracleMinorVersion;
+    private String OracleProductVersion = "";
+    private OracleDataSource ods = null;
     private ProgressHandle progressHandle = ProgressHandleFactory.createHandle(null, new Cancellable() {
 
         public boolean cancel() {
             IsCanceled = true;
             OutputMsg("Canceled.", null, false);
+            progressHandle.finish();
+            progressed = false;
             return true;
         }
     });
@@ -143,27 +144,41 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
     }
 
     public OracleDataSource getOracleDataSource() throws SQLException {
-        OracleDataSource ods = new OracleDataSource();
-        ods.setDriverType("thin");
-        ods.setServerName(Parent.getServerName());
-        ods.setNetworkProtocol("tcp");
-        ods.setDatabaseName(Parent.getDatabaseName());
-        ods.setPortNumber(Parent.getPort());
-        ods.setUser(UserName);
-        if (SavePassword) {
-            ods.setPassword(Password);
-        }
-        //ods.setPassword(Password);
-        if (ConnectRole != RoleTypes.normal) {
-            java.util.Properties prop = new java.util.Properties();
-            prop.put("internal_logon", ConnectRole.toString());
-            ods.setConnectionProperties(prop);
+        if (ods == null) {
+            ods = new OracleDataSource();
+            ods.setDriverType("thin");
+            ods.setServerName(Parent.getServerName());
+            ods.setNetworkProtocol("tcp");
+            ods.setDatabaseName(Parent.getDatabaseName());
+            ods.setPortNumber(Parent.getPort());
+            ods.setUser(UserName);
+            if (SavePassword) {
+                ods.setPassword(Password);
+            }
+            //ods.setPassword(Password);
+            if (ConnectRole != RoleTypes.normal) {
+                java.util.Properties prop = new java.util.Properties();
+                prop.put("internal_logon", ConnectRole.toString());
+                ods.setConnectionProperties(prop);
+            }
         }
         return ods;
     }
 
-    public int getOracleMajorVer() {
-        return OracleMajorVer;
+    public String getOracleVersion() {
+        return OracleMajorVersion == 0 ? "" : Integer.toString(OracleMajorVersion) + '.' + Integer.toString(OracleMinorVersion);
+    }
+
+    public int getOracleMinorVersion() {
+        return OracleMinorVersion;
+    }
+
+    public String getOracleProductVersion() {
+        return OracleProductVersion;
+    }
+
+    public int getOracleMajorVersion() {
+        return OracleMajorVersion;
     }
 
     public RoleTypes getConnectRole() {
@@ -216,7 +231,13 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
     }
 
     public OracleConnection getConn() {
-        return conn;
+        OracleConnection oc = null;
+        try {
+            oc = (OracleConnection) ods.getConnection();
+        } catch (SQLException ex) {
+            Exceptions.printStackTrace(ex);
+        }
+        return oc;
     }
 
     public void Delete() {
@@ -292,6 +313,9 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
             public void run() {
                 progressHandle.finish();
+
+
+
             }
         });
 
@@ -299,28 +323,15 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
     private synchronized void EnableHints() {
         if (IsConnected) {
-            CallableStatement st = null;
             try {
-                st = conn.prepareCall("begin :1 := DBMS_DB_VERSION.VERSION; end;");
-                st.registerOutParameter(1, Types.INTEGER);
-                st.execute();
-                OracleMajorVer = st.getInt(1);
-                if (OracleMajorVer >= 10) {
-                    st.clearParameters();
-                    st.execute("ALTER SESSION SET PLSQL_WARNINGS='ENABLE:ALL'");
-                }
-
+                OracleDatabaseMetaData meta = (OracleDatabaseMetaData) conn.getMetaData();
+                OracleMajorVersion = meta.getDatabaseMajorVersion();
+                OracleMinorVersion = meta.getDatabaseMinorVersion();
+                OracleProductVersion = meta.getDatabaseProductVersion();
+                conn.setPlsqlWarnings("'ENABLE:ALL'");
             } catch (SQLException ex) {
                 // Do nothing because Oracle version < 9i
                 Exceptions.printStackTrace(ex);
-            } finally {
-                if (st != null) {
-                    try {
-                        st.close();
-                    } catch (SQLException ex) {
-                        Exceptions.printStackTrace(ex);
-                    }
-                }
             }
         }
     }
@@ -334,6 +345,7 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
         if (IsConnected) {
             try {
                 conn.close();
+                ods.close();
                 OutputMsg("\'" + UserName + "\' user is disconnected.", null, false);
                 this.notifyChange();
             } catch (SQLException ex) {
@@ -376,9 +388,8 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
                                 startProgress(localmsg);
 
                                 ods.setConnectionCachingEnabled(true);
-                                java.util.Properties props = new java.util.Properties();
+                                java.util.Properties props = ods.getConnectionProperties() == null ? new java.util.Properties() : ods.getConnectionProperties();
                                 props.put(OracleConnection.CONNECTION_PROPERTY_THIN_VSESSION_PROGRAM, "ora");
-                                //props.put(OracleConnection.END_TO_END_MODULE_INDEX, "pl_sql");
                                 ods.setConnectionProperties(props);
                                 OutputMsg(localmsg, null, false);
                                 conn =
@@ -387,6 +398,7 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
                                 OutputMsg("Connected as \'" + UserName + "\' user.", null, false);
                                 EnableHints();
                                 notifyChange();
+                                conn.close();
                             }
 
                         } catch (SQLException ex) {
@@ -394,7 +406,12 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
                             if (!IsCanceled) {
                                 OutputMsg(ex.getMessage(), null, true);
                             }
-
+                            if (progressed) {
+                                //progressHandle.finish();
+                                stopProgress();
+                                progressed =
+                                        false;
+                            }
                         } finally {
                             if (IsCanceled) {
                                 if (IsConnected) {
@@ -454,6 +471,7 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
     protected void finalize() {
         this.Disconnect();
         this.conn = null;
+        this.ods = null;
     }
 
     public void ChangeOAccess(ObjectAccessed oa) {
