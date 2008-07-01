@@ -125,12 +125,10 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
         return Status.compareToIgnoreCase("VALID") == 0;
     }
 
-    public void LoadObjectSource() {
+    public void LoadObjectSource(OracleConnection conn) {
         Statement stmt_src = null;
         ResultSet rset_src = null;
-        OracleConnection conn = null;
         if (!getisObjectSourceSet()) {
-            conn = ou.getConn();
             try {
                 stmt_src = conn.createStatement();
                 switch (ou.getObjectAccessed()) {
@@ -155,17 +153,8 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
                 }
                 rset_src.close();
                 stmt_src.close();
-                conn.close();
             } catch (SQLException ex) {
                 Exceptions.printStackTrace(ex);
-            } finally {
-                if (conn != null) {
-                    try {
-                        conn.close();
-                    } catch (SQLException ex) {
-                        Exceptions.printStackTrace(ex);
-                    }
-                }
             }
         }
     }
@@ -214,7 +203,15 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
         DataObject dob;
         try {
             FileWriter fw = new FileWriter(selFile);
-            this.LoadObjectSource();
+            OracleConnection conn = ou.getConn();
+            this.LoadObjectSource(conn);
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    Exceptions.printStackTrace(ex);
+                }
+            }
             fw.write(this.ObjectSource);
             fw.close();
             //file = Repository.getDefault().getDefaultFileSystem().findResource(selFile.getCanonicalPath());
