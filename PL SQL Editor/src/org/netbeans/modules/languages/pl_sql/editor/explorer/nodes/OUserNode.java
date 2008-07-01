@@ -7,6 +7,7 @@ package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import javax.swing.Action;
+import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ConnectAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DisconnectAction;
@@ -94,19 +95,19 @@ public class OUserNode extends AbstractNode implements PropertyChangeListener {
 
         try {
             Property UserNameProp = new PropertySupport.Reflection<String>(obj, String.class, "getUserName", null);
-            UserNameProp.setName("User Name");
+            UserNameProp.setName(Utils.getBundle().getString("LBL_UUserName"));
             set.put(UserNameProp);
 
             Property SavePasswordProp = new PropertySupport.Reflection<Boolean>(obj, Boolean.class, "getSavePassword", null);
-            SavePasswordProp.setName("Save password?");
+            SavePasswordProp.setName(Utils.getBundle().getString("LBL_USavePassword"));
             set.put(SavePasswordProp);
 
             Property ConnectRoleProp = new PropertySupport.Reflection<RoleTypes>(obj, RoleTypes.class, "getConnectRole", null);
-            ConnectRoleProp.setName("Connect as");
+            ConnectRoleProp.setName(Utils.getBundle().getString("LBL_UConnectAs"));
             set.put(ConnectRoleProp);
 
             Property IsConnectedProp = new PropertySupport.Reflection<Boolean>(obj, Boolean.class, "getIsConnected", null);
-            IsConnectedProp.setName("Connected");
+            IsConnectedProp.setName(Utils.getBundle().getString("LBL_UConnected"));
             set.put(IsConnectedProp);
 
         } catch (NoSuchMethodException ex) {

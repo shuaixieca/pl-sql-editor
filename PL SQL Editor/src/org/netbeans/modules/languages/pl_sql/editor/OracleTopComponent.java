@@ -18,7 +18,6 @@ import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DBAOA
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.UserOAccessAction;
-import org.netbeans.modules.languages.pl_sql.editor.oracletree.OConnectionRoot;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.BeanTreeView;
@@ -198,15 +197,14 @@ final class OracleTopComponent extends TopComponent implements ExplorerManager.P
         TopComponent win = WindowManager.getDefault().findTopComponent(PREFERRED_ID);
         if (win == null) {
             Logger.getLogger(OracleTopComponent.class.getName()).warning(
-                    "Cannot find " + PREFERRED_ID + " component. It will not be located properly in the window system.");
+                    NbBundle.getMessage(Utils.getCommonClass(), "LBL_OracleTopComponentWarning1", PREFERRED_ID));
             return getDefault();
         }
         if (win instanceof OracleTopComponent) {
             return (OracleTopComponent) win;
         }
         Logger.getLogger(OracleTopComponent.class.getName()).warning(
-                "There seem to be multiple components with the '" + PREFERRED_ID +
-                "' ID. That is a potential source of errors and unexpected behavior.");
+                NbBundle.getMessage(Utils.getCommonClass(), "LBL_OracleTopComponentWarning2", PREFERRED_ID));
         return getDefault();
     }
 

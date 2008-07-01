@@ -4,6 +4,7 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
+import org.netbeans.modules.languages.pl_sql.editor.OConnectionJPanel;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;

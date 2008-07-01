@@ -4,6 +4,7 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
+import org.netbeans.modules.languages.pl_sql.editor.OConnectionJPanel;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.ArrayList;

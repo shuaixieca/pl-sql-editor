@@ -5,7 +5,6 @@
 package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions;
 
 import java.awt.event.KeyEvent;
-import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.openide.nodes.Node;

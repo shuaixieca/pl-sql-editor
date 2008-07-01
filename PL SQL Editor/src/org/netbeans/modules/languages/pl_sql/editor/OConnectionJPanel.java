@@ -3,8 +3,9 @@
  *
  * Created on 4. Juni 2008, 17:32
  */
-package org.netbeans.modules.languages.pl_sql.editor.oracletree;
+package org.netbeans.modules.languages.pl_sql.editor;
 
+import org.netbeans.modules.languages.pl_sql.editor.oracletree.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dialog;
@@ -21,6 +22,7 @@ import org.netbeans.api.progress.ProgressHandleFactory;
 import org.openide.DialogDescriptor;
 import org.openide.DialogDisplayer;
 import org.openide.util.HelpCtx;
+import org.openide.util.NbBundle;
 import org.openide.util.RequestProcessor;
 import org.openide.util.Task;
 import org.openide.util.TaskListener;
@@ -65,27 +67,19 @@ public class OConnectionJPanel extends javax.swing.JPanel {
 
         ServerNamejLabel.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.ServerNamejLabel.text")); // NOI18N
 
-        ServerNamejTextField.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.ServerNamejTextField.text")); // NOI18N
-
         PortjLabel.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.PortjLabel.text")); // NOI18N
 
         PortjTextField.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.PortjTextField.text")); // NOI18N
 
         DatabaseNamejLabel.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.DatabaseNamejLabel.text")); // NOI18N
 
-        DatabseNamejTextField.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.DatabseNamejTextField.text")); // NOI18N
-
         UserjPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.UserjPanel.border.title"))); // NOI18N
 
         UserNamejLabel.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.UserNamejLabel.text")); // NOI18N
 
-        UserNamejTextField.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.UserNamejTextField.text")); // NOI18N
-
         SavePasswordjCheckBox.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.SavePasswordjCheckBox.text")); // NOI18N
 
         PasswordjLabel.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.PasswordjLabel.text")); // NOI18N
-
-        PasswordjPasswordField.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.PasswordjPasswordField.text")); // NOI18N
 
         ConnectAsjLabel.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.ConnectAsjLabel.text")); // NOI18N
 
@@ -208,7 +202,11 @@ public class OConnectionJPanel extends javax.swing.JPanel {
     private Dialog dlg;
     private TestConnection tc = null;
     private boolean isSaved = false;
-    private final String[] str = {"Test", "Save", "Cancel", "Help"};
+    private final String[] str = {Utils.getBundle().getString("LBL_Test"),
+        Utils.getBundle().getString("LBL_Save"),
+        Utils.getBundle().getString("LBL_Cancel"),
+        Utils.getBundle().getString("LBL_Help")
+    };
     private String OConnPrefNode = null;
 
     public void setPassword(String str) {
@@ -268,28 +266,31 @@ public class OConnectionJPanel extends javax.swing.JPanel {
     }
 
     public Boolean Validate() {
-        final String msg_part = "must be specified";
-        final String msg_titel = "Input Error";
         if (getServerName().length() == 0) {
-            JOptionPane.showMessageDialog(this, "The Server Name " + msg_part, msg_titel, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, Utils.getBundle().getString("LBL_ServerNameReq"),
+                    Utils.getBundle().getString("LBL_InputError"), JOptionPane.ERROR_MESSAGE);
             return false;
         }
         try {
             int i = getPort();
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "The Port " + msg_part, msg_titel, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, Utils.getBundle().getString("LBL_PortReq"),
+                    Utils.getBundle().getString("LBL_InputError"), JOptionPane.ERROR_MESSAGE);
             return false;
         }
         if (getDatabaseName().length() == 0) {
-            JOptionPane.showMessageDialog(this, "The Database Name " + msg_part, msg_titel, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, Utils.getBundle().getString("LBL_DBNameReq"),
+                    Utils.getBundle().getString("LBL_InputError"), JOptionPane.ERROR_MESSAGE);
             return false;
         }
         if (getUserName().length() == 0) {
-            JOptionPane.showMessageDialog(this, "The User Name " + msg_part, msg_titel, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, Utils.getBundle().getString("LBL_UserNameReq"),
+                    Utils.getBundle().getString("LBL_InputError"), JOptionPane.ERROR_MESSAGE);
             return false;
         }
         if (getSaveUserPassword() && getPassword().length() == 0) {
-            JOptionPane.showMessageDialog(this, "The Password " + msg_part, msg_titel, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, Utils.getBundle().getString("LBL_PassReq"),
+                    Utils.getBundle().getString("LBL_InputError"), JOptionPane.ERROR_MESSAGE);
             return false;
         }
 
@@ -298,10 +299,10 @@ public class OConnectionJPanel extends javax.swing.JPanel {
     ActionListener listener = new ActionListener() {
 
         public void actionPerformed(ActionEvent e) {
-            if (e.getActionCommand().compareTo("Cancel") == 0) {
+            if (e.getActionCommand().compareTo(Utils.getBundle().getString("LBL_Cancel")) == 0) {
                 dlg.setVisible(false);
             }
-            if (e.getActionCommand().compareTo("Save") == 0) {
+            if (e.getActionCommand().compareTo(Utils.getBundle().getString("LBL_Save")) == 0) {
                 if (Validate()) {
                     OConnectionClass ocs = new OConnectionClass(OConnPrefNode, getServerName(), getPort(), getDatabaseName(),
                             getUserName(), getPassword(), getSaveUserPassword(), getConnectRole());
@@ -311,12 +312,13 @@ public class OConnectionJPanel extends javax.swing.JPanel {
                     dlg.setVisible(false);
                 }
             }
-            if (e.getActionCommand().compareTo("Test") == 0) {
+            if (e.getActionCommand().compareTo(Utils.getBundle().getString("LBL_Test")) == 0) {
                 //JOptionPane.showMessageDialog(null, "Object is " + dlg.getFocusOwner().getClass().getName());
                 if (tc == null) {
                     if (Validate()) {
                         if (getPassword().length() == 0) {
-                            JOptionPane.showMessageDialog(dlg, "The Password is required", "Input Error", JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(dlg, Utils.getBundle().getString("LBL_PassReq"),
+                                    Utils.getBundle().getString("LBL_InputError"), JOptionPane.ERROR_MESSAGE);
                             return;
                         }
                         OConnectionClass ocs = new OConnectionClass(null, getServerName(), getPort(), getDatabaseName(),
@@ -329,12 +331,12 @@ public class OConnectionJPanel extends javax.swing.JPanel {
                     }
                 }
             }
-            if (e.getActionCommand().compareTo("Stop") == 0) {
+            if (e.getActionCommand().compareTo(Utils.getBundle().getString("LBL_Stop")) == 0) {
                 tc.stop();
                 testbtn = (javax.swing.JButton) dlg.getFocusOwner();
                 ChangeTestButton();
             }
-        // TODO Help event            
+            // TODO Help event            
         }
     };
     private ProgressHandle progressHandle;
@@ -343,12 +345,12 @@ public class OConnectionJPanel extends javax.swing.JPanel {
 
     private void ChangeTestButton() {
         if (testbtn != null) {
-            if (testbtn.getText().compareTo("Test") == 0) {
-                testbtn.setText("Stop");
+            if (testbtn.getText().compareTo(Utils.getBundle().getString("LBL_Test")) == 0) {
+                testbtn.setText(Utils.getBundle().getString("LBL_Stop"));
                 return;
             }
-            if (testbtn.getText().compareTo("Stop") == 0) {
-                testbtn.setText("Test");
+            if (testbtn.getText().compareTo(Utils.getBundle().getString("LBL_Stop")) == 0) {
+                testbtn.setText(Utils.getBundle().getString("LBL_Test"));
             }
         }
     }
@@ -389,8 +391,8 @@ public class OConnectionJPanel extends javax.swing.JPanel {
                     progressMessageLabel.setForeground(Color.RED);
                 }
                 progressMessageLabel.setText(msg);
-            //dlg.pack();
-            //dlg.validate();
+                //dlg.pack();
+                //dlg.validate();
             }
         });
     }
@@ -408,7 +410,7 @@ public class OConnectionJPanel extends javax.swing.JPanel {
     }
 
     public void ShowEmptyDialog() {
-        ShowDialogInternal("Add new Oracle connection");
+        ShowDialogInternal(Utils.getBundle().getString("LBL_AddConn"));
     }
 
     private void DisableDBControls() {
@@ -425,7 +427,7 @@ public class OConnectionJPanel extends javax.swing.JPanel {
             setPort(ocs.getPort());
             setDatabseName(ocs.getDatabaseName());
             DisableDBControls();
-            ShowDialogInternal("Add new Oracle user");
+            ShowDialogInternal(Utils.getBundle().getString("LBL_AddUser"));
         }
     }
 
@@ -441,7 +443,7 @@ public class OConnectionJPanel extends javax.swing.JPanel {
                 setPassword(ocs.getUsers().first().getPassword());
                 setConnectAs(ocs.getUsers().first().getConnectRole());
             }
-            ShowDialogInternal("Edit Oracle connection");
+            ShowDialogInternal(Utils.getBundle().getString("LBL_EditConn"));
         }
     }
 
@@ -456,7 +458,7 @@ public class OConnectionJPanel extends javax.swing.JPanel {
             setPassword(ocs.getPassword());
             setConnectAs(ocs.getConnectRole());
             DisableDBControls();
-            ShowDialogInternal("Edit Oracle user");
+            ShowDialogInternal(Utils.getBundle().getString("LBL_EditUser"));
         }
     }
 
@@ -482,9 +484,9 @@ public class OConnectionJPanel extends javax.swing.JPanel {
 
                 public void run() {
                     try {
-                        startProgress("Connecting to " + ocs.toString());
+                        startProgress(NbBundle.getMessage(Utils.getCommonClass(), "LBL_ConnectingTo", ocs.toString()));
                         oc = (OracleConnection) ocs.getUsers().first().getOracleDataSource().getConnection();
-                        msg = "Connected to " + ocs.toString();
+                        msg = NbBundle.getMessage(Utils.getCommonClass(), "LBL_ConnectedTo", ocs.toString());
                         connected = true;
                     } catch (SQLException ex) {
                         msg = ex.getMessage();
@@ -520,7 +522,7 @@ public class OConnectionJPanel extends javax.swing.JPanel {
         public void stop() {
             task.cancel();
             interrupted = true;
-            stopProgress("Canceled", false);
+            stopProgress(Utils.getBundle().getString("LBL_Canceled"), false);
             tc = null;
         }
     }

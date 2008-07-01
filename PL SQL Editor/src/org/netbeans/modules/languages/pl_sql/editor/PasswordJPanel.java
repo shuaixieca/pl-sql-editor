@@ -3,7 +3,7 @@
  *
  * Created on 15. Juni 2008, 15:40
  */
-package org.netbeans.modules.languages.pl_sql.editor.oracletree;
+package org.netbeans.modules.languages.pl_sql.editor;
 
 import java.awt.Dialog;
 import java.awt.event.ActionEvent;
@@ -40,12 +40,9 @@ public class PasswordJPanel extends javax.swing.JPanel {
 
         UserNamejLabel.setText(org.openide.util.NbBundle.getMessage(PasswordJPanel.class, "PasswordJPanel.UserNamejLabel.text")); // NOI18N
 
-        UserNamejTextField.setText(org.openide.util.NbBundle.getMessage(PasswordJPanel.class, "PasswordJPanel.UserNamejTextField.text")); // NOI18N
         UserNamejTextField.setEnabled(false);
 
         PasswordjLabel.setText(org.openide.util.NbBundle.getMessage(PasswordJPanel.class, "PasswordJPanel.PasswordjLabel.text")); // NOI18N
-
-        jPasswordField.setText(org.openide.util.NbBundle.getMessage(PasswordJPanel.class, "PasswordJPanel.jPasswordField.text")); // NOI18N
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(this);
         this.setLayout(layout);
@@ -90,21 +87,22 @@ public class PasswordJPanel extends javax.swing.JPanel {
     public boolean getisOK() {
         return isOK;
     }
+
     public String getPassword() {
         return String.copyValueOf(jPasswordField.getPassword());
     }
     ActionListener listener = new ActionListener() {
 
         public void actionPerformed(ActionEvent e) {
-            if (e.getActionCommand().compareTo("Cancel") == 0) {
+            if (DialogDescriptor.CANCEL_OPTION.equals(e.getSource())) {
                 dlg.setVisible(false);
             }
-            if (e.getActionCommand().compareTo("OK") == 0) {
-                final String msg_part = "must be specified";
-                final String msg_titel = "Input Error";
+            if (DialogDescriptor.OK_OPTION.equals(e.getSource())) {
 
                 if (getPassword().length() == 0) {
-                    JOptionPane.showMessageDialog(null, "The Password " + msg_part, msg_titel, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, Utils.getBundle().getString("LBL_PassReq"),
+                            Utils.getBundle().getString("LBL_InputError"), JOptionPane.ERROR_MESSAGE);
+                    isOK = false;
                     return;
                 }
                 isOK = true;
@@ -115,7 +113,8 @@ public class PasswordJPanel extends javax.swing.JPanel {
 
     public void ShowDialog(String username) {
         this.UserNamejTextField.setText(username);
-        DialogDescriptor d = new DialogDescriptor(this, "Connection Information", true, NotifyDescriptor.OK_CANCEL_OPTION, NotifyDescriptor.OK_OPTION, listener);
+        DialogDescriptor d = new DialogDescriptor(this, Utils.getBundle().getString("LBL_ConnectionInformation"), true,
+                NotifyDescriptor.OK_CANCEL_OPTION, NotifyDescriptor.OK_OPTION, listener);
         dlg = DialogDisplayer.getDefault().createDialog(d);
         dlg.pack();
         dlg.setVisible(true);
