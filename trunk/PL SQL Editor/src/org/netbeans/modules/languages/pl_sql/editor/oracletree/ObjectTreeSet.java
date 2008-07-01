@@ -103,17 +103,18 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
             new Thread(los).start();
 
         } catch (SQLException ex) {
-            if (ex.getErrorCode() != 942) {
+            if (ex.getErrorCode() != 942 && ex.getErrorCode() != 17008 && ex.getErrorCode() != 17011) {
+                // 942 - because of dba views; 17008 - Connection Closed; 17011 - Exhausted Resultset                
                 Exceptions.printStackTrace(ex);
             }
         } finally {
             try {
 
                 /*if (rset_src != null) {
-                    rset_src.close();
+                rset_src.close();
                 }
                 if (stmt_src != null) {
-                    stmt_src.close();
+                stmt_src.close();
                 }*/
                 if (rset != null) {
                     rset.close();

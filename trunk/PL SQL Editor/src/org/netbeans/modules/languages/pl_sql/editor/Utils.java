@@ -17,7 +17,11 @@ import org.openide.util.NbBundle;
 public class Utils {
 
     public static ResourceBundle getBundle() {
-        return NbBundle.getBundle(OracleTopComponent.class);
+        return NbBundle.getBundle(Utils.class);
+    }
+    
+    public static Class getCommonClass() {
+        return Utils.class;
     }
 
     public static String getFileExtensionByType(ObjectTypes ot) {
@@ -58,6 +62,18 @@ public class Utils {
             case PACKAGE:
                 nd.setIconBaseWithExtension(ICO_ROOT + "Packages" + ext);
                 break;
+            case PACKAGE_BODY:
+                nd.setIconBaseWithExtension(ICO_ROOT + "PackagesBody" + ext);
+                break;
+            case TRIGGER:
+                nd.setIconBaseWithExtension(ICO_ROOT + "Triggers" + ext);
+                break;
+            case TYPE:
+                nd.setIconBaseWithExtension(ICO_ROOT + "Types" + ext);
+                break;
+            case TYPE_BODY:
+                nd.setIconBaseWithExtension(ICO_ROOT + "TypesBody" + ext);
+                break;                
         }
     }
 }

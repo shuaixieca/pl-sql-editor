@@ -31,6 +31,7 @@ import org.openide.filesystems.FileUtil;
 import org.openide.loaders.DataObject;
 import org.openide.text.Line;
 import org.openide.util.Exceptions;
+import org.openide.util.NbBundle;
 import org.openide.windows.OutputEvent;
 import org.openide.windows.OutputListener;
 import org.openide.windows.WindowManager;
@@ -154,7 +155,11 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
                 rset_src.close();
                 stmt_src.close();
             } catch (SQLException ex) {
-                Exceptions.printStackTrace(ex);
+                if (ex.getErrorCode() != 17008 && ex.getErrorCode() != 17011) {
+                    // 17008 - Connection Closed; 17011 - Exhausted Resultset
+                    Exceptions.printStackTrace(ex);
+                    System.out.println(ex.getErrorCode());
+                }
             }
         }
     }
@@ -271,9 +276,9 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
                 conn = ou.getConn();
                 stmt = conn.createStatement();
                 ou.OutputMsg("", null, false);
-                ou.OutputMsg("Compiling " + getLocalFile() + "...", null, false);
+                ou.OutputMsg(NbBundle.getMessage(Utils.getCommonClass(), "LBL_Compiling", getLocalFile()), null, false);
                 stmt.execute(sb.toString());
-                ou.OutputMsg("Done.", null, false);
+                ou.OutputMsg(Utils.getBundle().getString("LBL_Done"), null, false);
                 ShowErrors(stmt, dob);
 
                 stmt.close();
@@ -439,10 +444,10 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
                 conn = ou.getConn();
                 stmt = conn.createStatement();
                 ou.OutputMsg("", null, false);
-                ou.OutputMsg("Compiling " + ObjectType.toString().replace('_', ' ').toLowerCase() +
-                        ' ' + toString() + "...", null, false);
+                ou.OutputMsg(NbBundle.getMessage(Utils.getCommonClass(), "LBL_CompilingDB",
+                        ObjectType.toString().replace('_', ' ').toLowerCase(), toString()), null, false);
                 stmt.execute(BaseClass.getCompileString(toString(), ObjectType));
-                ou.OutputMsg("Done.", null, false);
+                ou.OutputMsg(Utils.getBundle().getString("LBL_Done"), null, false);
                 ShowErrors(stmt, null);
                 stmt.close();
                 conn.close();
@@ -480,10 +485,10 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
                 conn = ou.getConn();
                 stmt = conn.createStatement();
                 ou.OutputMsg("", null, false);
-                ou.OutputMsg("Dropping " + ObjectType.toString().replace('_', ' ').toLowerCase() +
-                        ' ' + toString() + "...", null, false);
+                ou.OutputMsg(NbBundle.getMessage(Utils.getCommonClass(), "LBL_DroppingDB",
+                        ObjectType.toString().replace('_', ' ').toLowerCase(), toString()), null, false);
                 stmt.execute(BaseClass.getDropString(toString(), ObjectType));
-                ou.OutputMsg("Done.", null, false);
+                ou.OutputMsg(Utils.getBundle().getString("LBL_Done"), null, false);
                 File f = new File(getLocalFile());
                 if (f.exists()) {
                     try {

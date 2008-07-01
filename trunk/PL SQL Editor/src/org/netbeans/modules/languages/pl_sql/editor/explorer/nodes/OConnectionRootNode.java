@@ -23,6 +23,7 @@ public class OConnectionRootNode extends AbstractNode {
 
     public OConnectionRootNode(OConnectionRoot ocr) {
         super(Children.create(new RootNodeChildFactory(ocr), false), Lookups.singleton(ocr));
+        setIconBaseWithExtension("org/netbeans/modules/languages/pl_sql/editor/resources/Oracle.png");
     }
 
     @Override
@@ -42,7 +43,7 @@ public class OConnectionRootNode extends AbstractNode {
     public String getDisplayName() {
         return Utils.getBundle().getString("LBL_RootNodeName");
     }
-
+    
     public static Node GetRootNode() {
         OConnectionRoot ocr = new OConnectionRoot();
         //AbstractNode an = new AbstractNode(Children.create(new RootNodeChildFactory(ocr), true), Lookups.singleton(ocr));

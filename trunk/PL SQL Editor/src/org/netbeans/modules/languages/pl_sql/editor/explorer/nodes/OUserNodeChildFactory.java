@@ -4,12 +4,9 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.TreeSet;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import org.netbeans.modules.languages.pl_sql.editor.oracletree.OConnectionClass;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.OObjectType;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.OUser;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.ObjectTypes;

@@ -7,7 +7,6 @@ package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes;
 import javax.swing.Action;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.AddAction;
-import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteAction;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshAction;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.OObjectType;
 import org.openide.actions.PropertiesAction;

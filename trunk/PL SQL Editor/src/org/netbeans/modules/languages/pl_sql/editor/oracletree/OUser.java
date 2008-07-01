@@ -4,6 +4,8 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
+import org.netbeans.modules.languages.pl_sql.editor.PasswordJPanel;
+import org.netbeans.modules.languages.pl_sql.editor.OConnectionJPanel;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
@@ -20,6 +22,7 @@ import oracle.jdbc.OracleDatabaseMetaData;
 import oracle.jdbc.pool.OracleDataSource;
 import org.netbeans.api.progress.ProgressHandle;
 import org.netbeans.api.progress.ProgressHandleFactory;
+import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ChangeOAccessCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ConnectCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
@@ -29,6 +32,7 @@ import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.Refre
 import org.openide.util.Cancellable;
 import org.openide.util.ChangeSupport;
 import org.openide.util.Exceptions;
+import org.openide.util.NbBundle;
 import org.openide.util.RequestProcessor;
 import org.openide.util.TaskListener;
 import org.openide.windows.IOProvider;
@@ -61,7 +65,7 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
         public boolean cancel() {
             IsCanceled = true;
-            OutputMsg("Canceled.", null, false);
+            OutputMsg(Utils.getBundle().getString("LBL_Canceled"), null, false);
             progressHandle.finish();
             progressed = false;
             return true;
@@ -325,12 +329,18 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
     private synchronized void EnableHints() {
         if (IsConnected) {
+            //Statement st = null;
             try {
                 OracleDatabaseMetaData meta = (OracleDatabaseMetaData) conn.getMetaData();
                 OracleMajorVersion = meta.getDatabaseMajorVersion();
                 OracleMinorVersion = meta.getDatabaseMinorVersion();
                 OracleProductVersion = meta.getDatabaseProductVersion();
                 conn.setPlsqlWarnings("'ENABLE:ALL'");
+
+            /*if (OracleMajorVersion >= 10) {
+            st = conn.createStatement();
+            st.execute("ALTER SESSION SET PLSQL_WARNINGS='ENABLE:ALL'");
+            }*/
             } catch (SQLException ex) {
                 // Do nothing because Oracle version < 9i
                 Exceptions.printStackTrace(ex);
@@ -348,7 +358,7 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
             try {
                 conn.close();
                 ods.close();
-                OutputMsg("\'" + UserName + "\' user is disconnected.", null, false);
+                OutputMsg(NbBundle.getMessage(Utils.getCommonClass(), "LBL_UserDisconnected", UserName), null, false);
                 this.notifyChange();
             } catch (SQLException ex) {
                 OutputMsg(ex.getMessage(), null, true);
@@ -384,7 +394,7 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
                             }
                             if (connect) {
-                                String localmsg = "Connecting to " + Parent.toString() + " as \'" + UserName + "\' user.";
+                                String localmsg = NbBundle.getMessage(Utils.getCommonClass(), "LBL_ConnectingToAs", Parent.toString(), UserName);
                                 //progressHandle.setDisplayName(localmsg);
                                 //progressHandle.start();
                                 startProgress(localmsg);
@@ -402,7 +412,7 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
                                 conn =
                                         (OracleConnection) ods.getConnection();
                                 setIsConnected(true);
-                                OutputMsg("Connected as \'" + UserName + "\' user.", null, false);
+                                OutputMsg(NbBundle.getMessage(Utils.getCommonClass(), "LBL_ConnectedAs", UserName), null, false);
                                 EnableHints();
                                 notifyChange();
                                 conn.close();

@@ -111,12 +111,12 @@ public class OObjectNode extends AbstractNode {
             Property StatusProp = new PropertySupport.Reflection<String>(obj, String.class, "getStatus", null);
             PropertySupport.Reflection LocalFileProp = new PropertySupport.Reflection<String>(obj, String.class, "getLocalFile", "setLocalFile");
 
-            ObjectNameProp.setName("Name");
-            ObjectTypeProp.setName("Type");
-            CreatedProp.setName("Created");
-            LastDDLTimeProp.setName("Last DDL Time");
-            StatusProp.setName("Status");
-            LocalFileProp.setName("Local File");
+            ObjectNameProp.setName(Utils.getBundle().getString("LBL_OName"));
+            ObjectTypeProp.setName(Utils.getBundle().getString("LBL_OType"));
+            CreatedProp.setName(Utils.getBundle().getString("LBL_OCreated"));
+            LastDDLTimeProp.setName(Utils.getBundle().getString("LBL_OLastDDLTime"));
+            StatusProp.setName(Utils.getBundle().getString("LBL_OStatus"));
+            LocalFileProp.setName(Utils.getBundle().getString("LBL_OLocalFile"));
             LocalFileProp.setPropertyEditorClass(LocalFileEditor.class);
 
             set.put(ObjectNameProp);

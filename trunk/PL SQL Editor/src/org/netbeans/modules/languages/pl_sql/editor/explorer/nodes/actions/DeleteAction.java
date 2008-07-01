@@ -6,16 +6,14 @@ package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions;
 
 import java.awt.event.KeyEvent;
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
-import org.openide.nodes.Children;
 import org.openide.nodes.Node;
 import org.openide.util.Exceptions;
 import org.openide.util.HelpCtx;
+import org.openide.util.NbBundle;
 import org.openide.util.actions.CookieAction;
 
 /**
@@ -51,7 +49,7 @@ public class DeleteAction extends CookieAction {
         DeleteCookieInterface delete = nd.getCookie(DeleteCookieInterface.class);
         if (delete != null) {
             int ret = JOptionPane.showConfirmDialog(null,
-                    Utils.getBundle().getString("LBL_DeleteConfirmMsg") + " \"" + delete.toString() + "\"?",
+                    NbBundle.getMessage(Utils.getCommonClass(), "LBL_DeleteConfirmMsg", delete.toString()),
                     Utils.getBundle().getString("LBL_DeleteConfirmCaptionMsg"), JOptionPane.YES_NO_OPTION,
                     JOptionPane.QUESTION_MESSAGE);
             if (ret == JOptionPane.YES_OPTION) {

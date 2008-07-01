@@ -4,17 +4,16 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.oracletree;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.prefs.Preferences;
 import javax.swing.JOptionPane;
 import javax.swing.event.ChangeListener;
+import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.AddCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ChangeOAccessCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.RefreshCookieInterface;
 import org.openide.util.ChangeSupport;
-import org.openide.util.NotImplementedException;
 
 /**
  *
@@ -96,8 +95,8 @@ public class OObjectType implements RefreshCookieInterface, ChangeOAccessCookieI
     }
 
     public void Add() {
-        String objname = JOptionPane.showInputDialog(null, "Please type new object name",
-                "Create new PL/SQL object", JOptionPane.QUESTION_MESSAGE);
+        String objname = JOptionPane.showInputDialog(null, Utils.getBundle().getString("LBL_TypeNewName"),
+                Utils.getBundle().getString("LBL_CreateObj"), JOptionPane.QUESTION_MESSAGE);
         if (objname == null || objname.length() == 0) {
             return;
         }
