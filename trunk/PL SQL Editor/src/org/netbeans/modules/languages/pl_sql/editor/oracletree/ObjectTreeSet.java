@@ -46,8 +46,8 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
         OracleConnection conn = ou.getConn();
         Statement stmt = null;
         ResultSet rset = null;
-        Statement stmt_src = null;
-        ResultSet rset_src = null;
+        //Statement stmt_src = null;
+        //ResultSet rset_src = null;
         try {
             if (conn.isClosed()) {
                 new SQLException("Connection is closed.");
@@ -97,8 +97,11 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
             if (conn != null) {
                 conn.close();
             }
-            SourcesTry inst = SourcesTry.getInstance(this, ou.getOracleDataSource());
-            inst.post();
+            //SourcesTry inst = SourcesTry.getInstance(this, ou.getOracleDataSource());
+            //inst.post();
+            LoadObjectSourcesThread los = new LoadObjectSourcesThread(this, ou.getConn());
+            new Thread(los).start();
+
         } catch (SQLException ex) {
             if (ex.getErrorCode() != 942) {
                 Exceptions.printStackTrace(ex);
@@ -106,12 +109,12 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
         } finally {
             try {
 
-                if (rset_src != null) {
+                /*if (rset_src != null) {
                     rset_src.close();
                 }
                 if (stmt_src != null) {
                     stmt_src.close();
-                }
+                }*/
                 if (rset != null) {
                     rset.close();
                 }
@@ -123,6 +126,36 @@ public class ObjectTreeSet extends TreeSet<BaseClass> {
                 }
             } catch (SQLException ex) {
                 Exceptions.printStackTrace(ex);
+            }
+        }
+    }
+
+    class LoadObjectSourcesThread implements Runnable {
+
+        private ObjectTreeSet ots = null;
+        private OracleConnection conn = null;
+
+        public LoadObjectSourcesThread(ObjectTreeSet ots, OracleConnection conn) {
+            this.ots = ots;
+            this.conn = conn;
+        }
+
+        public void run() {
+            try {
+                for (BaseClass bc : ots) {
+                    bc.LoadObjectSource(conn);
+                }
+                conn.close();
+            } catch (SQLException ex) {
+                Exceptions.printStackTrace(ex);
+            } finally {
+                if (conn != null) {
+                    try {
+                        conn.close();
+                    } catch (SQLException ex) {
+                        Exceptions.printStackTrace(ex);
+                    }
+                }
             }
         }
     }

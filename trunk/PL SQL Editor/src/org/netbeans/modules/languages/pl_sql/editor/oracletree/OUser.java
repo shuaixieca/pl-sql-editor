@@ -230,10 +230,12 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
         return IsConnected;
     }
 
-    public OracleConnection getConn() {
+    public synchronized OracleConnection getConn() {
         OracleConnection oc = null;
         try {
-            oc = (OracleConnection) ods.getConnection();
+            while (oc == null) {
+                oc = (OracleConnection) ods.getConnection();
+            }
         } catch (SQLException ex) {
             Exceptions.printStackTrace(ex);
         }
@@ -389,8 +391,13 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
                                 ods.setConnectionCachingEnabled(true);
                                 java.util.Properties props = ods.getConnectionProperties() == null ? new java.util.Properties() : ods.getConnectionProperties();
-                                props.put(OracleConnection.CONNECTION_PROPERTY_THIN_VSESSION_PROGRAM, "ora");
+                                props.put(OracleConnection.CONNECTION_PROPERTY_THIN_VSESSION_PROGRAM, "PL/SQL Editor for NetBeans");
                                 ods.setConnectionProperties(props);
+
+                                java.util.Properties props_cache = new java.util.Properties();
+                                props_cache.setProperty("MaxLimit", "2");
+                                ods.setConnectionCacheProperties(props_cache);
+
                                 OutputMsg(localmsg, null, false);
                                 conn =
                                         (OracleConnection) ods.getConnection();
