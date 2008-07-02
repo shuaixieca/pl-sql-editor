@@ -178,11 +178,26 @@ TOKEN:sqlcode_keyword: ( "SQLCODE"i )
 TOKEN:sqlerrm_keyword: ( "SQLERRM"i )
 TOKEN:update_keyword: ( "UPDATE"i )
 TOKEN:exists_keyword: ( "EXISTS"i )
+TOKEN:trigger_keyword: ( "TRIGGER"i )
+TOKEN:before_keyword: ( "BEFORE"i )
+TOKEN:after_keyword: ( "AFTER"i )
+TOKEN:instead_keyword: ( "INSTEAD"i )
+TOKEN:on_keyword: ( "ON"i )
+TOKEN:nested_keyword: ( "NESTED"i )
+TOKEN:referencing_keyword: ( "REFERENCING"i )
+TOKEN:old_keyword: ( "OLD"i )
+TOKEN:new_keyword: ( "NEW"i )
+TOKEN:parent_keyword: ( "PARENT"i )
+TOKEN:each_keyword: ( "EACH"i )
+TOKEN:row_keyword: ( "ROW"i )
+TOKEN:follows_keyword: ( "FOLLOWS"i )
+TOKEN:enable_keyword: ( "ENABLE"i )
+TOKEN:disable_keyword: ( "DISABLE"i )
   
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z" "%"]* )
 TOKEN:ext_identifier:( 
-    ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z" "%"]* ["." "@"]
-    ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* (["." "@"]?
+    ":"? "\""? ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z" "%"]* "\""? ["." "@"]
+    "\""? ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]* "\""? (["." "@"]?
     ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z"]*)?
 )
 TOKEN:alias:( "\"" [^ "\""]+ "\""
@@ -200,6 +215,7 @@ SKIP:whitespace
 SKIP:block_comment
 SKIP:line_comment
 SKIP:wrapped
+SKIP:the_rest
 
 #FOLD:block_comment: {
 #    fold_display_name:"LBL_Comment";
@@ -213,11 +229,13 @@ SKIP:wrapped
 #} 
 
 # Grammar 
-S = (Source_Element)*;
+#S = (Source_Element)*;
+S = Source_Element;
 Source_Element = Anonymous_Block | 
                  ([Create_Replace_Part]
-                  (Function_Declaration | Procedure_Declaration | Package_Spec | Package_Body));
-Universal_Identifier = <identifier> | <ext_identifier>;
+                  (Function_Declaration | Procedure_Declaration | Package_Spec | Package_Body |
+                   Trigger_Declaration));
+Universal_Identifier = <identifier>  | <ext_identifier>;
 Label = "<<" <identifier> ">>";
 #Statement = WhileStatement | IfStatement | ExpressionStatement | Block;
 #WhileStatement = "while" "(" ConditionalExpression ")" Block;
@@ -250,7 +268,25 @@ Package_Body = <package_keyword> <body_keyword> Package_Body_Name As_Is_Part
                [<begin_keyword> (Executable_Section)+]
                <end_keyword> [Universal_Identifier] [<separator>] ["/"];
 Package_Body_Name = Universal_Identifier;
-
+Trigger_Declaration = <trigger_keyword> Trigger_Name Trigger_Type [Follows_Part] Trigger_Part
+                      Anonymous_Block;
+Trigger_Name = Universal_Identifier;
+Follows_Part = <follows_keyword> Universal_Identifier;
+Trigger_Part = [<enable_keyword> | <disable_keyword>] [<when_keyword> Universal_expression];
+Trigger_Type = (<before_keyword> (DML_Event_Clause | Non_DML_Trigger)) |
+               (<after_keyword> (DML_Event_Clause | Non_DML_Trigger)) |
+               (<instead_keyword> <of_keyword> DML_Event_Clause) |
+               Compound_DML_Trigger;
+Compound_DML_Trigger = <for_keyword> DML_Event_Clause [Referencing_Clause];
+Non_DML_Trigger = (<identifier> [<or_operator>])+ <on_keyword> Universal_Identifier;
+DML_Event_Clause = ((<insert_keyword> | <delete_keyword> | 
+                    (<update_keyword>))
+                    [<or_operator>] [<of_keyword> (Universal_Identifier [<comma>])+ ])+
+                    DML_Event_Clause_Part [Referencing_Clause]
+                    [<for_keyword> <each_keyword> <row_keyword>];
+DML_Event_Clause_Part = <on_keyword> ([<nested_keyword> <table_keyword> <identifier> <of_keyword>] Universal_Identifier);
+Referencing_Clause = <referencing_keyword> ( (<old_keyword> | <new_keyword> | <parent_keyword>)
+                     [<as_keyword>] (<old_keyword> | <new_keyword> | <identifier>) )+;
 Block = <begin_keyword>
             (Executable_Section)+
             [Exception_Section]
@@ -346,7 +382,7 @@ Sqlcode_Function = <sqlcode_keyword>;
 Sqlerrm_Function = <sqlerrm_keyword> ["(" ["+"|"-"] <number_unsigned> ")"];
 #Assigment_Statement = Universal_Identifier <operator, ":="> Expression;
 Anonymous_Block_Declare_Section = <declare_keyword> 
-                                  (Variable_Declaration)+ 
+                                  (Variable_Declaration)* 
                                   (Function_Declaration | Procedure_Declaration)*;
 Variable_Declaration = <identifier> Data_Type 
                        [Variable_Declaration_Part] <separator>;
@@ -481,6 +517,9 @@ NAVIGATOR:Package_Spec: {
 }
 NAVIGATOR:Package_Body: {
     display_name: "<html><font color=808080>package body</font> $Package_Body_Name$</html>";
+}
+NAVIGATOR:Trigger_Declaration: {
+    display_name: "<html><font color=808080>trigger</font> $Trigger_Name$</html>";
 }
 #NAVIGATOR:Parameter_Declaration: {
 #    display_name: "<html><font color=808080>parameters</font></html>";

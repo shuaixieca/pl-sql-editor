@@ -129,7 +129,22 @@
     <fontcolor default="keyword" name="sqlcode_keyword"/>
     <fontcolor default="keyword" name="sqlerrm_keyword"/>
     <fontcolor default="keyword" name="update_keyword"/>
-    <fontcolor default="keyword" name="exists_keyword"/>    
+    <fontcolor default="keyword" name="exists_keyword"/>
+    <fontcolor default="keyword" name="trigger_keyword"/>
+    <fontcolor default="keyword" name="before_keyword"/>
+    <fontcolor default="keyword" name="after_keyword"/>
+    <fontcolor default="keyword" name="instead_keyword"/>
+    <fontcolor default="keyword" name="on_keyword"/>
+    <fontcolor default="keyword" name="nested_keyword"/>
+    <fontcolor default="keyword" name="referencing_keyword"/>
+    <fontcolor default="keyword" name="old_keyword"/>
+    <fontcolor default="keyword" name="new_keyword"/>
+    <fontcolor default="keyword" name="parent_keyword"/>
+    <fontcolor default="keyword" name="row_keyword"/>
+    <fontcolor default="keyword" name="each_keyword"/>
+    <fontcolor default="keyword" name="follows_keyword"/>
+    <fontcolor default="keyword" name="enable_keyword"/>
+    <fontcolor default="keyword" name="disable_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
