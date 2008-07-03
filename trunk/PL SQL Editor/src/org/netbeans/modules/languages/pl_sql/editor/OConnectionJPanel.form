@@ -58,9 +58,9 @@
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="UserjPanel" min="-2" pref="131" max="-2" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Component id="connectProgressPanel" pref="39" max="32767" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="1"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="connectProgressPanel" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -209,10 +209,15 @@
     <Container class="javax.swing.JPanel" name="connectProgressPanel">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout">
-        <Property name="verticalGap" type="int" value="5"/>
+        <Property name="verticalGap" type="int" value="4"/>
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="progressMessageLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/netbeans/modules/languages/pl_sql/editor/Bundle.properties" key="OConnectionJPanel.progressMessageLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
               <BorderConstraints direction="North"/>

@@ -128,7 +128,9 @@ public class OConnectionJPanel extends javax.swing.JPanel {
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        connectProgressPanel.setLayout(new java.awt.BorderLayout(0, 5));
+        connectProgressPanel.setLayout(new java.awt.BorderLayout(0, 4));
+
+        progressMessageLabel.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.progressMessageLabel.text")); // NOI18N
         connectProgressPanel.add(progressMessageLabel, java.awt.BorderLayout.NORTH);
 
         progressContainerPanel.setMinimumSize(new java.awt.Dimension(20, 20));
@@ -174,8 +176,8 @@ public class OConnectionJPanel extends javax.swing.JPanel {
                     .add(DatabseNamejTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(UserjPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 131, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(connectProgressPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(connectProgressPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents

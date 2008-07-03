@@ -10,6 +10,7 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -329,18 +330,19 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
     private synchronized void EnableHints() {
         if (IsConnected) {
-            //Statement st = null;
+            Statement st = null;
             try {
                 OracleDatabaseMetaData meta = (OracleDatabaseMetaData) conn.getMetaData();
                 OracleMajorVersion = meta.getDatabaseMajorVersion();
                 OracleMinorVersion = meta.getDatabaseMinorVersion();
                 OracleProductVersion = meta.getDatabaseProductVersion();
-                conn.setPlsqlWarnings("'ENABLE:ALL'");
+                //conn.setPlsqlWarnings("'ENABLE:ALL'");
 
-            /*if (OracleMajorVersion >= 10) {
-            st = conn.createStatement();
-            st.execute("ALTER SESSION SET PLSQL_WARNINGS='ENABLE:ALL'");
-            }*/
+                if (OracleMajorVersion >= 10) {
+                    st = conn.createStatement();
+                    st.execute("ALTER SESSION SET PLSQL_WARNINGS='ENABLE:ALL'");
+                    st.close();
+                }
             } catch (SQLException ex) {
                 // Do nothing because Oracle version < 9i
                 Exceptions.printStackTrace(ex);
