@@ -280,10 +280,11 @@ Trigger_Type = (<before_keyword> (DML_Event_Clause | Non_DML_Trigger)) |
 Compound_DML_Trigger = <for_keyword> DML_Event_Clause [Referencing_Clause];
 Non_DML_Trigger = (<identifier> [<or_operator>])+ <on_keyword> Universal_Identifier;
 DML_Event_Clause = ((<insert_keyword> | <delete_keyword> | 
-                    (<update_keyword>))
-                    [<or_operator>] [<of_keyword> (Universal_Identifier [<comma>])+ ])+
+                    (<update_keyword> [DML_Event_Clause_Factor]))
+                    [<or_operator>] [DML_Event_Clause_Factor])+
                     DML_Event_Clause_Part [Referencing_Clause]
                     [<for_keyword> <each_keyword> <row_keyword>];
+DML_Event_Clause_Factor = <of_keyword> (Universal_Identifier [<comma>])+;
 DML_Event_Clause_Part = <on_keyword> ([<nested_keyword> <table_keyword> <identifier> <of_keyword>] Universal_Identifier);
 Referencing_Clause = <referencing_keyword> ( (<old_keyword> | <new_keyword> | <parent_keyword>)
                      [<as_keyword>] (<old_keyword> | <new_keyword> | <identifier>) )+;
@@ -517,9 +518,11 @@ NAVIGATOR:Package_Spec: {
 }
 NAVIGATOR:Package_Body: {
     display_name: "<html><font color=808080>package body</font> $Package_Body_Name$</html>";
+    icon: "org/netbeans/modules/languages/pl_sql/PackagesBodyObj.png";
 }
 NAVIGATOR:Trigger_Declaration: {
     display_name: "<html><font color=808080>trigger</font> $Trigger_Name$</html>";
+    icon: "org/netbeans/modules/languages/pl_sql/TriggersObj.png";
 }
 #NAVIGATOR:Parameter_Declaration: {
 #    display_name: "<html><font color=808080>parameters</font></html>";

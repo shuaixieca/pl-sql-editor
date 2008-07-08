@@ -33,7 +33,7 @@ final class OracleTopComponent extends TopComponent implements ExplorerManager.P
 
     private static OracleTopComponent instance;
     /** path to the icon used by the component and its open action */
-    static final String ICON_PATH = "org/netbeans/modules/languages/pl_sql/editor/resources/Oracle.png";
+    static final String ICON_PATH = "org/netbeans/modules/languages/pl_sql/editor/resources/Root.png";
     private static final String PREFERRED_ID = "OracleTopComponent";
     private final ExplorerManager mgr = new ExplorerManager();
 
