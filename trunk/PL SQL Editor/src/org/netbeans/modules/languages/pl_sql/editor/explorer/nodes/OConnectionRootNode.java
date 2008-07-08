@@ -23,7 +23,7 @@ public class OConnectionRootNode extends AbstractNode {
 
     public OConnectionRootNode(OConnectionRoot ocr) {
         super(Children.create(new RootNodeChildFactory(ocr), false), Lookups.singleton(ocr));
-        setIconBaseWithExtension("org/netbeans/modules/languages/pl_sql/editor/resources/Oracle.png");
+        setIconBaseWithExtension("org/netbeans/modules/languages/pl_sql/editor/resources/Root.png");
     }
 
     @Override

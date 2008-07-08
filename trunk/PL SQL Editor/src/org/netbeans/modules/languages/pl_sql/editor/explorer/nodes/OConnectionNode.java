@@ -29,10 +29,22 @@ import org.openide.util.lookup.Lookups;
  */
 public class OConnectionNode extends AbstractNode implements PropertyChangeListener {
 
+    private static final String ICON = "org/netbeans/modules/languages/pl_sql/editor/resources/DB.png";
+    private static final String ICON_CONNECTED = "org/netbeans/modules/languages/pl_sql/editor/resources/DBConnected.png";
+
     public OConnectionNode(OConnectionClass ocs) {
         super(Children.create(new OConnectionNodeChildFactory(ocs), false), Lookups.singleton(ocs));
         //super(Children.create(new OConnectionNodeChildFactory(ocs), true));
         ocs.addPropertyChangeListener(WeakListeners.propertyChange(this, ocs));
+        ChangeIcon();
+    }
+
+    private void ChangeIcon() {
+        if (getOConnectionClass().getIsConnected()) {
+            this.setIconBaseWithExtension(ICON_CONNECTED);
+        } else {
+            this.setIconBaseWithExtension(ICON);
+        }
     }
 
     public OConnectionClass getOConnectionClass() {
@@ -87,11 +99,11 @@ public class OConnectionNode extends AbstractNode implements PropertyChangeListe
             Property ServerNameProp = new PropertySupport.Reflection<String>(obj, String.class, "getServerName", null);
             ServerNameProp.setName(Utils.getBundle().getString("LBL_ServerName"));
             set.put(ServerNameProp);
-            
+
             Property PortProp = new PropertySupport.Reflection<Integer>(obj, Integer.class, "getPort", null);
             PortProp.setName(Utils.getBundle().getString("LBL_Port"));
             set.put(PortProp);
-            
+
             Property DatabaseNameProp = new PropertySupport.Reflection<String>(obj, String.class, "getDatabaseName", null);
             DatabaseNameProp.setName(Utils.getBundle().getString("LBL_DatabaseName"));
             set.put(DatabaseNameProp);
@@ -116,6 +128,7 @@ public class OConnectionNode extends AbstractNode implements PropertyChangeListe
         if ("ServerName".equals(evt.getPropertyName()) || "Port".equals(evt.getPropertyName()) || "DatabaseName".equals(evt.getPropertyName()) ||
                 "IsConnected".equals(evt.getPropertyName())) {
             this.fireDisplayNameChange(null, getDisplayName());
+            this.ChangeIcon();
         }
     }
 }

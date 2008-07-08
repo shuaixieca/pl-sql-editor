@@ -31,10 +31,22 @@ import org.openide.util.lookup.Lookups;
  */
 public class OUserNode extends AbstractNode implements PropertyChangeListener {
 
+    private static final String ICON = "org/netbeans/modules/languages/pl_sql/editor/resources/User.png";
+    private static final String ICON_CONNECTED = "org/netbeans/modules/languages/pl_sql/editor/resources/UserConnected.png";
+
     public OUserNode(OUser ou) {
         super(ou.getIsConnected() ? Children.create(new OUserNodeChildFactory(ou), true) : Children.LEAF, Lookups.singleton(ou));
         //super(Children.create(new OUserNodeChildFactory(ou), true), Lookups.singleton(ou));
         ou.addPropertyChangeListener(WeakListeners.propertyChange(this, ou));
+        ChangeIcon();
+    }
+
+    private void ChangeIcon() {
+        if (getOUser().getIsConnected()) {
+            this.setIconBaseWithExtension(ICON_CONNECTED);
+        } else {
+            this.setIconBaseWithExtension(ICON);
+        }
     }
 
     public void resetChildren() {
@@ -132,6 +144,7 @@ public class OUserNode extends AbstractNode implements PropertyChangeListener {
                 "IsConnected".equals(evt.getPropertyName())) {
             this.resetChildren();
             this.fireDisplayNameChange(null, getHtmlDisplayName());
+            this.ChangeIcon();
         }
     }
 }
