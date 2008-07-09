@@ -35,4 +35,11 @@
             <attr name="position" intvalue="1060"/>
         </folder>
     </folder>
+    <folder name="OptionsDialog">
+        <folder name="PreviewExamples">
+            <folder name="text">
+                <file name="pl_sql" url="Sample.fnc"/>
+            </folder>
+        </folder>
+    </folder>
 </filesystem>

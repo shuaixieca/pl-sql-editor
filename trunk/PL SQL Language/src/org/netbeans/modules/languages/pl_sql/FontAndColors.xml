@@ -54,7 +54,7 @@
     <fontcolor default="keyword" name="current_user_keyword"/>
     <fontcolor default="keyword" name="definer_keyword"/>
     <fontcolor default="keyword" name="deterministic_keyword"/>
-    <fontcolor default="keyword" name="parallel_enabled_keyword_keyword"/>
+    <fontcolor default="keyword" name="parallel_enabled_keyword"/>
     <fontcolor default="keyword" name="pipelined_keyword"/>
     <fontcolor default="keyword" name="result_cache_keyword"/>
     <fontcolor default="keyword" name="procedure_keyword"/>
