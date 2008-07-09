@@ -193,6 +193,19 @@ TOKEN:row_keyword: ( "ROW"i )
 TOKEN:follows_keyword: ( "FOLLOWS"i )
 TOKEN:enable_keyword: ( "ENABLE"i )
 TOKEN:disable_keyword: ( "DISABLE"i )
+TOKEN:oid_keyword: ( "OID"i )
+TOKEN:object_keyword: ( "OBJECT"i )
+TOKEN:under_keyword: ( "UNDER"i )
+TOKEN:final_keyword: ( "FINAL"i )
+TOKEN:instantiable_keyword: ( "INSTANTIABLE"i )
+TOKEN:overriding_keyword: ( "OVERRIDING"i )
+TOKEN:member_keyword: ( "MEMBER"i )
+TOKEN:static_keyword: ( "STATIC"i )
+TOKEN:constructor_keyword: ( "CONSTRUCTOR"i )
+TOKEN:self_keyword: ( "SELF"i )
+TOKEN:result_keyword: ( "RESULT"i )
+TOKEN:map_keyword: ( "MAP"i )
+TOKEN:order_keyword: ( "ORDER"i )
   
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z" "%"]* )
 TOKEN:ext_identifier:( 
@@ -234,7 +247,7 @@ S = Source_Element;
 Source_Element = Anonymous_Block | 
                  ([Create_Replace_Part]
                   (Function_Declaration | Procedure_Declaration | Package_Spec | Package_Body |
-                   Trigger_Declaration));
+                   Trigger_Declaration | Type_Spec_Declaration | Type_Body_Declaration));
 Universal_Identifier = <identifier>  | <ext_identifier>;
 Label = "<<" <identifier> ">>";
 #Statement = WhileStatement | IfStatement | ExpressionStatement | Block;
@@ -252,13 +265,12 @@ Function_Spec = <function_keyword>
 Function_Name = Universal_Identifier;
 Invoker_Clause = <authid_keyword> (<current_user_keyword> | <definer_keyword>);
 Function_Spec_Add2 = <deterministic_keyword> | <parallel_enabled_keyword> | <pipelined_keyword> | <result_cache_keyword>;
-Function_Declaration = Function_Spec As_Is_Part
-                       (Variable_Declaration)* (Function_Declaration | Procedure_Declaration)* Block ;
+Function_Declaration = Function_Spec Function_Procedure_Body;
 Procedure_Spec = <procedure_keyword> Procedure_Name [Parameter_Declaration] 
                  [Invoker_Clause];
 Procedure_Name = Universal_Identifier;
-Procedure_Declaration = Procedure_Spec As_Is_Part
-                        (Variable_Declaration)* (Function_Declaration | Procedure_Declaration)* Block;
+Procedure_Declaration = Procedure_Spec Function_Procedure_Body;
+Function_Procedure_Body = As_Is_Part (Variable_Declaration)* (Function_Declaration | Procedure_Declaration)* Block;
 Package_Spec = <package_keyword> Package_Spec_Name [Invoker_Clause] As_Is_Part
                (Variable_Declaration | ((Function_Spec | Procedure_Spec) ";"))* 
                <end_keyword> [Universal_Identifier] [<separator>] ["/"];
@@ -288,6 +300,38 @@ DML_Event_Clause_Factor = <of_keyword> (Universal_Identifier [<comma>])+;
 DML_Event_Clause_Part = <on_keyword> ([<nested_keyword> <table_keyword> <identifier> <of_keyword>] Universal_Identifier);
 Referencing_Clause = <referencing_keyword> ( (<old_keyword> | <new_keyword> | <parent_keyword>)
                      [<as_keyword>] (<old_keyword> | <new_keyword> | <identifier>) )+;
+Type_Spec_Declaration = <type_keyword> Type_Spec_Name [Type_OID_Part] [Invoker_Clause] Type_Spec_Types
+                        [<separator>] ["/"];
+Type_Spec_Name = Universal_Identifier | <alias>;
+Type_OID_Part = <oid_keyword> "'" Universal_Identifier "'" ;
+Type_Spec_Types = Object_Type | Varray_Type | Nested_Table_Type;
+Object_Type = ((As_Is_Part <object_keyword>) | (<under_keyword> Universal_Identifier))
+              [Object_Type_Part]
+               [[<not_operator>] <final_keyword>] [[<not_operator>] <instantiable_keyword>];
+Object_Type_Part = "(" (<identifier> Data_Type [","])+ (Element_Spec [","])* ")";
+Element_Spec = [Inheritance_Clauses] ((Subprogram_Spec | Constructor_Spec | Map_Order_Function_Spec) [","])+
+               [Pragma_Clause];
+Pragma_Clause = <pragma_keyword> <restrict_references_keyword> "(" Expression ("," Expression)+ ")";
+Map_Order_Function_Spec = (<map_keyword> | <order_keyword>) <member_keyword> Function_Spec;
+Constructor_Spec = [<final_keyword>] [<instantiable_keyword>] <constructor_keyword> <function_keyword>
+                   Data_Type [Constructor_Spec_Part];
+Constructor_Spec_Part = "(" [<self_keyword> <in_keyword> <out_keyword> ","]
+                        (<identifier> Data_Type [","])+ ")"
+                        <return_keyword> <self_keyword> <as_keyword> <result_keyword>;
+Subprogram_Spec = (<member_keyword> | <static_keyword>) (Function_Spec | Procedure_Spec);
+Inheritance_Clauses = [<not_operator>] (<final_keyword> | <instantiable_keyword> | <overriding_keyword>);
+Varray_Type = As_Is_Part Collection_Varray_datatype;
+Nested_Table_Type = As_Is_Part <table_keyword> <of_keyword> Data_Type;
+Type_Body_Declaration = <type_keyword> <body_keyword> Type_Body_Name As_Is_Part
+                        ((Subprogram_Declaration | Map_Order_Func_Declaration) [","] )+ <end_keyword>
+                        [<separator>] ["/"];
+Type_Body_Name = Universal_Identifier | <alias>;
+Subprogram_Declaration = [<member_keyword> | <static_keyword>]
+                         (Function_Declaration | Procedure_Declaration | Constructor_Declaration);
+Constructor_Declaration = [<final_keyword>] [<instantiable_keyword>] <constructor_keyword> <function_keyword>
+                          Data_Type [Constructor_Spec_Part] Function_Procedure_Body;
+Map_Order_Func_Declaration = (<map_keyword> | <order_keyword>) <member_keyword> Function_Declaration;
+
 Block = <begin_keyword>
             (Executable_Section)+
             [Exception_Section]
@@ -523,6 +567,14 @@ NAVIGATOR:Package_Body: {
 NAVIGATOR:Trigger_Declaration: {
     display_name: "<html><font color=808080>trigger</font> $Trigger_Name$</html>";
     icon: "org/netbeans/modules/languages/pl_sql/TriggersObj.png";
+}
+NAVIGATOR:Type_Spec_Declaration: {
+    display_name: "<html><font color=808080>type</font> $Type_Spec_Name$</html>";
+    icon: "org/netbeans/modules/languages/pl_sql/TypesObj.png";
+}
+NAVIGATOR:Type_Body_Declaration: {
+    display_name: "<html><font color=808080>type body</font> $Type_Body_Name$</html>";
+    icon: "org/netbeans/modules/languages/pl_sql/TypesBodyObj.png";
 }
 #NAVIGATOR:Parameter_Declaration: {
 #    display_name: "<html><font color=808080>parameters</font></html>";
