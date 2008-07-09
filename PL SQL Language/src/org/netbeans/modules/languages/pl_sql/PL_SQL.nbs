@@ -248,8 +248,9 @@ Source_Element = Anonymous_Block |
                  ([Create_Replace_Part]
                   (Function_Declaration | Procedure_Declaration | Package_Spec | Package_Body |
                    Trigger_Declaration | Type_Spec_Declaration | Type_Body_Declaration));
-Universal_Identifier = <identifier>  | <ext_identifier>;
-Label = "<<" <identifier> ">>";
+Identifier = <identifier> | <result_keyword> | <interval_keyword>;
+Universal_Identifier = Identifier | <ext_identifier>;
+Label = "<<" Identifier ">>";
 #Statement = WhileStatement | IfStatement | ExpressionStatement | Block;
 #WhileStatement = "while" "(" ConditionalExpression ")" Block;
 #IfStatement = "if" "(" ConditionalExpression ")" "then" Block ["else" Block] ";";
@@ -257,32 +258,32 @@ Label = "<<" <identifier> ">>";
 Create_Replace_Part = <create_keyword> [<or_operator> <replace_keyword>];
 As_Is_Part = <is_keyword> | <as_keyword>;
 Parameter_Type = <in_keyword> | (<out_keyword> [<nocopy_keyword>]) | (<in_keyword> <out_keyword> [<nocopy_keyword>]);
-Parameter_Declaration = "(" <identifier> [Parameter_Type] Data_Type [Variable_Def_Part Expression]
-                        ("," <identifier> [Parameter_Type] Data_Type [Variable_Def_Part Expression])* ")";
+Parameter_Declaration = "(" Identifier [Parameter_Type] Data_Type [Variable_Def_Part Expression]
+                        ("," Identifier [Parameter_Type] Data_Type [Variable_Def_Part Expression])* ")";
 Function_Spec = <function_keyword>
                 Function_Name [Parameter_Declaration] 
                 <return_keyword> Data_Type [Invoker_Clause] (Function_Spec_Add2)*;
-Function_Name = Universal_Identifier;
+Function_Name = Universal_Identifier | <alias>;
 Invoker_Clause = <authid_keyword> (<current_user_keyword> | <definer_keyword>);
 Function_Spec_Add2 = <deterministic_keyword> | <parallel_enabled_keyword> | <pipelined_keyword> | <result_cache_keyword>;
 Function_Declaration = Function_Spec Function_Procedure_Body;
 Procedure_Spec = <procedure_keyword> Procedure_Name [Parameter_Declaration] 
                  [Invoker_Clause];
-Procedure_Name = Universal_Identifier;
+Procedure_Name = Universal_Identifier | <alias>;
 Procedure_Declaration = Procedure_Spec Function_Procedure_Body;
 Function_Procedure_Body = As_Is_Part (Variable_Declaration)* (Function_Declaration | Procedure_Declaration)* Block;
 Package_Spec = <package_keyword> Package_Spec_Name [Invoker_Clause] As_Is_Part
                (Variable_Declaration | ((Function_Spec | Procedure_Spec) ";"))* 
                <end_keyword> [Universal_Identifier] [<separator>] ["/"];
-Package_Spec_Name = Universal_Identifier;
+Package_Spec_Name = Universal_Identifier | <alias>;
 Package_Body = <package_keyword> <body_keyword> Package_Body_Name As_Is_Part
                (Variable_Declaration | Function_Declaration | Procedure_Declaration)*
                [<begin_keyword> (Executable_Section)+]
                <end_keyword> [Universal_Identifier] [<separator>] ["/"];
-Package_Body_Name = Universal_Identifier;
+Package_Body_Name = Universal_Identifier | <alias>;
 Trigger_Declaration = <trigger_keyword> Trigger_Name Trigger_Type [Follows_Part] Trigger_Part
                       Anonymous_Block;
-Trigger_Name = Universal_Identifier;
+Trigger_Name = Universal_Identifier | <alias>;
 Follows_Part = <follows_keyword> Universal_Identifier;
 Trigger_Part = [<enable_keyword> | <disable_keyword>] [<when_keyword> Universal_expression];
 Trigger_Type = (<before_keyword> (DML_Event_Clause | Non_DML_Trigger)) |
@@ -290,16 +291,16 @@ Trigger_Type = (<before_keyword> (DML_Event_Clause | Non_DML_Trigger)) |
                (<instead_keyword> <of_keyword> DML_Event_Clause) |
                Compound_DML_Trigger;
 Compound_DML_Trigger = <for_keyword> DML_Event_Clause [Referencing_Clause];
-Non_DML_Trigger = (<identifier> [<or_operator>])+ <on_keyword> Universal_Identifier;
+Non_DML_Trigger = (Identifier [<or_operator>])+ <on_keyword> Universal_Identifier;
 DML_Event_Clause = ((<insert_keyword> | <delete_keyword> | 
                     (<update_keyword> [DML_Event_Clause_Factor]))
                     [<or_operator>] [DML_Event_Clause_Factor])+
                     DML_Event_Clause_Part [Referencing_Clause]
                     [<for_keyword> <each_keyword> <row_keyword>];
 DML_Event_Clause_Factor = <of_keyword> (Universal_Identifier [<comma>])+;
-DML_Event_Clause_Part = <on_keyword> ([<nested_keyword> <table_keyword> <identifier> <of_keyword>] Universal_Identifier);
+DML_Event_Clause_Part = <on_keyword> ([<nested_keyword> <table_keyword> Identifier <of_keyword>] Universal_Identifier);
 Referencing_Clause = <referencing_keyword> ( (<old_keyword> | <new_keyword> | <parent_keyword>)
-                     [<as_keyword>] (<old_keyword> | <new_keyword> | <identifier>) )+;
+                     [<as_keyword>] (<old_keyword> | <new_keyword> | Identifier) )+;
 Type_Spec_Declaration = <type_keyword> Type_Spec_Name [Type_OID_Part] [Invoker_Clause] Type_Spec_Types
                         [<separator>] ["/"];
 Type_Spec_Name = Universal_Identifier | <alias>;
@@ -308,7 +309,7 @@ Type_Spec_Types = Object_Type | Varray_Type | Nested_Table_Type;
 Object_Type = ((As_Is_Part <object_keyword>) | (<under_keyword> Universal_Identifier))
               [Object_Type_Part]
                [[<not_operator>] <final_keyword>] [[<not_operator>] <instantiable_keyword>];
-Object_Type_Part = "(" (<identifier> Data_Type [","])+ (Element_Spec [","])* ")";
+Object_Type_Part = "(" (Identifier Data_Type [","])+ (Element_Spec [","])* ")";
 Element_Spec = [Inheritance_Clauses] ((Subprogram_Spec | Constructor_Spec | Map_Order_Function_Spec) [","])+
                [Pragma_Clause];
 Pragma_Clause = <pragma_keyword> <restrict_references_keyword> "(" Expression ("," Expression)+ ")";
@@ -316,7 +317,7 @@ Map_Order_Function_Spec = (<map_keyword> | <order_keyword>) <member_keyword> Fun
 Constructor_Spec = [<final_keyword>] [<instantiable_keyword>] <constructor_keyword> <function_keyword>
                    Data_Type [Constructor_Spec_Part];
 Constructor_Spec_Part = "(" [<self_keyword> <in_keyword> <out_keyword> ","]
-                        (<identifier> Data_Type [","])+ ")"
+                        (Identifier Data_Type [","])+ ")"
                         <return_keyword> <self_keyword> <as_keyword> <result_keyword>;
 Subprogram_Spec = (<member_keyword> | <static_keyword>) (Function_Spec | Procedure_Spec);
 Inheritance_Clauses = [<not_operator>] (<final_keyword> | <instantiable_keyword> | <overriding_keyword>);
@@ -346,8 +347,8 @@ Statements = Expression | Goto_Statement | Loop_Statement |
              Return_Statement | If_Statement | Raise_Statement | Close_Statement |
              Continue_Statement | Execute_Immediate_Statement | Exit_Statement |
              Fetch_Statement | Forall_Statement | Pragma_Inline_Statement |
-             Open_Statement | Update_Statement;
-SQL_Statements = Select_Statement | Commit_Statement | Delete_Statement |
+             Open_Statement;
+SQL_Statements = Select_Statement | Commit_Statement | Delete_Statement | Update_Statement |
                  Insert_Statement | Lock_Table_Statement | Merge_Statement |
                  Rollback_Statement | Savepoint_Statement | Set_Transaction_Statement;
 SQL_Operator = "+" | "-" | "*" | "/" | "**" | "||" | "=" | "<>" | "!=" | "~=" |
@@ -355,7 +356,7 @@ SQL_Operator = "+" | "-" | "*" | "/" | "**" | "||" | "=" | "<>" | "!=" | "~=" |
 SQL_Not_Parsed = SQL_Not_Parsed1 | SQL_Not_Parsed2 | <the_rest>;
 SQL_Not_Parsed1 = <alias> | <keyword> | SQL_Operator | <into_keyword> | <in_keyword> | <not_in_keyword> |
                <as_keyword> | <values_keyword> | <between_keyword> | <some_types> |
-               <bulk_keyword> | <collect_keyword> | <returning_keyword> |
+               <bulk_keyword> | <collect_keyword> | <returning_keyword> | <row_keyword> |
                <set_keyword> | <by_keyword> | <with_keyword> | <table_keyword>; 
 SQL_Not_Parsed2 = <exists_keyword> | <replace_keyword> |
                <number_unsigned> | <count_keyword> | Universal_Identifier | Case_Statement_Expression |
@@ -363,26 +364,28 @@ SQL_Not_Parsed2 = <exists_keyword> | <replace_keyword> |
                <is_not_null_keyword> | <is_null_keyword> | <null_keyword> | <like_keyword> | 
                SQL_Statements | SQL_Not_Parsed | ("(" (SQL_Not_Parsed)* ")");
 #SQL Statements
-Select_Statement = <select_keyword> (SQL_Not_Parsed)+;
+Select_Statement = <select_keyword> (SQL_Not_Parsed | (<for_keyword> <update_keyword>))+;
 Commit_Statement = <commit_keyword> [SQL_Not_Parsed];
 Delete_Statement = <delete_keyword> (SQL_Not_Parsed)+;
 Insert_Statement = <insert_keyword> (SQL_Not_Parsed)+;
 Lock_Table_Statement = <lock_keyword> <table_keyword> (SQL_Not_Parsed)+;
-Merge_Statement = <merge_keyword> (SQL_Not_Parsed)+;
+Merge_Statement = <merge_keyword> (SQL_Not_Parsed | <on_keyword> |
+                  <using_keyword> | <when_keyword> | <then_keyword> | <insert_keyword> |
+                  <update_keyword>)+;
 Rollback_Statement = <rollback_keyword> [SQL_Not_Parsed];
-Savepoint_Statement = <savepoint_keyword> <identifier>;
+Savepoint_Statement = <savepoint_keyword> Identifier;
 Set_Transaction_Statement = <set_keyword> <transaction_keyword> (SQL_Not_Parsed)+;
 Update_Statement = <update_keyword> (SQL_Not_Parsed)+;
 # PL/SQL Statements
-Goto_Statement = <goto_keyword> <identifier>;
+Goto_Statement = <goto_keyword> Identifier;
 Return_Statement = <return_keyword> [Expression];
 If_Statement = <if_keyword> Expression <then_keyword> (Executable_Section)+
                (<elsif_keyword> Expression <then_keyword> (Executable_Section)+)*
                [<else_keyword> (Executable_Section)+]
                <endif_keyword>;
-Loop_Statement = <loop_keyword> (Executable_Section)+ <end_loop_keyword> [<identifier>];
+Loop_Statement = <loop_keyword> (Executable_Section)+ <end_loop_keyword> [Identifier];
 While_Loop_Statement = <while_keyword> Expression Loop_Statement;
-For_Loop_Statement = <for_keyword> <identifier> <in_keyword> [<reverse_keyword>] 
+For_Loop_Statement = <for_keyword> Identifier <in_keyword> [<reverse_keyword>] 
                      ((Expression (For_Loop_Statement_Part | Cursor_For_Loop_Statement1)) |
                        Cursor_For_Loop_Statement2);
 For_Loop_Statement_Part =  ".." Expression Loop_Statement;
@@ -393,13 +396,13 @@ Case_Statement_Expression = Simple_Case_Statement_Expression | Searched_Case_Sta
 Simple_Case_Statement_Expression= <case_keyword> Expression 
                         (<when_keyword> Expression <then_keyword> (Executable_Case_Section)+)+
                         [<else_keyword> (Executable_Case_Section)+]
-                        (<end_keyword> | (<end_case_keyword> [<identifier>]));
+                        (<end_keyword> | (<end_case_keyword> [Identifier]));
 Searched_Case_Statement_Expression = <case_keyword>
                         (<when_keyword> Expression <then_keyword> (Executable_Case_Section)+)+
                         [<else_keyword> (Executable_Case_Section)+]
-                          (<end_keyword> | (<end_case_keyword> [<identifier>]));
+                          (<end_keyword> | (<end_case_keyword> [Identifier]));
 Close_Statement = <close_keyword> Universal_Identifier;
-Continue_Statement = <continue_keyword> [<identifier>] [<when_keyword> Expression];
+Continue_Statement = <continue_keyword> [Identifier] [<when_keyword> Expression];
 Execute_Immediate_Statement = <execute_keyword> <immediate_keyword> Expression
                               [<return_keyword> | <returning_keyword>]
                               [Into_Clause | Bulk_Collect_Into_Clause]
@@ -409,10 +412,10 @@ Bulk_Collect_Into_Clause = <bulk_keyword> <collect_keyword> <into_keyword>
                            Universal_Identifier ("," Universal_Identifier)*;
 Using_Clause = <using_keyword> [<in_keyword> | <out_keyword> | (<in_keyword> <out_keyword>)] Expression
                ("," [<in_keyword> | <out_keyword> | (<in_keyword> <out_keyword>)] Expression)*;
-Exit_Statement = <exit_keyword> [<identifier>] [<when_keyword> Expression];
+Exit_Statement = <exit_keyword> [Identifier] [<when_keyword> Expression];
 Fetch_Statement = <fetch_keyword> Expression 
                   ((Bulk_Collect_Into_Clause [<limit_keyword> Expression] ) | Into_Clause);
-Forall_Statement = <forall_keyword> <identifier> <in_keyword> Bounds_Clause
+Forall_Statement = <forall_keyword> Identifier <in_keyword> Bounds_Clause
                    [<save_keyword> <exceptions_keyword>] SQL_Statements;
 Bounds_Clause = (Expression ".." Expression) |
                 (<indices_keyword> <of_keyword> Universal_Identifier 
@@ -429,13 +432,13 @@ Sqlerrm_Function = <sqlerrm_keyword> ["(" ["+"|"-"] <number_unsigned> ")"];
 Anonymous_Block_Declare_Section = <declare_keyword> 
                                   (Variable_Declaration)* 
                                   (Function_Declaration | Procedure_Declaration)*;
-Variable_Declaration = <identifier> Data_Type 
+Variable_Declaration = Identifier Data_Type 
                        [Variable_Declaration_Part] <separator>;
-Variable_Declaration = <identifier> <constant_keyword> Data_Type 
+Variable_Declaration = Identifier <constant_keyword> Data_Type 
                        Variable_Declaration_Part <separator>;
 Variable_Declaration = Subtype_datatype <separator>;
 Variable_Declaration = Record_Collection_datatype <separator>;
-Variable_Declaration = <identifier> <exception_keyword> <separator>;
+Variable_Declaration = Identifier <exception_keyword> <separator>;
 Variable_Declaration = <pragma_keyword> (<autonomous_transaction_keyword> | <serially_reusable_keyword> |
     (<exception_init_keyword> "(" Expression "," Expression ")") |
     (<restrict_references_keyword> "(" Expression ("," Expression)+ ")" ) ) <separator>;
@@ -450,24 +453,24 @@ Timestamp_Type = <timestamp_type> |
     ( <timestamp_type> <with_keyword> [<local_keyword>] <time_keyword> <zone_keyword>);
 Interval_Year_Type = <interval_keyword> <year_type> <to_keyword> <month_keyword>;
 Interval_Day_Type = <interval_keyword> <day_type> <to_keyword> <second_type>;
-Subtype_datatype = <subtype_keyword> <identifier> <is_keyword> Data_Type [<not_null_keyword>];
+Subtype_datatype = <subtype_keyword> Identifier <is_keyword> Data_Type [<not_null_keyword>];
 
-Record_Collection_datatype = <type_keyword> <identifier> <is_keyword> 
+Record_Collection_datatype = <type_keyword> Identifier <is_keyword> 
                             (Record_datatype | Collection_Table_datatype | Collection_Varray_datatype |
                             Ref_Cursor_datatype);
 Record_datatype = <record_keyword> "(" Record_Field_Declaration ("," Record_Field_Declaration)* ")" ;
-Record_Field_Declaration = <identifier> Data_Type [Variable_Declaration_Part];
+Record_Field_Declaration = Identifier Data_Type [Variable_Declaration_Part];
 Collection_Table_datatype = <table_keyword> <of_keyword> Data_Type [<not_null_keyword>]
                       [<index_keyword> <by_keyword> Data_Type];
 Collection_Varray_datatype = (<varray_keyword> | (<varying_keyword> <array_keyword>))
                              "(" ["+"] <number_unsigned> ")" <of_keyword> Data_Type [<not_null_keyword>];
 Ref_Cursor_datatype = <ref_keyword> <cursor_keyword> [<return_keyword> Data_Type];
-Cursor_datatype = <cursor_keyword> <identifier> [Cursor_Parameter_Declaration]
+Cursor_datatype = <cursor_keyword> Identifier [Cursor_Parameter_Declaration]
                   [<return_keyword> DataType] [<is_keyword> Select_Statement];
 Cursor_Parameter_Declaration = "(" Cursor_Parameter ("," Cursor_Parameter)* ")" ;
-Cursor_Parameter = <identifier> [<in_keyword>] Data_Type [Variable_Def_Part Expression];
+Cursor_Parameter = Identifier [<in_keyword>] Data_Type [Variable_Def_Part Expression];
 
-Special_datatype = (<identifier> | <ext_identifier>) (<like_type_keyword> | <rowtype_keyword>);
+Special_datatype = (Identifier | <ext_identifier>) (<like_type_keyword> | <rowtype_keyword>);
 
 #Expression = Boolean_expression | String_expression | Numeric_expression;
 Expression = Universal_expression;
@@ -479,7 +482,7 @@ In_NotIn_Expression = (<in_keyword> | <not_in_keyword>)
 Operator = "+" | "-" | "*" | "/" | "**" | "||" | ":=" | "." |
            "^=" | ">" | "<" | "<=" | ">=" | "=" | "<>" | "!=" | "~=" |
            <and_operator> | <or_operator> |
-           <like_keyword> | <between_keyword>;
+           <like_keyword> | ([<not_operator>] <between_keyword>);
 Unary_Op = <not_operator> | "+" | "-";
 Postfix_Op = <is_null_keyword> | <is_not_null_keyword> | "(+)" ;
 Universal_expression = [Unary_Op] Universal_factor [Postfix_Op] (Operator (Universal_expression | ("(" Select_Statement ")") ))*;
@@ -492,38 +495,38 @@ Sub_Identifier = Sub_Identifier_factor | <replace_keyword> | Sqlcode_Function | 
 Sub_Identifier_factor = Universal_Identifier [<notfound_keyword> | <found_keyword> |
                         <isopen_keyword> | <rowcount_keyword> | In_NotIn_Expression];
 Call_Statement_Param = ("(" [Universal_expression ("," Universal_expression )*] ")") |
-                       ("(" <identifier> "=>" Universal_expression ("," <identifier> "=>" Universal_expression )* ")" );
+                       ("(" Identifier "=>" Universal_expression ("," Identifier "=>" Universal_expression )* ")" );
 
 #Universal_expression = [Call_Statement ","] [Universal_operators] Universal_term (Universal_operators Universal_term )*;
 #Universal_term = Universal_factor (Universal_operators Universal_factor)*;
 #Universal_factor = (<true_keyword> | <false_keyword> | <number_unsigned> |
-#                   <string> | <identifier> | <ext_identifier>) (<operator, ")">)*;
+#                   <string> | Identifier | <ext_identifier>) (<operator, ")">)*;
 #Universal_operators = (<operator, "(">)* 
 #                      (Operator | <not_operator> | <and_operator> | <or_operator>)
 #                      (<operator, "(">)* 
 #                      [<not_operator>];
 
 #String_expression = String_term (<operator, "||"> String_term)*;
-#String_term = <string> | <identifier> | <ext_identifier>;
+#String_term = <string> | Identifier | <ext_identifier>;
 
 #Numeric_expression = [Numeric_operator1] Numeric_term (Numeric_operator1 Numeric_term)*;
 #Numeric_operator1 = (<operator, "(">)* (<operator, "+"> | <operator, "-">) (<operator, "(">)*;
 #Numeric_term = Numeric_factor (Numeric_operator2 Numeric_factor)*;
 #Numeric_operator2 = (<operator, "*"> | <operator, "/"> | <operator, "**">) (<operator, "(">)*;
-#Numeric_factor = (<number_unsigned> | <identifier> | <ext_identifier>) (<operator, ")">)*;
+#Numeric_factor = (<number_unsigned> | Identifier | <ext_identifier>) (<operator, ")">)*;
 
 #Boolean_expression = [(<operator, "(">)* <not_operator> (<operator, "(">)*] Boolean_term 
 #                     (<or_operator> (<operator, "(">)* [<not_operator> (<operator, "(">)*] Boolean_term)*;
 #Boolean_term = Boolean_factor (<and_operator> (<operator, "(">)* [<not_operator> (<operator, "(">)*] Boolean_factor)*;
-#Boolean_factor = (<true_keyword> | <false_keyword> | <identifier> | <ext_identifier>) (<operator, ")">)*;
+#Boolean_factor = (<true_keyword> | <false_keyword> | Identifier | <ext_identifier>) (<operator, ")">)*;
 		
 Exception_Section = <exception_keyword> (Exception_Handler)+;
 Exception_Handler = <when_keyword> Universal_Identifier (<or_operator> Universal_Identifier)*
                     <then_keyword> (Executable_Section)+;
 #Block = (Statement)*;
 #gr_begin_stm = "BEGIN";
-#ConditionalExpression = <identifier>;
-#ExpressionStatement = <identifier>;
+#ConditionalExpression = Identifier;
+#ExpressionStatement = Identifier;
 
 FOLD:Block: { fold_display_name:"begin...end"; }
 FOLD:block_comment: { fold_display_name:"/*...*/"; }
