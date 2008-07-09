@@ -145,6 +145,19 @@
     <fontcolor default="keyword" name="follows_keyword"/>
     <fontcolor default="keyword" name="enable_keyword"/>
     <fontcolor default="keyword" name="disable_keyword"/>
+    <fontcolor default="keyword" name="oid_keyword"/>
+    <fontcolor default="keyword" name="object_keyword"/>
+    <fontcolor default="keyword" name="under_keyword"/>
+    <fontcolor default="keyword" name="final_keyword"/>
+    <fontcolor default="keyword" name="instantiable_keyword"/>
+    <fontcolor default="keyword" name="overriding_keyword"/>
+    <fontcolor default="keyword" name="member_keyword"/>
+    <fontcolor default="keyword" name="static_keyword"/>
+    <fontcolor default="keyword" name="constructor_keyword"/>
+    <fontcolor default="keyword" name="self_keyword"/>
+    <fontcolor default="keyword" name="result_keyword"/>
+    <fontcolor default="keyword" name="map_keyword"/>
+    <fontcolor default="keyword" name="order_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
