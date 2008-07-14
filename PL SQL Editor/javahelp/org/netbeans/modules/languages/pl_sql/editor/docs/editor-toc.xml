@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN" "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<toc version="2.0">
+    <tocitem text="PL/SQL Editor">
+        <tocitem text="About PL/SQL Editor" target="org.netbeans.modules.languages.pl_sql.editor.about"/>
+        <tocitem text="Main Window" target="org.netbeans.modules.languages.pl_sql.editor.mainwindow"/>
+        <tocitem text="Connecting to Oracle" target="org.netbeans.modules.languages.pl_sql.editor.connect"/>
+    </tocitem>
+</toc>

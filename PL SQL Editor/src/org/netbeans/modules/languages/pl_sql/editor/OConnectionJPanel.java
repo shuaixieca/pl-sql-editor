@@ -31,7 +31,9 @@ import org.openide.util.TaskListener;
  *
  * @author  SUMsoft
  */
-public class OConnectionJPanel extends javax.swing.JPanel {
+public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Provider {
+
+    private final static String helpCtx = "org.netbeans.modules.languages.pl_sql.editor.connect";
 
     /** Creates new form OConnectionJPanel */
     public OConnectionJPanel() {
@@ -206,8 +208,8 @@ public class OConnectionJPanel extends javax.swing.JPanel {
     private boolean isSaved = false;
     private final String[] str = {Utils.getBundle().getString("LBL_Test"),
         Utils.getBundle().getString("LBL_Save"),
-        Utils.getBundle().getString("LBL_Cancel"),
-        Utils.getBundle().getString("LBL_Help")
+        Utils.getBundle().getString("LBL_Cancel")/*,
+        Utils.getBundle().getString("LBL_Help")*/
     };
     private String OConnPrefNode = null;
 
@@ -338,7 +340,14 @@ public class OConnectionJPanel extends javax.swing.JPanel {
                 testbtn = (javax.swing.JButton) dlg.getFocusOwner();
                 ChangeTestButton();
             }
-            // TODO Help event            
+            /*if (e.getActionCommand().compareTo(Utils.getBundle().getString("LBL_Help")) == 0) {
+                Help help = (Help) Lookup.getDefault().lookup(Help.class);
+                if (help != null && help.isValidID(helpCtx, true).booleanValue()) {
+                    help.showHelp(new HelpCtx(helpCtx));
+                } else {
+                    Toolkit.getDefaultToolkit().beep();
+                }
+            }*/
         }
     };
     private ProgressHandle progressHandle;
@@ -393,15 +402,15 @@ public class OConnectionJPanel extends javax.swing.JPanel {
                     progressMessageLabel.setForeground(Color.RED);
                 }
                 progressMessageLabel.setText(msg);
-                //dlg.pack();
-                //dlg.validate();
+            //dlg.pack();
+            //dlg.validate();
             }
         });
     }
 
     private void ShowDialogInternal(String caption) {
         //OConnectionJPanel oc = new OConnectionJPanel();
-        DialogDescriptor d = new DialogDescriptor(this, caption, true, str, null, DialogDescriptor.BOTTOM_ALIGN, HelpCtx.DEFAULT_HELP, listener);
+        DialogDescriptor d = new DialogDescriptor(this, caption, true, str, null, DialogDescriptor.BOTTOM_ALIGN, HelpCtx.findHelp(this), listener);
         //d.setModal(true);
         //d.setMessageType(NotifyDescriptor.PLAIN_MESSAGE);
         //d.setOptionType(NotifyDescriptor.DEFAULT_OPTION);
@@ -527,5 +536,9 @@ public class OConnectionJPanel extends javax.swing.JPanel {
             stopProgress(Utils.getBundle().getString("LBL_Canceled"), false);
             tc = null;
         }
+    }
+
+    public HelpCtx getHelpCtx() {
+        return new HelpCtx(this.helpCtx);
     }
 }
