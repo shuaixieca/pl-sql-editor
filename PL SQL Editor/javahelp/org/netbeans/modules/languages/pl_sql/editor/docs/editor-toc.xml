@@ -9,5 +9,7 @@ and open the template in the editor.
         <tocitem text="About PL/SQL Editor" target="org.netbeans.modules.languages.pl_sql.editor.about"/>
         <tocitem text="Main Window" target="org.netbeans.modules.languages.pl_sql.editor.mainwindow"/>
         <tocitem text="Connecting to Oracle" target="org.netbeans.modules.languages.pl_sql.editor.connect"/>
+        <tocitem text="Working with PL/SQL code" target="org.netbeans.modules.languages.pl_sql.editor.pl_sqlwork"/>
+        <tocitem text="Troubleshooting" target="org.netbeans.modules.languages.pl_sql.editor.troubleshooting"/>
     </tocitem>
 </toc>
