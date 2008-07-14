@@ -8,4 +8,6 @@ and open the template in the editor.
     <indexitem text="About PL/SQL Editor" target="org.netbeans.modules.languages.pl_sql.editor.about"/>
     <indexitem text="Main Window" target="org.netbeans.modules.languages.pl_sql.editor.mainwindow"/>
     <indexitem text="Connecting to Oracle" target="org.netbeans.modules.languages.pl_sql.editor.connect"/>
+    <indexitem text="Working with PL/SQL code" target="org.netbeans.modules.languages.pl_sql.editor.pl_sqlwork"/>
+    <indexitem text="Troubleshooting" target="org.netbeans.modules.languages.pl_sql.editor.troubleshooting"/>
 </index>

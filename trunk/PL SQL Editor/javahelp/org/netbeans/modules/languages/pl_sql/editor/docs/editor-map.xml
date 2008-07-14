@@ -8,4 +8,6 @@ and open the template in the editor.
     <mapID target="org.netbeans.modules.languages.pl_sql.editor.about" url="editor-about.html"/>
     <mapID target="org.netbeans.modules.languages.pl_sql.editor.mainwindow" url="mainwindow.html"/>
     <mapID target="org.netbeans.modules.languages.pl_sql.editor.connect" url="connect.html"/>
+    <mapID target="org.netbeans.modules.languages.pl_sql.editor.pl_sqlwork" url="pl_sql-work.html"/>
+    <mapID target="org.netbeans.modules.languages.pl_sql.editor.troubleshooting" url="troubleshooting.html"/>
 </map>
