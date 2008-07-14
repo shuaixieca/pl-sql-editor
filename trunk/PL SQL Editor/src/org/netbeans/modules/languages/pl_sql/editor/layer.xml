@@ -55,6 +55,13 @@ made subject to such option by the copyright holder.
             </file>
         </folder>
     </folder>
+    <folder name="Services">
+        <folder name="JavaHelp">
+            <file name="editor-helpset.xml" url="editor-helpset.xml">
+                <attr name="position" stringvalue="3012"/>
+            </file>
+        </folder>
+    </folder>
     <folder name="Windows2">
         <folder name="Components">
             <file name="OracleTopComponent.settings" url="OracleTopComponentSettings.xml"/>

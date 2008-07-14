@@ -21,6 +21,7 @@ import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.UserO
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.BeanTreeView;
+import org.openide.util.HelpCtx;
 import org.openide.util.NbBundle;
 import org.openide.windows.TopComponent;
 import org.openide.windows.WindowManager;
@@ -36,6 +37,7 @@ final class OracleTopComponent extends TopComponent implements ExplorerManager.P
     static final String ICON_PATH = "org/netbeans/modules/languages/pl_sql/editor/resources/Root.png";
     private static final String PREFERRED_ID = "OracleTopComponent";
     private final ExplorerManager mgr = new ExplorerManager();
+    private final static String helpCtx = "org.netbeans.modules.languages.pl_sql.editor.mainwindow";
 
     public ExplorerManager getExplorerManager() {
         return mgr;
@@ -232,6 +234,10 @@ final class OracleTopComponent extends TopComponent implements ExplorerManager.P
     @Override
     protected String preferredID() {
         return PREFERRED_ID;
+    }
+
+    public HelpCtx getHelpCtx() {
+        return new HelpCtx(this.helpCtx);
     }
 
     final static class ResolvableHelper implements Serializable {
