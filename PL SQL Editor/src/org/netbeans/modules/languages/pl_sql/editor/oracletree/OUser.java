@@ -35,7 +35,6 @@ import org.openide.util.ChangeSupport;
 import org.openide.util.Exceptions;
 import org.openide.util.NbBundle;
 import org.openide.util.RequestProcessor;
-import org.openide.util.TaskListener;
 import org.openide.windows.IOProvider;
 import org.openide.windows.InputOutput;
 import org.openide.windows.OutputListener;
@@ -54,24 +53,14 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
     private List<PropertyChangeListener> listeners = Collections.synchronizedList(new LinkedList<PropertyChangeListener>());
     private final ChangeSupport changeSupport = new ChangeSupport(this);
     private OracleConnection conn;
-    private boolean IsConnected,  IsCanceled = false;
-    private boolean progressed = false;
+    private boolean IsConnected = false;
+    private boolean progressed = false,  connecting = false;
     private ConnectionTry ct = null;
     private ObjectAccessed oaccess = ObjectAccessed.User;
     private int OracleMajorVersion;
     private int OracleMinorVersion;
     private String OracleProductVersion = "";
     private OracleDataSource ods = null;
-    private ProgressHandle progressHandle = ProgressHandleFactory.createHandle(null, new Cancellable() {
-
-        public boolean cancel() {
-            IsCanceled = true;
-            OutputMsg(Utils.getBundle().getString("LBL_Canceled"), null, false);
-            progressHandle.finish();
-            progressed = false;
-            return true;
-        }
-    });
 
     public Preferences getPreferencesRoot() {
         return OConnectionClass.getPref_root().node(Parent.getPrefNode()).node(getUserName());
@@ -298,35 +287,6 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
             getio().getOut().close();
         }
     }
-    //private ProgressHandle progressHandle;
-
-    private void startProgress(final String msg) {
-        SwingUtilities.invokeLater(new Runnable() {
-
-            public void run() {
-                try {
-                    progressHandle.setDisplayName(msg);
-                    progressHandle.start();
-                    progressed = true;
-                } catch (IllegalStateException e) {
-                    progressed = false;
-                }
-            }
-        });
-    }
-
-    private void stopProgress() {
-        SwingUtilities.invokeLater(new Runnable() {
-
-            public void run() {
-                progressHandle.finish();
-
-
-
-            }
-        });
-
-    }
 
     private synchronized void EnableHints() {
         if (IsConnected) {
@@ -351,8 +311,10 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
     }
 
     public synchronized void Connect() {
-        ct = new ConnectionTry();
-        ct.post();
+        if (!IsConnected && !connecting && !progressed) {
+            ct = new ConnectionTry();
+            ct.post();
+        }
     }
 
     public synchronized void Disconnect() {
@@ -374,6 +336,17 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
         private RequestProcessor rp;
         private RequestProcessor.Task task;
+        private ProgressHandle progressHandle = ProgressHandleFactory.createHandle(null, new Cancellable() {
+
+            public boolean cancel() {
+                //IsCanceled = true;
+                ct.stop();
+                OutputMsg(Utils.getBundle().getString("LBL_Canceled"), null, false);
+                stopProgress();
+                connecting = false;
+                return true;
+            }
+        });
 
         public ConnectionTry() {
             rp = new RequestProcessor(ConnectionTry.class.getName(), 1, true);
@@ -381,94 +354,56 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
             task = rp.create(new Runnable() {
 
                 public void run() {
-                    if (!IsConnected && !progressed) {
-                        try {
-                            boolean connect = true;
-                            OracleDataSource ods = getOracleDataSource();
-                            if (!getSavePassword()) {
-                                PasswordJPanel pjp = new PasswordJPanel();
-                                pjp.ShowDialog(getUserName());
-                                connect =
-                                        pjp.getisOK();
-                                if (connect) {
-                                    ods.setPassword(pjp.getPassword());
-                                }
-
-                            }
+                    try {
+                        connecting = true;
+                        boolean connect = true;
+                        OracleDataSource ods = getOracleDataSource();
+                        if (!getSavePassword()) {
+                            PasswordJPanel pjp = new PasswordJPanel();
+                            pjp.ShowDialog(getUserName());
+                            connect =
+                                    pjp.getisOK();
                             if (connect) {
-                                String localmsg = NbBundle.getMessage(Utils.getCommonClass(), "LBL_ConnectingToAs", Parent.toString(), UserName);
-                                //progressHandle.setDisplayName(localmsg);
-                                //progressHandle.start();
-                                startProgress(localmsg);
+                                ods.setPassword(pjp.getPassword());
+                            }
 
-                                ods.setConnectionCachingEnabled(true);
-                                java.util.Properties props = ods.getConnectionProperties() == null ? new java.util.Properties() : ods.getConnectionProperties();
-                                props.put(OracleConnection.CONNECTION_PROPERTY_THIN_VSESSION_PROGRAM, "PL/SQL Editor for NetBeans");
-                                ods.setConnectionProperties(props);
+                        }
+                        if (connect) {
+                            String localmsg = NbBundle.getMessage(Utils.getCommonClass(), "LBL_ConnectingToAs", Parent.toString(), UserName);
+                            startProgress(localmsg);
 
-                                java.util.Properties props_cache = new java.util.Properties();
-                                props_cache.setProperty("MaxLimit", "2");
-                                ods.setConnectionCacheProperties(props_cache);
+                            ods.setConnectionCachingEnabled(true);
+                            java.util.Properties props = ods.getConnectionProperties() == null ? new java.util.Properties() : ods.getConnectionProperties();
+                            props.put(OracleConnection.CONNECTION_PROPERTY_THIN_VSESSION_PROGRAM, "PL/SQL Editor for NetBeans");
+                            ods.setConnectionProperties(props);
 
-                                OutputMsg(localmsg, null, false);
-                                conn =
-                                        (OracleConnection) ods.getConnection();
+                            java.util.Properties props_cache = new java.util.Properties();
+                            props_cache.setProperty("MaxLimit", "2");
+                            ods.setConnectionCacheProperties(props_cache);
+
+                            OutputMsg(localmsg, null, false);
+                            conn =
+                                    (OracleConnection) ods.getConnection();
+                            if (conn != null && !conn.isClosed()) {
                                 setIsConnected(true);
                                 OutputMsg(NbBundle.getMessage(Utils.getCommonClass(), "LBL_ConnectedAs", UserName), null, false);
                                 EnableHints();
                                 notifyChange();
                                 conn.close();
                             }
-
-                        } catch (SQLException ex) {
-                            setIsConnected(false);
-                            if (!IsCanceled) {
-                                OutputMsg(ex.getMessage(), null, true);
-                            }
-                            if (progressed) {
-                                //progressHandle.finish();
-                                stopProgress();
-                                progressed =
-                                        false;
-                            }
-                        } finally {
-                            if (IsCanceled) {
-                                if (IsConnected) {
-                                    try {
-                                        conn.close();
-                                    } catch (SQLException ex) {
-                                        OutputMsg(ex.getMessage(), null, true);
-                                    } finally {
-                                        setIsConnected(false);
-                                    }
-
-                                }
-                                IsCanceled = false;
-                            }
-
-                            if (progressed) {
-                                //progressHandle.finish();
-                                stopProgress();
-                                progressed =
-                                        false;
-                            }
-
                         }
+
+                    } catch (SQLException ex) {
+                        setIsConnected(false);
+                        if (progressed) {
+                            OutputMsg(ex.getMessage(), null, true);
+                        }
+                    } finally {
+                        stopProgress();
+                        connecting = false;
                     }
                 }
             });
-
-            task.addTaskListener(
-                    new TaskListener() {
-
-                        public void taskFinished(org.openide.util.Task arg0) {
-                            if (!IsCanceled) {
-                                //stopProgress(msg, connected);
-                                //ChangeTestButton();
-                                ct = null;
-                            }
-                        }
-                    });
         }
 
         public void post() {
@@ -477,8 +412,52 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
 
         public void stop() {
             task.cancel();
-            IsCanceled = true;
-            ct = null;
+            if (conn != null) {
+                try {
+                    conn.cancel();
+                    conn = null;
+                } catch (SQLException ex) {
+                    //Exceptions.printStackTrace(ex);
+                }
+            }
+            if (ods != null) {
+                try {
+                    ods.close();
+                    ods = null;
+                } catch (SQLException ex) {
+                    //Exceptions.printStackTrace(ex);
+                }
+            }
+        }
+
+        private void startProgress(final String msg) {
+            SwingUtilities.invokeLater(new Runnable() {
+
+                public void run() {
+                    try {
+                        progressHandle.setDisplayName(msg);
+                        progressHandle.start();
+                        progressed = true;
+                    } catch (IllegalStateException e) {
+                        progressed = false;
+                        Exceptions.printStackTrace(e);
+                    }
+                }
+            });
+        }
+
+        private void stopProgress() {
+            SwingUtilities.invokeLater(new Runnable() {
+
+                public void run() {
+                    if (progressed) {
+                        progressHandle.finish();
+                        progressed = false;
+                    //progressHandle = null;
+                    }
+                }
+            });
+
         }
     }
 

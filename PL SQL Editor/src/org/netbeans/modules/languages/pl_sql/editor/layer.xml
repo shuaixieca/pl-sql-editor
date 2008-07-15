@@ -74,11 +74,4 @@ made subject to such option by the copyright holder.
             </folder>
         </folder>
     </folder>
-    <!--folder name="Toolbars">
-        <folder name="Edit">
-            <file name="org-netbeans-modules-languages-pl_sql-editor-explorer-nodes-actions-RefreshAction.instance">
-                <attr name="position" intvalue="10"/>
-            </file>
-        </folder>
-    </folder-->
 </filesystem>
