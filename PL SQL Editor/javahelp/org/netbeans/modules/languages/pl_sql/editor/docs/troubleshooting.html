@@ -12,7 +12,24 @@
     </head>
     <body>
         <h2>Troubleshooting</h2>
-        
+        <ul>
+            <li>
+                To parse PL/SQL code first time PL/SQL Language module 
+                required about 500MB heap memory free. If memory is not enough the 
+                Out of Memory exception is occurred.
+                <p>
+                    <strong>Solution: </strong>Set “ -J-Xmx512m” option for 
+                    launcher modifying /etc/*.conf file.
+                </p>
+            </li>
+            <li>
+                Sometimes PL/SQL Language module report an error in valid PL/SQL code.
+                <p>
+                    <strong>Solution: </strong>Please, create a new Issue on project homepage.
+                    Thank you!
+                </p>
+            </li>
+        </ul>
         <p></p><hr>
         <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
             <param name="content" value="http://code.google.com/p/pl-sql-editor">
