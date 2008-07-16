@@ -1,3 +1,8 @@
+# PL/SQL Language definition based on Oracle 11g syntax
+# Author: Alexandre Soumbatov
+# Homepage: http://code.google.com/p/pl-sql-editor/
+
+### Tokens ###
 TOKEN:block_comment: ("/*" - "*/")
 TOKEN:line_comment: ( "--"i [^ "\n" "\r"]* )
 TOKEN:whitespace:( [" " "\t" "\n" "\r"]+ )
@@ -58,6 +63,7 @@ TOKEN:second_type: ( "SECOND"i
     ( "(" "+"? ["0"-"9"] ")" )?
 )
 
+### SQL keywords ###
 TOKEN:keyword: (
     "." | "FROM"i | "WHERE"i | "GROUP BY"i | "ORDER BY"i | 
     "PRIOR"i | "CONNECT_BY_ROOT"i | "CONNECT"i | "START"i |
@@ -65,6 +71,9 @@ TOKEN:keyword: (
     "MULTISET INTERSECT"i | "MULTISET UNION"i |
     "ANY"i | "SOME"i | "ALL"i | "ESCAPE"i
 )
+
+### Because PL/SQL is case-insensitive language every PL/SQL keyword defined separately. ###
+### Very inconvenient! ###
 TOKEN:begin_keyword: ( "BEGIN"i )
 TOKEN:end_keyword: ( "END"i )
 TOKEN:declare_keyword: ( "DECLARE"i )
@@ -222,26 +231,17 @@ TOKEN:comma: ( "," )
 TOKEN:param_value: ( "=>" )
 TOKEN:quotation_mark: ( "\"" )
 
+### the rest of ###
 TOKEN:the_rest: ( . )
 
+### Grammar ###
 SKIP:whitespace
 SKIP:block_comment
 SKIP:line_comment
 SKIP:wrapped
 SKIP:the_rest
 
-#FOLD:block_comment: {
-#    fold_display_name:"LBL_Comment";
-#    expand_type_action_name:"Expand Comments";
-#    collapse_type_action_name:"Collapse Comments"; 
-#}
-#FOLD:block_comment: {
-#    fold_display_name:"LBL_HTML_Comment";
-#    expand_type_action_name:"LBL_Expand_HTML_Comment";
-#    collapse_type_action_name:"LBL_Collapse_HTML_Comment";
-#} 
-
-# Grammar 
+### S - grammar root element ###
 #S = (Source_Element)*;
 S = Source_Element;
 Source_Element = Anonymous_Block | 
@@ -363,7 +363,8 @@ SQL_Not_Parsed2 = <exists_keyword> | <replace_keyword> |
                <string> | <comma> | <and_operator> | <or_operator> | <not_operator> |
                <is_not_null_keyword> | <is_null_keyword> | <null_keyword> | <like_keyword> | 
                SQL_Statements | SQL_Not_Parsed | ("(" (SQL_Not_Parsed)* ")");
-#SQL Statements
+
+### SQL Statements ###
 Select_Statement = <select_keyword> (SQL_Not_Parsed | (<for_keyword> <update_keyword>))+;
 Commit_Statement = <commit_keyword> [SQL_Not_Parsed];
 Delete_Statement = <delete_keyword> (SQL_Not_Parsed)+;
@@ -376,7 +377,8 @@ Rollback_Statement = <rollback_keyword> [SQL_Not_Parsed];
 Savepoint_Statement = <savepoint_keyword> Identifier;
 Set_Transaction_Statement = <set_keyword> <transaction_keyword> (SQL_Not_Parsed)+;
 Update_Statement = <update_keyword> (SQL_Not_Parsed)+;
-# PL/SQL Statements
+
+### PL/SQL Statements ###
 Goto_Statement = <goto_keyword> Identifier;
 Return_Statement = <return_keyword> [Expression];
 If_Statement = <if_keyword> Expression <then_keyword> (Executable_Section)+
@@ -472,6 +474,7 @@ Cursor_Parameter = Identifier [<in_keyword>] Data_Type [Variable_Def_Part Expres
 
 Special_datatype = (Identifier | <ext_identifier>) (<like_type_keyword> | <rowtype_keyword>);
 
+### expression ###
 #Expression = Boolean_expression | String_expression | Numeric_expression;
 Expression = Universal_expression;
 #Expression_In_Declare = String_expression | Boolean_Expression | Numeric_expression | Special_expression;# [Universal_Identifier];
@@ -496,6 +499,9 @@ Sub_Identifier_factor = Universal_Identifier [<notfound_keyword> | <found_keywor
                         <isopen_keyword> | <rowcount_keyword> | In_NotIn_Expression];
 Call_Statement_Param = ("(" [Universal_expression ("," Universal_expression )*] ")") |
                        ("(" Identifier "=>" Universal_expression ("," Identifier "=>" Universal_expression )* ")" );
+Exception_Section = <exception_keyword> (Exception_Handler)+;
+Exception_Handler = <when_keyword> Universal_Identifier (<or_operator> Universal_Identifier)*
+                    <then_keyword> (Executable_Section)+;
 
 #Universal_expression = [Call_Statement ","] [Universal_operators] Universal_term (Universal_operators Universal_term )*;
 #Universal_term = Universal_factor (Universal_operators Universal_factor)*;
@@ -520,14 +526,7 @@ Call_Statement_Param = ("(" [Universal_expression ("," Universal_expression )*] 
 #Boolean_term = Boolean_factor (<and_operator> (<operator, "(">)* [<not_operator> (<operator, "(">)*] Boolean_factor)*;
 #Boolean_factor = (<true_keyword> | <false_keyword> | Identifier | <ext_identifier>) (<operator, ")">)*;
 		
-Exception_Section = <exception_keyword> (Exception_Handler)+;
-Exception_Handler = <when_keyword> Universal_Identifier (<or_operator> Universal_Identifier)*
-                    <then_keyword> (Executable_Section)+;
-#Block = (Statement)*;
-#gr_begin_stm = "BEGIN";
-#ConditionalExpression = Identifier;
-#ExpressionStatement = Identifier;
-
+### code folding ###
 FOLD:Block: { fold_display_name:"begin...end"; }
 FOLD:block_comment: { fold_display_name:"/*...*/"; }
 FOLD:Function_Declaration: { fold_display_name:"function"; }
@@ -535,49 +534,60 @@ FOLD:Procedure_Declaration: { fold_display_name:"procedure"; }
 FOLD:If_Statement: { fold_display_name:"if...end if"; }
 FOLD:Loop_Statement: { fold_display_name:"loop...end loop"; }
 FOLD:Case_Statement_Expression: { fold_display_name:"case...end case"; }
-#FOLD:Anonymous_Block: { fold_display_name:"begin...end"; }
 
+### brace matching ###
 BRACE "(:)"
 BRACE "[:]"
 
+### code completion ###
 COMPLETE "/*:*/"
 COMPLETE "<<:>>"
 COMPLETE "(:)"
 COMPLETE "[:]"
-#COMPLETE "loop_keyword:end_loop_keyword"
 
-#INDENT "<begin_keyword>:<end_keyword>" 
+### indentation ###
 INDENT "(:)"
 INDENT "[:]"
+INDENT "begin:end"
+INDENT "BEGIN:END"
 INDENT "if:end if"
+INDENT "then:else"
+INDENT "IF:END IF"
+INDENT "THEN:ELSE"
+INDENT "loop:end loop"
+INDENT "LOOP:END LOOP"
+INDENT "case:end case"
+INDENT "CASE:END CASE"
+#INDENT "\\s*(((if|while)\\s*\\(then|else\\s*|else\\s+if\\s*\\(|for\\s*\\(.*\\))[^{;]*)" 
 
+### navigator ###
 NAVIGATOR:Function_Spec: {
     display_name: "<html><font color=808080>function</font> $Function_Name$</html>";
-    icon: "org/netbeans/modules/languages/pl_sql/FunctionsObj.png";
+    icon: "org/netbeans/modules/languages/pl_sql/images/FunctionsObj.png";
 }
 NAVIGATOR:Procedure_Spec: {
     display_name: "<html><font color=808080>procedure</font> $Procedure_Name$</html>";
-    icon: "org/netbeans/modules/languages/pl_sql/ProceduresObj.png";
+    icon: "org/netbeans/modules/languages/pl_sql/images/ProceduresObj.png";
 }
 NAVIGATOR:Package_Spec: {
     display_name: "<html><font color=808080>package</font> $Package_Spec_Name$</html>";
-    icon: "org/netbeans/modules/languages/pl_sql/PackagesObj.png";
+    icon: "org/netbeans/modules/languages/pl_sql/images/PackagesObj.png";
 }
 NAVIGATOR:Package_Body: {
     display_name: "<html><font color=808080>package body</font> $Package_Body_Name$</html>";
-    icon: "org/netbeans/modules/languages/pl_sql/PackagesBodyObj.png";
+    icon: "org/netbeans/modules/languages/pl_sql/images/PackagesBodyObj.png";
 }
 NAVIGATOR:Trigger_Declaration: {
     display_name: "<html><font color=808080>trigger</font> $Trigger_Name$</html>";
-    icon: "org/netbeans/modules/languages/pl_sql/TriggersObj.png";
+    icon: "org/netbeans/modules/languages/pl_sql/images/TriggersObj.png";
 }
 NAVIGATOR:Type_Spec_Declaration: {
     display_name: "<html><font color=808080>type</font> $Type_Spec_Name$</html>";
-    icon: "org/netbeans/modules/languages/pl_sql/TypesObj.png";
+    icon: "org/netbeans/modules/languages/pl_sql/images/TypesObj.png";
 }
 NAVIGATOR:Type_Body_Declaration: {
     display_name: "<html><font color=808080>type body</font> $Type_Body_Name$</html>";
-    icon: "org/netbeans/modules/languages/pl_sql/TypesBodyObj.png";
+    icon: "org/netbeans/modules/languages/pl_sql/images/TypesBodyObj.png";
 }
 #NAVIGATOR:Parameter_Declaration: {
 #    display_name: "<html><font color=808080>parameters</font></html>";
