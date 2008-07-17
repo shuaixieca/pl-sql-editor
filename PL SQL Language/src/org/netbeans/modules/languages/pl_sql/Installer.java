@@ -4,6 +4,7 @@
  */
 package org.netbeans.modules.languages.pl_sql;
 
+import javax.swing.JOptionPane;
 import org.openide.modules.ModuleInstall;
 import org.openide.util.NbBundle;
 
@@ -21,6 +22,9 @@ public class Installer extends ModuleInstall {
         long heapMaxSize = Runtime.getRuntime().maxMemory();
         if (heapMaxSize < REQ_MEMORY) {
             String msg = NbBundle.getMessage(Installer.class, "LBL_Memory", heapMaxSize / 1024 / 1024);
+            JOptionPane.showMessageDialog(null, msg,
+                    NbBundle.getMessage(Installer.class, "error"), JOptionPane.ERROR_MESSAGE);
+            //LifecycleManager.getDefault().exit();
             throw new IllegalStateException(msg);
         }
     }
