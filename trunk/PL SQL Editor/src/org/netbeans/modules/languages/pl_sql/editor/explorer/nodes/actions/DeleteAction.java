@@ -4,10 +4,8 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions;
 
-import java.awt.event.KeyEvent;
 import java.io.IOException;
 import javax.swing.JOptionPane;
-import javax.swing.KeyStroke;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
 import org.openide.nodes.Node;
@@ -27,10 +25,9 @@ public class DeleteAction extends CookieAction {
         DeleteCookieInterface.class
     };
 
-    public DeleteAction() {
-        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0));
-    }
-
+    /*public DeleteAction() {
+    putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0));
+    }*/
     @Override
     protected int mode() {
         return MODE_EXACTLY_ONE;

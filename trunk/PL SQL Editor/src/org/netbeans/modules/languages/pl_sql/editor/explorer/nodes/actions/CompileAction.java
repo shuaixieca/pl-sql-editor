@@ -4,10 +4,8 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions;
 
-import java.awt.event.KeyEvent;
 import java.util.HashSet;
 import java.util.Set;
-import javax.swing.KeyStroke;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.openide.nodes.Node;
 import org.openide.util.HelpCtx;
@@ -22,10 +20,6 @@ public class CompileAction extends CookieAction {
     private static final Class[] COOKIE_CLASSES = new Class[]{
         CompileCookieInterface.class
     };
-
-    public CompileAction() {
-        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_F9, KeyEvent.CTRL_DOWN_MASK));
-    }
 
     @Override
     protected int mode() {
