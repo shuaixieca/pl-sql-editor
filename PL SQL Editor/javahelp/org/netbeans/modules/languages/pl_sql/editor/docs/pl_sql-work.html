@@ -12,16 +12,38 @@
     </head>
     <body>
         <h2>Working with PL/SQL code</h2>
-        <p>
-            To edit object code you should locate object in Browser
-            and choose <strong>Edit</strong> from <strong>Popup Menu</strong>.
-            First time the program will ask you where
-            to save object code in file system. Next time when you would like 
-            to edit the object code program automatically <strong>overwrite</strong>
-            local file with object code from the database. To change location 
-            of local file you should choose <strong>Properties</strong> 
-            from object <strong>Popup Menu</strong> and modify 
-            <strong>Local File</strong> property.
+        <p><strong>To edit</strong> PL/SQL code of existing object 
+            you should locate it in Explorer and choose <strong>Edit</strong>
+            from <strong>Popup Menu</strong>. First time the program will ask you 
+            where to save object code in the local file system. Next time when 
+            you would like to edit the same object program will 
+            automatically <strong>overwrite</strong> local file with 
+            the PL/SQL object code from the database. To change location 
+            of local file representing your database object you should 
+            choose <strong>Properties</strong> from the object 
+            <strong>Popup Menu</strong> and modify <strong>Local File</strong> property.
+            <br>
+            <strong>To create a new object</strong> you should locate appropriate object 
+            type in Explorer and choose <strong>Add</strong> from <strong>Popup Menu</strong>. 
+            Program asks for new object name and where to save object code 
+            in the local file system. Then program automatically compiles 
+            your new code in the database and shows it in the editor window.
+            <br>
+            <strong>Invalid database objects</strong> are marked with “x” icon, 
+            object name is in red color.
+            <br>
+            To compile PL/SQL object within the database use <strong>Compile</strong> 
+            from object <strong>Popup Menu</strong>. To compile PL/SQL object 
+            from your local file select <strong>Compile Local File</strong> from 
+            object <strong>Popup Menu</strong>. This action will save your PL/SQL code 
+            in the local file system and then compile it in the database.
+            If this action is disabled you need to set 
+            the <strong>Local File</strong> property.
+            <br>
+            <strong>To drop</strong> an existing database object you should click 
+            on <strong>Delete</strong> from object <strong>Popup Menu</strong>.
+            Database object will be dropped, but corresponding local file (if exists)
+            will be only closed. So you have a chance to restore deleted object later.
         </p>
         <p>
             You can adjust the fonts that are used in the PL/SQL Source Editor 

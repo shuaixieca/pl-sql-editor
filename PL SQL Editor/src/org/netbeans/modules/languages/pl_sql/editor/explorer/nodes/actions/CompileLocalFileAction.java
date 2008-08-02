@@ -24,7 +24,7 @@ public class CompileLocalFileAction extends CookieAction {
     };
 
     public CompileLocalFileAction() {
-        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_F9, 0));
+        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_F9, KeyEvent.CTRL_DOWN_MASK));
     }
 
     @Override

@@ -4,8 +4,6 @@
  */
 package org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions;
 
-import java.awt.event.KeyEvent;
-import javax.swing.KeyStroke;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.openide.nodes.Node;
 import org.openide.util.HelpCtx;
@@ -22,10 +20,9 @@ public class AddAction extends CookieAction {
         AddCookieInterface.class
     };
 
-    public AddAction() {
-        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_INSERT, 0));
-    }
-
+    /*public AddAction() {
+    putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_INSERT, 0));
+    }*/
     @Override
     protected int mode() {
         return MODE_EXACTLY_ONE;
