@@ -4,6 +4,7 @@
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="1"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
     <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="true"/>
     <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="2"/>
@@ -18,8 +19,8 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="connectProgressPanel" alignment="0" pref="261" max="32767" attributes="0"/>
                   <Component id="UserjPanel" alignment="0" max="32767" attributes="0"/>
+                  <Component id="connectProgressPanel" alignment="0" pref="299" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="DatabaseNamejLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -56,9 +57,9 @@
                   <Component id="DatabaseNamejLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="DatabseNamejTextField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Component id="UserjPanel" min="-2" pref="131" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="UserjPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="connectProgressPanel" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -125,15 +126,15 @@
                               <Component id="SavePasswordjCheckBox" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="ConnectAsjComboBox" pref="164" max="32767" attributes="0"/>
+                                  <Component id="ConnectAsjComboBox" pref="170" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="UserNamejTextField" alignment="0" pref="164" max="32767" attributes="0"/>
+                              <Component id="UserNamejTextField" alignment="0" pref="170" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="PasswordjLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="PasswordjPasswordField" pref="166" max="32767" attributes="0"/>
+                          <Component id="PasswordjPasswordField" pref="183" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
