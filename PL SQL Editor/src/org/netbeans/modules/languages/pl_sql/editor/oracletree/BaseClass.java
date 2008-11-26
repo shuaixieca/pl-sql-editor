@@ -34,7 +34,6 @@ import org.openide.util.Exceptions;
 import org.openide.util.NbBundle;
 import org.openide.windows.OutputEvent;
 import org.openide.windows.OutputListener;
-import org.openide.windows.WindowManager;
 
 /**
  *
@@ -187,14 +186,32 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
                 throw new IOException();
             }
         } catch (IOException ex) {
-            JFileChooser fc = new JFileChooser();
-            String filename = this.toString() + '.' + Utils.getFileExtensionByType(ObjectType);
-            fc.setSelectedFile(new File(filename));
-            int ret = fc.showSaveDialog(WindowManager.getDefault().getMainWindow());
-            f = fc.getSelectedFile();
-            if (f == null || ret == JFileChooser.CANCEL_OPTION) {
+            FileObject tmpFo = FileUtil.toFileObject(new JFileChooser().getCurrentDirectory());
+            int i = 1;
+            FileObject sqlFo = null;
+            for (;;) {
+                //String nameFmt = NbBundle.getMessage(SQLEditorProviderImpl.class, "LBL_SQLCommandFileName");
+                //String name = MessageFormat.format(nameFmt, new Object[]{new Integer(i)});
+                try {
+                    sqlFo = tmpFo.createData(this.toString() + ' ' + new Integer(i).toString() + '.' + Utils.getFileExtensionByType(ObjectType));
+                } catch (IOException e) {
+                    i++;
+                    continue;
+                }
+                break;
+            }
+            f = FileUtil.toFile(sqlFo);
+            if (f == null) {
                 return null;
             }
+        /*JFileChooser fc = new JFileChooser();
+        String filename = this.toString() + '.' + Utils.getFileExtensionByType(ObjectType);
+        fc.setSelectedFile(new File(filename));
+        int ret = fc.showSaveDialog(WindowManager.getDefault().getMainWindow());
+        f = fc.getSelectedFile();
+        if (f == null || ret == JFileChooser.CANCEL_OPTION) {
+        return null;
+        }*/
         }
         return f;
     }
