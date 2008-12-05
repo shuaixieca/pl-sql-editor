@@ -1,8 +1,5 @@
 #summary PL/SQL Editor Version History
 
-=== Version 1.0 ^2 August 2008^ === 
-First release.
-
 === Version 1.1 ^5 December 2008^ === 
 *Changes/Fixes:*
  * "Oracle Connection" form - layout problem fixed.
@@ -12,3 +9,6 @@ First release.
 
 *New features:*
  * All plug-in modules are signed now.
+
+=== Version 1.0 ^2 August 2008^ === 
+First release.
