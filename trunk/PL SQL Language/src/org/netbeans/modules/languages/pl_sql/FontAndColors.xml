@@ -158,6 +158,7 @@
     <fontcolor default="keyword" name="result_keyword"/>
     <fontcolor default="keyword" name="map_keyword"/>
     <fontcolor default="keyword" name="order_keyword"/>
+    <fontcolor default="keyword" name="join_keyword"/>
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="separator" name="terminator"/>
