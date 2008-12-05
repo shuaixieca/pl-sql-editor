@@ -4,18 +4,11 @@
 First release.
 
 === Version 1.1 ^5 December 2008^ === 
-*Changes/Fixes*
-"Oracle Connection" form - layout problem fixed.
-No more questions where locally save PL/SQL objects but still possible to change in the objects property form. Default folder is the user’s document directory.
-Issue 3:	PL/SQL editor does not support JOIN expressions
-Bundled Oracle JDBC driver is upgraded to version 11.1.0.7.0 (was 11.1.0.6.0)
+*Changes/Fixes:*
+ * "Oracle Connection" form - layout problem fixed.
+ * No more questions where locally save PL/SQL objects but still possible to change in the objects property form. Default folder is the user’s document directory.
+ * Issue 3: PL/SQL editor does not support JOIN expressions
+ * Bundled Oracle JDBC driver is upgraded to version 11.1.0.7.0 (was 11.1.0.6.0)
 
-New features:
-All plug-in modules are signed now.
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+*New features:*
+ * All plug-in modules are signed now.
