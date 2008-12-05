@@ -187,13 +187,19 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
             }
         } catch (IOException ex) {
             FileObject tmpFo = FileUtil.toFileObject(new JFileChooser().getCurrentDirectory());
-            int i = 1;
+            int i = 0;
+            StringBuilder s = new StringBuilder();
             FileObject sqlFo = null;
             for (;;) {
                 //String nameFmt = NbBundle.getMessage(SQLEditorProviderImpl.class, "LBL_SQLCommandFileName");
                 //String name = MessageFormat.format(nameFmt, new Object[]{new Integer(i)});
                 try {
-                    sqlFo = tmpFo.createData(this.toString() + ' ' + new Integer(i).toString() + '.' + Utils.getFileExtensionByType(ObjectType));
+                    s.setLength(0);
+                    s.append(this.toString());
+                    s.append((i == 0) ? "" : ' ' + new Integer(i).toString());
+                    s.append('.');
+                    s.append(Utils.getFileExtensionByType(ObjectType));
+                    sqlFo = tmpFo.createData(s.toString());
                 } catch (IOException e) {
                     i++;
                     continue;
