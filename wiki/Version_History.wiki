@@ -1,4 +1,4 @@
-#summary PL/SQL Editor Version History.
+#summary PL/SQL Editor Version History
 
 = Introduction =
 
