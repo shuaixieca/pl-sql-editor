@@ -215,6 +215,7 @@ TOKEN:self_keyword: ( "SELF"i )
 TOKEN:result_keyword: ( "RESULT"i )
 TOKEN:map_keyword: ( "MAP"i )
 TOKEN:order_keyword: ( "ORDER"i )
+TOKEN:join_keyword: ( "JOIN"i )
   
 TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z" "%"]* )
 TOKEN:ext_identifier:( 
@@ -357,7 +358,7 @@ SQL_Not_Parsed = SQL_Not_Parsed1 | SQL_Not_Parsed2 | <the_rest>;
 SQL_Not_Parsed1 = <alias> | <keyword> | SQL_Operator | <into_keyword> | <in_keyword> | <not_in_keyword> |
                <as_keyword> | <values_keyword> | <between_keyword> | <some_types> |
                <bulk_keyword> | <collect_keyword> | <returning_keyword> | <row_keyword> |
-               <set_keyword> | <by_keyword> | <with_keyword> | <table_keyword>; 
+               <set_keyword> | <by_keyword> | <with_keyword> | <table_keyword> | <join_keyword>; 
 SQL_Not_Parsed2 = <exists_keyword> | <replace_keyword> |
                <number_unsigned> | <count_keyword> | Universal_Identifier | Case_Statement_Expression |
                <string> | <comma> | <and_operator> | <or_operator> | <not_operator> |
@@ -365,7 +366,7 @@ SQL_Not_Parsed2 = <exists_keyword> | <replace_keyword> |
                SQL_Statements | SQL_Not_Parsed | ("(" (SQL_Not_Parsed)* ")");
 
 ### SQL Statements ###
-Select_Statement = <select_keyword> (SQL_Not_Parsed | (<for_keyword> <update_keyword>))+;
+Select_Statement = <select_keyword> ((SQL_Not_Parsed | <on_keyword>) | (<for_keyword> <update_keyword>))+;
 Commit_Statement = <commit_keyword> [SQL_Not_Parsed];
 Delete_Statement = <delete_keyword> (SQL_Not_Parsed)+;
 Insert_Statement = <insert_keyword> (SQL_Not_Parsed)+;
