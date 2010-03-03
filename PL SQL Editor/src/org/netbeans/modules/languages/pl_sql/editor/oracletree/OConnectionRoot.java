@@ -58,7 +58,7 @@ public class OConnectionRoot implements RefreshCookieInterface, AddCookieInterfa
             try {
                 for (String c : OConnectionClass.pref_root.childrenNames()) {
                     Preferences pref = OConnectionClass.pref_root.node(c);
-                    OConnectionClass ocl = new OConnectionClass(c, pref.get("ServerName", ""), pref.getInt("Port", 1521), pref.get("DatabaseName", ""));
+                    OConnectionClass ocl = new OConnectionClass(c, pref.get("ServerName", ""), pref.getInt("Port", 1521), pref.get("DatabaseName", ""), pref.get("ConnectionType", "SID"));
                     ocl.Refresh();
                     Connections.add(ocl);
                 }
