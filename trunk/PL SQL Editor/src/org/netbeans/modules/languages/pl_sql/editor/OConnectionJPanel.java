@@ -32,7 +32,7 @@ import org.openide.util.TaskListener;
  * @author  SUMsoft
  */
 public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Provider {
-
+;
     private final static String helpCtx = "org.netbeans.modules.languages.pl_sql.editor.connect";
 
     /** Creates new form OConnectionJPanel */
@@ -53,7 +53,6 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
         ServerNamejTextField = new javax.swing.JTextField();
         PortjLabel = new javax.swing.JLabel();
         PortjTextField = new javax.swing.JTextField();
-        DatabaseNamejLabel = new javax.swing.JLabel();
         DatabseNamejTextField = new javax.swing.JTextField();
         UserjPanel = new javax.swing.JPanel();
         UserNamejLabel = new javax.swing.JLabel();
@@ -66,14 +65,13 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
         connectProgressPanel = new javax.swing.JPanel();
         progressMessageLabel = new javax.swing.JLabel();
         progressContainerPanel = new javax.swing.JPanel();
+        DBTypejComboBox = new javax.swing.JComboBox();
 
         ServerNamejLabel.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.ServerNamejLabel.text")); // NOI18N
 
         PortjLabel.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.PortjLabel.text")); // NOI18N
 
         PortjTextField.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.PortjTextField.text")); // NOI18N
-
-        DatabaseNamejLabel.setText(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.DatabaseNamejLabel.text")); // NOI18N
 
         UserjPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(OConnectionJPanel.class, "OConnectionJPanel.UserjPanel.border.title"))); // NOI18N
 
@@ -103,12 +101,12 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
                             .add(SavePasswordjCheckBox)
                             .add(org.jdesktop.layout.GroupLayout.LEADING, UserjPanelLayout.createSequentialGroup()
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(ConnectAsjComboBox, 0, 170, Short.MAX_VALUE))
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, UserNamejTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)))
+                                .add(ConnectAsjComboBox, 0, 202, Short.MAX_VALUE))
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, UserNamejTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)))
                     .add(UserjPanelLayout.createSequentialGroup()
                         .add(PasswordjLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(PasswordjPasswordField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)))
+                        .add(PasswordjPasswordField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         UserjPanelLayout.setVerticalGroup(
@@ -140,6 +138,8 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
         progressContainerPanel.setLayout(new java.awt.BorderLayout());
         connectProgressPanel.add(progressContainerPanel, java.awt.BorderLayout.CENTER);
 
+        DBTypejComboBox.setModel(new javax.swing.DefaultComboBoxModel( ConnectionTypes.values()));
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -151,14 +151,14 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
                     .add(org.jdesktop.layout.GroupLayout.LEADING, connectProgressPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.LEADING, layout.createSequentialGroup()
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(DatabaseNamejLabel)
                             .add(PortjLabel)
-                            .add(ServerNamejLabel))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                            .add(ServerNamejLabel)
+                            .add(DBTypejComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(6, 6, 6)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(ServerNamejTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, PortjTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                            .add(DatabseNamejTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE))))
+                            .add(ServerNamejTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, PortjTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                            .add(DatabseNamejTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -174,8 +174,8 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
                     .add(PortjTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(DatabaseNamejLabel)
-                    .add(DatabseNamejTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(DatabseNamejTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(DBTypejComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(UserjPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -187,7 +187,7 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox ConnectAsjComboBox;
     private javax.swing.JLabel ConnectAsjLabel;
-    private javax.swing.JLabel DatabaseNamejLabel;
+    private javax.swing.JComboBox DBTypejComboBox;
     private javax.swing.JTextField DatabseNamejTextField;
     private javax.swing.JLabel PasswordjLabel;
     private javax.swing.JPasswordField PasswordjPasswordField;
@@ -209,7 +209,8 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
     private final String[] str = {Utils.getBundle().getString("LBL_Test"),
         Utils.getBundle().getString("LBL_Save"),
         Utils.getBundle().getString("LBL_Cancel")/*,
-        Utils.getBundle().getString("LBL_Help")*/
+    Utils.getBundle().getString("LBL_Help")*/
+
     };
     private String OConnPrefNode = null;
 
@@ -243,6 +244,14 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
 
     public String getServerName() {
         return ServerNamejTextField.getText();
+    }
+
+    public ConnectionTypes getConnectionType() {
+        return (ConnectionTypes) DBTypejComboBox.getSelectedItem();
+    }
+
+    public void setConnectionType(ConnectionTypes ctype) {
+        DBTypejComboBox.setSelectedItem(ctype);
     }
 
     public int getPort() {
@@ -308,7 +317,7 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
             }
             if (e.getActionCommand().compareTo(Utils.getBundle().getString("LBL_Save")) == 0) {
                 if (Validate()) {
-                    OConnectionClass ocs = new OConnectionClass(OConnPrefNode, getServerName(), getPort(), getDatabaseName(),
+                    OConnectionClass ocs = new OConnectionClass(OConnPrefNode, getServerName(), getPort(), getDatabaseName(), getConnectionType().toString(),
                             getUserName(), getPassword(), getSaveUserPassword(), getConnectRole());
                     ocs.SaveConnection();
                     ocs.SaveAllUsers();
@@ -325,7 +334,7 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
                                     Utils.getBundle().getString("LBL_InputError"), JOptionPane.ERROR_MESSAGE);
                             return;
                         }
-                        OConnectionClass ocs = new OConnectionClass(null, getServerName(), getPort(), getDatabaseName(),
+                        OConnectionClass ocs = new OConnectionClass(null, getServerName(), getPort(), getDatabaseName(), getConnectionType().toString(),
                                 getUserName(), getPassword(), true, getConnectRole());
 
                         tc = new TestConnection(ocs);
@@ -340,14 +349,14 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
                 testbtn = (javax.swing.JButton) dlg.getFocusOwner();
                 ChangeTestButton();
             }
-            /*if (e.getActionCommand().compareTo(Utils.getBundle().getString("LBL_Help")) == 0) {
-                Help help = (Help) Lookup.getDefault().lookup(Help.class);
-                if (help != null && help.isValidID(helpCtx, true).booleanValue()) {
-                    help.showHelp(new HelpCtx(helpCtx));
-                } else {
-                    Toolkit.getDefaultToolkit().beep();
-                }
-            }*/
+        /*if (e.getActionCommand().compareTo(Utils.getBundle().getString("LBL_Help")) == 0) {
+        Help help = (Help) Lookup.getDefault().lookup(Help.class);
+        if (help != null && help.isValidID(helpCtx, true).booleanValue()) {
+        help.showHelp(new HelpCtx(helpCtx));
+        } else {
+        Toolkit.getDefaultToolkit().beep();
+        }
+        }*/
         }
     };
     private ProgressHandle progressHandle;
@@ -428,6 +437,7 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
         this.DatabseNamejTextField.setEnabled(false);
         this.PortjTextField.setEnabled(false);
         this.ServerNamejTextField.setEnabled(false);
+        this.DBTypejComboBox.setEnabled(false);
         UserNamejTextField.transferFocus();
     }
 
@@ -448,6 +458,7 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
             setServerName(ocs.getServerName());
             setPort(ocs.getPort());
             setDatabseName(ocs.getDatabaseName());
+            setConnectionType(ocs.getConnectionType());
             if (ocs.getUsers().size() > 0) {
                 setUserName(ocs.getUsers().first().getUserName());
                 setSavePassword(ocs.getUsers().first().getSavePassword());
@@ -464,6 +475,7 @@ public class OConnectionJPanel extends javax.swing.JPanel implements HelpCtx.Pro
             setServerName(ocs.getParent().getServerName());
             setPort(ocs.getParent().getPort());
             setDatabseName(ocs.getParent().getDatabaseName());
+            setConnectionType(ocs.getParent().getConnectionType());
             setUserName(ocs.getUserName());
             setSavePassword(ocs.getSavePassword());
             setPassword(ocs.getPassword());

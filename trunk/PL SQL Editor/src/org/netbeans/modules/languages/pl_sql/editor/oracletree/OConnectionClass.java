@@ -16,6 +16,7 @@ import java.util.TreeSet;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 import javax.swing.event.ChangeListener;
+import org.netbeans.modules.languages.pl_sql.editor.ConnectionTypes;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.AddCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.DeleteCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.EditCookieInterface;
@@ -34,6 +35,7 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
         DeleteCookieInterface, EditCookieInterface {
 
     private String ServerName,  DatabaseName,  PrefNodeName = null;
+    private ConnectionTypes ConnectionType;
     private int Port = 1521;
     private TreeSet<OUser> Users = new TreeSet<OUser>(new OUserComp());
     protected static final Preferences pref_root = NbPreferences.forModule(OConnectionClass.class).node("oroot");
@@ -47,10 +49,11 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
         }
     }
 
-    public OConnectionClass(String OPrefNodeName, String OServerName, int OPort, String ODatabaseName) {
+    public OConnectionClass(String OPrefNodeName, String OServerName, int OPort, String ODatabaseName, String ConnectionType) {
         ServerName = OServerName;
         Port = OPort;
         DatabaseName = ODatabaseName;
+        this.ConnectionType = ConnectionTypes.valueOf(ConnectionType);
         if (OPrefNodeName == null) {
             PrefNodeName = String.valueOf(this.toString().hashCode());
         } else {
@@ -58,8 +61,8 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
         }
     }
 
-    public OConnectionClass(String OPrefNodeName, String OServerName, int OPort, String ODatabaseName, String OUserName, String OPassword, Boolean OSavePassword, RoleTypes OConnectRole) {
-        this(OPrefNodeName, OServerName, OPort, ODatabaseName);
+    public OConnectionClass(String OPrefNodeName, String OServerName, int OPort, String ODatabaseName, String ConnectionType, String OUserName, String OPassword, Boolean OSavePassword, RoleTypes OConnectRole) {
+        this(OPrefNodeName, OServerName, OPort, ODatabaseName, ConnectionType);
 
         Users.add(new OUser(this, OUserName, OPassword, OSavePassword, OConnectRole, ObjectAccessed.User));
     }
@@ -97,6 +100,7 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
         pref.put("ServerName", ServerName);
         pref.putInt("Port", Port);
         pref.put("DatabaseName", DatabaseName);
+        pref.put("ConnectionType", ConnectionType.toString());
         try {
             pref.flush();
         } catch (BackingStoreException ex) {
@@ -136,6 +140,10 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
         return DatabaseName;
     }
 
+    public ConnectionTypes getConnectionType() {
+        return ConnectionType;
+    }
+
     public int getPort() {
         return Port;
     }
@@ -160,6 +168,12 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
         String OldServerName = this.ServerName;
         this.ServerName = ServerName;
         fire("ServerName", OldServerName, ServerName);
+    }
+
+    public void setConnectionType(ConnectionTypes cType) {
+        ConnectionTypes OldConnectionType = this.ConnectionType;
+        this.ConnectionType = cType;
+        fire("ConnectionType", OldConnectionType, ConnectionType);
     }
 
     public TreeSet<OUser> getUsers() {
@@ -224,6 +238,7 @@ public class OConnectionClass implements RefreshCookieInterface, AddCookieInterf
             setDatabaseName(oc.getDatabaseName());
             setPort(oc.getPort());
             setServerName(oc.getServerName());
+            setConnectionType(oc.getConnectionType());
         }
     }
 

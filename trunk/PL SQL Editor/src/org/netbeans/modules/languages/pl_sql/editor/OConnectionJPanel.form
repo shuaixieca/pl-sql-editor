@@ -23,15 +23,15 @@
                   <Component id="connectProgressPanel" alignment="0" pref="299" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="DatabaseNamejLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="PortjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="ServerNamejLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="DBTypejComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ServerNamejTextField" alignment="0" pref="174" max="32767" attributes="0"/>
-                          <Component id="PortjTextField" alignment="1" pref="174" max="32767" attributes="0"/>
-                          <Component id="DatabseNamejTextField" alignment="0" pref="174" max="32767" attributes="0"/>
+                          <Component id="ServerNamejTextField" alignment="0" pref="224" max="32767" attributes="0"/>
+                          <Component id="PortjTextField" alignment="1" pref="224" max="32767" attributes="0"/>
+                          <Component id="DatabseNamejTextField" alignment="0" pref="224" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -54,8 +54,8 @@
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="DatabaseNamejLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="DatabseNamejTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="DBTypejComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="UserjPanel" min="-2" max="-2" attributes="0"/>
@@ -90,13 +90,6 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="DatabaseNamejLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="org/netbeans/modules/languages/pl_sql/editor/Bundle.properties" key="OConnectionJPanel.DatabaseNamejLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
-        </Property>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="DatabseNamejTextField">
     </Component>
     <Container class="javax.swing.JPanel" name="UserjPanel">
@@ -126,15 +119,15 @@
                               <Component id="SavePasswordjCheckBox" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="ConnectAsjComboBox" pref="170" max="32767" attributes="0"/>
+                                  <Component id="ConnectAsjComboBox" pref="202" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="UserNamejTextField" alignment="0" pref="170" max="32767" attributes="0"/>
+                              <Component id="UserNamejTextField" alignment="0" pref="202" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="PasswordjLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="PasswordjPasswordField" pref="183" max="32767" attributes="0"/>
+                          <Component id="PasswordjPasswordField" pref="204" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -244,5 +237,12 @@
         </Container>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JComboBox" name="DBTypejComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel( ConnectionTypes.values())" type="code"/>
+        </Property>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

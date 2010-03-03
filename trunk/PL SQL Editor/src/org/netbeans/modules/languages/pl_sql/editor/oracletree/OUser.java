@@ -23,6 +23,7 @@ import oracle.jdbc.OracleDatabaseMetaData;
 import oracle.jdbc.pool.OracleDataSource;
 import org.netbeans.api.progress.ProgressHandle;
 import org.netbeans.api.progress.ProgressHandleFactory;
+import org.netbeans.modules.languages.pl_sql.editor.ConnectionTypes;
 import org.netbeans.modules.languages.pl_sql.editor.Utils;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ChangeOAccessCookieInterface;
 import org.netbeans.modules.languages.pl_sql.editor.explorer.nodes.actions.ConnectCookieInterface;
@@ -143,7 +144,11 @@ public class OUser implements RefreshCookieInterface, EditCookieInterface, Delet
             ods.setDriverType("thin");
             ods.setServerName(Parent.getServerName());
             ods.setNetworkProtocol("tcp");
-            ods.setDatabaseName(Parent.getDatabaseName());
+            if (Parent.getConnectionType() == ConnectionTypes.SID) {
+                ods.setDatabaseName(Parent.getDatabaseName());
+            } else {
+                ods.setServiceName(Parent.getDatabaseName());
+            }
             ods.setPortNumber(Parent.getPort());
             ods.setUser(UserName);
             if (SavePassword) {
