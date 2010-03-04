@@ -1,4 +1,5 @@
 #summary PL/SQL Editor Version History
+#labels Featured
 
 === Version 1.2 ^4 March 2010^ === 
 *Changes/Fixes:*
