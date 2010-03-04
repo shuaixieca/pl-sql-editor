@@ -1,5 +1,10 @@
 #summary PL/SQL Editor Version History
 
+=== Version 1.2 ^4 March 2010^ === 
+*Changes/Fixes:*
+ * Issue 5: Enter one-line summary
+ * Issue 6: Connecting with service name.
+
 === Version 1.1 ^5 December 2008^ === 
 *Changes/Fixes:*
  * "Oracle Connection" form - layout problem fixed.
