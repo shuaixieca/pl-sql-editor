@@ -29,7 +29,7 @@ public class OObjectTypeNode extends AbstractNode {
     }
 
     private OObjectType getOObjectType() {
-        return (OObjectType) getLookup().lookup(OObjectType.class);
+        return getLookup().lookup(OObjectType.class);
     }
 
     @Override

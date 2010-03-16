@@ -48,7 +48,7 @@ public class OConnectionNode extends AbstractNode implements PropertyChangeListe
     }
 
     public OConnectionClass getOConnectionClass() {
-        return (OConnectionClass) getLookup().lookup(OConnectionClass.class);
+        return getLookup().lookup(OConnectionClass.class);
     //return model;
     }
 

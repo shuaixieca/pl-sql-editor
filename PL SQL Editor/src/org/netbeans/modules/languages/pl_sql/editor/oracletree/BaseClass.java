@@ -42,9 +42,9 @@ import org.openide.windows.OutputListener;
 public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
         CompileCookieInterface, RefreshCookieInterface, DeleteCookieInterface {
 
-    private String Owner = null,  ObjectName,  ObjectSource,  Status;
+    private String Owner = null, ObjectName, ObjectSource, Status;
     private ObjectTypes ObjectType;
-    private Date Created,  LastDDLTime;
+    private Date Created, LastDDLTime;
     private Preferences ParentPref;
     private OUser ou;
     private OObjectType ot;
@@ -210,14 +210,14 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
             if (f == null) {
                 return null;
             }
-        /*JFileChooser fc = new JFileChooser();
-        String filename = this.toString() + '.' + Utils.getFileExtensionByType(ObjectType);
-        fc.setSelectedFile(new File(filename));
-        int ret = fc.showSaveDialog(WindowManager.getDefault().getMainWindow());
-        f = fc.getSelectedFile();
-        if (f == null || ret == JFileChooser.CANCEL_OPTION) {
-        return null;
-        }*/
+            /*JFileChooser fc = new JFileChooser();
+            String filename = this.toString() + '.' + Utils.getFileExtensionByType(ObjectType);
+            fc.setSelectedFile(new File(filename));
+            int ret = fc.showSaveDialog(WindowManager.getDefault().getMainWindow());
+            f = fc.getSelectedFile();
+            if (f == null || ret == JFileChooser.CANCEL_OPTION) {
+            return null;
+            }*/
         }
         return f;
     }
@@ -253,16 +253,16 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
         } catch (IOException ex) {
             Exceptions.printStackTrace(ex);
         }
-    //MyClass theInstance = (MyClass) cookie.instanceCreate();
-    //JFileChooser chooser = new JFileChooser();
-    //int returnVal = chooser.showSaveDialog(WindowManager.getDefault().getMainWindow());
+        //MyClass theInstance = (MyClass) cookie.instanceCreate();
+        //JFileChooser chooser = new JFileChooser();
+        //int returnVal = chooser.showSaveDialog(WindowManager.getDefault().getMainWindow());
 
 
-    //Lookup lookup = MimeLookup.getLookup("text/pl_sql");
-    //EditorKit ek = CloneableEditorSupport.getEditorKit("text/pl_sql");
-    //if (ek != null) {
-    //throw new UnsupportedOperationException("ek.getContentType()");
-    //}
+        //Lookup lookup = MimeLookup.getLookup("text/pl_sql");
+        //EditorKit ek = CloneableEditorSupport.getEditorKit("text/pl_sql");
+        //if (ek != null) {
+        //throw new UnsupportedOperationException("ek.getContentType()");
+        //}
     }
 
     public void CompileLocalFile() {
@@ -340,16 +340,16 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
         }*/
         ResultSet rset = null;
         if (ou.getOracleMajorVersion() >= 10) {
-            rset = stmt.executeQuery("select t.line, t.position, t.text, initcap(t.attribute) from user_errors t where t.name = '" +
-                    ObjectName + "' and t.type = '" + ObjectType.toString().replace('_', ' ') + "' order by t.sequence");
+            rset = stmt.executeQuery("select t.line, t.position, t.text, initcap(t.attribute) from user_errors t where t.name = '"
+                    + ObjectName + "' and t.type = '" + ObjectType.toString().replace('_', ' ') + "' order by t.sequence");
             while (rset.next()) {
                 ou.OutputMsg(rset.getString(4) + ' ' + rset.getString(3) + " at [" + rset.getString(1) + ':' + rset.getString(2) + "]",
                         dob == null ? null : new ErrorOutputListener(dob, rset.getInt(1), rset.getInt(2)),
                         rset.getString(4).equalsIgnoreCase("ERROR") ? true : false);
             }
         } else {
-            rset = stmt.executeQuery("select t.line, t.position, t.text from user_errors t where t.name = '" +
-                    ObjectName + "' and t.type = '" + ObjectType.toString().replace('_', ' ') + "' order by t.sequence");
+            rset = stmt.executeQuery("select t.line, t.position, t.text from user_errors t where t.name = '"
+                    + ObjectName + "' and t.type = '" + ObjectType.toString().replace('_', ' ') + "' order by t.sequence");
             while (rset.next()) {
                 ou.OutputMsg(rset.getString(3) + " at [" + rset.getString(1) + ':' + rset.getString(2) + "]",
                         dob == null ? null : new ErrorOutputListener(dob, rset.getInt(1), rset.getInt(2)), true);
@@ -376,7 +376,7 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
         public void outputLineAction(OutputEvent evt) {
             LineCookie lc = dObj.getCookie(org.openide.cookies.LineCookie.class);
             Line line = lc.getLineSet().getOriginal(realLineNo);
-            line.show(Line.SHOW_GOTO, pos);
+            line.show(Line.ShowOpenType.OPEN, Line.ShowVisibilityType.FOCUS, pos);
         }
 
         public void outputLineCleared(OutputEvent evt) {
