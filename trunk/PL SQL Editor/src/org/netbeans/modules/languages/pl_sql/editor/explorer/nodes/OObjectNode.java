@@ -23,7 +23,7 @@ import org.openide.nodes.Sheet;
 import org.openide.util.actions.SystemAction;
 import org.openide.util.lookup.Lookups;
 import org.netbeans.modules.languages.pl_sql.editor.oracletree.ObjectTypes;
-import org.openide.util.Utilities;
+import org.openide.util.ImageUtilities;
 
 /**
  *
@@ -41,7 +41,7 @@ public class OObjectNode extends AbstractNode {
     }
 
     private BaseClass getBaseClass() {
-        return (BaseClass) getLookup().lookup(BaseClass.class);
+        return getLookup().lookup(BaseClass.class);
     }
 
     @Override
@@ -89,14 +89,14 @@ public class OObjectNode extends AbstractNode {
             return original;
         } else {
             Image errorBadge =
-                    Utilities.loadImage(ERROR_BADGE_PATH);
-            return Utilities.mergeImages(original,
+                    ImageUtilities.loadImage(ERROR_BADGE_PATH);
+            return ImageUtilities.mergeImages(original,
                     errorBadge, 6, 6);
         }
     }
 
     @Override
-    @SuppressWarnings("unchecked") 
+    @SuppressWarnings("unchecked")
     protected Sheet createSheet() {
 
         Sheet sheet = Sheet.createDefault();

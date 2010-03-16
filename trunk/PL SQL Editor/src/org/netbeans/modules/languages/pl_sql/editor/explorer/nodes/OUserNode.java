@@ -58,7 +58,7 @@ public class OUserNode extends AbstractNode implements PropertyChangeListener {
     }
 
     private OUser getOUser() {
-        return (OUser) getLookup().lookup(OUser.class);
+        return getLookup().lookup(OUser.class);
     }
 
     @Override
