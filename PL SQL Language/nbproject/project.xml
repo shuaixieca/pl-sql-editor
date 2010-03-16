@@ -25,11 +25,52 @@
                     </run-dependency>
                 </dependency>
                 <dependency>
+                    <code-name-base>org.netbeans.modules.lexer</code-name-base>
+                    <build-prerequisite/>
+                    <compile-dependency/>
+                    <run-dependency>
+                        <release-version>2</release-version>
+                        <specification-version>1.33.1.1</specification-version>
+                    </run-dependency>
+                </dependency>
+                <dependency>
+                    <code-name-base>org.openide.filesystems</code-name-base>
+                    <build-prerequisite/>
+                    <compile-dependency/>
+                    <run-dependency>
+                        <specification-version>7.32.1.1.1</specification-version>
+                    </run-dependency>
+                </dependency>
+                <dependency>
+                    <code-name-base>org.openide.loaders</code-name-base>
+                    <build-prerequisite/>
+                    <compile-dependency/>
+                    <run-dependency>
+                        <specification-version>7.10.1</specification-version>
+                    </run-dependency>
+                </dependency>
+                <dependency>
                     <code-name-base>org.openide.modules</code-name-base>
                     <build-prerequisite/>
                     <compile-dependency/>
                     <run-dependency>
                         <specification-version>7.6</specification-version>
+                    </run-dependency>
+                </dependency>
+                <dependency>
+                    <code-name-base>org.openide.nodes</code-name-base>
+                    <build-prerequisite/>
+                    <compile-dependency/>
+                    <run-dependency>
+                        <specification-version>7.12.1.1</specification-version>
+                    </run-dependency>
+                </dependency>
+                <dependency>
+                    <code-name-base>org.openide.text</code-name-base>
+                    <build-prerequisite/>
+                    <compile-dependency/>
+                    <run-dependency>
+                        <specification-version>6.27.1</specification-version>
                     </run-dependency>
                 </dependency>
                 <dependency>
@@ -40,8 +81,20 @@
                         <specification-version>7.12.0.1</specification-version>
                     </run-dependency>
                 </dependency>
+                <dependency>
+                    <code-name-base>org.openide.windows</code-name-base>
+                    <build-prerequisite/>
+                    <compile-dependency/>
+                    <run-dependency>
+                        <specification-version>6.30.1</specification-version>
+                    </run-dependency>
+                </dependency>
             </module-dependencies>
             <public-packages/>
+            <class-path-extension>
+                <runtime-relative-path>ext/antlr-runtime-3.2.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/antlr-runtime-3.2.jar</binary-origin>
+            </class-path-extension>
         </data>
     </configuration>
 </project>

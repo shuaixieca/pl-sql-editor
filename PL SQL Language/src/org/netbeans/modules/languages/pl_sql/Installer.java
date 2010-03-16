@@ -12,6 +12,7 @@ import org.openide.util.NbBundle;
  * Manages a module's lifecycle. Remember that an installer is optional and
  * often not needed at all.
  */
+@Deprecated
 public class Installer extends ModuleInstall {
 
     private static final long REQ_MEMORY = 500 * 1024 * 1024; // 500MB
