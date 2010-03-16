@@ -4,7 +4,13 @@
     <folder name="Editors">
         <folder name="text">
             <folder name="pl_sql">
-                <file name="language.nbs" url="PL_SQL.nbs">
+                <!--file name="language.nbs" url="PL_SQL.nbs">
+                    <attr name="icon" stringvalue="org/netbeans/modules/languages/pl_sql/images/PL_SQL.png"/>
+                </file-->
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.modules.languages.pl_sql.Bundle"/>
+                <file name="language.instance">
+                    <attr name="instanceCreate" methodvalue="org.netbeans.modules.languages.pl_sql.lexer.PL_SQLTokenId.getLanguage"/>
+                    <attr name="instanceOf" stringvalue="org.netbeans.api.lexer.Language"/>
                     <attr name="icon" stringvalue="org/netbeans/modules/languages/pl_sql/images/PL_SQL.png"/>
                 </file>
                 <folder name="FontsColors">
