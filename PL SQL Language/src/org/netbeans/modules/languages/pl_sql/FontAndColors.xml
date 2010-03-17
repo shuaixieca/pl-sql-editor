@@ -3,9 +3,9 @@
 <fontscolors>
     <fontcolor default="comment" name="line_comment"/>
     <fontcolor default="comment" name="block_comment"/>
-    <fontcolor default="comment" name="wrapped"/>    
+    <fontcolor default="comment" name="wrapped"/>
     <fontcolor default="keyword" name="keyword"/>
-    <fontcolor default="keyword" name="some_types"/>    
+    <fontcolor default="keyword" name="some_types"/>
     <fontcolor default="keyword" name="size_types"/>
     <fontcolor default="keyword" name="scale_types"/>
     <fontcolor default="keyword" name="char_types"/>
@@ -170,7 +170,9 @@
     <fontcolor default="operator" name="and_operator"/>
     <fontcolor default="operator" name="not_operator"/>
     <fontcolor default="error" name="error"/>
-    <fontcolor default="number" name="number"/>
+    <fontcolor default="number" name="number">
+        <font style="bold" />
+    </fontcolor>
     <fontcolor default="number" name="number_unsigned"/>
 </fontscolors>
 

@@ -1,4 +1,4 @@
-package org.netbeans.modules.languages.pl_sql;
+package org.netbeans.modules.languages.pl_sql.antlr;
 
 import java.util.ArrayList;
 import java.util.List;

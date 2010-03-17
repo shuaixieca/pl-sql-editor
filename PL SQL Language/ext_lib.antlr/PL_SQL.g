@@ -12,8 +12,14 @@ options
 	output = AST;
 }
 
-@header{package org.netbeans.modules.languages.pl_sql.antlr;}
-@lexer::header{package org.netbeans.modules.languages.pl_sql.antlr;}
+tokens {
+	BLOCK_COMMENT;
+	LINE_COMMENT;
+	NUMBER_UNSIGNED;
+}
+
+@parser::header {package org.netbeans.modules.languages.pl_sql.antlr;}
+@lexer::header {package org.netbeans.modules.languages.pl_sql.antlr;}
 
 @members {
 	public List<SyntaxError> syntaxErrors = new ArrayList<SyntaxError>();
@@ -36,10 +42,78 @@ options
 	}
 }
 
+// LEXER RULES
 
 BLOCK_COMMENT
-	:	'/*' .* '*/' {$channel=HIDDEN;}
+	:	'/*' ( options {greedy=false;} : . )* '*/' {$channel=HIDDEN;}
 ;
 
+LINE_COMMENT
+	:	'--' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
+;
+
+WHITESPACE
+	:	(' '|'\t'|'\n'|'\r')+ {$channel=HIDDEN;}
+;
+
+OPERATOR:	':=' | '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' |
+    		'^=' | '>' | '<' | '<=' | '>=' | '..' | '(+)' | '(' | ')' | '<<' | '>>'
+;		
+
+OR_OPERATOR
+	:	O R;
+
+AND_OPERATOR
+	:	A N D;
+
+NOT_OPERATOR
+	:	N O T;
+
+NUMBER_UNSIGNED	//(('0'..'9')* '.'?)? ('0'..'9')+ (E('+'|'-')?('0'..'9')+)?		
+	:	(DIGITS '.'? DIGITS?
+		| '.' DIGITS
+		)
+		(EXP_DIGITS)?
+;
+
+fragment DIGITS
+	: '0' .. '9' ( '0' .. '9' )*
+;
+
+fragment EXP_DIGITS
+	: E ('+'|'-')? DIGITS
+;
+
+fragment A:('a'|'A');
+fragment B:('b'|'B');
+fragment C:('c'|'C');
+fragment D:('d'|'D');
+fragment E:('e'|'E');
+fragment F:('f'|'F');
+fragment G:('g'|'G');
+fragment H:('h'|'H');
+fragment I:('i'|'I');
+fragment J:('j'|'J');
+fragment K:('k'|'K');
+fragment L:('l'|'L');
+fragment M:('m'|'M');
+fragment N:('n'|'N');
+fragment O:('o'|'O');
+fragment P:('p'|'P');
+fragment Q:('q'|'Q');
+fragment R:('r'|'R');
+fragment S:('s'|'S');
+fragment T:('t'|'T');
+fragment U:('u'|'U');
+fragment V:('v'|'V');
+fragment W:('w'|'W');
+fragment X:('x'|'X');
+fragment Y:('y'|'Y');
+fragment Z:('z'|'Z');
+
 grammar_def
-	:	BLOCK_COMMENT* EOF!;
+	:	statments EOF!;
+statments
+	:	NUMBER_UNSIGNED;//OPERATOR ( OR_OPERATOR | AND_OPERATOR | NUMBER_UNSIGNED)+ OPERATOR;
+		
+	
