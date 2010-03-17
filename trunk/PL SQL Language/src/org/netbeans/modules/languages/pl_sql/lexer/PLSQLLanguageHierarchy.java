@@ -17,31 +17,31 @@ import org.netbeans.spi.lexer.LexerRestartInfo;
  *
  * @author asoumbatov
  */
-public class PL_SQLLanguageHierarchy extends LanguageHierarchy<PL_SQLTokenId> {
+public class PLSQLLanguageHierarchy extends LanguageHierarchy<PLSQLTokenId> {
 
-    private static List<PL_SQLTokenId> tokens = new ArrayList<PL_SQLTokenId>();
-    private static Map<Integer, PL_SQLTokenId> idToToken = new HashMap<Integer, PL_SQLTokenId>();
+    private static List<PLSQLTokenId> tokens = new ArrayList<PLSQLTokenId>();
+    private static Map<Integer, PLSQLTokenId> idToToken = new HashMap<Integer, PLSQLTokenId>();
 
     static {
         TokenType[] tokenTypes = TokenType.values();
         for (TokenType tokenType : tokenTypes) {
-            tokens.add(new PL_SQLTokenId(tokenType.name(), tokenType.category, tokenType.id));
+            tokens.add(new PLSQLTokenId(tokenType.name(), tokenType.category, tokenType.id));
         }
-        for (PL_SQLTokenId token : tokens) {
+        for (PLSQLTokenId token : tokens) {
             idToToken.put(token.ordinal(), token);
         }
     }
 
-    static synchronized PL_SQLTokenId getToken(int id) {
+    static synchronized PLSQLTokenId getToken(int id) {
         return idToToken.get(id);
     }
 
-    protected synchronized Collection<PL_SQLTokenId> createTokenIds() {
+    protected synchronized Collection<PLSQLTokenId> createTokenIds() {
         return tokens;
     }
 
-    protected synchronized Lexer<PL_SQLTokenId> createLexer(LexerRestartInfo<PL_SQLTokenId> info) {
-        return new PL_SQLLexer(info);
+    protected synchronized Lexer<PLSQLTokenId> createLexer(LexerRestartInfo<PLSQLTokenId> info) {
+        return new PLSQLLexer(info);
     }
 
     protected String mimeType() {
