@@ -4,20 +4,22 @@
  */
 package org.netbeans.modules.languages.pl_sql.lexer;
 
+import org.netbeans.modules.languages.pl_sql.antlr.PL_SQLLexer;
+
 /**
  *
  * @author asoumbatov
  */
 public enum TokenType {
 
-    BLOCK_COMMENT(4, "comment"),
-    LINE_COMMENT(5, "comment"),
-    WHITESPACE(7, "whitespace"),
-    OPERATOR(8, "operator"),
-    OR_OPERATOR(11, "operator"),
-    NOT_OPERATOR(17, "operator"),
-    AND_OPERATOR(15, "operator"),
-    NUMBER_UNSIGNED(6, "number");
+    BLOCK_COMMENT(PL_SQLLexer.BLOCK_COMMENT, "comment"),
+    LINE_COMMENT(PL_SQLLexer.LINE_COMMENT, "comment"),
+    WHITESPACE(PL_SQLLexer.WHITESPACE, "whitespace"),
+    OPERATOR(PL_SQLLexer.OPERATOR, "operator"),
+    OR_OPERATOR(PL_SQLLexer.OR_OPERATOR, "operator"),
+    NOT_OPERATOR(PL_SQLLexer.NOT_OPERATOR, "operator"),
+    AND_OPERATOR(PL_SQLLexer.AND_OPERATOR, "operator"),
+    NUMBER_UNSIGNED(PL_SQLLexer.NUMBER_UNSIGNED, "number");
     public int id;
     public String category;
     public String text;
