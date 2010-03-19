@@ -28,7 +28,6 @@ public class PLSQLLexer implements Lexer<PLSQLTokenId> {
 
     public org.netbeans.api.lexer.Token<PLSQLTokenId> nextToken() {
         Token token = lexer.nextToken();
-        System.out.println(token.getType());
         if (token.getType() != PL_SQLLexer.EOF) {
             PLSQLTokenId tokenId = PLSQLLanguageHierarchy.getToken(token.getType());
             return info.tokenFactory().createToken(tokenId);
