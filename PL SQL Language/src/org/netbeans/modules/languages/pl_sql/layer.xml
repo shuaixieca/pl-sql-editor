@@ -93,6 +93,7 @@
                         <attr name="dataObjectClass" stringvalue="org.netbeans.modules.languages.pl_sql.PL_SQLDataObject"/>
                         <attr name="instanceCreate" methodvalue="org.openide.loaders.DataLoaderPool.factory"/>
                         <attr name="mimeType" stringvalue="text/pl_sql"/>
+                        <attr name="SystemFileSystem.icon" urlvalue="nbresloc:/org/netbeans/modules/languages/pl_sql/images/PL_SQL.png"/>
                     </file>
                 </folder>
             </folder>

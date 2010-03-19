@@ -6,7 +6,7 @@ import javax.swing.text.Document;
 import javax.swing.text.StyledDocument;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.Token;
-import org.netbeans.modules.languages.pl_sql.antlr.PL_SQLParser.SyntaxError;
+import org.netbeans.modules.languages.pl_sql.antlr.SyntaxError;
 import org.netbeans.modules.parsing.spi.Parser.Result;
 import org.netbeans.modules.parsing.spi.ParserResultTask;
 import org.netbeans.modules.parsing.spi.Scheduler;
@@ -24,19 +24,19 @@ public class SyntaxErrorsHighlightingTask extends ParserResultTask {
 
     public void run(Result result, SchedulerEvent event) {
         try {
-            PLSQLParser.PL_SQLEditorParserResult sjResult = (PLSQLParser.PL_SQLEditorParserResult) result;
-            List<SyntaxError> syntaxErrors = sjResult.getPL_SQLParser().syntaxErrors;
+            PLSQLParser.PL_SQLEditorParserResult pResult = (PLSQLParser.PL_SQLEditorParserResult) result;
+            List<SyntaxError> syntaxErrors = pResult.getLexer().syntaxErrors;
+            syntaxErrors.addAll(pResult.getPL_SQLParser().syntaxErrors);
             Document document = result.getSnapshot().getSource().getDocument(false);
             List<ErrorDescription> errors = new ArrayList<ErrorDescription>();
             for (SyntaxError syntaxError : syntaxErrors) {
-                RecognitionException exception = syntaxError.exception;
-                Token token = exception.token;
-                int line = exception.line;
+                int line = syntaxError.line;
                 if (line <= 0) {
                     continue;
                 }
-                int start = NbDocument.findLineOffset((StyledDocument) document, token.getLine() - 1) + token.getCharPositionInLine();
-                int end = start + token.getText().length();
+                int charPositionInLine = syntaxError.charPositionInLine;
+                int start = NbDocument.findLineOffset((StyledDocument) document, line - 1) + charPositionInLine;
+                int end = start + 1;
                 ErrorDescription errorDescription = ErrorDescriptionFactory.createErrorDescription(
                         Severity.ERROR,
                         syntaxError.message,
