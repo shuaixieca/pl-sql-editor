@@ -21,7 +21,8 @@ tokens {
 @parser::header {package org.netbeans.modules.languages.pl_sql.antlr;}
 @lexer::header {package org.netbeans.modules.languages.pl_sql.antlr;}
 
-@members {
+@lexer::members {
+
 	public List<SyntaxError> syntaxErrors = new ArrayList<SyntaxError>();
 
 	@Override
@@ -30,16 +31,61 @@ tokens {
 		SyntaxError syntaxError = new SyntaxError();
 		syntaxError.exception = e;
 		syntaxError.message = message;
+		syntaxError.line = e.line;
+		syntaxError.charPositionInLine = e.charPositionInLine;
+		syntaxErrors.add(syntaxError);
+		return message;
+	}
+	
+	@Override
+	public void emitErrorMessage(String msg) {
+	}
+	
+/*@Override	
+public void reportError(RecognitionException e) {
+  throw e;
+}*/	
+}
+@parser::members {
+	public List<SyntaxError> syntaxErrors = new ArrayList<SyntaxError>();
+
+	@Override
+	public String getErrorMessage(RecognitionException e, String[] tokenNames) {
+		String message = super.getErrorMessage(e, tokenNames);
+		SyntaxError syntaxError = new SyntaxError();
+		syntaxError.exception = e;
+		syntaxError.message = message;
+		syntaxError.line = e.line;
+		syntaxError.charPositionInLine = e.charPositionInLine;
 		syntaxErrors.add(syntaxError);
 		return message;
 	}
 
-	public static class SyntaxError {
-		public RecognitionException exception;
-		public String message;
-		public int line;
-		public int charPositionInLine;
+	@Override
+	public void emitErrorMessage(String msg) {
 	}
+	
+/*protected void mismatch(IntStream input, int ttype, BitSet follow)
+throws RecognitionException
+{
+throw new MismatchedTokenException(ttype, input);
+}
+
+@Override
+public Object recoverFromMismatchedSet(IntStream input,
+RecognitionException e,
+BitSet follow)
+throws RecognitionException
+{
+throw e;
+}
+}
+// Alter code generation so catch-clauses get replace with
+// this action.
+@rulecatch {
+catch (RecognitionException e) {
+throw e;
+}*/
 }
 
 // LEXER RULES
@@ -112,7 +158,7 @@ fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
 
 grammar_def
-	:	statments EOF!;
+	:	statments+ EOF!;
 statments
 	:	NUMBER_UNSIGNED;//OPERATOR ( OR_OPERATOR | AND_OPERATOR | NUMBER_UNSIGNED)+ OPERATOR;
 		
