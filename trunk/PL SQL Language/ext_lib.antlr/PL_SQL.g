@@ -16,6 +16,9 @@ tokens {
 	BLOCK_COMMENT;
 	LINE_COMMENT;
 	NUMBER_UNSIGNED;
+	AND_OPERATOR;
+	OR_OPERATOR;
+	WHITESPACE;
 }
 
 @parser::header {package org.netbeans.modules.languages.pl_sql.antlr;}
@@ -99,7 +102,7 @@ LINE_COMMENT
 ;
 
 WHITESPACE
-	:	(' '|'\t'|'\n'|'\r')+ {$channel=HIDDEN;}
+	:	(' '|'\t'|'\n'|'\r')+ {skip();}
 ;
 
 OPERATOR:	':=' | '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' |
@@ -158,8 +161,8 @@ fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
 
 grammar_def
-	:	statments+ EOF!;
+	:	statments EOF!;
 statments
-	:	NUMBER_UNSIGNED;//OPERATOR ( OR_OPERATOR | AND_OPERATOR | NUMBER_UNSIGNED)+ OPERATOR;
+	:	AND_OPERATOR NUMBER_UNSIGNED+ OR_OPERATOR;//OPERATOR ( OR_OPERATOR | AND_OPERATOR | NUMBER_UNSIGNED)+ OPERATOR;
 		
 	

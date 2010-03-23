@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-03-19 17:47:32
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-03-23 17:51:12
 package org.netbeans.modules.languages.pl_sql.antlr;
 
 import org.antlr.runtime.*;
@@ -11,10 +11,10 @@ import org.antlr.runtime.tree.*;
 
 public class PL_SQLParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "BLOCK_COMMENT", "LINE_COMMENT", "NUMBER_UNSIGNED", "WHITESPACE", "OPERATOR", "O", "R", "OR_OPERATOR", "A", "N", "D", "AND_OPERATOR", "T", "NOT_OPERATOR", "DIGITS", "EXP_DIGITS", "E", "B", "C", "F", "G", "H", "I", "J", "K", "L", "M", "P", "Q", "S", "U", "V", "W", "X", "Y", "Z"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "BLOCK_COMMENT", "LINE_COMMENT", "NUMBER_UNSIGNED", "AND_OPERATOR", "OR_OPERATOR", "WHITESPACE", "OPERATOR", "O", "R", "A", "N", "D", "T", "NOT_OPERATOR", "DIGITS", "EXP_DIGITS", "E", "B", "C", "F", "G", "H", "I", "J", "K", "L", "M", "P", "Q", "S", "U", "V", "W", "X", "Y", "Z"
     };
     public static final int NOT_OPERATOR=17;
-    public static final int O=9;
+    public static final int O=11;
     public static final int EXP_DIGITS=19;
     public static final int W=36;
     public static final int DIGITS=18;
@@ -25,30 +25,30 @@ public class PL_SQLParser extends Parser {
     public static final int G=24;
     public static final int I=26;
     public static final int BLOCK_COMMENT=4;
-    public static final int A=12;
+    public static final int A=13;
     public static final int F=23;
     public static final int U=34;
     public static final int LINE_COMMENT=5;
-    public static final int N=13;
-    public static final int WHITESPACE=7;
+    public static final int N=14;
+    public static final int WHITESPACE=9;
     public static final int X=37;
     public static final int Z=39;
     public static final int S=33;
-    public static final int D=14;
+    public static final int D=15;
     public static final int K=28;
-    public static final int R=10;
+    public static final int R=12;
     public static final int C=22;
     public static final int B=21;
     public static final int EOF=-1;
     public static final int Q=32;
     public static final int L=29;
-    public static final int AND_OPERATOR=15;
+    public static final int AND_OPERATOR=7;
     public static final int M=30;
-    public static final int OPERATOR=8;
+    public static final int OPERATOR=10;
     public static final int Y=38;
     public static final int J=27;
     public static final int T=16;
-    public static final int OR_OPERATOR=11;
+    public static final int OR_OPERATOR=8;
     public static final int E=20;
 
     // delegates
@@ -123,7 +123,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "grammar_def"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:1: grammar_def : ( statments )+ EOF ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:163:1: grammar_def : statments EOF ;
     public final PL_SQLParser.grammar_def_return grammar_def() throws RecognitionException {
         PL_SQLParser.grammar_def_return retval = new PL_SQLParser.grammar_def_return();
         retval.start = input.LT(1);
@@ -137,47 +137,18 @@ public class PL_SQLParser extends Parser {
         Object EOF2_tree=null;
 
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:161:2: ( ( statments )+ EOF )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:161:4: ( statments )+ EOF
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:2: ( statments EOF )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:4: statments EOF
             {
             root_0 = (Object)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:161:4: ( statments )+
-            int cnt1=0;
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+            pushFollow(FOLLOW_statments_in_grammar_def680);
+            statments1=statments();
 
-                if ( (LA1_0==NUMBER_UNSIGNED) ) {
-                    alt1=1;
-                }
+            state._fsp--;
 
-
-                switch (alt1) {
-            	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:161:4: statments
-            	    {
-            	    pushFollow(FOLLOW_statments_in_grammar_def668);
-            	    statments1=statments();
-
-            	    state._fsp--;
-
-            	    adaptor.addChild(root_0, statments1.getTree());
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt1 >= 1 ) break loop1;
-                        EarlyExitException eee =
-                            new EarlyExitException(1, input);
-                        throw eee;
-                }
-                cnt1++;
-            } while (true);
-
-            EOF2=(Token)match(input,EOF,FOLLOW_EOF_in_grammar_def671); 
+            adaptor.addChild(root_0, statments1.getTree());
+            EOF2=(Token)match(input,EOF,FOLLOW_EOF_in_grammar_def682); 
 
             }
 
@@ -205,26 +176,67 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "statments"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:162:1: statments : NUMBER_UNSIGNED ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:165:1: statments : AND_OPERATOR ( NUMBER_UNSIGNED )+ OR_OPERATOR ;
     public final PL_SQLParser.statments_return statments() throws RecognitionException {
         PL_SQLParser.statments_return retval = new PL_SQLParser.statments_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token NUMBER_UNSIGNED3=null;
+        Token AND_OPERATOR3=null;
+        Token NUMBER_UNSIGNED4=null;
+        Token OR_OPERATOR5=null;
 
-        Object NUMBER_UNSIGNED3_tree=null;
+        Object AND_OPERATOR3_tree=null;
+        Object NUMBER_UNSIGNED4_tree=null;
+        Object OR_OPERATOR5_tree=null;
 
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:163:2: ( NUMBER_UNSIGNED )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:163:4: NUMBER_UNSIGNED
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:166:2: ( AND_OPERATOR ( NUMBER_UNSIGNED )+ OR_OPERATOR )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:166:4: AND_OPERATOR ( NUMBER_UNSIGNED )+ OR_OPERATOR
             {
             root_0 = (Object)adaptor.nil();
 
-            NUMBER_UNSIGNED3=(Token)match(input,NUMBER_UNSIGNED,FOLLOW_NUMBER_UNSIGNED_in_statments680); 
-            NUMBER_UNSIGNED3_tree = (Object)adaptor.create(NUMBER_UNSIGNED3);
-            adaptor.addChild(root_0, NUMBER_UNSIGNED3_tree);
+            AND_OPERATOR3=(Token)match(input,AND_OPERATOR,FOLLOW_AND_OPERATOR_in_statments691); 
+            AND_OPERATOR3_tree = (Object)adaptor.create(AND_OPERATOR3);
+            adaptor.addChild(root_0, AND_OPERATOR3_tree);
+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:166:17: ( NUMBER_UNSIGNED )+
+            int cnt1=0;
+            loop1:
+            do {
+                int alt1=2;
+                int LA1_0 = input.LA(1);
+
+                if ( (LA1_0==NUMBER_UNSIGNED) ) {
+                    alt1=1;
+                }
+
+
+                switch (alt1) {
+            	case 1 :
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:166:17: NUMBER_UNSIGNED
+            	    {
+            	    NUMBER_UNSIGNED4=(Token)match(input,NUMBER_UNSIGNED,FOLLOW_NUMBER_UNSIGNED_in_statments693); 
+            	    NUMBER_UNSIGNED4_tree = (Object)adaptor.create(NUMBER_UNSIGNED4);
+            	    adaptor.addChild(root_0, NUMBER_UNSIGNED4_tree);
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt1 >= 1 ) break loop1;
+                        EarlyExitException eee =
+                            new EarlyExitException(1, input);
+                        throw eee;
+                }
+                cnt1++;
+            } while (true);
+
+            OR_OPERATOR5=(Token)match(input,OR_OPERATOR,FOLLOW_OR_OPERATOR_in_statments696); 
+            OR_OPERATOR5_tree = (Object)adaptor.create(OR_OPERATOR5);
+            adaptor.addChild(root_0, OR_OPERATOR5_tree);
 
 
             }
@@ -252,8 +264,10 @@ public class PL_SQLParser extends Parser {
 
  
 
-    public static final BitSet FOLLOW_statments_in_grammar_def668 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_EOF_in_grammar_def671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NUMBER_UNSIGNED_in_statments680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_statments_in_grammar_def680 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_grammar_def682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_AND_OPERATOR_in_statments691 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_NUMBER_UNSIGNED_in_statments693 = new BitSet(new long[]{0x0000000000000140L});
+    public static final BitSet FOLLOW_OR_OPERATOR_in_statments696 = new BitSet(new long[]{0x0000000000000002L});
 
 }
