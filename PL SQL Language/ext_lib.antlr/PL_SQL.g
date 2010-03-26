@@ -13,11 +13,11 @@ options
 }
 
 tokens {
-	BLOCK_COMMENT;
-	LINE_COMMENT;
 	NUMBER_UNSIGNED;
 	AND_OPERATOR;
 	OR_OPERATOR;
+	BLOCK_COMMENT;
+	LINE_COMMENT;
 	WHITESPACE;
 }
 
@@ -102,7 +102,7 @@ LINE_COMMENT
 ;
 
 WHITESPACE
-	:	(' '|'\t'|'\n'|'\r')+ {skip();}
+	:	(' '|'\t'|'\n'|'\r')+ {$channel=HIDDEN;}
 ;
 
 OPERATOR:	':=' | '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' |

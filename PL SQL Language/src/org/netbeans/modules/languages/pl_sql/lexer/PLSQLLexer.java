@@ -21,7 +21,6 @@ public class PLSQLLexer implements Lexer<PLSQLTokenId> {
 
     public PLSQLLexer(LexerRestartInfo<PLSQLTokenId> info) {
         this.info = info;
-
         AntlrCharStream charStream = new AntlrCharStream(info.input(), "PL/SQL Editor");
         lexer = new PL_SQLLexer(charStream);
     }
@@ -34,8 +33,11 @@ public class PLSQLLexer implements Lexer<PLSQLTokenId> {
             //System.out.println("tokenId=" + tokenId.ordinal());
             if (tokenId != null) {
                 return info.tokenFactory().createToken(tokenId);
+            } else {
+                return info.tokenFactory().createToken(PLSQLLanguageHierarchy.getToken(PL_SQLLexer.WHITESPACE));
             }
         }
+        System.out.println("nullToken");
         return null;
     }
 

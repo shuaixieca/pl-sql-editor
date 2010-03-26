@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-03-23 17:51:12
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-03-26 15:21:55
 package org.netbeans.modules.languages.pl_sql.antlr;
 
 import org.antlr.runtime.*;
@@ -11,7 +11,7 @@ import org.antlr.runtime.tree.*;
 
 public class PL_SQLParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "BLOCK_COMMENT", "LINE_COMMENT", "NUMBER_UNSIGNED", "AND_OPERATOR", "OR_OPERATOR", "WHITESPACE", "OPERATOR", "O", "R", "A", "N", "D", "T", "NOT_OPERATOR", "DIGITS", "EXP_DIGITS", "E", "B", "C", "F", "G", "H", "I", "J", "K", "L", "M", "P", "Q", "S", "U", "V", "W", "X", "Y", "Z"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "NUMBER_UNSIGNED", "AND_OPERATOR", "OR_OPERATOR", "BLOCK_COMMENT", "LINE_COMMENT", "WHITESPACE", "OPERATOR", "O", "R", "A", "N", "D", "T", "NOT_OPERATOR", "DIGITS", "EXP_DIGITS", "E", "B", "C", "F", "G", "H", "I", "J", "K", "L", "M", "P", "Q", "S", "U", "V", "W", "X", "Y", "Z"
     };
     public static final int NOT_OPERATOR=17;
     public static final int O=11;
@@ -20,15 +20,15 @@ public class PL_SQLParser extends Parser {
     public static final int DIGITS=18;
     public static final int H=25;
     public static final int P=31;
-    public static final int NUMBER_UNSIGNED=6;
+    public static final int NUMBER_UNSIGNED=4;
     public static final int V=35;
     public static final int G=24;
     public static final int I=26;
-    public static final int BLOCK_COMMENT=4;
+    public static final int BLOCK_COMMENT=7;
     public static final int A=13;
     public static final int F=23;
     public static final int U=34;
-    public static final int LINE_COMMENT=5;
+    public static final int LINE_COMMENT=8;
     public static final int N=14;
     public static final int WHITESPACE=9;
     public static final int X=37;
@@ -42,13 +42,13 @@ public class PL_SQLParser extends Parser {
     public static final int EOF=-1;
     public static final int Q=32;
     public static final int L=29;
-    public static final int AND_OPERATOR=7;
+    public static final int AND_OPERATOR=5;
     public static final int M=30;
     public static final int OPERATOR=10;
     public static final int Y=38;
     public static final int J=27;
     public static final int T=16;
-    public static final int OR_OPERATOR=8;
+    public static final int OR_OPERATOR=6;
     public static final int E=20;
 
     // delegates
@@ -266,8 +266,8 @@ public class PL_SQLParser extends Parser {
 
     public static final BitSet FOLLOW_statments_in_grammar_def680 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_grammar_def682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_AND_OPERATOR_in_statments691 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_NUMBER_UNSIGNED_in_statments693 = new BitSet(new long[]{0x0000000000000140L});
+    public static final BitSet FOLLOW_AND_OPERATOR_in_statments691 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_NUMBER_UNSIGNED_in_statments693 = new BitSet(new long[]{0x0000000000000050L});
     public static final BitSet FOLLOW_OR_OPERATOR_in_statments696 = new BitSet(new long[]{0x0000000000000002L});
 
 }

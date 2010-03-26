@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-03-23 17:51:13
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-03-26 15:21:55
 package org.netbeans.modules.languages.pl_sql.antlr;
 
 import org.antlr.runtime.*;
@@ -14,15 +14,15 @@ public class PL_SQLLexer extends Lexer {
     public static final int DIGITS=18;
     public static final int H=25;
     public static final int P=31;
-    public static final int NUMBER_UNSIGNED=6;
+    public static final int NUMBER_UNSIGNED=4;
     public static final int V=35;
     public static final int G=24;
     public static final int I=26;
-    public static final int BLOCK_COMMENT=4;
+    public static final int BLOCK_COMMENT=7;
     public static final int A=13;
     public static final int F=23;
     public static final int U=34;
-    public static final int LINE_COMMENT=5;
+    public static final int LINE_COMMENT=8;
     public static final int N=14;
     public static final int WHITESPACE=9;
     public static final int X=37;
@@ -36,13 +36,13 @@ public class PL_SQLLexer extends Lexer {
     public static final int EOF=-1;
     public static final int L=29;
     public static final int Q=32;
-    public static final int AND_OPERATOR=7;
+    public static final int AND_OPERATOR=5;
     public static final int M=30;
     public static final int OPERATOR=10;
     public static final int J=27;
     public static final int Y=38;
     public static final int T=16;
-    public static final int OR_OPERATOR=8;
+    public static final int OR_OPERATOR=6;
     public static final int E=20;
 
 
@@ -264,7 +264,7 @@ public class PL_SQLLexer extends Lexer {
                 cnt4++;
             } while (true);
 
-            skip();
+            _channel=HIDDEN;
 
             }
 
