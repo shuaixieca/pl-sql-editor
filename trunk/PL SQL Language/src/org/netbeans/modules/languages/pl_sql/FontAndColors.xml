@@ -165,7 +165,7 @@
     <fontcolor default="whitespace" name="whitespace"/>
     <fontcolor default="identifier" name="identifier"/>
     <fontcolor default="identifier" name="ext_identifier"/>
-    <fontcolor default="operator" name="operator"/>
+    <fontcolor default="operator" name="operator" foreColor="green"/>
     <fontcolor default="operator" name="or_operator"/>
     <fontcolor default="operator" name="and_operator"/>
     <fontcolor default="operator" name="not_operator"/>
