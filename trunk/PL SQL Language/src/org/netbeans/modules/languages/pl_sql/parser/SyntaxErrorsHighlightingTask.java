@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.text.Document;
 import javax.swing.text.StyledDocument;
-import org.antlr.runtime.RecognitionException;
-import org.antlr.runtime.Token;
-import org.netbeans.modules.languages.pl_sql.antlr.SyntaxError;
+import org.netbeans.modules.languages.pl_sql.antlr.PL_SQLParser.SyntaxError;
 import org.netbeans.modules.parsing.spi.Parser.Result;
 import org.netbeans.modules.parsing.spi.ParserResultTask;
 import org.netbeans.modules.parsing.spi.Scheduler;
@@ -25,8 +23,9 @@ public class SyntaxErrorsHighlightingTask extends ParserResultTask {
     public void run(Result result, SchedulerEvent event) {
         try {
             PLSQLParser.PL_SQLEditorParserResult pResult = (PLSQLParser.PL_SQLEditorParserResult) result;
-            List<SyntaxError> syntaxErrors = pResult.getLexer().syntaxErrors;
-            syntaxErrors.addAll(pResult.getPL_SQLParser().syntaxErrors);
+            //List<SyntaxError> syntaxErrors = pResult.getLexer().syntaxErrors;
+            //syntaxErrors.addAll(pResult.getPL_SQLParser().syntaxErrors);
+            List<SyntaxError> syntaxErrors = pResult.getPL_SQLParser().syntaxErrors;
             Document document = result.getSnapshot().getSource().getDocument(false);
             List<ErrorDescription> errors = new ArrayList<ErrorDescription>();
             for (SyntaxError syntaxError : syntaxErrors) {

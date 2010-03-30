@@ -6,6 +6,7 @@ package org.netbeans.modules.languages.pl_sql.lexer;
 
 import org.antlr.runtime.Token;
 import org.netbeans.modules.languages.pl_sql.antlr.AntlrCharStream;
+//import org.netbeans.modules.languages.pl_sql.antlr.lexer.PL_SQLLexer;
 import org.netbeans.modules.languages.pl_sql.antlr.PL_SQLLexer;
 import org.netbeans.spi.lexer.Lexer;
 import org.netbeans.spi.lexer.LexerRestartInfo;
@@ -27,17 +28,16 @@ public class PLSQLLexer implements Lexer<PLSQLTokenId> {
 
     public org.netbeans.api.lexer.Token<PLSQLTokenId> nextToken() {
         Token token = lexer.nextToken();
-        System.out.println("tokenType=" + token.getType());
+        //System.out.println("tokenType=" + token.getType());
         if (token.getType() != PL_SQLLexer.EOF) {
             PLSQLTokenId tokenId = PLSQLLanguageHierarchy.getToken(token.getType());
-            //System.out.println("tokenId=" + tokenId.ordinal());
             if (tokenId != null) {
                 return info.tokenFactory().createToken(tokenId);
             } else {
                 return info.tokenFactory().createToken(PLSQLLanguageHierarchy.getToken(PL_SQLLexer.WHITESPACE));
             }
         }
-        System.out.println("nullToken");
+        //System.out.println("nullToken");
         return null;
     }
 
