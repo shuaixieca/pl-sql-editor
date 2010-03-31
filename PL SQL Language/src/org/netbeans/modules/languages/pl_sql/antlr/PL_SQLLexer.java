@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-03-30 17:59:37
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-03-31 17:24:10
 package org.netbeans.modules.languages.pl_sql.antlr;
 
 import org.antlr.runtime.*;
@@ -7,201 +7,232 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class PL_SQLLexer extends Lexer {
-    public static final int VARRAY_KEYWORD=121;
-    public static final int TRIGGER_KEYWORD=167;
-    public static final int RESULT_KEYWORD=193;
-    public static final int EXIT_KEYWORD=131;
-    public static final int V=41;
-    public static final int DISABLE_KEYWORD=181;
-    public static final int RESTRICT_REFERENCES_KEYWORD=151;
-    public static final int AUTONOMOUS_TRANSACTION_KEYWORD=113;
-    public static final int WHILE_KEYWORD=103;
-    public static final int U=34;
-    public static final int BEGIN_KEYWORD=51;
-    public static final int ELSE_KEYWORD=94;
+    public static final int VARRAY_KEYWORD=123;
+    public static final int TRIGGER_KEYWORD=169;
+    public static final int RESULT_KEYWORD=195;
+    public static final int EXIT_KEYWORD=133;
+    public static final int V=43;
+    public static final int DISABLE_KEYWORD=183;
+    public static final int RESTRICT_REFERENCES_KEYWORD=153;
+    public static final int AUTONOMOUS_TRANSACTION_KEYWORD=115;
+    public static final int WHILE_KEYWORD=105;
+    public static final int ALIAS=23;
+    public static final int U=36;
+    public static final int BEGIN_KEYWORD=53;
+    public static final int ELSE_KEYWORD=96;
     public static final int SOME_TYPES=9;
-    public static final int COLLECT_KEYWORD=135;
-    public static final int CONSTANT_KEYWORD=65;
-    public static final int INTERVAL_KEYWORD=71;
-    public static final int VALUES_KEYWORD=142;
-    public static final int PRAGMA_KEYWORD=112;
-    public static final int R=26;
-    public static final int MEMBER_KEYWORD=189;
-    public static final int ZONE_KEYWORD=70;
-    public static final int CREATE_KEYWORD=77;
-    public static final int ROLLBACK_KEYWORD=153;
-    public static final int Q=162;
-    public static final int CLOSE_KEYWORD=116;
-    public static final int END_CASE_KEYWORD=115;
-    public static final int TRUE_KEYWORD=63;
-    public static final int DEFINER_KEYWORD=87;
-    public static final int CONTINUE_KEYWORD=126;
-    public static final int CURRENT_USER_KEYWORD=86;
-    public static final int LOOP_KEYWORD=101;
-    public static final int EXECUTE_KEYWORD=129;
-    public static final int W=46;
-    public static final int DELETE_KEYWORD=128;
-    public static final int INDEX_KEYWORD=119;
+    public static final int COLLECT_KEYWORD=137;
+    public static final int T__214=214;
+    public static final int CONSTANT_KEYWORD=67;
+    public static final int INTERVAL_KEYWORD=73;
+    public static final int VALUES_KEYWORD=144;
+    public static final int PRAGMA_KEYWORD=114;
+    public static final int R=28;
+    public static final int MEMBER_KEYWORD=191;
+    public static final int ZONE_KEYWORD=72;
+    public static final int CHARS=199;
+    public static final int CREATE_KEYWORD=79;
+    public static final int Q=164;
+    public static final int ROLLBACK_KEYWORD=155;
+    public static final int CLOSE_KEYWORD=118;
+    public static final int T__220=220;
+    public static final int END_CASE_KEYWORD=117;
+    public static final int TRUE_KEYWORD=65;
+    public static final int DEFINER_KEYWORD=89;
+    public static final int CONTINUE_KEYWORD=128;
+    public static final int CURRENT_USER_KEYWORD=88;
+    public static final int LOOP_KEYWORD=103;
+    public static final int EXECUTE_KEYWORD=131;
+    public static final int W=48;
+    public static final int T__218=218;
+    public static final int DELETE_KEYWORD=130;
+    public static final int INDEX_KEYWORD=121;
     public static final int STRING=8;
-    public static final int RESULT_CACHE_KEYWORD=91;
-    public static final int BEFORE_KEYWORD=168;
-    public static final int EACH_KEYWORD=177;
-    public static final int FOLLOWS_KEYWORD=179;
-    public static final int X=50;
-    public static final int UNDER_KEYWORD=185;
-    public static final int UPDATE_KEYWORD=165;
+    public static final int RESULT_CACHE_KEYWORD=93;
+    public static final int BEFORE_KEYWORD=170;
+    public static final int EACH_KEYWORD=179;
+    public static final int FOLLOWS_KEYWORD=181;
+    public static final int T__215=215;
+    public static final int X=52;
+    public static final int UNDER_KEYWORD=187;
+    public static final int UPDATE_KEYWORD=167;
     public static final int AND_OPERATOR=5;
-    public static final int NOT_IN_KEYWORD=99;
+    public static final int NOT_IN_KEYWORD=101;
     public static final int CHAR_TYPE=13;
-    public static final int OPEN_KEYWORD=148;
-    public static final int J=183;
+    public static final int OPEN_KEYWORD=150;
+    public static final int J=185;
     public static final int OR_OPERATOR=6;
-    public static final int OID_KEYWORD=182;
-    public static final int USING_KEYWORD=133;
-    public static final int O=25;
-    public static final int CURSOR_KEYWORD=127;
-    public static final int ARRAY_KEYWORD=123;
-    public static final int P=36;
-    public static final int REFERENCING_KEYWORD=173;
-    public static final int ISOPEN_KEYWORD=160;
-    public static final int OF_KEYWORD=118;
-    public static final int S=37;
-    public static final int SELF_KEYWORD=192;
-    public static final int DECLARE_KEYWORD=53;
-    public static final int OVERRIDING_KEYWORD=188;
-    public static final int VARYING_KEYWORD=122;
-    public static final int THE_REST=197;
-    public static final int BETWEEN_KEYWORD=143;
-    public static final int EXCEPTION_INIT_KEYWORD=108;
-    public static final int M=43;
-    public static final int T=30;
-    public static final int FALSE_KEYWORD=64;
-    public static final int NOT_OPERATOR=31;
-    public static final int REF_KEYWORD=125;
-    public static final int EXP_DIGITS=33;
+    public static final int T__219=219;
+    public static final int OID_KEYWORD=184;
+    public static final int USING_KEYWORD=135;
+    public static final int O=27;
+    public static final int PARAM_VALUE=202;
+    public static final int CURSOR_KEYWORD=129;
+    public static final int ARRAY_KEYWORD=125;
+    public static final int P=38;
+    public static final int REFERENCING_KEYWORD=175;
+    public static final int ISOPEN_KEYWORD=162;
+    public static final int OF_KEYWORD=120;
+    public static final int S=39;
+    public static final int SELF_KEYWORD=194;
+    public static final int DECLARE_KEYWORD=55;
+    public static final int OVERRIDING_KEYWORD=190;
+    public static final int VARYING_KEYWORD=124;
+    public static final int THE_REST=204;
+    public static final int BETWEEN_KEYWORD=145;
+    public static final int EXCEPTION_INIT_KEYWORD=110;
+    public static final int M=45;
+    public static final int T__210=210;
+    public static final int T=32;
+    public static final int FALSE_KEYWORD=66;
+    public static final int NOT_OPERATOR=33;
+    public static final int REF_KEYWORD=127;
+    public static final int EXP_DIGITS=35;
     public static final int SIZE_TYPES=11;
-    public static final int SQLCODE_KEYWORD=163;
-    public static final int DETERMINISTIC_KEYWORD=88;
+    public static final int SQLCODE_KEYWORD=165;
+    public static final int DETERMINISTIC_KEYWORD=90;
     public static final int KEYWORD=20;
-    public static final int EXCEPTION_KEYWORD=54;
+    public static final int EXCEPTION_KEYWORD=56;
+    public static final int T__216=216;
     public static final int SCALE_TYPES=10;
-    public static final int INSERT_KEYWORD=145;
-    public static final int FORALL_KEYWORD=138;
-    public static final int MONTH_KEYWORD=73;
-    public static final int N=28;
-    public static final int SQLERRM_KEYWORD=164;
-    public static final int CASE_KEYWORD=114;
-    public static final int PACKAGE_KEYWORD=149;
-    public static final int INLINE_KEYWORD=144;
-    public static final int AS_KEYWORD=80;
+    public static final int T__224=224;
+    public static final int INSERT_KEYWORD=147;
+    public static final int MONTH_KEYWORD=75;
+    public static final int FORALL_KEYWORD=140;
+    public static final int N=30;
+    public static final int SQLERRM_KEYWORD=166;
+    public static final int CASE_KEYWORD=116;
+    public static final int PACKAGE_KEYWORD=151;
+    public static final int INLINE_KEYWORD=146;
+    public static final int AS_KEYWORD=82;
     public static final int DAY_TYPE=18;
-    public static final int ROWCOUNT_KEYWORD=161;
-    public static final int JOIN_KEYWORD=196;
-    public static final int ELSIF_KEYWORD=95;
-    public static final int ENDIF_KEYWORD=96;
-    public static final int COUNT_KEYWORD=107;
-    public static final int PARENT_KEYWORD=176;
-    public static final int FINAL_KEYWORD=186;
-    public static final int SUBTYPE_KEYWORD=74;
-    public static final int FETCH_KEYWORD=136;
-    public static final int FUNCTION_KEYWORD=79;
-    public static final int STATIC_KEYWORD=190;
-    public static final int EXISTS_KEYWORD=166;
-    public static final int TABLE_KEYWORD=117;
-    public static final int COMMIT_KEYWORD=124;
-    public static final int NESTED_KEYWORD=172;
-    public static final int IS_NOT_NULL_KEYWORD=98;
-    public static final int IS_KEYWORD=75;
-    public static final int BULK_KEYWORD=134;
-    public static final int D=29;
-    public static final int PROCEDURE_KEYWORD=92;
-    public static final int IF_KEYWORD=93;
+    public static final int T__217=217;
+    public static final int ROWCOUNT_KEYWORD=163;
+    public static final int JOIN_KEYWORD=198;
+    public static final int ELSIF_KEYWORD=97;
+    public static final int ENDIF_KEYWORD=98;
+    public static final int COUNT_KEYWORD=109;
+    public static final int PARENT_KEYWORD=178;
+    public static final int FINAL_KEYWORD=188;
+    public static final int SUBTYPE_KEYWORD=76;
+    public static final int COMMA=201;
+    public static final int FETCH_KEYWORD=138;
+    public static final int FUNCTION_KEYWORD=81;
+    public static final int STATIC_KEYWORD=192;
+    public static final int EXISTS_KEYWORD=168;
+    public static final int TABLE_KEYWORD=119;
+    public static final int COMMIT_KEYWORD=126;
+    public static final int NESTED_KEYWORD=174;
+    public static final int T__208=208;
+    public static final int IS_NOT_NULL_KEYWORD=100;
+    public static final int IS_KEYWORD=77;
+    public static final int BULK_KEYWORD=136;
+    public static final int D=31;
+    public static final int T__211=211;
+    public static final int PROCEDURE_KEYWORD=94;
+    public static final int IF_KEYWORD=95;
     public static final int YEAR_TYPE=17;
-    public static final int LIKE_TYPE_KEYWORD=61;
-    public static final int RAISE_KEYWORD=111;
-    public static final int TIME_KEYWORD=68;
+    public static final int LIKE_TYPE_KEYWORD=63;
+    public static final int RAISE_KEYWORD=113;
     public static final int CHAR_TYPES=12;
-    public static final int ORDER_KEYWORD=195;
-    public static final int CONSTRUCTOR_KEYWORD=191;
-    public static final int SAVEPOINT_KEYWORD=154;
-    public static final int ROWTYPE_KEYWORD=60;
-    public static final int NOT_NULL_KEYWORD=57;
-    public static final int RETURN_KEYWORD=81;
-    public static final int PIPELINED_KEYWORD=90;
-    public static final int MAP_KEYWORD=194;
+    public static final int TIME_KEYWORD=70;
+    public static final int ORDER_KEYWORD=197;
+    public static final int CONSTRUCTOR_KEYWORD=193;
+    public static final int SAVEPOINT_KEYWORD=156;
+    public static final int ROWTYPE_KEYWORD=62;
+    public static final int T__209=209;
+    public static final int NOT_NULL_KEYWORD=60;
+    public static final int RETURN_KEYWORD=83;
+    public static final int PIPELINED_KEYWORD=92;
+    public static final int MAP_KEYWORD=196;
     public static final int TIMESTAMP_TYPE=16;
     public static final int NOT_OPEARTOR=7;
-    public static final int NOTFOUND_KEYWORD=158;
-    public static final int AUTHID_KEYWORD=85;
-    public static final int IN_KEYWORD=82;
-    public static final int A=27;
-    public static final int WITH_KEYWORD=66;
-    public static final int LINE_COMMENT=22;
-    public static final int INSTEAD_KEYWORD=170;
-    public static final int PARALLEL_ENABLED_KEYWORD=89;
-    public static final int ENABLE_KEYWORD=180;
+    public static final int NOTFOUND_KEYWORD=160;
+    public static final int T__205=205;
+    public static final int AUTHID_KEYWORD=87;
+    public static final int A=29;
+    public static final int IN_KEYWORD=84;
+    public static final int LINE_COMMENT=25;
+    public static final int WITH_KEYWORD=68;
+    public static final int INSTEAD_KEYWORD=172;
+    public static final int PARALLEL_ENABLED_KEYWORD=91;
+    public static final int ENABLE_KEYWORD=182;
     public static final int BYTE_TYPE=14;
-    public static final int WHEN_KEYWORD=55;
-    public static final int C=47;
-    public static final int L=35;
-    public static final int LOCAL_KEYWORD=67;
+    public static final int WHEN_KEYWORD=57;
+    public static final int T__207=207;
+    public static final int C=49;
+    public static final int T__212=212;
+    public static final int T__206=206;
+    public static final int L=37;
+    public static final int ROW_KEYWORD=180;
     public static final int SECOND_TYPE=19;
-    public static final int ROW_KEYWORD=178;
-    public static final int END_KEYWORD=52;
-    public static final int LIMIT_KEYWORD=137;
-    public static final int SET_KEYWORD=156;
-    public static final int AFTER_KEYWORD=169;
-    public static final int SERIALLY_REUSABLE_KEYWORD=155;
-    public static final int TYPE_KEYWORD=62;
-    public static final int LOCK_KEYWORD=146;
-    public static final int BODY_KEYWORD=150;
-    public static final int ON_KEYWORD=171;
-    public static final int IS_NULL_KEYWORD=97;
-    public static final int FOUND_KEYWORD=159;
-    public static final int MERGE_KEYWORD=147;
-    public static final int I=38;
-    public static final int OBJECT_KEYWORD=184;
-    public static final int F=45;
-    public static final int TRANSACTION_KEYWORD=157;
-    public static final int INSTANTIABLE_KEYWORD=187;
-    public static final int SAVE_KEYWORD=139;
+    public static final int LOCAL_KEYWORD=69;
+    public static final int END_KEYWORD=54;
+    public static final int AFTER_KEYWORD=171;
+    public static final int LIMIT_KEYWORD=139;
+    public static final int SET_KEYWORD=158;
+    public static final int SERIALLY_REUSABLE_KEYWORD=157;
+    public static final int IDENTIFIER=21;
+    public static final int TYPE_KEYWORD=64;
+    public static final int LOCK_KEYWORD=148;
+    public static final int ON_KEYWORD=173;
+    public static final int BODY_KEYWORD=152;
+    public static final int IS_NULL_KEYWORD=99;
+    public static final int FOUND_KEYWORD=161;
+    public static final int MERGE_KEYWORD=149;
+    public static final int I=40;
+    public static final int OBJECT_KEYWORD=186;
+    public static final int T__227=227;
+    public static final int F=47;
+    public static final int TRANSACTION_KEYWORD=159;
+    public static final int INSTANTIABLE_KEYWORD=189;
+    public static final int SAVE_KEYWORD=141;
     public static final int RAW_TYPE=15;
-    public static final int END_LOOP_KEYWORD=102;
-    public static final int EXCEPTIONS_KEYWORD=140;
-    public static final int LIKE_KEYWORD=110;
-    public static final int RETURNING_KEYWORD=152;
-    public static final int K=109;
-    public static final int NEW_KEYWORD=175;
-    public static final int RECORD_KEYWORD=76;
-    public static final int OUT_KEYWORD=83;
-    public static final int B=44;
-    public static final int NULL_KEYWORD=58;
-    public static final int INTO_KEYWORD=132;
-    public static final int DIGIT=49;
-    public static final int OPERATOR=24;
-    public static final int DEFAULT_KEYWORD=59;
-    public static final int OLD_KEYWORD=174;
-    public static final int DIGITS=32;
-    public static final int H=48;
-    public static final int IMMEDIATE_KEYWORD=130;
+    public static final int END_LOOP_KEYWORD=104;
+    public static final int EXCEPTIONS_KEYWORD=142;
+    public static final int T__222=222;
+    public static final int QUOTATION_MARK=203;
+    public static final int RETURNING_KEYWORD=154;
+    public static final int LIKE_KEYWORD=112;
+    public static final int K=111;
+    public static final int NEW_KEYWORD=177;
+    public static final int RECORD_KEYWORD=78;
+    public static final int OUT_KEYWORD=85;
+    public static final int B=46;
+    public static final int NULL_KEYWORD=59;
+    public static final int INTO_KEYWORD=134;
+    public static final int DIGIT=51;
+    public static final int T__226=226;
+    public static final int DEFAULT_KEYWORD=61;
+    public static final int T__225=225;
+    public static final int OLD_KEYWORD=176;
+    public static final int DIGITS=34;
+    public static final int H=50;
+    public static final int IMMEDIATE_KEYWORD=132;
+    public static final int T__223=223;
     public static final int NUMBER_UNSIGNED=4;
-    public static final int G=40;
-    public static final int BLOCK_COMMENT=21;
-    public static final int FOR_KEYWORD=104;
-    public static final int TO_KEYWORD=72;
-    public static final int WHITESPACE=23;
-    public static final int Z=69;
-    public static final int BY_KEYWORD=120;
-    public static final int REVERSE_KEYWORD=105;
-    public static final int THEN_KEYWORD=56;
+    public static final int G=42;
+    public static final int BLOCK_COMMENT=24;
+    public static final int FOR_KEYWORD=106;
+    public static final int EXT_IDENTIFIER=22;
+    public static final int TO_KEYWORD=74;
+    public static final int WHITESPACE=26;
+    public static final int Z=71;
+    public static final int BY_KEYWORD=122;
+    public static final int REVERSE_KEYWORD=107;
+    public static final int THEN_KEYWORD=58;
+    public static final int SEPARATOR=200;
+    public static final int T__228=228;
     public static final int EOF=-1;
-    public static final int SELECT_KEYWORD=106;
-    public static final int INDICES_KEYWORD=141;
-    public static final int GOTO_KEYWORD=100;
-    public static final int REPLACE_KEYWORD=78;
-    public static final int NOCOPY_KEYWORD=84;
-    public static final int Y=42;
-    public static final int E=39;
+    public static final int SELECT_KEYWORD=108;
+    public static final int INDICES_KEYWORD=143;
+    public static final int GOTO_KEYWORD=102;
+    public static final int REPLACE_KEYWORD=80;
+    public static final int NOCOPY_KEYWORD=86;
+    public static final int T__213=213;
+    public static final int Y=44;
+    public static final int T__221=221;
+    public static final int E=41;
 
 
     	/*public List<SyntaxError> syntaxErrors = new ArrayList<SyntaxError>();
@@ -241,17 +272,510 @@ public class PL_SQLLexer extends Lexer {
     }
     public String getGrammarFileName() { return "C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g"; }
 
+    // $ANTLR start "T__205"
+    public final void mT__205() throws RecognitionException {
+        try {
+            int _type = T__205;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:30:8: ( '<<' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:30:10: '<<'
+            {
+            match("<<"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__205"
+
+    // $ANTLR start "T__206"
+    public final void mT__206() throws RecognitionException {
+        try {
+            int _type = T__206;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:31:8: ( '>>' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:31:10: '>>'
+            {
+            match(">>"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__206"
+
+    // $ANTLR start "T__207"
+    public final void mT__207() throws RecognitionException {
+        try {
+            int _type = T__207;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:32:8: ( '(' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:32:10: '('
+            {
+            match('('); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__207"
+
+    // $ANTLR start "T__208"
+    public final void mT__208() throws RecognitionException {
+        try {
+            int _type = T__208;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:33:8: ( ')' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:33:10: ')'
+            {
+            match(')'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__208"
+
+    // $ANTLR start "T__209"
+    public final void mT__209() throws RecognitionException {
+        try {
+            int _type = T__209;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:34:8: ( '/' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:34:10: '/'
+            {
+            match('/'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__209"
+
+    // $ANTLR start "T__210"
+    public final void mT__210() throws RecognitionException {
+        try {
+            int _type = T__210;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:35:8: ( '\\'' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:35:10: '\\''
+            {
+            match('\''); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__210"
+
+    // $ANTLR start "T__211"
+    public final void mT__211() throws RecognitionException {
+        try {
+            int _type = T__211;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:36:8: ( '+' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:36:10: '+'
+            {
+            match('+'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__211"
+
+    // $ANTLR start "T__212"
+    public final void mT__212() throws RecognitionException {
+        try {
+            int _type = T__212;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:37:8: ( '-' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:37:10: '-'
+            {
+            match('-'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__212"
+
+    // $ANTLR start "T__213"
+    public final void mT__213() throws RecognitionException {
+        try {
+            int _type = T__213;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:38:8: ( '*' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:38:10: '*'
+            {
+            match('*'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__213"
+
+    // $ANTLR start "T__214"
+    public final void mT__214() throws RecognitionException {
+        try {
+            int _type = T__214;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:39:8: ( '**' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:39:10: '**'
+            {
+            match("**"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__214"
+
+    // $ANTLR start "T__215"
+    public final void mT__215() throws RecognitionException {
+        try {
+            int _type = T__215;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:40:8: ( '||' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:40:10: '||'
+            {
+            match("||"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__215"
+
+    // $ANTLR start "T__216"
+    public final void mT__216() throws RecognitionException {
+        try {
+            int _type = T__216;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:41:8: ( '=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:41:10: '='
+            {
+            match('='); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__216"
+
+    // $ANTLR start "T__217"
+    public final void mT__217() throws RecognitionException {
+        try {
+            int _type = T__217;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:42:8: ( '<>' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:42:10: '<>'
+            {
+            match("<>"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__217"
+
+    // $ANTLR start "T__218"
+    public final void mT__218() throws RecognitionException {
+        try {
+            int _type = T__218;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:43:8: ( '!=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:43:10: '!='
+            {
+            match("!="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__218"
+
+    // $ANTLR start "T__219"
+    public final void mT__219() throws RecognitionException {
+        try {
+            int _type = T__219;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:44:8: ( '~=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:44:10: '~='
+            {
+            match("~="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__219"
+
+    // $ANTLR start "T__220"
+    public final void mT__220() throws RecognitionException {
+        try {
+            int _type = T__220;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:45:8: ( '^=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:45:10: '^='
+            {
+            match("^="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__220"
+
+    // $ANTLR start "T__221"
+    public final void mT__221() throws RecognitionException {
+        try {
+            int _type = T__221;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:46:8: ( '>' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:46:10: '>'
+            {
+            match('>'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__221"
+
+    // $ANTLR start "T__222"
+    public final void mT__222() throws RecognitionException {
+        try {
+            int _type = T__222;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:47:8: ( '<' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:47:10: '<'
+            {
+            match('<'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__222"
+
+    // $ANTLR start "T__223"
+    public final void mT__223() throws RecognitionException {
+        try {
+            int _type = T__223;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:48:8: ( '<=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:48:10: '<='
+            {
+            match("<="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__223"
+
+    // $ANTLR start "T__224"
+    public final void mT__224() throws RecognitionException {
+        try {
+            int _type = T__224;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:49:8: ( '>=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:49:10: '>='
+            {
+            match(">="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__224"
+
+    // $ANTLR start "T__225"
+    public final void mT__225() throws RecognitionException {
+        try {
+            int _type = T__225;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:50:8: ( '(+)' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:50:10: '(+)'
+            {
+            match("(+)"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__225"
+
+    // $ANTLR start "T__226"
+    public final void mT__226() throws RecognitionException {
+        try {
+            int _type = T__226;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:51:8: ( '..' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:51:10: '..'
+            {
+            match(".."); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__226"
+
+    // $ANTLR start "T__227"
+    public final void mT__227() throws RecognitionException {
+        try {
+            int _type = T__227;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:52:8: ( ':=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:52:10: ':='
+            {
+            match(":="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__227"
+
+    // $ANTLR start "T__228"
+    public final void mT__228() throws RecognitionException {
+        try {
+            int _type = T__228;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:53:8: ( '.' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:53:10: '.'
+            {
+            match('.'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__228"
+
     // $ANTLR start "BLOCK_COMMENT"
     public final void mBLOCK_COMMENT() throws RecognitionException {
         try {
             int _type = BLOCK_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:120:2: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:120:4: '/*' ( options {greedy=false; } : . )* '*/'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:124:2: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:124:4: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:120:9: ( options {greedy=false; } : . )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:124:9: ( options {greedy=false; } : . )*
             loop1:
             do {
                 int alt1=2;
@@ -276,7 +800,7 @@ public class PL_SQLLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:120:37: .
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:124:37: .
             	    {
             	    matchAny(); 
 
@@ -307,12 +831,12 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LINE_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:124:2: ( '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:124:4: '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:128:2: ( '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:128:4: '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
             {
             match("--"); 
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:124:9: (~ ( '\\n' | '\\r' ) )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:128:9: (~ ( '\\n' | '\\r' ) )*
             loop2:
             do {
                 int alt2=2;
@@ -325,7 +849,7 @@ public class PL_SQLLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:124:9: ~ ( '\\n' | '\\r' )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:128:9: ~ ( '\\n' | '\\r' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -345,7 +869,7 @@ public class PL_SQLLexer extends Lexer {
                 }
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:124:23: ( '\\r' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:128:23: ( '\\r' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -354,7 +878,7 @@ public class PL_SQLLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:124:23: '\\r'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:128:23: '\\r'
                     {
                     match('\r'); 
 
@@ -381,10 +905,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = WHITESPACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:128:2: ( ( ' ' | '\\t' | '\\n' | '\\r' )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:128:4: ( ' ' | '\\t' | '\\n' | '\\r' )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:2: ( ( ' ' | '\\t' | '\\n' | '\\r' )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:4: ( ' ' | '\\t' | '\\n' | '\\r' )+
             {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:128:4: ( ' ' | '\\t' | '\\n' | '\\r' )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:4: ( ' ' | '\\t' | '\\n' | '\\r' )+
             int cnt4=0;
             loop4:
             do {
@@ -434,199 +958,13 @@ public class PL_SQLLexer extends Lexer {
     }
     // $ANTLR end "WHITESPACE"
 
-    // $ANTLR start "OPERATOR"
-    public final void mOPERATOR() throws RecognitionException {
-        try {
-            int _type = OPERATOR;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:9: ( ':=' | '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' | '^=' | '>' | '<' | '<=' | '>=' | '..' | '(+)' | '(' | ')' | '<<' | '>>' )
-            int alt5=22;
-            alt5 = dfa5.predict(input);
-            switch (alt5) {
-                case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:11: ':='
-                    {
-                    match(":="); 
-
-
-                    }
-                    break;
-                case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:18: '+'
-                    {
-                    match('+'); 
-
-                    }
-                    break;
-                case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:24: '-'
-                    {
-                    match('-'); 
-
-                    }
-                    break;
-                case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:30: '*'
-                    {
-                    match('*'); 
-
-                    }
-                    break;
-                case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:36: '/'
-                    {
-                    match('/'); 
-
-                    }
-                    break;
-                case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:42: '**'
-                    {
-                    match("**"); 
-
-
-                    }
-                    break;
-                case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:49: '||'
-                    {
-                    match("||"); 
-
-
-                    }
-                    break;
-                case 8 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:56: '='
-                    {
-                    match('='); 
-
-                    }
-                    break;
-                case 9 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:62: '<>'
-                    {
-                    match("<>"); 
-
-
-                    }
-                    break;
-                case 10 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:69: '!='
-                    {
-                    match("!="); 
-
-
-                    }
-                    break;
-                case 11 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:131:76: '~='
-                    {
-                    match("~="); 
-
-
-                    }
-                    break;
-                case 12 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:7: '^='
-                    {
-                    match("^="); 
-
-
-                    }
-                    break;
-                case 13 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:14: '>'
-                    {
-                    match('>'); 
-
-                    }
-                    break;
-                case 14 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:20: '<'
-                    {
-                    match('<'); 
-
-                    }
-                    break;
-                case 15 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:26: '<='
-                    {
-                    match("<="); 
-
-
-                    }
-                    break;
-                case 16 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:33: '>='
-                    {
-                    match(">="); 
-
-
-                    }
-                    break;
-                case 17 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:40: '..'
-                    {
-                    match(".."); 
-
-
-                    }
-                    break;
-                case 18 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:47: '(+)'
-                    {
-                    match("(+)"); 
-
-
-                    }
-                    break;
-                case 19 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:55: '('
-                    {
-                    match('('); 
-
-                    }
-                    break;
-                case 20 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:61: ')'
-                    {
-                    match(')'); 
-
-                    }
-                    break;
-                case 21 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:67: '<<'
-                    {
-                    match("<<"); 
-
-
-                    }
-                    break;
-                case 22 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:132:74: '>>'
-                    {
-                    match(">>"); 
-
-
-                    }
-                    break;
-
-            }
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "OPERATOR"
-
     // $ANTLR start "OR_OPERATOR"
     public final void mOR_OPERATOR() throws RecognitionException {
         try {
             int _type = OR_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:136:2: ( O R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:136:4: O R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:140:2: ( O R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:140:4: O R
             {
             mO(); 
             mR(); 
@@ -646,8 +984,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = AND_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:139:2: ( A N D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:139:4: A N D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:143:2: ( A N D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:143:4: A N D
             {
             mA(); 
             mN(); 
@@ -668,8 +1006,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NOT_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:142:2: ( N O T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:142:4: N O T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:146:2: ( N O T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:146:4: N O T
             {
             mN(); 
             mO(); 
@@ -690,40 +1028,40 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NUMBER_UNSIGNED;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:145:2: ( ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS ) ( EXP_DIGITS )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:145:4: ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS ) ( EXP_DIGITS )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:149:2: ( ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS ) ( EXP_DIGITS )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:149:4: ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS ) ( EXP_DIGITS )?
             {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:145:4: ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS )
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:149:4: ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS )
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( ((LA8_0>='0' && LA8_0<='9')) ) {
-                alt8=1;
+            if ( ((LA7_0>='0' && LA7_0<='9')) ) {
+                alt7=1;
             }
-            else if ( (LA8_0=='.') ) {
-                alt8=2;
+            else if ( (LA7_0=='.') ) {
+                alt7=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
-            switch (alt8) {
+            switch (alt7) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:145:5: DIGITS ( '.' )? ( DIGITS )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:149:5: DIGITS ( '.' )? ( DIGITS )?
                     {
                     mDIGITS(); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:145:12: ( '.' )?
-                    int alt6=2;
-                    int LA6_0 = input.LA(1);
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:149:12: ( '.' )?
+                    int alt5=2;
+                    int LA5_0 = input.LA(1);
 
-                    if ( (LA6_0=='.') ) {
-                        alt6=1;
+                    if ( (LA5_0=='.') ) {
+                        alt5=1;
                     }
-                    switch (alt6) {
+                    switch (alt5) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:145:12: '.'
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:149:12: '.'
                             {
                             match('.'); 
 
@@ -732,16 +1070,16 @@ public class PL_SQLLexer extends Lexer {
 
                     }
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:145:17: ( DIGITS )?
-                    int alt7=2;
-                    int LA7_0 = input.LA(1);
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:149:17: ( DIGITS )?
+                    int alt6=2;
+                    int LA6_0 = input.LA(1);
 
-                    if ( ((LA7_0>='0' && LA7_0<='9')) ) {
-                        alt7=1;
+                    if ( ((LA6_0>='0' && LA6_0<='9')) ) {
+                        alt6=1;
                     }
-                    switch (alt7) {
+                    switch (alt6) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:145:17: DIGITS
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:149:17: DIGITS
                             {
                             mDIGITS(); 
 
@@ -754,7 +1092,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:146:5: '.' DIGITS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:150:5: '.' DIGITS
                     {
                     match('.'); 
                     mDIGITS(); 
@@ -764,16 +1102,16 @@ public class PL_SQLLexer extends Lexer {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:148:3: ( EXP_DIGITS )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:152:3: ( EXP_DIGITS )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA9_0=='E'||LA9_0=='e') ) {
-                alt9=1;
+            if ( (LA8_0=='E'||LA8_0=='e') ) {
+                alt8=1;
             }
-            switch (alt9) {
+            switch (alt8) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:148:4: EXP_DIGITS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:152:4: EXP_DIGITS
                     {
                     mEXP_DIGITS(); 
 
@@ -798,33 +1136,33 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:151:8: ( '\\'' ( '\\'\\'' | ~ ( '\\'' ) )* '\\'' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:152:3: '\\'' ( '\\'\\'' | ~ ( '\\'' ) )* '\\''
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:155:8: ( '\\'' ( '\\'\\'' | ~ ( '\\'' ) )* '\\'' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:156:3: '\\'' ( '\\'\\'' | ~ ( '\\'' ) )* '\\''
             {
             match('\''); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:152:8: ( '\\'\\'' | ~ ( '\\'' ) )*
-            loop10:
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:156:8: ( '\\'\\'' | ~ ( '\\'' ) )*
+            loop9:
             do {
-                int alt10=3;
-                int LA10_0 = input.LA(1);
+                int alt9=3;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA10_0=='\'') ) {
-                    int LA10_1 = input.LA(2);
+                if ( (LA9_0=='\'') ) {
+                    int LA9_1 = input.LA(2);
 
-                    if ( (LA10_1=='\'') ) {
-                        alt10=1;
+                    if ( (LA9_1=='\'') ) {
+                        alt9=1;
                     }
 
 
                 }
-                else if ( ((LA10_0>='\u0000' && LA10_0<='&')||(LA10_0>='(' && LA10_0<='\uFFFF')) ) {
-                    alt10=2;
+                else if ( ((LA9_0>='\u0000' && LA9_0<='&')||(LA9_0>='(' && LA9_0<='\uFFFF')) ) {
+                    alt9=2;
                 }
 
 
-                switch (alt10) {
+                switch (alt9) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:152:10: '\\'\\''
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:156:10: '\\'\\''
             	    {
             	    match("''"); 
 
@@ -832,7 +1170,7 @@ public class PL_SQLLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:152:19: ~ ( '\\'' )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:156:19: ~ ( '\\'' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -848,7 +1186,7 @@ public class PL_SQLLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop9;
                 }
             } while (true);
 
@@ -869,12 +1207,12 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SOME_TYPES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:156:2: ( N A T U R A L | P L S '_' I N T E G E R | N A T U R A L N | P O S I T I V E | P O S I T I V E N | S I G N T Y P E | S I M P L E '_' I N T E G E R | I N T | I N T E G E R | S M A L L I N T | B I N A R Y '_' I N T E G E R | R E A L | B I N A R Y '_' D O U B L E | B I N A R Y '_' F L O A T | L O N G | L O N G ( ' ' | '\\t' | '\\n' | '\\r' )+ R A W | R O W I D | U R O W I D | B O O L E A N | M L S L A B E L | D A T E | B F I L E | B L O B | C L O B | N C L O B )
-            int alt12=25;
-            alt12 = dfa12.predict(input);
-            switch (alt12) {
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:2: ( N A T U R A L | P L S '_' I N T E G E R | N A T U R A L N | P O S I T I V E | P O S I T I V E N | S I G N T Y P E | S I M P L E '_' I N T E G E R | I N T | I N T E G E R | S M A L L I N T | B I N A R Y '_' I N T E G E R | R E A L | B I N A R Y '_' D O U B L E | B I N A R Y '_' F L O A T | L O N G | L O N G ( ' ' | '\\t' | '\\n' | '\\r' )+ R A W | R O W I D | U R O W I D | B O O L E A N | M L S L A B E L | D A T E | B F I L E | B L O B | C L O B | N C L O B )
+            int alt11=25;
+            alt11 = dfa11.predict(input);
+            switch (alt11) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:156:4: N A T U R A L
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:4: N A T U R A L
                     {
                     mN(); 
                     mA(); 
@@ -887,7 +1225,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:156:20: P L S '_' I N T E G E R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:20: P L S '_' I N T E G E R
                     {
                     mP(); 
                     mL(); 
@@ -904,7 +1242,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:156:46: N A T U R A L N
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:46: N A T U R A L N
                     {
                     mN(); 
                     mA(); 
@@ -918,7 +1256,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:156:64: P O S I T I V E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:64: P O S I T I V E
                     {
                     mP(); 
                     mO(); 
@@ -932,7 +1270,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:156:82: P O S I T I V E N
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:82: P O S I T I V E N
                     {
                     mP(); 
                     mO(); 
@@ -947,7 +1285,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:157:3: S I G N T Y P E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:161:3: S I G N T Y P E
                     {
                     mS(); 
                     mI(); 
@@ -961,7 +1299,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:157:21: S I M P L E '_' I N T E G E R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:161:21: S I M P L E '_' I N T E G E R
                     {
                     mS(); 
                     mI(); 
@@ -981,7 +1319,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:157:53: I N T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:161:53: I N T
                     {
                     mI(); 
                     mN(); 
@@ -990,7 +1328,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 9 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:157:61: I N T E G E R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:161:61: I N T E G E R
                     {
                     mI(); 
                     mN(); 
@@ -1003,7 +1341,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 10 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:157:77: S M A L L I N T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:161:77: S M A L L I N T
                     {
                     mS(); 
                     mM(); 
@@ -1017,7 +1355,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 11 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:158:3: B I N A R Y '_' I N T E G E R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:162:3: B I N A R Y '_' I N T E G E R
                     {
                     mB(); 
                     mI(); 
@@ -1037,7 +1375,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 12 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:158:35: R E A L
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:162:35: R E A L
                     {
                     mR(); 
                     mE(); 
@@ -1047,7 +1385,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 13 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:158:45: B I N A R Y '_' D O U B L E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:162:45: B I N A R Y '_' D O U B L E
                     {
                     mB(); 
                     mI(); 
@@ -1066,7 +1404,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 14 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:158:75: B I N A R Y '_' F L O A T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:162:75: B I N A R Y '_' F L O A T
                     {
                     mB(); 
                     mI(); 
@@ -1084,7 +1422,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 15 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:159:3: L O N G
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:163:3: L O N G
                     {
                     mL(); 
                     mO(); 
@@ -1094,25 +1432,25 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 16 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:159:13: L O N G ( ' ' | '\\t' | '\\n' | '\\r' )+ R A W
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:163:13: L O N G ( ' ' | '\\t' | '\\n' | '\\r' )+ R A W
                     {
                     mL(); 
                     mO(); 
                     mN(); 
                     mG(); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:159:21: ( ' ' | '\\t' | '\\n' | '\\r' )+
-                    int cnt11=0;
-                    loop11:
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:163:21: ( ' ' | '\\t' | '\\n' | '\\r' )+
+                    int cnt10=0;
+                    loop10:
                     do {
-                        int alt11=2;
-                        int LA11_0 = input.LA(1);
+                        int alt10=2;
+                        int LA10_0 = input.LA(1);
 
-                        if ( ((LA11_0>='\t' && LA11_0<='\n')||LA11_0=='\r'||LA11_0==' ') ) {
-                            alt11=1;
+                        if ( ((LA10_0>='\t' && LA10_0<='\n')||LA10_0=='\r'||LA10_0==' ') ) {
+                            alt10=1;
                         }
 
 
-                        switch (alt11) {
+                        switch (alt10) {
                     	case 1 :
                     	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
                     	    {
@@ -1130,12 +1468,12 @@ public class PL_SQLLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    if ( cnt11 >= 1 ) break loop11;
+                    	    if ( cnt10 >= 1 ) break loop10;
                                 EarlyExitException eee =
-                                    new EarlyExitException(11, input);
+                                    new EarlyExitException(10, input);
                                 throw eee;
                         }
-                        cnt11++;
+                        cnt10++;
                     } while (true);
 
                     mR(); 
@@ -1145,7 +1483,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 17 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:159:51: R O W I D
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:163:51: R O W I D
                     {
                     mR(); 
                     mO(); 
@@ -1156,7 +1494,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 18 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:159:63: U R O W I D
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:163:63: U R O W I D
                     {
                     mU(); 
                     mR(); 
@@ -1168,7 +1506,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 19 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:159:77: B O O L E A N
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:163:77: B O O L E A N
                     {
                     mB(); 
                     mO(); 
@@ -1181,7 +1519,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 20 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:159:93: M L S L A B E L
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:163:93: M L S L A B E L
                     {
                     mM(); 
                     mL(); 
@@ -1195,7 +1533,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 21 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:3: D A T E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:3: D A T E
                     {
                     mD(); 
                     mA(); 
@@ -1205,7 +1543,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 22 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:13: B F I L E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:13: B F I L E
                     {
                     mB(); 
                     mF(); 
@@ -1216,7 +1554,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 23 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:25: B L O B
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:25: B L O B
                     {
                     mB(); 
                     mL(); 
@@ -1226,7 +1564,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 24 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:35: C L O B
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:35: C L O B
                     {
                     mC(); 
                     mL(); 
@@ -1236,7 +1574,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 25 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:160:45: N C L O B
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:45: N C L O B
                     {
                     mN(); 
                     mC(); 
@@ -1261,15 +1599,15 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SCALE_TYPES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:2: ( ( N U M B E R | D E C | D E C I M A L | N U M E R I C ) ( ( '(' ( '+' )? DIGITS ')' ) | ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' ) )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:4: ( N U M B E R | D E C | D E C I M A L | N U M E R I C ) ( ( '(' ( '+' )? DIGITS ')' ) | ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' ) )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:168:2: ( ( N U M B E R | D E C | D E C I M A L | N U M E R I C ) ( ( '(' ( '+' )? DIGITS ')' ) | ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' ) )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:168:4: ( N U M B E R | D E C | D E C I M A L | N U M E R I C ) ( ( '(' ( '+' )? DIGITS ')' ) | ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' ) )?
             {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:4: ( N U M B E R | D E C | D E C I M A L | N U M E R I C )
-            int alt13=4;
-            alt13 = dfa13.predict(input);
-            switch (alt13) {
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:168:4: ( N U M B E R | D E C | D E C I M A L | N U M E R I C )
+            int alt12=4;
+            alt12 = dfa12.predict(input);
+            switch (alt12) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:6: N U M B E R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:168:6: N U M B E R
                     {
                     mN(); 
                     mU(); 
@@ -1281,7 +1619,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:20: D E C
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:168:20: D E C
                     {
                     mD(); 
                     mE(); 
@@ -1290,7 +1628,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:28: D E C I M A L
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:168:28: D E C I M A L
                     {
                     mD(); 
                     mE(); 
@@ -1303,7 +1641,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:164:44: N U M E R I C
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:168:44: N U M E R I C
                     {
                     mN(); 
                     mU(); 
@@ -1318,27 +1656,27 @@ public class PL_SQLLexer extends Lexer {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:165:3: ( ( '(' ( '+' )? DIGITS ')' ) | ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' ) )?
-            int alt17=3;
-            alt17 = dfa17.predict(input);
-            switch (alt17) {
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:169:3: ( ( '(' ( '+' )? DIGITS ')' ) | ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' ) )?
+            int alt16=3;
+            alt16 = dfa16.predict(input);
+            switch (alt16) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:165:5: ( '(' ( '+' )? DIGITS ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:169:5: ( '(' ( '+' )? DIGITS ')' )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:165:5: ( '(' ( '+' )? DIGITS ')' )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:165:6: '(' ( '+' )? DIGITS ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:169:5: ( '(' ( '+' )? DIGITS ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:169:6: '(' ( '+' )? DIGITS ')'
                     {
                     match('('); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:165:10: ( '+' )?
-                    int alt14=2;
-                    int LA14_0 = input.LA(1);
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:169:10: ( '+' )?
+                    int alt13=2;
+                    int LA13_0 = input.LA(1);
 
-                    if ( (LA14_0=='+') ) {
-                        alt14=1;
+                    if ( (LA13_0=='+') ) {
+                        alt13=1;
                     }
-                    switch (alt14) {
+                    switch (alt13) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:165:10: '+'
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:169:10: '+'
                             {
                             match('+'); 
 
@@ -1356,22 +1694,22 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:166:3: ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:3: ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:166:3: ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:166:4: '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:3: ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:4: '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')'
                     {
                     match('('); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:166:8: ( '+' )?
-                    int alt15=2;
-                    int LA15_0 = input.LA(1);
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:8: ( '+' )?
+                    int alt14=2;
+                    int LA14_0 = input.LA(1);
 
-                    if ( (LA15_0=='+') ) {
-                        alt15=1;
+                    if ( (LA14_0=='+') ) {
+                        alt14=1;
                     }
-                    switch (alt15) {
+                    switch (alt14) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:166:8: '+'
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:8: '+'
                             {
                             match('+'); 
 
@@ -1382,14 +1720,14 @@ public class PL_SQLLexer extends Lexer {
 
                     mDIGITS(); 
                     match(','); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:166:24: ( '+' | '-' )?
-                    int alt16=2;
-                    int LA16_0 = input.LA(1);
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:24: ( '+' | '-' )?
+                    int alt15=2;
+                    int LA15_0 = input.LA(1);
 
-                    if ( (LA16_0=='+'||LA16_0=='-') ) {
-                        alt16=1;
+                    if ( (LA15_0=='+'||LA15_0=='-') ) {
+                        alt15=1;
                     }
-                    switch (alt16) {
+                    switch (alt15) {
                         case 1 :
                             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
                             {
@@ -1435,28 +1773,28 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SIZE_TYPES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:2: ( ( D O U B L E ( ' ' | '\\t' | '\\n' | '\\r' )+ P R E C I S I O N | F L O A T ) ( '(' ( '+' )? DIGITS ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:4: ( D O U B L E ( ' ' | '\\t' | '\\n' | '\\r' )+ P R E C I S I O N | F L O A T ) ( '(' ( '+' )? DIGITS ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:174:2: ( ( D O U B L E ( ' ' | '\\t' | '\\n' | '\\r' )+ P R E C I S I O N | F L O A T ) ( '(' ( '+' )? DIGITS ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:174:4: ( D O U B L E ( ' ' | '\\t' | '\\n' | '\\r' )+ P R E C I S I O N | F L O A T ) ( '(' ( '+' )? DIGITS ')' )?
             {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:4: ( D O U B L E ( ' ' | '\\t' | '\\n' | '\\r' )+ P R E C I S I O N | F L O A T )
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:174:4: ( D O U B L E ( ' ' | '\\t' | '\\n' | '\\r' )+ P R E C I S I O N | F L O A T )
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA19_0=='D'||LA19_0=='d') ) {
-                alt19=1;
+            if ( (LA18_0=='D'||LA18_0=='d') ) {
+                alt18=1;
             }
-            else if ( (LA19_0=='F'||LA19_0=='f') ) {
-                alt19=2;
+            else if ( (LA18_0=='F'||LA18_0=='f') ) {
+                alt18=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 18, 0, input);
 
                 throw nvae;
             }
-            switch (alt19) {
+            switch (alt18) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:6: D O U B L E ( ' ' | '\\t' | '\\n' | '\\r' )+ P R E C I S I O N
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:174:6: D O U B L E ( ' ' | '\\t' | '\\n' | '\\r' )+ P R E C I S I O N
                     {
                     mD(); 
                     mO(); 
@@ -1464,19 +1802,19 @@ public class PL_SQLLexer extends Lexer {
                     mB(); 
                     mL(); 
                     mE(); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:18: ( ' ' | '\\t' | '\\n' | '\\r' )+
-                    int cnt18=0;
-                    loop18:
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:174:18: ( ' ' | '\\t' | '\\n' | '\\r' )+
+                    int cnt17=0;
+                    loop17:
                     do {
-                        int alt18=2;
-                        int LA18_0 = input.LA(1);
+                        int alt17=2;
+                        int LA17_0 = input.LA(1);
 
-                        if ( ((LA18_0>='\t' && LA18_0<='\n')||LA18_0=='\r'||LA18_0==' ') ) {
-                            alt18=1;
+                        if ( ((LA17_0>='\t' && LA17_0<='\n')||LA17_0=='\r'||LA17_0==' ') ) {
+                            alt17=1;
                         }
 
 
-                        switch (alt18) {
+                        switch (alt17) {
                     	case 1 :
                     	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
                     	    {
@@ -1494,12 +1832,12 @@ public class PL_SQLLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    if ( cnt18 >= 1 ) break loop18;
+                    	    if ( cnt17 >= 1 ) break loop17;
                                 EarlyExitException eee =
-                                    new EarlyExitException(18, input);
+                                    new EarlyExitException(17, input);
                                 throw eee;
                         }
-                        cnt18++;
+                        cnt17++;
                     } while (true);
 
                     mP(); 
@@ -1515,7 +1853,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:170:60: F L O A T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:174:60: F L O A T
                     {
                     mF(); 
                     mL(); 
@@ -1528,28 +1866,28 @@ public class PL_SQLLexer extends Lexer {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:171:3: ( '(' ( '+' )? DIGITS ')' )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:175:3: ( '(' ( '+' )? DIGITS ')' )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA21_0=='(') ) {
-                alt21=1;
+            if ( (LA20_0=='(') ) {
+                alt20=1;
             }
-            switch (alt21) {
+            switch (alt20) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:171:5: '(' ( '+' )? DIGITS ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:175:5: '(' ( '+' )? DIGITS ')'
                     {
                     match('('); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:171:9: ( '+' )?
-                    int alt20=2;
-                    int LA20_0 = input.LA(1);
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:175:9: ( '+' )?
+                    int alt19=2;
+                    int LA19_0 = input.LA(1);
 
-                    if ( (LA20_0=='+') ) {
-                        alt20=1;
+                    if ( (LA19_0=='+') ) {
+                        alt19=1;
                     }
-                    switch (alt20) {
+                    switch (alt19) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:171:9: '+'
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:175:9: '+'
                             {
                             match('+'); 
 
@@ -1582,12 +1920,12 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CHAR_TYPES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:175:2: ( V A R C H A R | V A R C H A R '2' | N C H A R | N V A R C H A R '2' )
-            int alt22=4;
-            alt22 = dfa22.predict(input);
-            switch (alt22) {
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:179:2: ( V A R C H A R | V A R C H A R '2' | N C H A R | N V A R C H A R '2' )
+            int alt21=4;
+            alt21 = dfa21.predict(input);
+            switch (alt21) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:175:4: V A R C H A R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:179:4: V A R C H A R
                     {
                     mV(); 
                     mA(); 
@@ -1600,7 +1938,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:175:20: V A R C H A R '2'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:179:20: V A R C H A R '2'
                     {
                     mV(); 
                     mA(); 
@@ -1614,7 +1952,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:175:40: N C H A R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:179:40: N C H A R
                     {
                     mN(); 
                     mC(); 
@@ -1625,7 +1963,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:175:52: N V A R C H A R '2'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:179:52: N V A R C H A R '2'
                     {
                     mN(); 
                     mV(); 
@@ -1654,8 +1992,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CHAR_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:179:2: ( C H A R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:179:4: C H A R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:183:2: ( C H A R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:183:4: C H A R
             {
             mC(); 
             mH(); 
@@ -1677,8 +2015,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BYTE_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:183:2: ( B Y T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:183:4: B Y T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:187:2: ( B Y T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:187:4: B Y T E
             {
             mB(); 
             mY(); 
@@ -1700,23 +2038,23 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RAW_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:186:9: ( R A W '(' ( '+' )? DIGITS ')' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:186:11: R A W '(' ( '+' )? DIGITS ')'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:190:9: ( R A W '(' ( '+' )? DIGITS ')' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:190:11: R A W '(' ( '+' )? DIGITS ')'
             {
             mR(); 
             mA(); 
             mW(); 
             match('('); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:186:21: ( '+' )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:190:21: ( '+' )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA23_0=='+') ) {
-                alt23=1;
+            if ( (LA22_0=='+') ) {
+                alt22=1;
             }
-            switch (alt23) {
+            switch (alt22) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:186:21: '+'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:190:21: '+'
                     {
                     match('+'); 
 
@@ -1743,8 +2081,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TIMESTAMP_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:190:2: ( T I M E S T A M P ( '(' ( '+' )? DIGIT ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:190:4: T I M E S T A M P ( '(' ( '+' )? DIGIT ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:2: ( T I M E S T A M P ( '(' ( '+' )? DIGIT ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:4: T I M E S T A M P ( '(' ( '+' )? DIGIT ')' )?
             {
             mT(); 
             mI(); 
@@ -1755,28 +2093,28 @@ public class PL_SQLLexer extends Lexer {
             mA(); 
             mM(); 
             mP(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:190:22: ( '(' ( '+' )? DIGIT ')' )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:22: ( '(' ( '+' )? DIGIT ')' )?
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA25_0=='(') ) {
-                alt25=1;
+            if ( (LA24_0=='(') ) {
+                alt24=1;
             }
-            switch (alt25) {
+            switch (alt24) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:190:24: '(' ( '+' )? DIGIT ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:24: '(' ( '+' )? DIGIT ')'
                     {
                     match('('); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:190:28: ( '+' )?
-                    int alt24=2;
-                    int LA24_0 = input.LA(1);
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:28: ( '+' )?
+                    int alt23=2;
+                    int LA23_0 = input.LA(1);
 
-                    if ( (LA24_0=='+') ) {
-                        alt24=1;
+                    if ( (LA23_0=='+') ) {
+                        alt23=1;
                     }
-                    switch (alt24) {
+                    switch (alt23) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:190:28: '+'
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:28: '+'
                             {
                             match('+'); 
 
@@ -1809,35 +2147,35 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = YEAR_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:2: ( Y E A R ( '(' ( '+' )? '0' .. '4' ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:4: Y E A R ( '(' ( '+' )? '0' .. '4' ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:198:2: ( Y E A R ( '(' ( '+' )? '0' .. '4' ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:198:4: Y E A R ( '(' ( '+' )? '0' .. '4' ')' )?
             {
             mY(); 
             mE(); 
             mA(); 
             mR(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:12: ( '(' ( '+' )? '0' .. '4' ')' )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:198:12: ( '(' ( '+' )? '0' .. '4' ')' )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA27_0=='(') ) {
-                alt27=1;
+            if ( (LA26_0=='(') ) {
+                alt26=1;
             }
-            switch (alt27) {
+            switch (alt26) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:14: '(' ( '+' )? '0' .. '4' ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:198:14: '(' ( '+' )? '0' .. '4' ')'
                     {
                     match('('); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:18: ( '+' )?
-                    int alt26=2;
-                    int LA26_0 = input.LA(1);
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:198:18: ( '+' )?
+                    int alt25=2;
+                    int LA25_0 = input.LA(1);
 
-                    if ( (LA26_0=='+') ) {
-                        alt26=1;
+                    if ( (LA25_0=='+') ) {
+                        alt25=1;
                     }
-                    switch (alt26) {
+                    switch (alt25) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:194:18: '+'
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:198:18: '+'
                             {
                             match('+'); 
 
@@ -1870,34 +2208,34 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DAY_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:197:9: ( D A Y ( '(' ( '+' )? DIGIT ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:197:11: D A Y ( '(' ( '+' )? DIGIT ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:9: ( D A Y ( '(' ( '+' )? DIGIT ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:11: D A Y ( '(' ( '+' )? DIGIT ')' )?
             {
             mD(); 
             mA(); 
             mY(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:197:17: ( '(' ( '+' )? DIGIT ')' )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:17: ( '(' ( '+' )? DIGIT ')' )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA29_0=='(') ) {
-                alt29=1;
+            if ( (LA28_0=='(') ) {
+                alt28=1;
             }
-            switch (alt29) {
+            switch (alt28) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:197:19: '(' ( '+' )? DIGIT ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:19: '(' ( '+' )? DIGIT ')'
                     {
                     match('('); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:197:23: ( '+' )?
-                    int alt28=2;
-                    int LA28_0 = input.LA(1);
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:23: ( '+' )?
+                    int alt27=2;
+                    int LA27_0 = input.LA(1);
 
-                    if ( (LA28_0=='+') ) {
-                        alt28=1;
+                    if ( (LA27_0=='+') ) {
+                        alt27=1;
                     }
-                    switch (alt28) {
+                    switch (alt27) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:197:23: '+'
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:23: '+'
                             {
                             match('+'); 
 
@@ -1930,8 +2268,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SECOND_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:2: ( S E C O N D ( '(' ( '+' )? DIGIT ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:4: S E C O N D ( '(' ( '+' )? DIGIT ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:2: ( S E C O N D ( '(' ( '+' )? DIGIT ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:4: S E C O N D ( '(' ( '+' )? DIGIT ')' )?
             {
             mS(); 
             mE(); 
@@ -1939,28 +2277,28 @@ public class PL_SQLLexer extends Lexer {
             mO(); 
             mN(); 
             mD(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:16: ( '(' ( '+' )? DIGIT ')' )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:16: ( '(' ( '+' )? DIGIT ')' )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA31_0=='(') ) {
-                alt31=1;
+            if ( (LA30_0=='(') ) {
+                alt30=1;
             }
-            switch (alt31) {
+            switch (alt30) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:18: '(' ( '+' )? DIGIT ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:18: '(' ( '+' )? DIGIT ')'
                     {
                     match('('); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:22: ( '+' )?
-                    int alt30=2;
-                    int LA30_0 = input.LA(1);
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:22: ( '+' )?
+                    int alt29=2;
+                    int LA29_0 = input.LA(1);
 
-                    if ( (LA30_0=='+') ) {
-                        alt30=1;
+                    if ( (LA29_0=='+') ) {
+                        alt29=1;
                     }
-                    switch (alt30) {
+                    switch (alt29) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:201:22: '+'
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:22: '+'
                             {
                             match('+'); 
 
@@ -1993,19 +2331,19 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:9: ( '.' | F R O M | W H E R E | G R O U P ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y | O R D E R ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y | P R I O R | C O N N E C T '_' B Y '_' R O O T | C O N N E C T | S T A R T | U N I O N | U N I O N ( ' ' | '\\t' | '\\n' | '\\r' )+ A L L | I N T E R S E C T | M I N U S | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ E X C E P T | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ I N T E R S E C T | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ U N I O N | A N Y | S O M E | A L L | E S C A P E )
-            int alt38=20;
-            alt38 = dfa38.predict(input);
-            switch (alt38) {
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:9: ( '.' | F R O M | W H E R E | G R O U P ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y | O R D E R ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y | P R I O R | C O N N E C T '_' B Y '_' R O O T | C O N N E C T | S T A R T | U N I O N | U N I O N ( ' ' | '\\t' | '\\n' | '\\r' )+ A L L | I N T E R S E C T | M I N U S | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ E X C E P T | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ I N T E R S E C T | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ U N I O N | A N Y | S O M E | A L L | E S C A P E )
+            int alt37=20;
+            alt37 = dfa37.predict(input);
+            switch (alt37) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:11: '.'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:11: '.'
                     {
                     match('.'); 
 
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:17: F R O M
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:17: F R O M
                     {
                     mF(); 
                     mR(); 
@@ -2015,7 +2353,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:27: W H E R E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:27: W H E R E
                     {
                     mW(); 
                     mH(); 
@@ -2026,14 +2364,65 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:39: G R O U P ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:39: G R O U P ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y
                     {
                     mG(); 
                     mR(); 
                     mO(); 
                     mU(); 
                     mP(); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:49: ( ' ' | '\\t' | '\\n' | '\\r' )+
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:49: ( ' ' | '\\t' | '\\n' | '\\r' )+
+                    int cnt31=0;
+                    loop31:
+                    do {
+                        int alt31=2;
+                        int LA31_0 = input.LA(1);
+
+                        if ( ((LA31_0>='\t' && LA31_0<='\n')||LA31_0=='\r'||LA31_0==' ') ) {
+                            alt31=1;
+                        }
+
+
+                        switch (alt31) {
+                    	case 1 :
+                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
+                    	    {
+                    	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
+                    	        input.consume();
+
+                    	    }
+                    	    else {
+                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
+                    	        recover(mse);
+                    	        throw mse;}
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    if ( cnt31 >= 1 ) break loop31;
+                                EarlyExitException eee =
+                                    new EarlyExitException(31, input);
+                                throw eee;
+                        }
+                        cnt31++;
+                    } while (true);
+
+                    mB(); 
+                    mY(); 
+
+                    }
+                    break;
+                case 5 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:77: O R D E R ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y
+                    {
+                    mO(); 
+                    mR(); 
+                    mD(); 
+                    mE(); 
+                    mR(); 
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:87: ( ' ' | '\\t' | '\\n' | '\\r' )+
                     int cnt32=0;
                     loop32:
                     do {
@@ -2076,15 +2465,82 @@ public class PL_SQLLexer extends Lexer {
 
                     }
                     break;
-                case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:77: O R D E R ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y
+                case 6 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:210:7: P R I O R
                     {
+                    mP(); 
+                    mR(); 
+                    mI(); 
                     mO(); 
                     mR(); 
-                    mD(); 
+
+                    }
+                    break;
+                case 7 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:210:19: C O N N E C T '_' B Y '_' R O O T
+                    {
+                    mC(); 
+                    mO(); 
+                    mN(); 
+                    mN(); 
                     mE(); 
+                    mC(); 
+                    mT(); 
+                    match('_'); 
+                    mB(); 
+                    mY(); 
+                    match('_'); 
                     mR(); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:205:87: ( ' ' | '\\t' | '\\n' | '\\r' )+
+                    mO(); 
+                    mO(); 
+                    mT(); 
+
+                    }
+                    break;
+                case 8 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:210:55: C O N N E C T
+                    {
+                    mC(); 
+                    mO(); 
+                    mN(); 
+                    mN(); 
+                    mE(); 
+                    mC(); 
+                    mT(); 
+
+                    }
+                    break;
+                case 9 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:210:71: S T A R T
+                    {
+                    mS(); 
+                    mT(); 
+                    mA(); 
+                    mR(); 
+                    mT(); 
+
+                    }
+                    break;
+                case 10 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:211:7: U N I O N
+                    {
+                    mU(); 
+                    mN(); 
+                    mI(); 
+                    mO(); 
+                    mN(); 
+
+                    }
+                    break;
+                case 11 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:211:19: U N I O N ( ' ' | '\\t' | '\\n' | '\\r' )+ A L L
+                    {
+                    mU(); 
+                    mN(); 
+                    mI(); 
+                    mO(); 
+                    mN(); 
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:211:29: ( ' ' | '\\t' | '\\n' | '\\r' )+
                     int cnt33=0;
                     loop33:
                     do {
@@ -2122,87 +2578,50 @@ public class PL_SQLLexer extends Lexer {
                         cnt33++;
                     } while (true);
 
-                    mB(); 
-                    mY(); 
-
-                    }
-                    break;
-                case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:206:7: P R I O R
-                    {
-                    mP(); 
-                    mR(); 
-                    mI(); 
-                    mO(); 
-                    mR(); 
-
-                    }
-                    break;
-                case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:206:19: C O N N E C T '_' B Y '_' R O O T
-                    {
-                    mC(); 
-                    mO(); 
-                    mN(); 
-                    mN(); 
-                    mE(); 
-                    mC(); 
-                    mT(); 
-                    match('_'); 
-                    mB(); 
-                    mY(); 
-                    match('_'); 
-                    mR(); 
-                    mO(); 
-                    mO(); 
-                    mT(); 
-
-                    }
-                    break;
-                case 8 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:206:55: C O N N E C T
-                    {
-                    mC(); 
-                    mO(); 
-                    mN(); 
-                    mN(); 
-                    mE(); 
-                    mC(); 
-                    mT(); 
-
-                    }
-                    break;
-                case 9 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:206:71: S T A R T
-                    {
-                    mS(); 
-                    mT(); 
                     mA(); 
+                    mL(); 
+                    mL(); 
+
+                    }
+                    break;
+                case 12 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:211:59: I N T E R S E C T
+                    {
+                    mI(); 
+                    mN(); 
+                    mT(); 
+                    mE(); 
                     mR(); 
+                    mS(); 
+                    mE(); 
+                    mC(); 
                     mT(); 
 
                     }
                     break;
-                case 10 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:207:7: U N I O N
+                case 13 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:211:79: M I N U S
                     {
-                    mU(); 
-                    mN(); 
+                    mM(); 
                     mI(); 
-                    mO(); 
                     mN(); 
+                    mU(); 
+                    mS(); 
 
                     }
                     break;
-                case 11 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:207:19: U N I O N ( ' ' | '\\t' | '\\n' | '\\r' )+ A L L
+                case 14 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:211:91: M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ E X C E P T
                     {
+                    mM(); 
                     mU(); 
-                    mN(); 
+                    mL(); 
+                    mT(); 
                     mI(); 
-                    mO(); 
-                    mN(); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:207:29: ( ' ' | '\\t' | '\\n' | '\\r' )+
+                    mS(); 
+                    mE(); 
+                    mT(); 
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:211:107: ( ' ' | '\\t' | '\\n' | '\\r' )+
                     int cnt34=0;
                     loop34:
                     do {
@@ -2240,40 +2659,17 @@ public class PL_SQLLexer extends Lexer {
                         cnt34++;
                     } while (true);
 
-                    mA(); 
-                    mL(); 
-                    mL(); 
-
-                    }
-                    break;
-                case 12 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:207:59: I N T E R S E C T
-                    {
-                    mI(); 
-                    mN(); 
-                    mT(); 
                     mE(); 
-                    mR(); 
-                    mS(); 
-                    mE(); 
+                    mX(); 
                     mC(); 
+                    mE(); 
+                    mP(); 
                     mT(); 
 
                     }
                     break;
-                case 13 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:207:79: M I N U S
-                    {
-                    mM(); 
-                    mI(); 
-                    mN(); 
-                    mU(); 
-                    mS(); 
-
-                    }
-                    break;
-                case 14 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:207:91: M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ E X C E P T
+                case 15 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:212:7: M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ I N T E R S E C T
                     {
                     mM(); 
                     mU(); 
@@ -2283,7 +2679,7 @@ public class PL_SQLLexer extends Lexer {
                     mS(); 
                     mE(); 
                     mT(); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:207:107: ( ' ' | '\\t' | '\\n' | '\\r' )+
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:212:23: ( ' ' | '\\t' | '\\n' | '\\r' )+
                     int cnt35=0;
                     loop35:
                     do {
@@ -2321,17 +2717,20 @@ public class PL_SQLLexer extends Lexer {
                         cnt35++;
                     } while (true);
 
+                    mI(); 
+                    mN(); 
+                    mT(); 
                     mE(); 
-                    mX(); 
+                    mR(); 
+                    mS(); 
+                    mE(); 
                     mC(); 
-                    mE(); 
-                    mP(); 
                     mT(); 
 
                     }
                     break;
-                case 15 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:208:7: M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ I N T E R S E C T
+                case 16 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:212:65: M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ U N I O N
                     {
                     mM(); 
                     mU(); 
@@ -2341,7 +2740,7 @@ public class PL_SQLLexer extends Lexer {
                     mS(); 
                     mE(); 
                     mT(); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:208:23: ( ' ' | '\\t' | '\\n' | '\\r' )+
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:212:81: ( ' ' | '\\t' | '\\n' | '\\r' )+
                     int cnt36=0;
                     loop36:
                     do {
@@ -2379,67 +2778,6 @@ public class PL_SQLLexer extends Lexer {
                         cnt36++;
                     } while (true);
 
-                    mI(); 
-                    mN(); 
-                    mT(); 
-                    mE(); 
-                    mR(); 
-                    mS(); 
-                    mE(); 
-                    mC(); 
-                    mT(); 
-
-                    }
-                    break;
-                case 16 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:208:65: M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ U N I O N
-                    {
-                    mM(); 
-                    mU(); 
-                    mL(); 
-                    mT(); 
-                    mI(); 
-                    mS(); 
-                    mE(); 
-                    mT(); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:208:81: ( ' ' | '\\t' | '\\n' | '\\r' )+
-                    int cnt37=0;
-                    loop37:
-                    do {
-                        int alt37=2;
-                        int LA37_0 = input.LA(1);
-
-                        if ( ((LA37_0>='\t' && LA37_0<='\n')||LA37_0=='\r'||LA37_0==' ') ) {
-                            alt37=1;
-                        }
-
-
-                        switch (alt37) {
-                    	case 1 :
-                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
-                    	    {
-                    	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    if ( cnt37 >= 1 ) break loop37;
-                                EarlyExitException eee =
-                                    new EarlyExitException(37, input);
-                                throw eee;
-                        }
-                        cnt37++;
-                    } while (true);
-
                     mU(); 
                     mN(); 
                     mI(); 
@@ -2449,7 +2787,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 17 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:7: A N Y
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:213:7: A N Y
                     {
                     mA(); 
                     mN(); 
@@ -2458,7 +2796,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 18 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:15: S O M E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:213:15: S O M E
                     {
                     mS(); 
                     mO(); 
@@ -2468,7 +2806,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 19 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:25: A L L
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:213:25: A L L
                     {
                     mA(); 
                     mL(); 
@@ -2477,7 +2815,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 20 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:209:33: E S C A P E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:213:33: E S C A P E
                     {
                     mE(); 
                     mS(); 
@@ -2503,8 +2841,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BEGIN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:213:14: ( B E G I N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:213:16: B E G I N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:217:14: ( B E G I N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:217:16: B E G I N
             {
             mB(); 
             mE(); 
@@ -2527,8 +2865,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = END_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:214:12: ( E N D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:214:14: E N D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:218:12: ( E N D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:218:14: E N D
             {
             mE(); 
             mN(); 
@@ -2549,8 +2887,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DECLARE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:215:16: ( D E C L A R E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:215:18: D E C L A R E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:219:16: ( D E C L A R E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:219:18: D E C L A R E
             {
             mD(); 
             mE(); 
@@ -2575,8 +2913,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXCEPTION_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:216:18: ( E X C E P T I O N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:216:20: E X C E P T I O N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:220:18: ( E X C E P T I O N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:220:20: E X C E P T I O N
             {
             mE(); 
             mX(); 
@@ -2603,8 +2941,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = WHEN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:217:13: ( W H E N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:217:15: W H E N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:221:13: ( W H E N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:221:15: W H E N
             {
             mW(); 
             mH(); 
@@ -2626,8 +2964,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = THEN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:218:13: ( T H E N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:218:15: T H E N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:222:13: ( T H E N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:222:15: T H E N
             {
             mT(); 
             mH(); 
@@ -2649,25 +2987,25 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NOT_NULL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:219:17: ( N O T ( ' ' | '\\t' | '\\n' | '\\r' )+ N U L L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:219:19: N O T ( ' ' | '\\t' | '\\n' | '\\r' )+ N U L L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:223:17: ( N O T ( ' ' | '\\t' | '\\n' | '\\r' )+ NULL_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:223:19: N O T ( ' ' | '\\t' | '\\n' | '\\r' )+ NULL_KEYWORD
             {
             mN(); 
             mO(); 
             mT(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:219:25: ( ' ' | '\\t' | '\\n' | '\\r' )+
-            int cnt39=0;
-            loop39:
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:223:25: ( ' ' | '\\t' | '\\n' | '\\r' )+
+            int cnt38=0;
+            loop38:
             do {
-                int alt39=2;
-                int LA39_0 = input.LA(1);
+                int alt38=2;
+                int LA38_0 = input.LA(1);
 
-                if ( ((LA39_0>='\t' && LA39_0<='\n')||LA39_0=='\r'||LA39_0==' ') ) {
-                    alt39=1;
+                if ( ((LA38_0>='\t' && LA38_0<='\n')||LA38_0=='\r'||LA38_0==' ') ) {
+                    alt38=1;
                 }
 
 
-                switch (alt39) {
+                switch (alt38) {
             	case 1 :
             	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
             	    {
@@ -2685,18 +3023,15 @@ public class PL_SQLLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt39 >= 1 ) break loop39;
+            	    if ( cnt38 >= 1 ) break loop38;
                         EarlyExitException eee =
-                            new EarlyExitException(39, input);
+                            new EarlyExitException(38, input);
                         throw eee;
                 }
-                cnt39++;
+                cnt38++;
             } while (true);
 
-            mN(); 
-            mU(); 
-            mL(); 
-            mL(); 
+            mNULL_KEYWORD(); 
 
             }
 
@@ -2713,8 +3048,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NULL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:220:13: ( N U L L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:220:15: N U L L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:224:13: ( N U L L )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:224:15: N U L L
             {
             mN(); 
             mU(); 
@@ -2736,8 +3071,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DEFAULT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:221:16: ( D E F A U L T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:221:18: D E F A U L T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:225:16: ( D E F A U L T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:225:18: D E F A U L T
             {
             mD(); 
             mE(); 
@@ -2762,8 +3097,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ROWTYPE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:222:16: ( '%' R O W T Y P E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:222:18: '%' R O W T Y P E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:226:16: ( '%' R O W T Y P E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:226:18: '%' R O W T Y P E
             {
             match('%'); 
             mR(); 
@@ -2789,8 +3124,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LIKE_TYPE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:223:18: ( '%' T Y P E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:223:20: '%' T Y P E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:227:18: ( '%' T Y P E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:227:20: '%' T Y P E
             {
             match('%'); 
             mT(); 
@@ -2813,8 +3148,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TYPE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:224:13: ( T Y P E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:224:15: T Y P E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:228:13: ( T Y P E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:228:15: T Y P E
             {
             mT(); 
             mY(); 
@@ -2836,8 +3171,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TRUE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:225:13: ( T R U E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:225:15: T R U E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:229:13: ( T R U E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:229:15: T R U E
             {
             mT(); 
             mR(); 
@@ -2859,8 +3194,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FALSE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:226:14: ( F A L S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:226:16: F A L S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:230:14: ( F A L S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:230:16: F A L S E
             {
             mF(); 
             mA(); 
@@ -2883,8 +3218,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CONSTANT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:227:17: ( C O N S T A N T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:227:19: C O N S T A N T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:231:17: ( C O N S T A N T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:231:19: C O N S T A N T
             {
             mC(); 
             mO(); 
@@ -2910,8 +3245,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = WITH_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:228:13: ( W I T H )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:228:15: W I T H
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:232:13: ( W I T H )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:232:15: W I T H
             {
             mW(); 
             mI(); 
@@ -2933,8 +3268,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LOCAL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:229:14: ( L O C A L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:229:16: L O C A L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:233:14: ( L O C A L )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:233:16: L O C A L
             {
             mL(); 
             mO(); 
@@ -2957,8 +3292,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TIME_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:230:13: ( T I M E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:230:15: T I M E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:234:13: ( T I M E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:234:15: T I M E
             {
             mT(); 
             mI(); 
@@ -2980,8 +3315,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ZONE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:231:13: ( Z O N E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:231:15: Z O N E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:235:13: ( Z O N E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:235:15: Z O N E
             {
             mZ(); 
             mO(); 
@@ -3003,8 +3338,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INTERVAL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:232:17: ( I N T E R V A L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:232:19: I N T E R V A L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:236:17: ( I N T E R V A L )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:236:19: I N T E R V A L
             {
             mI(); 
             mN(); 
@@ -3030,8 +3365,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TO_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:233:11: ( T O )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:233:13: T O
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:237:11: ( T O )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:237:13: T O
             {
             mT(); 
             mO(); 
@@ -3051,8 +3386,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = MONTH_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:234:14: ( M O N T H )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:234:16: M O N T H
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:238:14: ( M O N T H )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:238:16: M O N T H
             {
             mM(); 
             mO(); 
@@ -3075,8 +3410,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SUBTYPE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:235:16: ( S U B T Y P E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:235:18: S U B T Y P E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:239:16: ( S U B T Y P E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:239:18: S U B T Y P E
             {
             mS(); 
             mU(); 
@@ -3101,8 +3436,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = IS_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:236:11: ( I S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:236:13: I S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:240:11: ( I S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:240:13: I S
             {
             mI(); 
             mS(); 
@@ -3122,8 +3457,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RECORD_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:237:15: ( R E C O R D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:237:17: R E C O R D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:241:15: ( R E C O R D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:241:17: R E C O R D
             {
             mR(); 
             mE(); 
@@ -3147,8 +3482,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CREATE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:238:15: ( C R E A T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:238:17: C R E A T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:242:15: ( C R E A T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:242:17: C R E A T E
             {
             mC(); 
             mR(); 
@@ -3172,8 +3507,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = REPLACE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:239:16: ( R E P L A C E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:239:18: R E P L A C E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:243:16: ( R E P L A C E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:243:18: R E P L A C E
             {
             mR(); 
             mE(); 
@@ -3198,8 +3533,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FUNCTION_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:240:17: ( F U N C T I O N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:240:19: F U N C T I O N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:244:17: ( F U N C T I O N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:244:19: F U N C T I O N
             {
             mF(); 
             mU(); 
@@ -3225,8 +3560,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = AS_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:241:11: ( A S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:241:13: A S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:245:11: ( A S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:245:13: A S
             {
             mA(); 
             mS(); 
@@ -3246,8 +3581,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RETURN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:242:15: ( R E T U R N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:242:17: R E T U R N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:246:15: ( R E T U R N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:246:17: R E T U R N
             {
             mR(); 
             mE(); 
@@ -3271,8 +3606,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = IN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:243:11: ( I N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:243:13: I N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:247:11: ( I N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:247:13: I N
             {
             mI(); 
             mN(); 
@@ -3292,8 +3627,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OUT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:244:12: ( O U T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:244:14: O U T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:248:12: ( O U T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:248:14: O U T
             {
             mO(); 
             mU(); 
@@ -3314,8 +3649,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NOCOPY_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:245:15: ( N O C O P Y )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:245:17: N O C O P Y
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:249:15: ( N O C O P Y )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:249:17: N O C O P Y
             {
             mN(); 
             mO(); 
@@ -3339,8 +3674,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = AUTHID_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:246:15: ( A U T H I D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:246:17: A U T H I D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:250:15: ( A U T H I D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:250:17: A U T H I D
             {
             mA(); 
             mU(); 
@@ -3364,8 +3699,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CURRENT_USER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:247:21: ( C U R R E N T '_' U S E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:247:23: C U R R E N T '_' U S E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:251:21: ( C U R R E N T '_' U S E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:251:23: C U R R E N T '_' U S E R
             {
             mC(); 
             mU(); 
@@ -3395,8 +3730,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DEFINER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:248:16: ( D E F I N E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:248:18: D E F I N E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:252:16: ( D E F I N E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:252:18: D E F I N E R
             {
             mD(); 
             mE(); 
@@ -3421,8 +3756,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DETERMINISTIC_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:249:22: ( D E T E R M I N I S T I C )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:249:24: D E T E R M I N I S T I C
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:253:22: ( D E T E R M I N I S T I C )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:253:24: D E T E R M I N I S T I C
             {
             mD(); 
             mE(); 
@@ -3453,8 +3788,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PARALLEL_ENABLED_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:250:25: ( P A R A L L E L '_' E N A B L E D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:250:27: P A R A L L E L '_' E N A B L E D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:254:25: ( P A R A L L E L '_' E N A B L E D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:254:27: P A R A L L E L '_' E N A B L E D
             {
             mP(); 
             mA(); 
@@ -3488,8 +3823,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PIPELINED_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:251:18: ( P I P E L I N E D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:251:20: P I P E L I N E D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:255:18: ( P I P E L I N E D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:255:20: P I P E L I N E D
             {
             mP(); 
             mI(); 
@@ -3516,8 +3851,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RESULT_CACHE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:252:21: ( R E S U L T '_' C A C H E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:252:23: R E S U L T '_' C A C H E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:256:21: ( R E S U L T '_' C A C H E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:256:23: R E S U L T '_' C A C H E
             {
             mR(); 
             mE(); 
@@ -3547,8 +3882,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PROCEDURE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:253:18: ( P R O C E D U R E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:253:20: P R O C E D U R E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:257:18: ( P R O C E D U R E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:257:20: P R O C E D U R E
             {
             mP(); 
             mR(); 
@@ -3575,8 +3910,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = IF_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:254:11: ( I F )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:254:13: I F
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:258:11: ( I F )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:258:13: I F
             {
             mI(); 
             mF(); 
@@ -3596,8 +3931,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ELSE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:255:13: ( E L S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:255:15: E L S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:259:13: ( E L S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:259:15: E L S E
             {
             mE(); 
             mL(); 
@@ -3619,8 +3954,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ELSIF_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:256:14: ( E L S I F )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:256:16: E L S I F
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:260:14: ( E L S I F )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:260:16: E L S I F
             {
             mE(); 
             mL(); 
@@ -3643,25 +3978,25 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ENDIF_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:257:14: ( END_KEYWORD ( ' ' )+ IF_KEYWORD )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:257:17: END_KEYWORD ( ' ' )+ IF_KEYWORD
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:261:14: ( END_KEYWORD ( ' ' )+ IF_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:261:17: END_KEYWORD ( ' ' )+ IF_KEYWORD
             {
             mEND_KEYWORD(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:257:29: ( ' ' )+
-            int cnt40=0;
-            loop40:
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:261:29: ( ' ' )+
+            int cnt39=0;
+            loop39:
             do {
-                int alt40=2;
-                int LA40_0 = input.LA(1);
+                int alt39=2;
+                int LA39_0 = input.LA(1);
 
-                if ( (LA40_0==' ') ) {
-                    alt40=1;
+                if ( (LA39_0==' ') ) {
+                    alt39=1;
                 }
 
 
-                switch (alt40) {
+                switch (alt39) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:257:29: ' '
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:261:29: ' '
             	    {
             	    match(' '); 
 
@@ -3669,12 +4004,12 @@ public class PL_SQLLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt40 >= 1 ) break loop40;
+            	    if ( cnt39 >= 1 ) break loop39;
                         EarlyExitException eee =
-                            new EarlyExitException(40, input);
+                            new EarlyExitException(39, input);
                         throw eee;
                 }
-                cnt40++;
+                cnt39++;
             } while (true);
 
             mIF_KEYWORD(); 
@@ -3694,53 +4029,41 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = IS_NULL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:258:16: ( I S ( ' ' | '\\t' | '\\n' | '\\r' )+ N U L L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:258:18: I S ( ' ' | '\\t' | '\\n' | '\\r' )+ N U L L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:262:16: ( IS_KEYWORD ( ' ' )+ NULL_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:262:18: IS_KEYWORD ( ' ' )+ NULL_KEYWORD
             {
-            mI(); 
-            mS(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:258:22: ( ' ' | '\\t' | '\\n' | '\\r' )+
-            int cnt41=0;
-            loop41:
+            mIS_KEYWORD(); 
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:262:29: ( ' ' )+
+            int cnt40=0;
+            loop40:
             do {
-                int alt41=2;
-                int LA41_0 = input.LA(1);
+                int alt40=2;
+                int LA40_0 = input.LA(1);
 
-                if ( ((LA41_0>='\t' && LA41_0<='\n')||LA41_0=='\r'||LA41_0==' ') ) {
-                    alt41=1;
+                if ( (LA40_0==' ') ) {
+                    alt40=1;
                 }
 
 
-                switch (alt41) {
+                switch (alt40) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:262:29: ' '
             	    {
-            	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
-            	        input.consume();
-
-            	    }
-            	    else {
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;}
-
+            	    match(' '); 
 
             	    }
             	    break;
 
             	default :
-            	    if ( cnt41 >= 1 ) break loop41;
+            	    if ( cnt40 >= 1 ) break loop40;
                         EarlyExitException eee =
-                            new EarlyExitException(41, input);
+                            new EarlyExitException(40, input);
                         throw eee;
                 }
-                cnt41++;
+                cnt40++;
             } while (true);
 
-            mN(); 
-            mU(); 
-            mL(); 
-            mL(); 
+            mNULL_KEYWORD(); 
 
             }
 
@@ -3757,36 +4080,60 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = IS_NOT_NULL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:259:20: ( I S ( ' ' | '\\t' | '\\n' | '\\r' )+ N O T ( ' ' | '\\t' | '\\n' | '\\r' )+ N U L L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:259:22: I S ( ' ' | '\\t' | '\\n' | '\\r' )+ N O T ( ' ' | '\\t' | '\\n' | '\\r' )+ N U L L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:263:20: ( IS_KEYWORD ( ' ' )+ N O T ( ' ' )+ NULL_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:263:22: IS_KEYWORD ( ' ' )+ N O T ( ' ' )+ NULL_KEYWORD
             {
-            mI(); 
-            mS(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:259:26: ( ' ' | '\\t' | '\\n' | '\\r' )+
+            mIS_KEYWORD(); 
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:263:33: ( ' ' )+
+            int cnt41=0;
+            loop41:
+            do {
+                int alt41=2;
+                int LA41_0 = input.LA(1);
+
+                if ( (LA41_0==' ') ) {
+                    alt41=1;
+                }
+
+
+                switch (alt41) {
+            	case 1 :
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:263:33: ' '
+            	    {
+            	    match(' '); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt41 >= 1 ) break loop41;
+                        EarlyExitException eee =
+                            new EarlyExitException(41, input);
+                        throw eee;
+                }
+                cnt41++;
+            } while (true);
+
+            mN(); 
+            mO(); 
+            mT(); 
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:263:44: ( ' ' )+
             int cnt42=0;
             loop42:
             do {
                 int alt42=2;
                 int LA42_0 = input.LA(1);
 
-                if ( ((LA42_0>='\t' && LA42_0<='\n')||LA42_0=='\r'||LA42_0==' ') ) {
+                if ( (LA42_0==' ') ) {
                     alt42=1;
                 }
 
 
                 switch (alt42) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:263:44: ' '
             	    {
-            	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
-            	        input.consume();
-
-            	    }
-            	    else {
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;}
-
+            	    match(' '); 
 
             	    }
             	    break;
@@ -3800,10 +4147,30 @@ public class PL_SQLLexer extends Lexer {
                 cnt42++;
             } while (true);
 
+            mNULL_KEYWORD(); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "IS_NOT_NULL_KEYWORD"
+
+    // $ANTLR start "NOT_IN_KEYWORD"
+    public final void mNOT_IN_KEYWORD() throws RecognitionException {
+        try {
+            int _type = NOT_IN_KEYWORD;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:264:15: ( N O T ( ' ' | '\\t' | '\\n' | '\\r' )+ I N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:264:17: N O T ( ' ' | '\\t' | '\\n' | '\\r' )+ I N
+            {
             mN(); 
             mO(); 
             mT(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:259:54: ( ' ' | '\\t' | '\\n' | '\\r' )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:264:23: ( ' ' | '\\t' | '\\n' | '\\r' )+
             int cnt43=0;
             loop43:
             do {
@@ -3841,70 +4208,6 @@ public class PL_SQLLexer extends Lexer {
                 cnt43++;
             } while (true);
 
-            mN(); 
-            mU(); 
-            mL(); 
-            mL(); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "IS_NOT_NULL_KEYWORD"
-
-    // $ANTLR start "NOT_IN_KEYWORD"
-    public final void mNOT_IN_KEYWORD() throws RecognitionException {
-        try {
-            int _type = NOT_IN_KEYWORD;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:260:15: ( N O T ( ' ' | '\\t' | '\\n' | '\\r' )+ I N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:260:17: N O T ( ' ' | '\\t' | '\\n' | '\\r' )+ I N
-            {
-            mN(); 
-            mO(); 
-            mT(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:260:23: ( ' ' | '\\t' | '\\n' | '\\r' )+
-            int cnt44=0;
-            loop44:
-            do {
-                int alt44=2;
-                int LA44_0 = input.LA(1);
-
-                if ( ((LA44_0>='\t' && LA44_0<='\n')||LA44_0=='\r'||LA44_0==' ') ) {
-                    alt44=1;
-                }
-
-
-                switch (alt44) {
-            	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
-            	    {
-            	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
-            	        input.consume();
-
-            	    }
-            	    else {
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;}
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt44 >= 1 ) break loop44;
-                        EarlyExitException eee =
-                            new EarlyExitException(44, input);
-                        throw eee;
-                }
-                cnt44++;
-            } while (true);
-
             mI(); 
             mN(); 
 
@@ -3923,8 +4226,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = GOTO_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:261:13: ( G O T O )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:261:15: G O T O
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:265:13: ( G O T O )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:265:15: G O T O
             {
             mG(); 
             mO(); 
@@ -3946,8 +4249,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LOOP_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:262:13: ( L O O P )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:262:15: L O O P
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:266:13: ( L O O P )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:266:15: L O O P
             {
             mL(); 
             mO(); 
@@ -3969,25 +4272,25 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = END_LOOP_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:263:17: ( END_KEYWORD ( ' ' )+ LOOP_KEYWORD )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:263:19: END_KEYWORD ( ' ' )+ LOOP_KEYWORD
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:267:17: ( END_KEYWORD ( ' ' )+ LOOP_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:267:19: END_KEYWORD ( ' ' )+ LOOP_KEYWORD
             {
             mEND_KEYWORD(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:263:31: ( ' ' )+
-            int cnt45=0;
-            loop45:
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:267:31: ( ' ' )+
+            int cnt44=0;
+            loop44:
             do {
-                int alt45=2;
-                int LA45_0 = input.LA(1);
+                int alt44=2;
+                int LA44_0 = input.LA(1);
 
-                if ( (LA45_0==' ') ) {
-                    alt45=1;
+                if ( (LA44_0==' ') ) {
+                    alt44=1;
                 }
 
 
-                switch (alt45) {
+                switch (alt44) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:263:31: ' '
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:267:31: ' '
             	    {
             	    match(' '); 
 
@@ -3995,12 +4298,12 @@ public class PL_SQLLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt45 >= 1 ) break loop45;
+            	    if ( cnt44 >= 1 ) break loop44;
                         EarlyExitException eee =
-                            new EarlyExitException(45, input);
+                            new EarlyExitException(44, input);
                         throw eee;
                 }
-                cnt45++;
+                cnt44++;
             } while (true);
 
             mLOOP_KEYWORD(); 
@@ -4020,8 +4323,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = WHILE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:264:14: ( W H I L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:264:16: W H I L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:268:14: ( W H I L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:268:16: W H I L E
             {
             mW(); 
             mH(); 
@@ -4044,8 +4347,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FOR_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:265:12: ( F O R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:265:14: F O R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:269:12: ( F O R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:269:14: F O R
             {
             mF(); 
             mO(); 
@@ -4066,8 +4369,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = REVERSE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:266:16: ( R E V E R S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:266:18: R E V E R S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:270:16: ( R E V E R S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:270:18: R E V E R S E
             {
             mR(); 
             mE(); 
@@ -4092,8 +4395,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SELECT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:267:15: ( S E L E C T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:267:17: S E L E C T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:271:15: ( S E L E C T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:271:17: S E L E C T
             {
             mS(); 
             mE(); 
@@ -4117,8 +4420,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = COUNT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:268:14: ( C O U N T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:268:16: C O U N T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:272:14: ( C O U N T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:272:16: C O U N T
             {
             mC(); 
             mO(); 
@@ -4141,8 +4444,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXCEPTION_INIT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:269:23: ( E X C E P T I O N '_' I N I T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:269:25: E X C E P T I O N '_' I N I T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:273:23: ( E X C E P T I O N '_' I N I T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:273:25: E X C E P T I O N '_' I N I T
             {
             mE(); 
             mX(); 
@@ -4174,8 +4477,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LIKE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:270:13: ( L I K E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:270:15: L I K E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:274:13: ( L I K E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:274:15: L I K E
             {
             mL(); 
             mI(); 
@@ -4197,8 +4500,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RAISE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:271:14: ( R A I S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:271:16: R A I S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:275:14: ( R A I S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:275:16: R A I S E
             {
             mR(); 
             mA(); 
@@ -4221,8 +4524,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PRAGMA_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:272:15: ( P R A G M A )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:272:17: P R A G M A
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:276:15: ( P R A G M A )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:276:17: P R A G M A
             {
             mP(); 
             mR(); 
@@ -4246,8 +4549,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = AUTONOMOUS_TRANSACTION_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:273:31: ( A U T O N O M O U S '_' T R A N S A C T I O N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:273:33: A U T O N O M O U S '_' T R A N S A C T I O N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:277:31: ( A U T O N O M O U S '_' T R A N S A C T I O N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:277:33: A U T O N O M O U S '_' T R A N S A C T I O N
             {
             mA(); 
             mU(); 
@@ -4287,8 +4590,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CASE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:274:13: ( C A S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:274:15: C A S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:278:13: ( C A S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:278:15: C A S E
             {
             mC(); 
             mA(); 
@@ -4310,27 +4613,27 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = END_CASE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:275:17: ( E N D ( ' ' )+ C A S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:275:19: E N D ( ' ' )+ C A S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:279:17: ( E N D ( ' ' )+ C A S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:279:19: E N D ( ' ' )+ C A S E
             {
             mE(); 
             mN(); 
             mD(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:275:25: ( ' ' )+
-            int cnt46=0;
-            loop46:
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:279:25: ( ' ' )+
+            int cnt45=0;
+            loop45:
             do {
-                int alt46=2;
-                int LA46_0 = input.LA(1);
+                int alt45=2;
+                int LA45_0 = input.LA(1);
 
-                if ( (LA46_0==' ') ) {
-                    alt46=1;
+                if ( (LA45_0==' ') ) {
+                    alt45=1;
                 }
 
 
-                switch (alt46) {
+                switch (alt45) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:275:25: ' '
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:279:25: ' '
             	    {
             	    match(' '); 
 
@@ -4338,12 +4641,12 @@ public class PL_SQLLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt46 >= 1 ) break loop46;
+            	    if ( cnt45 >= 1 ) break loop45;
                         EarlyExitException eee =
-                            new EarlyExitException(46, input);
+                            new EarlyExitException(45, input);
                         throw eee;
                 }
-                cnt46++;
+                cnt45++;
             } while (true);
 
             mC(); 
@@ -4366,8 +4669,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CLOSE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:276:14: ( C L O S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:276:16: C L O S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:280:14: ( C L O S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:280:16: C L O S E
             {
             mC(); 
             mL(); 
@@ -4390,8 +4693,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TABLE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:277:14: ( T A B L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:277:16: T A B L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:281:14: ( T A B L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:281:16: T A B L E
             {
             mT(); 
             mA(); 
@@ -4414,8 +4717,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OF_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:278:11: ( O F )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:278:13: O F
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:282:11: ( O F )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:282:13: O F
             {
             mO(); 
             mF(); 
@@ -4435,8 +4738,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INDEX_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:279:14: ( I N D E X )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:279:16: I N D E X
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:283:14: ( I N D E X )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:283:16: I N D E X
             {
             mI(); 
             mN(); 
@@ -4459,8 +4762,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BY_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:280:11: ( B Y )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:280:13: B Y
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:284:11: ( B Y )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:284:13: B Y
             {
             mB(); 
             mY(); 
@@ -4480,8 +4783,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = VARRAY_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:281:15: ( V A R R A Y )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:281:17: V A R R A Y
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:285:15: ( V A R R A Y )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:285:17: V A R R A Y
             {
             mV(); 
             mA(); 
@@ -4505,8 +4808,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = VARYING_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:282:16: ( V A R Y I N G )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:282:18: V A R Y I N G
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:286:16: ( V A R Y I N G )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:286:18: V A R Y I N G
             {
             mV(); 
             mA(); 
@@ -4531,8 +4834,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ARRAY_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:283:14: ( A R R A Y )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:283:16: A R R A Y
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:287:14: ( A R R A Y )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:287:16: A R R A Y
             {
             mA(); 
             mR(); 
@@ -4555,8 +4858,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = COMMIT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:284:15: ( C O M M I T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:284:17: C O M M I T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:288:15: ( C O M M I T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:288:17: C O M M I T
             {
             mC(); 
             mO(); 
@@ -4580,8 +4883,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = REF_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:285:12: ( R E F )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:285:14: R E F
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:289:12: ( R E F )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:289:14: R E F
             {
             mR(); 
             mE(); 
@@ -4602,8 +4905,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CONTINUE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:286:17: ( C O N T I N U E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:286:19: C O N T I N U E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:290:17: ( C O N T I N U E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:290:19: C O N T I N U E
             {
             mC(); 
             mO(); 
@@ -4629,8 +4932,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CURSOR_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:287:15: ( C U R S O R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:287:17: C U R S O R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:291:15: ( C U R S O R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:291:17: C U R S O R
             {
             mC(); 
             mU(); 
@@ -4654,8 +4957,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DELETE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:288:15: ( D E L E T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:288:17: D E L E T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:292:15: ( D E L E T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:292:17: D E L E T E
             {
             mD(); 
             mE(); 
@@ -4679,8 +4982,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXECUTE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:289:16: ( E X E C U T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:289:18: E X E C U T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:293:16: ( E X E C U T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:293:18: E X E C U T E
             {
             mE(); 
             mX(); 
@@ -4705,8 +5008,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = IMMEDIATE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:290:18: ( I M M E D I A T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:290:20: I M M E D I A T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:294:18: ( I M M E D I A T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:294:20: I M M E D I A T E
             {
             mI(); 
             mM(); 
@@ -4733,8 +5036,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXIT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:291:13: ( E X I T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:291:15: E X I T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:295:13: ( E X I T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:295:15: E X I T
             {
             mE(); 
             mX(); 
@@ -4756,8 +5059,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INTO_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:292:13: ( I N T O )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:292:15: I N T O
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:296:13: ( I N T O )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:296:15: I N T O
             {
             mI(); 
             mN(); 
@@ -4779,8 +5082,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = USING_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:293:14: ( U S I N G )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:293:16: U S I N G
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:297:14: ( U S I N G )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:297:16: U S I N G
             {
             mU(); 
             mS(); 
@@ -4803,8 +5106,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BULK_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:294:13: ( B U L K )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:294:15: B U L K
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:298:13: ( B U L K )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:298:15: B U L K
             {
             mB(); 
             mU(); 
@@ -4826,8 +5129,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = COLLECT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:295:16: ( C O L L E C T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:295:18: C O L L E C T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:299:16: ( C O L L E C T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:299:18: C O L L E C T
             {
             mC(); 
             mO(); 
@@ -4852,8 +5155,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FETCH_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:296:14: ( F E T C H )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:296:16: F E T C H
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:14: ( F E T C H )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:16: F E T C H
             {
             mF(); 
             mE(); 
@@ -4876,8 +5179,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LIMIT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:297:14: ( L I M I T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:297:16: L I M I T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:301:14: ( L I M I T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:301:16: L I M I T
             {
             mL(); 
             mI(); 
@@ -4900,8 +5203,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FORALL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:298:15: ( F O R A L L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:298:17: F O R A L L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:15: ( F O R A L L )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:17: F O R A L L
             {
             mF(); 
             mO(); 
@@ -4925,8 +5228,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SAVE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:299:13: ( S A V E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:299:15: S A V E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:303:13: ( S A V E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:303:15: S A V E
             {
             mS(); 
             mA(); 
@@ -4948,8 +5251,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXCEPTIONS_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:19: ( E X C E P T I O N S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:21: E X C E P T I O N S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:304:19: ( E X C E P T I O N S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:304:21: E X C E P T I O N S
             {
             mE(); 
             mX(); 
@@ -4977,8 +5280,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INDICES_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:301:16: ( I N D I C E S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:301:18: I N D I C E S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:305:16: ( I N D I C E S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:305:18: I N D I C E S
             {
             mI(); 
             mN(); 
@@ -5003,8 +5306,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = VALUES_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:15: ( V A L U E S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:17: V A L U E S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:306:15: ( V A L U E S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:306:17: V A L U E S
             {
             mV(); 
             mA(); 
@@ -5028,8 +5331,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BETWEEN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:303:16: ( B E T W E E N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:303:18: B E T W E E N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:307:16: ( B E T W E E N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:307:18: B E T W E E N
             {
             mB(); 
             mE(); 
@@ -5054,8 +5357,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INLINE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:304:15: ( I N L I N E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:304:17: I N L I N E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:308:15: ( I N L I N E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:308:17: I N L I N E
             {
             mI(); 
             mN(); 
@@ -5079,8 +5382,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INSERT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:305:15: ( I N S E R T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:305:17: I N S E R T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:309:15: ( I N S E R T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:309:17: I N S E R T
             {
             mI(); 
             mN(); 
@@ -5104,8 +5407,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LOCK_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:306:13: ( L O C K )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:306:15: L O C K
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:310:13: ( L O C K )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:310:15: L O C K
             {
             mL(); 
             mO(); 
@@ -5127,8 +5430,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = MERGE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:307:14: ( M E R G E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:307:16: M E R G E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:311:14: ( M E R G E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:311:16: M E R G E
             {
             mM(); 
             mE(); 
@@ -5151,8 +5454,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OPEN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:308:13: ( O P E N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:308:15: O P E N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:312:13: ( O P E N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:312:15: O P E N
             {
             mO(); 
             mP(); 
@@ -5174,8 +5477,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PACKAGE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:309:16: ( P A C K A G E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:309:18: P A C K A G E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:16: ( P A C K A G E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:18: P A C K A G E
             {
             mP(); 
             mA(); 
@@ -5200,8 +5503,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BODY_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:310:13: ( B O D Y )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:310:15: B O D Y
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:13: ( B O D Y )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:15: B O D Y
             {
             mB(); 
             mO(); 
@@ -5223,8 +5526,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RESTRICT_REFERENCES_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:311:28: ( R E S T R I C T '_' R E F E R E N C E S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:311:30: R E S T R I C T '_' R E F E R E N C E S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:28: ( R E S T R I C T '_' R E F E R E N C E S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:30: R E S T R I C T '_' R E F E R E N C E S
             {
             mR(); 
             mE(); 
@@ -5261,8 +5564,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RETURNING_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:312:18: ( R E T U R N I N G )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:312:20: R E T U R N I N G
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:316:18: ( R E T U R N I N G )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:316:20: R E T U R N I N G
             {
             mR(); 
             mE(); 
@@ -5289,8 +5592,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ROLLBACK_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:17: ( R O L L B A C K )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:19: R O L L B A C K
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:317:17: ( R O L L B A C K )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:317:19: R O L L B A C K
             {
             mR(); 
             mO(); 
@@ -5316,8 +5619,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SAVEPOINT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:18: ( S A V E P O I N T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:20: S A V E P O I N T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:318:18: ( S A V E P O I N T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:318:20: S A V E P O I N T
             {
             mS(); 
             mA(); 
@@ -5344,8 +5647,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SERIALLY_REUSABLE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:26: ( S E R I A L L Y '_' R E U S A B L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:28: S E R I A L L Y '_' R E U S A B L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:319:26: ( S E R I A L L Y '_' R E U S A B L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:319:28: S E R I A L L Y '_' R E U S A B L E
             {
             mS(); 
             mE(); 
@@ -5380,8 +5683,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SET_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:316:12: ( S E T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:316:14: S E T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:320:12: ( S E T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:320:14: S E T
             {
             mS(); 
             mE(); 
@@ -5402,8 +5705,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TRANSACTION_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:317:20: ( T R A N S A C T I O N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:317:22: T R A N S A C T I O N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:321:20: ( T R A N S A C T I O N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:321:22: T R A N S A C T I O N
             {
             mT(); 
             mR(); 
@@ -5432,8 +5735,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NOTFOUND_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:318:17: ( '%' N O T F O U N D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:318:19: '%' N O T F O U N D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:322:17: ( '%' N O T F O U N D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:322:19: '%' N O T F O U N D
             {
             match('%'); 
             mN(); 
@@ -5460,8 +5763,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FOUND_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:319:14: ( '%' F O U N D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:319:16: '%' F O U N D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:323:14: ( '%' F O U N D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:323:16: '%' F O U N D
             {
             match('%'); 
             mF(); 
@@ -5485,8 +5788,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ISOPEN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:320:15: ( '%' I S O P E N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:320:17: '%' I S O P E N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:324:15: ( '%' I S O P E N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:324:17: '%' I S O P E N
             {
             match('%'); 
             mI(); 
@@ -5511,8 +5814,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ROWCOUNT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:321:17: ( '%' R O W C O U N T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:321:19: '%' R O W C O U N T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:325:17: ( '%' R O W C O U N T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:325:19: '%' R O W C O U N T
             {
             match('%'); 
             mR(); 
@@ -5539,8 +5842,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SQLCODE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:322:16: ( S Q L C O D E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:322:18: S Q L C O D E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:326:16: ( S Q L C O D E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:326:18: S Q L C O D E
             {
             mS(); 
             mQ(); 
@@ -5565,8 +5868,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SQLERRM_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:323:16: ( S Q L E R R M )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:323:18: S Q L E R R M
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:327:16: ( S Q L E R R M )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:327:18: S Q L E R R M
             {
             mS(); 
             mQ(); 
@@ -5591,8 +5894,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = UPDATE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:324:15: ( U P D A T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:324:17: U P D A T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:328:15: ( U P D A T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:328:17: U P D A T E
             {
             mU(); 
             mP(); 
@@ -5616,8 +5919,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXISTS_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:325:15: ( E X I S T S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:325:17: E X I S T S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:329:15: ( E X I S T S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:329:17: E X I S T S
             {
             mE(); 
             mX(); 
@@ -5641,8 +5944,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TRIGGER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:326:16: ( T R I G G E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:326:18: T R I G G E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:330:16: ( T R I G G E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:330:18: T R I G G E R
             {
             mT(); 
             mR(); 
@@ -5667,8 +5970,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BEFORE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:327:15: ( B E F O R E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:327:17: B E F O R E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:331:15: ( B E F O R E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:331:17: B E F O R E
             {
             mB(); 
             mE(); 
@@ -5692,8 +5995,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = AFTER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:328:14: ( A F T E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:328:16: A F T E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:332:14: ( A F T E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:332:16: A F T E R
             {
             mA(); 
             mF(); 
@@ -5716,8 +6019,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INSTEAD_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:329:16: ( I N S T E A D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:329:18: I N S T E A D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:333:16: ( I N S T E A D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:333:18: I N S T E A D
             {
             mI(); 
             mN(); 
@@ -5742,8 +6045,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ON_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:330:11: ( O N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:330:13: O N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:334:11: ( O N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:334:13: O N
             {
             mO(); 
             mN(); 
@@ -5763,8 +6066,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NESTED_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:331:15: ( N E S T E D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:331:17: N E S T E D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:335:15: ( N E S T E D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:335:17: N E S T E D
             {
             mN(); 
             mE(); 
@@ -5788,8 +6091,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = REFERENCING_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:332:20: ( R E F E R E N C I N G )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:332:22: R E F E R E N C I N G
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:336:20: ( R E F E R E N C I N G )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:336:22: R E F E R E N C I N G
             {
             mR(); 
             mE(); 
@@ -5818,8 +6121,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OLD_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:333:12: ( O L D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:333:14: O L D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:337:12: ( O L D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:337:14: O L D
             {
             mO(); 
             mL(); 
@@ -5840,8 +6143,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NEW_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:334:12: ( N E W )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:334:14: N E W
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:338:12: ( N E W )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:338:14: N E W
             {
             mN(); 
             mE(); 
@@ -5862,8 +6165,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PARENT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:335:15: ( P A R E N T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:335:17: P A R E N T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:339:15: ( P A R E N T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:339:17: P A R E N T
             {
             mP(); 
             mA(); 
@@ -5887,8 +6190,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EACH_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:336:13: ( E A C H )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:336:15: E A C H
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:340:13: ( E A C H )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:340:15: E A C H
             {
             mE(); 
             mA(); 
@@ -5910,8 +6213,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ROW_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:337:12: ( R O W )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:337:14: R O W
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:341:12: ( R O W )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:341:14: R O W
             {
             mR(); 
             mO(); 
@@ -5932,8 +6235,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FOLLOWS_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:338:16: ( F O L L O W S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:338:18: F O L L O W S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:342:16: ( F O L L O W S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:342:18: F O L L O W S
             {
             mF(); 
             mO(); 
@@ -5958,8 +6261,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ENABLE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:339:15: ( E N A B L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:339:17: E N A B L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:343:15: ( E N A B L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:343:17: E N A B L E
             {
             mE(); 
             mN(); 
@@ -5983,8 +6286,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DISABLE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:340:16: ( D I S A B L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:340:18: D I S A B L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:344:16: ( D I S A B L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:344:18: D I S A B L E
             {
             mD(); 
             mI(); 
@@ -6009,8 +6312,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OID_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:341:12: ( O I D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:341:14: O I D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:345:12: ( O I D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:345:14: O I D
             {
             mO(); 
             mI(); 
@@ -6031,8 +6334,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OBJECT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:342:15: ( O B J E C T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:342:17: O B J E C T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:346:15: ( O B J E C T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:346:17: O B J E C T
             {
             mO(); 
             mB(); 
@@ -6056,8 +6359,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = UNDER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:343:14: ( U N D E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:343:16: U N D E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:347:14: ( U N D E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:347:16: U N D E R
             {
             mU(); 
             mN(); 
@@ -6080,8 +6383,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FINAL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:344:14: ( F I N A L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:344:16: F I N A L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:348:14: ( F I N A L )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:348:16: F I N A L
             {
             mF(); 
             mI(); 
@@ -6104,8 +6407,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INSTANTIABLE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:345:21: ( I N S T A N T I A B L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:345:23: I N S T A N T I A B L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:349:21: ( I N S T A N T I A B L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:349:23: I N S T A N T I A B L E
             {
             mI(); 
             mN(); 
@@ -6135,8 +6438,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OVERRIDING_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:346:19: ( O V E R R I D I N G )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:346:21: O V E R R I D I N G
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:350:19: ( O V E R R I D I N G )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:350:21: O V E R R I D I N G
             {
             mO(); 
             mV(); 
@@ -6164,8 +6467,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = MEMBER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:347:15: ( M E M B E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:347:17: M E M B E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:351:15: ( M E M B E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:351:17: M E M B E R
             {
             mM(); 
             mE(); 
@@ -6189,8 +6492,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = STATIC_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:348:15: ( S T A T I C )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:348:17: S T A T I C
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:352:15: ( S T A T I C )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:352:17: S T A T I C
             {
             mS(); 
             mT(); 
@@ -6214,8 +6517,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CONSTRUCTOR_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:349:20: ( C O N S T R U C T O R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:349:22: C O N S T R U C T O R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:353:20: ( C O N S T R U C T O R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:353:22: C O N S T R U C T O R
             {
             mC(); 
             mO(); 
@@ -6244,8 +6547,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SELF_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:350:13: ( S E L F )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:350:15: S E L F
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:354:13: ( S E L F )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:354:15: S E L F
             {
             mS(); 
             mE(); 
@@ -6267,8 +6570,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RESULT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:351:15: ( R E S U L T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:351:17: R E S U L T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:355:15: ( R E S U L T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:355:17: R E S U L T
             {
             mR(); 
             mE(); 
@@ -6292,8 +6595,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = MAP_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:352:12: ( M A P )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:352:14: M A P
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:356:12: ( M A P )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:356:14: M A P
             {
             mM(); 
             mA(); 
@@ -6314,8 +6617,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ORDER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:353:14: ( O R D E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:353:16: O R D E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:357:14: ( O R D E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:357:16: O R D E R
             {
             mO(); 
             mR(); 
@@ -6338,8 +6641,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = JOIN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:354:13: ( J O I N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:354:15: J O I N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:358:13: ( J O I N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:358:15: J O I N
             {
             mJ(); 
             mO(); 
@@ -6356,11 +6659,380 @@ public class PL_SQLLexer extends Lexer {
     }
     // $ANTLR end "JOIN_KEYWORD"
 
+    // $ANTLR start "IDENTIFIER"
+    public final void mIDENTIFIER() throws RecognitionException {
+        try {
+            int _type = IDENTIFIER;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:362:2: ( CHARS ( '$' | '#' | '_' | DIGIT | CHARS | '%' )* )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:362:4: CHARS ( '$' | '#' | '_' | DIGIT | CHARS | '%' )*
+            {
+            mCHARS(); 
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:362:10: ( '$' | '#' | '_' | DIGIT | CHARS | '%' )*
+            loop46:
+            do {
+                int alt46=2;
+                int LA46_0 = input.LA(1);
+
+                if ( ((LA46_0>='#' && LA46_0<='%')||(LA46_0>='0' && LA46_0<='9')||(LA46_0>='A' && LA46_0<='Z')||LA46_0=='_'||(LA46_0>='a' && LA46_0<='z')) ) {
+                    alt46=1;
+                }
+
+
+                switch (alt46) {
+            	case 1 :
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
+            	    {
+            	    if ( (input.LA(1)>='#' && input.LA(1)<='%')||(input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            	        input.consume();
+
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;}
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop46;
+                }
+            } while (true);
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "IDENTIFIER"
+
+    // $ANTLR start "EXT_IDENTIFIER"
+    public final void mEXT_IDENTIFIER() throws RecognitionException {
+        try {
+            int _type = EXT_IDENTIFIER;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:2: ( ( ':' )? ( '\"' )? IDENTIFIER ( '\"' )? ( '.' | '@' ) ( '\"' )? IDENTIFIER ( '\"' )? ( ( '.' | '@' )? IDENTIFIER )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:4: ( ':' )? ( '\"' )? IDENTIFIER ( '\"' )? ( '.' | '@' ) ( '\"' )? IDENTIFIER ( '\"' )? ( ( '.' | '@' )? IDENTIFIER )?
+            {
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:4: ( ':' )?
+            int alt47=2;
+            int LA47_0 = input.LA(1);
+
+            if ( (LA47_0==':') ) {
+                alt47=1;
+            }
+            switch (alt47) {
+                case 1 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:4: ':'
+                    {
+                    match(':'); 
+
+                    }
+                    break;
+
+            }
+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:9: ( '\"' )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
+
+            if ( (LA48_0=='\"') ) {
+                alt48=1;
+            }
+            switch (alt48) {
+                case 1 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:9: '\"'
+                    {
+                    match('\"'); 
+
+                    }
+                    break;
+
+            }
+
+            mIDENTIFIER(); 
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:25: ( '\"' )?
+            int alt49=2;
+            int LA49_0 = input.LA(1);
+
+            if ( (LA49_0=='\"') ) {
+                alt49=1;
+            }
+            switch (alt49) {
+                case 1 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:25: '\"'
+                    {
+                    match('\"'); 
+
+                    }
+                    break;
+
+            }
+
+            if ( input.LA(1)=='.'||input.LA(1)=='@' ) {
+                input.consume();
+
+            }
+            else {
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:42: ( '\"' )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
+
+            if ( (LA50_0=='\"') ) {
+                alt50=1;
+            }
+            switch (alt50) {
+                case 1 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:42: '\"'
+                    {
+                    match('\"'); 
+
+                    }
+                    break;
+
+            }
+
+            mIDENTIFIER(); 
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:58: ( '\"' )?
+            int alt51=2;
+            int LA51_0 = input.LA(1);
+
+            if ( (LA51_0=='\"') ) {
+                alt51=1;
+            }
+            switch (alt51) {
+                case 1 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:58: '\"'
+                    {
+                    match('\"'); 
+
+                    }
+                    break;
+
+            }
+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:63: ( ( '.' | '@' )? IDENTIFIER )?
+            int alt53=2;
+            int LA53_0 = input.LA(1);
+
+            if ( (LA53_0=='.'||(LA53_0>='@' && LA53_0<='Z')||(LA53_0>='a' && LA53_0<='z')) ) {
+                alt53=1;
+            }
+            switch (alt53) {
+                case 1 :
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:64: ( '.' | '@' )? IDENTIFIER
+                    {
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:64: ( '.' | '@' )?
+                    int alt52=2;
+                    int LA52_0 = input.LA(1);
+
+                    if ( (LA52_0=='.'||LA52_0=='@') ) {
+                        alt52=1;
+                    }
+                    switch (alt52) {
+                        case 1 :
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
+                            {
+                            if ( input.LA(1)=='.'||input.LA(1)=='@' ) {
+                                input.consume();
+
+                            }
+                            else {
+                                MismatchedSetException mse = new MismatchedSetException(null,input);
+                                recover(mse);
+                                throw mse;}
+
+
+                            }
+                            break;
+
+                    }
+
+                    mIDENTIFIER(); 
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "EXT_IDENTIFIER"
+
+    // $ANTLR start "ALIAS"
+    public final void mALIAS() throws RecognitionException {
+        try {
+            int _type = ALIAS;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:370:7: ( '\"' (~ '\"' )+ '\"' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:370:9: '\"' (~ '\"' )+ '\"'
+            {
+            match('\"'); 
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:370:13: (~ '\"' )+
+            int cnt54=0;
+            loop54:
+            do {
+                int alt54=2;
+                int LA54_0 = input.LA(1);
+
+                if ( ((LA54_0>='\u0000' && LA54_0<='!')||(LA54_0>='#' && LA54_0<='\uFFFF')) ) {
+                    alt54=1;
+                }
+
+
+                switch (alt54) {
+            	case 1 :
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:370:14: ~ '\"'
+            	    {
+            	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='\uFFFF') ) {
+            	        input.consume();
+
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;}
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt54 >= 1 ) break loop54;
+                        EarlyExitException eee =
+                            new EarlyExitException(54, input);
+                        throw eee;
+                }
+                cnt54++;
+            } while (true);
+
+            match('\"'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "ALIAS"
+
+    // $ANTLR start "SEPARATOR"
+    public final void mSEPARATOR() throws RecognitionException {
+        try {
+            int _type = SEPARATOR;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:374:2: ( ';' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:374:4: ';'
+            {
+            match(';'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "SEPARATOR"
+
+    // $ANTLR start "COMMA"
+    public final void mCOMMA() throws RecognitionException {
+        try {
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:380:2: ( ',' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:380:4: ','
+            {
+            match(','); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "COMMA"
+
+    // $ANTLR start "PARAM_VALUE"
+    public final void mPARAM_VALUE() throws RecognitionException {
+        try {
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:383:2: ( '=>' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:383:4: '=>'
+            {
+            match("=>"); 
+
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "PARAM_VALUE"
+
+    // $ANTLR start "QUOTATION_MARK"
+    public final void mQUOTATION_MARK() throws RecognitionException {
+        try {
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:386:2: ( '\"' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:386:4: '\"'
+            {
+            match('\"'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "QUOTATION_MARK"
+
+    // $ANTLR start "CHARS"
+    public final void mCHARS() throws RecognitionException {
+        try {
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:389:2: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
+            {
+            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+                input.consume();
+
+            }
+            else {
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
+
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "CHARS"
+
     // $ANTLR start "DIGIT"
     public final void mDIGIT() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:357:2: ( '0' .. '9' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:357:4: '0' .. '9'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:393:2: ( '0' .. '9' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:393:4: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -6375,24 +7047,24 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "DIGITS"
     public final void mDIGITS() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:2: ( DIGIT ( DIGIT )* )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:4: DIGIT ( DIGIT )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:397:2: ( DIGIT ( DIGIT )* )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:397:4: DIGIT ( DIGIT )*
             {
             mDIGIT(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:10: ( DIGIT )*
-            loop47:
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:397:10: ( DIGIT )*
+            loop55:
             do {
-                int alt47=2;
-                int LA47_0 = input.LA(1);
+                int alt55=2;
+                int LA55_0 = input.LA(1);
 
-                if ( ((LA47_0>='0' && LA47_0<='9')) ) {
-                    alt47=1;
+                if ( ((LA55_0>='0' && LA55_0<='9')) ) {
+                    alt55=1;
                 }
 
 
-                switch (alt47) {
+                switch (alt55) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:12: DIGIT
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:397:12: DIGIT
             	    {
             	    mDIGIT(); 
 
@@ -6400,7 +7072,7 @@ public class PL_SQLLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop47;
+            	    break loop55;
                 }
             } while (true);
 
@@ -6416,18 +7088,18 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "EXP_DIGITS"
     public final void mEXP_DIGITS() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:365:2: ( E ( '+' | '-' )? DIGITS )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:365:4: E ( '+' | '-' )? DIGITS
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:401:2: ( E ( '+' | '-' )? DIGITS )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:401:4: E ( '+' | '-' )? DIGITS
             {
             mE(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:365:6: ( '+' | '-' )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:401:6: ( '+' | '-' )?
+            int alt56=2;
+            int LA56_0 = input.LA(1);
 
-            if ( (LA48_0=='+'||LA48_0=='-') ) {
-                alt48=1;
+            if ( (LA56_0=='+'||LA56_0=='-') ) {
+                alt56=1;
             }
-            switch (alt48) {
+            switch (alt56) {
                 case 1 :
                     // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
                     {
@@ -6459,8 +7131,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "A"
     public final void mA() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:368:11: ( ( 'a' | 'A' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:368:12: ( 'a' | 'A' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:404:11: ( ( 'a' | 'A' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:404:12: ( 'a' | 'A' )
             {
             if ( input.LA(1)=='A'||input.LA(1)=='a' ) {
                 input.consume();
@@ -6483,8 +7155,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "B"
     public final void mB() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:369:11: ( ( 'b' | 'B' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:369:12: ( 'b' | 'B' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:405:11: ( ( 'b' | 'B' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:405:12: ( 'b' | 'B' )
             {
             if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                 input.consume();
@@ -6507,8 +7179,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "C"
     public final void mC() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:370:11: ( ( 'c' | 'C' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:370:12: ( 'c' | 'C' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:406:11: ( ( 'c' | 'C' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:406:12: ( 'c' | 'C' )
             {
             if ( input.LA(1)=='C'||input.LA(1)=='c' ) {
                 input.consume();
@@ -6531,8 +7203,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "D"
     public final void mD() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:371:11: ( ( 'd' | 'D' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:371:12: ( 'd' | 'D' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:407:11: ( ( 'd' | 'D' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:407:12: ( 'd' | 'D' )
             {
             if ( input.LA(1)=='D'||input.LA(1)=='d' ) {
                 input.consume();
@@ -6555,8 +7227,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "E"
     public final void mE() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:372:11: ( ( 'e' | 'E' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:372:12: ( 'e' | 'E' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:408:11: ( ( 'e' | 'E' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:408:12: ( 'e' | 'E' )
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -6579,8 +7251,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "F"
     public final void mF() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:373:11: ( ( 'f' | 'F' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:373:12: ( 'f' | 'F' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:409:11: ( ( 'f' | 'F' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:409:12: ( 'f' | 'F' )
             {
             if ( input.LA(1)=='F'||input.LA(1)=='f' ) {
                 input.consume();
@@ -6603,8 +7275,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "G"
     public final void mG() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:374:11: ( ( 'g' | 'G' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:374:12: ( 'g' | 'G' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:410:11: ( ( 'g' | 'G' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:410:12: ( 'g' | 'G' )
             {
             if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
                 input.consume();
@@ -6627,8 +7299,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "H"
     public final void mH() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:375:11: ( ( 'h' | 'H' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:375:12: ( 'h' | 'H' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:411:11: ( ( 'h' | 'H' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:411:12: ( 'h' | 'H' )
             {
             if ( input.LA(1)=='H'||input.LA(1)=='h' ) {
                 input.consume();
@@ -6651,8 +7323,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "I"
     public final void mI() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:376:11: ( ( 'i' | 'I' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:376:12: ( 'i' | 'I' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:412:11: ( ( 'i' | 'I' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:412:12: ( 'i' | 'I' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -6675,8 +7347,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "J"
     public final void mJ() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:377:11: ( ( 'j' | 'J' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:377:12: ( 'j' | 'J' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:413:11: ( ( 'j' | 'J' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:413:12: ( 'j' | 'J' )
             {
             if ( input.LA(1)=='J'||input.LA(1)=='j' ) {
                 input.consume();
@@ -6699,8 +7371,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "K"
     public final void mK() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:378:11: ( ( 'k' | 'K' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:378:12: ( 'k' | 'K' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:414:11: ( ( 'k' | 'K' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:414:12: ( 'k' | 'K' )
             {
             if ( input.LA(1)=='K'||input.LA(1)=='k' ) {
                 input.consume();
@@ -6723,8 +7395,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "L"
     public final void mL() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:379:11: ( ( 'l' | 'L' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:379:12: ( 'l' | 'L' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:415:11: ( ( 'l' | 'L' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:415:12: ( 'l' | 'L' )
             {
             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                 input.consume();
@@ -6747,8 +7419,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "M"
     public final void mM() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:380:11: ( ( 'm' | 'M' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:380:12: ( 'm' | 'M' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:416:11: ( ( 'm' | 'M' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:416:12: ( 'm' | 'M' )
             {
             if ( input.LA(1)=='M'||input.LA(1)=='m' ) {
                 input.consume();
@@ -6771,8 +7443,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "N"
     public final void mN() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:381:11: ( ( 'n' | 'N' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:381:12: ( 'n' | 'N' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:417:11: ( ( 'n' | 'N' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:417:12: ( 'n' | 'N' )
             {
             if ( input.LA(1)=='N'||input.LA(1)=='n' ) {
                 input.consume();
@@ -6795,8 +7467,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "O"
     public final void mO() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:382:11: ( ( 'o' | 'O' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:382:12: ( 'o' | 'O' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:418:11: ( ( 'o' | 'O' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:418:12: ( 'o' | 'O' )
             {
             if ( input.LA(1)=='O'||input.LA(1)=='o' ) {
                 input.consume();
@@ -6819,8 +7491,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "P"
     public final void mP() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:383:11: ( ( 'p' | 'P' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:383:12: ( 'p' | 'P' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:419:11: ( ( 'p' | 'P' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:419:12: ( 'p' | 'P' )
             {
             if ( input.LA(1)=='P'||input.LA(1)=='p' ) {
                 input.consume();
@@ -6843,8 +7515,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "Q"
     public final void mQ() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:384:11: ( ( 'q' | 'Q' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:384:12: ( 'q' | 'Q' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:420:11: ( ( 'q' | 'Q' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:420:12: ( 'q' | 'Q' )
             {
             if ( input.LA(1)=='Q'||input.LA(1)=='q' ) {
                 input.consume();
@@ -6867,8 +7539,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "R"
     public final void mR() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:385:11: ( ( 'r' | 'R' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:385:12: ( 'r' | 'R' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:421:11: ( ( 'r' | 'R' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:421:12: ( 'r' | 'R' )
             {
             if ( input.LA(1)=='R'||input.LA(1)=='r' ) {
                 input.consume();
@@ -6891,8 +7563,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "S"
     public final void mS() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:386:11: ( ( 's' | 'S' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:386:12: ( 's' | 'S' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:422:11: ( ( 's' | 'S' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:422:12: ( 's' | 'S' )
             {
             if ( input.LA(1)=='S'||input.LA(1)=='s' ) {
                 input.consume();
@@ -6915,8 +7587,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "T"
     public final void mT() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:387:11: ( ( 't' | 'T' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:387:12: ( 't' | 'T' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:423:11: ( ( 't' | 'T' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:423:12: ( 't' | 'T' )
             {
             if ( input.LA(1)=='T'||input.LA(1)=='t' ) {
                 input.consume();
@@ -6939,8 +7611,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "U"
     public final void mU() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:388:11: ( ( 'u' | 'U' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:388:12: ( 'u' | 'U' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:424:11: ( ( 'u' | 'U' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:424:12: ( 'u' | 'U' )
             {
             if ( input.LA(1)=='U'||input.LA(1)=='u' ) {
                 input.consume();
@@ -6963,8 +7635,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "V"
     public final void mV() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:389:11: ( ( 'v' | 'V' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:389:12: ( 'v' | 'V' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:425:11: ( ( 'v' | 'V' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:425:12: ( 'v' | 'V' )
             {
             if ( input.LA(1)=='V'||input.LA(1)=='v' ) {
                 input.consume();
@@ -6987,8 +7659,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "W"
     public final void mW() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:390:11: ( ( 'w' | 'W' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:390:12: ( 'w' | 'W' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:426:11: ( ( 'w' | 'W' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:426:12: ( 'w' | 'W' )
             {
             if ( input.LA(1)=='W'||input.LA(1)=='w' ) {
                 input.consume();
@@ -7011,8 +7683,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "X"
     public final void mX() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:391:11: ( ( 'x' | 'X' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:391:12: ( 'x' | 'X' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:427:11: ( ( 'x' | 'X' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:427:12: ( 'x' | 'X' )
             {
             if ( input.LA(1)=='X'||input.LA(1)=='x' ) {
                 input.consume();
@@ -7035,8 +7707,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "Y"
     public final void mY() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:392:11: ( ( 'y' | 'Y' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:392:12: ( 'y' | 'Y' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:428:11: ( ( 'y' | 'Y' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:428:12: ( 'y' | 'Y' )
             {
             if ( input.LA(1)=='Y'||input.LA(1)=='y' ) {
                 input.consume();
@@ -7059,8 +7731,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "Z"
     public final void mZ() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:393:11: ( ( 'z' | 'Z' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:393:12: ( 'z' | 'Z' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:429:11: ( ( 'z' | 'Z' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:429:12: ( 'z' | 'Z' )
             {
             if ( input.LA(1)=='Z'||input.LA(1)=='z' ) {
                 input.consume();
@@ -7085,8 +7757,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = THE_REST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:396:9: ( . )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:396:11: .
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:432:9: ( . )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:432:11: .
             {
             matchAny(); 
 
@@ -7101,1153 +7773,1342 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR end "THE_REST"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:8: ( BLOCK_COMMENT | LINE_COMMENT | WHITESPACE | OPERATOR | OR_OPERATOR | AND_OPERATOR | NOT_OPERATOR | NUMBER_UNSIGNED | STRING | SOME_TYPES | SCALE_TYPES | SIZE_TYPES | CHAR_TYPES | CHAR_TYPE | BYTE_TYPE | RAW_TYPE | TIMESTAMP_TYPE | YEAR_TYPE | DAY_TYPE | SECOND_TYPE | KEYWORD | BEGIN_KEYWORD | END_KEYWORD | DECLARE_KEYWORD | EXCEPTION_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | NOT_NULL_KEYWORD | NULL_KEYWORD | DEFAULT_KEYWORD | ROWTYPE_KEYWORD | LIKE_TYPE_KEYWORD | TYPE_KEYWORD | TRUE_KEYWORD | FALSE_KEYWORD | CONSTANT_KEYWORD | WITH_KEYWORD | LOCAL_KEYWORD | TIME_KEYWORD | ZONE_KEYWORD | INTERVAL_KEYWORD | TO_KEYWORD | MONTH_KEYWORD | SUBTYPE_KEYWORD | IS_KEYWORD | RECORD_KEYWORD | CREATE_KEYWORD | REPLACE_KEYWORD | FUNCTION_KEYWORD | AS_KEYWORD | RETURN_KEYWORD | IN_KEYWORD | OUT_KEYWORD | NOCOPY_KEYWORD | AUTHID_KEYWORD | CURRENT_USER_KEYWORD | DEFINER_KEYWORD | DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD | PROCEDURE_KEYWORD | IF_KEYWORD | ELSE_KEYWORD | ELSIF_KEYWORD | ENDIF_KEYWORD | IS_NULL_KEYWORD | IS_NOT_NULL_KEYWORD | NOT_IN_KEYWORD | GOTO_KEYWORD | LOOP_KEYWORD | END_LOOP_KEYWORD | WHILE_KEYWORD | FOR_KEYWORD | REVERSE_KEYWORD | SELECT_KEYWORD | COUNT_KEYWORD | EXCEPTION_INIT_KEYWORD | LIKE_KEYWORD | RAISE_KEYWORD | PRAGMA_KEYWORD | AUTONOMOUS_TRANSACTION_KEYWORD | CASE_KEYWORD | END_CASE_KEYWORD | CLOSE_KEYWORD | TABLE_KEYWORD | OF_KEYWORD | INDEX_KEYWORD | BY_KEYWORD | VARRAY_KEYWORD | VARYING_KEYWORD | ARRAY_KEYWORD | COMMIT_KEYWORD | REF_KEYWORD | CONTINUE_KEYWORD | CURSOR_KEYWORD | DELETE_KEYWORD | EXECUTE_KEYWORD | IMMEDIATE_KEYWORD | EXIT_KEYWORD | INTO_KEYWORD | USING_KEYWORD | BULK_KEYWORD | COLLECT_KEYWORD | FETCH_KEYWORD | LIMIT_KEYWORD | FORALL_KEYWORD | SAVE_KEYWORD | EXCEPTIONS_KEYWORD | INDICES_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | INLINE_KEYWORD | INSERT_KEYWORD | LOCK_KEYWORD | MERGE_KEYWORD | OPEN_KEYWORD | PACKAGE_KEYWORD | BODY_KEYWORD | RESTRICT_REFERENCES_KEYWORD | RETURNING_KEYWORD | ROLLBACK_KEYWORD | SAVEPOINT_KEYWORD | SERIALLY_REUSABLE_KEYWORD | SET_KEYWORD | TRANSACTION_KEYWORD | NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | SQLCODE_KEYWORD | SQLERRM_KEYWORD | UPDATE_KEYWORD | EXISTS_KEYWORD | TRIGGER_KEYWORD | BEFORE_KEYWORD | AFTER_KEYWORD | INSTEAD_KEYWORD | ON_KEYWORD | NESTED_KEYWORD | REFERENCING_KEYWORD | OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD | EACH_KEYWORD | ROW_KEYWORD | FOLLOWS_KEYWORD | ENABLE_KEYWORD | DISABLE_KEYWORD | OID_KEYWORD | OBJECT_KEYWORD | UNDER_KEYWORD | FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD | MEMBER_KEYWORD | STATIC_KEYWORD | CONSTRUCTOR_KEYWORD | SELF_KEYWORD | RESULT_KEYWORD | MAP_KEYWORD | ORDER_KEYWORD | JOIN_KEYWORD | THE_REST )
-        int alt49=164;
-        alt49 = dfa49.predict(input);
-        switch (alt49) {
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:8: ( T__205 | T__206 | T__207 | T__208 | T__209 | T__210 | T__211 | T__212 | T__213 | T__214 | T__215 | T__216 | T__217 | T__218 | T__219 | T__220 | T__221 | T__222 | T__223 | T__224 | T__225 | T__226 | T__227 | T__228 | BLOCK_COMMENT | LINE_COMMENT | WHITESPACE | OR_OPERATOR | AND_OPERATOR | NOT_OPERATOR | NUMBER_UNSIGNED | STRING | SOME_TYPES | SCALE_TYPES | SIZE_TYPES | CHAR_TYPES | CHAR_TYPE | BYTE_TYPE | RAW_TYPE | TIMESTAMP_TYPE | YEAR_TYPE | DAY_TYPE | SECOND_TYPE | KEYWORD | BEGIN_KEYWORD | END_KEYWORD | DECLARE_KEYWORD | EXCEPTION_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | NOT_NULL_KEYWORD | NULL_KEYWORD | DEFAULT_KEYWORD | ROWTYPE_KEYWORD | LIKE_TYPE_KEYWORD | TYPE_KEYWORD | TRUE_KEYWORD | FALSE_KEYWORD | CONSTANT_KEYWORD | WITH_KEYWORD | LOCAL_KEYWORD | TIME_KEYWORD | ZONE_KEYWORD | INTERVAL_KEYWORD | TO_KEYWORD | MONTH_KEYWORD | SUBTYPE_KEYWORD | IS_KEYWORD | RECORD_KEYWORD | CREATE_KEYWORD | REPLACE_KEYWORD | FUNCTION_KEYWORD | AS_KEYWORD | RETURN_KEYWORD | IN_KEYWORD | OUT_KEYWORD | NOCOPY_KEYWORD | AUTHID_KEYWORD | CURRENT_USER_KEYWORD | DEFINER_KEYWORD | DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD | PROCEDURE_KEYWORD | IF_KEYWORD | ELSE_KEYWORD | ELSIF_KEYWORD | ENDIF_KEYWORD | IS_NULL_KEYWORD | IS_NOT_NULL_KEYWORD | NOT_IN_KEYWORD | GOTO_KEYWORD | LOOP_KEYWORD | END_LOOP_KEYWORD | WHILE_KEYWORD | FOR_KEYWORD | REVERSE_KEYWORD | SELECT_KEYWORD | COUNT_KEYWORD | EXCEPTION_INIT_KEYWORD | LIKE_KEYWORD | RAISE_KEYWORD | PRAGMA_KEYWORD | AUTONOMOUS_TRANSACTION_KEYWORD | CASE_KEYWORD | END_CASE_KEYWORD | CLOSE_KEYWORD | TABLE_KEYWORD | OF_KEYWORD | INDEX_KEYWORD | BY_KEYWORD | VARRAY_KEYWORD | VARYING_KEYWORD | ARRAY_KEYWORD | COMMIT_KEYWORD | REF_KEYWORD | CONTINUE_KEYWORD | CURSOR_KEYWORD | DELETE_KEYWORD | EXECUTE_KEYWORD | IMMEDIATE_KEYWORD | EXIT_KEYWORD | INTO_KEYWORD | USING_KEYWORD | BULK_KEYWORD | COLLECT_KEYWORD | FETCH_KEYWORD | LIMIT_KEYWORD | FORALL_KEYWORD | SAVE_KEYWORD | EXCEPTIONS_KEYWORD | INDICES_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | INLINE_KEYWORD | INSERT_KEYWORD | LOCK_KEYWORD | MERGE_KEYWORD | OPEN_KEYWORD | PACKAGE_KEYWORD | BODY_KEYWORD | RESTRICT_REFERENCES_KEYWORD | RETURNING_KEYWORD | ROLLBACK_KEYWORD | SAVEPOINT_KEYWORD | SERIALLY_REUSABLE_KEYWORD | SET_KEYWORD | TRANSACTION_KEYWORD | NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | SQLCODE_KEYWORD | SQLERRM_KEYWORD | UPDATE_KEYWORD | EXISTS_KEYWORD | TRIGGER_KEYWORD | BEFORE_KEYWORD | AFTER_KEYWORD | INSTEAD_KEYWORD | ON_KEYWORD | NESTED_KEYWORD | REFERENCING_KEYWORD | OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD | EACH_KEYWORD | ROW_KEYWORD | FOLLOWS_KEYWORD | ENABLE_KEYWORD | DISABLE_KEYWORD | OID_KEYWORD | OBJECT_KEYWORD | UNDER_KEYWORD | FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD | MEMBER_KEYWORD | STATIC_KEYWORD | CONSTRUCTOR_KEYWORD | SELF_KEYWORD | RESULT_KEYWORD | MAP_KEYWORD | ORDER_KEYWORD | JOIN_KEYWORD | IDENTIFIER | EXT_IDENTIFIER | ALIAS | SEPARATOR | THE_REST )
+        int alt57=191;
+        alt57 = dfa57.predict(input);
+        switch (alt57) {
             case 1 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:10: BLOCK_COMMENT
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:10: T__205
+                {
+                mT__205(); 
+
+                }
+                break;
+            case 2 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:17: T__206
+                {
+                mT__206(); 
+
+                }
+                break;
+            case 3 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:24: T__207
+                {
+                mT__207(); 
+
+                }
+                break;
+            case 4 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:31: T__208
+                {
+                mT__208(); 
+
+                }
+                break;
+            case 5 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:38: T__209
+                {
+                mT__209(); 
+
+                }
+                break;
+            case 6 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:45: T__210
+                {
+                mT__210(); 
+
+                }
+                break;
+            case 7 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:52: T__211
+                {
+                mT__211(); 
+
+                }
+                break;
+            case 8 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:59: T__212
+                {
+                mT__212(); 
+
+                }
+                break;
+            case 9 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:66: T__213
+                {
+                mT__213(); 
+
+                }
+                break;
+            case 10 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:73: T__214
+                {
+                mT__214(); 
+
+                }
+                break;
+            case 11 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:80: T__215
+                {
+                mT__215(); 
+
+                }
+                break;
+            case 12 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:87: T__216
+                {
+                mT__216(); 
+
+                }
+                break;
+            case 13 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:94: T__217
+                {
+                mT__217(); 
+
+                }
+                break;
+            case 14 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:101: T__218
+                {
+                mT__218(); 
+
+                }
+                break;
+            case 15 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:108: T__219
+                {
+                mT__219(); 
+
+                }
+                break;
+            case 16 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:115: T__220
+                {
+                mT__220(); 
+
+                }
+                break;
+            case 17 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:122: T__221
+                {
+                mT__221(); 
+
+                }
+                break;
+            case 18 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:129: T__222
+                {
+                mT__222(); 
+
+                }
+                break;
+            case 19 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:136: T__223
+                {
+                mT__223(); 
+
+                }
+                break;
+            case 20 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:143: T__224
+                {
+                mT__224(); 
+
+                }
+                break;
+            case 21 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:150: T__225
+                {
+                mT__225(); 
+
+                }
+                break;
+            case 22 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:157: T__226
+                {
+                mT__226(); 
+
+                }
+                break;
+            case 23 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:164: T__227
+                {
+                mT__227(); 
+
+                }
+                break;
+            case 24 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:171: T__228
+                {
+                mT__228(); 
+
+                }
+                break;
+            case 25 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:178: BLOCK_COMMENT
                 {
                 mBLOCK_COMMENT(); 
 
                 }
                 break;
-            case 2 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:24: LINE_COMMENT
+            case 26 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:192: LINE_COMMENT
                 {
                 mLINE_COMMENT(); 
 
                 }
                 break;
-            case 3 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:37: WHITESPACE
+            case 27 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:205: WHITESPACE
                 {
                 mWHITESPACE(); 
 
                 }
                 break;
-            case 4 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:48: OPERATOR
-                {
-                mOPERATOR(); 
-
-                }
-                break;
-            case 5 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:57: OR_OPERATOR
+            case 28 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:216: OR_OPERATOR
                 {
                 mOR_OPERATOR(); 
 
                 }
                 break;
-            case 6 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:69: AND_OPERATOR
+            case 29 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:228: AND_OPERATOR
                 {
                 mAND_OPERATOR(); 
 
                 }
                 break;
-            case 7 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:82: NOT_OPERATOR
+            case 30 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:241: NOT_OPERATOR
                 {
                 mNOT_OPERATOR(); 
 
                 }
                 break;
-            case 8 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:95: NUMBER_UNSIGNED
+            case 31 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:254: NUMBER_UNSIGNED
                 {
                 mNUMBER_UNSIGNED(); 
 
                 }
                 break;
-            case 9 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:111: STRING
+            case 32 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:270: STRING
                 {
                 mSTRING(); 
 
                 }
                 break;
-            case 10 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:118: SOME_TYPES
+            case 33 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:277: SOME_TYPES
                 {
                 mSOME_TYPES(); 
 
                 }
                 break;
-            case 11 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:129: SCALE_TYPES
+            case 34 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:288: SCALE_TYPES
                 {
                 mSCALE_TYPES(); 
 
                 }
                 break;
-            case 12 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:141: SIZE_TYPES
+            case 35 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:300: SIZE_TYPES
                 {
                 mSIZE_TYPES(); 
 
                 }
                 break;
-            case 13 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:152: CHAR_TYPES
+            case 36 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:311: CHAR_TYPES
                 {
                 mCHAR_TYPES(); 
 
                 }
                 break;
-            case 14 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:163: CHAR_TYPE
+            case 37 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:322: CHAR_TYPE
                 {
                 mCHAR_TYPE(); 
 
                 }
                 break;
-            case 15 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:173: BYTE_TYPE
+            case 38 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:332: BYTE_TYPE
                 {
                 mBYTE_TYPE(); 
 
                 }
                 break;
-            case 16 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:183: RAW_TYPE
+            case 39 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:342: RAW_TYPE
                 {
                 mRAW_TYPE(); 
 
                 }
                 break;
-            case 17 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:192: TIMESTAMP_TYPE
+            case 40 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:351: TIMESTAMP_TYPE
                 {
                 mTIMESTAMP_TYPE(); 
 
                 }
                 break;
-            case 18 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:207: YEAR_TYPE
+            case 41 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:366: YEAR_TYPE
                 {
                 mYEAR_TYPE(); 
 
                 }
                 break;
-            case 19 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:217: DAY_TYPE
+            case 42 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:376: DAY_TYPE
                 {
                 mDAY_TYPE(); 
 
                 }
                 break;
-            case 20 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:226: SECOND_TYPE
+            case 43 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:385: SECOND_TYPE
                 {
                 mSECOND_TYPE(); 
 
                 }
                 break;
-            case 21 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:238: KEYWORD
+            case 44 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:397: KEYWORD
                 {
                 mKEYWORD(); 
 
                 }
                 break;
-            case 22 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:246: BEGIN_KEYWORD
+            case 45 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:405: BEGIN_KEYWORD
                 {
                 mBEGIN_KEYWORD(); 
 
                 }
                 break;
-            case 23 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:260: END_KEYWORD
+            case 46 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:419: END_KEYWORD
                 {
                 mEND_KEYWORD(); 
 
                 }
                 break;
-            case 24 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:272: DECLARE_KEYWORD
+            case 47 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:431: DECLARE_KEYWORD
                 {
                 mDECLARE_KEYWORD(); 
 
                 }
                 break;
-            case 25 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:288: EXCEPTION_KEYWORD
+            case 48 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:447: EXCEPTION_KEYWORD
                 {
                 mEXCEPTION_KEYWORD(); 
 
                 }
                 break;
-            case 26 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:306: WHEN_KEYWORD
+            case 49 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:465: WHEN_KEYWORD
                 {
                 mWHEN_KEYWORD(); 
 
                 }
                 break;
-            case 27 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:319: THEN_KEYWORD
+            case 50 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:478: THEN_KEYWORD
                 {
                 mTHEN_KEYWORD(); 
 
                 }
                 break;
-            case 28 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:332: NOT_NULL_KEYWORD
+            case 51 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:491: NOT_NULL_KEYWORD
                 {
                 mNOT_NULL_KEYWORD(); 
 
                 }
                 break;
-            case 29 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:349: NULL_KEYWORD
+            case 52 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:508: NULL_KEYWORD
                 {
                 mNULL_KEYWORD(); 
 
                 }
                 break;
-            case 30 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:362: DEFAULT_KEYWORD
+            case 53 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:521: DEFAULT_KEYWORD
                 {
                 mDEFAULT_KEYWORD(); 
 
                 }
                 break;
-            case 31 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:378: ROWTYPE_KEYWORD
+            case 54 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:537: ROWTYPE_KEYWORD
                 {
                 mROWTYPE_KEYWORD(); 
 
                 }
                 break;
-            case 32 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:394: LIKE_TYPE_KEYWORD
+            case 55 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:553: LIKE_TYPE_KEYWORD
                 {
                 mLIKE_TYPE_KEYWORD(); 
 
                 }
                 break;
-            case 33 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:412: TYPE_KEYWORD
+            case 56 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:571: TYPE_KEYWORD
                 {
                 mTYPE_KEYWORD(); 
 
                 }
                 break;
-            case 34 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:425: TRUE_KEYWORD
+            case 57 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:584: TRUE_KEYWORD
                 {
                 mTRUE_KEYWORD(); 
 
                 }
                 break;
-            case 35 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:438: FALSE_KEYWORD
+            case 58 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:597: FALSE_KEYWORD
                 {
                 mFALSE_KEYWORD(); 
 
                 }
                 break;
-            case 36 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:452: CONSTANT_KEYWORD
+            case 59 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:611: CONSTANT_KEYWORD
                 {
                 mCONSTANT_KEYWORD(); 
 
                 }
                 break;
-            case 37 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:469: WITH_KEYWORD
+            case 60 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:628: WITH_KEYWORD
                 {
                 mWITH_KEYWORD(); 
 
                 }
                 break;
-            case 38 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:482: LOCAL_KEYWORD
+            case 61 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:641: LOCAL_KEYWORD
                 {
                 mLOCAL_KEYWORD(); 
 
                 }
                 break;
-            case 39 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:496: TIME_KEYWORD
+            case 62 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:655: TIME_KEYWORD
                 {
                 mTIME_KEYWORD(); 
 
                 }
                 break;
-            case 40 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:509: ZONE_KEYWORD
+            case 63 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:668: ZONE_KEYWORD
                 {
                 mZONE_KEYWORD(); 
 
                 }
                 break;
-            case 41 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:522: INTERVAL_KEYWORD
+            case 64 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:681: INTERVAL_KEYWORD
                 {
                 mINTERVAL_KEYWORD(); 
 
                 }
                 break;
-            case 42 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:539: TO_KEYWORD
+            case 65 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:698: TO_KEYWORD
                 {
                 mTO_KEYWORD(); 
 
                 }
                 break;
-            case 43 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:550: MONTH_KEYWORD
+            case 66 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:709: MONTH_KEYWORD
                 {
                 mMONTH_KEYWORD(); 
 
                 }
                 break;
-            case 44 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:564: SUBTYPE_KEYWORD
+            case 67 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:723: SUBTYPE_KEYWORD
                 {
                 mSUBTYPE_KEYWORD(); 
 
                 }
                 break;
-            case 45 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:580: IS_KEYWORD
+            case 68 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:739: IS_KEYWORD
                 {
                 mIS_KEYWORD(); 
 
                 }
                 break;
-            case 46 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:591: RECORD_KEYWORD
+            case 69 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:750: RECORD_KEYWORD
                 {
                 mRECORD_KEYWORD(); 
 
                 }
                 break;
-            case 47 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:606: CREATE_KEYWORD
+            case 70 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:765: CREATE_KEYWORD
                 {
                 mCREATE_KEYWORD(); 
 
                 }
                 break;
-            case 48 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:621: REPLACE_KEYWORD
+            case 71 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:780: REPLACE_KEYWORD
                 {
                 mREPLACE_KEYWORD(); 
 
                 }
                 break;
-            case 49 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:637: FUNCTION_KEYWORD
+            case 72 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:796: FUNCTION_KEYWORD
                 {
                 mFUNCTION_KEYWORD(); 
 
                 }
                 break;
-            case 50 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:654: AS_KEYWORD
+            case 73 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:813: AS_KEYWORD
                 {
                 mAS_KEYWORD(); 
 
                 }
                 break;
-            case 51 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:665: RETURN_KEYWORD
+            case 74 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:824: RETURN_KEYWORD
                 {
                 mRETURN_KEYWORD(); 
 
                 }
                 break;
-            case 52 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:680: IN_KEYWORD
+            case 75 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:839: IN_KEYWORD
                 {
                 mIN_KEYWORD(); 
 
                 }
                 break;
-            case 53 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:691: OUT_KEYWORD
+            case 76 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:850: OUT_KEYWORD
                 {
                 mOUT_KEYWORD(); 
 
                 }
                 break;
-            case 54 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:703: NOCOPY_KEYWORD
+            case 77 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:862: NOCOPY_KEYWORD
                 {
                 mNOCOPY_KEYWORD(); 
 
                 }
                 break;
-            case 55 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:718: AUTHID_KEYWORD
+            case 78 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:877: AUTHID_KEYWORD
                 {
                 mAUTHID_KEYWORD(); 
 
                 }
                 break;
-            case 56 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:733: CURRENT_USER_KEYWORD
+            case 79 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:892: CURRENT_USER_KEYWORD
                 {
                 mCURRENT_USER_KEYWORD(); 
 
                 }
                 break;
-            case 57 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:754: DEFINER_KEYWORD
+            case 80 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:913: DEFINER_KEYWORD
                 {
                 mDEFINER_KEYWORD(); 
 
                 }
                 break;
-            case 58 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:770: DETERMINISTIC_KEYWORD
+            case 81 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:929: DETERMINISTIC_KEYWORD
                 {
                 mDETERMINISTIC_KEYWORD(); 
 
                 }
                 break;
-            case 59 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:792: PARALLEL_ENABLED_KEYWORD
+            case 82 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:951: PARALLEL_ENABLED_KEYWORD
                 {
                 mPARALLEL_ENABLED_KEYWORD(); 
 
                 }
                 break;
-            case 60 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:817: PIPELINED_KEYWORD
+            case 83 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:976: PIPELINED_KEYWORD
                 {
                 mPIPELINED_KEYWORD(); 
 
                 }
                 break;
-            case 61 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:835: RESULT_CACHE_KEYWORD
+            case 84 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:994: RESULT_CACHE_KEYWORD
                 {
                 mRESULT_CACHE_KEYWORD(); 
 
                 }
                 break;
-            case 62 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:856: PROCEDURE_KEYWORD
+            case 85 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1015: PROCEDURE_KEYWORD
                 {
                 mPROCEDURE_KEYWORD(); 
 
                 }
                 break;
-            case 63 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:874: IF_KEYWORD
+            case 86 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1033: IF_KEYWORD
                 {
                 mIF_KEYWORD(); 
 
                 }
                 break;
-            case 64 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:885: ELSE_KEYWORD
+            case 87 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1044: ELSE_KEYWORD
                 {
                 mELSE_KEYWORD(); 
 
                 }
                 break;
-            case 65 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:898: ELSIF_KEYWORD
+            case 88 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1057: ELSIF_KEYWORD
                 {
                 mELSIF_KEYWORD(); 
 
                 }
                 break;
-            case 66 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:912: ENDIF_KEYWORD
+            case 89 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1071: ENDIF_KEYWORD
                 {
                 mENDIF_KEYWORD(); 
 
                 }
                 break;
-            case 67 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:926: IS_NULL_KEYWORD
+            case 90 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1085: IS_NULL_KEYWORD
                 {
                 mIS_NULL_KEYWORD(); 
 
                 }
                 break;
-            case 68 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:942: IS_NOT_NULL_KEYWORD
+            case 91 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1101: IS_NOT_NULL_KEYWORD
                 {
                 mIS_NOT_NULL_KEYWORD(); 
 
                 }
                 break;
-            case 69 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:962: NOT_IN_KEYWORD
+            case 92 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1121: NOT_IN_KEYWORD
                 {
                 mNOT_IN_KEYWORD(); 
 
                 }
                 break;
-            case 70 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:977: GOTO_KEYWORD
+            case 93 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1136: GOTO_KEYWORD
                 {
                 mGOTO_KEYWORD(); 
 
                 }
                 break;
-            case 71 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:990: LOOP_KEYWORD
+            case 94 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1149: LOOP_KEYWORD
                 {
                 mLOOP_KEYWORD(); 
 
                 }
                 break;
-            case 72 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1003: END_LOOP_KEYWORD
+            case 95 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1162: END_LOOP_KEYWORD
                 {
                 mEND_LOOP_KEYWORD(); 
 
                 }
                 break;
-            case 73 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1020: WHILE_KEYWORD
+            case 96 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1179: WHILE_KEYWORD
                 {
                 mWHILE_KEYWORD(); 
 
                 }
                 break;
-            case 74 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1034: FOR_KEYWORD
+            case 97 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1193: FOR_KEYWORD
                 {
                 mFOR_KEYWORD(); 
 
                 }
                 break;
-            case 75 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1046: REVERSE_KEYWORD
+            case 98 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1205: REVERSE_KEYWORD
                 {
                 mREVERSE_KEYWORD(); 
 
                 }
                 break;
-            case 76 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1062: SELECT_KEYWORD
+            case 99 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1221: SELECT_KEYWORD
                 {
                 mSELECT_KEYWORD(); 
 
                 }
                 break;
-            case 77 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1077: COUNT_KEYWORD
+            case 100 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1236: COUNT_KEYWORD
                 {
                 mCOUNT_KEYWORD(); 
 
                 }
                 break;
-            case 78 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1091: EXCEPTION_INIT_KEYWORD
+            case 101 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1250: EXCEPTION_INIT_KEYWORD
                 {
                 mEXCEPTION_INIT_KEYWORD(); 
 
                 }
                 break;
-            case 79 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1114: LIKE_KEYWORD
+            case 102 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1273: LIKE_KEYWORD
                 {
                 mLIKE_KEYWORD(); 
 
                 }
                 break;
-            case 80 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1127: RAISE_KEYWORD
+            case 103 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1286: RAISE_KEYWORD
                 {
                 mRAISE_KEYWORD(); 
 
                 }
                 break;
-            case 81 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1141: PRAGMA_KEYWORD
+            case 104 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1300: PRAGMA_KEYWORD
                 {
                 mPRAGMA_KEYWORD(); 
 
                 }
                 break;
-            case 82 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1156: AUTONOMOUS_TRANSACTION_KEYWORD
+            case 105 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1315: AUTONOMOUS_TRANSACTION_KEYWORD
                 {
                 mAUTONOMOUS_TRANSACTION_KEYWORD(); 
 
                 }
                 break;
-            case 83 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1187: CASE_KEYWORD
+            case 106 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1346: CASE_KEYWORD
                 {
                 mCASE_KEYWORD(); 
 
                 }
                 break;
-            case 84 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1200: END_CASE_KEYWORD
+            case 107 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1359: END_CASE_KEYWORD
                 {
                 mEND_CASE_KEYWORD(); 
 
                 }
                 break;
-            case 85 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1217: CLOSE_KEYWORD
+            case 108 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1376: CLOSE_KEYWORD
                 {
                 mCLOSE_KEYWORD(); 
 
                 }
                 break;
-            case 86 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1231: TABLE_KEYWORD
+            case 109 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1390: TABLE_KEYWORD
                 {
                 mTABLE_KEYWORD(); 
 
                 }
                 break;
-            case 87 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1245: OF_KEYWORD
+            case 110 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1404: OF_KEYWORD
                 {
                 mOF_KEYWORD(); 
 
                 }
                 break;
-            case 88 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1256: INDEX_KEYWORD
+            case 111 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1415: INDEX_KEYWORD
                 {
                 mINDEX_KEYWORD(); 
 
                 }
                 break;
-            case 89 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1270: BY_KEYWORD
+            case 112 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1429: BY_KEYWORD
                 {
                 mBY_KEYWORD(); 
 
                 }
                 break;
-            case 90 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1281: VARRAY_KEYWORD
+            case 113 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1440: VARRAY_KEYWORD
                 {
                 mVARRAY_KEYWORD(); 
 
                 }
                 break;
-            case 91 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1296: VARYING_KEYWORD
+            case 114 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1455: VARYING_KEYWORD
                 {
                 mVARYING_KEYWORD(); 
 
                 }
                 break;
-            case 92 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1312: ARRAY_KEYWORD
+            case 115 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1471: ARRAY_KEYWORD
                 {
                 mARRAY_KEYWORD(); 
 
                 }
                 break;
-            case 93 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1326: COMMIT_KEYWORD
+            case 116 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1485: COMMIT_KEYWORD
                 {
                 mCOMMIT_KEYWORD(); 
 
                 }
                 break;
-            case 94 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1341: REF_KEYWORD
+            case 117 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1500: REF_KEYWORD
                 {
                 mREF_KEYWORD(); 
 
                 }
                 break;
-            case 95 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1353: CONTINUE_KEYWORD
+            case 118 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1512: CONTINUE_KEYWORD
                 {
                 mCONTINUE_KEYWORD(); 
 
                 }
                 break;
-            case 96 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1370: CURSOR_KEYWORD
+            case 119 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1529: CURSOR_KEYWORD
                 {
                 mCURSOR_KEYWORD(); 
 
                 }
                 break;
-            case 97 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1385: DELETE_KEYWORD
+            case 120 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1544: DELETE_KEYWORD
                 {
                 mDELETE_KEYWORD(); 
 
                 }
                 break;
-            case 98 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1400: EXECUTE_KEYWORD
+            case 121 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1559: EXECUTE_KEYWORD
                 {
                 mEXECUTE_KEYWORD(); 
 
                 }
                 break;
-            case 99 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1416: IMMEDIATE_KEYWORD
+            case 122 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1575: IMMEDIATE_KEYWORD
                 {
                 mIMMEDIATE_KEYWORD(); 
 
                 }
                 break;
-            case 100 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1434: EXIT_KEYWORD
+            case 123 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1593: EXIT_KEYWORD
                 {
                 mEXIT_KEYWORD(); 
 
                 }
                 break;
-            case 101 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1447: INTO_KEYWORD
+            case 124 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1606: INTO_KEYWORD
                 {
                 mINTO_KEYWORD(); 
 
                 }
                 break;
-            case 102 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1460: USING_KEYWORD
+            case 125 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1619: USING_KEYWORD
                 {
                 mUSING_KEYWORD(); 
 
                 }
                 break;
-            case 103 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1474: BULK_KEYWORD
+            case 126 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1633: BULK_KEYWORD
                 {
                 mBULK_KEYWORD(); 
 
                 }
                 break;
-            case 104 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1487: COLLECT_KEYWORD
+            case 127 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1646: COLLECT_KEYWORD
                 {
                 mCOLLECT_KEYWORD(); 
 
                 }
                 break;
-            case 105 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1503: FETCH_KEYWORD
+            case 128 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1662: FETCH_KEYWORD
                 {
                 mFETCH_KEYWORD(); 
 
                 }
                 break;
-            case 106 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1517: LIMIT_KEYWORD
+            case 129 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1676: LIMIT_KEYWORD
                 {
                 mLIMIT_KEYWORD(); 
 
                 }
                 break;
-            case 107 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1531: FORALL_KEYWORD
+            case 130 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1690: FORALL_KEYWORD
                 {
                 mFORALL_KEYWORD(); 
 
                 }
                 break;
-            case 108 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1546: SAVE_KEYWORD
+            case 131 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1705: SAVE_KEYWORD
                 {
                 mSAVE_KEYWORD(); 
 
                 }
                 break;
-            case 109 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1559: EXCEPTIONS_KEYWORD
+            case 132 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1718: EXCEPTIONS_KEYWORD
                 {
                 mEXCEPTIONS_KEYWORD(); 
 
                 }
                 break;
-            case 110 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1578: INDICES_KEYWORD
+            case 133 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1737: INDICES_KEYWORD
                 {
                 mINDICES_KEYWORD(); 
 
                 }
                 break;
-            case 111 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1594: VALUES_KEYWORD
+            case 134 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1753: VALUES_KEYWORD
                 {
                 mVALUES_KEYWORD(); 
 
                 }
                 break;
-            case 112 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1609: BETWEEN_KEYWORD
+            case 135 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1768: BETWEEN_KEYWORD
                 {
                 mBETWEEN_KEYWORD(); 
 
                 }
                 break;
-            case 113 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1625: INLINE_KEYWORD
+            case 136 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1784: INLINE_KEYWORD
                 {
                 mINLINE_KEYWORD(); 
 
                 }
                 break;
-            case 114 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1640: INSERT_KEYWORD
+            case 137 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1799: INSERT_KEYWORD
                 {
                 mINSERT_KEYWORD(); 
 
                 }
                 break;
-            case 115 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1655: LOCK_KEYWORD
+            case 138 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1814: LOCK_KEYWORD
                 {
                 mLOCK_KEYWORD(); 
 
                 }
                 break;
-            case 116 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1668: MERGE_KEYWORD
+            case 139 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1827: MERGE_KEYWORD
                 {
                 mMERGE_KEYWORD(); 
 
                 }
                 break;
-            case 117 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1682: OPEN_KEYWORD
+            case 140 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1841: OPEN_KEYWORD
                 {
                 mOPEN_KEYWORD(); 
 
                 }
                 break;
-            case 118 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1695: PACKAGE_KEYWORD
+            case 141 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1854: PACKAGE_KEYWORD
                 {
                 mPACKAGE_KEYWORD(); 
 
                 }
                 break;
-            case 119 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1711: BODY_KEYWORD
+            case 142 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1870: BODY_KEYWORD
                 {
                 mBODY_KEYWORD(); 
 
                 }
                 break;
-            case 120 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1724: RESTRICT_REFERENCES_KEYWORD
+            case 143 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1883: RESTRICT_REFERENCES_KEYWORD
                 {
                 mRESTRICT_REFERENCES_KEYWORD(); 
 
                 }
                 break;
-            case 121 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1752: RETURNING_KEYWORD
+            case 144 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1911: RETURNING_KEYWORD
                 {
                 mRETURNING_KEYWORD(); 
 
                 }
                 break;
-            case 122 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1770: ROLLBACK_KEYWORD
+            case 145 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1929: ROLLBACK_KEYWORD
                 {
                 mROLLBACK_KEYWORD(); 
 
                 }
                 break;
-            case 123 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1787: SAVEPOINT_KEYWORD
+            case 146 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1946: SAVEPOINT_KEYWORD
                 {
                 mSAVEPOINT_KEYWORD(); 
 
                 }
                 break;
-            case 124 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1805: SERIALLY_REUSABLE_KEYWORD
+            case 147 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1964: SERIALLY_REUSABLE_KEYWORD
                 {
                 mSERIALLY_REUSABLE_KEYWORD(); 
 
                 }
                 break;
-            case 125 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1831: SET_KEYWORD
+            case 148 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1990: SET_KEYWORD
                 {
                 mSET_KEYWORD(); 
 
                 }
                 break;
-            case 126 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1843: TRANSACTION_KEYWORD
+            case 149 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2002: TRANSACTION_KEYWORD
                 {
                 mTRANSACTION_KEYWORD(); 
 
                 }
                 break;
-            case 127 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1863: NOTFOUND_KEYWORD
+            case 150 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2022: NOTFOUND_KEYWORD
                 {
                 mNOTFOUND_KEYWORD(); 
 
                 }
                 break;
-            case 128 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1880: FOUND_KEYWORD
+            case 151 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2039: FOUND_KEYWORD
                 {
                 mFOUND_KEYWORD(); 
 
                 }
                 break;
-            case 129 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1894: ISOPEN_KEYWORD
+            case 152 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2053: ISOPEN_KEYWORD
                 {
                 mISOPEN_KEYWORD(); 
 
                 }
                 break;
-            case 130 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1909: ROWCOUNT_KEYWORD
+            case 153 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2068: ROWCOUNT_KEYWORD
                 {
                 mROWCOUNT_KEYWORD(); 
 
                 }
                 break;
-            case 131 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1926: SQLCODE_KEYWORD
+            case 154 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2085: SQLCODE_KEYWORD
                 {
                 mSQLCODE_KEYWORD(); 
 
                 }
                 break;
-            case 132 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1942: SQLERRM_KEYWORD
+            case 155 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2101: SQLERRM_KEYWORD
                 {
                 mSQLERRM_KEYWORD(); 
 
                 }
                 break;
-            case 133 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1958: UPDATE_KEYWORD
+            case 156 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2117: UPDATE_KEYWORD
                 {
                 mUPDATE_KEYWORD(); 
 
                 }
                 break;
-            case 134 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1973: EXISTS_KEYWORD
+            case 157 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2132: EXISTS_KEYWORD
                 {
                 mEXISTS_KEYWORD(); 
 
                 }
                 break;
-            case 135 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:1988: TRIGGER_KEYWORD
+            case 158 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2147: TRIGGER_KEYWORD
                 {
                 mTRIGGER_KEYWORD(); 
 
                 }
                 break;
-            case 136 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2004: BEFORE_KEYWORD
+            case 159 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2163: BEFORE_KEYWORD
                 {
                 mBEFORE_KEYWORD(); 
 
                 }
                 break;
-            case 137 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2019: AFTER_KEYWORD
+            case 160 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2178: AFTER_KEYWORD
                 {
                 mAFTER_KEYWORD(); 
 
                 }
                 break;
-            case 138 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2033: INSTEAD_KEYWORD
+            case 161 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2192: INSTEAD_KEYWORD
                 {
                 mINSTEAD_KEYWORD(); 
 
                 }
                 break;
-            case 139 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2049: ON_KEYWORD
+            case 162 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2208: ON_KEYWORD
                 {
                 mON_KEYWORD(); 
 
                 }
                 break;
-            case 140 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2060: NESTED_KEYWORD
+            case 163 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2219: NESTED_KEYWORD
                 {
                 mNESTED_KEYWORD(); 
 
                 }
                 break;
-            case 141 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2075: REFERENCING_KEYWORD
+            case 164 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2234: REFERENCING_KEYWORD
                 {
                 mREFERENCING_KEYWORD(); 
 
                 }
                 break;
-            case 142 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2095: OLD_KEYWORD
+            case 165 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2254: OLD_KEYWORD
                 {
                 mOLD_KEYWORD(); 
 
                 }
                 break;
-            case 143 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2107: NEW_KEYWORD
+            case 166 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2266: NEW_KEYWORD
                 {
                 mNEW_KEYWORD(); 
 
                 }
                 break;
-            case 144 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2119: PARENT_KEYWORD
+            case 167 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2278: PARENT_KEYWORD
                 {
                 mPARENT_KEYWORD(); 
 
                 }
                 break;
-            case 145 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2134: EACH_KEYWORD
+            case 168 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2293: EACH_KEYWORD
                 {
                 mEACH_KEYWORD(); 
 
                 }
                 break;
-            case 146 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2147: ROW_KEYWORD
+            case 169 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2306: ROW_KEYWORD
                 {
                 mROW_KEYWORD(); 
 
                 }
                 break;
-            case 147 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2159: FOLLOWS_KEYWORD
+            case 170 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2318: FOLLOWS_KEYWORD
                 {
                 mFOLLOWS_KEYWORD(); 
 
                 }
                 break;
-            case 148 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2175: ENABLE_KEYWORD
+            case 171 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2334: ENABLE_KEYWORD
                 {
                 mENABLE_KEYWORD(); 
 
                 }
                 break;
-            case 149 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2190: DISABLE_KEYWORD
+            case 172 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2349: DISABLE_KEYWORD
                 {
                 mDISABLE_KEYWORD(); 
 
                 }
                 break;
-            case 150 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2206: OID_KEYWORD
+            case 173 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2365: OID_KEYWORD
                 {
                 mOID_KEYWORD(); 
 
                 }
                 break;
-            case 151 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2218: OBJECT_KEYWORD
+            case 174 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2377: OBJECT_KEYWORD
                 {
                 mOBJECT_KEYWORD(); 
 
                 }
                 break;
-            case 152 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2233: UNDER_KEYWORD
+            case 175 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2392: UNDER_KEYWORD
                 {
                 mUNDER_KEYWORD(); 
 
                 }
                 break;
-            case 153 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2247: FINAL_KEYWORD
+            case 176 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2406: FINAL_KEYWORD
                 {
                 mFINAL_KEYWORD(); 
 
                 }
                 break;
-            case 154 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2261: INSTANTIABLE_KEYWORD
+            case 177 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2420: INSTANTIABLE_KEYWORD
                 {
                 mINSTANTIABLE_KEYWORD(); 
 
                 }
                 break;
-            case 155 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2282: OVERRIDING_KEYWORD
+            case 178 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2441: OVERRIDING_KEYWORD
                 {
                 mOVERRIDING_KEYWORD(); 
 
                 }
                 break;
-            case 156 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2301: MEMBER_KEYWORD
+            case 179 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2460: MEMBER_KEYWORD
                 {
                 mMEMBER_KEYWORD(); 
 
                 }
                 break;
-            case 157 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2316: STATIC_KEYWORD
+            case 180 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2475: STATIC_KEYWORD
                 {
                 mSTATIC_KEYWORD(); 
 
                 }
                 break;
-            case 158 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2331: CONSTRUCTOR_KEYWORD
+            case 181 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2490: CONSTRUCTOR_KEYWORD
                 {
                 mCONSTRUCTOR_KEYWORD(); 
 
                 }
                 break;
-            case 159 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2351: SELF_KEYWORD
+            case 182 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2510: SELF_KEYWORD
                 {
                 mSELF_KEYWORD(); 
 
                 }
                 break;
-            case 160 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2364: RESULT_KEYWORD
+            case 183 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2523: RESULT_KEYWORD
                 {
                 mRESULT_KEYWORD(); 
 
                 }
                 break;
-            case 161 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2379: MAP_KEYWORD
+            case 184 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2538: MAP_KEYWORD
                 {
                 mMAP_KEYWORD(); 
 
                 }
                 break;
-            case 162 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2391: ORDER_KEYWORD
+            case 185 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2550: ORDER_KEYWORD
                 {
                 mORDER_KEYWORD(); 
 
                 }
                 break;
-            case 163 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2405: JOIN_KEYWORD
+            case 186 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2564: JOIN_KEYWORD
                 {
                 mJOIN_KEYWORD(); 
 
                 }
                 break;
-            case 164 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2418: THE_REST
+            case 187 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2577: IDENTIFIER
+                {
+                mIDENTIFIER(); 
+
+                }
+                break;
+            case 188 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2588: EXT_IDENTIFIER
+                {
+                mEXT_IDENTIFIER(); 
+
+                }
+                break;
+            case 189 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2603: ALIAS
+                {
+                mALIAS(); 
+
+                }
+                break;
+            case 190 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2609: SEPARATOR
+                {
+                mSEPARATOR(); 
+
+                }
+                break;
+            case 191 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:2619: THE_REST
                 {
                 mTHE_REST(); 
 
@@ -8259,136 +9120,56 @@ public class PL_SQLLexer extends Lexer {
     }
 
 
-    protected DFA5 dfa5 = new DFA5(this);
+    protected DFA11 dfa11 = new DFA11(this);
     protected DFA12 dfa12 = new DFA12(this);
-    protected DFA13 dfa13 = new DFA13(this);
-    protected DFA17 dfa17 = new DFA17(this);
-    protected DFA22 dfa22 = new DFA22(this);
-    protected DFA38 dfa38 = new DFA38(this);
-    protected DFA49 dfa49 = new DFA49(this);
-    static final String DFA5_eotS =
-        "\4\uffff\1\21\3\uffff\1\25\3\uffff\1\30\1\uffff\1\32\14\uffff";
-    static final String DFA5_eofS =
-        "\33\uffff";
-    static final String DFA5_minS =
-        "\1\41\3\uffff\1\52\3\uffff\1\74\3\uffff\1\75\1\uffff\1\53\14\uffff";
-    static final String DFA5_maxS =
-        "\1\176\3\uffff\1\52\3\uffff\1\76\3\uffff\1\76\1\uffff\1\53\14\uffff";
-    static final String DFA5_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\uffff\1\5\1\7\1\10\1\uffff\1\12\1\13\1\14"+
-        "\1\uffff\1\21\1\uffff\1\24\1\6\1\4\1\11\1\17\1\25\1\16\1\20\1\26"+
-        "\1\15\1\22\1\23";
-    static final String DFA5_specialS =
-        "\33\uffff}>";
-    static final String[] DFA5_transitionS = {
-            "\1\11\6\uffff\1\16\1\17\1\4\1\2\1\uffff\1\3\1\15\1\5\12\uffff"+
-            "\1\1\1\uffff\1\10\1\7\1\14\37\uffff\1\13\35\uffff\1\6\1\uffff"+
-            "\1\12",
-            "",
-            "",
-            "",
-            "\1\20",
-            "",
-            "",
-            "",
-            "\1\24\1\23\1\22",
-            "",
-            "",
-            "",
-            "\1\26\1\27",
-            "",
-            "\1\31",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-    };
-
-    static final short[] DFA5_eot = DFA.unpackEncodedString(DFA5_eotS);
-    static final short[] DFA5_eof = DFA.unpackEncodedString(DFA5_eofS);
-    static final char[] DFA5_min = DFA.unpackEncodedStringToUnsignedChars(DFA5_minS);
-    static final char[] DFA5_max = DFA.unpackEncodedStringToUnsignedChars(DFA5_maxS);
-    static final short[] DFA5_accept = DFA.unpackEncodedString(DFA5_acceptS);
-    static final short[] DFA5_special = DFA.unpackEncodedString(DFA5_specialS);
-    static final short[][] DFA5_transition;
-
-    static {
-        int numStates = DFA5_transitionS.length;
-        DFA5_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA5_transition[i] = DFA.unpackEncodedString(DFA5_transitionS[i]);
-        }
-    }
-
-    class DFA5 extends DFA {
-
-        public DFA5(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 5;
-            this.eot = DFA5_eot;
-            this.eof = DFA5_eof;
-            this.min = DFA5_min;
-            this.max = DFA5_max;
-            this.accept = DFA5_accept;
-            this.special = DFA5_special;
-            this.transition = DFA5_transition;
-        }
-        public String getDescription() {
-            return "131:1: OPERATOR : ( ':=' | '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' | '^=' | '>' | '<' | '<=' | '>=' | '..' | '(+)' | '(' | ')' | '<<' | '>>' );";
-        }
-    }
-    static final String DFA12_eotS =
+    protected DFA16 dfa16 = new DFA16(this);
+    protected DFA21 dfa21 = new DFA21(this);
+    protected DFA37 dfa37 = new DFA37(this);
+    protected DFA57 dfa57 = new DFA57(this);
+    static final String DFA11_eotS =
         "\36\uffff\1\43\7\uffff\1\52\10\uffff\1\62\4\uffff\1\70\5\uffff";
-    static final String DFA12_eofS =
+    static final String DFA11_eofS =
         "\72\uffff";
-    static final String DFA12_minS =
-        "\1\102\1\101\1\114\1\111\1\116\1\106\1\105\1\117\4\uffff\1\124"+
-        "\2\uffff\1\123\1\107\1\uffff\1\124\1\116\5\uffff\1\116\1\125\1\111"+
+    static final String DFA11_minS =
+        "\1\102\1\101\1\114\1\111\1\116\1\106\1\105\1\117\5\uffff\1\124"+
+        "\1\uffff\1\123\1\uffff\1\107\1\124\1\116\5\uffff\1\116\1\125\1\111"+
         "\2\uffff\1\105\1\101\1\107\1\122\1\124\2\uffff\1\122\1\11\1\101"+
         "\1\111\1\131\2\uffff\1\114\1\126\1\137\1\116\1\105\1\104\2\uffff"+
         "\1\116\5\uffff";
-    static final String DFA12_maxS =
-        "\1\165\1\143\1\157\1\155\1\156\3\157\4\uffff\1\164\2\uffff\1\163"+
-        "\1\155\1\uffff\1\164\1\156\5\uffff\1\156\1\165\1\151\2\uffff\1\145"+
+    static final String DFA11_maxS =
+        "\1\165\1\143\1\157\1\155\1\156\3\157\5\uffff\1\164\1\uffff\1\163"+
+        "\1\uffff\1\155\1\164\1\156\5\uffff\1\156\1\165\1\151\2\uffff\1\145"+
         "\1\141\1\147\1\162\1\164\2\uffff\1\162\1\40\1\141\1\151\1\171\2"+
         "\uffff\1\154\1\166\1\137\1\156\1\145\1\151\2\uffff\1\156\5\uffff";
-    static final String DFA12_acceptS =
-        "\10\uffff\1\22\1\24\1\25\1\30\1\uffff\1\31\1\2\2\uffff\1\12\2\uffff"+
-        "\1\26\1\23\1\27\1\21\1\14\3\uffff\1\6\1\7\5\uffff\1\10\1\11\5\uffff"+
-        "\1\17\1\20\6\uffff\1\1\1\3\1\uffff\1\15\1\13\1\16\1\4\1\5";
-    static final String DFA12_specialS =
+    static final String DFA11_acceptS =
+        "\10\uffff\1\22\1\24\1\25\1\30\1\31\1\uffff\1\2\1\uffff\1\12\3\uffff"+
+        "\1\27\1\26\1\23\1\21\1\14\3\uffff\1\7\1\6\5\uffff\1\10\1\11\5\uffff"+
+        "\1\17\1\20\6\uffff\1\1\1\3\1\uffff\1\16\1\13\1\15\1\4\1\5";
+    static final String DFA11_specialS =
         "\72\uffff}>";
-    static final String[] DFA12_transitionS = {
+    static final String[] DFA11_transitionS = {
             "\1\5\1\13\1\12\4\uffff\1\4\2\uffff\1\7\1\11\1\1\1\uffff\1\2"+
             "\1\uffff\1\6\1\3\1\uffff\1\10\14\uffff\1\5\1\13\1\12\4\uffff"+
             "\1\4\2\uffff\1\7\1\11\1\1\1\uffff\1\2\1\uffff\1\6\1\3\1\uffff"+
             "\1\10",
-            "\1\14\1\uffff\1\15\35\uffff\1\14\1\uffff\1\15",
+            "\1\15\1\uffff\1\14\35\uffff\1\15\1\uffff\1\14",
             "\1\16\2\uffff\1\17\34\uffff\1\16\2\uffff\1\17",
-            "\1\20\3\uffff\1\21\33\uffff\1\20\3\uffff\1\21",
+            "\1\21\3\uffff\1\20\33\uffff\1\21\3\uffff\1\20",
             "\1\22\37\uffff\1\22",
-            "\1\24\2\uffff\1\23\2\uffff\1\26\2\uffff\1\25\26\uffff\1\24"+
-            "\2\uffff\1\23\2\uffff\1\26\2\uffff\1\25",
+            "\1\25\2\uffff\1\23\2\uffff\1\24\2\uffff\1\26\26\uffff\1\25"+
+            "\2\uffff\1\23\2\uffff\1\24\2\uffff\1\26",
             "\1\30\11\uffff\1\27\25\uffff\1\30\11\uffff\1\27",
             "\1\31\37\uffff\1\31",
             "",
             "",
             "",
             "",
+            "",
             "\1\32\37\uffff\1\32",
             "",
-            "",
             "\1\33\37\uffff\1\33",
-            "\1\34\5\uffff\1\35\31\uffff\1\34\5\uffff\1\35",
             "",
+            "\1\35\5\uffff\1\34\31\uffff\1\35\5\uffff\1\34",
             "\1\36\37\uffff\1\36",
             "\1\37\37\uffff\1\37",
             "",
@@ -8420,12 +9201,71 @@ public class PL_SQLLexer extends Lexer {
             "\1\61",
             "\1\63\37\uffff\1\63",
             "\1\64\37\uffff\1\64",
-            "\1\65\1\uffff\1\67\2\uffff\1\66\32\uffff\1\65\1\uffff\1\67"+
+            "\1\67\1\uffff\1\65\2\uffff\1\66\32\uffff\1\67\1\uffff\1\65"+
             "\2\uffff\1\66",
             "",
             "",
             "\1\71\37\uffff\1\71",
             "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA11_eot = DFA.unpackEncodedString(DFA11_eotS);
+    static final short[] DFA11_eof = DFA.unpackEncodedString(DFA11_eofS);
+    static final char[] DFA11_min = DFA.unpackEncodedStringToUnsignedChars(DFA11_minS);
+    static final char[] DFA11_max = DFA.unpackEncodedStringToUnsignedChars(DFA11_maxS);
+    static final short[] DFA11_accept = DFA.unpackEncodedString(DFA11_acceptS);
+    static final short[] DFA11_special = DFA.unpackEncodedString(DFA11_specialS);
+    static final short[][] DFA11_transition;
+
+    static {
+        int numStates = DFA11_transitionS.length;
+        DFA11_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA11_transition[i] = DFA.unpackEncodedString(DFA11_transitionS[i]);
+        }
+    }
+
+    class DFA11 extends DFA {
+
+        public DFA11(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 11;
+            this.eot = DFA11_eot;
+            this.eof = DFA11_eof;
+            this.min = DFA11_min;
+            this.max = DFA11_max;
+            this.accept = DFA11_accept;
+            this.special = DFA11_special;
+            this.transition = DFA11_transition;
+        }
+        public String getDescription() {
+            return "159:1: SOME_TYPES : ( N A T U R A L | P L S '_' I N T E G E R | N A T U R A L N | P O S I T I V E | P O S I T I V E N | S I G N T Y P E | S I M P L E '_' I N T E G E R | I N T | I N T E G E R | S M A L L I N T | B I N A R Y '_' I N T E G E R | R E A L | B I N A R Y '_' D O U B L E | B I N A R Y '_' F L O A T | L O N G | L O N G ( ' ' | '\\t' | '\\n' | '\\r' )+ R A W | R O W I D | U R O W I D | B O O L E A N | M L S L A B E L | D A T E | B F I L E | B L O B | C L O B | N C L O B );";
+        }
+    }
+    static final String DFA12_eotS =
+        "\6\uffff\1\11\4\uffff";
+    static final String DFA12_eofS =
+        "\13\uffff";
+    static final String DFA12_minS =
+        "\1\104\1\125\1\105\1\115\1\103\1\102\1\111\4\uffff";
+    static final String DFA12_maxS =
+        "\1\156\1\165\1\145\1\155\1\143\1\145\1\151\4\uffff";
+    static final String DFA12_acceptS =
+        "\7\uffff\1\4\1\1\1\2\1\3";
+    static final String DFA12_specialS =
+        "\13\uffff}>";
+    static final String[] DFA12_transitionS = {
+            "\1\2\11\uffff\1\1\25\uffff\1\2\11\uffff\1\1",
+            "\1\3\37\uffff\1\3",
+            "\1\4\37\uffff\1\4",
+            "\1\5\37\uffff\1\5",
+            "\1\6\37\uffff\1\6",
+            "\1\10\2\uffff\1\7\34\uffff\1\10\2\uffff\1\7",
+            "\1\12\37\uffff\1\12",
             "",
             "",
             "",
@@ -8462,139 +9302,80 @@ public class PL_SQLLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "155:1: SOME_TYPES : ( N A T U R A L | P L S '_' I N T E G E R | N A T U R A L N | P O S I T I V E | P O S I T I V E N | S I G N T Y P E | S I M P L E '_' I N T E G E R | I N T | I N T E G E R | S M A L L I N T | B I N A R Y '_' I N T E G E R | R E A L | B I N A R Y '_' D O U B L E | B I N A R Y '_' F L O A T | L O N G | L O N G ( ' ' | '\\t' | '\\n' | '\\r' )+ R A W | R O W I D | U R O W I D | B O O L E A N | M L S L A B E L | D A T E | B F I L E | B L O B | C L O B | N C L O B );";
+            return "168:4: ( N U M B E R | D E C | D E C I M A L | N U M E R I C )";
         }
     }
-    static final String DFA13_eotS =
-        "\6\uffff\1\11\4\uffff";
-    static final String DFA13_eofS =
-        "\13\uffff";
-    static final String DFA13_minS =
-        "\1\104\1\125\1\105\1\115\1\103\1\102\1\111\4\uffff";
-    static final String DFA13_maxS =
-        "\1\156\1\165\1\145\1\155\1\143\1\145\1\151\4\uffff";
-    static final String DFA13_acceptS =
-        "\7\uffff\1\1\1\4\1\2\1\3";
-    static final String DFA13_specialS =
-        "\13\uffff}>";
-    static final String[] DFA13_transitionS = {
-            "\1\2\11\uffff\1\1\25\uffff\1\2\11\uffff\1\1",
-            "\1\3\37\uffff\1\3",
-            "\1\4\37\uffff\1\4",
-            "\1\5\37\uffff\1\5",
-            "\1\6\37\uffff\1\6",
-            "\1\7\2\uffff\1\10\34\uffff\1\7\2\uffff\1\10",
-            "\1\12\37\uffff\1\12",
-            "",
-            "",
-            "",
-            ""
-    };
-
-    static final short[] DFA13_eot = DFA.unpackEncodedString(DFA13_eotS);
-    static final short[] DFA13_eof = DFA.unpackEncodedString(DFA13_eofS);
-    static final char[] DFA13_min = DFA.unpackEncodedStringToUnsignedChars(DFA13_minS);
-    static final char[] DFA13_max = DFA.unpackEncodedStringToUnsignedChars(DFA13_maxS);
-    static final short[] DFA13_accept = DFA.unpackEncodedString(DFA13_acceptS);
-    static final short[] DFA13_special = DFA.unpackEncodedString(DFA13_specialS);
-    static final short[][] DFA13_transition;
-
-    static {
-        int numStates = DFA13_transitionS.length;
-        DFA13_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA13_transition[i] = DFA.unpackEncodedString(DFA13_transitionS[i]);
-        }
-    }
-
-    class DFA13 extends DFA {
-
-        public DFA13(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 13;
-            this.eot = DFA13_eot;
-            this.eof = DFA13_eof;
-            this.min = DFA13_min;
-            this.max = DFA13_max;
-            this.accept = DFA13_accept;
-            this.special = DFA13_special;
-            this.transition = DFA13_transition;
-        }
-        public String getDescription() {
-            return "164:4: ( N U M B E R | D E C | D E C I M A L | N U M E R I C )";
-        }
-    }
-    static final String DFA17_eotS =
+    static final String DFA16_eotS =
         "\1\2\7\uffff";
-    static final String DFA17_eofS =
+    static final String DFA16_eofS =
         "\10\uffff";
-    static final String DFA17_minS =
+    static final String DFA16_minS =
         "\1\50\1\53\1\uffff\1\60\2\51\2\uffff";
-    static final String DFA17_maxS =
+    static final String DFA16_maxS =
         "\1\50\1\71\1\uffff\3\71\2\uffff";
-    static final String DFA17_acceptS =
-        "\2\uffff\1\3\3\uffff\1\1\1\2";
-    static final String DFA17_specialS =
+    static final String DFA16_acceptS =
+        "\2\uffff\1\3\3\uffff\1\2\1\1";
+    static final String DFA16_specialS =
         "\10\uffff}>";
-    static final String[] DFA17_transitionS = {
+    static final String[] DFA16_transitionS = {
             "\1\1",
             "\1\3\4\uffff\12\4",
             "",
             "\12\4",
-            "\1\6\2\uffff\1\7\3\uffff\12\5",
-            "\1\6\2\uffff\1\7\3\uffff\12\5",
+            "\1\7\2\uffff\1\6\3\uffff\12\5",
+            "\1\7\2\uffff\1\6\3\uffff\12\5",
             "",
             ""
     };
 
-    static final short[] DFA17_eot = DFA.unpackEncodedString(DFA17_eotS);
-    static final short[] DFA17_eof = DFA.unpackEncodedString(DFA17_eofS);
-    static final char[] DFA17_min = DFA.unpackEncodedStringToUnsignedChars(DFA17_minS);
-    static final char[] DFA17_max = DFA.unpackEncodedStringToUnsignedChars(DFA17_maxS);
-    static final short[] DFA17_accept = DFA.unpackEncodedString(DFA17_acceptS);
-    static final short[] DFA17_special = DFA.unpackEncodedString(DFA17_specialS);
-    static final short[][] DFA17_transition;
+    static final short[] DFA16_eot = DFA.unpackEncodedString(DFA16_eotS);
+    static final short[] DFA16_eof = DFA.unpackEncodedString(DFA16_eofS);
+    static final char[] DFA16_min = DFA.unpackEncodedStringToUnsignedChars(DFA16_minS);
+    static final char[] DFA16_max = DFA.unpackEncodedStringToUnsignedChars(DFA16_maxS);
+    static final short[] DFA16_accept = DFA.unpackEncodedString(DFA16_acceptS);
+    static final short[] DFA16_special = DFA.unpackEncodedString(DFA16_specialS);
+    static final short[][] DFA16_transition;
 
     static {
-        int numStates = DFA17_transitionS.length;
-        DFA17_transition = new short[numStates][];
+        int numStates = DFA16_transitionS.length;
+        DFA16_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA17_transition[i] = DFA.unpackEncodedString(DFA17_transitionS[i]);
+            DFA16_transition[i] = DFA.unpackEncodedString(DFA16_transitionS[i]);
         }
     }
 
-    class DFA17 extends DFA {
+    class DFA16 extends DFA {
 
-        public DFA17(BaseRecognizer recognizer) {
+        public DFA16(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 17;
-            this.eot = DFA17_eot;
-            this.eof = DFA17_eof;
-            this.min = DFA17_min;
-            this.max = DFA17_max;
-            this.accept = DFA17_accept;
-            this.special = DFA17_special;
-            this.transition = DFA17_transition;
+            this.decisionNumber = 16;
+            this.eot = DFA16_eot;
+            this.eof = DFA16_eof;
+            this.min = DFA16_min;
+            this.max = DFA16_max;
+            this.accept = DFA16_accept;
+            this.special = DFA16_special;
+            this.transition = DFA16_transition;
         }
         public String getDescription() {
-            return "165:3: ( ( '(' ( '+' )? DIGITS ')' ) | ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' ) )?";
+            return "169:3: ( ( '(' ( '+' )? DIGITS ')' ) | ( '(' ( '+' )? DIGITS ',' ( '+' | '-' )? DIGITS ')' ) )?";
         }
     }
-    static final String DFA22_eotS =
+    static final String DFA21_eotS =
         "\12\uffff\1\13\2\uffff";
-    static final String DFA22_eofS =
+    static final String DFA21_eofS =
         "\15\uffff";
-    static final String DFA22_minS =
+    static final String DFA21_minS =
         "\1\116\1\101\1\103\1\122\2\uffff\1\103\1\110\1\101\1\122\1\62\2"+
         "\uffff";
-    static final String DFA22_maxS =
+    static final String DFA21_maxS =
         "\1\166\1\141\1\166\1\162\2\uffff\1\143\1\150\1\141\1\162\1\62\2"+
         "\uffff";
-    static final String DFA22_acceptS =
+    static final String DFA21_acceptS =
         "\4\uffff\1\4\1\3\5\uffff\1\1\1\2";
-    static final String DFA22_specialS =
+    static final String DFA21_specialS =
         "\15\uffff}>";
-    static final String[] DFA22_transitionS = {
+    static final String[] DFA21_transitionS = {
             "\1\2\7\uffff\1\1\27\uffff\1\2\7\uffff\1\1",
             "\1\3\37\uffff\1\3",
             "\1\5\22\uffff\1\4\14\uffff\1\5\22\uffff\1\4",
@@ -8610,60 +9391,59 @@ public class PL_SQLLexer extends Lexer {
             ""
     };
 
-    static final short[] DFA22_eot = DFA.unpackEncodedString(DFA22_eotS);
-    static final short[] DFA22_eof = DFA.unpackEncodedString(DFA22_eofS);
-    static final char[] DFA22_min = DFA.unpackEncodedStringToUnsignedChars(DFA22_minS);
-    static final char[] DFA22_max = DFA.unpackEncodedStringToUnsignedChars(DFA22_maxS);
-    static final short[] DFA22_accept = DFA.unpackEncodedString(DFA22_acceptS);
-    static final short[] DFA22_special = DFA.unpackEncodedString(DFA22_specialS);
-    static final short[][] DFA22_transition;
+    static final short[] DFA21_eot = DFA.unpackEncodedString(DFA21_eotS);
+    static final short[] DFA21_eof = DFA.unpackEncodedString(DFA21_eofS);
+    static final char[] DFA21_min = DFA.unpackEncodedStringToUnsignedChars(DFA21_minS);
+    static final char[] DFA21_max = DFA.unpackEncodedStringToUnsignedChars(DFA21_maxS);
+    static final short[] DFA21_accept = DFA.unpackEncodedString(DFA21_acceptS);
+    static final short[] DFA21_special = DFA.unpackEncodedString(DFA21_specialS);
+    static final short[][] DFA21_transition;
 
     static {
-        int numStates = DFA22_transitionS.length;
-        DFA22_transition = new short[numStates][];
+        int numStates = DFA21_transitionS.length;
+        DFA21_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA22_transition[i] = DFA.unpackEncodedString(DFA22_transitionS[i]);
+            DFA21_transition[i] = DFA.unpackEncodedString(DFA21_transitionS[i]);
         }
     }
 
-    class DFA22 extends DFA {
+    class DFA21 extends DFA {
 
-        public DFA22(BaseRecognizer recognizer) {
+        public DFA21(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 22;
-            this.eot = DFA22_eot;
-            this.eof = DFA22_eof;
-            this.min = DFA22_min;
-            this.max = DFA22_max;
-            this.accept = DFA22_accept;
-            this.special = DFA22_special;
-            this.transition = DFA22_transition;
+            this.decisionNumber = 21;
+            this.eot = DFA21_eot;
+            this.eof = DFA21_eof;
+            this.min = DFA21_min;
+            this.max = DFA21_max;
+            this.accept = DFA21_accept;
+            this.special = DFA21_special;
+            this.transition = DFA21_transition;
         }
         public String getDescription() {
-            return "174:1: CHAR_TYPES : ( V A R C H A R | V A R C H A R '2' | N C H A R | N V A R C H A R '2' );";
+            return "178:1: CHAR_TYPES : ( V A R C H A R | V A R C H A R '2' | N C H A R | N V A R C H A R '2' );";
         }
     }
-    static final String DFA38_eotS =
+    static final String DFA37_eotS =
         "\35\uffff\1\40\5\uffff\1\45\10\uffff";
-    static final String DFA38_eofS =
+    static final String DFA37_eofS =
         "\54\uffff";
-    static final String DFA38_minS =
+    static final String DFA37_minS =
         "\1\56\6\uffff\2\117\1\116\1\uffff\1\111\1\114\1\uffff\1\116\2\uffff"+
-        "\1\111\1\uffff\1\114\2\uffff\1\116\1\117\1\124\1\105\1\116\1\111"+
-        "\1\103\1\11\1\123\1\124\2\uffff\1\105\1\137\1\124\2\uffff\2\11\3"+
-        "\uffff";
-    static final String DFA38_maxS =
+        "\1\111\1\114\3\uffff\1\116\1\117\1\124\1\105\1\116\1\111\1\103\1"+
+        "\11\1\123\1\124\2\uffff\1\105\1\137\1\124\2\uffff\2\11\3\uffff";
+    static final String DFA37_maxS =
         "\1\167\6\uffff\1\157\1\164\1\156\1\uffff\1\165\1\156\1\uffff\1"+
-        "\156\2\uffff\1\151\1\uffff\1\154\2\uffff\1\156\1\157\1\164\1\145"+
-        "\1\156\1\151\1\143\1\40\1\163\1\164\2\uffff\1\145\1\137\1\164\2"+
-        "\uffff\1\40\1\165\3\uffff";
-    static final String DFA38_acceptS =
+        "\156\2\uffff\1\151\1\154\3\uffff\1\156\1\157\1\164\1\145\1\156\1"+
+        "\151\1\143\1\40\1\163\1\164\2\uffff\1\145\1\137\1\164\2\uffff\1"+
+        "\40\1\165\3\uffff";
+    static final String DFA37_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\3\uffff\1\14\2\uffff\1\24\1\uffff"+
-        "\1\22\1\11\1\uffff\1\15\1\uffff\1\23\1\21\12\uffff\1\12\1\13\3\uffff"+
-        "\1\10\1\7\2\uffff\1\20\1\16\1\17";
-    static final String DFA38_specialS =
+        "\1\22\1\11\2\uffff\1\15\1\23\1\21\12\uffff\1\12\1\13\3\uffff\1\10"+
+        "\1\7\2\uffff\1\16\1\17\1\20";
+    static final String DFA37_specialS =
         "\54\uffff}>";
-    static final String[] DFA38_transitionS = {
+    static final String[] DFA37_transitionS = {
             "\1\1\22\uffff\1\14\1\uffff\1\7\1\uffff\1\15\1\2\1\4\1\uffff"+
             "\1\12\3\uffff\1\13\1\uffff\1\5\1\6\2\uffff\1\10\1\uffff\1\11"+
             "\1\uffff\1\3\11\uffff\1\14\1\uffff\1\7\1\uffff\1\15\1\2\1\4"+
@@ -8679,15 +9459,15 @@ public class PL_SQLLexer extends Lexer {
             "\1\17\4\uffff\1\20\32\uffff\1\17\4\uffff\1\20",
             "\1\21\37\uffff\1\21",
             "",
-            "\1\22\13\uffff\1\23\23\uffff\1\22\13\uffff\1\23",
+            "\1\23\13\uffff\1\22\23\uffff\1\23\13\uffff\1\22",
             "\1\24\1\uffff\1\25\35\uffff\1\24\1\uffff\1\25",
             "",
             "\1\26\37\uffff\1\26",
             "",
             "",
             "\1\27\37\uffff\1\27",
-            "",
             "\1\30\37\uffff\1\30",
+            "",
             "",
             "",
             "\1\31\37\uffff\1\31",
@@ -8708,621 +9488,2771 @@ public class PL_SQLLexer extends Lexer {
             "",
             "",
             "\2\50\2\uffff\1\50\22\uffff\1\50",
-            "\2\50\2\uffff\1\50\22\uffff\1\50\44\uffff\1\52\3\uffff\1\53"+
-            "\13\uffff\1\51\17\uffff\1\52\3\uffff\1\53\13\uffff\1\51",
+            "\2\50\2\uffff\1\50\22\uffff\1\50\44\uffff\1\51\3\uffff\1\52"+
+            "\13\uffff\1\53\17\uffff\1\51\3\uffff\1\52\13\uffff\1\53",
             "",
             "",
             ""
     };
 
-    static final short[] DFA38_eot = DFA.unpackEncodedString(DFA38_eotS);
-    static final short[] DFA38_eof = DFA.unpackEncodedString(DFA38_eofS);
-    static final char[] DFA38_min = DFA.unpackEncodedStringToUnsignedChars(DFA38_minS);
-    static final char[] DFA38_max = DFA.unpackEncodedStringToUnsignedChars(DFA38_maxS);
-    static final short[] DFA38_accept = DFA.unpackEncodedString(DFA38_acceptS);
-    static final short[] DFA38_special = DFA.unpackEncodedString(DFA38_specialS);
-    static final short[][] DFA38_transition;
+    static final short[] DFA37_eot = DFA.unpackEncodedString(DFA37_eotS);
+    static final short[] DFA37_eof = DFA.unpackEncodedString(DFA37_eofS);
+    static final char[] DFA37_min = DFA.unpackEncodedStringToUnsignedChars(DFA37_minS);
+    static final char[] DFA37_max = DFA.unpackEncodedStringToUnsignedChars(DFA37_maxS);
+    static final short[] DFA37_accept = DFA.unpackEncodedString(DFA37_acceptS);
+    static final short[] DFA37_special = DFA.unpackEncodedString(DFA37_specialS);
+    static final short[][] DFA37_transition;
 
     static {
-        int numStates = DFA38_transitionS.length;
-        DFA38_transition = new short[numStates][];
+        int numStates = DFA37_transitionS.length;
+        DFA37_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA38_transition[i] = DFA.unpackEncodedString(DFA38_transitionS[i]);
+            DFA37_transition[i] = DFA.unpackEncodedString(DFA37_transitionS[i]);
         }
     }
 
-    class DFA38 extends DFA {
+    class DFA37 extends DFA {
 
-        public DFA38(BaseRecognizer recognizer) {
+        public DFA37(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 38;
-            this.eot = DFA38_eot;
-            this.eof = DFA38_eof;
-            this.min = DFA38_min;
-            this.max = DFA38_max;
-            this.accept = DFA38_accept;
-            this.special = DFA38_special;
-            this.transition = DFA38_transition;
+            this.decisionNumber = 37;
+            this.eot = DFA37_eot;
+            this.eof = DFA37_eof;
+            this.min = DFA37_min;
+            this.max = DFA37_max;
+            this.accept = DFA37_accept;
+            this.special = DFA37_special;
+            this.transition = DFA37_transition;
         }
         public String getDescription() {
-            return "205:1: KEYWORD : ( '.' | F R O M | W H E R E | G R O U P ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y | O R D E R ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y | P R I O R | C O N N E C T '_' B Y '_' R O O T | C O N N E C T | S T A R T | U N I O N | U N I O N ( ' ' | '\\t' | '\\n' | '\\r' )+ A L L | I N T E R S E C T | M I N U S | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ E X C E P T | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ I N T E R S E C T | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ U N I O N | A N Y | S O M E | A L L | E S C A P E );";
+            return "209:1: KEYWORD : ( '.' | F R O M | W H E R E | G R O U P ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y | O R D E R ( ' ' | '\\t' | '\\n' | '\\r' )+ B Y | P R I O R | C O N N E C T '_' B Y '_' R O O T | C O N N E C T | S T A R T | U N I O N | U N I O N ( ' ' | '\\t' | '\\n' | '\\r' )+ A L L | I N T E R S E C T | M I N U S | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ E X C E P T | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ I N T E R S E C T | M U L T I S E T ( ' ' | '\\t' | '\\n' | '\\r' )+ U N I O N | A N Y | S O M E | A L L | E S C A P E );";
         }
     }
-    static final String DFA49_eotS =
-        "\1\uffff\2\54\1\uffff\1\52\2\uffff\1\52\2\uffff\3\52\1\uffff\1"+
-        "\60\2\uffff\3\52\1\uffff\25\52\7\uffff\1\u0086\34\uffff\1\u009b"+
-        "\1\u00a0\4\uffff\1\u00a6\67\uffff\1\u00d8\17\uffff\1\101\17\uffff"+
-        "\1\u00ec\2\uffff\1\u00ee\12\uffff\1\u008b\12\uffff\1\u00f9\13\uffff"+
-        "\1\u0102\14\uffff\1\u010a\36\uffff\1\u0114\11\uffff\1\u011c\26\uffff"+
-        "\1\u0123\1\u0125\11\uffff\1\u012a\3\uffff";
-    static final String DFA49_eofS =
-        "\u012d\uffff";
-    static final String DFA49_minS =
-        "\1\0\1\52\1\55\1\uffff\1\75\2\uffff\1\174\2\uffff\3\75\1\uffff"+
-        "\1\56\2\uffff\1\102\1\106\1\101\1\uffff\1\0\2\101\1\106\1\105\1"+
-        "\101\1\111\1\116\6\101\1\105\1\110\1\117\1\101\1\106\2\117\7\uffff"+
-        "\1\104\10\uffff\1\104\1\uffff\1\124\2\uffff\1\114\1\103\1\uffff"+
-        "\1\110\1\123\2\uffff\1\103\1\uffff\1\101\1\103\1\126\1\114\1\101"+
-        "\1\uffff\1\104\1\11\2\uffff\1\104\1\106\1\124\1\uffff\1\101\1\114"+
-        "\1\111\1\103\1\113\1\104\2\uffff\1\115\2\uffff\1\103\2\uffff\1\124"+
-        "\1\114\1\122\1\117\3\uffff\1\114\4\uffff\1\114\1\uffff\1\101\2\uffff"+
-        "\1\115\2\uffff\1\105\2\uffff\1\103\1\101\1\123\5\uffff\1\117\3\uffff"+
-        "\1\105\1\uffff\1\110\2\uffff\1\11\3\uffff\1\101\5\uffff\1\105\1"+
-        "\uffff\1\105\1\103\1\122\1\uffff\3\105\2\uffff\1\11\6\uffff\1\124"+
-        "\1\uffff\1\125\1\uffff\1\105\2\uffff\1\111\2\uffff\1\101\7\uffff"+
-        "\1\114\1\uffff\1\101\4\uffff\1\116\1\122\1\102\1\uffff\1\101\1\103"+
-        "\4\uffff\1\105\1\116\1\uffff\1\105\1\uffff\1\123\1\40\1\uffff\1"+
-        "\105\1\127\1\122\3\uffff\1\11\4\uffff\1\120\4\uffff\1\107\2\uffff"+
-        "\1\101\1\uffff\1\117\1\uffff\1\114\1\122\10\uffff\1\124\10\uffff"+
-        "\1\123\1\uffff\1\120\3\uffff\1\40\2\uffff\1\103\1\11\4\uffff\1\123"+
-        "\4\uffff\1\124\1\116\1\101\2\uffff\1\124\7\uffff\1\137\1\111\2\uffff"+
-        "\1\111\4\uffff\1\117\1\116\1\123\3\uffff";
-    static final String DFA49_maxS =
-        "\1\uffff\1\52\1\55\1\uffff\1\75\2\uffff\1\174\2\uffff\3\75\1\uffff"+
-        "\1\71\2\uffff\1\166\1\165\1\166\1\uffff\1\uffff\1\162\1\165\1\163"+
-        "\1\171\2\157\1\163\1\165\1\157\2\165\1\141\1\171\1\145\1\151\1\162"+
-        "\1\170\1\164\2\157\7\uffff\1\144\10\uffff\1\171\1\uffff\1\164\2"+
-        "\uffff\1\155\1\164\1\uffff\1\154\1\167\2\uffff\1\162\1\uffff\1\157"+
-        "\1\164\1\166\1\154\1\141\1\uffff\1\164\1\40\2\uffff\1\157\2\164"+
-        "\1\uffff\1\166\2\167\1\157\1\155\1\151\2\uffff\1\162\2\uffff\1\164"+
-        "\2\uffff\1\171\1\165\1\162\1\157\3\uffff\1\162\4\uffff\1\162\1\uffff"+
-        "\1\165\2\uffff\1\155\2\uffff\1\151\2\uffff\1\151\1\144\1\163\5\uffff"+
-        "\1\157\3\uffff\1\145\1\uffff\1\157\2\uffff\1\40\3\uffff\1\145\5"+
-        "\uffff\1\146\1\uffff\2\145\1\164\1\uffff\1\157\1\151\1\164\2\uffff"+
-        "\1\156\6\uffff\1\165\1\uffff\1\165\1\uffff\1\145\2\uffff\1\151\2"+
-        "\uffff\1\153\7\uffff\1\154\1\uffff\1\151\4\uffff\1\164\2\163\1\uffff"+
-        "\1\141\1\171\4\uffff\1\145\1\162\1\uffff\1\145\1\uffff\1\164\1\40"+
-        "\1\uffff\1\151\1\167\1\162\3\uffff\1\156\4\uffff\1\160\4\uffff\1"+
-        "\162\2\uffff\1\145\1\uffff\1\165\1\uffff\1\154\1\162\10\uffff\1"+
-        "\164\10\uffff\1\163\1\uffff\1\160\3\uffff\1\154\2\uffff\1\164\1"+
-        "\40\4\uffff\1\166\4\uffff\1\164\1\156\1\162\2\uffff\1\164\7\uffff"+
-        "\1\137\1\151\2\uffff\1\151\4\uffff\1\157\1\156\1\163\3\uffff";
-    static final String DFA49_acceptS =
-        "\3\uffff\1\3\1\uffff\2\4\1\uffff\2\4\3\uffff\1\4\1\uffff\2\4\3"+
-        "\uffff\1\10\25\uffff\1\u00a4\1\1\1\4\1\2\1\3\1\10\1\25\1\uffff\1"+
-        "\127\1\165\1\u008e\1\u0097\1\u008b\1\u009b\1\u0096\1\65\1\uffff"+
-        "\1\u0089\1\uffff\1\62\1\134\2\uffff\1\12\2\uffff\1\15\1\11\1\uffff"+
-        "\1\74\5\uffff\1\54\2\uffff\1\77\1\143\3\uffff\1\147\6\uffff\1\146"+
-        "\1\u0085\1\uffff\1\u00a1\1\53\1\uffff\1\u0095\1\14\4\uffff\1\57"+
-        "\1\123\1\16\1\uffff\1\151\1\u0099\1\43\1\61\1\uffff\1\41\1\uffff"+
-        "\1\33\1\52\1\uffff\1\126\1\22\1\uffff\1\45\1\106\3\uffff\1\u0091"+
-        "\1\u0081\1\177\1\40\1\u0080\1\uffff\1\50\1\u00a3\1\5\1\uffff\1\6"+
-        "\1\uffff\1\35\1\13\1\uffff\1\66\1\u008f\1\u008c\1\uffff\1\166\1"+
-        "\76\1\121\1\175\1\24\1\uffff\1\174\3\uffff\1\64\3\uffff\1\161\1"+
-        "\55\1\uffff\1\167\1\u0088\1\160\1\26\1\131\1\17\1\uffff\1\60\1\uffff"+
-        "\1\56\1\uffff\1\113\1\172\1\uffff\1\120\1\20\1\uffff\1\107\1\152"+
-        "\1\117\1\u0098\1\u009c\1\164\1\141\1\uffff\1\72\1\uffff\1\23\1\135"+
-        "\1\150\1\115\3\uffff\1\u0093\2\uffff\1\157\1\176\1\u0087\1\42\2"+
-        "\uffff\1\111\1\uffff\1\142\2\uffff\1\u0094\3\uffff\1\122\1\67\1"+
-        "\7\1\uffff\1\u0090\1\73\1\u009f\1\114\1\uffff\1\u0084\1\u0083\1"+
-        "\u009d\1\145\1\uffff\1\130\1\156\1\uffff\1\162\1\uffff\1\170\2\uffff"+
-        "\1\136\1\u008d\1\u0092\1\163\1\46\1\30\1\36\1\71\1\uffff\1\137\1"+
-        "\140\1\70\1\125\1\112\1\153\1\133\1\132\1\uffff\1\32\1\uffff\1\u0086"+
-        "\1\144\1\27\1\uffff\1\101\1\100\2\uffff\1\34\1\105\1\154\1\173\1"+
-        "\uffff\1\u009a\1\u008a\1\104\1\103\3\uffff\1\47\1\21\1\uffff\1\102"+
-        "\1\110\1\124\1\u0082\1\37\1\u00a2\1\51\2\uffff\1\44\1\u009e\1\uffff"+
-        "\1\u00a0\1\75\1\63\1\171\3\uffff\1\31\1\155\1\116";
-    static final String DFA49_specialS =
-        "\1\1\24\uffff\1\0\u0117\uffff}>";
-    static final String[] DFA49_transitionS = {
-            "\11\52\2\3\2\52\1\3\22\52\1\3\1\12\3\52\1\47\1\52\1\25\1\17"+
-            "\1\20\1\6\1\5\1\52\1\2\1\16\1\1\12\24\1\4\1\52\1\11\1\10\1\15"+
-            "\2\52\1\22\1\31\1\37\1\36\1\46\1\40\1\45\1\52\1\30\1\51\1\52"+
-            "\1\33\1\35\1\23\1\21\1\26\1\52\1\32\1\27\1\42\1\34\1\41\1\44"+
-            "\1\52\1\43\1\50\3\52\1\14\2\52\1\22\1\31\1\37\1\36\1\46\1\40"+
-            "\1\45\1\52\1\30\1\51\1\52\1\33\1\35\1\23\1\21\1\26\1\52\1\32"+
-            "\1\27\1\42\1\34\1\41\1\44\1\52\1\43\1\50\1\52\1\7\1\52\1\13"+
-            "\uff81\52",
-            "\1\53",
-            "\1\55",
-            "",
-            "\1\54",
-            "",
-            "",
-            "\1\54",
-            "",
-            "",
-            "\1\54",
-            "\1\54",
-            "\1\54",
-            "",
-            "\1\54\1\uffff\12\57",
-            "",
-            "",
-            "\1\65\3\uffff\1\62\2\uffff\1\70\2\uffff\1\64\1\uffff\1\66"+
-            "\1\uffff\1\63\1\uffff\1\61\2\uffff\1\71\1\67\13\uffff\1\65\3"+
-            "\uffff\1\62\2\uffff\1\70\2\uffff\1\64\1\uffff\1\66\1\uffff\1"+
-            "\63\1\uffff\1\61\2\uffff\1\71\1\67",
-            "\1\73\5\uffff\1\60\1\uffff\1\72\3\uffff\1\76\1\75\1\uffff"+
-            "\1\74\20\uffff\1\73\5\uffff\1\60\1\uffff\1\72\3\uffff\1\76\1"+
-            "\75\1\uffff\1\74",
-            "\1\101\1\uffff\1\102\1\uffff\1\103\11\uffff\1\100\5\uffff"+
-            "\1\77\1\104\12\uffff\1\101\1\uffff\1\102\1\uffff\1\103\11\uffff"+
-            "\1\100\5\uffff\1\77\1\104",
-            "",
-            "\0\105",
-            "\1\106\7\uffff\1\107\2\uffff\1\101\2\uffff\1\101\2\uffff\1"+
-            "\110\16\uffff\1\106\7\uffff\1\107\2\uffff\1\101\2\uffff\1\101"+
-            "\2\uffff\1\110",
-            "\1\112\3\uffff\1\111\3\uffff\1\101\3\uffff\1\101\1\uffff\1"+
-            "\60\1\uffff\1\113\2\uffff\1\114\1\115\13\uffff\1\112\3\uffff"+
-            "\1\111\3\uffff\1\101\3\uffff\1\101\1\uffff\1\60\1\uffff\1\113"+
-            "\2\uffff\1\114\1\115",
-            "\1\120\6\uffff\1\121\1\116\4\uffff\1\117\22\uffff\1\120\6"+
-            "\uffff\1\121\1\116\4\uffff\1\117",
-            "\1\123\1\101\2\uffff\1\101\2\uffff\1\101\2\uffff\1\122\5\uffff"+
-            "\1\125\3\uffff\1\124\13\uffff\1\123\1\101\2\uffff\1\101\2\uffff"+
-            "\1\101\2\uffff\1\122\5\uffff\1\125\3\uffff\1\124",
-            "\1\130\3\uffff\1\126\11\uffff\1\127\21\uffff\1\130\3\uffff"+
-            "\1\126\11\uffff\1\127",
-            "\1\132\5\uffff\1\131\31\uffff\1\132\5\uffff\1\131",
-            "\1\133\1\uffff\1\135\1\uffff\1\101\1\134\32\uffff\1\133\1"+
-            "\uffff\1\135\1\uffff\1\101\1\134",
-            "\1\137\3\uffff\1\136\3\uffff\1\60\2\uffff\1\101\2\uffff\1"+
-            "\140\5\uffff\1\60\13\uffff\1\137\3\uffff\1\136\3\uffff\1\60"+
-            "\2\uffff\1\101\2\uffff\1\140\5\uffff\1\60",
-            "\1\144\3\uffff\1\141\3\uffff\1\142\5\uffff\1\143\21\uffff"+
-            "\1\144\3\uffff\1\141\3\uffff\1\142\5\uffff\1\143",
-            "\1\151\6\uffff\1\152\3\uffff\1\147\2\uffff\1\145\2\uffff\1"+
-            "\150\2\uffff\1\146\13\uffff\1\151\6\uffff\1\152\3\uffff\1\147"+
-            "\2\uffff\1\145\2\uffff\1\150\2\uffff\1\146",
-            "\1\156\3\uffff\1\154\3\uffff\1\155\2\uffff\1\143\2\uffff\1"+
-            "\153\2\uffff\1\60\2\uffff\1\157\13\uffff\1\156\3\uffff\1\154"+
-            "\3\uffff\1\155\2\uffff\1\143\2\uffff\1\153\2\uffff\1\60\2\uffff"+
-            "\1\157",
-            "\1\160\37\uffff\1\160",
-            "\1\166\6\uffff\1\163\1\165\5\uffff\1\164\2\uffff\1\162\6\uffff"+
-            "\1\161\7\uffff\1\166\6\uffff\1\163\1\165\5\uffff\1\164\2\uffff"+
-            "\1\162\6\uffff\1\161",
-            "\1\167\37\uffff\1\167",
-            "\1\170\1\171\36\uffff\1\170\1\171",
-            "\1\172\2\uffff\1\60\34\uffff\1\172\2\uffff\1\60",
-            "\1\176\12\uffff\1\175\1\uffff\1\174\4\uffff\1\60\4\uffff\1"+
-            "\173\10\uffff\1\176\12\uffff\1\175\1\uffff\1\174\4\uffff\1\60"+
-            "\4\uffff\1\173",
-            "\1\u0082\2\uffff\1\177\4\uffff\1\u0080\3\uffff\1\u0083\1\uffff"+
-            "\1\u0081\21\uffff\1\u0082\2\uffff\1\177\4\uffff\1\u0080\3\uffff"+
-            "\1\u0083\1\uffff\1\u0081",
-            "\1\u0084\37\uffff\1\u0084",
-            "\1\u0085\37\uffff\1\u0085",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u0087\37\uffff\1\u0087",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u0088\24\uffff\1\60\12\uffff\1\u0088\24\uffff\1\60",
-            "",
-            "\1\u0089\37\uffff\1\u0089",
-            "",
-            "",
-            "\1\u008a\1\u008b\36\uffff\1\u008a\1\u008b",
-            "\1\u008d\20\uffff\1\u008c\16\uffff\1\u008d\20\uffff\1\u008c",
-            "",
-            "\1\104\3\uffff\1\101\33\uffff\1\104\3\uffff\1\101",
-            "\1\u008f\3\uffff\1\u008e\33\uffff\1\u008f\3\uffff\1\u008e",
-            "",
-            "",
-            "\1\u0091\16\uffff\1\u0090\20\uffff\1\u0091\16\uffff\1\u0090",
-            "",
-            "\1\u0093\7\uffff\1\60\5\uffff\1\u0092\21\uffff\1\u0093\7\uffff"+
-            "\1\60\5\uffff\1\u0092",
-            "\1\u0095\10\uffff\1\u0096\5\uffff\1\u0097\1\uffff\1\u0094"+
-            "\16\uffff\1\u0095\10\uffff\1\u0096\5\uffff\1\u0097\1\uffff\1"+
-            "\u0094",
-            "\1\u0098\37\uffff\1\u0098",
-            "\1\u0099\37\uffff\1\u0099",
-            "\1\u009a\37\uffff\1\u009a",
-            "",
-            "\1\u009d\7\uffff\1\u009f\6\uffff\1\u009e\1\u009c\17\uffff"+
-            "\1\u009d\7\uffff\1\u009f\6\uffff\1\u009e\1\u009c",
-            "\2\u00a1\2\uffff\1\u00a1\22\uffff\1\u00a1",
-            "",
-            "",
-            "\1\u00a2\12\uffff\1\101\24\uffff\1\u00a2\12\uffff\1\101",
-            "\1\u00a3\1\u00a5\14\uffff\1\u00a4\21\uffff\1\u00a3\1\u00a5"+
-            "\14\uffff\1\u00a4",
-            "\1\u00a7\37\uffff\1\u00a7",
-            "",
-            "\1\101\1\uffff\1\u00ab\2\uffff\1\u00ac\11\uffff\1\u00a9\2"+
-            "\uffff\1\u00a8\1\u00aa\1\uffff\1\u00ad\12\uffff\1\101\1\uffff"+
-            "\1\u00ab\2\uffff\1\u00ac\11\uffff\1\u00a9\2\uffff\1\u00a8\1"+
-            "\u00aa\1\uffff\1\u00ad",
-            "\1\u00ae\12\uffff\1\u00af\24\uffff\1\u00ae\12\uffff\1\u00af",
-            "\1\u00b0\15\uffff\1\u00b1\21\uffff\1\u00b0\15\uffff\1\u00b1",
-            "\1\u00b2\12\uffff\1\101\1\u00b3\23\uffff\1\u00b2\12\uffff"+
-            "\1\101\1\u00b3",
-            "\1\u00b5\1\uffff\1\u00b4\35\uffff\1\u00b5\1\uffff\1\u00b4",
-            "\1\u00b6\4\uffff\1\60\32\uffff\1\u00b6\4\uffff\1\60",
-            "",
-            "",
-            "\1\u00b7\4\uffff\1\u00b8\32\uffff\1\u00b7\4\uffff\1\u00b8",
-            "",
-            "",
-            "\1\u00ba\2\uffff\1\u00bc\5\uffff\1\u00b9\7\uffff\1\u00bb\16"+
-            "\uffff\1\u00ba\2\uffff\1\u00bc\5\uffff\1\u00b9\7\uffff\1\u00bb",
-            "",
-            "",
-            "\1\101\4\uffff\1\u00bd\32\uffff\1\101\4\uffff\1\u00bd",
-            "\1\u00bf\1\u00be\1\u00c1\6\uffff\1\u00c0\26\uffff\1\u00bf"+
-            "\1\u00be\1\u00c1\6\uffff\1\u00c0",
-            "\1\u00c2\37\uffff\1\u00c2",
-            "\1\u00c3\37\uffff\1\u00c3",
-            "",
-            "",
-            "",
-            "\1\u00c4\5\uffff\1\u00c5\31\uffff\1\u00c4\5\uffff\1\u00c5",
-            "",
-            "",
-            "",
-            "",
-            "\1\u00c7\5\uffff\1\u00c6\31\uffff\1\u00c7\5\uffff\1\u00c6",
-            "",
-            "\1\u00c8\7\uffff\1\u00c9\13\uffff\1\u00ca\13\uffff\1\u00c8"+
-            "\7\uffff\1\u00c9\13\uffff\1\u00ca",
-            "",
-            "",
-            "\1\u00cb\37\uffff\1\u00cb",
-            "",
-            "",
-            "\1\u00cc\3\uffff\1\u00cd\33\uffff\1\u00cc\3\uffff\1\u00cd",
-            "",
-            "",
-            "\1\u00ce\1\uffff\1\u00cf\3\uffff\1\u00d0\31\uffff\1\u00ce"+
-            "\1\uffff\1\u00cf\3\uffff\1\u00d0",
-            "\1\u00d2\2\uffff\1\u00d1\34\uffff\1\u00d2\2\uffff\1\u00d1",
-            "\1\u00d3\37\uffff\1\u00d3",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u00d4\37\uffff\1\u00d4",
-            "",
-            "",
-            "",
-            "\1\u00d5\37\uffff\1\u00d5",
-            "",
-            "\1\u00d7\6\uffff\1\u00d6\30\uffff\1\u00d7\6\uffff\1\u00d6",
-            "",
-            "",
-            "\2\u00d9\2\uffff\1\u00d9\22\uffff\1\u00d9",
-            "",
-            "",
-            "",
-            "\1\u00db\3\uffff\1\u00da\33\uffff\1\u00db\3\uffff\1\u00da",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u00dd\1\u00dc\36\uffff\1\u00dd\1\u00dc",
-            "",
-            "\1\u00de\37\uffff\1\u00de",
-            "\1\u00e0\1\uffff\1\u00df\35\uffff\1\u00e0\1\uffff\1\u00df",
-            "\1\60\1\uffff\1\u00e1\35\uffff\1\60\1\uffff\1\u00e1",
-            "",
-            "\1\u00e3\11\uffff\1\u00e2\25\uffff\1\u00e3\11\uffff\1\u00e2",
-            "\1\u00e4\3\uffff\1\u00e5\33\uffff\1\u00e4\3\uffff\1\u00e5",
-            "\1\u00e7\16\uffff\1\u00e6\20\uffff\1\u00e7\16\uffff\1\u00e6",
-            "",
-            "",
-            "\2\u00a1\2\uffff\1\u00a1\22\uffff\1\u00a1\55\uffff\1\u00e8"+
-            "\37\uffff\1\u00e8",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u00e9\1\u00ea\36\uffff\1\u00e9\1\u00ea",
-            "",
-            "\1\u00eb\37\uffff\1\u00eb",
-            "",
-            "\1\u00ed\37\uffff\1\u00ed",
-            "",
-            "",
-            "\1\101\37\uffff\1\101",
-            "",
-            "",
-            "\1\u00f0\11\uffff\1\u00ef\25\uffff\1\u00f0\11\uffff\1\u00ef",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u00f1\37\uffff\1\u00f1",
-            "",
-            "\1\u00f2\7\uffff\1\u00f3\27\uffff\1\u00f2\7\uffff\1\u00f3",
-            "",
-            "",
-            "",
-            "",
-            "\1\60\4\uffff\1\u00f4\1\u00f5\31\uffff\1\60\4\uffff\1\u00f4"+
-            "\1\u00f5",
-            "\1\u00f7\1\u00f6\36\uffff\1\u00f7\1\u00f6",
-            "\1\101\20\uffff\1\u00f8\16\uffff\1\101\20\uffff\1\u00f8",
-            "",
-            "\1\u00fa\37\uffff\1\u00fa",
-            "\1\104\16\uffff\1\u00fc\6\uffff\1\u00fb\11\uffff\1\104\16"+
-            "\uffff\1\u00fc\6\uffff\1\u00fb",
-            "",
-            "",
-            "",
-            "",
-            "\1\u00fd\37\uffff\1\u00fd",
-            "\1\u00fe\3\uffff\1\60\33\uffff\1\u00fe\3\uffff\1\60",
-            "",
-            "\1\u00ff\37\uffff\1\u00ff",
-            "",
-            "\1\u0100\1\u0101\36\uffff\1\u0100\1\u0101",
-            "\1\u0103",
-            "",
-            "\1\u0105\3\uffff\1\u0104\33\uffff\1\u0105\3\uffff\1\u0104",
-            "\1\u0106\37\uffff\1\u0106",
-            "\1\u0107\37\uffff\1\u0107",
-            "",
-            "",
-            "",
-            "\2\u00d9\2\uffff\1\u00d9\22\uffff\1\u00d9\50\uffff\1\u0109"+
-            "\4\uffff\1\u0108\32\uffff\1\u0109\4\uffff\1\u0108",
-            "",
-            "",
-            "",
-            "",
-            "\1\u010b\37\uffff\1\u010b",
-            "",
-            "",
-            "",
-            "",
-            "\1\101\12\uffff\1\u010c\24\uffff\1\101\12\uffff\1\u010c",
-            "",
-            "",
-            "\1\u010d\3\uffff\1\u010e\33\uffff\1\u010d\3\uffff\1\u010e",
-            "",
-            "\1\u010f\5\uffff\1\u0110\31\uffff\1\u010f\5\uffff\1\u0110",
-            "",
-            "\1\u0111\37\uffff\1\u0111",
-            "\1\u0112\37\uffff\1\u0112",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u0113\37\uffff\1\u0113",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u0115\37\uffff\1\u0115",
-            "",
-            "\1\u0116\37\uffff\1\u0116",
-            "",
-            "",
-            "",
-            "\1\u0103\42\uffff\1\u0119\5\uffff\1\u0117\2\uffff\1\u0118"+
-            "\26\uffff\1\u0119\5\uffff\1\u0117\2\uffff\1\u0118",
-            "",
-            "",
-            "\1\u011a\20\uffff\1\u011b\16\uffff\1\u011a\20\uffff\1\u011b",
-            "\2\60\2\uffff\1\60\22\uffff\1\60",
-            "",
-            "",
-            "",
-            "",
-            "\1\60\2\uffff\1\u011d\34\uffff\1\60\2\uffff\1\u011d",
-            "",
-            "",
-            "",
-            "",
-            "\1\u011e\37\uffff\1\u011e",
-            "\1\u011f\37\uffff\1\u011f",
-            "\1\u0120\20\uffff\1\u0121\16\uffff\1\u0120\20\uffff\1\u0121",
-            "",
-            "",
-            "\1\u0122\37\uffff\1\u0122",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u0124",
-            "\1\u0126\37\uffff\1\u0126",
-            "",
-            "",
-            "\1\u0127\37\uffff\1\u0127",
-            "",
-            "",
-            "",
-            "",
-            "\1\u0128\37\uffff\1\u0128",
-            "\1\u0129\37\uffff\1\u0129",
-            "\1\u012b\13\uffff\1\u012c\23\uffff\1\u012b",
-            "",
-            "",
+    static final String DFA57_eotS =
+        "\1\uffff\1\61\1\64\1\66\1\uffff\1\71\1\72\1\uffff\1\76\1\100\1"+
+        "\55\1\uffff\3\55\1\107\1\55\1\uffff\3\114\1\uffff\21\114\1\55\3"+
+        "\114\1\55\41\uffff\4\114\1\u00ba\1\u00bc\1\u00bd\10\114\1\u00c6"+
+        "\23\114\1\u00e5\1\u00ea\1\u00ec\4\114\1\u00f3\47\114\1\u0135\14"+
+        "\114\5\uffff\2\114\3\uffff\1\114\1\u014d\1\u014e\1\u014f\1\uffff"+
+        "\1\114\2\uffff\3\114\2\u0154\1\u0155\2\114\1\uffff\1\u0159\5\114"+
+        "\1\u0161\14\114\1\u016f\12\114\1\uffff\1\u017d\3\114\3\uffff\6\114"+
+        "\1\uffff\12\114\1\u0197\3\114\1\u019c\21\114\1\u01b0\1\u01b1\4\114"+
+        "\1\u01b9\15\114\1\u01cb\14\114\1\uffff\15\114\1\u01ea\2\114\1\uffff"+
+        "\2\114\1\u00b4\2\uffff\1\114\3\uffff\2\114\1\u01f7\1\114\2\uffff"+
+        "\3\114\2\uffff\2\114\1\u0200\3\114\1\uffff\15\114\1\uffff\2\114"+
+        "\1\u0213\1\114\1\u0215\5\114\1\u0154\2\114\1\uffff\1\114\1\u0220"+
+        "\5\114\1\uffff\4\114\1\u017d\1\114\1\u022e\1\114\1\u0230\1\u0231"+
+        "\7\114\1\uffff\1\114\1\u017d\1\uffff\1\114\1\uffff\2\114\1\u023d"+
+        "\1\u017d\1\u023e\1\114\1\u0240\14\114\2\uffff\7\114\1\uffff\1\u017d"+
+        "\1\114\1\u017d\11\114\1\u025e\1\114\1\u0260\2\114\1\uffff\5\114"+
+        "\1\u0154\7\114\1\u026f\1\u0270\1\u0271\1\u0272\1\u0274\1\114\1\u0276"+
+        "\1\114\1\u0278\1\u0279\3\114\1\u027d\2\114\1\u0280\2\uffff\1\114"+
+        "\1\u0285\1\114\1\uffff\1\u0289\1\u028a\1\u00b4\1\112\1\114\1\u0290"+
+        "\1\114\1\uffff\1\u0292\1\u0293\2\114\2\uffff\2\114\1\uffff\4\114"+
+        "\1\u017d\1\u029c\10\114\1\u0154\3\114\1\uffff\1\114\1\uffff\7\114"+
+        "\1\u0154\2\114\1\uffff\1\114\1\u02b4\4\114\2\uffff\3\114\1\u02bc"+
+        "\1\114\1\uffff\1\114\2\uffff\1\u017d\7\114\1\u02c6\1\u017d\1\114"+
+        "\2\uffff\1\u02c8\1\uffff\1\u02c9\1\u02ca\1\u0154\1\u02cb\3\114\1"+
+        "\u0154\1\114\1\u02d0\1\u02d1\11\114\1\u02db\1\114\1\u02dd\6\114"+
+        "\1\uffff\1\114\1\uffff\1\u02e6\3\114\1\u02ea\1\u02eb\1\u02ec\4\114"+
+        "\1\u02f1\2\114\4\uffff\1\114\1\uffff\1\u02f5\1\uffff\1\u0154\2\uffff"+
+        "\3\114\1\uffff\2\114\4\uffff\1\114\1\uffff\1\u02fb\4\uffff\1\112"+
+        "\2\uffff\1\112\1\114\1\uffff\1\u0300\2\uffff\1\114\1\u0302\1\u0303"+
+        "\1\114\1\u01b1\2\114\1\u0307\1\uffff\4\114\1\u030c\2\114\1\u030f"+
+        "\2\114\1\u0312\1\u0313\6\114\1\u031a\3\114\1\u031e\1\uffff\3\114"+
+        "\1\u0322\2\114\1\u0325\1\uffff\2\114\1\u0328\2\114\1\u032b\1\114"+
+        "\1\u032e\1\114\1\uffff\1\114\4\uffff\1\u0332\1\u017d\2\114\2\uffff"+
+        "\1\u0335\2\114\1\u0338\5\114\1\uffff\1\114\1\uffff\1\u033e\4\114"+
+        "\1\u0343\1\114\1\u0345\1\uffff\1\114\1\u0347\1\114\3\uffff\1\114"+
+        "\1\u034a\1\114\1\u034c\1\uffff\3\114\1\uffff\1\114\1\u0351\1\114"+
+        "\1\u0154\1\u0353\1\uffff\3\112\1\114\1\uffff\1\114\2\uffff\1\u017d"+
+        "\1\u01b1\1\114\1\uffff\2\114\1\u035b\1\114\1\uffff\2\114\1\uffff"+
+        "\1\u035f\1\114\2\uffff\4\114\1\u0365\1\u0366\1\uffff\1\u017d\2\114"+
+        "\1\uffff\1\u0369\1\114\1\u036b\1\uffff\1\114\1\u036d\1\uffff\1\114"+
+        "\1\u017d\1\uffff\1\u0371\1\u0372\1\uffff\2\114\1\uffff\3\114\1\uffff"+
+        "\2\114\1\uffff\1\u01b1\1\u037a\1\uffff\1\114\1\u037c\1\u037d\1\u037e"+
+        "\1\u037f\1\uffff\3\114\1\u0154\1\uffff\1\114\1\uffff\1\u0385\1\uffff"+
+        "\1\114\1\u029c\1\uffff\1\u0388\1\uffff\1\114\1\u038a\2\114\1\uffff"+
+        "\1\u038d\1\uffff\1\112\2\114\1\u017d\3\114\1\uffff\1\114\1\u017d"+
+        "\1\114\1\uffff\3\114\2\u017d\2\uffff\1\u0399\1\114\1\uffff\1\114"+
+        "\1\uffff\1\114\1\uffff\3\114\2\uffff\4\114\1\u03a4\1\114\1\u017d"+
+        "\1\uffff\1\114\4\uffff\1\114\1\u03a7\1\u03a8\2\114\1\uffff\1\u03ab"+
+        "\1\u029c\1\uffff\1\114\1\uffff\2\114\1\uffff\2\114\1\u029c\1\114"+
+        "\1\u03b2\1\114\1\u017d\1\u03b4\1\114\1\u03b6\1\114\1\uffff\1\u0154"+
+        "\1\114\1\u03b9\3\114\1\u03bd\3\114\1\uffff\2\114\2\uffff\2\114\1"+
+        "\uffff\1\114\1\u03c6\1\u03c7\1\u03ca\2\114\1\uffff\1\114\1\uffff"+
+        "\1\114\1\uffff\2\114\1\uffff\3\114\1\uffff\10\114\2\uffff\1\u03dc"+
+        "\1\114\1\uffff\1\114\1\u017d\11\114\1\u03e8\1\114\1\u03ea\2\114"+
+        "\1\u03ed\1\uffff\5\114\1\u03f3\2\114\1\u017d\1\114\1\u03f7\1\uffff"+
+        "\1\114\1\uffff\1\114\1\u03fa\1\uffff\5\114\1\uffff\1\u017d\2\114"+
+        "\1\uffff\1\u0402\1\114\1\uffff\4\114\2\u017d\1\114\1\uffff\1\114"+
+        "\1\u040a\4\114\1\u0154\1\uffff\1\114\1\u0410\3\114\1\uffff\1\u0414"+
+        "\2\114\1\uffff\2\114\1\u0419\1\114\1\uffff\1\114\1\u041c\1\uffff";
+    static final String DFA57_eofS =
+        "\u041d\uffff";
+    static final String DFA57_minS =
+        "\1\0\1\74\1\75\1\53\1\uffff\1\52\1\0\1\uffff\1\55\1\52\1\174\1"+
+        "\uffff\3\75\1\56\1\42\1\uffff\3\42\1\uffff\21\42\1\106\3\42\1\0"+
+        "\41\uffff\44\42\1\40\72\42\1\117\4\uffff\2\42\1\0\2\uffff\4\42\1"+
+        "\uffff\1\42\2\uffff\10\42\1\uffff\1\11\35\42\1\uffff\4\42\1\uffff"+
+        "\1\40\1\uffff\6\42\1\uffff\101\42\1\uffff\15\42\1\40\2\42\1\127"+
+        "\2\42\1\56\2\0\1\42\3\uffff\4\42\2\uffff\3\42\1\uffff\1\11\6\42"+
+        "\1\uffff\15\42\1\uffff\15\42\1\uffff\7\42\1\117\21\42\1\uffff\2"+
+        "\42\1\uffff\1\42\1\uffff\23\42\2\uffff\7\42\1\uffff\21\42\1\uffff"+
+        "\36\42\1\uffff\1\40\3\42\1\103\2\42\1\101\1\0\1\42\1\11\1\42\1\uffff"+
+        "\4\42\2\uffff\2\42\1\uffff\22\42\1\uffff\1\42\1\uffff\12\42\1\uffff"+
+        "\6\42\2\uffff\5\42\1\uffff\1\42\2\uffff\13\42\2\uffff\1\42\1\uffff"+
+        "\35\42\1\uffff\1\42\1\uffff\16\42\4\uffff\1\42\1\uffff\1\42\1\uffff"+
+        "\1\42\2\uffff\1\11\2\42\1\uffff\2\42\4\uffff\1\42\1\uffff\1\42\4"+
+        "\uffff\1\0\1\uffff\2\0\1\42\1\uffff\1\42\2\uffff\10\42\1\uffff\27"+
+        "\42\1\uffff\7\42\1\uffff\11\42\1\uffff\1\42\4\uffff\4\42\2\uffff"+
+        "\10\42\1\11\1\uffff\1\42\1\uffff\10\42\1\uffff\3\42\3\uffff\4\42"+
+        "\1\uffff\3\42\1\uffff\5\42\1\uffff\3\0\1\42\1\uffff\1\42\2\uffff"+
+        "\3\42\1\uffff\4\42\1\uffff\2\42\1\uffff\2\42\2\uffff\6\42\1\uffff"+
+        "\3\42\1\uffff\3\42\1\uffff\2\42\1\uffff\2\42\1\uffff\2\42\1\uffff"+
+        "\2\42\1\uffff\3\42\1\uffff\2\42\1\uffff\2\42\1\uffff\5\42\1\uffff"+
+        "\4\42\1\uffff\1\42\1\uffff\1\42\1\uffff\2\42\1\uffff\1\42\1\uffff"+
+        "\4\42\1\uffff\1\42\1\uffff\1\0\6\42\1\uffff\3\42\1\uffff\5\42\2"+
+        "\uffff\2\42\1\uffff\1\42\1\uffff\1\42\1\uffff\3\42\2\uffff\5\42"+
+        "\1\11\1\42\1\uffff\1\42\4\uffff\5\42\1\uffff\2\42\1\uffff\1\42\1"+
+        "\uffff\2\42\1\uffff\13\42\1\uffff\12\42\1\uffff\2\42\2\uffff\2\42"+
+        "\1\uffff\6\42\1\uffff\1\42\1\uffff\1\42\1\uffff\2\42\1\uffff\3\42"+
+        "\1\uffff\10\42\2\uffff\2\42\1\uffff\21\42\1\uffff\13\42\1\uffff"+
+        "\1\42\1\uffff\2\42\1\uffff\5\42\1\uffff\3\42\1\uffff\2\42\1\uffff"+
+        "\7\42\1\uffff\7\42\1\uffff\5\42\1\uffff\3\42\1\uffff\4\42\1\uffff"+
+        "\2\42\1\uffff";
+    static final String DFA57_maxS =
+        "\1\uffff\2\76\1\53\1\uffff\1\52\1\uffff\1\uffff\1\55\1\52\1\174"+
+        "\1\uffff\3\75\1\71\1\172\1\uffff\3\172\1\uffff\21\172\1\164\3\172"+
+        "\1\uffff\41\uffff\137\172\1\157\4\uffff\2\172\1\uffff\2\uffff\4"+
+        "\172\1\uffff\1\172\2\uffff\10\172\1\uffff\36\172\1\uffff\4\172\1"+
+        "\uffff\1\156\1\uffff\6\172\1\uffff\101\172\1\uffff\20\172\1\167"+
+        "\2\172\1\100\2\uffff\1\172\3\uffff\4\172\2\uffff\3\172\1\uffff\1"+
+        "\156\6\172\1\uffff\15\172\1\uffff\15\172\1\uffff\7\172\1\165\21"+
+        "\172\1\uffff\2\172\1\uffff\1\172\1\uffff\23\172\2\uffff\7\172\1"+
+        "\uffff\21\172\1\uffff\36\172\1\uffff\1\154\3\172\1\164\3\172\1\uffff"+
+        "\3\172\1\uffff\4\172\2\uffff\2\172\1\uffff\22\172\1\uffff\1\172"+
+        "\1\uffff\12\172\1\uffff\6\172\2\uffff\5\172\1\uffff\1\172\2\uffff"+
+        "\13\172\2\uffff\1\172\1\uffff\35\172\1\uffff\1\172\1\uffff\16\172"+
+        "\4\uffff\1\172\1\uffff\1\172\1\uffff\1\172\2\uffff\3\172\1\uffff"+
+        "\2\172\4\uffff\1\172\1\uffff\1\172\4\uffff\1\uffff\1\uffff\2\uffff"+
+        "\1\172\1\uffff\1\172\2\uffff\10\172\1\uffff\27\172\1\uffff\7\172"+
+        "\1\uffff\11\172\1\uffff\1\172\4\uffff\4\172\2\uffff\11\172\1\uffff"+
+        "\1\172\1\uffff\10\172\1\uffff\3\172\3\uffff\4\172\1\uffff\3\172"+
+        "\1\uffff\5\172\1\uffff\3\uffff\1\172\1\uffff\1\172\2\uffff\3\172"+
+        "\1\uffff\4\172\1\uffff\2\172\1\uffff\2\172\2\uffff\6\172\1\uffff"+
+        "\3\172\1\uffff\3\172\1\uffff\2\172\1\uffff\2\172\1\uffff\2\172\1"+
+        "\uffff\2\172\1\uffff\3\172\1\uffff\2\172\1\uffff\2\172\1\uffff\5"+
+        "\172\1\uffff\4\172\1\uffff\1\172\1\uffff\1\172\1\uffff\2\172\1\uffff"+
+        "\1\172\1\uffff\4\172\1\uffff\1\172\1\uffff\1\uffff\6\172\1\uffff"+
+        "\3\172\1\uffff\5\172\2\uffff\2\172\1\uffff\1\172\1\uffff\1\172\1"+
+        "\uffff\3\172\2\uffff\7\172\1\uffff\1\172\4\uffff\5\172\1\uffff\2"+
+        "\172\1\uffff\1\172\1\uffff\2\172\1\uffff\13\172\1\uffff\12\172\1"+
+        "\uffff\2\172\2\uffff\2\172\1\uffff\6\172\1\uffff\1\172\1\uffff\1"+
+        "\172\1\uffff\2\172\1\uffff\3\172\1\uffff\10\172\2\uffff\2\172\1"+
+        "\uffff\21\172\1\uffff\13\172\1\uffff\1\172\1\uffff\2\172\1\uffff"+
+        "\5\172\1\uffff\3\172\1\uffff\2\172\1\uffff\7\172\1\uffff\7\172\1"+
+        "\uffff\5\172\1\uffff\3\172\1\uffff\4\172\1\uffff\2\172\1\uffff";
+    static final String DFA57_acceptS =
+        "\4\uffff\1\4\2\uffff\1\7\3\uffff\1\14\5\uffff\1\33\3\uffff\1\37"+
+        "\26\uffff\1\u00be\1\u00bf\1\1\1\15\1\23\1\22\1\2\1\24\1\21\1\25"+
+        "\1\3\1\4\1\31\1\5\1\6\1\40\1\7\1\32\1\10\1\12\1\11\1\13\1\14\1\16"+
+        "\1\17\1\20\1\26\1\30\1\37\1\27\1\u00bc\1\33\1\u00bb\140\uffff\1"+
+        "\u0098\1\u0096\1\67\1\u0097\3\uffff\1\u00bd\1\u00be\4\uffff\1\34"+
+        "\1\uffff\1\156\1\u00a2\10\uffff\1\111\36\uffff\1\113\4\uffff\1\104"+
+        "\1\uffff\1\126\6\uffff\1\160\101\uffff\1\101\27\uffff\1\114\1\u00a5"+
+        "\1\u00ad\4\uffff\1\54\1\35\3\uffff\1\36\7\uffff\1\u00a6\15\uffff"+
+        "\1\u0094\15\uffff\1\41\31\uffff\1\165\2\uffff\1\47\1\uffff\1\u00a9"+
+        "\23\uffff\1\u00b8\1\42\7\uffff\1\52\21\uffff\1\141\36\uffff\1\56"+
+        "\14\uffff\1\u008c\4\uffff\1\63\1\134\2\uffff\1\64\22\uffff\1\u00b6"+
+        "\1\uffff\1\u0083\12\uffff\1\174\6\uffff\1\132\1\133\5\uffff\1\46"+
+        "\1\uffff\1\u008e\1\176\13\uffff\1\136\1\u008a\1\uffff\1\146\35\uffff"+
+        "\1\152\1\uffff\1\45\16\uffff\1\71\1\70\1\62\1\76\1\uffff\1\51\1"+
+        "\uffff\1\61\1\uffff\1\74\1\135\3\uffff\1\173\2\uffff\1\u00a8\1\153"+
+        "\1\131\1\137\1\uffff\1\127\1\uffff\1\66\1\u0099\1\77\1\u00ba\1\uffff"+
+        "\1\u00bc\3\uffff\1\u00b9\1\uffff\1\163\1\u00a0\10\uffff\1\44\27"+
+        "\uffff\1\157\7\uffff\1\55\11\uffff\1\147\1\uffff\1\75\1\u0081\1"+
+        "\u00af\1\175\4\uffff\1\102\1\u008b\11\uffff\1\154\1\uffff\1\144"+
+        "\10\uffff\1\u00b0\3\uffff\1\72\1\43\1\u0080\4\uffff\1\155\3\uffff"+
+        "\1\140\5\uffff\1\130\4\uffff\1\u00ae\1\uffff\1\116\1\115\3\uffff"+
+        "\1\u00a3\4\uffff\1\u00a7\2\uffff\1\150\2\uffff\1\143\1\53\6\uffff"+
+        "\1\u00b4\3\uffff\1\u0088\3\uffff\1\u0089\2\uffff\1\u009f\2\uffff"+
+        "\1\105\2\uffff\1\112\2\uffff\1\u00b7\3\uffff\1\u009c\2\uffff\1\u00b3"+
+        "\2\uffff\1\170\5\uffff\1\164\4\uffff\1\167\1\uffff\1\106\1\uffff"+
+        "\1\u0082\2\uffff\1\161\1\uffff\1\u0086\4\uffff\1\u009d\1\uffff\1"+
+        "\u00ab\7\uffff\1\u008d\3\uffff\1\103\5\uffff\1\u009b\1\u009a\2\uffff"+
+        "\1\u0085\1\uffff\1\u00a1\1\uffff\1\u0087\3\uffff\1\142\1\107\7\uffff"+
+        "\1\57\1\uffff\1\120\1\65\1\u00ac\1\177\5\uffff\1\u00aa\2\uffff\1"+
+        "\162\1\uffff\1\u009e\2\uffff\1\171\13\uffff\1\100\12\uffff\1\u0091"+
+        "\2\uffff\1\73\1\166\2\uffff\1\110\6\uffff\1\123\1\uffff\1\125\1"+
+        "\uffff\1\u0092\2\uffff\1\172\3\uffff\1\u0090\10\uffff\1\50\1\60"+
+        "\2\uffff\1\u00b2\21\uffff\1\u0084\13\uffff\1\u00a4\1\uffff\1\u00b5"+
+        "\2\uffff\1\u0095\5\uffff\1\u00b1\3\uffff\1\124\2\uffff\1\117\7\uffff"+
+        "\1\121\7\uffff\1\145\5\uffff\1\122\3\uffff\1\u0093\4\uffff\1\u008f"+
+        "\2\uffff\1\151";
+    static final String DFA57_specialS =
+        "\1\6\5\uffff\1\2\44\uffff\1\14\u0087\uffff\1\10\u0096\uffff\1\12"+
+        "\1\15\u00a7\uffff\1\13\u0097\uffff\1\4\1\uffff\1\3\1\5\155\uffff"+
+        "\1\1\1\7\1\11\125\uffff\1\0\u00c8\uffff}>";
+    static final String[] DFA57_transitionS = {
+            "\11\55\2\21\2\55\1\21\22\55\1\21\1\14\1\53\2\55\1\47\1\55\1"+
+            "\6\1\3\1\4\1\11\1\7\1\55\1\10\1\17\1\5\12\25\1\20\1\54\1\1\1"+
+            "\13\1\2\2\55\1\23\1\31\1\37\1\36\1\46\1\40\1\45\1\52\1\30\1"+
+            "\51\1\52\1\33\1\35\1\24\1\22\1\26\1\52\1\32\1\27\1\42\1\34\1"+
+            "\41\1\44\1\52\1\43\1\50\3\55\1\16\2\55\1\23\1\31\1\37\1\36\1"+
+            "\46\1\40\1\45\1\52\1\30\1\51\1\52\1\33\1\35\1\24\1\22\1\26\1"+
+            "\52\1\32\1\27\1\42\1\34\1\41\1\44\1\52\1\43\1\50\1\55\1\12\1"+
+            "\55\1\15\uff81\55",
+            "\1\56\1\60\1\57",
+            "\1\63\1\62",
+            "\1\65",
+            "",
+            "\1\70",
+            "\0\73",
+            "",
+            "\1\75",
+            "\1\77",
+            "\1\101",
+            "",
+            "\1\103",
+            "\1\104",
+            "\1\105",
+            "\1\106\1\uffff\12\110",
+            "\1\112\32\uffff\1\111\3\uffff\32\112\6\uffff\32\112",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\124\3\126\1\122\2\126\1\120\2\126\1\117\1\126\1\123\1"+
+            "\126\1\125\1\126\1\121\2\126\1\116\1\115\4\126\4\uffff\1\126"+
+            "\1\uffff\1\126\1\124\3\126\1\122\2\126\1\120\2\126\1\117\1\126"+
+            "\1\123\1\126\1\125\1\126\1\121\2\126\1\116\1\115\4\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\5"+
+            "\126\1\132\5\126\1\130\1\126\1\131\3\126\1\127\1\134\1\126\1"+
+            "\133\5\126\4\uffff\1\126\1\uffff\5\126\1\132\5\126\1\130\1\126"+
+            "\1\131\3\126\1\127\1\134\1\126\1\133\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\136\1\126\1\142\1\126\1\141\11\126\1\135\5\126\1\137\1\140"+
+            "\4\126\4\uffff\1\126\1\uffff\1\136\1\126\1\142\1\126\1\141\11"+
+            "\126\1\135\5\126\1\137\1\140\4\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\145\7\126\1\144\2\126\1\143\2\126\1\146\2\126\1\147\10\126"+
+            "\4\uffff\1\126\1\uffff\1\145\7\126\1\144\2\126\1\143\2\126\1"+
+            "\146\2\126\1\147\10\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\152\3\126\1\151\3\126\1\153\3\126\1\154\1\126\1\156\1\126\1"+
+            "\155\2\126\1\157\1\150\5\126\4\uffff\1\126\1\uffff\1\152\3\126"+
+            "\1\151\3\126\1\153\3\126\1\154\1\126\1\156\1\126\1\155\2\126"+
+            "\1\157\1\150\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\5"+
+            "\126\1\162\6\126\1\163\1\160\4\126\1\161\7\126\4\uffff\1\126"+
+            "\1\uffff\5\126\1\162\6\126\1\163\1\160\4\126\1\161\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\164\1\172\2\126\1\166\2\126\1\165\2\126\1\170\5\126\1"+
+            "\171\3\126\1\167\1\126\4\uffff\1\126\1\uffff\4\126\1\164\1\172"+
+            "\2\126\1\166\2\126\1\165\2\126\1\170\5\126\1\171\3\126\1\167"+
+            "\1\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\174\3\126\1\173\11\126\1\175\13\126\4\uffff\1\126\1\uffff\1"+
+            "\174\3\126\1\173\11\126\1\175\13\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\177\5\126\1\176\13\126\4\uffff\1\126\1\uffff\10\126\1"+
+            "\177\5\126\1\176\13\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0080\1\126\1\u0082\1\126\1\u0083\1\u0081\7\126\4\uffff"+
+            "\1\126\1\uffff\15\126\1\u0080\1\126\1\u0082\1\126\1\u0083\1"+
+            "\u0081\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0089\3\126\1\u0088\3\126\1\u0085\2\126\1\u0086\2\126\1\u0087"+
+            "\5\126\1\u0084\5\126\4\uffff\1\126\1\uffff\1\u0089\3\126\1\u0088"+
+            "\3\126\1\u0085\2\126\1\u0086\2\126\1\u0087\5\126\1\u0084\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u008c\3\126\1\u008a\3\126\1\u008b\5\126\1\u008d\13\126\4\uffff"+
+            "\1\126\1\uffff\1\u008c\3\126\1\u008a\3\126\1\u008b\5\126\1\u008d"+
+            "\13\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0091\6\126\1\u0093\3\126\1\u008e\2\126\1\u008f\2\126\1\u0092"+
+            "\2\126\1\u0090\5\126\4\uffff\1\126\1\uffff\1\u0091\6\126\1\u0093"+
+            "\3\126\1\u008e\2\126\1\u008f\2\126\1\u0092\2\126\1\u0090\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0097\3\126\1\u0099\3\126\1\u0094\2\126\1\u0098\2\126\1\u0095"+
+            "\2\126\1\u009a\2\126\1\u0096\5\126\4\uffff\1\126\1\uffff\1\u0097"+
+            "\3\126\1\u0099\3\126\1\u0094\2\126\1\u0098\2\126\1\u0095\2\126"+
+            "\1\u009a\2\126\1\u0096\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u009b\31\126\4\uffff\1\126\1\uffff\1\u009b\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u009c\6\126\1\u00a0\1\u00a1\5\126\1\u009f\2\126\1\u009d\6\126"+
+            "\1\u009e\1\126\4\uffff\1\126\1\uffff\1\u009c\6\126\1\u00a0\1"+
+            "\u00a1\5\126\1\u009f\2\126\1\u009d\6\126\1\u009e\1\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u00a2\25\126\4\uffff\1\126\1\uffff\4\126\1\u00a2\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\7"+
+            "\126\1\u00a3\1\u00a4\21\126\4\uffff\1\126\1\uffff\7\126\1\u00a3"+
+            "\1\u00a4\21\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u00a5\2\126\1\u00a6\10\126\4\uffff\1\126\1\uffff\16\126"+
+            "\1\u00a5\2\126\1\u00a6\10\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u00a9\12\126\1\u00ab\1\126\1\u00aa\4\126\1\u00a8\4\126\1\u00a7"+
+            "\2\126\4\uffff\1\126\1\uffff\1\u00a9\12\126\1\u00ab\1\126\1"+
+            "\u00aa\4\126\1\u00a8\4\126\1\u00a7\2\126",
+            "\1\u00b0\2\uffff\1\u00ad\4\uffff\1\u00ae\3\uffff\1\u00ac\1"+
+            "\uffff\1\u00af\21\uffff\1\u00b0\2\uffff\1\u00ad\4\uffff\1\u00ae"+
+            "\3\uffff\1\u00ac\1\uffff\1\u00af",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u00b1\13\126\4\uffff\1\126\1\uffff\16\126\1\u00b1\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u00b2\13\126\4\uffff\1\126\1\uffff\16\126\1\u00b2\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\42\u00b4\1\uffff\36\u00b4\32\u00b3\6\u00b4\32\u00b3\uff85"+
+            "\u00b4",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u00b6\25\126\4\uffff\1\126\1\uffff\4\126\1\u00b6\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u00b7\6\126\4\uffff\1\126\1\uffff\23\126\1\u00b7\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u00b8\26\126\4\uffff\1\126\1\uffff\3\126\1\u00b8\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u00b9\26\126\4\uffff\1\126\1\uffff\3\126\1\u00b9\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u00bb\26\126\4\uffff\1\126\1\uffff\3\126\1\u00bb\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\11"+
+            "\126\1\u00be\20\126\4\uffff\1\126\1\uffff\11\126\1\u00be\20"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u00bf\25\126\4\uffff\1\126\1\uffff\4\126\1\u00bf\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u00c0\10\126\4\uffff\1\126\1\uffff\21\126\1\u00c0\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u00c1\16\126\4\uffff\1\126\1\uffff\13\126\1\u00c1\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u00c3\24\126\1\u00c2\1\126\4\uffff\1\126\1\uffff\3\126"+
+            "\1\u00c3\24\126\1\u00c2\1\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u00c4\6\126\4\uffff\1\126\1\uffff\23\126\1\u00c4\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u00c5\6\126\4\uffff\1\126\1\uffff\23\126\1\u00c5\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u00c8\20\126\1\u00c7\6\126\4\uffff\1\126\1\uffff\2\126"+
+            "\1\u00c8\20\126\1\u00c7\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u00c9\6\126\4\uffff\1\126\1\uffff\23\126\1\u00c9\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u00ca\1\u00cb\15\126\4\uffff\1\126\1\uffff\13\126\1\u00ca"+
+            "\1\u00cb\15\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u00cc\31\126\4\uffff\1\126\1\uffff\1\u00cc\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u00ce\3\126\1\u00cd\3\126\4\uffff\1\126\1\uffff\22\126"+
+            "\1\u00ce\3\126\1\u00cd\3\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\7"+
+            "\126\1\u00d0\3\126\1\u00cf\16\126\4\uffff\1\126\1\uffff\7\126"+
+            "\1\u00d0\3\126\1\u00cf\16\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u00d1\7\126\4\uffff\1\126\1\uffff\22\126\1\u00d1\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u00d2\12\126\4\uffff\1\126\1\uffff\17\126\1\u00d2\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u00d3\16\126\1\u00d4\10\126\4\uffff\1\126\1\uffff\2\126"+
+            "\1\u00d3\16\126\1\u00d4\10\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u00d5\7\126\4\uffff\1\126\1\uffff\22\126\1\u00d5\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u00d7\7\126\1\u00d8\5\126\1\u00d6\13\126\4\uffff\1\126\1\uffff"+
+            "\1\u00d7\7\126\1\u00d8\5\126\1\u00d6\13\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u00d9\30\126\4\uffff\1\126\1\uffff\1\126\1\u00d9\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u00dd\10\126\1\u00dc\5\126\1\u00db\1\126\1\u00da\6\126"+
+            "\4\uffff\1\126\1\uffff\2\126\1\u00dd\10\126\1\u00dc\5\126\1"+
+            "\u00db\1\126\1\u00da\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\25"+
+            "\126\1\u00de\4\126\4\uffff\1\126\1\uffff\25\126\1\u00de\4\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u00e0\5\126\1\u00df\15\126\4\uffff\1\126\1\uffff\6\126"+
+            "\1\u00e0\5\126\1\u00df\15\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u00e1\31\126\4\uffff\1\126\1\uffff\1\u00e1\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u00e2\16\126\4\uffff\1\126\1\uffff\13\126\1\u00e2\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u00e3\15\126\4\uffff\1\126\1\uffff\14\126\1\u00e3\15"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u00e4\31\126\4\uffff\1\126\1\uffff\1\u00e4\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u00e8\7\126\1\u00e7\6\126\1\u00e9\1\u00e6\6\126\4\uffff"+
+            "\1\126\1\uffff\3\126\1\u00e8\7\126\1\u00e7\6\126\1\u00e9\1\u00e6"+
+            "\6\126",
+            "\1\u00eb\1\uffff\1\112\3\126\10\uffff\1\112\1\uffff\12\126"+
+            "\6\uffff\1\112\32\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u00ed\15\126\4\uffff\1\126\1\uffff\14\126\1\u00ed\15"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\5"+
+            "\126\1\u00ef\1\u00f0\14\126\1\u00ee\6\126\4\uffff\1\126\1\uffff"+
+            "\5\126\1\u00ef\1\u00f0\14\126\1\u00ee\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u00f1\13\126\4\uffff\1\126\1\uffff\16\126\1\u00f1\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u00f2\14\126\4\uffff\1\126\1\uffff\15\126\1\u00f2\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u00f4\6\126\4\uffff\1\126\1\uffff\23\126\1\u00f4\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u00f6\12\126\1\u00f5\13\126\4\uffff\1\126\1\uffff\3\126"+
+            "\1\u00f6\12\126\1\u00f5\13\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u00f7\16\126\4\uffff\1\126\1\uffff\13\126\1\u00f7\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u00f8\21\126\4\uffff\1\126\1\uffff\10\126\1\u00f8\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u00ff\1\126\1\u00f9\2\126\1\u00fe\11\126\1\u00fb\2\126\1\u00fd"+
+            "\1\u00fc\1\126\1\u00fa\4\126\4\uffff\1\126\1\uffff\1\u00ff\1"+
+            "\126\1\u00f9\2\126\1\u00fe\11\126\1\u00fb\2\126\1\u00fd\1\u00fc"+
+            "\1\126\1\u00fa\4\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0101\15\126\1\u0100\3\126\4\uffff\1\126\1\uffff\10\126"+
+            "\1\u0101\15\126\1\u0100\3\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0103\12\126\1\u0102\3\126\4\uffff\1\126\1\uffff\13\126"+
+            "\1\u0103\12\126\1\u0102\3\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0106\12\126\1\u0105\1\u0104\13\126\4\uffff\1\126\1\uffff"+
+            "\2\126\1\u0106\12\126\1\u0105\1\u0104\13\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\12"+
+            "\126\1\u0107\1\126\1\u0108\15\126\4\uffff\1\126\1\uffff\12\126"+
+            "\1\u0107\1\126\1\u0108\15\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u0109\4\126\1\u010a\21\126\4\uffff\1\126\1\uffff\3\126"+
+            "\1\u0109\4\126\1\u010a\21\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u010b\21\126\4\uffff\1\126\1\uffff\10\126\1\u010b\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u010c\26\126\4\uffff\1\126\1\uffff\3\126\1\u010c\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u010d\13\126\4\uffff\1\126\1\uffff\16\126\1\u010d\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u010e\16\126\4\uffff\1\126\1\uffff\13\126\1\u010e\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u010f\14\126\4\uffff\1\126\1\uffff\15\126\1\u010f\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u0110\7\126\4\uffff\1\126\1\uffff\22\126\1\u0110\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0111\14\126\4\uffff\1\126\1\uffff\15\126\1\u0111\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u0113\4\126\1\u0112\10\126\4\uffff\1\126\1\uffff\14\126"+
+            "\1\u0113\4\126\1\u0112\10\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u0114\12\126\4\uffff\1\126\1\uffff\17\126\1\u0114\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0115\2\126\1\u0118\5\126\1\u0116\7\126\1\u0117\6\126"+
+            "\4\uffff\1\126\1\uffff\2\126\1\u0115\2\126\1\u0118\5\126\1\u0116"+
+            "\7\126\1\u0117\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u0119\7\126\4\uffff\1\126\1\uffff\22\126\1\u0119\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u011b\4\126\1\u011a\1\126\4\uffff\1\126\1\uffff\23\126"+
+            "\1\u011b\4\126\1\u011a\1\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u011c\5\126\4\uffff\1\126\1\uffff\24\126\1\u011c\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u011d\13\126\4\uffff\1\126\1\uffff\16\126\1\u011d\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u011e\1\u0120\1\u0121\6\126\1\u011f\5\126\4\uffff\1\126"+
+            "\1\uffff\13\126\1\u011e\1\u0120\1\u0121\6\126\1\u011f\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0122\10\126\4\uffff\1\126\1\uffff\21\126\1\u0122\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u0123\7\126\4\uffff\1\126\1\uffff\22\126\1\u0123\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0124\25\126\4\uffff\1\126\1\uffff\4\126\1\u0124\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0125\31\126\4\uffff\1\126\1\uffff\1\u0125\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0126\14\126\4\uffff\1\126\1\uffff\15\126\1\u0126\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0127\5\126\1\u0128\10\126\4\uffff\1\126\1\uffff\13\126"+
+            "\1\u0127\5\126\1\u0128\10\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0129\14\126\4\uffff\1\126\1\uffff\15\126\1\u0129\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u012a\16\126\4\uffff\1\126\1\uffff\13\126\1\u012a\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u012b\13\126\4\uffff\1\126\1\uffff\16\126\1\u012b\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u012c\6\126\4\uffff\1\126\1\uffff\23\126\1\u012c\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u012d\13\126\4\uffff\1\126\1\uffff\16\126\1\u012d\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u012f\5\126\1\u012e\10\126\4\uffff\1\126\1\uffff\13\126"+
+            "\1\u012f\5\126\1\u012e\10\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u0130\30\126\4\uffff\1\126\1\uffff\1\126\1\u0130\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0131\7\126\1\u0132\13\126\1\u0133\5\126\4\uffff\1\126\1\uffff"+
+            "\1\u0131\7\126\1\u0132\13\126\1\u0133\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u0134\12\126\4\uffff\1\126\1\uffff\17\126\1\u0134\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0136\25\126\4\uffff\1\126\1\uffff\4\126\1\u0136\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u0137\15\126\4\uffff\1\126\1\uffff\14\126\1\u0137\15"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0138\31\126\4\uffff\1\126\1\uffff\1\u0138\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u013a\3\126\1\u0139\21\126\4\uffff\1\126\1\uffff\4\126"+
+            "\1\u013a\3\126\1\u0139\21\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u013b\6\126\4\uffff\1\126\1\uffff\23\126\1\u013b\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u013c\6\126\4\uffff\1\126\1\uffff\23\126\1\u013c\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u013d\13\126\4\uffff\1\126\1\uffff\16\126\1\u013d\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u013e\1\126\1\u0140\3\126\1\u013f\21\126\4\uffff\1\126"+
+            "\1\uffff\2\126\1\u013e\1\126\1\u0140\3\126\1\u013f\21\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0141\27\126\4\uffff\1\126\1\uffff\2\126\1\u0141\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0142\27\126\4\uffff\1\126\1\uffff\2\126\1\u0142\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0144\2\126\1\u0143\26\126\4\uffff\1\126\1\uffff\1\u0144\2"+
+            "\126\1\u0143\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u0145\7\126\4\uffff\1\126\1\uffff\22\126\1\u0145\7\126",
+            "\1\u0146\37\uffff\1\u0146",
+            "",
+            "",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0147\14\126\4\uffff\1\126\1\uffff\15\126\1\u0147\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0148\21\126\4\uffff\1\126\1\uffff\10\126\1\u0148\21"+
+            "\126",
+            "\42\u00b4\1\u0149\3\u014a\10\u00b4\1\u014b\1\u00b4\12\u014a"+
+            "\6\u00b4\1\u014b\32\u014a\4\u00b4\1\u014a\1\u00b4\32\u014a\uff85"+
+            "\u00b4",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u014c\10\126\4\uffff\1\126\1\uffff\21\126\1\u014c\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0150\25\126\4\uffff\1\126\1\uffff\4\126\1\u0150\25\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0151\25\126\4\uffff\1\126\1\uffff\4\126\1\u0151\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0152\14\126\4\uffff\1\126\1\uffff\15\126\1\u0152\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0153\31\126\4\uffff\1\126\1\uffff\1\u0153\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0156\25\126\4\uffff\1\126\1\uffff\4\126\1\u0156\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\7"+
+            "\126\1\u0158\6\126\1\u0157\13\126\4\uffff\1\126\1\uffff\7\126"+
+            "\1\u0158\6\126\1\u0157\13\126",
+            "",
+            "\2\u015a\2\uffff\1\u015a\22\uffff\1\u015a\1\uffff\1\112\3"+
+            "\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32\126\4\uffff"+
+            "\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u015b\13\126\4\uffff\1\126\1\uffff\16\126\1\u015b\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u015c\5\126\4\uffff\1\126\1\uffff\24\126\1\u015c\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u015d\16\126\4\uffff\1\126\1\uffff\13\126\1\u015d\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u015e\2\126\1\u015f\25\126\4\uffff\1\126\1\uffff\1\126"+
+            "\1\u015e\2\126\1\u015f\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0160\10\126\4\uffff\1\126\1\uffff\21\126\1\u0160\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0162\6\126\4\uffff\1\126\1\uffff\23\126\1\u0162\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u0163\13\126\4\uffff\1\126\1\uffff\16\126\1\u0163\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0164\31\126\4\uffff\1\126\1\uffff\1\u0164\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\u0165\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0166\25\126\4\uffff\1\126\1\uffff\4\126\1\u0166\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\12"+
+            "\126\1\u0167\17\126\4\uffff\1\126\1\uffff\12\126\1\u0167\17"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0168\3\126\1\u0169\25\126\4\uffff\1\126\1\uffff\1\u0168\3"+
+            "\126\1\u0169\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u016a\21\126\4\uffff\1\126\1\uffff\10\126\1\u016a\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u016b\27\126\4\uffff\1\126\1\uffff\2\126\1\u016b\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u016c\23\126\4\uffff\1\126\1\uffff\6\126\1\u016c\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u016d\13\126\4\uffff\1\126\1\uffff\16\126\1\u016d\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u016e\6\126\4\uffff\1\126\1\uffff\23\126\1\u016e\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0170\21\126\4\uffff\1\126\1\uffff\10\126\1\u0170\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0171\1\u0172\24\126\4\uffff\1\126\1\uffff\4\126\1\u0171"+
+            "\1\u0172\24\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u0173\13\126\4\uffff\1\126\1\uffff\16\126\1\u0173\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0174\25\126\4\uffff\1\126\1\uffff\4\126\1\u0174\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u0175\12\126\4\uffff\1\126\1\uffff\17\126\1\u0175\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0176\14\126\4\uffff\1\126\1\uffff\15\126\1\u0176\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0177\16\126\4\uffff\1\126\1\uffff\13\126\1\u0177\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0179\1\126\1\u0178\25\126\4\uffff\1\126\1\uffff\2\126"+
+            "\1\u0179\1\126\1\u0178\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u017a\25\126\4\uffff\1\126\1\uffff\4\126\1\u017a\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u017c\1\126\1\u017b\6\126\4\uffff\1\126\1\uffff\21\126"+
+            "\1\u017c\1\126\1\u017b\6\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u017e\11\126\1\u017f\13\126\4\uffff\1\126\1\uffff\4\126"+
+            "\1\u017e\11\126\1\u017f\13\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0180\21\126\4\uffff\1\126\1\uffff\10\126\1\u0180\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0181\3\126\1\u0182\21\126\4\uffff\1\126\1\uffff\4\126"+
+            "\1\u0181\3\126\1\u0182\21\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0184\16\126\1\u0183\6\126\4\uffff\1\126\1\uffff\4\126"+
+            "\1\u0184\16\126\1\u0183\6\126",
+            "",
+            "\1\u00eb\55\uffff\1\u0185\37\uffff\1\u0185",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0186\25\126\4\uffff\1\126\1\uffff\4\126\1\u0186\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\26"+
+            "\126\1\u0187\3\126\4\uffff\1\126\1\uffff\26\126\1\u0187\3\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u0188\13\126\4\uffff\1\126\1\uffff\16\126\1\u0188\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0189\21\126\4\uffff\1\126\1\uffff\10\126\1\u0189\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u018a\30\126\4\uffff\1\126\1\uffff\1\126\1\u018a\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u018b\31\126\4\uffff\1\126\1\uffff\1\u018b\31\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u018c\25\126\4\uffff\1\126\1\uffff\4\126\1\u018c\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u018d\16\126\4\uffff\1\126\1\uffff\13\126\1\u018d\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\30"+
+            "\126\1\u018e\1\126\4\uffff\1\126\1\uffff\30\126\1\u018e\1\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\12"+
+            "\126\1\u018f\17\126\4\uffff\1\126\1\uffff\12\126\1\u018f\17"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0190\16\126\4\uffff\1\126\1\uffff\13\126\1\u0190\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u0191\13\126\4\uffff\1\126\1\uffff\16\126\1\u0191\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0192\25\126\4\uffff\1\126\1\uffff\4\126\1\u0192\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0193\16\126\4\uffff\1\126\1\uffff\13\126\1\u0193\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u0194\5\126\4\uffff\1\126\1\uffff\24\126\1\u0194\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0195\1\u0196\5\126\4\uffff\1\126\1\uffff\23\126\1\u0195"+
+            "\1\u0196\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0198\25\126\4\uffff\1\126\1\uffff\4\126\1\u0198\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0199\16\126\4\uffff\1\126\1\uffff\13\126\1\u0199\16"+
+            "\126",
+            "\1\112\3\126\2\uffff\1\u019a\5\uffff\1\112\1\uffff\12\126"+
+            "\6\uffff\1\112\32\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u019b\7\126\4\uffff\1\126\1\uffff\22\126\1\u019b\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u019d\21\126\4\uffff\1\126\1\uffff\10\126\1\u019d\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u019e\16\126\4\uffff\1\126\1\uffff\13\126\1\u019e\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u019f\12\126\4\uffff\1\126\1\uffff\17\126\1\u019f\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u01a0\23\126\4\uffff\1\126\1\uffff\6\126\1\u01a0\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u01a2\11\126\1\u01a1\17\126\4\uffff\1\126\1\uffff\1\u01a2\11"+
+            "\126\1\u01a1\17\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01a3\25\126\4\uffff\1\126\1\uffff\4\126\1\u01a3\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u01a4\21\126\4\uffff\1\126\1\uffff\10\126\1\u01a4\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01a5\25\126\4\uffff\1\126\1\uffff\4\126\1\u01a5\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u01a6\13\126\4\uffff\1\126\1\uffff\16\126\1\u01a6\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u01a7\14\126\4\uffff\1\126\1\uffff\15\126\1\u01a7\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u01a8\31\126\4\uffff\1\126\1\uffff\1\u01a8\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\26"+
+            "\126\1\u01a9\3\126\4\uffff\1\126\1\uffff\26\126\1\u01a9\3\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u01aa\6\126\4\uffff\1\126\1\uffff\23\126\1\u01aa\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u01ab\5\126\4\uffff\1\126\1\uffff\24\126\1\u01ab\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u01ac\16\126\4\uffff\1\126\1\uffff\13\126\1\u01ac\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u01ad\6\126\4\uffff\1\126\1\uffff\23\126\1\u01ad\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u01ae\23\126\4\uffff\1\126\1\uffff\6\126\1\u01ae\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u01af\30\126\4\uffff\1\126\1\uffff\1\126\1\u01af\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u01b2\2\126\1\u01b3\16\126\4\uffff\1\126\1\uffff\10\126"+
+            "\1\u01b2\2\126\1\u01b3\16\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01b4\25\126\4\uffff\1\126\1\uffff\4\126\1\u01b4\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01b5\25\126\4\uffff\1\126\1\uffff\4\126\1\u01b5\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u01b7\7\126\1\u01b6\21\126\4\uffff\1\126\1\uffff\1\u01b7\7"+
+            "\126\1\u01b6\21\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u01b8\31\126\4\uffff\1\126\1\uffff\1\u01b8\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01ba\25\126\4\uffff\1\126\1\uffff\4\126\1\u01ba\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u01bb\30\126\4\uffff\1\126\1\uffff\1\126\1\u01bb\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u01bc\20\126\1\u01bd\7\126\4\uffff\1\126\1\uffff\1\126"+
+            "\1\u01bc\20\126\1\u01bd\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u01be\16\126\4\uffff\1\126\1\uffff\13\126\1\u01be\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u01bf\14\126\4\uffff\1\126\1\uffff\15\126\1\u01bf\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u01c0\15\126\4\uffff\1\126\1\uffff\14\126\1\u01c0\15"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u01c3\4\126\1\u01c1\1\u01c2\6\126\4\uffff\1\126\1\uffff"+
+            "\15\126\1\u01c3\4\126\1\u01c1\1\u01c2\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u01c5\1\u01c4\7\126\4\uffff\1\126\1\uffff\21\126\1\u01c5"+
+            "\1\u01c4\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01c6\25\126\4\uffff\1\126\1\uffff\4\126\1\u01c6\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u01c7\31\126\4\uffff\1\126\1\uffff\1\u01c7\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u01c8\10\126\4\uffff\1\126\1\uffff\21\126\1\u01c8\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u01c9\31\126\4\uffff\1\126\1\uffff\1\u01c9\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u01ca\16\126\4\uffff\1\126\1\uffff\13\126\1\u01ca\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u01cc\31\126\4\uffff\1\126\1\uffff\1\u01cc\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u01cd\27\126\4\uffff\1\126\1\uffff\2\126\1\u01cd\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u01ce\7\126\4\uffff\1\126\1\uffff\22\126\1\u01ce\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u01cf\31\126\4\uffff\1\126\1\uffff\1\u01cf\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u01d0\27\126\4\uffff\1\126\1\uffff\2\126\1\u01d0\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u01d1\15\126\4\uffff\1\126\1\uffff\14\126\1\u01d1\15"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u01d2\16\126\1\u01d3\6\126\1\u01d4\1\126\4\uffff\1\126"+
+            "\1\uffff\2\126\1\u01d2\16\126\1\u01d3\6\126\1\u01d4\1\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u01d5\5\126\4\uffff\1\126\1\uffff\24\126\1\u01d5\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u01d6\16\126\4\uffff\1\126\1\uffff\13\126\1\u01d6\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u01d7\14\126\4\uffff\1\126\1\uffff\15\126\1\u01d7\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u01d8\23\126\4\uffff\1\126\1\uffff\6\126\1\u01d8\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01d9\25\126\4\uffff\1\126\1\uffff\4\126\1\u01d9\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01da\25\126\4\uffff\1\126\1\uffff\4\126\1\u01da\25\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u01db\14\126\4\uffff\1\126\1\uffff\15\126\1\u01db\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01dc\25\126\4\uffff\1\126\1\uffff\4\126\1\u01dc\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u01dd\10\126\4\uffff\1\126\1\uffff\21\126\1\u01dd\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u01de\16\126\4\uffff\1\126\1\uffff\13\126\1\u01de\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u01df\3\126\1\u01e0\10\126\4\uffff\1\126\1\uffff\15\126"+
+            "\1\u01df\3\126\1\u01e0\10\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\7"+
+            "\126\1\u01e1\22\126\4\uffff\1\126\1\uffff\7\126\1\u01e1\22\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u01e2\13\126\4\uffff\1\126\1\uffff\16\126\1\u01e2\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u01e3\5\126\4\uffff\1\126\1\uffff\24\126\1\u01e3\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01e4\25\126\4\uffff\1\126\1\uffff\4\126\1\u01e4\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u01e5\1\u01e6\6\126\4\uffff\1\126\1\uffff\22\126\1\u01e5"+
+            "\1\u01e6\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u01e7\27\126\4\uffff\1\126\1\uffff\2\126\1\u01e7\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u01e8\31\126\4\uffff\1\126\1\uffff\1\u01e8\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\7"+
+            "\126\1\u01e9\22\126\4\uffff\1\126\1\uffff\7\126\1\u01e9\22\126",
+            "\1\u01eb\1\uffff\1\112\3\126\10\uffff\1\112\1\uffff\12\126"+
+            "\6\uffff\1\112\32\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u01ec\30\126\4\uffff\1\126\1\uffff\1\126\1\u01ec\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01ed\3\126\1\u01ee\21\126\4\uffff\1\126\1\uffff\4\126"+
+            "\1\u01ed\3\126\1\u01ee\21\126",
+            "\1\u01ef\37\uffff\1\u01ef",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u01f0\25\126\4\uffff\1\126\1\uffff\4\126\1\u01f0\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u01f1\14\126\4\uffff\1\126\1\uffff\15\126\1\u01f1\14"+
+            "\126",
+            "\1\112\21\uffff\1\112",
+            "\42\u00b4\1\u0149\3\u014a\10\u00b4\1\u014b\1\u00b4\12\u014a"+
+            "\6\u00b4\1\u014b\32\u014a\4\u00b4\1\u014a\1\u00b4\32\u014a\uff85"+
+            "\u00b4",
+            "\42\u00b4\1\u01f2\36\u00b4\32\u01f3\6\u00b4\32\u01f3\uff85"+
+            "\u00b4",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u01f4\10\126\4\uffff\1\126\1\uffff\21\126\1\u01f4\10"+
+            "\126",
+            "",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u01f5\10\126\4\uffff\1\126\1\uffff\21\126\1\u01f5\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u01f6\27\126\4\uffff\1\126\1\uffff\2\126\1\u01f6\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\30"+
+            "\126\1\u01f8\1\126\4\uffff\1\126\1\uffff\30\126\1\u01f8\1\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u01f9\10\126\4\uffff\1\126\1\uffff\21\126\1\u01f9\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u01fa\14\126\4\uffff\1\126\1\uffff\15\126\1\u01fa\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u01fb\21\126\4\uffff\1\126\1\uffff\10\126\1\u01fb\21"+
+            "\126",
+            "",
+            "\2\u015a\2\uffff\1\u015a\22\uffff\1\u015a\50\uffff\1\u01fd"+
+            "\4\uffff\1\u01fc\32\uffff\1\u01fd\4\uffff\1\u01fc",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u01fe\12\126\4\uffff\1\126\1\uffff\17\126\1\u01fe\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u01ff\10\126\4\uffff\1\126\1\uffff\21\126\1\u01ff\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0201\25\126\4\uffff\1\126\1\uffff\4\126\1\u0201\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0202\10\126\4\uffff\1\126\1\uffff\21\126\1\u0202\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0203\27\126\4\uffff\1\126\1\uffff\2\126\1\u0203\27\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0204\25\126\4\uffff\1\126\1\uffff\4\126\1\u0204\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u0205\30\126\4\uffff\1\126\1\uffff\1\126\1\u0205\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0206\10\126\4\uffff\1\126\1\uffff\21\126\1\u0206\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0207\21\126\4\uffff\1\126\1\uffff\10\126\1\u0207\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0208\16\126\4\uffff\1\126\1\uffff\13\126\1\u0208\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0209\31\126\4\uffff\1\126\1\uffff\1\u0209\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u020a\16\126\4\uffff\1\126\1\uffff\13\126\1\u020a\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u020b\14\126\4\uffff\1\126\1\uffff\15\126\1\u020b\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u020c\6\126\4\uffff\1\126\1\uffff\23\126\1\u020c\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u020d\25\126\4\uffff\1\126\1\uffff\4\126\1\u020d\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u020e\15\126\4\uffff\1\126\1\uffff\14\126\1\u020e\15"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u020f\10\126\4\uffff\1\126\1\uffff\21\126\1\u020f\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\30"+
+            "\126\1\u0210\1\126\4\uffff\1\126\1\uffff\30\126\1\u0210\1\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0211\31\126\4\uffff\1\126\1\uffff\1\u0211\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0212\27\126\4\uffff\1\126\1\uffff\2\126\1\u0212\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0214\14\126\4\uffff\1\126\1\uffff\15\126\1\u0214\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u0216\12\126\4\uffff\1\126\1\uffff\17\126\1\u0216\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0217\16\126\4\uffff\1\126\1\uffff\13\126\1\u0217\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0218\6\126\4\uffff\1\126\1\uffff\23\126\1\u0218\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0219\16\126\4\uffff\1\126\1\uffff\13\126\1\u0219\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u021a\10\126\4\uffff\1\126\1\uffff\21\126\1\u021a\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u021b\13\126\4\uffff\1\126\1\uffff\16\126\1\u021b\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u021c\21\126\4\uffff\1\126\1\uffff\10\126\1\u021c\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u021d\6\126\4\uffff\1\126\1\uffff\23\126\1\u021d\6\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u021e\12\126\1\u021f\10\126\4\uffff\1\126\1\uffff\6\126"+
+            "\1\u021e\12\126\1\u021f\10\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0221\14\126\4\uffff\1\126\1\uffff\15\126\1\u0221\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\27"+
+            "\126\1\u0222\2\126\4\uffff\1\126\1\uffff\27\126\1\u0222\2\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0223\27\126\4\uffff\1\126\1\uffff\2\126\1\u0223\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0224\3\126\1\u0225\25\126\4\uffff\1\126\1\uffff\1\u0224\3"+
+            "\126\1\u0225\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0226\10\126\4\uffff\1\126\1\uffff\21\126\1\u0226\10"+
+            "\126",
+            "\1\u0228\5\uffff\1\u0227\31\uffff\1\u0228\5\uffff\1\u0227",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u0229\26\126\4\uffff\1\126\1\uffff\3\126\1\u0229\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u022a\25\126\4\uffff\1\126\1\uffff\4\126\1\u022a\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u022b\10\126\4\uffff\1\126\1\uffff\21\126\1\u022b\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u022c\14\126\4\uffff\1\126\1\uffff\15\126\1\u022c\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u022d\10\126\4\uffff\1\126\1\uffff\21\126\1\u022d\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u022f\25\126\4\uffff\1\126\1\uffff\4\126\1\u022f\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0232\25\126\4\uffff\1\126\1\uffff\4\126\1\u0232\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0233\10\126\4\uffff\1\126\1\uffff\21\126\1\u0233\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0234\10\126\4\uffff\1\126\1\uffff\21\126\1\u0234\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0235\31\126\4\uffff\1\126\1\uffff\1\u0235\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0236\10\126\4\uffff\1\126\1\uffff\21\126\1\u0236\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0237\10\126\4\uffff\1\126\1\uffff\21\126\1\u0237\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0238\16\126\4\uffff\1\126\1\uffff\13\126\1\u0238\16"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0239\10\126\4\uffff\1\126\1\uffff\21\126\1\u0239\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u023a\25\126\4\uffff\1\126\1\uffff\4\126\1\u023a\25\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u023b\26\126\4\uffff\1\126\1\uffff\3\126\1\u023b\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u023c\30\126\4\uffff\1\126\1\uffff\1\126\1\u023c\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u023f\16\126\4\uffff\1\126\1\uffff\13\126\1\u023f\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0241\6\126\4\uffff\1\126\1\uffff\23\126\1\u0241\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0242\10\126\4\uffff\1\126\1\uffff\21\126\1\u0242\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0243\14\126\4\uffff\1\126\1\uffff\15\126\1\u0243\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u0244\23\126\4\uffff\1\126\1\uffff\6\126\1\u0244\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0245\6\126\4\uffff\1\126\1\uffff\23\126\1\u0245\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0246\21\126\4\uffff\1\126\1\uffff\10\126\1\u0246\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0247\21\126\4\uffff\1\126\1\uffff\10\126\1\u0247\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u0248\7\126\4\uffff\1\126\1\uffff\22\126\1\u0248\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0249\31\126\4\uffff\1\126\1\uffff\1\u0249\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\7"+
+            "\126\1\u024a\22\126\4\uffff\1\126\1\uffff\7\126\1\u024a\22\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u024b\25\126\4\uffff\1\126\1\uffff\4\126\1\u024b\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u024c\25\126\4\uffff\1\126\1\uffff\4\126\1\u024c\25\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u024d\15\126\4\uffff\1\126\1\uffff\14\126\1\u024d\15"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u024e\31\126\4\uffff\1\126\1\uffff\1\u024e\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u024f\6\126\4\uffff\1\126\1\uffff\23\126\1\u024f\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0250\10\126\4\uffff\1\126\1\uffff\21\126\1\u0250\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0251\14\126\4\uffff\1\126\1\uffff\15\126\1\u0251\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u0252\5\126\4\uffff\1\126\1\uffff\24\126\1\u0252\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u0253\30\126\4\uffff\1\126\1\uffff\1\126\1\u0253\30\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0254\16\126\4\uffff\1\126\1\uffff\13\126\1\u0254\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0255\25\126\4\uffff\1\126\1\uffff\4\126\1\u0255\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0256\25\126\4\uffff\1\126\1\uffff\4\126\1\u0256\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0257\6\126\4\uffff\1\126\1\uffff\23\126\1\u0257\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0258\21\126\4\uffff\1\126\1\uffff\10\126\1\u0258\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0259\6\126\4\uffff\1\126\1\uffff\23\126\1\u0259\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u025a\21\126\4\uffff\1\126\1\uffff\10\126\1\u025a\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u025b\25\126\4\uffff\1\126\1\uffff\4\126\1\u025b\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u025c\13\126\4\uffff\1\126\1\uffff\16\126\1\u025c\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u025d\25\126\4\uffff\1\126\1\uffff\4\126\1\u025d\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u025f\6\126\4\uffff\1\126\1\uffff\23\126\1\u025f\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0261\16\126\4\uffff\1\126\1\uffff\13\126\1\u0261\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u0262\13\126\4\uffff\1\126\1\uffff\16\126\1\u0262\13"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0263\16\126\4\uffff\1\126\1\uffff\13\126\1\u0263\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0264\6\126\4\uffff\1\126\1\uffff\23\126\1\u0264\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0265\25\126\4\uffff\1\126\1\uffff\4\126\1\u0265\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0266\6\126\4\uffff\1\126\1\uffff\23\126\1\u0266\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\7"+
+            "\126\1\u0267\22\126\4\uffff\1\126\1\uffff\7\126\1\u0267\22\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\7"+
+            "\126\1\u0268\22\126\4\uffff\1\126\1\uffff\7\126\1\u0268\22\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0269\31\126\4\uffff\1\126\1\uffff\1\u0269\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u026a\21\126\4\uffff\1\126\1\uffff\10\126\1\u026a\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u026b\25\126\4\uffff\1\126\1\uffff\4\126\1\u026b\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u026c\25\126\4\uffff\1\126\1\uffff\4\126\1\u026c\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u026d\7\126\4\uffff\1\126\1\uffff\22\126\1\u026d\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u026e\23\126\4\uffff\1\126\1\uffff\6\126\1\u026e\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u0273\7\126\4\uffff\1\126\1\uffff\22\126\1\u0273\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0275\25\126\4\uffff\1\126\1\uffff\4\126\1\u0275\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0277\25\126\4\uffff\1\126\1\uffff\4\126\1\u0277\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u027a\12\126\4\uffff\1\126\1\uffff\17\126\1\u027a\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u027b\12\126\4\uffff\1\126\1\uffff\17\126\1\u027b\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u027c\6\126\4\uffff\1\126\1\uffff\23\126\1\u027c\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u027e\5\126\4\uffff\1\126\1\uffff\24\126\1\u027e\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u027f\12\126\4\uffff\1\126\1\uffff\17\126\1\u027f\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\u01eb\42\uffff\1\u0281\5\uffff\1\u0282\2\uffff\1\u0283"+
+            "\26\uffff\1\u0281\5\uffff\1\u0282\2\uffff\1\u0283",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0284\16\126\4\uffff\1\126\1\uffff\13\126\1\u0284\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\5"+
+            "\126\1\u0286\24\126\4\uffff\1\126\1\uffff\5\126\1\u0286\24\126",
+            "\1\u0288\20\uffff\1\u0287\16\uffff\1\u0288\20\uffff\1\u0287",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\32\112\6\uffff\32\112",
+            "\42\u00b4\1\u028c\3\u028e\10\u00b4\1\u028d\1\u00b4\12\u028e"+
+            "\6\u00b4\1\u028d\32\u028b\4\u00b4\1\u028e\1\u00b4\32\u028b\uff85"+
+            "\u00b4",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u028f\21\126\4\uffff\1\126\1\uffff\10\126\1\u028f\21"+
+            "\126",
+            "\2\u0154\2\uffff\1\u0154\22\uffff\1\u0154\1\uffff\1\112\3"+
+            "\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32\126\4\uffff"+
+            "\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0291\6\126\4\uffff\1\126\1\uffff\23\126\1\u0291\6\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u0294\13\126\4\uffff\1\126\1\uffff\16\126\1\u0294\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u0295\26\126\4\uffff\1\126\1\uffff\3\126\1\u0295\26\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\30"+
+            "\126\1\u0296\1\126\4\uffff\1\126\1\uffff\30\126\1\u0296\1\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0297\31\126\4\uffff\1\126\1\uffff\1\u0297\31\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0298\10\126\4\uffff\1\126\1\uffff\21\126\1\u0298\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0299\21\126\4\uffff\1\126\1\uffff\10\126\1\u0299\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\7"+
+            "\126\1\u029a\22\126\4\uffff\1\126\1\uffff\7\126\1\u029a\22\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u029b\26\126\4\uffff\1\126\1\uffff\3\126\1\u029b\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u029d\14\126\4\uffff\1\126\1\uffff\15\126\1\u029d\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u029e\21\126\4\uffff\1\126\1\uffff\10\126\1\u029e\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u029f\23\126\4\uffff\1\126\1\uffff\6\126\1\u029f\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u02a0\16\126\4\uffff\1\126\1\uffff\13\126\1\u02a0\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u02a1\6\126\4\uffff\1\126\1\uffff\23\126\1\u02a1\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u02a2\21\126\4\uffff\1\126\1\uffff\10\126\1\u02a2\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u02a3\26\126\4\uffff\1\126\1\uffff\3\126\1\u02a3\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u02a4\31\126\4\uffff\1\126\1\uffff\1\u02a4\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u02a5\12\126\4\uffff\1\126\1\uffff\17\126\1\u02a5\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u02a6\16\126\4\uffff\1\126\1\uffff\13\126\1\u02a6\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u02a7\6\126\4\uffff\1\126\1\uffff\23\126\1\u02a7\6\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u02a8\26\126\4\uffff\1\126\1\uffff\3\126\1\u02a8\26\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u02a9\13\126\4\uffff\1\126\1\uffff\16\126\1\u02a9\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02aa\25\126\4\uffff\1\126\1\uffff\4\126\1\u02aa\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\30"+
+            "\126\1\u02ab\1\126\4\uffff\1\126\1\uffff\30\126\1\u02ab\1\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u02ac\21\126\4\uffff\1\126\1\uffff\10\126\1\u02ac\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u02ad\10\126\4\uffff\1\126\1\uffff\21\126\1\u02ad\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u02ae\26\126\4\uffff\1\126\1\uffff\3\126\1\u02ae\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u02af\27\126\4\uffff\1\126\1\uffff\2\126\1\u02af\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02b0\25\126\4\uffff\1\126\1\uffff\4\126\1\u02b0\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u02b2\2\126\1\u02b1\4\126\4\uffff\1\126\1\uffff\22\126"+
+            "\1\u02b2\2\126\1\u02b1\4\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02b3\25\126\4\uffff\1\126\1\uffff\4\126\1\u02b3\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02b5\25\126\4\uffff\1\126\1\uffff\4\126\1\u02b5\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u02b6\14\126\4\uffff\1\126\1\uffff\15\126\1\u02b6\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u02b7\31\126\4\uffff\1\126\1\uffff\1\u02b7\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u02b8\6\126\4\uffff\1\126\1\uffff\23\126\1\u02b8\6\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u02b9\21\126\4\uffff\1\126\1\uffff\10\126\1\u02b9\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02ba\25\126\4\uffff\1\126\1\uffff\4\126\1\u02ba\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02bb\25\126\4\uffff\1\126\1\uffff\4\126\1\u02bb\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\30"+
+            "\126\1\u02bd\1\126\4\uffff\1\126\1\uffff\30\126\1\u02bd\1\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u02be\31\126\4\uffff\1\126\1\uffff\1\u02be\31\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u02bf\26\126\4\uffff\1\126\1\uffff\3\126\1\u02bf\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u02c0\7\126\4\uffff\1\126\1\uffff\22\126\1\u02c0\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u02c1\27\126\4\uffff\1\126\1\uffff\2\126\1\u02c1\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u02c2\14\126\4\uffff\1\126\1\uffff\15\126\1\u02c2\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u02c3\21\126\4\uffff\1\126\1\uffff\10\126\1\u02c3\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u02c4\6\126\4\uffff\1\126\1\uffff\23\126\1\u02c4\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02c5\25\126\4\uffff\1\126\1\uffff\4\126\1\u02c5\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u02c7\31\126\4\uffff\1\126\1\uffff\1\u02c7\31\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02cc\25\126\4\uffff\1\126\1\uffff\4\126\1\u02cc\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u02cd\26\126\4\uffff\1\126\1\uffff\3\126\1\u02cd\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u02ce\7\126\4\uffff\1\126\1\uffff\22\126\1\u02ce\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u02cf\30\126\4\uffff\1\126\1\uffff\1\126\1\u02cf\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u02d2\10\126\4\uffff\1\126\1\uffff\21\126\1\u02d2\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u02d3\31\126\4\uffff\1\126\1\uffff\1\u02d3\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u02d4\10\126\4\uffff\1\126\1\uffff\21\126\1\u02d4\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02d5\25\126\4\uffff\1\126\1\uffff\4\126\1\u02d5\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u02d6\15\126\4\uffff\1\126\1\uffff\14\126\1\u02d6\15"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02d7\25\126\4\uffff\1\126\1\uffff\4\126\1\u02d7\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u02d8\16\126\4\uffff\1\126\1\uffff\13\126\1\u02d8\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u02d9\16\126\4\uffff\1\126\1\uffff\13\126\1\u02d9\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02da\25\126\4\uffff\1\126\1\uffff\4\126\1\u02da\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u02dc\27\126\4\uffff\1\126\1\uffff\2\126\1\u02dc\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u02de\6\126\4\uffff\1\126\1\uffff\23\126\1\u02de\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u02e0\20\126\1\u02df\10\126\4\uffff\1\126\1\uffff\1\u02e0\20"+
+            "\126\1\u02df\10\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u02e1\14\126\4\uffff\1\126\1\uffff\15\126\1\u02e1\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u02e2\27\126\4\uffff\1\126\1\uffff\2\126\1\u02e2\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u02e3\10\126\4\uffff\1\126\1\uffff\21\126\1\u02e3\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u02e4\14\126\4\uffff\1\126\1\uffff\15\126\1\u02e4\14"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02e5\25\126\4\uffff\1\126\1\uffff\4\126\1\u02e5\25\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\26"+
+            "\126\1\u02e7\3\126\4\uffff\1\126\1\uffff\26\126\1\u02e7\3\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u02e8\16\126\4\uffff\1\126\1\uffff\13\126\1\u02e8\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u02e9\21\126\4\uffff\1\126\1\uffff\10\126\1\u02e9\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u02ed\31\126\4\uffff\1\126\1\uffff\1\u02ed\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\30"+
+            "\126\1\u02ee\1\126\4\uffff\1\126\1\uffff\30\126\1\u02ee\1\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u02ef\14\126\4\uffff\1\126\1\uffff\15\126\1\u02ef\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u02f0\7\126\4\uffff\1\126\1\uffff\22\126\1\u02f0\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u02f2\31\126\4\uffff\1\126\1\uffff\1\u02f2\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02f3\25\126\4\uffff\1\126\1\uffff\4\126\1\u02f3\25\126",
+            "",
+            "",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u02f4\6\126\4\uffff\1\126\1\uffff\23\126\1\u02f4\6\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "",
+            "\2\u0154\2\uffff\1\u0154\22\uffff\1\u0154\1\uffff\1\112\3"+
+            "\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32\126\4\uffff"+
+            "\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u02f6\6\126\4\uffff\1\126\1\uffff\23\126\1\u02f6\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u02f7\7\126\4\uffff\1\126\1\uffff\22\126\1\u02f7\7\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u02f8\6\126\4\uffff\1\126\1\uffff\23\126\1\u02f8\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02f9\25\126\4\uffff\1\126\1\uffff\4\126\1\u02f9\25\126",
+            "",
+            "",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u02fa\25\126\4\uffff\1\126\1\uffff\4\126\1\u02fa\25\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "",
+            "",
+            "",
+            "\42\u00b4\1\u028c\3\u02fd\10\u00b4\1\u028d\1\u00b4\12\u02fd"+
+            "\6\u00b4\1\u028d\32\u02fc\4\u00b4\1\u02fd\1\u00b4\32\u02fc\uff85"+
+            "\u00b4",
+            "",
+            "\101\u00b4\32\u02fe\6\u00b4\32\u02fe\uff85\u00b4",
+            "\42\u00b4\1\u028c\3\u028e\10\u00b4\1\u028d\1\u00b4\12\u028e"+
+            "\6\u00b4\1\u028d\32\u028b\4\u00b4\1\u028e\1\u00b4\32\u028b\uff85"+
+            "\u00b4",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u02ff\26\126\4\uffff\1\126\1\uffff\3\126\1\u02ff\26\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u0301\15\126\4\uffff\1\126\1\uffff\14\126\1\u0301\15"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0304\16\126\4\uffff\1\126\1\uffff\13\126\1\u0304\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0305\27\126\4\uffff\1\126\1\uffff\2\126\1\u0305\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0306\31\126\4\uffff\1\126\1\uffff\1\u0306\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0308\6\126\4\uffff\1\126\1\uffff\23\126\1\u0308\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0309\14\126\4\uffff\1\126\1\uffff\15\126\1\u0309\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u030a\25\126\4\uffff\1\126\1\uffff\4\126\1\u030a\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u030b\25\126\4\uffff\1\126\1\uffff\4\126\1\u030b\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\25"+
+            "\126\1\u030d\4\126\4\uffff\1\126\1\uffff\25\126\1\u030d\4\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u030e\5\126\4\uffff\1\126\1\uffff\24\126\1\u030e\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0310\25\126\4\uffff\1\126\1\uffff\4\126\1\u0310\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0311\16\126\4\uffff\1\126\1\uffff\13\126\1\u0311\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0314\21\126\4\uffff\1\126\1\uffff\10\126\1\u0314\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\u0315\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u0316\12\126\4\uffff\1\126\1\uffff\17\126\1\u0316\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0317\14\126\4\uffff\1\126\1\uffff\15\126\1\u0317\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u0318\15\126\4\uffff\1\126\1\uffff\14\126\1\u0318\15"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0319\25\126\4\uffff\1\126\1\uffff\4\126\1\u0319\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u031b\10\126\4\uffff\1\126\1\uffff\21\126\1\u031b\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u031c\31\126\4\uffff\1\126\1\uffff\1\u031c\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u031d\25\126\4\uffff\1\126\1\uffff\4\126\1\u031d\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u031f\7\126\4\uffff\1\126\1\uffff\22\126\1\u031f\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0320\6\126\4\uffff\1\126\1\uffff\23\126\1\u0320\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u0321\26\126\4\uffff\1\126\1\uffff\3\126\1\u0321\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u0323\31\126\4\uffff\1\126\1\uffff\1\u0323\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0324\14\126\4\uffff\1\126\1\uffff\15\126\1\u0324\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\u0326\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0327\14\126\4\uffff\1\126\1\uffff\15\126\1\u0327\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0329\25\126\4\uffff\1\126\1\uffff\4\126\1\u0329\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u032a\25\126\4\uffff\1\126\1\uffff\4\126\1\u032a\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u032c\21\126\4\uffff\1\126\1\uffff\10\126\1\u032c\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u032d\27\126\4\uffff\1\126\1\uffff\2\126\1\u032d\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\u032f\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0330\14\126\4\uffff\1\126\1\uffff\15\126\1\u0330\14"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0331\27\126\4\uffff\1\126\1\uffff\2\126\1\u0331\27\126",
+            "",
+            "",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0333\25\126\4\uffff\1\126\1\uffff\4\126\1\u0333\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0334\25\126\4\uffff\1\126\1\uffff\4\126\1\u0334\25\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0336\16\126\4\uffff\1\126\1\uffff\13\126\1\u0336\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0337\25\126\4\uffff\1\126\1\uffff\4\126\1\u0337\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0339\21\126\4\uffff\1\126\1\uffff\10\126\1\u0339\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u033a\10\126\4\uffff\1\126\1\uffff\21\126\1\u033a\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u033b\6\126\4\uffff\1\126\1\uffff\23\126\1\u033b\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u033c\25\126\4\uffff\1\126\1\uffff\4\126\1\u033c\25\126",
+            "\2\u02eb\2\uffff\1\u02eb\22\uffff\1\u02eb\1\uffff\1\112\3"+
+            "\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32\126\4\uffff"+
+            "\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u033d\6\126\4\uffff\1\126\1\uffff\23\126\1\u033d\6\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u033f\5\126\4\uffff\1\126\1\uffff\24\126\1\u033f\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0340\14\126\4\uffff\1\126\1\uffff\15\126\1\u0340\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u0341\5\126\4\uffff\1\126\1\uffff\24\126\1\u0341\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0342\6\126\4\uffff\1\126\1\uffff\23\126\1\u0342\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0344\6\126\4\uffff\1\126\1\uffff\23\126\1\u0344\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u0346\7\126\4\uffff\1\126\1\uffff\22\126\1\u0346\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u0348\13\126\4\uffff\1\126\1\uffff\16\126\1\u0348\13"+
+            "\126",
+            "",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0349\10\126\4\uffff\1\126\1\uffff\21\126\1\u0349\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u034b\23\126\4\uffff\1\126\1\uffff\6\126\1\u034b\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u034d\27\126\4\uffff\1\126\1\uffff\2\126\1\u034d\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u034e\10\126\4\uffff\1\126\1\uffff\21\126\1\u034e\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u034f\31\126\4\uffff\1\126\1\uffff\1\u034f\31\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0350\21\126\4\uffff\1\126\1\uffff\10\126\1\u0350\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0352\25\126\4\uffff\1\126\1\uffff\4\126\1\u0352\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\42\u00b4\1\u028c\3\u02fd\10\u00b4\1\u028d\1\u00b4\12\u02fd"+
+            "\6\u00b4\1\u028d\32\u02fc\4\u00b4\1\u02fd\1\u00b4\32\u02fc\uff85"+
+            "\u00b4",
+            "\42\u00b4\1\u028c\3\u02fd\10\u00b4\1\u028d\1\u00b4\12\u02fd"+
+            "\6\u00b4\1\u028d\32\u02fc\4\u00b4\1\u02fd\1\u00b4\32\u02fc\uff85"+
+            "\u00b4",
+            "\43\u00b4\3\u0354\12\u00b4\12\u0354\7\u00b4\32\u0354\4\u00b4"+
+            "\1\u0354\1\u00b4\32\u0354\uff85\u00b4",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0355\21\126\4\uffff\1\126\1\uffff\10\126\1\u0355\21"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u0356\13\126\4\uffff\1\126\1\uffff\16\126\1\u0356\13"+
+            "\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0357\14\126\4\uffff\1\126\1\uffff\15\126\1\u0357\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0358\10\126\4\uffff\1\126\1\uffff\21\126\1\u0358\10"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0359\25\126\4\uffff\1\126\1\uffff\4\126\1\u0359\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u035a\25\126\4\uffff\1\126\1\uffff\4\126\1\u035a\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u035c\16\126\4\uffff\1\126\1\uffff\13\126\1\u035c\16"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u035d\25\126\4\uffff\1\126\1\uffff\4\126\1\u035d\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u035e\10\126\4\uffff\1\126\1\uffff\21\126\1\u035e\10"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\30"+
+            "\126\1\u0360\1\126\4\uffff\1\126\1\uffff\30\126\1\u0360\1\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0361\14\126\4\uffff\1\126\1\uffff\15\126\1\u0361\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0362\21\126\4\uffff\1\126\1\uffff\10\126\1\u0362\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0363\25\126\4\uffff\1\126\1\uffff\4\126\1\u0363\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0364\6\126\4\uffff\1\126\1\uffff\23\126\1\u0364\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0367\16\126\4\uffff\1\126\1\uffff\13\126\1\u0367\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0368\27\126\4\uffff\1\126\1\uffff\2\126\1\u0368\27\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u036a\21\126\4\uffff\1\126\1\uffff\10\126\1\u036a\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u036c\6\126\4\uffff\1\126\1\uffff\23\126\1\u036c\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u036e\1\126\1\u0370\2\126\1\u036f\21\126\4\uffff\1\126"+
+            "\1\uffff\3\126\1\u036e\1\126\1\u0370\2\126\1\u036f\21\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0373\14\126\4\uffff\1\126\1\uffff\15\126\1\u0373\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0374\6\126\4\uffff\1\126\1\uffff\23\126\1\u0374\6\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0375\27\126\4\uffff\1\126\1\uffff\2\126\1\u0375\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0376\27\126\4\uffff\1\126\1\uffff\2\126\1\u0376\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\12"+
+            "\126\1\u0377\17\126\4\uffff\1\126\1\uffff\12\126\1\u0377\17"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0378\6\126\4\uffff\1\126\1\uffff\23\126\1\u0378\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u0379\16\126\4\uffff\1\126\1\uffff\13\126\1\u0379\16"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u037b\14\126\4\uffff\1\126\1\uffff\15\126\1\u037b\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0380\27\126\4\uffff\1\126\1\uffff\2\126\1\u0380\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0381\6\126\4\uffff\1\126\1\uffff\23\126\1\u0381\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0382\25\126\4\uffff\1\126\1\uffff\4\126\1\u0382\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\u0383\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\u0384\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0386\14\126\4\uffff\1\126\1\uffff\15\126\1\u0386\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\2\126\1\u0387\7\126\6"+
+            "\uffff\1\112\32\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0389\6\126\4\uffff\1\126\1\uffff\23\126\1\u0389\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\14"+
+            "\126\1\u038b\15\126\4\uffff\1\126\1\uffff\14\126\1\u038b\15"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u038c\13\126\4\uffff\1\126\1\uffff\16\126\1\u038c\13"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\43\u00b4\3\u0354\12\u00b4\12\u0354\7\u00b4\32\u0354\4\u00b4"+
+            "\1\u0354\1\u00b4\32\u0354\uff85\u00b4",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u038e\14\126\4\uffff\1\126\1\uffff\15\126\1\u038e\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u038f\5\126\4\uffff\1\126\1\uffff\24\126\1\u038f\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\2\126\1\u0390\7\126\6"+
+            "\uffff\1\112\32\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u0391\23\126\4\uffff\1\126\1\uffff\6\126\1\u0391\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u0392\26\126\4\uffff\1\126\1\uffff\3\126\1\u0392\26\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\u0393\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0394\14\126\4\uffff\1\126\1\uffff\15\126\1\u0394\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0395\25\126\4\uffff\1\126\1\uffff\4\126\1\u0395\25\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\u0396\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0397\6\126\4\uffff\1\126\1\uffff\23\126\1\u0397\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0398\14\126\4\uffff\1\126\1\uffff\15\126\1\u0398\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u039a\6\126\4\uffff\1\126\1\uffff\23\126\1\u039a\6\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u039b\31\126\4\uffff\1\126\1\uffff\1\u039b\31\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u039c\25\126\4\uffff\1\126\1\uffff\4\126\1\u039c\25\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u039d\13\126\4\uffff\1\126\1\uffff\16\126\1\u039d\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u039e\14\126\4\uffff\1\126\1\uffff\15\126\1\u039e\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u039f\16\126\4\uffff\1\126\1\uffff\13\126\1\u039f\16"+
+            "\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u03a0\23\126\4\uffff\1\126\1\uffff\6\126\1\u03a0\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\u03a1\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u03a2\31\126\4\uffff\1\126\1\uffff\1\u03a2\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u03a3\21\126\4\uffff\1\126\1\uffff\10\126\1\u03a3\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\2\u0154\2\uffff\1\u0154\22\uffff\1\u0154\1\uffff\1\112\3"+
+            "\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32\126\4\uffff"+
+            "\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u03a5\21\126\4\uffff\1\126\1\uffff\10\126\1\u03a5\21"+
+            "\126",
+            "",
+            "",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u03a6\6\126\4\uffff\1\126\1\uffff\23\126\1\u03a6\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u03a9\30\126\4\uffff\1\126\1\uffff\1\126\1\u03a9\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u03aa\5\126\4\uffff\1\126\1\uffff\24\126\1\u03aa\5\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u03ac\21\126\4\uffff\1\126\1\uffff\10\126\1\u03ac\21"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\17"+
+            "\126\1\u03ad\12\126\4\uffff\1\126\1\uffff\17\126\1\u03ad\12"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u03ae\14\126\4\uffff\1\126\1\uffff\15\126\1\u03ae\14"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u03af\23\126\4\uffff\1\126\1\uffff\6\126\1\u03af\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u03b0\7\126\4\uffff\1\126\1\uffff\22\126\1\u03b0\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03b1\25\126\4\uffff\1\126\1\uffff\4\126\1\u03b1\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03b3\25\126\4\uffff\1\126\1\uffff\4\126\1\u03b3\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u03b5\10\126\4\uffff\1\126\1\uffff\21\126\1\u03b5\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u03b7\6\126\4\uffff\1\126\1\uffff\23\126\1\u03b7\6\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u03b8\30\126\4\uffff\1\126\1\uffff\1\126\1\u03b8\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u03ba\5\126\4\uffff\1\126\1\uffff\24\126\1\u03ba\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u03bb\6\126\4\uffff\1\126\1\uffff\23\126\1\u03bb\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u03bc\13\126\4\uffff\1\126\1\uffff\16\126\1\u03bc\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u03be\10\126\4\uffff\1\126\1\uffff\21\126\1\u03be\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u03bf\27\126\4\uffff\1\126\1\uffff\2\126\1\u03bf\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u03c0\14\126\4\uffff\1\126\1\uffff\15\126\1\u03c0\14"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u03c1\7\126\4\uffff\1\126\1\uffff\22\126\1\u03c1\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u03c2\13\126\4\uffff\1\126\1\uffff\16\126\1\u03c2\13"+
+            "\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\30"+
+            "\126\1\u03c3\1\126\4\uffff\1\126\1\uffff\30\126\1\u03c3\1\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u03c4\7\126\4\uffff\1\126\1\uffff\22\126\1\u03c4\7\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u03c5\13\126\4\uffff\1\126\1\uffff\16\126\1\u03c5\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u03c8\7\126\4\uffff\1\u03c9\1\uffff\22\126\1\u03c8\7"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\u03cb\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u03cc\10\126\4\uffff\1\126\1\uffff\21\126\1\u03cc\10"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u03cd\14\126\4\uffff\1\126\1\uffff\15\126\1\u03cd\14"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03ce\25\126\4\uffff\1\126\1\uffff\4\126\1\u03ce\25\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03cf\25\126\4\uffff\1\126\1\uffff\4\126\1\u03cf\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u03d0\16\126\4\uffff\1\126\1\uffff\13\126\1\u03d0\16"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u03d1\30\126\4\uffff\1\126\1\uffff\1\126\1\u03d1\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03d2\25\126\4\uffff\1\126\1\uffff\4\126\1\u03d2\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u03d3\31\126\4\uffff\1\126\1\uffff\1\u03d3\31\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03d4\25\126\4\uffff\1\126\1\uffff\4\126\1\u03d4\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\7"+
+            "\126\1\u03d5\22\126\4\uffff\1\126\1\uffff\7\126\1\u03d5\22\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u03d6\23\126\4\uffff\1\126\1\uffff\6\126\1\u03d6\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u03d7\6\126\4\uffff\1\126\1\uffff\23\126\1\u03d7\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u03d8\10\126\4\uffff\1\126\1\uffff\21\126\1\u03d8\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\u03d9\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03da\25\126\4\uffff\1\126\1\uffff\4\126\1\u03da\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u03db\14\126\4\uffff\1\126\1\uffff\15\126\1\u03db\14"+
+            "\126",
+            "",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u03dd\21\126\4\uffff\1\126\1\uffff\10\126\1\u03dd\21"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u03de\6\126\4\uffff\1\126\1\uffff\23\126\1\u03de\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u03df\31\126\4\uffff\1\126\1\uffff\1\u03df\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\24"+
+            "\126\1\u03e0\5\126\4\uffff\1\126\1\uffff\24\126\1\u03e0\5\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u03e1\23\126\4\uffff\1\126\1\uffff\6\126\1\u03e1\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03e2\25\126\4\uffff\1\126\1\uffff\4\126\1\u03e2\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u03e3\16\126\4\uffff\1\126\1\uffff\13\126\1\u03e3\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\6"+
+            "\126\1\u03e4\23\126\4\uffff\1\126\1\uffff\6\126\1\u03e4\23\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u03e5\6\126\4\uffff\1\126\1\uffff\23\126\1\u03e5\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\5"+
+            "\126\1\u03e6\24\126\4\uffff\1\126\1\uffff\5\126\1\u03e6\24\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03e7\25\126\4\uffff\1\126\1\uffff\4\126\1\u03e7\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u03e9\21\126\4\uffff\1\126\1\uffff\10\126\1\u03e9\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u03eb\10\126\4\uffff\1\126\1\uffff\21\126\1\u03eb\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u03ec\10\126\4\uffff\1\126\1\uffff\21\126\1\u03ec\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u03ee\14\126\4\uffff\1\126\1\uffff\15\126\1\u03ee\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u03ef\10\126\4\uffff\1\126\1\uffff\21\126\1\u03ef\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u03f0\30\126\4\uffff\1\126\1\uffff\1\126\1\u03f0\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u03f1\7\126\4\uffff\1\126\1\uffff\22\126\1\u03f1\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03f2\25\126\4\uffff\1\126\1\uffff\4\126\1\u03f2\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03f4\25\126\4\uffff\1\126\1\uffff\4\126\1\u03f4\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03f5\25\126\4\uffff\1\126\1\uffff\4\126\1\u03f5\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u03f6\25\126\4\uffff\1\126\1\uffff\4\126\1\u03f6\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u03f8\27\126\4\uffff\1\126\1\uffff\2\126\1\u03f8\27\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u03f9\13\126\4\uffff\1\126\1\uffff\16\126\1\u03f9\13"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u03fb\21\126\4\uffff\1\126\1\uffff\10\126\1\u03fb\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u03fc\31\126\4\uffff\1\126\1\uffff\1\u03fc\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u03fd\16\126\4\uffff\1\126\1\uffff\13\126\1\u03fd\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u03fe\31\126\4\uffff\1\126\1\uffff\1\u03fe\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u03ff\10\126\4\uffff\1\126\1\uffff\21\126\1\u03ff\10"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0400\10\126\4\uffff\1\126\1\uffff\21\126\1\u0400\10"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\21"+
+            "\126\1\u0401\10\126\4\uffff\1\126\1\uffff\21\126\1\u0401\10"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u0403\13\126\4\uffff\1\126\1\uffff\16\126\1\u0403\13"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0404\6\126\4\uffff\1\126\1\uffff\23\126\1\u0404\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u0405\14\126\4\uffff\1\126\1\uffff\15\126\1\u0405\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0406\25\126\4\uffff\1\126\1\uffff\4\126\1\u0406\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\126\1\u0407\30\126\4\uffff\1\126\1\uffff\1\126\1\u0407\30\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0408\25\126\4\uffff\1\126\1\uffff\4\126\1\u0408\25\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0409\6\126\4\uffff\1\126\1\uffff\23\126\1\u0409\6\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u040b\7\126\4\uffff\1\126\1\uffff\22\126\1\u040b\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\3"+
+            "\126\1\u040c\26\126\4\uffff\1\126\1\uffff\3\126\1\u040c\26\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\13"+
+            "\126\1\u040d\16\126\4\uffff\1\126\1\uffff\13\126\1\u040d\16"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u040e\14\126\4\uffff\1\126\1\uffff\15\126\1\u040e\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\1"+
+            "\u040f\31\126\4\uffff\1\126\1\uffff\1\u040f\31\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0411\25\126\4\uffff\1\126\1\uffff\4\126\1\u0411\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0412\27\126\4\uffff\1\126\1\uffff\2\126\1\u0412\27\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\2"+
+            "\126\1\u0413\27\126\4\uffff\1\126\1\uffff\2\126\1\u0413\27\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\4"+
+            "\126\1\u0415\25\126\4\uffff\1\126\1\uffff\4\126\1\u0415\25\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\23"+
+            "\126\1\u0416\6\126\4\uffff\1\126\1\uffff\23\126\1\u0416\6\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\22"+
+            "\126\1\u0417\7\126\4\uffff\1\126\1\uffff\22\126\1\u0417\7\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\10"+
+            "\126\1\u0418\21\126\4\uffff\1\126\1\uffff\10\126\1\u0418\21"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\16"+
+            "\126\1\u041a\13\126\4\uffff\1\126\1\uffff\16\126\1\u041a\13"+
+            "\126",
+            "",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\15"+
+            "\126\1\u041b\14\126\4\uffff\1\126\1\uffff\15\126\1\u041b\14"+
+            "\126",
+            "\1\112\3\126\10\uffff\1\112\1\uffff\12\126\6\uffff\1\112\32"+
+            "\126\4\uffff\1\126\1\uffff\32\126",
             ""
     };
 
-    static final short[] DFA49_eot = DFA.unpackEncodedString(DFA49_eotS);
-    static final short[] DFA49_eof = DFA.unpackEncodedString(DFA49_eofS);
-    static final char[] DFA49_min = DFA.unpackEncodedStringToUnsignedChars(DFA49_minS);
-    static final char[] DFA49_max = DFA.unpackEncodedStringToUnsignedChars(DFA49_maxS);
-    static final short[] DFA49_accept = DFA.unpackEncodedString(DFA49_acceptS);
-    static final short[] DFA49_special = DFA.unpackEncodedString(DFA49_specialS);
-    static final short[][] DFA49_transition;
+    static final short[] DFA57_eot = DFA.unpackEncodedString(DFA57_eotS);
+    static final short[] DFA57_eof = DFA.unpackEncodedString(DFA57_eofS);
+    static final char[] DFA57_min = DFA.unpackEncodedStringToUnsignedChars(DFA57_minS);
+    static final char[] DFA57_max = DFA.unpackEncodedStringToUnsignedChars(DFA57_maxS);
+    static final short[] DFA57_accept = DFA.unpackEncodedString(DFA57_acceptS);
+    static final short[] DFA57_special = DFA.unpackEncodedString(DFA57_specialS);
+    static final short[][] DFA57_transition;
 
     static {
-        int numStates = DFA49_transitionS.length;
-        DFA49_transition = new short[numStates][];
+        int numStates = DFA57_transitionS.length;
+        DFA57_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA49_transition[i] = DFA.unpackEncodedString(DFA49_transitionS[i]);
+            DFA57_transition[i] = DFA.unpackEncodedString(DFA57_transitionS[i]);
         }
     }
 
-    class DFA49 extends DFA {
+    class DFA57 extends DFA {
 
-        public DFA49(BaseRecognizer recognizer) {
+        public DFA57(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 49;
-            this.eot = DFA49_eot;
-            this.eof = DFA49_eof;
-            this.min = DFA49_min;
-            this.max = DFA49_max;
-            this.accept = DFA49_accept;
-            this.special = DFA49_special;
-            this.transition = DFA49_transition;
+            this.decisionNumber = 57;
+            this.eot = DFA57_eot;
+            this.eof = DFA57_eof;
+            this.min = DFA57_min;
+            this.max = DFA57_max;
+            this.accept = DFA57_accept;
+            this.special = DFA57_special;
+            this.transition = DFA57_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( BLOCK_COMMENT | LINE_COMMENT | WHITESPACE | OPERATOR | OR_OPERATOR | AND_OPERATOR | NOT_OPERATOR | NUMBER_UNSIGNED | STRING | SOME_TYPES | SCALE_TYPES | SIZE_TYPES | CHAR_TYPES | CHAR_TYPE | BYTE_TYPE | RAW_TYPE | TIMESTAMP_TYPE | YEAR_TYPE | DAY_TYPE | SECOND_TYPE | KEYWORD | BEGIN_KEYWORD | END_KEYWORD | DECLARE_KEYWORD | EXCEPTION_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | NOT_NULL_KEYWORD | NULL_KEYWORD | DEFAULT_KEYWORD | ROWTYPE_KEYWORD | LIKE_TYPE_KEYWORD | TYPE_KEYWORD | TRUE_KEYWORD | FALSE_KEYWORD | CONSTANT_KEYWORD | WITH_KEYWORD | LOCAL_KEYWORD | TIME_KEYWORD | ZONE_KEYWORD | INTERVAL_KEYWORD | TO_KEYWORD | MONTH_KEYWORD | SUBTYPE_KEYWORD | IS_KEYWORD | RECORD_KEYWORD | CREATE_KEYWORD | REPLACE_KEYWORD | FUNCTION_KEYWORD | AS_KEYWORD | RETURN_KEYWORD | IN_KEYWORD | OUT_KEYWORD | NOCOPY_KEYWORD | AUTHID_KEYWORD | CURRENT_USER_KEYWORD | DEFINER_KEYWORD | DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD | PROCEDURE_KEYWORD | IF_KEYWORD | ELSE_KEYWORD | ELSIF_KEYWORD | ENDIF_KEYWORD | IS_NULL_KEYWORD | IS_NOT_NULL_KEYWORD | NOT_IN_KEYWORD | GOTO_KEYWORD | LOOP_KEYWORD | END_LOOP_KEYWORD | WHILE_KEYWORD | FOR_KEYWORD | REVERSE_KEYWORD | SELECT_KEYWORD | COUNT_KEYWORD | EXCEPTION_INIT_KEYWORD | LIKE_KEYWORD | RAISE_KEYWORD | PRAGMA_KEYWORD | AUTONOMOUS_TRANSACTION_KEYWORD | CASE_KEYWORD | END_CASE_KEYWORD | CLOSE_KEYWORD | TABLE_KEYWORD | OF_KEYWORD | INDEX_KEYWORD | BY_KEYWORD | VARRAY_KEYWORD | VARYING_KEYWORD | ARRAY_KEYWORD | COMMIT_KEYWORD | REF_KEYWORD | CONTINUE_KEYWORD | CURSOR_KEYWORD | DELETE_KEYWORD | EXECUTE_KEYWORD | IMMEDIATE_KEYWORD | EXIT_KEYWORD | INTO_KEYWORD | USING_KEYWORD | BULK_KEYWORD | COLLECT_KEYWORD | FETCH_KEYWORD | LIMIT_KEYWORD | FORALL_KEYWORD | SAVE_KEYWORD | EXCEPTIONS_KEYWORD | INDICES_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | INLINE_KEYWORD | INSERT_KEYWORD | LOCK_KEYWORD | MERGE_KEYWORD | OPEN_KEYWORD | PACKAGE_KEYWORD | BODY_KEYWORD | RESTRICT_REFERENCES_KEYWORD | RETURNING_KEYWORD | ROLLBACK_KEYWORD | SAVEPOINT_KEYWORD | SERIALLY_REUSABLE_KEYWORD | SET_KEYWORD | TRANSACTION_KEYWORD | NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | SQLCODE_KEYWORD | SQLERRM_KEYWORD | UPDATE_KEYWORD | EXISTS_KEYWORD | TRIGGER_KEYWORD | BEFORE_KEYWORD | AFTER_KEYWORD | INSTEAD_KEYWORD | ON_KEYWORD | NESTED_KEYWORD | REFERENCING_KEYWORD | OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD | EACH_KEYWORD | ROW_KEYWORD | FOLLOWS_KEYWORD | ENABLE_KEYWORD | DISABLE_KEYWORD | OID_KEYWORD | OBJECT_KEYWORD | UNDER_KEYWORD | FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD | MEMBER_KEYWORD | STATIC_KEYWORD | CONSTRUCTOR_KEYWORD | SELF_KEYWORD | RESULT_KEYWORD | MAP_KEYWORD | ORDER_KEYWORD | JOIN_KEYWORD | THE_REST );";
+            return "1:1: Tokens : ( T__205 | T__206 | T__207 | T__208 | T__209 | T__210 | T__211 | T__212 | T__213 | T__214 | T__215 | T__216 | T__217 | T__218 | T__219 | T__220 | T__221 | T__222 | T__223 | T__224 | T__225 | T__226 | T__227 | T__228 | BLOCK_COMMENT | LINE_COMMENT | WHITESPACE | OR_OPERATOR | AND_OPERATOR | NOT_OPERATOR | NUMBER_UNSIGNED | STRING | SOME_TYPES | SCALE_TYPES | SIZE_TYPES | CHAR_TYPES | CHAR_TYPE | BYTE_TYPE | RAW_TYPE | TIMESTAMP_TYPE | YEAR_TYPE | DAY_TYPE | SECOND_TYPE | KEYWORD | BEGIN_KEYWORD | END_KEYWORD | DECLARE_KEYWORD | EXCEPTION_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | NOT_NULL_KEYWORD | NULL_KEYWORD | DEFAULT_KEYWORD | ROWTYPE_KEYWORD | LIKE_TYPE_KEYWORD | TYPE_KEYWORD | TRUE_KEYWORD | FALSE_KEYWORD | CONSTANT_KEYWORD | WITH_KEYWORD | LOCAL_KEYWORD | TIME_KEYWORD | ZONE_KEYWORD | INTERVAL_KEYWORD | TO_KEYWORD | MONTH_KEYWORD | SUBTYPE_KEYWORD | IS_KEYWORD | RECORD_KEYWORD | CREATE_KEYWORD | REPLACE_KEYWORD | FUNCTION_KEYWORD | AS_KEYWORD | RETURN_KEYWORD | IN_KEYWORD | OUT_KEYWORD | NOCOPY_KEYWORD | AUTHID_KEYWORD | CURRENT_USER_KEYWORD | DEFINER_KEYWORD | DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD | PROCEDURE_KEYWORD | IF_KEYWORD | ELSE_KEYWORD | ELSIF_KEYWORD | ENDIF_KEYWORD | IS_NULL_KEYWORD | IS_NOT_NULL_KEYWORD | NOT_IN_KEYWORD | GOTO_KEYWORD | LOOP_KEYWORD | END_LOOP_KEYWORD | WHILE_KEYWORD | FOR_KEYWORD | REVERSE_KEYWORD | SELECT_KEYWORD | COUNT_KEYWORD | EXCEPTION_INIT_KEYWORD | LIKE_KEYWORD | RAISE_KEYWORD | PRAGMA_KEYWORD | AUTONOMOUS_TRANSACTION_KEYWORD | CASE_KEYWORD | END_CASE_KEYWORD | CLOSE_KEYWORD | TABLE_KEYWORD | OF_KEYWORD | INDEX_KEYWORD | BY_KEYWORD | VARRAY_KEYWORD | VARYING_KEYWORD | ARRAY_KEYWORD | COMMIT_KEYWORD | REF_KEYWORD | CONTINUE_KEYWORD | CURSOR_KEYWORD | DELETE_KEYWORD | EXECUTE_KEYWORD | IMMEDIATE_KEYWORD | EXIT_KEYWORD | INTO_KEYWORD | USING_KEYWORD | BULK_KEYWORD | COLLECT_KEYWORD | FETCH_KEYWORD | LIMIT_KEYWORD | FORALL_KEYWORD | SAVE_KEYWORD | EXCEPTIONS_KEYWORD | INDICES_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | INLINE_KEYWORD | INSERT_KEYWORD | LOCK_KEYWORD | MERGE_KEYWORD | OPEN_KEYWORD | PACKAGE_KEYWORD | BODY_KEYWORD | RESTRICT_REFERENCES_KEYWORD | RETURNING_KEYWORD | ROLLBACK_KEYWORD | SAVEPOINT_KEYWORD | SERIALLY_REUSABLE_KEYWORD | SET_KEYWORD | TRANSACTION_KEYWORD | NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | SQLCODE_KEYWORD | SQLERRM_KEYWORD | UPDATE_KEYWORD | EXISTS_KEYWORD | TRIGGER_KEYWORD | BEFORE_KEYWORD | AFTER_KEYWORD | INSTEAD_KEYWORD | ON_KEYWORD | NESTED_KEYWORD | REFERENCING_KEYWORD | OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD | EACH_KEYWORD | ROW_KEYWORD | FOLLOWS_KEYWORD | ENABLE_KEYWORD | DISABLE_KEYWORD | OID_KEYWORD | OBJECT_KEYWORD | UNDER_KEYWORD | FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD | MEMBER_KEYWORD | STATIC_KEYWORD | CONSTRUCTOR_KEYWORD | SELF_KEYWORD | RESULT_KEYWORD | MAP_KEYWORD | ORDER_KEYWORD | JOIN_KEYWORD | IDENTIFIER | EXT_IDENTIFIER | ALIAS | SEPARATOR | THE_REST );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA49_21 = input.LA(1);
+                        int LA57_852 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA49_21>='\u0000' && LA49_21<='\uFFFF')) ) {s = 69;}
+                        if ( ((LA57_852>='#' && LA57_852<='%')||(LA57_852>='0' && LA57_852<='9')||(LA57_852>='A' && LA57_852<='Z')||LA57_852=='_'||(LA57_852>='a' && LA57_852<='z')) ) {s = 852;}
 
-                        else s = 42;
+                        else if ( ((LA57_852>='\u0000' && LA57_852<='\"')||(LA57_852>='&' && LA57_852<='/')||(LA57_852>=':' && LA57_852<='@')||(LA57_852>='[' && LA57_852<='^')||LA57_852=='`'||(LA57_852>='{' && LA57_852<='\uFFFF')) ) {s = 180;}
+
+                        else s = 74;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA49_0 = input.LA(1);
+                        int LA57_764 = input.LA(1);
 
                         s = -1;
-                        if ( (LA49_0=='/') ) {s = 1;}
+                        if ( ((LA57_764>='A' && LA57_764<='Z')||(LA57_764>='a' && LA57_764<='z')) ) {s = 764;}
 
-                        else if ( (LA49_0=='-') ) {s = 2;}
+                        else if ( (LA57_764=='\"') ) {s = 652;}
 
-                        else if ( ((LA49_0>='\t' && LA49_0<='\n')||LA49_0=='\r'||LA49_0==' ') ) {s = 3;}
+                        else if ( (LA57_764=='.'||LA57_764=='@') ) {s = 653;}
 
-                        else if ( (LA49_0==':') ) {s = 4;}
+                        else if ( ((LA57_764>='#' && LA57_764<='%')||(LA57_764>='0' && LA57_764<='9')||LA57_764=='_') ) {s = 765;}
 
-                        else if ( (LA49_0=='+') ) {s = 5;}
+                        else if ( ((LA57_764>='\u0000' && LA57_764<='!')||(LA57_764>='&' && LA57_764<='-')||LA57_764=='/'||(LA57_764>=':' && LA57_764<='?')||(LA57_764>='[' && LA57_764<='^')||LA57_764=='`'||(LA57_764>='{' && LA57_764<='\uFFFF')) ) {s = 180;}
 
-                        else if ( (LA49_0=='*') ) {s = 6;}
+                        else s = 74;
 
-                        else if ( (LA49_0=='|') ) {s = 7;}
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA57_6 = input.LA(1);
 
-                        else if ( (LA49_0=='=') ) {s = 8;}
+                        s = -1;
+                        if ( ((LA57_6>='\u0000' && LA57_6<='\uFFFF')) ) {s = 59;}
 
-                        else if ( (LA49_0=='<') ) {s = 9;}
+                        else s = 58;
 
-                        else if ( (LA49_0=='!') ) {s = 10;}
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA57_653 = input.LA(1);
 
-                        else if ( (LA49_0=='~') ) {s = 11;}
+                        s = -1;
+                        if ( ((LA57_653>='A' && LA57_653<='Z')||(LA57_653>='a' && LA57_653<='z')) ) {s = 766;}
 
-                        else if ( (LA49_0=='^') ) {s = 12;}
+                        else if ( ((LA57_653>='\u0000' && LA57_653<='@')||(LA57_653>='[' && LA57_653<='`')||(LA57_653>='{' && LA57_653<='\uFFFF')) ) {s = 180;}
 
-                        else if ( (LA49_0=='>') ) {s = 13;}
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA57_651 = input.LA(1);
 
-                        else if ( (LA49_0=='.') ) {s = 14;}
+                        s = -1;
+                        if ( (LA57_651=='\"') ) {s = 652;}
 
-                        else if ( (LA49_0=='(') ) {s = 15;}
+                        else if ( (LA57_651=='.'||LA57_651=='@') ) {s = 653;}
 
-                        else if ( (LA49_0==')') ) {s = 16;}
+                        else if ( ((LA57_651>='A' && LA57_651<='Z')||(LA57_651>='a' && LA57_651<='z')) ) {s = 764;}
 
-                        else if ( (LA49_0=='O'||LA49_0=='o') ) {s = 17;}
+                        else if ( ((LA57_651>='#' && LA57_651<='%')||(LA57_651>='0' && LA57_651<='9')||LA57_651=='_') ) {s = 765;}
 
-                        else if ( (LA49_0=='A'||LA49_0=='a') ) {s = 18;}
+                        else if ( ((LA57_651>='\u0000' && LA57_651<='!')||(LA57_651>='&' && LA57_651<='-')||LA57_651=='/'||(LA57_651>=':' && LA57_651<='?')||(LA57_651>='[' && LA57_651<='^')||LA57_651=='`'||(LA57_651>='{' && LA57_651<='\uFFFF')) ) {s = 180;}
 
-                        else if ( (LA49_0=='N'||LA49_0=='n') ) {s = 19;}
+                        else s = 74;
 
-                        else if ( ((LA49_0>='0' && LA49_0<='9')) ) {s = 20;}
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA57_654 = input.LA(1);
 
-                        else if ( (LA49_0=='\'') ) {s = 21;}
+                        s = -1;
+                        if ( (LA57_654=='\"') ) {s = 652;}
 
-                        else if ( (LA49_0=='P'||LA49_0=='p') ) {s = 22;}
+                        else if ( (LA57_654=='.'||LA57_654=='@') ) {s = 653;}
 
-                        else if ( (LA49_0=='S'||LA49_0=='s') ) {s = 23;}
+                        else if ( ((LA57_654>='A' && LA57_654<='Z')||(LA57_654>='a' && LA57_654<='z')) ) {s = 651;}
 
-                        else if ( (LA49_0=='I'||LA49_0=='i') ) {s = 24;}
+                        else if ( ((LA57_654>='#' && LA57_654<='%')||(LA57_654>='0' && LA57_654<='9')||LA57_654=='_') ) {s = 654;}
 
-                        else if ( (LA49_0=='B'||LA49_0=='b') ) {s = 25;}
+                        else if ( ((LA57_654>='\u0000' && LA57_654<='!')||(LA57_654>='&' && LA57_654<='-')||LA57_654=='/'||(LA57_654>=':' && LA57_654<='?')||(LA57_654>='[' && LA57_654<='^')||LA57_654=='`'||(LA57_654>='{' && LA57_654<='\uFFFF')) ) {s = 180;}
 
-                        else if ( (LA49_0=='R'||LA49_0=='r') ) {s = 26;}
+                        else s = 74;
 
-                        else if ( (LA49_0=='L'||LA49_0=='l') ) {s = 27;}
+                        if ( s>=0 ) return s;
+                        break;
+                    case 6 : 
+                        int LA57_0 = input.LA(1);
 
-                        else if ( (LA49_0=='U'||LA49_0=='u') ) {s = 28;}
+                        s = -1;
+                        if ( (LA57_0=='<') ) {s = 1;}
 
-                        else if ( (LA49_0=='M'||LA49_0=='m') ) {s = 29;}
+                        else if ( (LA57_0=='>') ) {s = 2;}
 
-                        else if ( (LA49_0=='D'||LA49_0=='d') ) {s = 30;}
+                        else if ( (LA57_0=='(') ) {s = 3;}
 
-                        else if ( (LA49_0=='C'||LA49_0=='c') ) {s = 31;}
+                        else if ( (LA57_0==')') ) {s = 4;}
 
-                        else if ( (LA49_0=='F'||LA49_0=='f') ) {s = 32;}
+                        else if ( (LA57_0=='/') ) {s = 5;}
 
-                        else if ( (LA49_0=='V'||LA49_0=='v') ) {s = 33;}
+                        else if ( (LA57_0=='\'') ) {s = 6;}
 
-                        else if ( (LA49_0=='T'||LA49_0=='t') ) {s = 34;}
+                        else if ( (LA57_0=='+') ) {s = 7;}
 
-                        else if ( (LA49_0=='Y'||LA49_0=='y') ) {s = 35;}
+                        else if ( (LA57_0=='-') ) {s = 8;}
 
-                        else if ( (LA49_0=='W'||LA49_0=='w') ) {s = 36;}
+                        else if ( (LA57_0=='*') ) {s = 9;}
 
-                        else if ( (LA49_0=='G'||LA49_0=='g') ) {s = 37;}
+                        else if ( (LA57_0=='|') ) {s = 10;}
 
-                        else if ( (LA49_0=='E'||LA49_0=='e') ) {s = 38;}
+                        else if ( (LA57_0=='=') ) {s = 11;}
 
-                        else if ( (LA49_0=='%') ) {s = 39;}
+                        else if ( (LA57_0=='!') ) {s = 12;}
 
-                        else if ( (LA49_0=='Z'||LA49_0=='z') ) {s = 40;}
+                        else if ( (LA57_0=='~') ) {s = 13;}
 
-                        else if ( (LA49_0=='J'||LA49_0=='j') ) {s = 41;}
+                        else if ( (LA57_0=='^') ) {s = 14;}
 
-                        else if ( ((LA49_0>='\u0000' && LA49_0<='\b')||(LA49_0>='\u000B' && LA49_0<='\f')||(LA49_0>='\u000E' && LA49_0<='\u001F')||(LA49_0>='\"' && LA49_0<='$')||LA49_0=='&'||LA49_0==','||LA49_0==';'||(LA49_0>='?' && LA49_0<='@')||LA49_0=='H'||LA49_0=='K'||LA49_0=='Q'||LA49_0=='X'||(LA49_0>='[' && LA49_0<=']')||(LA49_0>='_' && LA49_0<='`')||LA49_0=='h'||LA49_0=='k'||LA49_0=='q'||LA49_0=='x'||LA49_0=='{'||LA49_0=='}'||(LA49_0>='\u007F' && LA49_0<='\uFFFF')) ) {s = 42;}
+                        else if ( (LA57_0=='.') ) {s = 15;}
+
+                        else if ( (LA57_0==':') ) {s = 16;}
+
+                        else if ( ((LA57_0>='\t' && LA57_0<='\n')||LA57_0=='\r'||LA57_0==' ') ) {s = 17;}
+
+                        else if ( (LA57_0=='O'||LA57_0=='o') ) {s = 18;}
+
+                        else if ( (LA57_0=='A'||LA57_0=='a') ) {s = 19;}
+
+                        else if ( (LA57_0=='N'||LA57_0=='n') ) {s = 20;}
+
+                        else if ( ((LA57_0>='0' && LA57_0<='9')) ) {s = 21;}
+
+                        else if ( (LA57_0=='P'||LA57_0=='p') ) {s = 22;}
+
+                        else if ( (LA57_0=='S'||LA57_0=='s') ) {s = 23;}
+
+                        else if ( (LA57_0=='I'||LA57_0=='i') ) {s = 24;}
+
+                        else if ( (LA57_0=='B'||LA57_0=='b') ) {s = 25;}
+
+                        else if ( (LA57_0=='R'||LA57_0=='r') ) {s = 26;}
+
+                        else if ( (LA57_0=='L'||LA57_0=='l') ) {s = 27;}
+
+                        else if ( (LA57_0=='U'||LA57_0=='u') ) {s = 28;}
+
+                        else if ( (LA57_0=='M'||LA57_0=='m') ) {s = 29;}
+
+                        else if ( (LA57_0=='D'||LA57_0=='d') ) {s = 30;}
+
+                        else if ( (LA57_0=='C'||LA57_0=='c') ) {s = 31;}
+
+                        else if ( (LA57_0=='F'||LA57_0=='f') ) {s = 32;}
+
+                        else if ( (LA57_0=='V'||LA57_0=='v') ) {s = 33;}
+
+                        else if ( (LA57_0=='T'||LA57_0=='t') ) {s = 34;}
+
+                        else if ( (LA57_0=='Y'||LA57_0=='y') ) {s = 35;}
+
+                        else if ( (LA57_0=='W'||LA57_0=='w') ) {s = 36;}
+
+                        else if ( (LA57_0=='G'||LA57_0=='g') ) {s = 37;}
+
+                        else if ( (LA57_0=='E'||LA57_0=='e') ) {s = 38;}
+
+                        else if ( (LA57_0=='%') ) {s = 39;}
+
+                        else if ( (LA57_0=='Z'||LA57_0=='z') ) {s = 40;}
+
+                        else if ( (LA57_0=='J'||LA57_0=='j') ) {s = 41;}
+
+                        else if ( (LA57_0=='H'||LA57_0=='K'||LA57_0=='Q'||LA57_0=='X'||LA57_0=='h'||LA57_0=='k'||LA57_0=='q'||LA57_0=='x') ) {s = 42;}
+
+                        else if ( (LA57_0=='\"') ) {s = 43;}
+
+                        else if ( (LA57_0==';') ) {s = 44;}
+
+                        else if ( ((LA57_0>='\u0000' && LA57_0<='\b')||(LA57_0>='\u000B' && LA57_0<='\f')||(LA57_0>='\u000E' && LA57_0<='\u001F')||(LA57_0>='#' && LA57_0<='$')||LA57_0=='&'||LA57_0==','||(LA57_0>='?' && LA57_0<='@')||(LA57_0>='[' && LA57_0<=']')||(LA57_0>='_' && LA57_0<='`')||LA57_0=='{'||LA57_0=='}'||(LA57_0>='\u007F' && LA57_0<='\uFFFF')) ) {s = 45;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 7 : 
+                        int LA57_765 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA57_765>='A' && LA57_765<='Z')||(LA57_765>='a' && LA57_765<='z')) ) {s = 764;}
+
+                        else if ( (LA57_765=='\"') ) {s = 652;}
+
+                        else if ( (LA57_765=='.'||LA57_765=='@') ) {s = 653;}
+
+                        else if ( ((LA57_765>='#' && LA57_765<='%')||(LA57_765>='0' && LA57_765<='9')||LA57_765=='_') ) {s = 765;}
+
+                        else if ( ((LA57_765>='\u0000' && LA57_765<='!')||(LA57_765>='&' && LA57_765<='-')||LA57_765=='/'||(LA57_765>=':' && LA57_765<='?')||(LA57_765>='[' && LA57_765<='^')||LA57_765=='`'||(LA57_765>='{' && LA57_765<='\uFFFF')) ) {s = 180;}
+
+                        else s = 74;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 8 : 
+                        int LA57_179 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA57_179=='\"') ) {s = 329;}
+
+                        else if ( ((LA57_179>='#' && LA57_179<='%')||(LA57_179>='0' && LA57_179<='9')||(LA57_179>='A' && LA57_179<='Z')||LA57_179=='_'||(LA57_179>='a' && LA57_179<='z')) ) {s = 330;}
+
+                        else if ( (LA57_179=='.'||LA57_179=='@') ) {s = 331;}
+
+                        else if ( ((LA57_179>='\u0000' && LA57_179<='!')||(LA57_179>='&' && LA57_179<='-')||LA57_179=='/'||(LA57_179>=':' && LA57_179<='?')||(LA57_179>='[' && LA57_179<='^')||LA57_179=='`'||(LA57_179>='{' && LA57_179<='\uFFFF')) ) {s = 180;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 9 : 
+                        int LA57_766 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA57_766>='#' && LA57_766<='%')||(LA57_766>='0' && LA57_766<='9')||(LA57_766>='A' && LA57_766<='Z')||LA57_766=='_'||(LA57_766>='a' && LA57_766<='z')) ) {s = 852;}
+
+                        else if ( ((LA57_766>='\u0000' && LA57_766<='\"')||(LA57_766>='&' && LA57_766<='/')||(LA57_766>=':' && LA57_766<='@')||(LA57_766>='[' && LA57_766<='^')||LA57_766=='`'||(LA57_766>='{' && LA57_766<='\uFFFF')) ) {s = 180;}
+
+                        else s = 74;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 10 : 
+                        int LA57_330 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA57_330=='\"') ) {s = 329;}
+
+                        else if ( (LA57_330=='.'||LA57_330=='@') ) {s = 331;}
+
+                        else if ( ((LA57_330>='#' && LA57_330<='%')||(LA57_330>='0' && LA57_330<='9')||(LA57_330>='A' && LA57_330<='Z')||LA57_330=='_'||(LA57_330>='a' && LA57_330<='z')) ) {s = 330;}
+
+                        else if ( ((LA57_330>='\u0000' && LA57_330<='!')||(LA57_330>='&' && LA57_330<='-')||LA57_330=='/'||(LA57_330>=':' && LA57_330<='?')||(LA57_330>='[' && LA57_330<='^')||LA57_330=='`'||(LA57_330>='{' && LA57_330<='\uFFFF')) ) {s = 180;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 11 : 
+                        int LA57_499 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA57_499>='A' && LA57_499<='Z')||(LA57_499>='a' && LA57_499<='z')) ) {s = 651;}
+
+                        else if ( (LA57_499=='\"') ) {s = 652;}
+
+                        else if ( (LA57_499=='.'||LA57_499=='@') ) {s = 653;}
+
+                        else if ( ((LA57_499>='#' && LA57_499<='%')||(LA57_499>='0' && LA57_499<='9')||LA57_499=='_') ) {s = 654;}
+
+                        else if ( ((LA57_499>='\u0000' && LA57_499<='!')||(LA57_499>='&' && LA57_499<='-')||LA57_499=='/'||(LA57_499>=':' && LA57_499<='?')||(LA57_499>='[' && LA57_499<='^')||LA57_499=='`'||(LA57_499>='{' && LA57_499<='\uFFFF')) ) {s = 180;}
+
+                        else s = 74;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 12 : 
+                        int LA57_43 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA57_43>='A' && LA57_43<='Z')||(LA57_43>='a' && LA57_43<='z')) ) {s = 179;}
+
+                        else if ( ((LA57_43>='\u0000' && LA57_43<='!')||(LA57_43>='#' && LA57_43<='@')||(LA57_43>='[' && LA57_43<='`')||(LA57_43>='{' && LA57_43<='\uFFFF')) ) {s = 180;}
+
+                        else s = 45;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 13 : 
+                        int LA57_331 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA57_331=='\"') ) {s = 498;}
+
+                        else if ( ((LA57_331>='A' && LA57_331<='Z')||(LA57_331>='a' && LA57_331<='z')) ) {s = 499;}
+
+                        else if ( ((LA57_331>='\u0000' && LA57_331<='!')||(LA57_331>='#' && LA57_331<='@')||(LA57_331>='[' && LA57_331<='`')||(LA57_331>='{' && LA57_331<='\uFFFF')) ) {s = 180;}
 
                         if ( s>=0 ) return s;
                         break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 49, _s, input);
+                new NoViableAltException(getDescription(), 57, _s, input);
             error(nvae);
             throw nvae;
         }

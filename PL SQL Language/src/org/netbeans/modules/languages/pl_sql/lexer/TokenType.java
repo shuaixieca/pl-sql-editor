@@ -15,7 +15,7 @@ public enum TokenType {
     BLOCK_COMMENT(PL_SQLLexer.BLOCK_COMMENT, "comment"),
     LINE_COMMENT(PL_SQLLexer.LINE_COMMENT, "comment"),
     WHITESPACE(PL_SQLLexer.WHITESPACE, "whitespace"),
-    OPERATOR(PL_SQLLexer.OPERATOR, "operator"),
+    //OPERATOR(PL_SQLLexer.OPERATOR, "operator"),
     OR_OPERATOR(PL_SQLLexer.OR_OPERATOR, "operator"),
     NOT_OPERATOR(PL_SQLLexer.NOT_OPERATOR, "operator"),
     AND_OPERATOR(PL_SQLLexer.AND_OPERATOR, "operator"),
@@ -175,7 +175,11 @@ public enum TokenType {
     RESULT_KEYWORD(PL_SQLLexer.RESULT_KEYWORD, "keyword"),
     MAP_KEYWORD(PL_SQLLexer.MAP_KEYWORD, "keyword"),
     ORDER_KEYWORD(PL_SQLLexer.ORDER_KEYWORD, "keyword"),
-    JOIN_KEYWORD(PL_SQLLexer.JOIN_KEYWORD, "keyword");
+    JOIN_KEYWORD(PL_SQLLexer.JOIN_KEYWORD, "keyword"),
+    IDENTIFIER(PL_SQLLexer.IDENTIFIER, "identifier"),
+    EXT_IDENTIFIER(PL_SQLLexer.EXT_IDENTIFIER, "identifier"),
+    ALIAS(PL_SQLLexer.ALIAS, "identifier"),
+    SEPARATOR(PL_SQLLexer.SEPARATOR, "separator");
     public int id;
     public String category;
     public String text;

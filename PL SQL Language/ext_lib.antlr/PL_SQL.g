@@ -10,6 +10,7 @@ grammar PL_SQL;
 options
 {
 	output = AST;
+	backtrack = true;
 }
 
 tokens {
@@ -33,6 +34,9 @@ tokens {
 	DAY_TYPE;
 	SECOND_TYPE;
 	KEYWORD;
+	IDENTIFIER;
+	EXT_IDENTIFIER;
+	ALIAS;
 	//THE_REST;
 }
 
@@ -127,11 +131,11 @@ LINE_COMMENT
 WHITESPACE
 	:	(' '|'\t'|'\n'|'\r')+ {$channel=HIDDEN;}
 ;
-
+/*
 OPERATOR:	':=' | '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' |
     		'^=' | '>' | '<' | '<=' | '>=' | '..' | '(+)' | '(' | ')' | '<<' | '>>'
 ;		
-
+*/
 OR_OPERATOR
 	:	O R;
 
@@ -216,7 +220,7 @@ DECLARE_KEYWORD: D E C L A R E;
 EXCEPTION_KEYWORD: E X C E P T I O N;
 WHEN_KEYWORD: W H E N;
 THEN_KEYWORD: T H E N;
-NOT_NULL_KEYWORD: N O T (' '|'\t'|'\n'|'\r')+ N U L L;
+NOT_NULL_KEYWORD: N O T (' '|'\t'|'\n'|'\r')+ NULL_KEYWORD;
 NULL_KEYWORD: N U L L;
 DEFAULT_KEYWORD: D E F A U L T;
 ROWTYPE_KEYWORD: '%' R O W T Y P E;
@@ -255,8 +259,8 @@ IF_KEYWORD: I F;
 ELSE_KEYWORD: E L S E;
 ELSIF_KEYWORD: E L S I F;
 ENDIF_KEYWORD:  END_KEYWORD ' '+ IF_KEYWORD;
-IS_NULL_KEYWORD: I S (' '|'\t'|'\n'|'\r')+ N U L L;
-IS_NOT_NULL_KEYWORD: I S (' '|'\t'|'\n'|'\r')+ N O T (' '|'\t'|'\n'|'\r')+ N U L L;
+IS_NULL_KEYWORD: IS_KEYWORD ' '+ NULL_KEYWORD;
+IS_NOT_NULL_KEYWORD: IS_KEYWORD ' '+ N O T ' '+ NULL_KEYWORD;
 NOT_IN_KEYWORD: N O T (' '|'\t'|'\n'|'\r')+ I N;
 GOTO_KEYWORD: G O T O;
 LOOP_KEYWORD: L O O P;
@@ -353,6 +357,38 @@ MAP_KEYWORD: M A P;
 ORDER_KEYWORD: O R D E R;
 JOIN_KEYWORD: J O I N;
 
+//TOKEN:identifier:( ["a"-"z" "A"-"Z"] ["$" "#" "_" "0"-"9" "a"-"z" "A"-"Z" "%"]* )
+IDENTIFIER
+	:	CHARS ('$' | '#' | '_' | DIGIT | CHARS | '%')*
+;
+
+
+EXT_IDENTIFIER
+	:	':'? '"'? IDENTIFIER '"'? ('.' | '@') '"'? IDENTIFIER '"'? (('.' | '@')? IDENTIFIER )?
+;
+
+ALIAS	:	'"' (~'"')+ '"'
+;
+
+SEPARATOR
+	:	';';
+
+/*TERMINATOR
+	:	'/';
+*/
+fragment COMMA
+	:	',';
+
+fragment PARAM_VALUE
+	:	'=>';
+	
+fragment QUOTATION_MARK
+	:	'"';
+
+fragment CHARS
+	: 'a' .. 'z' | 'A' .. 'Z'
+;
+
 fragment DIGIT
 	: '0' .. '9'
 ;
@@ -397,10 +433,262 @@ THE_REST:	.
 ;
 
 grammar_def
-	:	statments  EOF!
+	:	source_element  EOF!
 ;
-statments
-	:	BEGIN_KEYWORD (NUMBER_UNSIGNED | STRING | SOME_TYPES | SCALE_TYPES | SIZE_TYPES | CHAR_TYPES | CHAR_TYPE | BYTE_TYPE | RAW_TYPE | 
-		TIMESTAMP_TYPE | YEAR_TYPE | DAY_TYPE | SECOND_TYPE | KEYWORD | NOT_NULL_KEYWORD | IS_NULL_KEYWORD | IS_NOT_NULL_KEYWORD)+ END_KEYWORD //OPERATOR ( OR_OPERATOR | AND_OPERATOR | NUMBER_UNSIGNED)+ OPERATOR;
-;
+
+source_element : anonymous_block | 
+                 (create_replace_part?
+                  (function_declaration | procedure_declaration | package_spec | package_body |
+                   trigger_declaration | type_spec_declaration | type_body_declaration));
+identifier : IDENTIFIER | RESULT_KEYWORD | INTERVAL_KEYWORD;
+universal_identifier : identifier | EXT_IDENTIFIER;
+label : '<<' identifier '>>';
+create_replace_part : CREATE_KEYWORD (OR_OPERATOR REPLACE_KEYWORD)?;
+as_is_part : IS_KEYWORD | AS_KEYWORD;
+parameter_type : IN_KEYWORD | (OUT_KEYWORD NOCOPY_KEYWORD?) | (IN_KEYWORD OUT_KEYWORD NOCOPY_KEYWORD?);
+parameter_declaration : '(' identifier parameter_type? data_type variable_def_part expression?
+                        (',' identifier parameter_type? data_type (variable_def_part expression)?)* ')';
+function_spec : FUNCTION_KEYWORD
+                function_name parameter_declaration?
+                RETURN_KEYWORD data_type invoker_clause? (function_spec_add2)*;
+function_name : universal_identifier | ALIAS;
+invoker_clause : AUTHID_KEYWORD (CURRENT_USER_KEYWORD | DEFINER_KEYWORD);
+function_spec_add2 : DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD;
+function_declaration : function_spec function_procedure_body;
+procedure_spec : PROCEDURE_KEYWORD procedure_name parameter_declaration?
+                 invoker_clause?;
+procedure_name : universal_identifier | ALIAS;
+procedure_declaration : procedure_spec function_procedure_body;
+function_procedure_body : as_is_part (variable_declaration)* (function_declaration | procedure_declaration)* block;
+package_spec : PACKAGE_KEYWORD package_spec_name invoker_clause? as_is_part
+               (variable_declaration | ((function_spec | procedure_spec) ';'))* 
+               END_KEYWORD universal_identifier? SEPARATOR? '/'?;
+package_spec_name : universal_identifier | ALIAS;
+package_body : PACKAGE_KEYWORD BODY_KEYWORD package_body_name as_is_part
+               (variable_declaration | function_declaration | procedure_declaration)*
+               (BEGIN_KEYWORD (executable_section)+)?
+               END_KEYWORD universal_identifier? SEPARATOR? '/'?;
+package_body_name : universal_identifier | ALIAS;
+trigger_declaration : TRIGGER_KEYWORD trigger_name trigger_type follows_part? trigger_part
+                      anonymous_block;
+trigger_name : universal_identifier | ALIAS;
+follows_part : FOLLOWS_KEYWORD universal_identifier;
+trigger_part : (ENABLE_KEYWORD | DISABLE_KEYWORD)? (WHEN_KEYWORD universal_expression)?;
+trigger_type : (BEFORE_KEYWORD (dml_event_clause | non_dml_trigger)) |
+               (AFTER_KEYWORD (dml_event_clause | non_dml_trigger)) |
+               (INSTEAD_KEYWORD OF_KEYWORD dml_event_clause) |
+               compound_dml_trigger;
+compound_dml_trigger : FOR_KEYWORD dml_event_clause referencing_clause?;
+non_dml_trigger : (identifier OR_OPERATOR?)+ ON_KEYWORD universal_identifier;
+dml_event_clause : ((INSERT_KEYWORD | DELETE_KEYWORD | 
+                    (UPDATE_KEYWORD dml_event_clause_factor?))
+                    OR_OPERATOR? dml_event_clause_factor?)+
+                    dml_event_clause_part referencing_clause?
+                    (FOR_KEYWORD EACH_KEYWORD ROW_KEYWORD)?;
+dml_event_clause_factor : OF_KEYWORD (universal_identifier COMMA?)+;
+dml_event_clause_part : ON_KEYWORD ((NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD)? universal_identifier);
+referencing_clause : REFERENCING_KEYWORD ( (OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD)
+                     AS_KEYWORD? (OLD_KEYWORD | NEW_KEYWORD | identifier) )+;
+type_spec_declaration : TYPE_KEYWORD type_spec_name type_oid_part? invoker_clause? type_spec_types
+                        SEPARATOR? '/'?;
+type_spec_name : universal_identifier | ALIAS;
+type_oid_part : OID_KEYWORD '\'' universal_identifier '\'' ;
+type_spec_types : object_type | varray_type | nested_table_type;
+object_type : ((as_is_part OBJECT_KEYWORD) | (UNDER_KEYWORD universal_identifier))
+              object_type_part?
+               (NOT_OPERATOR? FINAL_KEYWORD)? (NOT_OPERATOR? INSTANTIABLE_KEYWORD)?;
+object_type_part : '(' (identifier data_type ','?)+ (element_spec ','?)* ')';
+element_spec : inheritance_clauses? ((subprogram_spec | constructor_spec | map_order_function_spec) ','?)+
+               pragma_clause?;
+pragma_clause : PRAGMA_KEYWORD RESTRICT_REFERENCES_KEYWORD '(' expression (',' expression)+ ')';
+map_order_function_spec : (MAP_KEYWORD | ORDER_KEYWORD) MEMBER_KEYWORD function_spec;
+constructor_spec : FINAL_KEYWORD? INSTANTIABLE_KEYWORD? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD
+                   data_type constructor_spec_part?;
+constructor_spec_part : '(' (SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ',')?
+                        (identifier data_type ','?)+ ')'
+                        RETURN_KEYWORD SELF_KEYWORD AS_KEYWORD RESULT_KEYWORD;
+subprogram_spec : (MEMBER_KEYWORD | STATIC_KEYWORD) (function_spec | procedure_spec);
+inheritance_clauses : NOT_OPERATOR? (FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD);
+varray_type : as_is_part collection_varray_datatype;
+nested_table_type : as_is_part TABLE_KEYWORD OF_KEYWORD data_type;
+type_body_declaration : TYPE_KEYWORD BODY_KEYWORD type_body_name as_is_part
+                        ((subprogram_declaration | map_order_func_declaration) ','? )+ END_KEYWORD
+                        SEPARATOR? '/'?;
+type_body_name : universal_identifier | ALIAS;
+subprogram_declaration : (MEMBER_KEYWORD | STATIC_KEYWORD)?
+                         (function_declaration | procedure_declaration | constructor_declaration);
+constructor_declaration : FINAL_KEYWORD? INSTANTIABLE_KEYWORD? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD
+                          data_type constructor_spec_part? function_procedure_body;
+map_order_func_declaration : (MAP_KEYWORD | ORDER_KEYWORD) MEMBER_KEYWORD function_declaration;
+
+block : BEGIN_KEYWORD
+            (executable_section)+
+            exception_section?
+        END_KEYWORD universal_identifier? SEPARATOR?
+        '/'?;
+anonymous_block : anonymous_block_declare_section? block;
+executable_section : statement | anonymous_block;
+executable_case_section : ((label)* statements SEPARATOR?) | anonymous_block;
+statement : (label)* statements SEPARATOR;
+statements : expression | goto_statement | loop_statement |
+             while_loop_statement | for_loop_statement | sql_statements |
+             return_statement | if_statement | raise_statement | close_statement |
+             continue_statement | execute_immediate_statement | exit_statement |
+             fetch_statement | forall_statement | pragma_inline_statement |
+             open_statement;
+sql_statements : select_statement | commit_statement | delete_statement | update_statement |
+                 insert_statement | lock_table_statement | merge_statement |
+                 rollback_statement | savepoint_statement | set_transaction_statement;
+sql_operator : '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' |
+               '^=' | '>' | '<' | '<=' | '>=' | '(+)' | ',';
+sql_not_parsed : THE_REST;               
+//sql_not_parsed : sql_not_parsed1 | sql_not_parsed2 | THE_REST;
+/*sql_not_parsed1 : ALIAS | KEYWORD | sql_operator | INTO_KEYWORD | IN_KEYWORD | NOT_IN_KEYWORD |
+               AS_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | SOME_TYPES |
+               BULK_KEYWORD | COLLECT_KEYWORD | RETURNING_KEYWORD | ROW_KEYWORD |
+               SET_KEYWORD | BY_KEYWORD | WITH_KEYWORD | TABLE_KEYWORD | JOIN_KEYWORD; 
+sql_not_parsed2 : EXISTS_KEYWORD | REPLACE_KEYWORD |
+               NUMBER_UNSIGNED | COUNT_KEYWORD | universal_identifier | case_statement_expression |
+               STRING | COMMA | AND_OPERATOR | OR_OPERATOR | NOT_OPERATOR |
+               IS_NOT_NULL_KEYWORD | IS_NULL_KEYWORD | NULL_KEYWORD | LIKE_KEYWORD | 
+               sql_statements | sql_not_parsed | ('(' (sql_not_parsed)* ')');
+*/
+
+// ### SQL Statements ###
+select_statement : SELECT_KEYWORD ((sql_not_parsed | ON_KEYWORD) | (FOR_KEYWORD UPDATE_KEYWORD))+;
+commit_statement : COMMIT_KEYWORD sql_not_parsed?;
+delete_statement : DELETE_KEYWORD (sql_not_parsed)+;
+insert_statement : INSERT_KEYWORD (sql_not_parsed)+;
+lock_table_statement : LOCK_KEYWORD TABLE_KEYWORD (sql_not_parsed)+;
+merge_statement : MERGE_KEYWORD (sql_not_parsed | ON_KEYWORD |
+                  USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD |
+                  UPDATE_KEYWORD)+;
+rollback_statement : ROLLBACK_KEYWORD sql_not_parsed?;
+savepoint_statement : SAVEPOINT_KEYWORD identifier;
+set_transaction_statement : SET_KEYWORD TRANSACTION_KEYWORD (sql_not_parsed)+;
+update_statement : UPDATE_KEYWORD (sql_not_parsed)+;
+
+// ### PL/SQL Statements ###
+goto_statement : GOTO_KEYWORD identifier;
+return_statement : RETURN_KEYWORD expression?;
+if_statement : IF_KEYWORD expression THEN_KEYWORD (executable_section)+
+               (ELSIF_KEYWORD expression THEN_KEYWORD (executable_section)+)*
+               (ELSE_KEYWORD (executable_section)+)?
+               ENDIF_KEYWORD;
+loop_statement : LOOP_KEYWORD (executable_section)+ END_LOOP_KEYWORD identifier?;
+while_loop_statement : WHILE_KEYWORD expression loop_statement;
+for_loop_statement : FOR_KEYWORD identifier IN_KEYWORD REVERSE_KEYWORD? 
+                     ((expression (for_loop_statement_part | cursor_for_loop_statement1)) |
+                       cursor_for_loop_statement2);
+for_loop_statement_part :  '..' expression loop_statement;
+cursor_for_loop_statement1 : loop_statement;
+cursor_for_loop_statement2 : '(' select_statement ')' loop_statement;
+raise_statement : RAISE_KEYWORD universal_identifier?;
+case_statement_expression : simple_case_statement_expression | searched_case_statement_expression;
+simple_case_statement_expression : CASE_KEYWORD expression 
+                        (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
+                        (ELSE_KEYWORD (executable_case_section)+)?
+                        (END_KEYWORD | (END_CASE_KEYWORD identifier?));
+searched_case_statement_expression : CASE_KEYWORD
+                        (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
+                        (ELSE_KEYWORD (executable_case_section)+)?
+                        (END_KEYWORD | (END_CASE_KEYWORD identifier?));
+close_statement : CLOSE_KEYWORD universal_identifier;
+continue_statement : CONTINUE_KEYWORD identifier? (WHEN_KEYWORD expression)?;
+execute_immediate_statement : EXECUTE_KEYWORD IMMEDIATE_KEYWORD expression
+                              (RETURN_KEYWORD | RETURNING_KEYWORD)?
+                              (into_clause | bulk_collect_into_clause)?
+                              using_clause? ;
+into_clause : INTO_KEYWORD universal_identifier (',' universal_identifier)*;
+bulk_collect_into_clause : BULK_KEYWORD COLLECT_KEYWORD INTO_KEYWORD 
+                           universal_identifier (',' universal_identifier)*;
+using_clause : USING_KEYWORD (IN_KEYWORD | OUT_KEYWORD | (IN_KEYWORD OUT_KEYWORD))? expression
+               (',' (IN_KEYWORD | OUT_KEYWORD | (IN_KEYWORD OUT_KEYWORD))? expression)*;
+exit_statement : EXIT_KEYWORD identifier? (WHEN_KEYWORD expression)?;
+fetch_statement : FETCH_KEYWORD expression 
+                  ((bulk_collect_into_clause (LIMIT_KEYWORD expression)? ) | into_clause);
+forall_statement : FORALL_KEYWORD identifier IN_KEYWORD bounds_clause
+                   (SAVE_KEYWORD EXCEPTIONS_KEYWORD)? sql_statements;
+bounds_clause : (expression '..' expression) |
+                (INDICES_KEYWORD OF_KEYWORD universal_identifier 
+                (BETWEEN_KEYWORD expression AND_OPERATOR expression )?) |
+                (VALUES_KEYWORD OF_KEYWORD universal_identifier) ;
+pragma_inline_statement : PRAGMA_KEYWORD INLINE_KEYWORD
+                          '(' STRING ',' STRING ')';
+open_statement : OPEN_KEYWORD universal_identifier open_params?
+                 (FOR_KEYWORD (select_statement | STRING | universal_identifier) using_clause?)?;
+open_params : '(' expression (',' expression)* ')';
+sqlcode_function : SQLCODE_KEYWORD;
+sqlerrm_function : SQLERRM_KEYWORD ('(' ('+'|'-')? NUMBER_UNSIGNED ')')?;
+anonymous_block_declare_section : DECLARE_KEYWORD 
+                                  (variable_declaration)* 
+                                  (function_declaration | procedure_declaration)*;
+variable_declaration : ((identifier data_type 
+                       variable_declaration_part?)
+			|
+					   (identifier CONSTANT_KEYWORD data_type 
+                       variable_declaration_part)
+					   | subtype_datatype
+					   | record_collection_datatype
+					   | (identifier EXCEPTION_KEYWORD)
+					   | 
+					   (PRAGMA_KEYWORD (AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD |
+						(EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')') |
+						(RESTRICT_REFERENCES_KEYWORD '(' expression (',' expression)+ ')' ) ))
+					   | cursor_datatype)
+					   SEPARATOR;
+variable_declaration_part : NOT_NULL_KEYWORD? variable_def_part expression;
+variable_def_part : ':=' | DEFAULT_KEYWORD;
+data_type : SOME_TYPES | SCALE_TYPES | SIZE_TYPES | char_types | RAW_TYPE |
+            timestamp_type | interval_year_type | interval_day_type | 
+            (REF_KEYWORD? universal_identifier)| special_datatype;
+char_types : (CHAR_TYPES | CHAR_TYPE) ('(' '+'? NUMBER_UNSIGNED (CHAR_TYPE | BYTE_TYPE)? ')')?;
+timestamp_type : TIMESTAMP_TYPE | 
+    ( TIMESTAMP_TYPE WITH_KEYWORD LOCAL_KEYWORD? TIME_KEYWORD ZONE_KEYWORD);
+interval_year_type : INTERVAL_KEYWORD YEAR_TYPE TO_KEYWORD MONTH_KEYWORD;
+interval_day_type : INTERVAL_KEYWORD DAY_TYPE TO_KEYWORD SECOND_TYPE;
+subtype_datatype : SUBTYPE_KEYWORD identifier IS_KEYWORD data_type NOT_NULL_KEYWORD?;
+
+record_collection_datatype : TYPE_KEYWORD identifier IS_KEYWORD 
+                            (record_datatype | collection_table_datatype | collection_varray_datatype |
+                            ref_cursor_datatype);
+record_datatype : RECORD_KEYWORD '(' record_field_declaration (',' record_field_declaration)* ')' ;
+record_field_declaration : identifier data_type variable_declaration_part?;
+collection_table_datatype : TABLE_KEYWORD OF_KEYWORD data_type NOT_NULL_KEYWORD?
+                      (INDEX_KEYWORD BY_KEYWORD data_type)?;
+collection_varray_datatype : (VARRAY_KEYWORD | (VARYING_KEYWORD ARRAY_KEYWORD))
+                             '(' '+'? NUMBER_UNSIGNED ')' OF_KEYWORD data_type NOT_NULL_KEYWORD?;
+ref_cursor_datatype : REF_KEYWORD CURSOR_KEYWORD (RETURN_KEYWORD data_type)?;
+cursor_datatype : CURSOR_KEYWORD identifier cursor_parameter_declaration?
+                  (RETURN_KEYWORD data_type)? (IS_KEYWORD select_statement)?;
+cursor_parameter_declaration : '(' cursor_parameter (',' cursor_parameter)* ')' ;
+cursor_parameter : identifier IN_KEYWORD? data_type (variable_def_part expression)?;
+
+special_datatype : (identifier | EXT_IDENTIFIER) (LIKE_TYPE_KEYWORD | ROWTYPE_KEYWORD);
+
+
+// ### expression ###
+expression : universal_expression;
+in_notin_expression : (IN_KEYWORD | NOT_IN_KEYWORD) 
+                      ( universal_expression | ( '(' select_statement ')'));
+operator : '+' | '-' | '*' | '/' | '**' | '||' | ':=' | '.' |
+           '^=' | '>' | '<' | '<=' | '>=' | '=' | '<>' | '!=' | '~=' |
+           AND_OPERATOR | OR_OPERATOR |
+           LIKE_KEYWORD | ((NOT_OPERATOR)? BETWEEN_KEYWORD);
+unary_op : NOT_OPERATOR | '+' | '-';
+postfix_op : IS_NULL_KEYWORD | IS_NOT_NULL_KEYWORD | '(+)' ;
+universal_expression : unary_op? universal_factor postfix_op? (operator (universal_expression | ('(' select_statement ')') ))*;
+universal_factor : TRUE_KEYWORD | FALSE_KEYWORD | NUMBER_UNSIGNED |
+                   in_notin_expression |
+                   STRING | NULL_KEYWORD | case_statement_expression |
+                   sub_identifier (call_statement_param (in_notin_expression)?)? |
+                   ('(' universal_expression (',' universal_expression )* ')');
+sub_identifier : sub_identifier_factor | REPLACE_KEYWORD | sqlcode_function | sqlerrm_function;
+sub_identifier_factor : universal_identifier (NOTFOUND_KEYWORD | FOUND_KEYWORD |
+                        ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | in_notin_expression)?;
+call_statement_param : ('(' (universal_expression (',' universal_expression )*)? ')') |
+                       ('(' identifier '=>' universal_expression (',' identifier '=>' universal_expression )* ')' );
+exception_section : EXCEPTION_KEYWORD (exception_handler)+;
+exception_handler : WHEN_KEYWORD universal_identifier (OR_OPERATOR universal_identifier)*
+                    THEN_KEYWORD (executable_section)+;
 	
