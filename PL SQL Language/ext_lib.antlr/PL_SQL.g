@@ -11,6 +11,8 @@ options
 {
 	output = AST;
 	backtrack = true;
+	memoize = true;
+	k = 1;
 }
 
 tokens {
@@ -167,7 +169,7 @@ SOME_TYPES
 SCALE_TYPES
 	:	( N U M B E R | D E C | D E C I M A L | N U M E R I C )
 		( ('(' '+'? DIGITS ')') |
-		('(' '+'? DIGITS ',' ('+' | '-')? DIGITS ')') )?
+		('(' '+'? DIGITS COMMA ('+' | '-')? DIGITS ')') )?
 ;
 
 SIZE_TYPES
@@ -220,7 +222,7 @@ DECLARE_KEYWORD: D E C L A R E;
 EXCEPTION_KEYWORD: E X C E P T I O N;
 WHEN_KEYWORD: W H E N;
 THEN_KEYWORD: T H E N;
-NOT_NULL_KEYWORD: N O T (' '|'\t'|'\n'|'\r')+ NULL_KEYWORD;
+//NOT_NULL_KEYWORD: N O T (' '|'\t'|'\n'|'\r')+ NULL_KEYWORD;
 NULL_KEYWORD: N U L L;
 DEFAULT_KEYWORD: D E F A U L T;
 ROWTYPE_KEYWORD: '%' R O W T Y P E;
@@ -258,13 +260,13 @@ PROCEDURE_KEYWORD: P R O C E D U R E;
 IF_KEYWORD: I F;
 ELSE_KEYWORD: E L S E;
 ELSIF_KEYWORD: E L S I F;
-ENDIF_KEYWORD:  END_KEYWORD ' '+ IF_KEYWORD;
-IS_NULL_KEYWORD: IS_KEYWORD ' '+ NULL_KEYWORD;
-IS_NOT_NULL_KEYWORD: IS_KEYWORD ' '+ N O T ' '+ NULL_KEYWORD;
-NOT_IN_KEYWORD: N O T (' '|'\t'|'\n'|'\r')+ I N;
+//ENDIF_KEYWORD:  END_KEYWORD ' '+ IF_KEYWORD;
+//IS_NULL_KEYWORD: IS_KEYWORD ' '+ NULL_KEYWORD;
+//IS_NOT_NULL_KEYWORD: IS_KEYWORD ' '+ N O T ' '+ NULL_KEYWORD;
+//NOT_IN_KEYWORD: N O T (' '|'\t'|'\n'|'\r')+ I N;
 GOTO_KEYWORD: G O T O;
 LOOP_KEYWORD: L O O P;
-END_LOOP_KEYWORD: END_KEYWORD ' '+ LOOP_KEYWORD;
+//END_LOOP_KEYWORD: END_KEYWORD ' '+ LOOP_KEYWORD;
 WHILE_KEYWORD: W H I L E;
 FOR_KEYWORD: F O R;
 REVERSE_KEYWORD: R E V E R S E;
@@ -276,7 +278,7 @@ RAISE_KEYWORD: R A I S E;
 PRAGMA_KEYWORD: P R A G M A;
 AUTONOMOUS_TRANSACTION_KEYWORD: A U T O N O M O U S '_' T R A N S A C T I O N;
 CASE_KEYWORD: C A S E;
-END_CASE_KEYWORD: E N D ' '+ C A S E;
+//END_CASE_KEYWORD: END_KEYWORD ' '+ CASE_KEYWORD;
 CLOSE_KEYWORD: C L O S E;
 TABLE_KEYWORD: T A B L E;
 OF_KEYWORD: O F;
@@ -376,10 +378,10 @@ SEPARATOR
 /*TERMINATOR
 	:	'/';
 */
-fragment COMMA
+COMMA
 	:	',';
 
-fragment PARAM_VALUE
+PARAM_VALUE
 	:	'=>';
 	
 fragment QUOTATION_MARK
@@ -445,8 +447,8 @@ universal_identifier : identifier | EXT_IDENTIFIER;
 label : '<<' identifier '>>';
 create_replace_part : CREATE_KEYWORD (OR_OPERATOR REPLACE_KEYWORD)?;
 as_is_part : IS_KEYWORD | AS_KEYWORD;
-parameter_type : IN_KEYWORD | (OUT_KEYWORD NOCOPY_KEYWORD?) | (IN_KEYWORD OUT_KEYWORD NOCOPY_KEYWORD?);
-parameter_declaration : '(' identifier parameter_type? data_type variable_def_part expression?
+parameter_type : IN_KEYWORD (OUT_KEYWORD NOCOPY_KEYWORD?)? | (OUT_KEYWORD NOCOPY_KEYWORD?);
+parameter_declaration : '(' identifier parameter_type? data_type (variable_def_part expression)?
                         (',' identifier parameter_type? data_type (variable_def_part expression)?)* ')';
 function_spec : FUNCTION_KEYWORD
                 function_name parameter_declaration?
@@ -460,6 +462,7 @@ procedure_spec : PROCEDURE_KEYWORD procedure_name parameter_declaration?
 procedure_name : universal_identifier | ALIAS;
 procedure_declaration : procedure_spec function_procedure_body;
 function_procedure_body : as_is_part (variable_declaration)* (function_declaration | procedure_declaration)* block;
+//package_uni	:	PACKAGE_KEYWORD (package_spec | package_body);
 package_spec : PACKAGE_KEYWORD package_spec_name invoker_clause? as_is_part
                (variable_declaration | ((function_spec | procedure_spec) ';'))* 
                END_KEYWORD universal_identifier? SEPARATOR? '/'?;
@@ -522,8 +525,7 @@ constructor_declaration : FINAL_KEYWORD? INSTANTIABLE_KEYWORD? CONSTRUCTOR_KEYWO
 map_order_func_declaration : (MAP_KEYWORD | ORDER_KEYWORD) MEMBER_KEYWORD function_declaration;
 
 block : BEGIN_KEYWORD
-            (executable_section)+
-            exception_section?
+	(executable_section)+  exception_section?
         END_KEYWORD universal_identifier? SEPARATOR?
         '/'?;
 anonymous_block : anonymous_block_declare_section? block;
@@ -541,18 +543,18 @@ sql_statements : select_statement | commit_statement | delete_statement | update
                  rollback_statement | savepoint_statement | set_transaction_statement;
 sql_operator : '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' |
                '^=' | '>' | '<' | '<=' | '>=' | '(+)' | ',';
-sql_not_parsed : THE_REST;               
-//sql_not_parsed : sql_not_parsed1 | sql_not_parsed2 | THE_REST;
-/*sql_not_parsed1 : ALIAS | KEYWORD | sql_operator | INTO_KEYWORD | IN_KEYWORD | NOT_IN_KEYWORD |
+//sql_not_parsed : THE_REST;               
+sql_not_parsed : ALIAS | KEYWORD | sql_operator | INTO_KEYWORD | IN_KEYWORD | NOT_OPERATOR IN_KEYWORD |
                AS_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | SOME_TYPES |
                BULK_KEYWORD | COLLECT_KEYWORD | RETURNING_KEYWORD | ROW_KEYWORD |
-               SET_KEYWORD | BY_KEYWORD | WITH_KEYWORD | TABLE_KEYWORD | JOIN_KEYWORD; 
-sql_not_parsed2 : EXISTS_KEYWORD | REPLACE_KEYWORD |
+               SET_KEYWORD | BY_KEYWORD | WITH_KEYWORD | TABLE_KEYWORD | JOIN_KEYWORD |
+               EXISTS_KEYWORD | REPLACE_KEYWORD |
                NUMBER_UNSIGNED | COUNT_KEYWORD | universal_identifier | case_statement_expression |
                STRING | COMMA | AND_OPERATOR | OR_OPERATOR | NOT_OPERATOR |
-               IS_NOT_NULL_KEYWORD | IS_NULL_KEYWORD | NULL_KEYWORD | LIKE_KEYWORD | 
-               sql_statements | sql_not_parsed | ('(' (sql_not_parsed)* ')');
-*/
+               IS_KEYWORD NOT_OPERATOR NULL_KEYWORD | IS_KEYWORD NULL_KEYWORD | NULL_KEYWORD | LIKE_KEYWORD | 
+               sql_statements | // | sql_not_parsed | ('(' (sql_not_parsed)* ')');
+               expression | THE_REST | ('(' (sql_not_parsed)* ')');
+
 
 // ### SQL Statements ###
 select_statement : SELECT_KEYWORD ((sql_not_parsed | ON_KEYWORD) | (FOR_KEYWORD UPDATE_KEYWORD))+;
@@ -574,8 +576,8 @@ return_statement : RETURN_KEYWORD expression?;
 if_statement : IF_KEYWORD expression THEN_KEYWORD (executable_section)+
                (ELSIF_KEYWORD expression THEN_KEYWORD (executable_section)+)*
                (ELSE_KEYWORD (executable_section)+)?
-               ENDIF_KEYWORD;
-loop_statement : LOOP_KEYWORD (executable_section)+ END_LOOP_KEYWORD identifier?;
+               END_KEYWORD IF_KEYWORD;
+loop_statement : LOOP_KEYWORD (executable_section)+ END_KEYWORD LOOP_KEYWORD identifier?;
 while_loop_statement : WHILE_KEYWORD expression loop_statement;
 for_loop_statement : FOR_KEYWORD identifier IN_KEYWORD REVERSE_KEYWORD? 
                      ((expression (for_loop_statement_part | cursor_for_loop_statement1)) |
@@ -588,11 +590,11 @@ case_statement_expression : simple_case_statement_expression | searched_case_sta
 simple_case_statement_expression : CASE_KEYWORD expression 
                         (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
                         (ELSE_KEYWORD (executable_case_section)+)?
-                        (END_KEYWORD | (END_CASE_KEYWORD identifier?));
+                        (END_KEYWORD CASE_KEYWORD? identifier?);
 searched_case_statement_expression : CASE_KEYWORD
                         (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
                         (ELSE_KEYWORD (executable_case_section)+)?
-                        (END_KEYWORD | (END_CASE_KEYWORD identifier?));
+                        (END_KEYWORD CASE_KEYWORD? identifier?);
 close_statement : CLOSE_KEYWORD universal_identifier;
 continue_statement : CONTINUE_KEYWORD identifier? (WHEN_KEYWORD expression)?;
 execute_immediate_statement : EXECUTE_KEYWORD IMMEDIATE_KEYWORD expression
@@ -637,7 +639,7 @@ variable_declaration : ((identifier data_type
 						(RESTRICT_REFERENCES_KEYWORD '(' expression (',' expression)+ ')' ) ))
 					   | cursor_datatype)
 					   SEPARATOR;
-variable_declaration_part : NOT_NULL_KEYWORD? variable_def_part expression;
+variable_declaration_part : (NOT_OPEARTOR NULL_KEYWORD)? variable_def_part expression;
 variable_def_part : ':=' | DEFAULT_KEYWORD;
 data_type : SOME_TYPES | SCALE_TYPES | SIZE_TYPES | char_types | RAW_TYPE |
             timestamp_type | interval_year_type | interval_day_type | 
@@ -647,17 +649,17 @@ timestamp_type : TIMESTAMP_TYPE |
     ( TIMESTAMP_TYPE WITH_KEYWORD LOCAL_KEYWORD? TIME_KEYWORD ZONE_KEYWORD);
 interval_year_type : INTERVAL_KEYWORD YEAR_TYPE TO_KEYWORD MONTH_KEYWORD;
 interval_day_type : INTERVAL_KEYWORD DAY_TYPE TO_KEYWORD SECOND_TYPE;
-subtype_datatype : SUBTYPE_KEYWORD identifier IS_KEYWORD data_type NOT_NULL_KEYWORD?;
+subtype_datatype : SUBTYPE_KEYWORD identifier IS_KEYWORD data_type (NOT_OPEARTOR NULL_KEYWORD)?;
 
 record_collection_datatype : TYPE_KEYWORD identifier IS_KEYWORD 
                             (record_datatype | collection_table_datatype | collection_varray_datatype |
                             ref_cursor_datatype);
 record_datatype : RECORD_KEYWORD '(' record_field_declaration (',' record_field_declaration)* ')' ;
 record_field_declaration : identifier data_type variable_declaration_part?;
-collection_table_datatype : TABLE_KEYWORD OF_KEYWORD data_type NOT_NULL_KEYWORD?
+collection_table_datatype : TABLE_KEYWORD OF_KEYWORD data_type (NOT_OPEARTOR NULL_KEYWORD)?
                       (INDEX_KEYWORD BY_KEYWORD data_type)?;
 collection_varray_datatype : (VARRAY_KEYWORD | (VARYING_KEYWORD ARRAY_KEYWORD))
-                             '(' '+'? NUMBER_UNSIGNED ')' OF_KEYWORD data_type NOT_NULL_KEYWORD?;
+                             '(' '+'? NUMBER_UNSIGNED ')' OF_KEYWORD data_type (NOT_OPEARTOR NULL_KEYWORD)?;
 ref_cursor_datatype : REF_KEYWORD CURSOR_KEYWORD (RETURN_KEYWORD data_type)?;
 cursor_datatype : CURSOR_KEYWORD identifier cursor_parameter_declaration?
                   (RETURN_KEYWORD data_type)? (IS_KEYWORD select_statement)?;
@@ -669,14 +671,14 @@ special_datatype : (identifier | EXT_IDENTIFIER) (LIKE_TYPE_KEYWORD | ROWTYPE_KE
 
 // ### expression ###
 expression : universal_expression;
-in_notin_expression : (IN_KEYWORD | NOT_IN_KEYWORD) 
+in_notin_expression : (NOT_OPERATOR? IN_KEYWORD) 
                       ( universal_expression | ( '(' select_statement ')'));
 operator : '+' | '-' | '*' | '/' | '**' | '||' | ':=' | '.' |
            '^=' | '>' | '<' | '<=' | '>=' | '=' | '<>' | '!=' | '~=' |
            AND_OPERATOR | OR_OPERATOR |
            LIKE_KEYWORD | ((NOT_OPERATOR)? BETWEEN_KEYWORD);
 unary_op : NOT_OPERATOR | '+' | '-';
-postfix_op : IS_NULL_KEYWORD | IS_NOT_NULL_KEYWORD | '(+)' ;
+postfix_op : IS_KEYWORD NULL_KEYWORD | IS_KEYWORD NOT_OPERATOR NULL_KEYWORD | '(+)' ;
 universal_expression : unary_op? universal_factor postfix_op? (operator (universal_expression | ('(' select_statement ')') ))*;
 universal_factor : TRUE_KEYWORD | FALSE_KEYWORD | NUMBER_UNSIGNED |
                    in_notin_expression |

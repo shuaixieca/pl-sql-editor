@@ -40,7 +40,7 @@ public enum TokenType {
     EXCEPTION_KEYWORD(PL_SQLLexer.EXCEPTION_KEYWORD, "keyword"),
     WHEN_KEYWORD(PL_SQLLexer.WHEN_KEYWORD, "keyword"),
     THEN_KEYWORD(PL_SQLLexer.THEN_KEYWORD, "keyword"),
-    NOT_NULL_KEYWORD(PL_SQLLexer.NOT_NULL_KEYWORD, "keyword"),
+    //NOT_NULL_KEYWORD(PL_SQLLexer.NOT_NULL_KEYWORD, "keyword"),
     NULL_KEYWORD(PL_SQLLexer.NULL_KEYWORD, "keyword"),
     DEFAULT_KEYWORD(PL_SQLLexer.DEFAULT_KEYWORD, "keyword"),
     ROWTYPE_KEYWORD(PL_SQLLexer.ROWTYPE_KEYWORD, "keyword"),
@@ -78,13 +78,13 @@ public enum TokenType {
     IF_KEYWORD(PL_SQLLexer.IF_KEYWORD, "keyword"),
     ELSE_KEYWORD(PL_SQLLexer.ELSE_KEYWORD, "keyword"),
     ELSIF_KEYWORD(PL_SQLLexer.ELSIF_KEYWORD, "keyword"),
-    ENDIF_KEYWORD(PL_SQLLexer.ENDIF_KEYWORD, "keyword"),
-    IS_NULL_KEYWORD(PL_SQLLexer.IS_NULL_KEYWORD, "keyword"),
-    IS_NOT_NULL_KEYWORD(PL_SQLLexer.IS_NOT_NULL_KEYWORD, "keyword"),
-    NOT_IN_KEYWORD(PL_SQLLexer.NOT_IN_KEYWORD, "keyword"),
+    //ENDIF_KEYWORD(PL_SQLLexer.ENDIF_KEYWORD, "keyword"),
+    //IS_NULL_KEYWORD(PL_SQLLexer.IS_NULL_KEYWORD, "keyword"),
+    //IS_NOT_NULL_KEYWORD(PL_SQLLexer.IS_NOT_NULL_KEYWORD, "keyword"),
+    //NOT_IN_KEYWORD(PL_SQLLexer.NOT_IN_KEYWORD, "keyword"),
     GOTO_KEYWORD(PL_SQLLexer.GOTO_KEYWORD, "keyword"),
     LOOP_KEYWORD(PL_SQLLexer.LOOP_KEYWORD, "keyword"),
-    END_LOOP_KEYWORD(PL_SQLLexer.END_LOOP_KEYWORD, "keyword"),
+    //END_LOOP_KEYWORD(PL_SQLLexer.END_LOOP_KEYWORD, "keyword"),
     WHILE_KEYWORD(PL_SQLLexer.WHILE_KEYWORD, "keyword"),
     FOR_KEYWORD(PL_SQLLexer.FOR_KEYWORD, "keyword"),
     REVERSE_KEYWORD(PL_SQLLexer.REVERSE_KEYWORD, "keyword"),
@@ -96,7 +96,7 @@ public enum TokenType {
     PRAGMA_KEYWORD(PL_SQLLexer.PRAGMA_KEYWORD, "keyword"),
     AUTONOMOUS_TRANSACTION_KEYWORD(PL_SQLLexer.AUTONOMOUS_TRANSACTION_KEYWORD, "keyword"),
     CASE_KEYWORD(PL_SQLLexer.CASE_KEYWORD, "keyword"),
-    END_CASE_KEYWORD(PL_SQLLexer.END_CASE_KEYWORD, "keyword"),
+    //END_CASE_KEYWORD(PL_SQLLexer.END_CASE_KEYWORD, "keyword"),
     CLOSE_KEYWORD(PL_SQLLexer.CLOSE_KEYWORD, "keyword"),
     TABLE_KEYWORD(PL_SQLLexer.TABLE_KEYWORD, "keyword"),
     OF_KEYWORD(PL_SQLLexer.OF_KEYWORD, "keyword"),
@@ -179,7 +179,9 @@ public enum TokenType {
     IDENTIFIER(PL_SQLLexer.IDENTIFIER, "identifier"),
     EXT_IDENTIFIER(PL_SQLLexer.EXT_IDENTIFIER, "identifier"),
     ALIAS(PL_SQLLexer.ALIAS, "identifier"),
-    SEPARATOR(PL_SQLLexer.SEPARATOR, "separator");
+    SEPARATOR(PL_SQLLexer.SEPARATOR, "separator"),
+    COMMA(PL_SQLLexer.COMMA, "separator"),
+    PARAM_VALUE(PL_SQLLexer.PARAM_VALUE, "operator");
     public int id;
     public String category;
     public String text;
