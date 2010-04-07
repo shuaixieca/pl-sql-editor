@@ -16,6 +16,7 @@ public enum TokenType {
     LINE_COMMENT(PL_SQLLexer.LINE_COMMENT, "comment"),
     WHITESPACE(PL_SQLLexer.WHITESPACE, "whitespace"),
     //OPERATOR(PL_SQLLexer.OPERATOR, "operator"),
+    //SQL_OPERATOR(PL_SQLLexer.SQL_OPERATOR, "operator"),
     OR_OPERATOR(PL_SQLLexer.OR_OPERATOR, "operator"),
     NOT_OPERATOR(PL_SQLLexer.NOT_OPERATOR, "operator"),
     AND_OPERATOR(PL_SQLLexer.AND_OPERATOR, "operator"),
