@@ -20,9 +20,11 @@ tokens {
 	AND_OPERATOR;
 	OR_OPERATOR;
 	NOT_OPEARTOR;
-	//BLOCK_COMMENT;
-	//LINE_COMMENT;
-	//WHITESPACE;
+	//OPERATOR;
+	//SQL_OPERATOR;
+	BLOCK_COMMENT;
+	LINE_COMMENT;
+	WHITESPACE;
 	STRING;
 	SOME_TYPES;
 	SCALE_TYPES;
@@ -39,7 +41,145 @@ tokens {
 	IDENTIFIER;
 	EXT_IDENTIFIER;
 	ALIAS;
+	SEPARATOR;
+	COMMA;
+	PARAM_VALUE;
 	//THE_REST;
+BEGIN_KEYWORD;
+END_KEYWORD;
+DECLARE_KEYWORD;
+EXCEPTION_KEYWORD;
+WHEN_KEYWORD;
+THEN_KEYWORD;
+NULL_KEYWORD;
+DEFAULT_KEYWORD;
+ROWTYPE_KEYWORD;
+LIKE_TYPE_KEYWORD;
+TYPE_KEYWORD;
+TRUE_KEYWORD;
+FALSE_KEYWORD;
+CONSTANT_KEYWORD;
+WITH_KEYWORD;
+LOCAL_KEYWORD;
+TIME_KEYWORD;
+ZONE_KEYWORD;
+INTERVAL_KEYWORD;
+TO_KEYWORD;
+MONTH_KEYWORD;
+SUBTYPE_KEYWORD;
+IS_KEYWORD;
+RECORD_KEYWORD;
+CREATE_KEYWORD;
+REPLACE_KEYWORD;
+FUNCTION_KEYWORD;
+AS_KEYWORD;
+RETURN_KEYWORD;
+IN_KEYWORD;
+OUT_KEYWORD;
+NOCOPY_KEYWORD;
+AUTHID_KEYWORD;
+CURRENT_USER_KEYWORD;
+DEFINER_KEYWORD;
+DETERMINISTIC_KEYWORD;
+PARALLEL_ENABLED_KEYWORD;
+PIPELINED_KEYWORD;
+RESULT_CACHE_KEYWORD;
+PROCEDURE_KEYWORD;
+IF_KEYWORD;
+ELSE_KEYWORD;
+ELSIF_KEYWORD;
+GOTO_KEYWORD;
+LOOP_KEYWORD;
+WHILE_KEYWORD;
+FOR_KEYWORD;
+REVERSE_KEYWORD;
+SELECT_KEYWORD;
+COUNT_KEYWORD;
+EXCEPTION_INIT_KEYWORD;
+LIKE_KEYWORD;
+RAISE_KEYWORD;
+PRAGMA_KEYWORD;
+AUTONOMOUS_TRANSACTION_KEYWORD;
+CASE_KEYWORD;
+CLOSE_KEYWORD;
+TABLE_KEYWORD;
+OF_KEYWORD;
+INDEX_KEYWORD;
+BY_KEYWORD;
+VARRAY_KEYWORD;
+VARYING_KEYWORD;
+ARRAY_KEYWORD;
+COMMIT_KEYWORD;
+REF_KEYWORD;
+CONTINUE_KEYWORD;
+CURSOR_KEYWORD;
+DELETE_KEYWORD;
+EXECUTE_KEYWORD;
+IMMEDIATE_KEYWORD;
+EXIT_KEYWORD;
+INTO_KEYWORD;
+USING_KEYWORD;
+BULK_KEYWORD;
+COLLECT_KEYWORD;
+FETCH_KEYWORD;
+LIMIT_KEYWORD;
+FORALL_KEYWORD;
+SAVE_KEYWORD;
+EXCEPTIONS_KEYWORD;
+INDICES_KEYWORD;
+VALUES_KEYWORD;
+BETWEEN_KEYWORD;
+INLINE_KEYWORD;
+INSERT_KEYWORD;
+LOCK_KEYWORD;
+MERGE_KEYWORD;
+OPEN_KEYWORD;
+PACKAGE_KEYWORD;
+BODY_KEYWORD;
+RESTRICT_REFERENCES_KEYWORD;
+RETURNING_KEYWORD;
+ROLLBACK_KEYWORD;
+SAVEPOINT_KEYWORD;
+SERIALLY_REUSABLE_KEYWORD;
+SET_KEYWORD;
+TRANSACTION_KEYWORD;
+NOTFOUND_KEYWORD;
+FOUND_KEYWORD;
+ISOPEN_KEYWORD;
+ROWCOUNT_KEYWORD;
+SQLCODE_KEYWORD;
+SQLERRM_KEYWORD;
+UPDATE_KEYWORD;
+EXISTS_KEYWORD;
+TRIGGER_KEYWORD;
+BEFORE_KEYWORD;
+AFTER_KEYWORD;
+INSTEAD_KEYWORD;
+ON_KEYWORD;
+NESTED_KEYWORD;
+REFERENCING_KEYWORD;
+OLD_KEYWORD;
+NEW_KEYWORD;
+PARENT_KEYWORD;
+EACH_KEYWORD;
+ROW_KEYWORD;
+FOLLOWS_KEYWORD;
+ENABLE_KEYWORD;
+DISABLE_KEYWORD;
+OID_KEYWORD;
+OBJECT_KEYWORD;
+UNDER_KEYWORD;
+FINAL_KEYWORD;
+INSTANTIABLE_KEYWORD;
+OVERRIDING_KEYWORD;
+MEMBER_KEYWORD;
+STATIC_KEYWORD;
+CONSTRUCTOR_KEYWORD;
+SELF_KEYWORD;
+RESULT_KEYWORD;
+MAP_KEYWORD;
+ORDER_KEYWORD;
+JOIN_KEYWORD;	
 }
 
 @parser::header {package org.netbeans.modules.languages.pl_sql.antlr;}
@@ -136,8 +276,8 @@ WHITESPACE
 
 /*
 OPERATOR:	':=' | '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' |
-    		'^=' | '>' | '<' | '<=' | '>=' | '..' | '(+)' | '(' | ')' | '<<' | '>>'
-;		
+    		'^=' | '>' | '<' | '<=' | '>=' | '..' | '(+)' | '<<' | '>>'
+;
 */
 OR_OPERATOR
 	:	O R;
@@ -552,6 +692,7 @@ sql_not_parsed : ALIAS | KEYWORD | sql_operator | INTO_KEYWORD | IN_KEYWORD | NO
                NUMBER_UNSIGNED | COUNT_KEYWORD | universal_identifier | case_statement_expression |
                STRING | COMMA | AND_OPERATOR | OR_OPERATOR | NOT_OPERATOR |
                IS_KEYWORD NOT_OPERATOR NULL_KEYWORD | IS_KEYWORD NULL_KEYWORD | NULL_KEYWORD | LIKE_KEYWORD | 
+               OF_KEYWORD |
                sql_statements | // | sql_not_parsed | ('(' (sql_not_parsed)* ')');
                expression | THE_REST | ('(' (sql_not_parsed)* ')');
 
@@ -639,7 +780,7 @@ variable_declaration : ((identifier data_type
 						(RESTRICT_REFERENCES_KEYWORD '(' expression (',' expression)+ ')' ) ))
 					   | cursor_datatype)
 					   SEPARATOR;
-variable_declaration_part : (NOT_OPEARTOR NULL_KEYWORD)? variable_def_part expression;
+variable_declaration_part : (NOT_OPERATOR NULL_KEYWORD)? variable_def_part expression;
 variable_def_part : ':=' | DEFAULT_KEYWORD;
 data_type : SOME_TYPES | scale_types | size_types | char_types | raw_type |
             timestamp_types | interval_year_type | interval_day_type | 
@@ -648,17 +789,17 @@ char_types : (CHAR_TYPES | CHAR_TYPE) ('(' '+'? NUMBER_UNSIGNED (CHAR_TYPE | BYT
 timestamp_types : timestamp_type (WITH_KEYWORD LOCAL_KEYWORD? TIME_KEYWORD ZONE_KEYWORD)?;
 interval_year_type : INTERVAL_KEYWORD year_type TO_KEYWORD MONTH_KEYWORD;
 interval_day_type : INTERVAL_KEYWORD day_type TO_KEYWORD second_type;
-subtype_datatype : SUBTYPE_KEYWORD identifier IS_KEYWORD data_type (NOT_OPEARTOR NULL_KEYWORD)?;
+subtype_datatype : SUBTYPE_KEYWORD identifier IS_KEYWORD data_type (NOT_OPERATOR NULL_KEYWORD)?;
 
 record_collection_datatype : TYPE_KEYWORD identifier IS_KEYWORD 
                             (record_datatype | collection_table_datatype | collection_varray_datatype |
                             ref_cursor_datatype);
 record_datatype : RECORD_KEYWORD '(' record_field_declaration (',' record_field_declaration)* ')' ;
 record_field_declaration : identifier data_type variable_declaration_part?;
-collection_table_datatype : TABLE_KEYWORD OF_KEYWORD data_type (NOT_OPEARTOR NULL_KEYWORD)?
+collection_table_datatype : TABLE_KEYWORD OF_KEYWORD data_type (NOT_OPERATOR NULL_KEYWORD)?
                       (INDEX_KEYWORD BY_KEYWORD data_type)?;
 collection_varray_datatype : (VARRAY_KEYWORD | (VARYING_KEYWORD ARRAY_KEYWORD))
-                             '(' '+'? NUMBER_UNSIGNED ')' OF_KEYWORD data_type (NOT_OPEARTOR NULL_KEYWORD)?;
+                             '(' '+'? NUMBER_UNSIGNED ')' OF_KEYWORD data_type (NOT_OPERATOR NULL_KEYWORD)?;
 ref_cursor_datatype : REF_KEYWORD CURSOR_KEYWORD (RETURN_KEYWORD data_type)?;
 cursor_datatype : CURSOR_KEYWORD identifier cursor_parameter_declaration?
                   (RETURN_KEYWORD data_type)? (IS_KEYWORD select_statement)?;
