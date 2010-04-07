@@ -133,6 +133,7 @@ LINE_COMMENT
 WHITESPACE
 	:	(' '|'\t'|'\n'|'\r')+ {$channel=HIDDEN;}
 ;
+
 /*
 OPERATOR:	':=' | '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' |
     		'^=' | '>' | '<' | '<=' | '>=' | '..' | '(+)' | '(' | ')' | '<<' | '>>'
@@ -162,19 +163,16 @@ SOME_TYPES
 	:	N A T U R A L | P L S '_' I N T E G E R | N A T U R A L N | P O S I T I V E | P O S I T I V E N |
 		S I G N T Y P E | S I M P L E '_' I N T E G E R | I N T | I N T E G E R | S M A L L I N T |
 		B I N A R Y '_' I N T E G E R | R E A L | B I N A R Y '_' D O U B L E | B I N A R Y '_' F L O A T |
-		L O N G | L O N G (' '|'\t'|'\n'|'\r')+ R A W | R O W I D | U R O W I D | B O O L E A N | M L S L A B E L |
+		L O N G | L O N G WHITESPACE R A W | R O W I D | U R O W I D | B O O L E A N | M L S L A B E L |
 		D A T E | B F I L E | B L O B | C L O B | N C L O B
 ;
 
 SCALE_TYPES
-	:	( N U M B E R | D E C | D E C I M A L | N U M E R I C )
-		( ('(' '+'? DIGITS ')') |
-		('(' '+'? DIGITS COMMA ('+' | '-')? DIGITS ')') )?
+	:	N U M B E R | D E C | D E C I M A L | N U M E R I C
 ;
 
 SIZE_TYPES
-	:	( D O U B L E (' '|'\t'|'\n'|'\r')+ P R E C I S I O N | F L O A T )
-		( '(' '+'? DIGITS ')' )?
+	:	D O U B L E WHITESPACE P R E C I S I O N | F L O A T
 ;
 
 CHAR_TYPES
@@ -189,29 +187,29 @@ BYTE_TYPE
 	:	B Y T E
 ;
 
-RAW_TYPE:	R A W '(' '+'? DIGITS ')'
+RAW_TYPE:	R A W
 ;
 
 TIMESTAMP_TYPE
-	:	T I M E S T A M P ( '(' '+'? DIGIT ')' )?
+	:	T I M E S T A M P
 ;
 
 YEAR_TYPE
-	:	Y E A R ( '(' '+'? '0' .. '4' ')' )?
+	:	Y E A R
 ;
 
-DAY_TYPE:	D A Y ( '(' '+'? DIGIT ')' )?
+DAY_TYPE:	D A Y
 ;
 
 SECOND_TYPE
-	:	S E C O N D ( '(' '+'? DIGIT ')' )?
+	:	S E C O N D
 ;
 
 // ### SQL keywords ###
-KEYWORD	:	'.' | F R O M | W H E R E | G R O U P (' '|'\t'|'\n'|'\r')+ B Y | O R D E R (' '|'\t'|'\n'|'\r')+ B Y | 
+KEYWORD	:	'.' | F R O M | W H E R E | G R O U P WHITESPACE B Y | O R D E R WHITESPACE B Y | 
     		P R I O R | C O N N E C T '_' B Y '_' R O O T | C O N N E C T | S T A R T |
-    		U N I O N | U N I O N (' '|'\t'|'\n'|'\r')+ A L L | I N T E R S E C T | M I N U S | M U L T I S E T (' '|'\t'|'\n'|'\r')+ E X C E P T |
-    		M U L T I S E T (' '|'\t'|'\n'|'\r')+ I N T E R S E C T | M U L T I S E T (' '|'\t'|'\n'|'\r')+ U N I O N |
+    		U N I O N | U N I O N WHITESPACE A L L | I N T E R S E C T | M I N U S | M U L T I S E T WHITESPACE E X C E P T |
+    		M U L T I S E T WHITESPACE I N T E R S E C T | M U L T I S E T WHITESPACE U N I O N |
     		A N Y | S O M E | A L L | E S C A P E
 ;
 
@@ -378,6 +376,7 @@ SEPARATOR
 /*TERMINATOR
 	:	'/';
 */
+
 COMMA
 	:	',';
 
@@ -440,8 +439,8 @@ grammar_def
 
 source_element : anonymous_block | 
                  (create_replace_part?
-                  (function_declaration | procedure_declaration | package_spec | package_body |
-                   trigger_declaration | type_spec_declaration | type_body_declaration));
+                  (function_declaration | procedure_declaration | package_declaration |
+                   trigger_declaration | type_declaration ));
 identifier : IDENTIFIER | RESULT_KEYWORD | INTERVAL_KEYWORD;
 universal_identifier : identifier | EXT_IDENTIFIER;
 label : '<<' identifier '>>';
@@ -462,12 +461,12 @@ procedure_spec : PROCEDURE_KEYWORD procedure_name parameter_declaration?
 procedure_name : universal_identifier | ALIAS;
 procedure_declaration : procedure_spec function_procedure_body;
 function_procedure_body : as_is_part (variable_declaration)* (function_declaration | procedure_declaration)* block;
-//package_uni	:	PACKAGE_KEYWORD (package_spec | package_body);
-package_spec : PACKAGE_KEYWORD package_spec_name invoker_clause? as_is_part
+package_declaration : PACKAGE_KEYWORD! package_spec | PACKAGE_KEYWORD! package_body;
+package_spec :  package_spec_name invoker_clause? as_is_part
                (variable_declaration | ((function_spec | procedure_spec) ';'))* 
                END_KEYWORD universal_identifier? SEPARATOR? '/'?;
 package_spec_name : universal_identifier | ALIAS;
-package_body : PACKAGE_KEYWORD BODY_KEYWORD package_body_name as_is_part
+package_body : BODY_KEYWORD package_body_name as_is_part
                (variable_declaration | function_declaration | procedure_declaration)*
                (BEGIN_KEYWORD (executable_section)+)?
                END_KEYWORD universal_identifier? SEPARATOR? '/'?;
@@ -492,7 +491,8 @@ dml_event_clause_factor : OF_KEYWORD (universal_identifier COMMA?)+;
 dml_event_clause_part : ON_KEYWORD ((NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD)? universal_identifier);
 referencing_clause : REFERENCING_KEYWORD ( (OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD)
                      AS_KEYWORD? (OLD_KEYWORD | NEW_KEYWORD | identifier) )+;
-type_spec_declaration : TYPE_KEYWORD type_spec_name type_oid_part? invoker_clause? type_spec_types
+type_declaration : TYPE_KEYWORD! type_spec_declaration | TYPE_KEYWORD! type_body_declaration;
+type_spec_declaration : type_spec_name type_oid_part? invoker_clause? type_spec_types
                         SEPARATOR? '/'?;
 type_spec_name : universal_identifier | ALIAS;
 type_oid_part : OID_KEYWORD '\'' universal_identifier '\'' ;
@@ -514,7 +514,7 @@ subprogram_spec : (MEMBER_KEYWORD | STATIC_KEYWORD) (function_spec | procedure_s
 inheritance_clauses : NOT_OPERATOR? (FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD);
 varray_type : as_is_part collection_varray_datatype;
 nested_table_type : as_is_part TABLE_KEYWORD OF_KEYWORD data_type;
-type_body_declaration : TYPE_KEYWORD BODY_KEYWORD type_body_name as_is_part
+type_body_declaration : BODY_KEYWORD type_body_name as_is_part
                         ((subprogram_declaration | map_order_func_declaration) ','? )+ END_KEYWORD
                         SEPARATOR? '/'?;
 type_body_name : universal_identifier | ALIAS;
@@ -641,14 +641,13 @@ variable_declaration : ((identifier data_type
 					   SEPARATOR;
 variable_declaration_part : (NOT_OPEARTOR NULL_KEYWORD)? variable_def_part expression;
 variable_def_part : ':=' | DEFAULT_KEYWORD;
-data_type : SOME_TYPES | SCALE_TYPES | SIZE_TYPES | char_types | RAW_TYPE |
-            timestamp_type | interval_year_type | interval_day_type | 
+data_type : SOME_TYPES | scale_types | size_types | char_types | raw_type |
+            timestamp_types | interval_year_type | interval_day_type | 
             (REF_KEYWORD? universal_identifier)| special_datatype;
 char_types : (CHAR_TYPES | CHAR_TYPE) ('(' '+'? NUMBER_UNSIGNED (CHAR_TYPE | BYTE_TYPE)? ')')?;
-timestamp_type : TIMESTAMP_TYPE | 
-    ( TIMESTAMP_TYPE WITH_KEYWORD LOCAL_KEYWORD? TIME_KEYWORD ZONE_KEYWORD);
-interval_year_type : INTERVAL_KEYWORD YEAR_TYPE TO_KEYWORD MONTH_KEYWORD;
-interval_day_type : INTERVAL_KEYWORD DAY_TYPE TO_KEYWORD SECOND_TYPE;
+timestamp_types : timestamp_type (WITH_KEYWORD LOCAL_KEYWORD? TIME_KEYWORD ZONE_KEYWORD)?;
+interval_year_type : INTERVAL_KEYWORD year_type TO_KEYWORD MONTH_KEYWORD;
+interval_day_type : INTERVAL_KEYWORD day_type TO_KEYWORD second_type;
 subtype_datatype : SUBTYPE_KEYWORD identifier IS_KEYWORD data_type (NOT_OPEARTOR NULL_KEYWORD)?;
 
 record_collection_datatype : TYPE_KEYWORD identifier IS_KEYWORD 
@@ -678,7 +677,7 @@ operator : '+' | '-' | '*' | '/' | '**' | '||' | ':=' | '.' |
            AND_OPERATOR | OR_OPERATOR |
            LIKE_KEYWORD | ((NOT_OPERATOR)? BETWEEN_KEYWORD);
 unary_op : NOT_OPERATOR | '+' | '-';
-postfix_op : IS_KEYWORD NULL_KEYWORD | IS_KEYWORD NOT_OPERATOR NULL_KEYWORD | '(+)' ;
+postfix_op : (IS_KEYWORD NOT_OPERATOR? NULL_KEYWORD) | '(+)' ;
 universal_expression : unary_op? universal_factor postfix_op? (operator (universal_expression | ('(' select_statement ')') ))*;
 universal_factor : TRUE_KEYWORD | FALSE_KEYWORD | NUMBER_UNSIGNED |
                    in_notin_expression |
@@ -693,4 +692,24 @@ call_statement_param : ('(' (universal_expression (',' universal_expression )*)?
 exception_section : EXCEPTION_KEYWORD (exception_handler)+;
 exception_handler : WHEN_KEYWORD universal_identifier (OR_OPERATOR universal_identifier)*
                     THEN_KEYWORD (executable_section)+;
-	
+
+scale_types
+	:	SCALE_TYPES ('(' '+'? NUMBER_UNSIGNED (COMMA ('+' | '-')? NUMBER_UNSIGNED)? ')')?
+;
+size_types
+	:	SIZE_TYPES ( '(' '+'? NUMBER_UNSIGNED ')' )?
+;
+raw_type:	RAW_TYPE '(' '+'? NUMBER_UNSIGNED ')'
+;
+year_type
+	:	YEAR_TYPE ( '(' '+'? NUMBER_UNSIGNED ')' )?
+;
+timestamp_type
+	:	TIMESTAMP_TYPE ( '(' '+'? NUMBER_UNSIGNED ')' )?
+;
+day_type
+	:	DAY_TYPE ( '(' '+'? NUMBER_UNSIGNED ')' )?
+;
+second_type
+	:	SECOND_TYPE ( '(' '+'? NUMBER_UNSIGNED ')' )?
+;
