@@ -41,9 +41,9 @@ tokens {
 	IDENTIFIER;
 	EXT_IDENTIFIER;
 	ALIAS;
-	SEPARATOR;
-	COMMA;
-	PARAM_VALUE;
+	SEPARATOR = ';';
+	COMMA = ',';
+	PARAM_VALUE = '=>';
 	//THE_REST;
 BEGIN_KEYWORD;
 END_KEYWORD;
@@ -217,7 +217,7 @@ public class SyntaxError {
     public RecognitionException exception;
     public String message;
     public int line;
-    public int charPositionInLine;
+    public int start, end;
 }
 	public List<SyntaxError> syntaxErrors = new ArrayList<SyntaxError>();
 
@@ -228,7 +228,9 @@ public class SyntaxError {
 		syntaxError.exception = e;
 		syntaxError.message = message;
 		syntaxError.line = e.line;
-		syntaxError.charPositionInLine = e.charPositionInLine;
+		CommonToken token =  (CommonToken) e.token;
+		syntaxError.start = token.getStartIndex();
+                syntaxError.end = token.getStopIndex() + 1;
 		syntaxErrors.add(syntaxError);
 		return message;
 	}
@@ -510,19 +512,18 @@ EXT_IDENTIFIER
 ALIAS	:	'"' (~'"')+ '"'
 ;
 
-SEPARATOR
-	:	';';
-
+/*SEPARATOR
+	:	';';*/
 /*TERMINATOR
 	:	'/';
 */
 
-COMMA
+/*COMMA
 	:	',';
 
 PARAM_VALUE
 	:	'=>';
-	
+*/	
 fragment QUOTATION_MARK
 	:	'"';
 
@@ -603,7 +604,7 @@ procedure_declaration : procedure_spec function_procedure_body;
 function_procedure_body : as_is_part (variable_declaration)* (function_declaration | procedure_declaration)* block;
 package_declaration : PACKAGE_KEYWORD! package_spec | PACKAGE_KEYWORD! package_body;
 package_spec :  package_spec_name invoker_clause? as_is_part
-               (variable_declaration | ((function_spec | procedure_spec) ';'))* 
+               (variable_declaration | ((function_spec | procedure_spec) SEPARATOR))* 
                END_KEYWORD universal_identifier? SEPARATOR? '/'?;
 package_spec_name : universal_identifier | ALIAS;
 package_body : BODY_KEYWORD package_body_name as_is_part

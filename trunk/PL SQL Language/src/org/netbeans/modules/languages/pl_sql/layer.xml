@@ -43,6 +43,17 @@
             </folder>
         </folder>
     </folder>
+
+    <!--folder name="CslPlugins">
+        <folder name="text">
+            <folder name="pl_sql">
+                <file name="structure.instance">
+                    <attr name="instanceClass" stringvalue="org.netbeans.modules.languages.pl_sql.PLSQLStructureScanner"/>
+                </file>
+            </folder>
+        </folder>
+    </folder-->
+
     <folder name="Loaders">
         <folder name="text">
             <folder name="pl_sql">
