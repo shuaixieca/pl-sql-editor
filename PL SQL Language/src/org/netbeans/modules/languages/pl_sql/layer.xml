@@ -16,10 +16,10 @@
 
                 <file name="org-netbeans-modules-languages-pl_sql-parser-SyntaxErrorsHighlightingTaskFactory.instance"/>
 
-                <file name="structure.instance">
-                    <attr name="instanceClass" stringvalue="org.netbeans.modules.languages.pl_sql.PLSQLStructureScanner"/>
-                </file>
-
+                <folder name="FoldManager">
+                    <file name="org-netbeans-editor-CustomFoldManager$Factory.instance"/>
+                </folder>
+                
                 <folder name="Popup">
                     <file name="SeparatorFolding.instance">
                         <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
@@ -44,15 +44,19 @@
         </folder>
     </folder>
 
-    <!--folder name="CslPlugins">
+    <folder name="CslPlugins">
         <folder name="text">
             <folder name="pl_sql">
+                <file name="language.instance">
+                    <attr name="instanceClass" stringvalue="org.netbeans.modules.languages.pl_sql.PLSQLLanguage"/>
+                </file>
+
                 <file name="structure.instance">
                     <attr name="instanceClass" stringvalue="org.netbeans.modules.languages.pl_sql.PLSQLStructureScanner"/>
                 </file>
             </folder>
         </folder>
-    </folder-->
+    </folder>
 
     <folder name="Loaders">
         <folder name="text">

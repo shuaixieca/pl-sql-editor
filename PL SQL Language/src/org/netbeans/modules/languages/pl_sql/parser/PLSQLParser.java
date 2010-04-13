@@ -4,9 +4,13 @@
  */
 package org.netbeans.modules.languages.pl_sql.parser;
 
+import java.util.Collections;
+import java.util.List;
 import javax.swing.event.ChangeListener;
 import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CommonTokenStream;
+import org.netbeans.modules.csl.api.Error;
+import org.netbeans.modules.csl.spi.ParserResult;
 import org.netbeans.modules.languages.pl_sql.antlr.PL_SQLLexer;
 import org.netbeans.modules.languages.pl_sql.antlr.PL_SQLParser;
 import org.netbeans.modules.parsing.api.Snapshot;
@@ -52,7 +56,7 @@ public class PLSQLParser extends Parser {
     public void removeChangeListener(ChangeListener changeListener) {
     }
 
-    public static class PL_SQLEditorParserResult extends Result {
+    public static class PL_SQLEditorParserResult extends ParserResult {
 
         private PL_SQLParser parser;
         private PL_SQLLexer lexer;
@@ -78,6 +82,11 @@ public class PLSQLParser extends Parser {
 
         protected void invalidate() {
             valid = false;
+        }
+
+        @Override
+        public List<? extends Error> getDiagnostics() {
+            return Collections.<Error>emptyList();
         }
     }
 }
