@@ -52,7 +52,7 @@
                 </file>
 
                 <file name="structure.instance">
-                    <attr name="instanceClass" stringvalue="org.netbeans.modules.languages.pl_sql.PLSQLStructureScanner"/>
+                    <attr name="instanceClass" stringvalue="org.netbeans.modules.languages.pl_sql.structure.PLSQLStructureScanner"/>
                 </file>
             </folder>
         </folder>

@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-04-09 17:56:39
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-04-14 17:22:30
 package org.netbeans.modules.languages.pl_sql.antlr;
 
 import org.antlr.runtime.*;
@@ -4010,7 +4010,7 @@ public class PL_SQLParser extends Parser {
             	            int LA49_0 = input.LA(1);
 
             	            if ( (LA49_0==OF_KEYWORD) ) {
-            	                int LA49_1 = input.LA(2);
+            	                int LA49_2 = input.LA(2);
 
             	                if ( (synpred68_PL_SQL()) ) {
             	                    alt49=1;
@@ -4111,7 +4111,7 @@ public class PL_SQLParser extends Parser {
             int LA54_0 = input.LA(1);
 
             if ( (LA54_0==REFERENCING_KEYWORD) ) {
-                int LA54_1 = input.LA(2);
+                int LA54_2 = input.LA(2);
 
                 if ( (synpred72_PL_SQL()) ) {
                     alt54=1;
@@ -5068,8 +5068,11 @@ public class PL_SQLParser extends Parser {
             int alt68=3;
             int LA68_0 = input.LA(1);
 
-            if ( (LA68_0==IS_KEYWORD||LA68_0==AS_KEYWORD) ) {
-                int LA68_1 = input.LA(2);
+            if ( (LA68_0==UNDER_KEYWORD) ) {
+                alt68=1;
+            }
+            else if ( (LA68_0==IS_KEYWORD||LA68_0==AS_KEYWORD) ) {
+                int LA68_2 = input.LA(2);
 
                 if ( (synpred89_PL_SQL()) ) {
                     alt68=1;
@@ -5083,13 +5086,10 @@ public class PL_SQLParser extends Parser {
                 else {
                     if (state.backtracking>0) {state.failed=true; return retval;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 68, 1, input);
+                        new NoViableAltException("", 68, 2, input);
 
                     throw nvae;
                 }
-            }
-            else if ( (LA68_0==UNDER_KEYWORD) ) {
-                alt68=1;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
@@ -5671,7 +5671,7 @@ public class PL_SQLParser extends Parser {
                 int LA82_0 = input.LA(1);
 
                 if ( ((LA82_0>=FINAL_KEYWORD && LA82_0<=INSTANTIABLE_KEYWORD)||(LA82_0>=MEMBER_KEYWORD && LA82_0<=CONSTRUCTOR_KEYWORD)||(LA82_0>=MAP_KEYWORD && LA82_0<=ORDER_KEYWORD)) ) {
-                    int LA82_2 = input.LA(2);
+                    int LA82_1 = input.LA(2);
 
                     if ( (synpred105_PL_SQL()) ) {
                         alt82=1;
@@ -7520,7 +7520,7 @@ public class PL_SQLParser extends Parser {
             int LA106_0 = input.LA(1);
 
             if ( ((LA106_0>=IDENTIFIER && LA106_0<=EXT_IDENTIFIER)||LA106_0==INTERVAL_KEYWORD||LA106_0==RESULT_KEYWORD) ) {
-                int LA106_2 = input.LA(2);
+                int LA106_1 = input.LA(2);
 
                 if ( (synpred136_PL_SQL()) ) {
                     alt106=1;
@@ -9355,20 +9355,20 @@ public class PL_SQLParser extends Parser {
                 int alt120=3;
                 int LA120_0 = input.LA(1);
 
-                if ( (LA120_0==FOR_KEYWORD) ) {
+                if ( ((LA120_0>=NUMBER_UNSIGNED && LA120_0<=OR_OPERATOR)||(LA120_0>=STRING && LA120_0<=SOME_TYPES)||(LA120_0>=KEYWORD && LA120_0<=ALIAS)||LA120_0==COMMA||LA120_0==NULL_KEYWORD||(LA120_0>=TRUE_KEYWORD && LA120_0<=FALSE_KEYWORD)||LA120_0==WITH_KEYWORD||LA120_0==INTERVAL_KEYWORD||LA120_0==IS_KEYWORD||LA120_0==REPLACE_KEYWORD||LA120_0==AS_KEYWORD||LA120_0==IN_KEYWORD||(LA120_0>=SELECT_KEYWORD && LA120_0<=COUNT_KEYWORD)||LA120_0==LIKE_KEYWORD||LA120_0==CASE_KEYWORD||(LA120_0>=TABLE_KEYWORD && LA120_0<=OF_KEYWORD)||LA120_0==BY_KEYWORD||LA120_0==COMMIT_KEYWORD||LA120_0==DELETE_KEYWORD||LA120_0==INTO_KEYWORD||(LA120_0>=BULK_KEYWORD && LA120_0<=COLLECT_KEYWORD)||(LA120_0>=VALUES_KEYWORD && LA120_0<=BETWEEN_KEYWORD)||(LA120_0>=INSERT_KEYWORD && LA120_0<=MERGE_KEYWORD)||(LA120_0>=RETURNING_KEYWORD && LA120_0<=SAVEPOINT_KEYWORD)||LA120_0==SET_KEYWORD||(LA120_0>=SQLCODE_KEYWORD && LA120_0<=EXISTS_KEYWORD)||LA120_0==ON_KEYWORD||LA120_0==ROW_KEYWORD||LA120_0==RESULT_KEYWORD||LA120_0==JOIN_KEYWORD||LA120_0==NOT_OPERATOR||LA120_0==THE_REST||LA120_0==200||LA120_0==202||(LA120_0>=204 && LA120_0<=218)) ) {
                     int LA120_2 = input.LA(2);
 
-                    if ( (synpred227_PL_SQL()) ) {
-                        alt120=2;
+                    if ( (synpred226_PL_SQL()) ) {
+                        alt120=1;
                     }
 
 
                 }
-                else if ( ((LA120_0>=NUMBER_UNSIGNED && LA120_0<=OR_OPERATOR)||(LA120_0>=STRING && LA120_0<=SOME_TYPES)||(LA120_0>=KEYWORD && LA120_0<=ALIAS)||LA120_0==COMMA||LA120_0==NULL_KEYWORD||(LA120_0>=TRUE_KEYWORD && LA120_0<=FALSE_KEYWORD)||LA120_0==WITH_KEYWORD||LA120_0==INTERVAL_KEYWORD||LA120_0==IS_KEYWORD||LA120_0==REPLACE_KEYWORD||LA120_0==AS_KEYWORD||LA120_0==IN_KEYWORD||(LA120_0>=SELECT_KEYWORD && LA120_0<=COUNT_KEYWORD)||LA120_0==LIKE_KEYWORD||LA120_0==CASE_KEYWORD||(LA120_0>=TABLE_KEYWORD && LA120_0<=OF_KEYWORD)||LA120_0==BY_KEYWORD||LA120_0==COMMIT_KEYWORD||LA120_0==DELETE_KEYWORD||LA120_0==INTO_KEYWORD||(LA120_0>=BULK_KEYWORD && LA120_0<=COLLECT_KEYWORD)||(LA120_0>=VALUES_KEYWORD && LA120_0<=BETWEEN_KEYWORD)||(LA120_0>=INSERT_KEYWORD && LA120_0<=MERGE_KEYWORD)||(LA120_0>=RETURNING_KEYWORD && LA120_0<=SAVEPOINT_KEYWORD)||LA120_0==SET_KEYWORD||(LA120_0>=SQLCODE_KEYWORD && LA120_0<=EXISTS_KEYWORD)||LA120_0==ON_KEYWORD||LA120_0==ROW_KEYWORD||LA120_0==RESULT_KEYWORD||LA120_0==JOIN_KEYWORD||LA120_0==NOT_OPERATOR||LA120_0==THE_REST||LA120_0==200||LA120_0==202||(LA120_0>=204 && LA120_0<=218)) ) {
+                else if ( (LA120_0==FOR_KEYWORD) ) {
                     int LA120_4 = input.LA(2);
 
-                    if ( (synpred226_PL_SQL()) ) {
-                        alt120=1;
+                    if ( (synpred227_PL_SQL()) ) {
+                        alt120=2;
                     }
 
 
@@ -9519,7 +9519,7 @@ public class PL_SQLParser extends Parser {
             int LA121_0 = input.LA(1);
 
             if ( ((LA121_0>=NUMBER_UNSIGNED && LA121_0<=OR_OPERATOR)||(LA121_0>=STRING && LA121_0<=SOME_TYPES)||(LA121_0>=KEYWORD && LA121_0<=ALIAS)||LA121_0==COMMA||LA121_0==NULL_KEYWORD||(LA121_0>=TRUE_KEYWORD && LA121_0<=FALSE_KEYWORD)||LA121_0==WITH_KEYWORD||LA121_0==INTERVAL_KEYWORD||LA121_0==IS_KEYWORD||LA121_0==REPLACE_KEYWORD||LA121_0==AS_KEYWORD||LA121_0==IN_KEYWORD||(LA121_0>=SELECT_KEYWORD && LA121_0<=COUNT_KEYWORD)||LA121_0==LIKE_KEYWORD||LA121_0==CASE_KEYWORD||(LA121_0>=TABLE_KEYWORD && LA121_0<=OF_KEYWORD)||LA121_0==BY_KEYWORD||LA121_0==COMMIT_KEYWORD||LA121_0==DELETE_KEYWORD||LA121_0==INTO_KEYWORD||(LA121_0>=BULK_KEYWORD && LA121_0<=COLLECT_KEYWORD)||(LA121_0>=VALUES_KEYWORD && LA121_0<=BETWEEN_KEYWORD)||(LA121_0>=INSERT_KEYWORD && LA121_0<=MERGE_KEYWORD)||(LA121_0>=RETURNING_KEYWORD && LA121_0<=SAVEPOINT_KEYWORD)||LA121_0==SET_KEYWORD||(LA121_0>=SQLCODE_KEYWORD && LA121_0<=EXISTS_KEYWORD)||LA121_0==ROW_KEYWORD||LA121_0==RESULT_KEYWORD||LA121_0==JOIN_KEYWORD||LA121_0==NOT_OPERATOR||LA121_0==THE_REST||LA121_0==200||LA121_0==202||(LA121_0>=204 && LA121_0<=218)) ) {
-                int LA121_2 = input.LA(2);
+                int LA121_1 = input.LA(2);
 
                 if ( (synpred228_PL_SQL()) ) {
                     alt121=1;
@@ -9701,7 +9701,7 @@ public class PL_SQLParser extends Parser {
                 int LA123_0 = input.LA(1);
 
                 if ( ((LA123_0>=NUMBER_UNSIGNED && LA123_0<=OR_OPERATOR)||(LA123_0>=STRING && LA123_0<=SOME_TYPES)||(LA123_0>=KEYWORD && LA123_0<=ALIAS)||LA123_0==COMMA||LA123_0==NULL_KEYWORD||(LA123_0>=TRUE_KEYWORD && LA123_0<=FALSE_KEYWORD)||LA123_0==WITH_KEYWORD||LA123_0==INTERVAL_KEYWORD||LA123_0==IS_KEYWORD||LA123_0==REPLACE_KEYWORD||LA123_0==AS_KEYWORD||LA123_0==IN_KEYWORD||(LA123_0>=SELECT_KEYWORD && LA123_0<=COUNT_KEYWORD)||LA123_0==LIKE_KEYWORD||LA123_0==CASE_KEYWORD||(LA123_0>=TABLE_KEYWORD && LA123_0<=OF_KEYWORD)||LA123_0==BY_KEYWORD||LA123_0==COMMIT_KEYWORD||LA123_0==DELETE_KEYWORD||LA123_0==INTO_KEYWORD||(LA123_0>=BULK_KEYWORD && LA123_0<=COLLECT_KEYWORD)||(LA123_0>=VALUES_KEYWORD && LA123_0<=BETWEEN_KEYWORD)||(LA123_0>=INSERT_KEYWORD && LA123_0<=MERGE_KEYWORD)||(LA123_0>=RETURNING_KEYWORD && LA123_0<=SAVEPOINT_KEYWORD)||LA123_0==SET_KEYWORD||(LA123_0>=SQLCODE_KEYWORD && LA123_0<=EXISTS_KEYWORD)||LA123_0==ROW_KEYWORD||LA123_0==RESULT_KEYWORD||LA123_0==JOIN_KEYWORD||LA123_0==NOT_OPERATOR||LA123_0==THE_REST||LA123_0==200||LA123_0==202||(LA123_0>=204 && LA123_0<=218)) ) {
-                    int LA123_1 = input.LA(2);
+                    int LA123_2 = input.LA(2);
 
                     if ( (synpred230_PL_SQL()) ) {
                         alt123=1;
@@ -9805,7 +9805,7 @@ public class PL_SQLParser extends Parser {
                 int LA124_0 = input.LA(1);
 
                 if ( ((LA124_0>=NUMBER_UNSIGNED && LA124_0<=OR_OPERATOR)||(LA124_0>=STRING && LA124_0<=SOME_TYPES)||(LA124_0>=KEYWORD && LA124_0<=ALIAS)||LA124_0==COMMA||LA124_0==NULL_KEYWORD||(LA124_0>=TRUE_KEYWORD && LA124_0<=FALSE_KEYWORD)||LA124_0==WITH_KEYWORD||LA124_0==INTERVAL_KEYWORD||LA124_0==IS_KEYWORD||LA124_0==REPLACE_KEYWORD||LA124_0==AS_KEYWORD||LA124_0==IN_KEYWORD||(LA124_0>=SELECT_KEYWORD && LA124_0<=COUNT_KEYWORD)||LA124_0==LIKE_KEYWORD||LA124_0==CASE_KEYWORD||(LA124_0>=TABLE_KEYWORD && LA124_0<=OF_KEYWORD)||LA124_0==BY_KEYWORD||LA124_0==COMMIT_KEYWORD||LA124_0==DELETE_KEYWORD||LA124_0==INTO_KEYWORD||(LA124_0>=BULK_KEYWORD && LA124_0<=COLLECT_KEYWORD)||(LA124_0>=VALUES_KEYWORD && LA124_0<=BETWEEN_KEYWORD)||(LA124_0>=INSERT_KEYWORD && LA124_0<=MERGE_KEYWORD)||(LA124_0>=RETURNING_KEYWORD && LA124_0<=SAVEPOINT_KEYWORD)||LA124_0==SET_KEYWORD||(LA124_0>=SQLCODE_KEYWORD && LA124_0<=EXISTS_KEYWORD)||LA124_0==ROW_KEYWORD||LA124_0==RESULT_KEYWORD||LA124_0==JOIN_KEYWORD||LA124_0==NOT_OPERATOR||LA124_0==THE_REST||LA124_0==200||LA124_0==202||(LA124_0>=204 && LA124_0<=218)) ) {
-                    int LA124_1 = input.LA(2);
+                    int LA124_2 = input.LA(2);
 
                     if ( (synpred231_PL_SQL()) ) {
                         alt124=1;
@@ -10215,7 +10215,7 @@ public class PL_SQLParser extends Parser {
                 int LA127_0 = input.LA(1);
 
                 if ( ((LA127_0>=NUMBER_UNSIGNED && LA127_0<=OR_OPERATOR)||(LA127_0>=STRING && LA127_0<=SOME_TYPES)||(LA127_0>=KEYWORD && LA127_0<=ALIAS)||LA127_0==COMMA||LA127_0==NULL_KEYWORD||(LA127_0>=TRUE_KEYWORD && LA127_0<=FALSE_KEYWORD)||LA127_0==WITH_KEYWORD||LA127_0==INTERVAL_KEYWORD||LA127_0==IS_KEYWORD||LA127_0==REPLACE_KEYWORD||LA127_0==AS_KEYWORD||LA127_0==IN_KEYWORD||(LA127_0>=SELECT_KEYWORD && LA127_0<=COUNT_KEYWORD)||LA127_0==LIKE_KEYWORD||LA127_0==CASE_KEYWORD||(LA127_0>=TABLE_KEYWORD && LA127_0<=OF_KEYWORD)||LA127_0==BY_KEYWORD||LA127_0==COMMIT_KEYWORD||LA127_0==DELETE_KEYWORD||LA127_0==INTO_KEYWORD||(LA127_0>=BULK_KEYWORD && LA127_0<=COLLECT_KEYWORD)||(LA127_0>=VALUES_KEYWORD && LA127_0<=BETWEEN_KEYWORD)||(LA127_0>=INSERT_KEYWORD && LA127_0<=MERGE_KEYWORD)||(LA127_0>=RETURNING_KEYWORD && LA127_0<=SAVEPOINT_KEYWORD)||LA127_0==SET_KEYWORD||(LA127_0>=SQLCODE_KEYWORD && LA127_0<=EXISTS_KEYWORD)||LA127_0==ROW_KEYWORD||LA127_0==RESULT_KEYWORD||LA127_0==JOIN_KEYWORD||LA127_0==NOT_OPERATOR||LA127_0==THE_REST||LA127_0==200||LA127_0==202||(LA127_0>=204 && LA127_0<=218)) ) {
-                    int LA127_2 = input.LA(2);
+                    int LA127_1 = input.LA(2);
 
                     if ( (synpred240_PL_SQL()) ) {
                         alt127=1;
@@ -11427,7 +11427,7 @@ public class PL_SQLParser extends Parser {
             int LA140_0 = input.LA(1);
 
             if ( ((LA140_0>=IDENTIFIER && LA140_0<=EXT_IDENTIFIER)||LA140_0==INTERVAL_KEYWORD||LA140_0==RESULT_KEYWORD) ) {
-                int LA140_1 = input.LA(2);
+                int LA140_2 = input.LA(2);
 
                 if ( (synpred253_PL_SQL()) ) {
                     alt140=1;
@@ -11782,7 +11782,7 @@ public class PL_SQLParser extends Parser {
             int LA146_0 = input.LA(1);
 
             if ( (LA146_0==CASE_KEYWORD) ) {
-                int LA146_1 = input.LA(2);
+                int LA146_2 = input.LA(2);
 
                 if ( (synpred259_PL_SQL()) ) {
                     alt146=1;
@@ -11808,7 +11808,7 @@ public class PL_SQLParser extends Parser {
             int LA147_0 = input.LA(1);
 
             if ( (LA147_0==IDENTIFIER||LA147_0==INTERVAL_KEYWORD||LA147_0==RESULT_KEYWORD) ) {
-                int LA147_1 = input.LA(2);
+                int LA147_2 = input.LA(2);
 
                 if ( (synpred260_PL_SQL()) ) {
                     alt147=1;
@@ -12057,7 +12057,7 @@ public class PL_SQLParser extends Parser {
             int LA152_0 = input.LA(1);
 
             if ( (LA152_0==CASE_KEYWORD) ) {
-                int LA152_1 = input.LA(2);
+                int LA152_2 = input.LA(2);
 
                 if ( (synpred265_PL_SQL()) ) {
                     alt152=1;
@@ -12083,7 +12083,7 @@ public class PL_SQLParser extends Parser {
             int LA153_0 = input.LA(1);
 
             if ( (LA153_0==IDENTIFIER||LA153_0==INTERVAL_KEYWORD||LA153_0==RESULT_KEYWORD) ) {
-                int LA153_1 = input.LA(2);
+                int LA153_2 = input.LA(2);
 
                 if ( (synpred266_PL_SQL()) ) {
                     alt153=1;
@@ -12367,15 +12367,15 @@ public class PL_SQLParser extends Parser {
             int alt156=2;
             int LA156_0 = input.LA(1);
 
-            if ( (LA156_0==RETURNING_KEYWORD) ) {
-                alt156=1;
-            }
-            else if ( (LA156_0==RETURN_KEYWORD) ) {
+            if ( (LA156_0==RETURN_KEYWORD) ) {
                 int LA156_2 = input.LA(2);
 
                 if ( (true) ) {
                     alt156=1;
                 }
+            }
+            else if ( (LA156_0==RETURNING_KEYWORD) ) {
+                alt156=1;
             }
             switch (alt156) {
                 case 1 :
@@ -12753,11 +12753,8 @@ public class PL_SQLParser extends Parser {
             int alt161=4;
             int LA161_0 = input.LA(1);
 
-            if ( (LA161_0==OUT_KEYWORD) ) {
-                alt161=2;
-            }
-            else if ( (LA161_0==IN_KEYWORD) ) {
-                int LA161_2 = input.LA(2);
+            if ( (LA161_0==IN_KEYWORD) ) {
+                int LA161_1 = input.LA(2);
 
                 if ( (synpred276_PL_SQL()) ) {
                     alt161=1;
@@ -12765,6 +12762,9 @@ public class PL_SQLParser extends Parser {
                 else if ( (synpred278_PL_SQL()) ) {
                     alt161=3;
                 }
+            }
+            else if ( (LA161_0==OUT_KEYWORD) ) {
+                alt161=2;
             }
             switch (alt161) {
                 case 1 :
@@ -12844,8 +12844,11 @@ public class PL_SQLParser extends Parser {
             	    int alt162=4;
             	    int LA162_0 = input.LA(1);
 
-            	    if ( (LA162_0==IN_KEYWORD) ) {
-            	        int LA162_1 = input.LA(2);
+            	    if ( (LA162_0==OUT_KEYWORD) ) {
+            	        alt162=2;
+            	    }
+            	    else if ( (LA162_0==IN_KEYWORD) ) {
+            	        int LA162_2 = input.LA(2);
 
             	        if ( (synpred279_PL_SQL()) ) {
             	            alt162=1;
@@ -12853,9 +12856,6 @@ public class PL_SQLParser extends Parser {
             	        else if ( (synpred281_PL_SQL()) ) {
             	            alt162=3;
             	        }
-            	    }
-            	    else if ( (LA162_0==OUT_KEYWORD) ) {
-            	        alt162=2;
             	    }
             	    switch (alt162) {
             	        case 1 :
@@ -12984,7 +12984,7 @@ public class PL_SQLParser extends Parser {
             int LA164_0 = input.LA(1);
 
             if ( (LA164_0==IDENTIFIER||LA164_0==INTERVAL_KEYWORD||LA164_0==RESULT_KEYWORD) ) {
-                int LA164_2 = input.LA(2);
+                int LA164_1 = input.LA(2);
 
                 if ( (synpred283_PL_SQL()) ) {
                     alt164=1;
@@ -13011,7 +13011,7 @@ public class PL_SQLParser extends Parser {
             int LA165_0 = input.LA(1);
 
             if ( (LA165_0==WHEN_KEYWORD) ) {
-                int LA165_1 = input.LA(2);
+                int LA165_2 = input.LA(2);
 
                 if ( (synpred284_PL_SQL()) ) {
                     alt165=1;
@@ -13714,7 +13714,7 @@ public class PL_SQLParser extends Parser {
             int LA171_0 = input.LA(1);
 
             if ( (LA171_0==200) ) {
-                int LA171_2 = input.LA(2);
+                int LA171_1 = input.LA(2);
 
                 if ( (synpred291_PL_SQL()) ) {
                     alt171=1;
@@ -14079,7 +14079,7 @@ public class PL_SQLParser extends Parser {
             int LA177_0 = input.LA(1);
 
             if ( (LA177_0==200) ) {
-                int LA177_2 = input.LA(2);
+                int LA177_1 = input.LA(2);
 
                 if ( (synpred299_PL_SQL()) ) {
                     alt177=1;
@@ -14378,16 +14378,26 @@ public class PL_SQLParser extends Parser {
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:770:24: ( ( identifier data_type ( variable_declaration_part )? ) | ( identifier CONSTANT_KEYWORD data_type variable_declaration_part ) | subtype_datatype | record_collection_datatype | ( identifier EXCEPTION_KEYWORD ) | ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) ) | cursor_datatype )
             int alt183=7;
             switch ( input.LA(1) ) {
+            case CURSOR_KEYWORD:
+                {
+                alt183=7;
+                }
+                break;
             case SUBTYPE_KEYWORD:
                 {
                 alt183=3;
+                }
+                break;
+            case TYPE_KEYWORD:
+                {
+                alt183=4;
                 }
                 break;
             case IDENTIFIER:
             case INTERVAL_KEYWORD:
             case RESULT_KEYWORD:
                 {
-                int LA183_2 = input.LA(2);
+                int LA183_4 = input.LA(2);
 
                 if ( (synpred304_PL_SQL()) ) {
                     alt183=1;
@@ -14401,20 +14411,10 @@ public class PL_SQLParser extends Parser {
                 else {
                     if (state.backtracking>0) {state.failed=true; return retval;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 183, 2, input);
+                        new NoViableAltException("", 183, 4, input);
 
                     throw nvae;
                 }
-                }
-                break;
-            case CURSOR_KEYWORD:
-                {
-                alt183=7;
-                }
-                break;
-            case TYPE_KEYWORD:
-                {
-                alt183=4;
                 }
                 break;
             case PRAGMA_KEYWORD:
@@ -17821,15 +17821,15 @@ public class PL_SQLParser extends Parser {
             int alt215=2;
             int LA215_0 = input.LA(1);
 
-            if ( ((LA215_0>=204 && LA215_0<=205)) ) {
-                alt215=1;
-            }
-            else if ( (LA215_0==NOT_OPERATOR) ) {
-                int LA215_3 = input.LA(2);
+            if ( (LA215_0==NOT_OPERATOR) ) {
+                int LA215_1 = input.LA(2);
 
                 if ( (synpred380_PL_SQL()) ) {
                     alt215=1;
                 }
+            }
+            else if ( ((LA215_0>=204 && LA215_0<=205)) ) {
+                alt215=1;
             }
             switch (alt215) {
                 case 1 :
@@ -18496,9 +18496,9 @@ public class PL_SQLParser extends Parser {
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:830:46: ( NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | in_notin_expression )?
             int alt224=6;
             switch ( input.LA(1) ) {
-                case ISOPEN_KEYWORD:
+                case FOUND_KEYWORD:
                     {
-                    alt224=3;
+                    alt224=2;
                     }
                     break;
                 case ROWCOUNT_KEYWORD:
@@ -18506,24 +18506,24 @@ public class PL_SQLParser extends Parser {
                     alt224=4;
                     }
                     break;
+                case NOTFOUND_KEYWORD:
+                    {
+                    alt224=1;
+                    }
+                    break;
                 case IN_KEYWORD:
                 case NOT_OPERATOR:
                     {
-                    int LA224_4 = input.LA(2);
+                    int LA224_5 = input.LA(2);
 
                     if ( (synpred402_PL_SQL()) ) {
                         alt224=5;
                     }
                     }
                     break;
-                case FOUND_KEYWORD:
+                case ISOPEN_KEYWORD:
                     {
-                    alt224=2;
-                    }
-                    break;
-                case NOTFOUND_KEYWORD:
-                    {
-                    alt224=1;
+                    alt224=3;
                     }
                     break;
             }
@@ -19337,7 +19337,7 @@ public class PL_SQLParser extends Parser {
             int LA237_0 = input.LA(1);
 
             if ( (LA237_0==200) ) {
-                int LA237_1 = input.LA(2);
+                int LA237_2 = input.LA(2);
 
                 if ( (synpred416_PL_SQL()) ) {
                     alt237=1;
@@ -19669,7 +19669,7 @@ public class PL_SQLParser extends Parser {
             int LA242_0 = input.LA(1);
 
             if ( (LA242_0==200) ) {
-                int LA242_1 = input.LA(2);
+                int LA242_2 = input.LA(2);
 
                 if ( (synpred421_PL_SQL()) ) {
                     alt242=1;
@@ -21439,11 +21439,8 @@ public class PL_SQLParser extends Parser {
         int alt297=2;
         int LA297_0 = input.LA(1);
 
-        if ( (LA297_0==NUMBER_UNSIGNED||LA297_0==STRING||(LA297_0>=IDENTIFIER && LA297_0<=EXT_IDENTIFIER)||LA297_0==NULL_KEYWORD||(LA297_0>=TRUE_KEYWORD && LA297_0<=FALSE_KEYWORD)||LA297_0==INTERVAL_KEYWORD||LA297_0==REPLACE_KEYWORD||LA297_0==IN_KEYWORD||LA297_0==CASE_KEYWORD||(LA297_0>=SQLCODE_KEYWORD && LA297_0<=SQLERRM_KEYWORD)||LA297_0==RESULT_KEYWORD||LA297_0==NOT_OPERATOR||(LA297_0>=204 && LA297_0<=205)) ) {
-            alt297=1;
-        }
-        else if ( (LA297_0==200) ) {
-            int LA297_2 = input.LA(2);
+        if ( (LA297_0==200) ) {
+            int LA297_1 = input.LA(2);
 
             if ( (synpred382_PL_SQL()) ) {
                 alt297=1;
@@ -21454,10 +21451,13 @@ public class PL_SQLParser extends Parser {
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 297, 2, input);
+                    new NoViableAltException("", 297, 1, input);
 
                 throw nvae;
             }
+        }
+        else if ( (LA297_0==NUMBER_UNSIGNED||LA297_0==STRING||(LA297_0>=IDENTIFIER && LA297_0<=EXT_IDENTIFIER)||LA297_0==NULL_KEYWORD||(LA297_0>=TRUE_KEYWORD && LA297_0<=FALSE_KEYWORD)||LA297_0==INTERVAL_KEYWORD||LA297_0==REPLACE_KEYWORD||LA297_0==IN_KEYWORD||LA297_0==CASE_KEYWORD||(LA297_0>=SQLCODE_KEYWORD && LA297_0<=SQLERRM_KEYWORD)||LA297_0==RESULT_KEYWORD||LA297_0==NOT_OPERATOR||(LA297_0>=204 && LA297_0<=205)) ) {
+            alt297=1;
         }
         else {
             if (state.backtracking>0) {state.failed=true; return ;}
@@ -22388,11 +22388,11 @@ public class PL_SQLParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred35_PL_SQL() {
+    public final boolean synpred212_PL_SQL() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred35_PL_SQL_fragment(); // can never throw exception
+            synpred212_PL_SQL_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -22402,11 +22402,11 @@ public class PL_SQLParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred212_PL_SQL() {
+    public final boolean synpred35_PL_SQL() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred212_PL_SQL_fragment(); // can never throw exception
+            synpred35_PL_SQL_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -22794,11 +22794,11 @@ public class PL_SQLParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred227_PL_SQL() {
+    public final boolean synpred226_PL_SQL() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred227_PL_SQL_fragment(); // can never throw exception
+            synpred226_PL_SQL_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -22808,11 +22808,11 @@ public class PL_SQLParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred226_PL_SQL() {
+    public final boolean synpred227_PL_SQL() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred226_PL_SQL_fragment(); // can never throw exception
+            synpred227_PL_SQL_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -23119,55 +23119,39 @@ public class PL_SQLParser extends Parser {
         }
     }
     static final String DFA118_eotS =
-        "\67\uffff";
+        "\70\uffff";
     static final String DFA118_eofS =
-        "\67\uffff";
+        "\70\uffff";
     static final String DFA118_minS =
-        "\1\4\1\0\3\uffff\1\0\1\uffff\1\0\2\uffff\1\0\7\uffff\1\0\3\uffff"+
-        "\1\0\2\uffff\1\0\3\uffff\1\0\1\uffff\1\0\5\uffff\1\0\6\uffff\1\0"+
-        "\4\uffff\1\0\2\uffff\1\0\2\uffff";
+        "\1\4\1\0\4\uffff\1\0\2\uffff\1\0\2\uffff\1\0\1\uffff\1\0\2\uffff"+
+        "\1\0\2\uffff\1\0\2\uffff\1\0\11\uffff\1\0\3\uffff\1\0\1\uffff\1"+
+        "\0\10\uffff\1\0\3\uffff\1\0\3\uffff";
     static final String DFA118_maxS =
-        "\1\u00da\1\0\3\uffff\1\0\1\uffff\1\0\2\uffff\1\0\7\uffff\1\0\3"+
-        "\uffff\1\0\2\uffff\1\0\3\uffff\1\0\1\uffff\1\0\5\uffff\1\0\6\uffff"+
-        "\1\0\4\uffff\1\0\2\uffff\1\0\2\uffff";
+        "\1\u00da\1\0\4\uffff\1\0\2\uffff\1\0\2\uffff\1\0\1\uffff\1\0\2"+
+        "\uffff\1\0\2\uffff\1\0\2\uffff\1\0\11\uffff\1\0\3\uffff\1\0\1\uffff"+
+        "\1\0\10\uffff\1\0\3\uffff\1\0\3\uffff";
     static final String DFA118_acceptS =
-        "\2\uffff\1\26\1\45\1\20\1\uffff\1\5\1\uffff\1\30\1\34\1\uffff\1"+
-        "\37\1\40\1\21\1\23\1\10\1\27\1\16\1\uffff\1\3\1\15\1\14\1\uffff"+
-        "\1\32\1\7\1\uffff\1\6\1\36\1\22\1\uffff\1\31\1\uffff\1\47\1\44\1"+
-        "\11\1\1\1\46\1\uffff\1\17\1\4\1\3\1\45\1\13\1\2\1\uffff\1\25\1\12"+
-        "\1\42\1\24\1\uffff\1\41\1\35\1\uffff\1\33\1\43";
+        "\2\uffff\1\26\1\45\1\1\1\27\1\uffff\1\37\1\40\1\uffff\1\32\1\23"+
+        "\1\uffff\1\30\1\uffff\1\31\1\24\1\uffff\1\25\1\22\1\uffff\1\47\1"+
+        "\11\1\uffff\1\17\1\44\1\13\1\21\1\16\1\42\1\15\1\12\1\2\1\uffff"+
+        "\1\5\1\45\1\46\1\uffff\1\41\1\uffff\1\3\1\14\1\43\1\10\1\4\1\34"+
+        "\1\35\1\44\1\uffff\1\33\1\20\1\3\1\uffff\1\6\1\36\1\7";
     static final String DFA118_specialS =
-        "\1\uffff\1\0\3\uffff\1\1\1\uffff\1\2\2\uffff\1\3\7\uffff\1\4\3"+
-        "\uffff\1\5\2\uffff\1\6\3\uffff\1\7\1\uffff\1\10\5\uffff\1\11\6\uffff"+
-        "\1\12\4\uffff\1\13\2\uffff\1\14\2\uffff}>";
+        "\1\uffff\1\0\4\uffff\1\1\2\uffff\1\2\2\uffff\1\3\1\uffff\1\4\2"+
+        "\uffff\1\5\2\uffff\1\6\2\uffff\1\7\11\uffff\1\10\3\uffff\1\11\1"+
+        "\uffff\1\12\10\uffff\1\13\3\uffff\1\14\3\uffff}>";
     static final String[] DFA118_transitionS = {
-            "\1\1\1\11\1\63\4\uffff\1\26\1\56\12\uffff\1\53\2\7\1\43\1\uffff"+
-            "\1\64\7\uffff\1\61\4\uffff\2\51\1\uffff\1\15\3\uffff\1\7\3\uffff"+
-            "\1\12\2\uffff\1\54\1\uffff\1\30\1\uffff\1\5\22\uffff\1\41\1"+
-            "\20\1\uffff\1\57\3\uffff\1\35\1\uffff\1\34\1\66\1\uffff\1\4"+
-            "\3\uffff\1\41\3\uffff\1\41\3\uffff\1\47\1\uffff\1\52\1\25\6"+
-            "\uffff\1\17\1\42\1\uffff\3\41\4\uffff\1\24\2\41\1\uffff\1\45"+
-            "\5\uffff\2\51\1\41\1\60\13\uffff\1\21\15\uffff\1\7\2\uffff\1"+
-            "\16\6\uffff\1\31\31\uffff\1\44\2\uffff\1\37\1\uffff\1\50\1\uffff"+
-            "\2\22\15\50",
+            "\1\1\1\55\1\56\4\uffff\1\11\1\37\12\uffff\1\40\2\14\1\4\1\uffff"+
+            "\1\60\7\uffff\1\45\4\uffff\2\43\1\uffff\1\33\3\uffff\1\14\3"+
+            "\uffff\1\6\2\uffff\1\21\1\uffff\1\67\1\uffff\1\41\22\uffff\1"+
+            "\57\1\5\1\uffff\1\35\3\uffff\1\16\1\uffff\1\23\1\52\1\uffff"+
+            "\1\62\3\uffff\1\57\3\uffff\1\57\3\uffff\1\54\1\uffff\1\32\1"+
+            "\51\6\uffff\1\53\1\26\1\uffff\3\57\4\uffff\1\36\2\57\1\uffff"+
+            "\1\27\5\uffff\2\43\1\57\1\20\13\uffff\1\34\15\uffff\1\14\2\uffff"+
+            "\1\13\6\uffff\1\64\31\uffff\1\44\2\uffff\1\24\1\uffff\1\63\1"+
+            "\uffff\2\47\15\63",
             "\1\uffff",
             "",
-            "",
-            "",
-            "\1\uffff",
-            "",
-            "\1\uffff",
-            "",
-            "",
-            "\1\uffff",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\uffff",
             "",
             "",
             "",
@@ -23177,16 +23161,21 @@ public class PL_SQLParser extends Parser {
             "\1\uffff",
             "",
             "",
-            "",
             "\1\uffff",
             "",
             "\1\uffff",
             "",
             "",
-            "",
+            "\1\uffff",
             "",
             "",
             "\1\uffff",
+            "",
+            "",
+            "\1\uffff",
+            "",
+            "",
+            "",
             "",
             "",
             "",
@@ -23197,11 +23186,23 @@ public class PL_SQLParser extends Parser {
             "",
             "",
             "",
+            "\1\uffff",
             "",
             "\1\uffff",
             "",
             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\uffff",
+            "",
+            "",
+            "",
+            "\1\uffff",
+            "",
             "",
             ""
     };
@@ -23258,125 +23259,123 @@ public class PL_SQLParser extends Parser {
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA118_5 = input.LA(1);
+                        int LA118_6 = input.LA(1);
 
                          
-                        int index118_5 = input.index();
+                        int index118_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred190_PL_SQL()) ) {s = 6;}
+                        if ( (synpred216_PL_SQL()) ) {s = 7;}
 
-                        else if ( (synpred222_PL_SQL()) ) {s = 3;}
+                        else if ( (synpred217_PL_SQL()) ) {s = 8;}
 
                          
-                        input.seek(index118_5);
+                        input.seek(index118_6);
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA118_7 = input.LA(1);
+                        int LA118_9 = input.LA(1);
 
                          
-                        int index118_7 = input.index();
+                        int index118_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred209_PL_SQL()) ) {s = 8;}
+                        if ( (synpred211_PL_SQL()) ) {s = 10;}
 
                         else if ( (synpred222_PL_SQL()) ) {s = 3;}
 
                          
-                        input.seek(index118_7);
+                        input.seek(index118_9);
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA118_10 = input.LA(1);
+                        int LA118_12 = input.LA(1);
 
                          
-                        int index118_10 = input.index();
+                        int index118_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred216_PL_SQL()) ) {s = 11;}
+                        if ( (synpred209_PL_SQL()) ) {s = 13;}
 
-                        else if ( (synpred217_PL_SQL()) ) {s = 12;}
+                        else if ( (synpred222_PL_SQL()) ) {s = 3;}
 
                          
-                        input.seek(index118_10);
+                        input.seek(index118_12);
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA118_18 = input.LA(1);
+                        int LA118_14 = input.LA(1);
 
                          
-                        int index118_18 = input.index();
+                        int index118_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred188_PL_SQL()) ) {s = 19;}
+                        if ( (synpred210_PL_SQL()) ) {s = 15;}
 
                         else if ( (synpred222_PL_SQL()) ) {s = 3;}
 
                          
-                        input.seek(index118_18);
+                        input.seek(index118_14);
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
-                        int LA118_22 = input.LA(1);
+                        int LA118_17 = input.LA(1);
 
                          
-                        int index118_22 = input.index();
+                        int index118_17 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred211_PL_SQL()) ) {s = 23;}
+                        if ( (synpred206_PL_SQL()) ) {s = 18;}
 
                         else if ( (synpred222_PL_SQL()) ) {s = 3;}
 
                          
-                        input.seek(index118_22);
+                        input.seek(index118_17);
                         if ( s>=0 ) return s;
                         break;
                     case 6 : 
-                        int LA118_25 = input.LA(1);
+                        int LA118_20 = input.LA(1);
 
                          
-                        int index118_25 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred191_PL_SQL()) ) {s = 26;}
-
-                        else if ( (synpred215_PL_SQL()) ) {s = 27;}
-
-                        else if ( (synpred222_PL_SQL()) ) {s = 3;}
-
-                         
-                        input.seek(index118_25);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 7 : 
-                        int LA118_29 = input.LA(1);
-
-                         
-                        int index118_29 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred210_PL_SQL()) ) {s = 30;}
-
-                        else if ( (synpred222_PL_SQL()) ) {s = 3;}
-
-                         
-                        input.seek(index118_29);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 8 : 
-                        int LA118_31 = input.LA(1);
-
-                         
-                        int index118_31 = input.index();
+                        int index118_20 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred222_PL_SQL()) ) {s = 3;}
 
-                        else if ( (true) ) {s = 32;}
+                        else if ( (true) ) {s = 21;}
 
                          
-                        input.seek(index118_31);
+                        input.seek(index118_20);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 7 : 
+                        int LA118_23 = input.LA(1);
+
+                         
+                        int index118_23 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred200_PL_SQL()) ) {s = 24;}
+
+                        else if ( (synpred221_PL_SQL()) ) {s = 25;}
+
+                         
+                        input.seek(index118_23);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 8 : 
+                        int LA118_33 = input.LA(1);
+
+                         
+                        int index118_33 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred190_PL_SQL()) ) {s = 34;}
+
+                        else if ( (synpred222_PL_SQL()) ) {s = 3;}
+
+                         
+                        input.seek(index118_33);
                         if ( s>=0 ) return s;
                         break;
                     case 9 : 
@@ -23386,42 +23385,42 @@ public class PL_SQLParser extends Parser {
                         int index118_37 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred200_PL_SQL()) ) {s = 38;}
+                        if ( (synpred218_PL_SQL()) ) {s = 38;}
 
-                        else if ( (synpred221_PL_SQL()) ) {s = 33;}
+                        else if ( (synpred222_PL_SQL()) ) {s = 35;}
 
                          
                         input.seek(index118_37);
                         if ( s>=0 ) return s;
                         break;
                     case 10 : 
-                        int LA118_44 = input.LA(1);
+                        int LA118_39 = input.LA(1);
 
                          
-                        int index118_44 = input.index();
+                        int index118_39 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred206_PL_SQL()) ) {s = 45;}
+                        if ( (synpred188_PL_SQL()) ) {s = 40;}
 
-                        else if ( (synpred222_PL_SQL()) ) {s = 41;}
+                        else if ( (synpred222_PL_SQL()) ) {s = 35;}
 
                          
-                        input.seek(index118_44);
+                        input.seek(index118_39);
                         if ( s>=0 ) return s;
                         break;
                     case 11 : 
-                        int LA118_49 = input.LA(1);
+                        int LA118_48 = input.LA(1);
 
                          
-                        int index118_49 = input.index();
+                        int index118_48 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred218_PL_SQL()) ) {s = 50;}
+                        if ( (synpred188_PL_SQL()) ) {s = 40;}
 
-                        else if ( (synpred222_PL_SQL()) ) {s = 41;}
+                        else if ( (synpred212_PL_SQL()) ) {s = 49;}
 
                          
-                        input.seek(index118_49);
+                        input.seek(index118_48);
                         if ( s>=0 ) return s;
                         break;
                     case 12 : 
@@ -23431,9 +23430,11 @@ public class PL_SQLParser extends Parser {
                         int index118_52 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred188_PL_SQL()) ) {s = 40;}
+                        if ( (synpred191_PL_SQL()) ) {s = 53;}
 
-                        else if ( (synpred212_PL_SQL()) ) {s = 53;}
+                        else if ( (synpred215_PL_SQL()) ) {s = 54;}
+
+                        else if ( (synpred222_PL_SQL()) ) {s = 35;}
 
                          
                         input.seek(index118_52);
@@ -23448,34 +23449,31 @@ public class PL_SQLParser extends Parser {
         }
     }
     static final String DFA125_eotS =
-        "\20\uffff";
+        "\21\uffff";
     static final String DFA125_eofS =
-        "\20\uffff";
+        "\21\uffff";
     static final String DFA125_minS =
-        "\1\4\1\uffff\1\0\1\uffff\1\0\2\uffff\1\0\1\uffff\1\0\1\uffff\1"+
-        "\0\1\uffff\2\0\1\uffff";
+        "\1\4\1\0\2\uffff\1\0\1\uffff\1\0\1\uffff\1\0\1\uffff\1\0\2\uffff"+
+        "\1\0\1\uffff\1\0\1\uffff";
     static final String DFA125_maxS =
-        "\1\u00da\1\uffff\1\0\1\uffff\1\0\2\uffff\1\0\1\uffff\1\0\1\uffff"+
-        "\1\0\1\uffff\2\0\1\uffff";
+        "\1\u00da\1\0\2\uffff\1\0\1\uffff\1\0\1\uffff\1\0\1\uffff\1\0\2"+
+        "\uffff\1\0\1\uffff\1\0\1\uffff";
     static final String DFA125_acceptS =
-        "\1\uffff\1\10\1\uffff\1\4\1\uffff\1\1\1\7\1\uffff\1\5\1\uffff\1"+
-        "\6\1\uffff\1\3\2\uffff\1\2";
+        "\2\uffff\1\1\1\10\1\uffff\1\7\1\uffff\1\3\1\uffff\1\4\1\uffff\1"+
+        "\6\1\10\1\uffff\1\2\1\uffff\1\5";
     static final String DFA125_specialS =
-        "\2\uffff\1\0\1\uffff\1\1\2\uffff\1\2\1\uffff\1\3\1\uffff\1\4\1"+
-        "\uffff\1\5\1\6\1\uffff}>";
+        "\1\uffff\1\0\2\uffff\1\1\1\uffff\1\2\1\uffff\1\3\1\uffff\1\4\2"+
+        "\uffff\1\5\1\uffff\1\6\1\uffff}>";
     static final String[] DFA125_transitionS = {
-            "\3\15\4\uffff\2\15\12\uffff\4\15\1\1\1\15\1\uffff\3\1\1\uffff"+
-            "\1\2\1\7\1\15\4\uffff\2\15\1\uffff\1\15\3\uffff\1\15\3\uffff"+
-            "\1\15\2\uffff\1\15\1\uffff\1\15\1\1\1\15\12\uffff\2\1\1\uffff"+
-            "\4\1\1\uffff\2\15\1\uffff\1\15\2\1\1\uffff\1\15\1\1\2\15\1\uffff"+
-            "\1\15\3\uffff\1\15\1\uffff\1\1\1\uffff\1\15\1\1\1\uffff\1\1"+
-            "\1\15\1\13\2\15\1\1\1\uffff\1\1\3\uffff\2\15\1\uffff\1\11\2"+
-            "\15\1\1\3\uffff\3\15\1\uffff\1\15\5\uffff\2\15\1\4\1\15\4\uffff"+
-            "\1\16\6\uffff\1\15\15\uffff\1\15\2\uffff\1\15\6\uffff\1\15\31"+
-            "\uffff\1\15\1\1\1\uffff\1\15\1\1\1\15\1\uffff\17\15",
-            "",
-            "\1\uffff",
-            "",
+            "\3\1\4\uffff\2\1\12\uffff\4\1\1\14\1\1\1\uffff\3\14\1\uffff"+
+            "\1\10\1\17\1\1\4\uffff\2\1\1\uffff\1\1\3\uffff\1\1\3\uffff\1"+
+            "\1\2\uffff\1\1\1\uffff\1\1\1\14\1\1\12\uffff\2\14\1\uffff\4"+
+            "\14\1\uffff\2\1\1\uffff\1\1\2\14\1\uffff\1\1\1\14\2\1\1\uffff"+
+            "\1\1\3\uffff\1\1\1\uffff\1\14\1\uffff\1\1\1\14\1\uffff\1\14"+
+            "\1\1\1\6\2\1\1\14\1\uffff\1\14\3\uffff\2\1\1\uffff\1\12\2\1"+
+            "\1\14\3\uffff\3\1\1\uffff\1\1\5\uffff\2\1\1\4\1\1\4\uffff\1"+
+            "\15\6\uffff\1\1\15\uffff\1\1\2\uffff\1\1\6\uffff\1\1\31\uffff"+
+            "\1\1\1\14\1\uffff\1\1\1\14\1\1\1\uffff\17\1",
             "\1\uffff",
             "",
             "",
@@ -23486,6 +23484,10 @@ public class PL_SQLParser extends Parser {
             "\1\uffff",
             "",
             "\1\uffff",
+            "",
+            "",
+            "\1\uffff",
+            "",
             "\1\uffff",
             ""
     };
@@ -23527,18 +23529,18 @@ public class PL_SQLParser extends Parser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA125_2 = input.LA(1);
+                        int LA125_1 = input.LA(1);
 
                          
-                        int index125_2 = input.index();
+                        int index125_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred235_PL_SQL()) ) {s = 3;}
+                        if ( (synpred232_PL_SQL()) ) {s = 2;}
 
-                        else if ( (true) ) {s = 1;}
+                        else if ( (true) ) {s = 3;}
 
                          
-                        input.seek(index125_2);
+                        input.seek(index125_1);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
@@ -23548,61 +23550,61 @@ public class PL_SQLParser extends Parser {
                         int index125_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred232_PL_SQL()) ) {s = 5;}
+                        if ( (synpred232_PL_SQL()) ) {s = 2;}
 
-                        else if ( (synpred238_PL_SQL()) ) {s = 6;}
+                        else if ( (synpred238_PL_SQL()) ) {s = 5;}
 
-                        else if ( (true) ) {s = 1;}
+                        else if ( (true) ) {s = 3;}
 
                          
                         input.seek(index125_4);
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA125_7 = input.LA(1);
+                        int LA125_6 = input.LA(1);
 
                          
-                        int index125_7 = input.index();
+                        int index125_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred236_PL_SQL()) ) {s = 8;}
+                        if ( (synpred234_PL_SQL()) ) {s = 7;}
 
-                        else if ( (true) ) {s = 1;}
+                        else if ( (true) ) {s = 3;}
 
                          
-                        input.seek(index125_7);
+                        input.seek(index125_6);
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA125_9 = input.LA(1);
+                        int LA125_8 = input.LA(1);
 
                          
-                        int index125_9 = input.index();
+                        int index125_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred232_PL_SQL()) ) {s = 5;}
+                        if ( (synpred235_PL_SQL()) ) {s = 9;}
 
-                        else if ( (synpred237_PL_SQL()) ) {s = 10;}
-
-                        else if ( (true) ) {s = 1;}
+                        else if ( (true) ) {s = 3;}
 
                          
-                        input.seek(index125_9);
+                        input.seek(index125_8);
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA125_11 = input.LA(1);
+                        int LA125_10 = input.LA(1);
 
                          
-                        int index125_11 = input.index();
+                        int index125_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred234_PL_SQL()) ) {s = 12;}
+                        if ( (synpred232_PL_SQL()) ) {s = 2;}
 
-                        else if ( (true) ) {s = 1;}
+                        else if ( (synpred237_PL_SQL()) ) {s = 11;}
+
+                        else if ( (true) ) {s = 3;}
 
                          
-                        input.seek(index125_11);
+                        input.seek(index125_10);
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
@@ -23612,27 +23614,27 @@ public class PL_SQLParser extends Parser {
                         int index125_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred232_PL_SQL()) ) {s = 5;}
+                        if ( (synpred233_PL_SQL()) ) {s = 14;}
 
-                        else if ( (true) ) {s = 1;}
+                        else if ( (true) ) {s = 12;}
 
                          
                         input.seek(index125_13);
                         if ( s>=0 ) return s;
                         break;
                     case 6 : 
-                        int LA125_14 = input.LA(1);
+                        int LA125_15 = input.LA(1);
 
                          
-                        int index125_14 = input.index();
+                        int index125_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred233_PL_SQL()) ) {s = 15;}
+                        if ( (synpred236_PL_SQL()) ) {s = 16;}
 
-                        else if ( (true) ) {s = 1;}
+                        else if ( (true) ) {s = 12;}
 
                          
-                        input.seek(index125_14);
+                        input.seek(index125_15);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -23644,34 +23646,32 @@ public class PL_SQLParser extends Parser {
         }
     }
     static final String DFA186_eotS =
-        "\16\uffff";
+        "\15\uffff";
     static final String DFA186_eofS =
-        "\16\uffff";
+        "\15\uffff";
     static final String DFA186_minS =
-        "\1\14\1\0\10\uffff\1\0\3\uffff";
+        "\1\14\2\uffff\1\0\10\uffff\1\0";
     static final String DFA186_maxS =
-        "\1\u00a1\1\0\10\uffff\1\0\3\uffff";
+        "\1\u00a1\2\uffff\1\0\10\uffff\1\0";
     static final String DFA186_acceptS =
-        "\2\uffff\1\11\1\12\1\2\1\5\1\11\1\6\1\4\1\3\1\uffff\1\7\1\10\1"+
-        "\1";
+        "\1\uffff\1\1\1\11\1\uffff\1\7\1\10\1\12\1\5\1\3\1\4\1\6\1\2\1\uffff";
     static final String DFA186_specialS =
-        "\1\uffff\1\0\10\uffff\1\1\3\uffff}>";
+        "\3\uffff\1\0\10\uffff\1\1}>";
     static final String[] DFA186_transitionS = {
-            "\1\15\1\4\1\11\2\10\1\uffff\1\5\1\7\4\uffff\2\1\26\uffff\1"+
-            "\12\56\uffff\1\6\101\uffff\1\1",
-            "\1\uffff",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\1\1\13\1\10\2\11\1\uffff\1\7\1\12\4\uffff\2\14\26\uffff"+
+            "\1\3\56\uffff\1\2\101\uffff\1\14",
             "",
             "",
             "\1\uffff",
             "",
             "",
-            ""
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\uffff"
     };
 
     static final short[] DFA186_eot = DFA.unpackEncodedString(DFA186_eotS);
@@ -23711,37 +23711,37 @@ public class PL_SQLParser extends Parser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA186_1 = input.LA(1);
+                        int LA186_3 = input.LA(1);
 
                          
-                        int index186_1 = input.index();
+                        int index186_3 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred322_PL_SQL()) ) {s = 4;}
+
+                        else if ( (synpred323_PL_SQL()) ) {s = 5;}
+
+                        else if ( (synpred325_PL_SQL()) ) {s = 2;}
+
+                        else if ( (true) ) {s = 6;}
+
+                         
+                        input.seek(index186_3);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA186_12 = input.LA(1);
+
+                         
+                        int index186_12 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred325_PL_SQL()) ) {s = 2;}
 
-                        else if ( (true) ) {s = 3;}
+                        else if ( (true) ) {s = 6;}
 
                          
-                        input.seek(index186_1);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA186_10 = input.LA(1);
-
-                         
-                        int index186_10 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred322_PL_SQL()) ) {s = 11;}
-
-                        else if ( (synpred323_PL_SQL()) ) {s = 12;}
-
-                        else if ( (synpred325_PL_SQL()) ) {s = 6;}
-
-                        else if ( (true) ) {s = 3;}
-
-                         
-                        input.seek(index186_10);
+                        input.seek(index186_12);
                         if ( s>=0 ) return s;
                         break;
             }
