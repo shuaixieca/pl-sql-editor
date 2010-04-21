@@ -5,12 +5,9 @@
 package org.netbeans.modules.languages.pl_sql;
 
 import java.util.ResourceBundle;
-import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.tree.CommonTree;
 import org.netbeans.modules.csl.spi.ParserResult;
 import org.netbeans.modules.languages.pl_sql.parser.PLSQLParser.PL_SQLEditorParserResult;
-import org.netbeans.modules.parsing.spi.ParseException;
-import org.openide.util.Exceptions;
 import org.openide.util.NbBundle;
 
 /**
@@ -28,15 +25,8 @@ public class Utils {
         if (result == null) {
             return null;
         }
-
         if (result instanceof PL_SQLEditorParserResult) {
-            try {
-                ret = (CommonTree) ((PL_SQLEditorParserResult) result).getPL_SQLParser().grammar_def().getTree();
-            } catch (RecognitionException ex) {
-                Exceptions.printStackTrace(ex);
-            } catch (ParseException ex) {
-                Exceptions.printStackTrace(ex);
-            }
+            ret = ((PL_SQLEditorParserResult) result).getTree();
         }
         return ret;
     }
@@ -45,7 +35,7 @@ public class Utils {
         if (t != null) {
             StringBuffer sb = new StringBuffer(indent);
             for (int i = 0; i < indent; i++) {
-                sb = sb.append(' ');
+                sb = sb.append('\t');
             }
             for (int i = 0; i < t.getChildCount(); i++) {
                 System.out.println(sb.toString() + t.getChild(i).toString());
