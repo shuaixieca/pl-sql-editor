@@ -10,6 +10,7 @@ grammar PL_SQL;
 options
 {
 	output = AST;
+	ASTLabelType = CommonTree;
 	backtrack = true;
 	memoize = true;
 	k = 1;
@@ -179,7 +180,12 @@ SELF_KEYWORD;
 RESULT_KEYWORD;
 MAP_KEYWORD;
 ORDER_KEYWORD;
-JOIN_KEYWORD;	
+JOIN_KEYWORD;
+
+IM_BEGIN_END;
+IM_IF;
+IM_LOOP;
+IM_CASE;
 }
 
 @parser::header {package org.netbeans.modules.languages.pl_sql.antlr;}
@@ -668,7 +674,11 @@ map_order_func_declaration : (MAP_KEYWORD | ORDER_KEYWORD) MEMBER_KEYWORD functi
 block : BEGIN_KEYWORD
 	(executable_section)+  exception_section?
         END_KEYWORD universal_identifier? SEPARATOR?
-        '/'?;
+        '/'?
+        ->
+        ^(IM_BEGIN_END BEGIN_KEYWORD
+	(executable_section)+  exception_section?
+        END_KEYWORD);
 anonymous_block : anonymous_block_declare_section? block;
 executable_section : statement | anonymous_block;
 executable_case_section : ((label)* statements SEPARATOR?) | anonymous_block;
@@ -718,8 +728,13 @@ return_statement : RETURN_KEYWORD expression?;
 if_statement : IF_KEYWORD expression THEN_KEYWORD (executable_section)+
                (ELSIF_KEYWORD expression THEN_KEYWORD (executable_section)+)*
                (ELSE_KEYWORD (executable_section)+)?
-               END_KEYWORD IF_KEYWORD;
-loop_statement : LOOP_KEYWORD (executable_section)+ END_KEYWORD LOOP_KEYWORD identifier?;
+               END_KEYWORD IF_KEYWORD
+               -> ^(IM_IF IF_KEYWORD expression THEN_KEYWORD (executable_section)+
+               (ELSIF_KEYWORD expression THEN_KEYWORD (executable_section)+)*
+               (ELSE_KEYWORD (executable_section)+)?
+               END_KEYWORD IF_KEYWORD);
+loop_statement : LOOP_KEYWORD (executable_section)+ END_KEYWORD LOOP_KEYWORD identifier?
+		-> ^(IM_LOOP LOOP_KEYWORD (executable_section)+ END_KEYWORD LOOP_KEYWORD);
 while_loop_statement : WHILE_KEYWORD expression loop_statement;
 for_loop_statement : FOR_KEYWORD identifier IN_KEYWORD REVERSE_KEYWORD? 
                      ((expression (for_loop_statement_part | cursor_for_loop_statement1)) |
@@ -732,11 +747,19 @@ case_statement_expression : simple_case_statement_expression | searched_case_sta
 simple_case_statement_expression : CASE_KEYWORD expression 
                         (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
                         (ELSE_KEYWORD (executable_case_section)+)?
-                        (END_KEYWORD CASE_KEYWORD? identifier?);
+                        (END_KEYWORD CASE_KEYWORD? identifier?)
+                        -> ^(IM_CASE CASE_KEYWORD expression 
+                        (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
+                        (ELSE_KEYWORD (executable_case_section)+)?
+                        END_KEYWORD);
 searched_case_statement_expression : CASE_KEYWORD
                         (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
                         (ELSE_KEYWORD (executable_case_section)+)?
-                        (END_KEYWORD CASE_KEYWORD? identifier?);
+                        (END_KEYWORD CASE_KEYWORD? identifier?)
+                        -> ^(IM_CASE CASE_KEYWORD
+                        (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
+                        (ELSE_KEYWORD (executable_case_section)+)?
+                        END_KEYWORD);
 close_statement : CLOSE_KEYWORD universal_identifier;
 continue_statement : CONTINUE_KEYWORD identifier? (WHEN_KEYWORD expression)?;
 execute_immediate_statement : EXECUTE_KEYWORD IMMEDIATE_KEYWORD expression
