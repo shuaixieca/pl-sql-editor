@@ -186,6 +186,8 @@ IM_BEGIN_END;
 IM_IF;
 IM_LOOP;
 IM_CASE;
+IM_PCK_SPC;
+IM_PCK_BODY;
 }
 
 @parser::header {package org.netbeans.modules.languages.pl_sql.antlr;}
@@ -608,8 +610,9 @@ procedure_spec : PROCEDURE_KEYWORD procedure_name parameter_declaration?
 procedure_name : universal_identifier | ALIAS;
 procedure_declaration : procedure_spec function_procedure_body;
 function_procedure_body : as_is_part (variable_declaration)* (function_declaration | procedure_declaration)* block;
-package_declaration : PACKAGE_KEYWORD! package_spec | PACKAGE_KEYWORD! package_body;
-package_spec :  package_spec_name invoker_clause? as_is_part
+package_declaration : (PACKAGE_KEYWORD package_spec) -> ^(IM_PCK_SPC package_spec)
+		| (PACKAGE_KEYWORD package_body) -> ^(IM_PCK_BODY package_body);
+package_spec : package_spec_name invoker_clause? as_is_part
                (variable_declaration | ((function_spec | procedure_spec) SEPARATOR))* 
                END_KEYWORD universal_identifier? SEPARATOR? '/'?;
 package_spec_name : universal_identifier | ALIAS;
@@ -729,10 +732,7 @@ if_statement : IF_KEYWORD expression THEN_KEYWORD (executable_section)+
                (ELSIF_KEYWORD expression THEN_KEYWORD (executable_section)+)*
                (ELSE_KEYWORD (executable_section)+)?
                END_KEYWORD IF_KEYWORD
-               -> ^(IM_IF IF_KEYWORD expression THEN_KEYWORD (executable_section)+
-               (ELSIF_KEYWORD expression THEN_KEYWORD (executable_section)+)*
-               (ELSE_KEYWORD (executable_section)+)?
-               END_KEYWORD IF_KEYWORD);
+               -> ^(IM_IF IF_KEYWORD (executable_section)+ END_KEYWORD IF_KEYWORD);
 loop_statement : LOOP_KEYWORD (executable_section)+ END_KEYWORD LOOP_KEYWORD identifier?
 		-> ^(IM_LOOP LOOP_KEYWORD (executable_section)+ END_KEYWORD LOOP_KEYWORD);
 while_loop_statement : WHILE_KEYWORD expression loop_statement;
@@ -748,18 +748,12 @@ simple_case_statement_expression : CASE_KEYWORD expression
                         (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
                         (ELSE_KEYWORD (executable_case_section)+)?
                         (END_KEYWORD CASE_KEYWORD? identifier?)
-                        -> ^(IM_CASE CASE_KEYWORD expression 
-                        (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
-                        (ELSE_KEYWORD (executable_case_section)+)?
-                        END_KEYWORD);
+                        -> ^(IM_CASE CASE_KEYWORD (executable_case_section)+ END_KEYWORD);
 searched_case_statement_expression : CASE_KEYWORD
                         (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
                         (ELSE_KEYWORD (executable_case_section)+)?
                         (END_KEYWORD CASE_KEYWORD? identifier?)
-                        -> ^(IM_CASE CASE_KEYWORD
-                        (WHEN_KEYWORD expression THEN_KEYWORD (executable_case_section)+)+
-                        (ELSE_KEYWORD (executable_case_section)+)?
-                        END_KEYWORD);
+                        -> ^(IM_CASE CASE_KEYWORD (executable_case_section)+ END_KEYWORD);                        
 close_statement : CLOSE_KEYWORD universal_identifier;
 continue_statement : CONTINUE_KEYWORD identifier? (WHEN_KEYWORD expression)?;
 execute_immediate_statement : EXECUTE_KEYWORD IMMEDIATE_KEYWORD expression
@@ -864,7 +858,7 @@ scale_types
 size_types
 	:	SIZE_TYPES ( '(' '+'? NUMBER_UNSIGNED ')' )?
 ;
-raw_type:	RAW_TYPE '(' '+'? NUMBER_UNSIGNED ')'
+raw_type:	RAW_TYPE ( '(' '+'? NUMBER_UNSIGNED ')' )?
 ;
 year_type
 	:	YEAR_TYPE ( '(' '+'? NUMBER_UNSIGNED ')' )?
