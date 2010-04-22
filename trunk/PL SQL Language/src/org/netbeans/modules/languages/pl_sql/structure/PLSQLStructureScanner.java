@@ -33,11 +33,12 @@ public class PLSQLStructureScanner implements StructureScanner {
 
     public List<? extends StructureItem> scan(ParserResult pr) {
         List<StructureItem> items = new ArrayList<StructureItem>();
+        items.add(new PLSQLStructureItem(PL_SQLLexer.IM_PCK_SPC, "Node"));
         return items;
     }
 
     public Map<String, List<OffsetRange>> folds(ParserResult pr) {
-        //Utils.printTree(Utils.getRoot(pr), 1);
+        Utils.printTree(Utils.getRoot(pr), 1);
         Map<String, List<OffsetRange>> folds = new HashMap<String, List<OffsetRange>>();
         Document document = pr.getSnapshot().getSource().getDocument(false);
         collectTokenFolds(folds, pr, document);
@@ -92,7 +93,8 @@ public class PLSQLStructureScanner implements StructureScanner {
 
     private void addFold(String foldType, Map<String, List<OffsetRange>> folds, CommonTree tree, Document document, int lastToken) {
         Tree firstChild = tree.getChild(0);
-        Tree lastChild = tree.getChild(tree.getChildCount() - lastToken);
+        Tree lastChild = getLastChild(tree, lastToken);
+        //Tree lastChild = tree.getChild(tree.getChildCount() - lastToken);
         int start = NbDocument.findLineOffset((StyledDocument) document, firstChild.getLine() - 1) + firstChild.getCharPositionInLine() + firstChild.getText().length();
         int end = NbDocument.findLineOffset((StyledDocument) document, lastChild.getLine() - 1) + lastChild.getCharPositionInLine();
         createFold(foldType, folds, start, end);
@@ -102,6 +104,17 @@ public class PLSQLStructureScanner implements StructureScanner {
         int start = NbDocument.findLineOffset((StyledDocument) document, token.getLine() - 1) + token.getCharPositionInLine();
         int end = start + token.getText().length();
         createFold(foldType, folds, start, end);
+    }
+
+    private Tree getLastChild(CommonTree tree, int lastToken) {
+        Tree lastChild = tree.getChild(tree.getChildCount() - lastToken);
+        if (lastChild.getChildCount() > 0) {
+            do {
+                lastChild = lastChild.getChild(lastChild.getChildCount() - 1);
+            } while (lastChild.getChildCount() > 0);
+        }
+        //System.out.println(lastChild.getText() + '\t' + lastChild.getLine());
+        return lastChild;
     }
 
     public Configuration getConfiguration() {

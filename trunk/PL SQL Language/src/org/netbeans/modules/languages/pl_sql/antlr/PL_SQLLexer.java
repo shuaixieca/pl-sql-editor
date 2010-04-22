@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-04-21 18:10:56
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-04-22 15:29:13
 package org.netbeans.modules.languages.pl_sql.antlr;
 
 import org.antlr.runtime.*;
@@ -11,13 +11,13 @@ public class PL_SQLLexer extends Lexer {
     public static final int TRIGGER_KEYWORD=136;
     public static final int RESULT_KEYWORD=161;
     public static final int EXIT_KEYWORD=101;
-    public static final int V=185;
+    public static final int V=187;
     public static final int DISABLE_KEYWORD=150;
     public static final int RESTRICT_REFERENCES_KEYWORD=121;
     public static final int AUTONOMOUS_TRANSACTION_KEYWORD=84;
     public static final int WHILE_KEYWORD=75;
     public static final int ALIAS=26;
-    public static final int U=178;
+    public static final int U=180;
     public static final int BEGIN_KEYWORD=30;
     public static final int ELSE_KEYWORD=71;
     public static final int SOME_TYPES=12;
@@ -27,12 +27,12 @@ public class PL_SQLLexer extends Lexer {
     public static final int CONSTANT_KEYWORD=43;
     public static final int VALUES_KEYWORD=112;
     public static final int PRAGMA_KEYWORD=83;
-    public static final int R=170;
+    public static final int R=172;
     public static final int MEMBER_KEYWORD=157;
     public static final int ZONE_KEYWORD=47;
-    public static final int CHARS=198;
+    public static final int CHARS=200;
     public static final int CREATE_KEYWORD=54;
-    public static final int Q=196;
+    public static final int Q=198;
     public static final int ROLLBACK_KEYWORD=123;
     public static final int CLOSE_KEYWORD=86;
     public static final int T__220=220;
@@ -42,7 +42,7 @@ public class PL_SQLLexer extends Lexer {
     public static final int CURRENT_USER_KEYWORD=63;
     public static final int LOOP_KEYWORD=74;
     public static final int EXECUTE_KEYWORD=99;
-    public static final int W=190;
+    public static final int W=192;
     public static final int T__218=218;
     public static final int DELETE_KEYWORD=98;
     public static final int INDEX_KEYWORD=89;
@@ -54,44 +54,44 @@ public class PL_SQLLexer extends Lexer {
     public static final int IM_IF=166;
     public static final int FOLLOWS_KEYWORD=148;
     public static final int T__215=215;
-    public static final int X=193;
+    public static final int X=195;
     public static final int UNDER_KEYWORD=153;
     public static final int UPDATE_KEYWORD=134;
     public static final int AND_OPERATOR=5;
     public static final int IM_CASE=168;
     public static final int CHAR_TYPE=16;
     public static final int OPEN_KEYWORD=118;
-    public static final int J=197;
+    public static final int J=199;
     public static final int OR_OPERATOR=6;
     public static final int T__219=219;
     public static final int OID_KEYWORD=151;
     public static final int USING_KEYWORD=103;
-    public static final int O=169;
+    public static final int O=171;
     public static final int PARAM_VALUE=29;
     public static final int CURSOR_KEYWORD=97;
     public static final int ARRAY_KEYWORD=93;
-    public static final int P=180;
+    public static final int P=182;
     public static final int REFERENCING_KEYWORD=142;
     public static final int ISOPEN_KEYWORD=130;
     public static final int OF_KEYWORD=88;
     public static final int IM_BEGIN_END=165;
-    public static final int S=181;
+    public static final int S=183;
     public static final int SELF_KEYWORD=160;
     public static final int OVERRIDING_KEYWORD=156;
-    public static final int T__202=202;
     public static final int DECLARE_KEYWORD=32;
     public static final int VARYING_KEYWORD=92;
-    public static final int THE_REST=201;
+    public static final int THE_REST=203;
     public static final int BETWEEN_KEYWORD=113;
     public static final int EXCEPTION_INIT_KEYWORD=80;
-    public static final int M=187;
+    public static final int M=189;
     public static final int T__210=210;
-    public static final int T=174;
+    public static final int T=176;
     public static final int FALSE_KEYWORD=42;
-    public static final int NOT_OPERATOR=175;
+    public static final int NOT_OPERATOR=177;
     public static final int REF_KEYWORD=95;
-    public static final int EXP_DIGITS=177;
+    public static final int EXP_DIGITS=179;
     public static final int SIZE_TYPES=14;
+    public static final int IM_PCK_BODY=170;
     public static final int SQLCODE_KEYWORD=132;
     public static final int DETERMINISTIC_KEYWORD=65;
     public static final int KEYWORD=23;
@@ -102,7 +102,7 @@ public class PL_SQLLexer extends Lexer {
     public static final int INSERT_KEYWORD=115;
     public static final int MONTH_KEYWORD=50;
     public static final int FORALL_KEYWORD=108;
-    public static final int N=172;
+    public static final int N=174;
     public static final int SQLERRM_KEYWORD=133;
     public static final int CASE_KEYWORD=85;
     public static final int PACKAGE_KEYWORD=119;
@@ -128,7 +128,7 @@ public class PL_SQLLexer extends Lexer {
     public static final int NESTED_KEYWORD=141;
     public static final int IS_KEYWORD=52;
     public static final int BULK_KEYWORD=104;
-    public static final int D=173;
+    public static final int D=175;
     public static final int T__211=211;
     public static final int PROCEDURE_KEYWORD=69;
     public static final int IF_KEYWORD=70;
@@ -143,7 +143,6 @@ public class PL_SQLLexer extends Lexer {
     public static final int ROWTYPE_KEYWORD=38;
     public static final int T__209=209;
     public static final int RETURN_KEYWORD=58;
-    public static final int T__203=203;
     public static final int PIPELINED_KEYWORD=67;
     public static final int MAP_KEYWORD=162;
     public static final int TIMESTAMP_TYPE=19;
@@ -151,7 +150,7 @@ public class PL_SQLLexer extends Lexer {
     public static final int NOTFOUND_KEYWORD=128;
     public static final int T__205=205;
     public static final int AUTHID_KEYWORD=62;
-    public static final int A=171;
+    public static final int A=173;
     public static final int IN_KEYWORD=59;
     public static final int WITH_KEYWORD=44;
     public static final int LINE_COMMENT=9;
@@ -161,10 +160,10 @@ public class PL_SQLLexer extends Lexer {
     public static final int BYTE_TYPE=17;
     public static final int WHEN_KEYWORD=34;
     public static final int T__207=207;
-    public static final int C=191;
+    public static final int C=193;
     public static final int T__212=212;
     public static final int T__206=206;
-    public static final int L=179;
+    public static final int L=181;
     public static final int LOCAL_KEYWORD=45;
     public static final int SECOND_TYPE=22;
     public static final int ROW_KEYWORD=147;
@@ -181,41 +180,44 @@ public class PL_SQLLexer extends Lexer {
     public static final int ON_KEYWORD=140;
     public static final int FOUND_KEYWORD=129;
     public static final int MERGE_KEYWORD=117;
-    public static final int I=182;
+    public static final int I=184;
+    public static final int T__227=227;
     public static final int OBJECT_KEYWORD=152;
-    public static final int F=189;
+    public static final int F=191;
     public static final int TRANSACTION_KEYWORD=127;
     public static final int INSTANTIABLE_KEYWORD=155;
     public static final int SAVE_KEYWORD=109;
     public static final int RAW_TYPE=18;
     public static final int EXCEPTIONS_KEYWORD=110;
-    public static final int QUOTATION_MARK=200;
+    public static final int QUOTATION_MARK=202;
     public static final int T__222=222;
     public static final int RETURNING_KEYWORD=122;
     public static final int LIKE_KEYWORD=81;
     public static final int NEW_KEYWORD=144;
-    public static final int K=195;
+    public static final int K=197;
     public static final int RECORD_KEYWORD=53;
     public static final int OUT_KEYWORD=60;
-    public static final int B=188;
+    public static final int B=190;
     public static final int NULL_KEYWORD=36;
     public static final int INTO_KEYWORD=102;
-    public static final int DIGIT=199;
+    public static final int DIGIT=201;
+    public static final int T__226=226;
     public static final int DEFAULT_KEYWORD=37;
     public static final int T__225=225;
     public static final int OLD_KEYWORD=143;
-    public static final int DIGITS=176;
-    public static final int H=192;
+    public static final int DIGITS=178;
+    public static final int H=194;
     public static final int IMMEDIATE_KEYWORD=100;
     public static final int T__223=223;
     public static final int NUMBER_UNSIGNED=4;
-    public static final int G=184;
+    public static final int G=186;
     public static final int BLOCK_COMMENT=8;
     public static final int FOR_KEYWORD=76;
+    public static final int IM_PCK_SPC=169;
     public static final int EXT_IDENTIFIER=25;
     public static final int WHITESPACE=10;
     public static final int TO_KEYWORD=49;
-    public static final int Z=194;
+    public static final int Z=196;
     public static final int BY_KEYWORD=90;
     public static final int REVERSE_KEYWORD=77;
     public static final int THEN_KEYWORD=35;
@@ -227,9 +229,9 @@ public class PL_SQLLexer extends Lexer {
     public static final int REPLACE_KEYWORD=55;
     public static final int T__213=213;
     public static final int NOCOPY_KEYWORD=61;
-    public static final int Y=186;
+    public static final int Y=188;
     public static final int T__221=221;
-    public static final int E=183;
+    public static final int E=185;
 
 
     	/*public List<SyntaxError> syntaxErrors = new ArrayList<SyntaxError>();
@@ -330,57 +332,16 @@ public class PL_SQLLexer extends Lexer {
     }
     // $ANTLR end "PARAM_VALUE"
 
-    // $ANTLR start "T__202"
-    public final void mT__202() throws RecognitionException {
+    // $ANTLR start "T__204"
+    public final void mT__204() throws RecognitionException {
         try {
-            int _type = T__202;
+            int _type = T__204;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:33:8: ( '<<' )
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:33:10: '<<'
             {
             match("<<"); 
 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__202"
-
-    // $ANTLR start "T__203"
-    public final void mT__203() throws RecognitionException {
-        try {
-            int _type = T__203;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:34:8: ( '>>' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:34:10: '>>'
-            {
-            match(">>"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__203"
-
-    // $ANTLR start "T__204"
-    public final void mT__204() throws RecognitionException {
-        try {
-            int _type = T__204;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:35:8: ( '(' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:35:10: '('
-            {
-            match('('); 
 
             }
 
@@ -397,10 +358,11 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__205;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:36:8: ( ')' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:36:10: ')'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:34:8: ( '>>' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:34:10: '>>'
             {
-            match(')'); 
+            match(">>"); 
+
 
             }
 
@@ -417,10 +379,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__206;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:37:8: ( '/' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:37:10: '/'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:35:8: ( '(' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:35:10: '('
             {
-            match('/'); 
+            match('('); 
 
             }
 
@@ -437,10 +399,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__207;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:38:8: ( '\\'' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:38:10: '\\''
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:36:8: ( ')' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:36:10: ')'
             {
-            match('\''); 
+            match(')'); 
 
             }
 
@@ -457,10 +419,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__208;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:39:8: ( '+' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:39:10: '+'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:37:8: ( '/' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:37:10: '/'
             {
-            match('+'); 
+            match('/'); 
 
             }
 
@@ -477,10 +439,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__209;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:40:8: ( '-' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:40:10: '-'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:38:8: ( '\\'' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:38:10: '\\''
             {
-            match('-'); 
+            match('\''); 
 
             }
 
@@ -497,10 +459,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__210;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:41:8: ( '*' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:41:10: '*'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:39:8: ( '+' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:39:10: '+'
             {
-            match('*'); 
+            match('+'); 
 
             }
 
@@ -517,11 +479,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__211;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:42:8: ( '**' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:42:10: '**'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:40:8: ( '-' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:40:10: '-'
             {
-            match("**"); 
-
+            match('-'); 
 
             }
 
@@ -538,11 +499,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__212;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:43:8: ( '||' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:43:10: '||'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:41:8: ( '*' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:41:10: '*'
             {
-            match("||"); 
-
+            match('*'); 
 
             }
 
@@ -559,10 +519,11 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__213;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:44:8: ( '=' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:44:10: '='
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:42:8: ( '**' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:42:10: '**'
             {
-            match('='); 
+            match("**"); 
+
 
             }
 
@@ -579,10 +540,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__214;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:45:8: ( '<>' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:45:10: '<>'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:43:8: ( '||' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:43:10: '||'
             {
-            match("<>"); 
+            match("||"); 
 
 
             }
@@ -600,11 +561,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__215;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:46:8: ( '!=' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:46:10: '!='
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:44:8: ( '=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:44:10: '='
             {
-            match("!="); 
-
+            match('='); 
 
             }
 
@@ -621,10 +581,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__216;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:47:8: ( '~=' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:47:10: '~='
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:45:8: ( '<>' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:45:10: '<>'
             {
-            match("~="); 
+            match("<>"); 
 
 
             }
@@ -642,10 +602,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__217;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:48:8: ( '^=' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:48:10: '^='
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:46:8: ( '!=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:46:10: '!='
             {
-            match("^="); 
+            match("!="); 
 
 
             }
@@ -663,10 +623,11 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__218;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:49:8: ( '>' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:49:10: '>'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:47:8: ( '~=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:47:10: '~='
             {
-            match('>'); 
+            match("~="); 
+
 
             }
 
@@ -683,10 +644,11 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__219;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:50:8: ( '<' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:50:10: '<'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:48:8: ( '^=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:48:10: '^='
             {
-            match('<'); 
+            match("^="); 
+
 
             }
 
@@ -703,11 +665,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__220;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:51:8: ( '<=' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:51:10: '<='
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:49:8: ( '>' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:49:10: '>'
             {
-            match("<="); 
-
+            match('>'); 
 
             }
 
@@ -724,11 +685,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__221;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:52:8: ( '>=' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:52:10: '>='
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:50:8: ( '<' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:50:10: '<'
             {
-            match(">="); 
-
+            match('<'); 
 
             }
 
@@ -745,10 +705,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__222;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:53:8: ( '(+)' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:53:10: '(+)'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:51:8: ( '<=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:51:10: '<='
             {
-            match("(+)"); 
+            match("<="); 
 
 
             }
@@ -766,10 +726,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__223;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:54:8: ( '..' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:54:10: '..'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:52:8: ( '>=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:52:10: '>='
             {
-            match(".."); 
+            match(">="); 
 
 
             }
@@ -787,10 +747,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__224;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:55:8: ( ':=' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:55:10: ':='
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:53:8: ( '(+)' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:53:10: '(+)'
             {
-            match(":="); 
+            match("(+)"); 
 
 
             }
@@ -808,6 +768,48 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = T__225;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:54:8: ( '..' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:54:10: '..'
+            {
+            match(".."); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__225"
+
+    // $ANTLR start "T__226"
+    public final void mT__226() throws RecognitionException {
+        try {
+            int _type = T__226;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:55:8: ( ':=' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:55:10: ':='
+            {
+            match(":="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__226"
+
+    // $ANTLR start "T__227"
+    public final void mT__227() throws RecognitionException {
+        try {
+            int _type = T__227;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:56:8: ( '.' )
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:56:10: '.'
             {
@@ -821,19 +823,19 @@ public class PL_SQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__225"
+    // $ANTLR end "T__227"
 
     // $ANTLR start "BLOCK_COMMENT"
     public final void mBLOCK_COMMENT() throws RecognitionException {
         try {
             int _type = BLOCK_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:274:2: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:274:4: '/*' ( options {greedy=false; } : . )* '*/'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:276:2: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:276:4: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:274:9: ( options {greedy=false; } : . )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:276:9: ( options {greedy=false; } : . )*
             loop1:
             do {
                 int alt1=2;
@@ -858,7 +860,7 @@ public class PL_SQLLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:274:37: .
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:276:37: .
             	    {
             	    matchAny(); 
 
@@ -889,12 +891,12 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LINE_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:278:2: ( '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:278:4: '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:280:2: ( '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:280:4: '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
             {
             match("--"); 
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:278:9: (~ ( '\\n' | '\\r' ) )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:280:9: (~ ( '\\n' | '\\r' ) )*
             loop2:
             do {
                 int alt2=2;
@@ -907,7 +909,7 @@ public class PL_SQLLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:278:9: ~ ( '\\n' | '\\r' )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:280:9: ~ ( '\\n' | '\\r' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -927,7 +929,7 @@ public class PL_SQLLexer extends Lexer {
                 }
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:278:23: ( '\\r' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:280:23: ( '\\r' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -936,7 +938,7 @@ public class PL_SQLLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:278:23: '\\r'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:280:23: '\\r'
                     {
                     match('\r'); 
 
@@ -963,10 +965,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = WHITESPACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:282:2: ( ( ' ' | '\\t' | '\\n' | '\\r' )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:282:4: ( ' ' | '\\t' | '\\n' | '\\r' )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:284:2: ( ( ' ' | '\\t' | '\\n' | '\\r' )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:284:4: ( ' ' | '\\t' | '\\n' | '\\r' )+
             {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:282:4: ( ' ' | '\\t' | '\\n' | '\\r' )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:284:4: ( ' ' | '\\t' | '\\n' | '\\r' )+
             int cnt4=0;
             loop4:
             do {
@@ -1021,8 +1023,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OR_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:291:2: ( O R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:291:4: O R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:293:2: ( O R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:293:4: O R
             {
             mO(); 
             mR(); 
@@ -1042,8 +1044,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = AND_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:294:2: ( A N D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:294:4: A N D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:296:2: ( A N D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:296:4: A N D
             {
             mA(); 
             mN(); 
@@ -1064,8 +1066,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NOT_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:297:2: ( N O T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:297:4: N O T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:299:2: ( N O T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:299:4: N O T
             {
             mN(); 
             mO(); 
@@ -1086,10 +1088,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NUMBER_UNSIGNED;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:2: ( ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS ) ( EXP_DIGITS )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:4: ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS ) ( EXP_DIGITS )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:2: ( ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS ) ( EXP_DIGITS )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:4: ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS ) ( EXP_DIGITS )?
             {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:4: ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:4: ( DIGITS ( '.' )? ( DIGITS )? | '.' DIGITS )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1107,10 +1109,10 @@ public class PL_SQLLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:5: DIGITS ( '.' )? ( DIGITS )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:5: DIGITS ( '.' )? ( DIGITS )?
                     {
                     mDIGITS(); 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:12: ( '.' )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:12: ( '.' )?
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
@@ -1119,7 +1121,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     switch (alt5) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:12: '.'
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:12: '.'
                             {
                             match('.'); 
 
@@ -1128,7 +1130,7 @@ public class PL_SQLLexer extends Lexer {
 
                     }
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:17: ( DIGITS )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:17: ( DIGITS )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -1137,7 +1139,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     switch (alt6) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:300:17: DIGITS
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:302:17: DIGITS
                             {
                             mDIGITS(); 
 
@@ -1150,7 +1152,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:301:5: '.' DIGITS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:303:5: '.' DIGITS
                     {
                     match('.'); 
                     mDIGITS(); 
@@ -1160,7 +1162,7 @@ public class PL_SQLLexer extends Lexer {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:303:3: ( EXP_DIGITS )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:305:3: ( EXP_DIGITS )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1169,7 +1171,7 @@ public class PL_SQLLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:303:4: EXP_DIGITS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:305:4: EXP_DIGITS
                     {
                     mEXP_DIGITS(); 
 
@@ -1194,11 +1196,11 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:306:8: ( '\\'' ( '\\'\\'' | ~ ( '\\'' ) )* '\\'' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:307:3: '\\'' ( '\\'\\'' | ~ ( '\\'' ) )* '\\''
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:308:8: ( '\\'' ( '\\'\\'' | ~ ( '\\'' ) )* '\\'' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:309:3: '\\'' ( '\\'\\'' | ~ ( '\\'' ) )* '\\''
             {
             match('\''); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:307:8: ( '\\'\\'' | ~ ( '\\'' ) )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:309:8: ( '\\'\\'' | ~ ( '\\'' ) )*
             loop9:
             do {
                 int alt9=3;
@@ -1220,7 +1222,7 @@ public class PL_SQLLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:307:10: '\\'\\''
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:309:10: '\\'\\''
             	    {
             	    match("''"); 
 
@@ -1228,7 +1230,7 @@ public class PL_SQLLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:307:19: ~ ( '\\'' )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:309:19: ~ ( '\\'' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1265,12 +1267,12 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SOME_TYPES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:311:2: ( N A T U R A L | P L S '_' I N T E G E R | N A T U R A L N | P O S I T I V E | P O S I T I V E N | S I G N T Y P E | S I M P L E '_' I N T E G E R | I N T | I N T E G E R | S M A L L I N T | B I N A R Y '_' I N T E G E R | R E A L | B I N A R Y '_' D O U B L E | B I N A R Y '_' F L O A T | L O N G | L O N G WHITESPACE R A W | R O W I D | U R O W I D | B O O L E A N | M L S L A B E L | D A T E | B F I L E | B L O B | C L O B | N C L O B )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:2: ( N A T U R A L | P L S '_' I N T E G E R | N A T U R A L N | P O S I T I V E | P O S I T I V E N | S I G N T Y P E | S I M P L E '_' I N T E G E R | I N T | I N T E G E R | S M A L L I N T | B I N A R Y '_' I N T E G E R | R E A L | B I N A R Y '_' D O U B L E | B I N A R Y '_' F L O A T | L O N G | L O N G WHITESPACE R A W | R O W I D | U R O W I D | B O O L E A N | M L S L A B E L | D A T E | B F I L E | B L O B | C L O B | N C L O B )
             int alt10=25;
             alt10 = dfa10.predict(input);
             switch (alt10) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:311:4: N A T U R A L
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:4: N A T U R A L
                     {
                     mN(); 
                     mA(); 
@@ -1283,7 +1285,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:311:20: P L S '_' I N T E G E R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:20: P L S '_' I N T E G E R
                     {
                     mP(); 
                     mL(); 
@@ -1300,7 +1302,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:311:46: N A T U R A L N
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:46: N A T U R A L N
                     {
                     mN(); 
                     mA(); 
@@ -1314,7 +1316,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:311:64: P O S I T I V E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:64: P O S I T I V E
                     {
                     mP(); 
                     mO(); 
@@ -1328,7 +1330,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:311:82: P O S I T I V E N
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:82: P O S I T I V E N
                     {
                     mP(); 
                     mO(); 
@@ -1343,7 +1345,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:312:3: S I G N T Y P E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:3: S I G N T Y P E
                     {
                     mS(); 
                     mI(); 
@@ -1357,7 +1359,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:312:21: S I M P L E '_' I N T E G E R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:21: S I M P L E '_' I N T E G E R
                     {
                     mS(); 
                     mI(); 
@@ -1377,7 +1379,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:312:53: I N T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:53: I N T
                     {
                     mI(); 
                     mN(); 
@@ -1386,7 +1388,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 9 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:312:61: I N T E G E R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:61: I N T E G E R
                     {
                     mI(); 
                     mN(); 
@@ -1399,7 +1401,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 10 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:312:77: S M A L L I N T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:77: S M A L L I N T
                     {
                     mS(); 
                     mM(); 
@@ -1413,7 +1415,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 11 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:3: B I N A R Y '_' I N T E G E R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:3: B I N A R Y '_' I N T E G E R
                     {
                     mB(); 
                     mI(); 
@@ -1433,7 +1435,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 12 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:35: R E A L
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:35: R E A L
                     {
                     mR(); 
                     mE(); 
@@ -1443,7 +1445,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 13 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:45: B I N A R Y '_' D O U B L E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:45: B I N A R Y '_' D O U B L E
                     {
                     mB(); 
                     mI(); 
@@ -1462,7 +1464,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 14 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:313:75: B I N A R Y '_' F L O A T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:75: B I N A R Y '_' F L O A T
                     {
                     mB(); 
                     mI(); 
@@ -1480,7 +1482,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 15 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:3: L O N G
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:316:3: L O N G
                     {
                     mL(); 
                     mO(); 
@@ -1490,7 +1492,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 16 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:13: L O N G WHITESPACE R A W
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:316:13: L O N G WHITESPACE R A W
                     {
                     mL(); 
                     mO(); 
@@ -1504,7 +1506,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 17 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:40: R O W I D
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:316:40: R O W I D
                     {
                     mR(); 
                     mO(); 
@@ -1515,7 +1517,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 18 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:52: U R O W I D
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:316:52: U R O W I D
                     {
                     mU(); 
                     mR(); 
@@ -1527,7 +1529,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 19 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:66: B O O L E A N
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:316:66: B O O L E A N
                     {
                     mB(); 
                     mO(); 
@@ -1540,7 +1542,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 20 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:314:82: M L S L A B E L
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:316:82: M L S L A B E L
                     {
                     mM(); 
                     mL(); 
@@ -1554,7 +1556,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 21 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:3: D A T E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:317:3: D A T E
                     {
                     mD(); 
                     mA(); 
@@ -1564,7 +1566,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 22 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:13: B F I L E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:317:13: B F I L E
                     {
                     mB(); 
                     mF(); 
@@ -1575,7 +1577,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 23 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:25: B L O B
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:317:25: B L O B
                     {
                     mB(); 
                     mL(); 
@@ -1585,7 +1587,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 24 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:35: C L O B
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:317:35: C L O B
                     {
                     mC(); 
                     mL(); 
@@ -1595,7 +1597,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 25 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:315:45: N C L O B
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:317:45: N C L O B
                     {
                     mN(); 
                     mC(); 
@@ -1620,12 +1622,12 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SCALE_TYPES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:319:2: ( N U M B E R | D E C | D E C I M A L | N U M E R I C )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:321:2: ( N U M B E R | D E C | D E C I M A L | N U M E R I C )
             int alt11=4;
             alt11 = dfa11.predict(input);
             switch (alt11) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:319:4: N U M B E R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:321:4: N U M B E R
                     {
                     mN(); 
                     mU(); 
@@ -1637,7 +1639,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:319:18: D E C
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:321:18: D E C
                     {
                     mD(); 
                     mE(); 
@@ -1646,7 +1648,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:319:26: D E C I M A L
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:321:26: D E C I M A L
                     {
                     mD(); 
                     mE(); 
@@ -1659,7 +1661,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:319:42: N U M E R I C
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:321:42: N U M E R I C
                     {
                     mN(); 
                     mU(); 
@@ -1686,7 +1688,7 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SIZE_TYPES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:323:2: ( D O U B L E WHITESPACE P R E C I S I O N | F L O A T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:325:2: ( D O U B L E WHITESPACE P R E C I S I O N | F L O A T )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1704,7 +1706,7 @@ public class PL_SQLLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:323:4: D O U B L E WHITESPACE P R E C I S I O N
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:325:4: D O U B L E WHITESPACE P R E C I S I O N
                     {
                     mD(); 
                     mO(); 
@@ -1726,7 +1728,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:323:47: F L O A T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:325:47: F L O A T
                     {
                     mF(); 
                     mL(); 
@@ -1751,12 +1753,12 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CHAR_TYPES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:327:2: ( V A R C H A R | V A R C H A R '2' | N C H A R | N V A R C H A R '2' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:329:2: ( V A R C H A R | V A R C H A R '2' | N C H A R | N V A R C H A R '2' )
             int alt13=4;
             alt13 = dfa13.predict(input);
             switch (alt13) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:327:4: V A R C H A R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:329:4: V A R C H A R
                     {
                     mV(); 
                     mA(); 
@@ -1769,7 +1771,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:327:20: V A R C H A R '2'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:329:20: V A R C H A R '2'
                     {
                     mV(); 
                     mA(); 
@@ -1783,7 +1785,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:327:40: N C H A R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:329:40: N C H A R
                     {
                     mN(); 
                     mC(); 
@@ -1794,7 +1796,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:327:52: N V A R C H A R '2'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:329:52: N V A R C H A R '2'
                     {
                     mN(); 
                     mV(); 
@@ -1823,8 +1825,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CHAR_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:331:2: ( C H A R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:331:4: C H A R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:333:2: ( C H A R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:333:4: C H A R
             {
             mC(); 
             mH(); 
@@ -1846,8 +1848,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BYTE_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:335:2: ( B Y T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:335:4: B Y T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:337:2: ( B Y T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:337:4: B Y T E
             {
             mB(); 
             mY(); 
@@ -1869,8 +1871,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RAW_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:338:9: ( R A W )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:338:11: R A W
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:340:9: ( R A W )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:340:11: R A W
             {
             mR(); 
             mA(); 
@@ -1891,8 +1893,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TIMESTAMP_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:342:2: ( T I M E S T A M P )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:342:4: T I M E S T A M P
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:344:2: ( T I M E S T A M P )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:344:4: T I M E S T A M P
             {
             mT(); 
             mI(); 
@@ -1919,8 +1921,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = YEAR_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:346:2: ( Y E A R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:346:4: Y E A R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:348:2: ( Y E A R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:348:4: Y E A R
             {
             mY(); 
             mE(); 
@@ -1942,8 +1944,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DAY_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:349:9: ( D A Y )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:349:11: D A Y
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:351:9: ( D A Y )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:351:11: D A Y
             {
             mD(); 
             mA(); 
@@ -1964,8 +1966,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SECOND_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:353:2: ( S E C O N D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:353:4: S E C O N D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:355:2: ( S E C O N D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:355:4: S E C O N D
             {
             mS(); 
             mE(); 
@@ -1989,19 +1991,19 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:357:9: ( '.' | F R O M | W H E R E | G R O U P WHITESPACE B Y | O R D E R WHITESPACE B Y | P R I O R | C O N N E C T '_' B Y '_' R O O T | C O N N E C T | S T A R T | U N I O N | U N I O N WHITESPACE A L L | I N T E R S E C T | M I N U S | M U L T I S E T WHITESPACE E X C E P T | M U L T I S E T WHITESPACE I N T E R S E C T | M U L T I S E T WHITESPACE U N I O N | A N Y | S O M E | A L L | E S C A P E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:359:9: ( '.' | F R O M | W H E R E | G R O U P WHITESPACE B Y | O R D E R WHITESPACE B Y | P R I O R | C O N N E C T '_' B Y '_' R O O T | C O N N E C T | S T A R T | U N I O N | U N I O N WHITESPACE A L L | I N T E R S E C T | M I N U S | M U L T I S E T WHITESPACE E X C E P T | M U L T I S E T WHITESPACE I N T E R S E C T | M U L T I S E T WHITESPACE U N I O N | A N Y | S O M E | A L L | E S C A P E )
             int alt14=20;
             alt14 = dfa14.predict(input);
             switch (alt14) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:357:11: '.'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:359:11: '.'
                     {
                     match('.'); 
 
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:357:17: F R O M
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:359:17: F R O M
                     {
                     mF(); 
                     mR(); 
@@ -2011,7 +2013,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:357:27: W H E R E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:359:27: W H E R E
                     {
                     mW(); 
                     mH(); 
@@ -2022,7 +2024,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:357:39: G R O U P WHITESPACE B Y
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:359:39: G R O U P WHITESPACE B Y
                     {
                     mG(); 
                     mR(); 
@@ -2036,7 +2038,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:357:66: O R D E R WHITESPACE B Y
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:359:66: O R D E R WHITESPACE B Y
                     {
                     mO(); 
                     mR(); 
@@ -2050,7 +2052,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:358:7: P R I O R
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:360:7: P R I O R
                     {
                     mP(); 
                     mR(); 
@@ -2061,7 +2063,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:358:19: C O N N E C T '_' B Y '_' R O O T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:360:19: C O N N E C T '_' B Y '_' R O O T
                     {
                     mC(); 
                     mO(); 
@@ -2082,7 +2084,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:358:55: C O N N E C T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:360:55: C O N N E C T
                     {
                     mC(); 
                     mO(); 
@@ -2095,7 +2097,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 9 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:358:71: S T A R T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:360:71: S T A R T
                     {
                     mS(); 
                     mT(); 
@@ -2106,7 +2108,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 10 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:359:7: U N I O N
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:7: U N I O N
                     {
                     mU(); 
                     mN(); 
@@ -2117,7 +2119,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 11 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:359:19: U N I O N WHITESPACE A L L
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:19: U N I O N WHITESPACE A L L
                     {
                     mU(); 
                     mN(); 
@@ -2132,7 +2134,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 12 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:359:48: I N T E R S E C T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:48: I N T E R S E C T
                     {
                     mI(); 
                     mN(); 
@@ -2147,7 +2149,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 13 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:359:68: M I N U S
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:68: M I N U S
                     {
                     mM(); 
                     mI(); 
@@ -2158,7 +2160,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 14 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:359:80: M U L T I S E T WHITESPACE E X C E P T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:80: M U L T I S E T WHITESPACE E X C E P T
                     {
                     mM(); 
                     mU(); 
@@ -2179,7 +2181,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 15 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:360:7: M U L T I S E T WHITESPACE I N T E R S E C T
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:362:7: M U L T I S E T WHITESPACE I N T E R S E C T
                     {
                     mM(); 
                     mU(); 
@@ -2203,7 +2205,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 16 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:360:54: M U L T I S E T WHITESPACE U N I O N
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:362:54: M U L T I S E T WHITESPACE U N I O N
                     {
                     mM(); 
                     mU(); 
@@ -2223,7 +2225,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 17 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:7: A N Y
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:363:7: A N Y
                     {
                     mA(); 
                     mN(); 
@@ -2232,7 +2234,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 18 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:15: S O M E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:363:15: S O M E
                     {
                     mS(); 
                     mO(); 
@@ -2242,7 +2244,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 19 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:25: A L L
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:363:25: A L L
                     {
                     mA(); 
                     mL(); 
@@ -2251,7 +2253,7 @@ public class PL_SQLLexer extends Lexer {
                     }
                     break;
                 case 20 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:361:33: E S C A P E
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:363:33: E S C A P E
                     {
                     mE(); 
                     mS(); 
@@ -2277,8 +2279,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BEGIN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:365:14: ( B E G I N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:365:16: B E G I N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:14: ( B E G I N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:16: B E G I N
             {
             mB(); 
             mE(); 
@@ -2301,8 +2303,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = END_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:366:12: ( E N D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:366:14: E N D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:368:12: ( E N D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:368:14: E N D
             {
             mE(); 
             mN(); 
@@ -2323,8 +2325,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DECLARE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:16: ( D E C L A R E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:367:18: D E C L A R E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:369:16: ( D E C L A R E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:369:18: D E C L A R E
             {
             mD(); 
             mE(); 
@@ -2349,8 +2351,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXCEPTION_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:368:18: ( E X C E P T I O N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:368:20: E X C E P T I O N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:370:18: ( E X C E P T I O N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:370:20: E X C E P T I O N
             {
             mE(); 
             mX(); 
@@ -2377,8 +2379,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = WHEN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:369:13: ( W H E N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:369:15: W H E N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:371:13: ( W H E N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:371:15: W H E N
             {
             mW(); 
             mH(); 
@@ -2400,8 +2402,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = THEN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:370:13: ( T H E N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:370:15: T H E N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:372:13: ( T H E N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:372:15: T H E N
             {
             mT(); 
             mH(); 
@@ -2423,8 +2425,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NULL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:372:13: ( N U L L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:372:15: N U L L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:374:13: ( N U L L )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:374:15: N U L L
             {
             mN(); 
             mU(); 
@@ -2446,8 +2448,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DEFAULT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:373:16: ( D E F A U L T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:373:18: D E F A U L T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:375:16: ( D E F A U L T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:375:18: D E F A U L T
             {
             mD(); 
             mE(); 
@@ -2472,8 +2474,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ROWTYPE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:374:16: ( '%' R O W T Y P E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:374:18: '%' R O W T Y P E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:376:16: ( '%' R O W T Y P E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:376:18: '%' R O W T Y P E
             {
             match('%'); 
             mR(); 
@@ -2499,8 +2501,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LIKE_TYPE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:375:18: ( '%' T Y P E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:375:20: '%' T Y P E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:377:18: ( '%' T Y P E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:377:20: '%' T Y P E
             {
             match('%'); 
             mT(); 
@@ -2523,8 +2525,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TYPE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:376:13: ( T Y P E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:376:15: T Y P E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:378:13: ( T Y P E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:378:15: T Y P E
             {
             mT(); 
             mY(); 
@@ -2546,8 +2548,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TRUE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:377:13: ( T R U E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:377:15: T R U E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:379:13: ( T R U E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:379:15: T R U E
             {
             mT(); 
             mR(); 
@@ -2569,8 +2571,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FALSE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:378:14: ( F A L S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:378:16: F A L S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:380:14: ( F A L S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:380:16: F A L S E
             {
             mF(); 
             mA(); 
@@ -2593,8 +2595,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CONSTANT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:379:17: ( C O N S T A N T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:379:19: C O N S T A N T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:381:17: ( C O N S T A N T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:381:19: C O N S T A N T
             {
             mC(); 
             mO(); 
@@ -2620,8 +2622,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = WITH_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:380:13: ( W I T H )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:380:15: W I T H
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:382:13: ( W I T H )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:382:15: W I T H
             {
             mW(); 
             mI(); 
@@ -2643,8 +2645,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LOCAL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:381:14: ( L O C A L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:381:16: L O C A L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:383:14: ( L O C A L )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:383:16: L O C A L
             {
             mL(); 
             mO(); 
@@ -2667,8 +2669,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TIME_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:382:13: ( T I M E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:382:15: T I M E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:384:13: ( T I M E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:384:15: T I M E
             {
             mT(); 
             mI(); 
@@ -2690,8 +2692,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ZONE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:383:13: ( Z O N E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:383:15: Z O N E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:385:13: ( Z O N E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:385:15: Z O N E
             {
             mZ(); 
             mO(); 
@@ -2713,8 +2715,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INTERVAL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:384:17: ( I N T E R V A L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:384:19: I N T E R V A L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:386:17: ( I N T E R V A L )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:386:19: I N T E R V A L
             {
             mI(); 
             mN(); 
@@ -2740,8 +2742,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TO_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:385:11: ( T O )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:385:13: T O
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:387:11: ( T O )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:387:13: T O
             {
             mT(); 
             mO(); 
@@ -2761,8 +2763,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = MONTH_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:386:14: ( M O N T H )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:386:16: M O N T H
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:388:14: ( M O N T H )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:388:16: M O N T H
             {
             mM(); 
             mO(); 
@@ -2785,8 +2787,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SUBTYPE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:387:16: ( S U B T Y P E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:387:18: S U B T Y P E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:389:16: ( S U B T Y P E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:389:18: S U B T Y P E
             {
             mS(); 
             mU(); 
@@ -2811,8 +2813,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = IS_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:388:11: ( I S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:388:13: I S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:390:11: ( I S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:390:13: I S
             {
             mI(); 
             mS(); 
@@ -2832,8 +2834,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RECORD_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:389:15: ( R E C O R D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:389:17: R E C O R D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:391:15: ( R E C O R D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:391:17: R E C O R D
             {
             mR(); 
             mE(); 
@@ -2857,8 +2859,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CREATE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:390:15: ( C R E A T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:390:17: C R E A T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:392:15: ( C R E A T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:392:17: C R E A T E
             {
             mC(); 
             mR(); 
@@ -2882,8 +2884,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = REPLACE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:391:16: ( R E P L A C E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:391:18: R E P L A C E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:393:16: ( R E P L A C E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:393:18: R E P L A C E
             {
             mR(); 
             mE(); 
@@ -2908,8 +2910,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FUNCTION_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:392:17: ( F U N C T I O N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:392:19: F U N C T I O N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:394:17: ( F U N C T I O N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:394:19: F U N C T I O N
             {
             mF(); 
             mU(); 
@@ -2935,8 +2937,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = AS_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:393:11: ( A S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:393:13: A S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:395:11: ( A S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:395:13: A S
             {
             mA(); 
             mS(); 
@@ -2956,8 +2958,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RETURN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:394:15: ( R E T U R N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:394:17: R E T U R N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:396:15: ( R E T U R N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:396:17: R E T U R N
             {
             mR(); 
             mE(); 
@@ -2981,8 +2983,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = IN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:395:11: ( I N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:395:13: I N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:397:11: ( I N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:397:13: I N
             {
             mI(); 
             mN(); 
@@ -3002,8 +3004,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OUT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:396:12: ( O U T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:396:14: O U T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:398:12: ( O U T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:398:14: O U T
             {
             mO(); 
             mU(); 
@@ -3024,8 +3026,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NOCOPY_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:397:15: ( N O C O P Y )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:397:17: N O C O P Y
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:399:15: ( N O C O P Y )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:399:17: N O C O P Y
             {
             mN(); 
             mO(); 
@@ -3049,8 +3051,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = AUTHID_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:398:15: ( A U T H I D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:398:17: A U T H I D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:400:15: ( A U T H I D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:400:17: A U T H I D
             {
             mA(); 
             mU(); 
@@ -3074,8 +3076,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CURRENT_USER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:399:21: ( C U R R E N T '_' U S E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:399:23: C U R R E N T '_' U S E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:401:21: ( C U R R E N T '_' U S E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:401:23: C U R R E N T '_' U S E R
             {
             mC(); 
             mU(); 
@@ -3105,8 +3107,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DEFINER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:400:16: ( D E F I N E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:400:18: D E F I N E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:402:16: ( D E F I N E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:402:18: D E F I N E R
             {
             mD(); 
             mE(); 
@@ -3131,8 +3133,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DETERMINISTIC_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:401:22: ( D E T E R M I N I S T I C )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:401:24: D E T E R M I N I S T I C
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:403:22: ( D E T E R M I N I S T I C )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:403:24: D E T E R M I N I S T I C
             {
             mD(); 
             mE(); 
@@ -3163,8 +3165,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PARALLEL_ENABLED_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:402:25: ( P A R A L L E L '_' E N A B L E D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:402:27: P A R A L L E L '_' E N A B L E D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:404:25: ( P A R A L L E L '_' E N A B L E D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:404:27: P A R A L L E L '_' E N A B L E D
             {
             mP(); 
             mA(); 
@@ -3198,8 +3200,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PIPELINED_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:403:18: ( P I P E L I N E D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:403:20: P I P E L I N E D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:405:18: ( P I P E L I N E D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:405:20: P I P E L I N E D
             {
             mP(); 
             mI(); 
@@ -3226,8 +3228,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RESULT_CACHE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:404:21: ( R E S U L T '_' C A C H E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:404:23: R E S U L T '_' C A C H E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:406:21: ( R E S U L T '_' C A C H E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:406:23: R E S U L T '_' C A C H E
             {
             mR(); 
             mE(); 
@@ -3257,8 +3259,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PROCEDURE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:405:18: ( P R O C E D U R E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:405:20: P R O C E D U R E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:407:18: ( P R O C E D U R E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:407:20: P R O C E D U R E
             {
             mP(); 
             mR(); 
@@ -3285,8 +3287,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = IF_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:406:11: ( I F )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:406:13: I F
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:408:11: ( I F )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:408:13: I F
             {
             mI(); 
             mF(); 
@@ -3306,8 +3308,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ELSE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:407:13: ( E L S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:407:15: E L S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:409:13: ( E L S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:409:15: E L S E
             {
             mE(); 
             mL(); 
@@ -3329,8 +3331,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ELSIF_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:408:14: ( E L S I F )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:408:16: E L S I F
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:410:14: ( E L S I F )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:410:16: E L S I F
             {
             mE(); 
             mL(); 
@@ -3353,8 +3355,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = GOTO_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:413:13: ( G O T O )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:413:15: G O T O
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:415:13: ( G O T O )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:415:15: G O T O
             {
             mG(); 
             mO(); 
@@ -3376,8 +3378,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LOOP_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:414:13: ( L O O P )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:414:15: L O O P
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:416:13: ( L O O P )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:416:15: L O O P
             {
             mL(); 
             mO(); 
@@ -3399,8 +3401,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = WHILE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:416:14: ( W H I L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:416:16: W H I L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:418:14: ( W H I L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:418:16: W H I L E
             {
             mW(); 
             mH(); 
@@ -3423,8 +3425,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FOR_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:417:12: ( F O R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:417:14: F O R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:419:12: ( F O R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:419:14: F O R
             {
             mF(); 
             mO(); 
@@ -3445,8 +3447,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = REVERSE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:418:16: ( R E V E R S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:418:18: R E V E R S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:420:16: ( R E V E R S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:420:18: R E V E R S E
             {
             mR(); 
             mE(); 
@@ -3471,8 +3473,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SELECT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:419:15: ( S E L E C T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:419:17: S E L E C T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:421:15: ( S E L E C T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:421:17: S E L E C T
             {
             mS(); 
             mE(); 
@@ -3496,8 +3498,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = COUNT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:420:14: ( C O U N T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:420:16: C O U N T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:422:14: ( C O U N T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:422:16: C O U N T
             {
             mC(); 
             mO(); 
@@ -3520,8 +3522,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXCEPTION_INIT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:421:23: ( E X C E P T I O N '_' I N I T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:421:25: E X C E P T I O N '_' I N I T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:423:23: ( E X C E P T I O N '_' I N I T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:423:25: E X C E P T I O N '_' I N I T
             {
             mE(); 
             mX(); 
@@ -3553,8 +3555,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LIKE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:422:13: ( L I K E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:422:15: L I K E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:424:13: ( L I K E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:424:15: L I K E
             {
             mL(); 
             mI(); 
@@ -3576,8 +3578,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RAISE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:423:14: ( R A I S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:423:16: R A I S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:425:14: ( R A I S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:425:16: R A I S E
             {
             mR(); 
             mA(); 
@@ -3600,8 +3602,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PRAGMA_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:424:15: ( P R A G M A )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:424:17: P R A G M A
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:426:15: ( P R A G M A )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:426:17: P R A G M A
             {
             mP(); 
             mR(); 
@@ -3625,8 +3627,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = AUTONOMOUS_TRANSACTION_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:425:31: ( A U T O N O M O U S '_' T R A N S A C T I O N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:425:33: A U T O N O M O U S '_' T R A N S A C T I O N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:427:31: ( A U T O N O M O U S '_' T R A N S A C T I O N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:427:33: A U T O N O M O U S '_' T R A N S A C T I O N
             {
             mA(); 
             mU(); 
@@ -3666,8 +3668,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CASE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:426:13: ( C A S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:426:15: C A S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:428:13: ( C A S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:428:15: C A S E
             {
             mC(); 
             mA(); 
@@ -3689,8 +3691,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CLOSE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:428:14: ( C L O S E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:428:16: C L O S E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:430:14: ( C L O S E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:430:16: C L O S E
             {
             mC(); 
             mL(); 
@@ -3713,8 +3715,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TABLE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:429:14: ( T A B L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:429:16: T A B L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:431:14: ( T A B L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:431:16: T A B L E
             {
             mT(); 
             mA(); 
@@ -3737,8 +3739,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OF_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:430:11: ( O F )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:430:13: O F
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:432:11: ( O F )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:432:13: O F
             {
             mO(); 
             mF(); 
@@ -3758,8 +3760,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INDEX_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:431:14: ( I N D E X )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:431:16: I N D E X
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:433:14: ( I N D E X )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:433:16: I N D E X
             {
             mI(); 
             mN(); 
@@ -3782,8 +3784,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BY_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:432:11: ( B Y )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:432:13: B Y
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:434:11: ( B Y )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:434:13: B Y
             {
             mB(); 
             mY(); 
@@ -3803,8 +3805,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = VARRAY_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:433:15: ( V A R R A Y )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:433:17: V A R R A Y
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:435:15: ( V A R R A Y )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:435:17: V A R R A Y
             {
             mV(); 
             mA(); 
@@ -3828,8 +3830,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = VARYING_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:434:16: ( V A R Y I N G )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:434:18: V A R Y I N G
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:436:16: ( V A R Y I N G )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:436:18: V A R Y I N G
             {
             mV(); 
             mA(); 
@@ -3854,8 +3856,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ARRAY_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:435:14: ( A R R A Y )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:435:16: A R R A Y
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:437:14: ( A R R A Y )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:437:16: A R R A Y
             {
             mA(); 
             mR(); 
@@ -3878,8 +3880,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = COMMIT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:436:15: ( C O M M I T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:436:17: C O M M I T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:438:15: ( C O M M I T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:438:17: C O M M I T
             {
             mC(); 
             mO(); 
@@ -3903,8 +3905,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = REF_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:437:12: ( R E F )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:437:14: R E F
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:439:12: ( R E F )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:439:14: R E F
             {
             mR(); 
             mE(); 
@@ -3925,8 +3927,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CONTINUE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:438:17: ( C O N T I N U E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:438:19: C O N T I N U E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:440:17: ( C O N T I N U E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:440:19: C O N T I N U E
             {
             mC(); 
             mO(); 
@@ -3952,8 +3954,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CURSOR_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:439:15: ( C U R S O R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:439:17: C U R S O R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:441:15: ( C U R S O R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:441:17: C U R S O R
             {
             mC(); 
             mU(); 
@@ -3977,8 +3979,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DELETE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:440:15: ( D E L E T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:440:17: D E L E T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:442:15: ( D E L E T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:442:17: D E L E T E
             {
             mD(); 
             mE(); 
@@ -4002,8 +4004,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXECUTE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:441:16: ( E X E C U T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:441:18: E X E C U T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:443:16: ( E X E C U T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:443:18: E X E C U T E
             {
             mE(); 
             mX(); 
@@ -4028,8 +4030,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = IMMEDIATE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:442:18: ( I M M E D I A T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:442:20: I M M E D I A T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:444:18: ( I M M E D I A T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:444:20: I M M E D I A T E
             {
             mI(); 
             mM(); 
@@ -4056,8 +4058,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXIT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:443:13: ( E X I T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:443:15: E X I T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:445:13: ( E X I T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:445:15: E X I T
             {
             mE(); 
             mX(); 
@@ -4079,8 +4081,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INTO_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:444:13: ( I N T O )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:444:15: I N T O
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:446:13: ( I N T O )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:446:15: I N T O
             {
             mI(); 
             mN(); 
@@ -4102,8 +4104,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = USING_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:445:14: ( U S I N G )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:445:16: U S I N G
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:447:14: ( U S I N G )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:447:16: U S I N G
             {
             mU(); 
             mS(); 
@@ -4126,8 +4128,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BULK_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:446:13: ( B U L K )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:446:15: B U L K
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:448:13: ( B U L K )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:448:15: B U L K
             {
             mB(); 
             mU(); 
@@ -4149,8 +4151,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = COLLECT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:447:16: ( C O L L E C T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:447:18: C O L L E C T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:449:16: ( C O L L E C T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:449:18: C O L L E C T
             {
             mC(); 
             mO(); 
@@ -4175,8 +4177,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FETCH_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:448:14: ( F E T C H )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:448:16: F E T C H
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:450:14: ( F E T C H )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:450:16: F E T C H
             {
             mF(); 
             mE(); 
@@ -4199,8 +4201,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LIMIT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:449:14: ( L I M I T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:449:16: L I M I T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:451:14: ( L I M I T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:451:16: L I M I T
             {
             mL(); 
             mI(); 
@@ -4223,8 +4225,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FORALL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:450:15: ( F O R A L L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:450:17: F O R A L L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:452:15: ( F O R A L L )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:452:17: F O R A L L
             {
             mF(); 
             mO(); 
@@ -4248,8 +4250,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SAVE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:451:13: ( S A V E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:451:15: S A V E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:453:13: ( S A V E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:453:15: S A V E
             {
             mS(); 
             mA(); 
@@ -4271,8 +4273,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXCEPTIONS_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:452:19: ( E X C E P T I O N S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:452:21: E X C E P T I O N S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:454:19: ( E X C E P T I O N S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:454:21: E X C E P T I O N S
             {
             mE(); 
             mX(); 
@@ -4300,8 +4302,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INDICES_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:453:16: ( I N D I C E S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:453:18: I N D I C E S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:455:16: ( I N D I C E S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:455:18: I N D I C E S
             {
             mI(); 
             mN(); 
@@ -4326,8 +4328,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = VALUES_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:454:15: ( V A L U E S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:454:17: V A L U E S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:456:15: ( V A L U E S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:456:17: V A L U E S
             {
             mV(); 
             mA(); 
@@ -4351,8 +4353,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BETWEEN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:455:16: ( B E T W E E N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:455:18: B E T W E E N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:457:16: ( B E T W E E N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:457:18: B E T W E E N
             {
             mB(); 
             mE(); 
@@ -4377,8 +4379,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INLINE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:456:15: ( I N L I N E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:456:17: I N L I N E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:458:15: ( I N L I N E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:458:17: I N L I N E
             {
             mI(); 
             mN(); 
@@ -4402,8 +4404,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INSERT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:457:15: ( I N S E R T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:457:17: I N S E R T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:459:15: ( I N S E R T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:459:17: I N S E R T
             {
             mI(); 
             mN(); 
@@ -4427,8 +4429,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = LOCK_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:458:13: ( L O C K )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:458:15: L O C K
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:460:13: ( L O C K )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:460:15: L O C K
             {
             mL(); 
             mO(); 
@@ -4450,8 +4452,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = MERGE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:459:14: ( M E R G E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:459:16: M E R G E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:461:14: ( M E R G E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:461:16: M E R G E
             {
             mM(); 
             mE(); 
@@ -4474,8 +4476,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OPEN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:460:13: ( O P E N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:460:15: O P E N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:462:13: ( O P E N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:462:15: O P E N
             {
             mO(); 
             mP(); 
@@ -4497,8 +4499,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PACKAGE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:461:16: ( P A C K A G E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:461:18: P A C K A G E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:463:16: ( P A C K A G E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:463:18: P A C K A G E
             {
             mP(); 
             mA(); 
@@ -4523,8 +4525,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BODY_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:462:13: ( B O D Y )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:462:15: B O D Y
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:464:13: ( B O D Y )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:464:15: B O D Y
             {
             mB(); 
             mO(); 
@@ -4546,8 +4548,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RESTRICT_REFERENCES_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:463:28: ( R E S T R I C T '_' R E F E R E N C E S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:463:30: R E S T R I C T '_' R E F E R E N C E S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:465:28: ( R E S T R I C T '_' R E F E R E N C E S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:465:30: R E S T R I C T '_' R E F E R E N C E S
             {
             mR(); 
             mE(); 
@@ -4584,8 +4586,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RETURNING_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:464:18: ( R E T U R N I N G )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:464:20: R E T U R N I N G
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:466:18: ( R E T U R N I N G )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:466:20: R E T U R N I N G
             {
             mR(); 
             mE(); 
@@ -4612,8 +4614,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ROLLBACK_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:465:17: ( R O L L B A C K )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:465:19: R O L L B A C K
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:467:17: ( R O L L B A C K )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:467:19: R O L L B A C K
             {
             mR(); 
             mO(); 
@@ -4639,8 +4641,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SAVEPOINT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:466:18: ( S A V E P O I N T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:466:20: S A V E P O I N T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:468:18: ( S A V E P O I N T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:468:20: S A V E P O I N T
             {
             mS(); 
             mA(); 
@@ -4667,8 +4669,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SERIALLY_REUSABLE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:467:26: ( S E R I A L L Y '_' R E U S A B L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:467:28: S E R I A L L Y '_' R E U S A B L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:469:26: ( S E R I A L L Y '_' R E U S A B L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:469:28: S E R I A L L Y '_' R E U S A B L E
             {
             mS(); 
             mE(); 
@@ -4703,8 +4705,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SET_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:468:12: ( S E T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:468:14: S E T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:470:12: ( S E T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:470:14: S E T
             {
             mS(); 
             mE(); 
@@ -4725,8 +4727,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TRANSACTION_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:469:20: ( T R A N S A C T I O N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:469:22: T R A N S A C T I O N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:471:20: ( T R A N S A C T I O N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:471:22: T R A N S A C T I O N
             {
             mT(); 
             mR(); 
@@ -4755,8 +4757,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NOTFOUND_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:470:17: ( '%' N O T F O U N D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:470:19: '%' N O T F O U N D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:472:17: ( '%' N O T F O U N D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:472:19: '%' N O T F O U N D
             {
             match('%'); 
             mN(); 
@@ -4783,8 +4785,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FOUND_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:471:14: ( '%' F O U N D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:471:16: '%' F O U N D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:473:14: ( '%' F O U N D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:473:16: '%' F O U N D
             {
             match('%'); 
             mF(); 
@@ -4808,8 +4810,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ISOPEN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:472:15: ( '%' I S O P E N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:472:17: '%' I S O P E N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:474:15: ( '%' I S O P E N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:474:17: '%' I S O P E N
             {
             match('%'); 
             mI(); 
@@ -4834,8 +4836,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ROWCOUNT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:473:17: ( '%' R O W C O U N T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:473:19: '%' R O W C O U N T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:475:17: ( '%' R O W C O U N T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:475:19: '%' R O W C O U N T
             {
             match('%'); 
             mR(); 
@@ -4862,8 +4864,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SQLCODE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:474:16: ( S Q L C O D E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:474:18: S Q L C O D E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:476:16: ( S Q L C O D E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:476:18: S Q L C O D E
             {
             mS(); 
             mQ(); 
@@ -4888,8 +4890,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SQLERRM_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:475:16: ( S Q L E R R M )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:475:18: S Q L E R R M
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:477:16: ( S Q L E R R M )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:477:18: S Q L E R R M
             {
             mS(); 
             mQ(); 
@@ -4914,8 +4916,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = UPDATE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:476:15: ( U P D A T E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:476:17: U P D A T E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:478:15: ( U P D A T E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:478:17: U P D A T E
             {
             mU(); 
             mP(); 
@@ -4939,8 +4941,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXISTS_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:477:15: ( E X I S T S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:477:17: E X I S T S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:479:15: ( E X I S T S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:479:17: E X I S T S
             {
             mE(); 
             mX(); 
@@ -4964,8 +4966,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = TRIGGER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:478:16: ( T R I G G E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:478:18: T R I G G E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:480:16: ( T R I G G E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:480:18: T R I G G E R
             {
             mT(); 
             mR(); 
@@ -4990,8 +4992,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = BEFORE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:479:15: ( B E F O R E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:479:17: B E F O R E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:481:15: ( B E F O R E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:481:17: B E F O R E
             {
             mB(); 
             mE(); 
@@ -5015,8 +5017,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = AFTER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:480:14: ( A F T E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:480:16: A F T E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:482:14: ( A F T E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:482:16: A F T E R
             {
             mA(); 
             mF(); 
@@ -5039,8 +5041,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INSTEAD_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:481:16: ( I N S T E A D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:481:18: I N S T E A D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:483:16: ( I N S T E A D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:483:18: I N S T E A D
             {
             mI(); 
             mN(); 
@@ -5065,8 +5067,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ON_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:482:11: ( O N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:482:13: O N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:484:11: ( O N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:484:13: O N
             {
             mO(); 
             mN(); 
@@ -5086,8 +5088,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NESTED_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:483:15: ( N E S T E D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:483:17: N E S T E D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:485:15: ( N E S T E D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:485:17: N E S T E D
             {
             mN(); 
             mE(); 
@@ -5111,8 +5113,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = REFERENCING_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:484:20: ( R E F E R E N C I N G )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:484:22: R E F E R E N C I N G
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:486:20: ( R E F E R E N C I N G )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:486:22: R E F E R E N C I N G
             {
             mR(); 
             mE(); 
@@ -5141,8 +5143,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OLD_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:485:12: ( O L D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:485:14: O L D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:487:12: ( O L D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:487:14: O L D
             {
             mO(); 
             mL(); 
@@ -5163,8 +5165,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = NEW_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:486:12: ( N E W )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:486:14: N E W
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:488:12: ( N E W )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:488:14: N E W
             {
             mN(); 
             mE(); 
@@ -5185,8 +5187,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = PARENT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:487:15: ( P A R E N T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:487:17: P A R E N T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:489:15: ( P A R E N T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:489:17: P A R E N T
             {
             mP(); 
             mA(); 
@@ -5210,8 +5212,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EACH_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:488:13: ( E A C H )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:488:15: E A C H
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:490:13: ( E A C H )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:490:15: E A C H
             {
             mE(); 
             mA(); 
@@ -5233,8 +5235,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ROW_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:489:12: ( R O W )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:489:14: R O W
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:491:12: ( R O W )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:491:14: R O W
             {
             mR(); 
             mO(); 
@@ -5255,8 +5257,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FOLLOWS_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:490:16: ( F O L L O W S )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:490:18: F O L L O W S
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:492:16: ( F O L L O W S )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:492:18: F O L L O W S
             {
             mF(); 
             mO(); 
@@ -5281,8 +5283,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ENABLE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:491:15: ( E N A B L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:491:17: E N A B L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:493:15: ( E N A B L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:493:17: E N A B L E
             {
             mE(); 
             mN(); 
@@ -5306,8 +5308,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = DISABLE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:492:16: ( D I S A B L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:492:18: D I S A B L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:494:16: ( D I S A B L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:494:18: D I S A B L E
             {
             mD(); 
             mI(); 
@@ -5332,8 +5334,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OID_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:493:12: ( O I D )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:493:14: O I D
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:495:12: ( O I D )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:495:14: O I D
             {
             mO(); 
             mI(); 
@@ -5354,8 +5356,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OBJECT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:494:15: ( O B J E C T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:494:17: O B J E C T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:496:15: ( O B J E C T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:496:17: O B J E C T
             {
             mO(); 
             mB(); 
@@ -5379,8 +5381,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = UNDER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:495:14: ( U N D E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:495:16: U N D E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:497:14: ( U N D E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:497:16: U N D E R
             {
             mU(); 
             mN(); 
@@ -5403,8 +5405,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = FINAL_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:496:14: ( F I N A L )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:496:16: F I N A L
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:498:14: ( F I N A L )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:498:16: F I N A L
             {
             mF(); 
             mI(); 
@@ -5427,8 +5429,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = INSTANTIABLE_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:497:21: ( I N S T A N T I A B L E )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:497:23: I N S T A N T I A B L E
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:499:21: ( I N S T A N T I A B L E )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:499:23: I N S T A N T I A B L E
             {
             mI(); 
             mN(); 
@@ -5458,8 +5460,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = OVERRIDING_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:498:19: ( O V E R R I D I N G )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:498:21: O V E R R I D I N G
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:500:19: ( O V E R R I D I N G )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:500:21: O V E R R I D I N G
             {
             mO(); 
             mV(); 
@@ -5487,8 +5489,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = MEMBER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:499:15: ( M E M B E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:499:17: M E M B E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:501:15: ( M E M B E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:501:17: M E M B E R
             {
             mM(); 
             mE(); 
@@ -5512,8 +5514,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = STATIC_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:500:15: ( S T A T I C )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:500:17: S T A T I C
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:502:15: ( S T A T I C )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:502:17: S T A T I C
             {
             mS(); 
             mT(); 
@@ -5537,8 +5539,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = CONSTRUCTOR_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:501:20: ( C O N S T R U C T O R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:501:22: C O N S T R U C T O R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:503:20: ( C O N S T R U C T O R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:503:22: C O N S T R U C T O R
             {
             mC(); 
             mO(); 
@@ -5567,8 +5569,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = SELF_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:502:13: ( S E L F )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:502:15: S E L F
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:504:13: ( S E L F )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:504:15: S E L F
             {
             mS(); 
             mE(); 
@@ -5590,8 +5592,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = RESULT_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:503:15: ( R E S U L T )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:503:17: R E S U L T
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:505:15: ( R E S U L T )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:505:17: R E S U L T
             {
             mR(); 
             mE(); 
@@ -5615,8 +5617,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = MAP_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:504:12: ( M A P )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:504:14: M A P
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:506:12: ( M A P )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:506:14: M A P
             {
             mM(); 
             mA(); 
@@ -5637,8 +5639,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ORDER_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:505:14: ( O R D E R )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:505:16: O R D E R
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:507:14: ( O R D E R )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:507:16: O R D E R
             {
             mO(); 
             mR(); 
@@ -5661,8 +5663,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = JOIN_KEYWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:506:13: ( J O I N )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:506:15: J O I N
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:508:13: ( J O I N )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:508:15: J O I N
             {
             mJ(); 
             mO(); 
@@ -5684,11 +5686,11 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = IDENTIFIER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:510:2: ( CHARS ( '$' | '#' | '_' | DIGIT | CHARS | '%' )* )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:510:4: CHARS ( '$' | '#' | '_' | DIGIT | CHARS | '%' )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:512:2: ( CHARS ( '$' | '#' | '_' | DIGIT | CHARS | '%' )* )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:512:4: CHARS ( '$' | '#' | '_' | DIGIT | CHARS | '%' )*
             {
             mCHARS(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:510:10: ( '$' | '#' | '_' | DIGIT | CHARS | '%' )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:512:10: ( '$' | '#' | '_' | DIGIT | CHARS | '%' )*
             loop15:
             do {
                 int alt15=2;
@@ -5737,10 +5739,10 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = EXT_IDENTIFIER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:2: ( ( ':' )? ( '\"' )? IDENTIFIER ( '\"' )? ( '.' | '@' ) ( '\"' )? IDENTIFIER ( '\"' )? ( ( '.' | '@' )? IDENTIFIER )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:4: ( ':' )? ( '\"' )? IDENTIFIER ( '\"' )? ( '.' | '@' ) ( '\"' )? IDENTIFIER ( '\"' )? ( ( '.' | '@' )? IDENTIFIER )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:2: ( ( ':' )? ( '\"' )? IDENTIFIER ( '\"' )? ( '.' | '@' ) ( '\"' )? IDENTIFIER ( '\"' )? ( ( '.' | '@' )? IDENTIFIER )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:4: ( ':' )? ( '\"' )? IDENTIFIER ( '\"' )? ( '.' | '@' ) ( '\"' )? IDENTIFIER ( '\"' )? ( ( '.' | '@' )? IDENTIFIER )?
             {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:4: ( ':' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:4: ( ':' )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -5749,7 +5751,7 @@ public class PL_SQLLexer extends Lexer {
             }
             switch (alt16) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:4: ':'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:4: ':'
                     {
                     match(':'); 
 
@@ -5758,7 +5760,7 @@ public class PL_SQLLexer extends Lexer {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:9: ( '\"' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:9: ( '\"' )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -5767,7 +5769,7 @@ public class PL_SQLLexer extends Lexer {
             }
             switch (alt17) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:9: '\"'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:9: '\"'
                     {
                     match('\"'); 
 
@@ -5777,7 +5779,7 @@ public class PL_SQLLexer extends Lexer {
             }
 
             mIDENTIFIER(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:25: ( '\"' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:25: ( '\"' )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -5786,7 +5788,7 @@ public class PL_SQLLexer extends Lexer {
             }
             switch (alt18) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:25: '\"'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:25: '\"'
                     {
                     match('\"'); 
 
@@ -5804,7 +5806,7 @@ public class PL_SQLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:42: ( '\"' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:42: ( '\"' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -5813,7 +5815,7 @@ public class PL_SQLLexer extends Lexer {
             }
             switch (alt19) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:42: '\"'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:42: '\"'
                     {
                     match('\"'); 
 
@@ -5823,7 +5825,7 @@ public class PL_SQLLexer extends Lexer {
             }
 
             mIDENTIFIER(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:58: ( '\"' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:58: ( '\"' )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -5832,7 +5834,7 @@ public class PL_SQLLexer extends Lexer {
             }
             switch (alt20) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:58: '\"'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:58: '\"'
                     {
                     match('\"'); 
 
@@ -5841,7 +5843,7 @@ public class PL_SQLLexer extends Lexer {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:63: ( ( '.' | '@' )? IDENTIFIER )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:63: ( ( '.' | '@' )? IDENTIFIER )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -5850,9 +5852,9 @@ public class PL_SQLLexer extends Lexer {
             }
             switch (alt22) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:64: ( '.' | '@' )? IDENTIFIER
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:64: ( '.' | '@' )? IDENTIFIER
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:515:64: ( '.' | '@' )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:517:64: ( '.' | '@' )?
                     int alt21=2;
                     int LA21_0 = input.LA(1);
 
@@ -5901,11 +5903,11 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = ALIAS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:518:7: ( '\"' (~ '\"' )+ '\"' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:518:9: '\"' (~ '\"' )+ '\"'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:520:7: ( '\"' (~ '\"' )+ '\"' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:520:9: '\"' (~ '\"' )+ '\"'
             {
             match('\"'); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:518:13: (~ '\"' )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:520:13: (~ '\"' )+
             int cnt23=0;
             loop23:
             do {
@@ -5919,7 +5921,7 @@ public class PL_SQLLexer extends Lexer {
 
                 switch (alt23) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:518:14: ~ '\"'
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:520:14: ~ '\"'
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -5958,8 +5960,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "QUOTATION_MARK"
     public final void mQUOTATION_MARK() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:534:2: ( '\"' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:534:4: '\"'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:536:2: ( '\"' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:536:4: '\"'
             {
             match('\"'); 
 
@@ -5974,7 +5976,7 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "CHARS"
     public final void mCHARS() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:537:2: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:539:2: ( 'a' .. 'z' | 'A' .. 'Z' )
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
@@ -5998,8 +6000,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "DIGIT"
     public final void mDIGIT() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:541:2: ( '0' .. '9' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:541:4: '0' .. '9'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:543:2: ( '0' .. '9' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:543:4: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -6014,11 +6016,11 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "DIGITS"
     public final void mDIGITS() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:545:2: ( DIGIT ( DIGIT )* )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:545:4: DIGIT ( DIGIT )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:547:2: ( DIGIT ( DIGIT )* )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:547:4: DIGIT ( DIGIT )*
             {
             mDIGIT(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:545:10: ( DIGIT )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:547:10: ( DIGIT )*
             loop24:
             do {
                 int alt24=2;
@@ -6031,7 +6033,7 @@ public class PL_SQLLexer extends Lexer {
 
                 switch (alt24) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:545:12: DIGIT
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:547:12: DIGIT
             	    {
             	    mDIGIT(); 
 
@@ -6055,11 +6057,11 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "EXP_DIGITS"
     public final void mEXP_DIGITS() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:549:2: ( E ( '+' | '-' )? DIGITS )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:549:4: E ( '+' | '-' )? DIGITS
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:551:2: ( E ( '+' | '-' )? DIGITS )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:551:4: E ( '+' | '-' )? DIGITS
             {
             mE(); 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:549:6: ( '+' | '-' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:551:6: ( '+' | '-' )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -6098,8 +6100,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "A"
     public final void mA() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:552:11: ( ( 'a' | 'A' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:552:12: ( 'a' | 'A' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:554:11: ( ( 'a' | 'A' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:554:12: ( 'a' | 'A' )
             {
             if ( input.LA(1)=='A'||input.LA(1)=='a' ) {
                 input.consume();
@@ -6122,8 +6124,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "B"
     public final void mB() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:553:11: ( ( 'b' | 'B' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:553:12: ( 'b' | 'B' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:555:11: ( ( 'b' | 'B' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:555:12: ( 'b' | 'B' )
             {
             if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                 input.consume();
@@ -6146,8 +6148,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "C"
     public final void mC() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:554:11: ( ( 'c' | 'C' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:554:12: ( 'c' | 'C' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:556:11: ( ( 'c' | 'C' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:556:12: ( 'c' | 'C' )
             {
             if ( input.LA(1)=='C'||input.LA(1)=='c' ) {
                 input.consume();
@@ -6170,8 +6172,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "D"
     public final void mD() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:555:11: ( ( 'd' | 'D' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:555:12: ( 'd' | 'D' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:557:11: ( ( 'd' | 'D' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:557:12: ( 'd' | 'D' )
             {
             if ( input.LA(1)=='D'||input.LA(1)=='d' ) {
                 input.consume();
@@ -6194,8 +6196,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "E"
     public final void mE() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:556:11: ( ( 'e' | 'E' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:556:12: ( 'e' | 'E' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:558:11: ( ( 'e' | 'E' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:558:12: ( 'e' | 'E' )
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -6218,8 +6220,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "F"
     public final void mF() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:557:11: ( ( 'f' | 'F' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:557:12: ( 'f' | 'F' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:559:11: ( ( 'f' | 'F' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:559:12: ( 'f' | 'F' )
             {
             if ( input.LA(1)=='F'||input.LA(1)=='f' ) {
                 input.consume();
@@ -6242,8 +6244,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "G"
     public final void mG() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:558:11: ( ( 'g' | 'G' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:558:12: ( 'g' | 'G' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:560:11: ( ( 'g' | 'G' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:560:12: ( 'g' | 'G' )
             {
             if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
                 input.consume();
@@ -6266,8 +6268,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "H"
     public final void mH() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:559:11: ( ( 'h' | 'H' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:559:12: ( 'h' | 'H' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:561:11: ( ( 'h' | 'H' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:561:12: ( 'h' | 'H' )
             {
             if ( input.LA(1)=='H'||input.LA(1)=='h' ) {
                 input.consume();
@@ -6290,8 +6292,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "I"
     public final void mI() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:560:11: ( ( 'i' | 'I' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:560:12: ( 'i' | 'I' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:562:11: ( ( 'i' | 'I' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:562:12: ( 'i' | 'I' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -6314,8 +6316,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "J"
     public final void mJ() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:561:11: ( ( 'j' | 'J' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:561:12: ( 'j' | 'J' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:563:11: ( ( 'j' | 'J' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:563:12: ( 'j' | 'J' )
             {
             if ( input.LA(1)=='J'||input.LA(1)=='j' ) {
                 input.consume();
@@ -6338,8 +6340,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "K"
     public final void mK() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:562:11: ( ( 'k' | 'K' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:562:12: ( 'k' | 'K' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:564:11: ( ( 'k' | 'K' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:564:12: ( 'k' | 'K' )
             {
             if ( input.LA(1)=='K'||input.LA(1)=='k' ) {
                 input.consume();
@@ -6362,8 +6364,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "L"
     public final void mL() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:563:11: ( ( 'l' | 'L' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:563:12: ( 'l' | 'L' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:565:11: ( ( 'l' | 'L' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:565:12: ( 'l' | 'L' )
             {
             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                 input.consume();
@@ -6386,8 +6388,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "M"
     public final void mM() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:564:11: ( ( 'm' | 'M' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:564:12: ( 'm' | 'M' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:566:11: ( ( 'm' | 'M' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:566:12: ( 'm' | 'M' )
             {
             if ( input.LA(1)=='M'||input.LA(1)=='m' ) {
                 input.consume();
@@ -6410,8 +6412,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "N"
     public final void mN() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:565:11: ( ( 'n' | 'N' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:565:12: ( 'n' | 'N' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:567:11: ( ( 'n' | 'N' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:567:12: ( 'n' | 'N' )
             {
             if ( input.LA(1)=='N'||input.LA(1)=='n' ) {
                 input.consume();
@@ -6434,8 +6436,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "O"
     public final void mO() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:566:11: ( ( 'o' | 'O' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:566:12: ( 'o' | 'O' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:568:11: ( ( 'o' | 'O' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:568:12: ( 'o' | 'O' )
             {
             if ( input.LA(1)=='O'||input.LA(1)=='o' ) {
                 input.consume();
@@ -6458,8 +6460,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "P"
     public final void mP() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:567:11: ( ( 'p' | 'P' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:567:12: ( 'p' | 'P' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:569:11: ( ( 'p' | 'P' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:569:12: ( 'p' | 'P' )
             {
             if ( input.LA(1)=='P'||input.LA(1)=='p' ) {
                 input.consume();
@@ -6482,8 +6484,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "Q"
     public final void mQ() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:568:11: ( ( 'q' | 'Q' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:568:12: ( 'q' | 'Q' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:570:11: ( ( 'q' | 'Q' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:570:12: ( 'q' | 'Q' )
             {
             if ( input.LA(1)=='Q'||input.LA(1)=='q' ) {
                 input.consume();
@@ -6506,8 +6508,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "R"
     public final void mR() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:569:11: ( ( 'r' | 'R' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:569:12: ( 'r' | 'R' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:571:11: ( ( 'r' | 'R' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:571:12: ( 'r' | 'R' )
             {
             if ( input.LA(1)=='R'||input.LA(1)=='r' ) {
                 input.consume();
@@ -6530,8 +6532,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "S"
     public final void mS() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:570:11: ( ( 's' | 'S' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:570:12: ( 's' | 'S' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:572:11: ( ( 's' | 'S' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:572:12: ( 's' | 'S' )
             {
             if ( input.LA(1)=='S'||input.LA(1)=='s' ) {
                 input.consume();
@@ -6554,8 +6556,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "T"
     public final void mT() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:571:11: ( ( 't' | 'T' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:571:12: ( 't' | 'T' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:573:11: ( ( 't' | 'T' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:573:12: ( 't' | 'T' )
             {
             if ( input.LA(1)=='T'||input.LA(1)=='t' ) {
                 input.consume();
@@ -6578,8 +6580,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "U"
     public final void mU() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:572:11: ( ( 'u' | 'U' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:572:12: ( 'u' | 'U' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:574:11: ( ( 'u' | 'U' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:574:12: ( 'u' | 'U' )
             {
             if ( input.LA(1)=='U'||input.LA(1)=='u' ) {
                 input.consume();
@@ -6602,8 +6604,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "V"
     public final void mV() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:573:11: ( ( 'v' | 'V' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:573:12: ( 'v' | 'V' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:575:11: ( ( 'v' | 'V' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:575:12: ( 'v' | 'V' )
             {
             if ( input.LA(1)=='V'||input.LA(1)=='v' ) {
                 input.consume();
@@ -6626,8 +6628,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "W"
     public final void mW() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:574:11: ( ( 'w' | 'W' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:574:12: ( 'w' | 'W' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:576:11: ( ( 'w' | 'W' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:576:12: ( 'w' | 'W' )
             {
             if ( input.LA(1)=='W'||input.LA(1)=='w' ) {
                 input.consume();
@@ -6650,8 +6652,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "X"
     public final void mX() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:575:11: ( ( 'x' | 'X' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:575:12: ( 'x' | 'X' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:577:11: ( ( 'x' | 'X' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:577:12: ( 'x' | 'X' )
             {
             if ( input.LA(1)=='X'||input.LA(1)=='x' ) {
                 input.consume();
@@ -6674,8 +6676,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "Y"
     public final void mY() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:576:11: ( ( 'y' | 'Y' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:576:12: ( 'y' | 'Y' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:578:11: ( ( 'y' | 'Y' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:578:12: ( 'y' | 'Y' )
             {
             if ( input.LA(1)=='Y'||input.LA(1)=='y' ) {
                 input.consume();
@@ -6698,8 +6700,8 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR start "Z"
     public final void mZ() throws RecognitionException {
         try {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:577:11: ( ( 'z' | 'Z' ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:577:12: ( 'z' | 'Z' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:579:11: ( ( 'z' | 'Z' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:579:12: ( 'z' | 'Z' )
             {
             if ( input.LA(1)=='Z'||input.LA(1)=='z' ) {
                 input.consume();
@@ -6724,8 +6726,8 @@ public class PL_SQLLexer extends Lexer {
         try {
             int _type = THE_REST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:580:9: ( . )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:580:11: .
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:582:9: ( . )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:582:11: .
             {
             matchAny(); 
 
@@ -6740,7 +6742,7 @@ public class PL_SQLLexer extends Lexer {
     // $ANTLR end "THE_REST"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:8: ( SEPARATOR | COMMA | PARAM_VALUE | T__202 | T__203 | T__204 | T__205 | T__206 | T__207 | T__208 | T__209 | T__210 | T__211 | T__212 | T__213 | T__214 | T__215 | T__216 | T__217 | T__218 | T__219 | T__220 | T__221 | T__222 | T__223 | T__224 | T__225 | BLOCK_COMMENT | LINE_COMMENT | WHITESPACE | OR_OPERATOR | AND_OPERATOR | NOT_OPERATOR | NUMBER_UNSIGNED | STRING | SOME_TYPES | SCALE_TYPES | SIZE_TYPES | CHAR_TYPES | CHAR_TYPE | BYTE_TYPE | RAW_TYPE | TIMESTAMP_TYPE | YEAR_TYPE | DAY_TYPE | SECOND_TYPE | KEYWORD | BEGIN_KEYWORD | END_KEYWORD | DECLARE_KEYWORD | EXCEPTION_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | NULL_KEYWORD | DEFAULT_KEYWORD | ROWTYPE_KEYWORD | LIKE_TYPE_KEYWORD | TYPE_KEYWORD | TRUE_KEYWORD | FALSE_KEYWORD | CONSTANT_KEYWORD | WITH_KEYWORD | LOCAL_KEYWORD | TIME_KEYWORD | ZONE_KEYWORD | INTERVAL_KEYWORD | TO_KEYWORD | MONTH_KEYWORD | SUBTYPE_KEYWORD | IS_KEYWORD | RECORD_KEYWORD | CREATE_KEYWORD | REPLACE_KEYWORD | FUNCTION_KEYWORD | AS_KEYWORD | RETURN_KEYWORD | IN_KEYWORD | OUT_KEYWORD | NOCOPY_KEYWORD | AUTHID_KEYWORD | CURRENT_USER_KEYWORD | DEFINER_KEYWORD | DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD | PROCEDURE_KEYWORD | IF_KEYWORD | ELSE_KEYWORD | ELSIF_KEYWORD | GOTO_KEYWORD | LOOP_KEYWORD | WHILE_KEYWORD | FOR_KEYWORD | REVERSE_KEYWORD | SELECT_KEYWORD | COUNT_KEYWORD | EXCEPTION_INIT_KEYWORD | LIKE_KEYWORD | RAISE_KEYWORD | PRAGMA_KEYWORD | AUTONOMOUS_TRANSACTION_KEYWORD | CASE_KEYWORD | CLOSE_KEYWORD | TABLE_KEYWORD | OF_KEYWORD | INDEX_KEYWORD | BY_KEYWORD | VARRAY_KEYWORD | VARYING_KEYWORD | ARRAY_KEYWORD | COMMIT_KEYWORD | REF_KEYWORD | CONTINUE_KEYWORD | CURSOR_KEYWORD | DELETE_KEYWORD | EXECUTE_KEYWORD | IMMEDIATE_KEYWORD | EXIT_KEYWORD | INTO_KEYWORD | USING_KEYWORD | BULK_KEYWORD | COLLECT_KEYWORD | FETCH_KEYWORD | LIMIT_KEYWORD | FORALL_KEYWORD | SAVE_KEYWORD | EXCEPTIONS_KEYWORD | INDICES_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | INLINE_KEYWORD | INSERT_KEYWORD | LOCK_KEYWORD | MERGE_KEYWORD | OPEN_KEYWORD | PACKAGE_KEYWORD | BODY_KEYWORD | RESTRICT_REFERENCES_KEYWORD | RETURNING_KEYWORD | ROLLBACK_KEYWORD | SAVEPOINT_KEYWORD | SERIALLY_REUSABLE_KEYWORD | SET_KEYWORD | TRANSACTION_KEYWORD | NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | SQLCODE_KEYWORD | SQLERRM_KEYWORD | UPDATE_KEYWORD | EXISTS_KEYWORD | TRIGGER_KEYWORD | BEFORE_KEYWORD | AFTER_KEYWORD | INSTEAD_KEYWORD | ON_KEYWORD | NESTED_KEYWORD | REFERENCING_KEYWORD | OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD | EACH_KEYWORD | ROW_KEYWORD | FOLLOWS_KEYWORD | ENABLE_KEYWORD | DISABLE_KEYWORD | OID_KEYWORD | OBJECT_KEYWORD | UNDER_KEYWORD | FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD | MEMBER_KEYWORD | STATIC_KEYWORD | CONSTRUCTOR_KEYWORD | SELF_KEYWORD | RESULT_KEYWORD | MAP_KEYWORD | ORDER_KEYWORD | JOIN_KEYWORD | IDENTIFIER | EXT_IDENTIFIER | ALIAS | THE_REST )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:8: ( SEPARATOR | COMMA | PARAM_VALUE | T__204 | T__205 | T__206 | T__207 | T__208 | T__209 | T__210 | T__211 | T__212 | T__213 | T__214 | T__215 | T__216 | T__217 | T__218 | T__219 | T__220 | T__221 | T__222 | T__223 | T__224 | T__225 | T__226 | T__227 | BLOCK_COMMENT | LINE_COMMENT | WHITESPACE | OR_OPERATOR | AND_OPERATOR | NOT_OPERATOR | NUMBER_UNSIGNED | STRING | SOME_TYPES | SCALE_TYPES | SIZE_TYPES | CHAR_TYPES | CHAR_TYPE | BYTE_TYPE | RAW_TYPE | TIMESTAMP_TYPE | YEAR_TYPE | DAY_TYPE | SECOND_TYPE | KEYWORD | BEGIN_KEYWORD | END_KEYWORD | DECLARE_KEYWORD | EXCEPTION_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | NULL_KEYWORD | DEFAULT_KEYWORD | ROWTYPE_KEYWORD | LIKE_TYPE_KEYWORD | TYPE_KEYWORD | TRUE_KEYWORD | FALSE_KEYWORD | CONSTANT_KEYWORD | WITH_KEYWORD | LOCAL_KEYWORD | TIME_KEYWORD | ZONE_KEYWORD | INTERVAL_KEYWORD | TO_KEYWORD | MONTH_KEYWORD | SUBTYPE_KEYWORD | IS_KEYWORD | RECORD_KEYWORD | CREATE_KEYWORD | REPLACE_KEYWORD | FUNCTION_KEYWORD | AS_KEYWORD | RETURN_KEYWORD | IN_KEYWORD | OUT_KEYWORD | NOCOPY_KEYWORD | AUTHID_KEYWORD | CURRENT_USER_KEYWORD | DEFINER_KEYWORD | DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD | PROCEDURE_KEYWORD | IF_KEYWORD | ELSE_KEYWORD | ELSIF_KEYWORD | GOTO_KEYWORD | LOOP_KEYWORD | WHILE_KEYWORD | FOR_KEYWORD | REVERSE_KEYWORD | SELECT_KEYWORD | COUNT_KEYWORD | EXCEPTION_INIT_KEYWORD | LIKE_KEYWORD | RAISE_KEYWORD | PRAGMA_KEYWORD | AUTONOMOUS_TRANSACTION_KEYWORD | CASE_KEYWORD | CLOSE_KEYWORD | TABLE_KEYWORD | OF_KEYWORD | INDEX_KEYWORD | BY_KEYWORD | VARRAY_KEYWORD | VARYING_KEYWORD | ARRAY_KEYWORD | COMMIT_KEYWORD | REF_KEYWORD | CONTINUE_KEYWORD | CURSOR_KEYWORD | DELETE_KEYWORD | EXECUTE_KEYWORD | IMMEDIATE_KEYWORD | EXIT_KEYWORD | INTO_KEYWORD | USING_KEYWORD | BULK_KEYWORD | COLLECT_KEYWORD | FETCH_KEYWORD | LIMIT_KEYWORD | FORALL_KEYWORD | SAVE_KEYWORD | EXCEPTIONS_KEYWORD | INDICES_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | INLINE_KEYWORD | INSERT_KEYWORD | LOCK_KEYWORD | MERGE_KEYWORD | OPEN_KEYWORD | PACKAGE_KEYWORD | BODY_KEYWORD | RESTRICT_REFERENCES_KEYWORD | RETURNING_KEYWORD | ROLLBACK_KEYWORD | SAVEPOINT_KEYWORD | SERIALLY_REUSABLE_KEYWORD | SET_KEYWORD | TRANSACTION_KEYWORD | NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | SQLCODE_KEYWORD | SQLERRM_KEYWORD | UPDATE_KEYWORD | EXISTS_KEYWORD | TRIGGER_KEYWORD | BEFORE_KEYWORD | AFTER_KEYWORD | INSTEAD_KEYWORD | ON_KEYWORD | NESTED_KEYWORD | REFERENCING_KEYWORD | OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD | EACH_KEYWORD | ROW_KEYWORD | FOLLOWS_KEYWORD | ENABLE_KEYWORD | DISABLE_KEYWORD | OID_KEYWORD | OBJECT_KEYWORD | UNDER_KEYWORD | FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD | MEMBER_KEYWORD | STATIC_KEYWORD | CONSTRUCTOR_KEYWORD | SELF_KEYWORD | RESULT_KEYWORD | MAP_KEYWORD | ORDER_KEYWORD | JOIN_KEYWORD | IDENTIFIER | EXT_IDENTIFIER | ALIAS | THE_REST )
         int alt26=186;
         alt26 = dfa26.predict(input);
         switch (alt26) {
@@ -6766,170 +6768,170 @@ public class PL_SQLLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:38: T__202
-                {
-                mT__202(); 
-
-                }
-                break;
-            case 5 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:45: T__203
-                {
-                mT__203(); 
-
-                }
-                break;
-            case 6 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:52: T__204
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:38: T__204
                 {
                 mT__204(); 
 
                 }
                 break;
-            case 7 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:59: T__205
+            case 5 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:45: T__205
                 {
                 mT__205(); 
 
                 }
                 break;
-            case 8 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:66: T__206
+            case 6 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:52: T__206
                 {
                 mT__206(); 
 
                 }
                 break;
-            case 9 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:73: T__207
+            case 7 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:59: T__207
                 {
                 mT__207(); 
 
                 }
                 break;
-            case 10 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:80: T__208
+            case 8 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:66: T__208
                 {
                 mT__208(); 
 
                 }
                 break;
-            case 11 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:87: T__209
+            case 9 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:73: T__209
                 {
                 mT__209(); 
 
                 }
                 break;
-            case 12 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:94: T__210
+            case 10 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:80: T__210
                 {
                 mT__210(); 
 
                 }
                 break;
-            case 13 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:101: T__211
+            case 11 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:87: T__211
                 {
                 mT__211(); 
 
                 }
                 break;
-            case 14 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:108: T__212
+            case 12 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:94: T__212
                 {
                 mT__212(); 
 
                 }
                 break;
-            case 15 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:115: T__213
+            case 13 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:101: T__213
                 {
                 mT__213(); 
 
                 }
                 break;
-            case 16 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:122: T__214
+            case 14 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:108: T__214
                 {
                 mT__214(); 
 
                 }
                 break;
-            case 17 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:129: T__215
+            case 15 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:115: T__215
                 {
                 mT__215(); 
 
                 }
                 break;
-            case 18 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:136: T__216
+            case 16 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:122: T__216
                 {
                 mT__216(); 
 
                 }
                 break;
-            case 19 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:143: T__217
+            case 17 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:129: T__217
                 {
                 mT__217(); 
 
                 }
                 break;
-            case 20 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:150: T__218
+            case 18 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:136: T__218
                 {
                 mT__218(); 
 
                 }
                 break;
-            case 21 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:157: T__219
+            case 19 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:143: T__219
                 {
                 mT__219(); 
 
                 }
                 break;
-            case 22 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:164: T__220
+            case 20 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:150: T__220
                 {
                 mT__220(); 
 
                 }
                 break;
-            case 23 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:171: T__221
+            case 21 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:157: T__221
                 {
                 mT__221(); 
 
                 }
                 break;
-            case 24 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:178: T__222
+            case 22 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:164: T__222
                 {
                 mT__222(); 
 
                 }
                 break;
-            case 25 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:185: T__223
+            case 23 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:171: T__223
                 {
                 mT__223(); 
 
                 }
                 break;
-            case 26 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:192: T__224
+            case 24 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:178: T__224
                 {
                 mT__224(); 
 
                 }
                 break;
-            case 27 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:199: T__225
+            case 25 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:185: T__225
                 {
                 mT__225(); 
+
+                }
+                break;
+            case 26 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:192: T__226
+                {
+                mT__226(); 
+
+                }
+                break;
+            case 27 :
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:1:199: T__227
+                {
+                mT__227(); 
 
                 }
                 break;
@@ -8176,7 +8178,7 @@ public class PL_SQLLexer extends Lexer {
             this.transition = DFA10_transition;
         }
         public String getDescription() {
-            return "310:1: SOME_TYPES : ( N A T U R A L | P L S '_' I N T E G E R | N A T U R A L N | P O S I T I V E | P O S I T I V E N | S I G N T Y P E | S I M P L E '_' I N T E G E R | I N T | I N T E G E R | S M A L L I N T | B I N A R Y '_' I N T E G E R | R E A L | B I N A R Y '_' D O U B L E | B I N A R Y '_' F L O A T | L O N G | L O N G WHITESPACE R A W | R O W I D | U R O W I D | B O O L E A N | M L S L A B E L | D A T E | B F I L E | B L O B | C L O B | N C L O B );";
+            return "312:1: SOME_TYPES : ( N A T U R A L | P L S '_' I N T E G E R | N A T U R A L N | P O S I T I V E | P O S I T I V E N | S I G N T Y P E | S I M P L E '_' I N T E G E R | I N T | I N T E G E R | S M A L L I N T | B I N A R Y '_' I N T E G E R | R E A L | B I N A R Y '_' D O U B L E | B I N A R Y '_' F L O A T | L O N G | L O N G WHITESPACE R A W | R O W I D | U R O W I D | B O O L E A N | M L S L A B E L | D A T E | B F I L E | B L O B | C L O B | N C L O B );";
         }
     }
     static final String DFA11_eotS =
@@ -8235,7 +8237,7 @@ public class PL_SQLLexer extends Lexer {
             this.transition = DFA11_transition;
         }
         public String getDescription() {
-            return "318:1: SCALE_TYPES : ( N U M B E R | D E C | D E C I M A L | N U M E R I C );";
+            return "320:1: SCALE_TYPES : ( N U M B E R | D E C | D E C I M A L | N U M E R I C );";
         }
     }
     static final String DFA13_eotS =
@@ -8298,7 +8300,7 @@ public class PL_SQLLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "326:1: CHAR_TYPES : ( V A R C H A R | V A R C H A R '2' | N C H A R | N V A R C H A R '2' );";
+            return "328:1: CHAR_TYPES : ( V A R C H A R | V A R C H A R '2' | N C H A R | N V A R C H A R '2' );";
         }
     }
     static final String DFA14_eotS =
@@ -8402,7 +8404,7 @@ public class PL_SQLLexer extends Lexer {
             this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "357:1: KEYWORD : ( '.' | F R O M | W H E R E | G R O U P WHITESPACE B Y | O R D E R WHITESPACE B Y | P R I O R | C O N N E C T '_' B Y '_' R O O T | C O N N E C T | S T A R T | U N I O N | U N I O N WHITESPACE A L L | I N T E R S E C T | M I N U S | M U L T I S E T WHITESPACE E X C E P T | M U L T I S E T WHITESPACE I N T E R S E C T | M U L T I S E T WHITESPACE U N I O N | A N Y | S O M E | A L L | E S C A P E );";
+            return "359:1: KEYWORD : ( '.' | F R O M | W H E R E | G R O U P WHITESPACE B Y | O R D E R WHITESPACE B Y | P R I O R | C O N N E C T '_' B Y '_' R O O T | C O N N E C T | S T A R T | U N I O N | U N I O N WHITESPACE A L L | I N T E R S E C T | M I N U S | M U L T I S E T WHITESPACE E X C E P T | M U L T I S E T WHITESPACE I N T E R S E C T | M U L T I S E T WHITESPACE U N I O N | A N Y | S O M E | A L L | E S C A P E );";
         }
     }
     static final String DFA26_eotS =
@@ -10820,7 +10822,7 @@ public class PL_SQLLexer extends Lexer {
             this.transition = DFA26_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( SEPARATOR | COMMA | PARAM_VALUE | T__202 | T__203 | T__204 | T__205 | T__206 | T__207 | T__208 | T__209 | T__210 | T__211 | T__212 | T__213 | T__214 | T__215 | T__216 | T__217 | T__218 | T__219 | T__220 | T__221 | T__222 | T__223 | T__224 | T__225 | BLOCK_COMMENT | LINE_COMMENT | WHITESPACE | OR_OPERATOR | AND_OPERATOR | NOT_OPERATOR | NUMBER_UNSIGNED | STRING | SOME_TYPES | SCALE_TYPES | SIZE_TYPES | CHAR_TYPES | CHAR_TYPE | BYTE_TYPE | RAW_TYPE | TIMESTAMP_TYPE | YEAR_TYPE | DAY_TYPE | SECOND_TYPE | KEYWORD | BEGIN_KEYWORD | END_KEYWORD | DECLARE_KEYWORD | EXCEPTION_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | NULL_KEYWORD | DEFAULT_KEYWORD | ROWTYPE_KEYWORD | LIKE_TYPE_KEYWORD | TYPE_KEYWORD | TRUE_KEYWORD | FALSE_KEYWORD | CONSTANT_KEYWORD | WITH_KEYWORD | LOCAL_KEYWORD | TIME_KEYWORD | ZONE_KEYWORD | INTERVAL_KEYWORD | TO_KEYWORD | MONTH_KEYWORD | SUBTYPE_KEYWORD | IS_KEYWORD | RECORD_KEYWORD | CREATE_KEYWORD | REPLACE_KEYWORD | FUNCTION_KEYWORD | AS_KEYWORD | RETURN_KEYWORD | IN_KEYWORD | OUT_KEYWORD | NOCOPY_KEYWORD | AUTHID_KEYWORD | CURRENT_USER_KEYWORD | DEFINER_KEYWORD | DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD | PROCEDURE_KEYWORD | IF_KEYWORD | ELSE_KEYWORD | ELSIF_KEYWORD | GOTO_KEYWORD | LOOP_KEYWORD | WHILE_KEYWORD | FOR_KEYWORD | REVERSE_KEYWORD | SELECT_KEYWORD | COUNT_KEYWORD | EXCEPTION_INIT_KEYWORD | LIKE_KEYWORD | RAISE_KEYWORD | PRAGMA_KEYWORD | AUTONOMOUS_TRANSACTION_KEYWORD | CASE_KEYWORD | CLOSE_KEYWORD | TABLE_KEYWORD | OF_KEYWORD | INDEX_KEYWORD | BY_KEYWORD | VARRAY_KEYWORD | VARYING_KEYWORD | ARRAY_KEYWORD | COMMIT_KEYWORD | REF_KEYWORD | CONTINUE_KEYWORD | CURSOR_KEYWORD | DELETE_KEYWORD | EXECUTE_KEYWORD | IMMEDIATE_KEYWORD | EXIT_KEYWORD | INTO_KEYWORD | USING_KEYWORD | BULK_KEYWORD | COLLECT_KEYWORD | FETCH_KEYWORD | LIMIT_KEYWORD | FORALL_KEYWORD | SAVE_KEYWORD | EXCEPTIONS_KEYWORD | INDICES_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | INLINE_KEYWORD | INSERT_KEYWORD | LOCK_KEYWORD | MERGE_KEYWORD | OPEN_KEYWORD | PACKAGE_KEYWORD | BODY_KEYWORD | RESTRICT_REFERENCES_KEYWORD | RETURNING_KEYWORD | ROLLBACK_KEYWORD | SAVEPOINT_KEYWORD | SERIALLY_REUSABLE_KEYWORD | SET_KEYWORD | TRANSACTION_KEYWORD | NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | SQLCODE_KEYWORD | SQLERRM_KEYWORD | UPDATE_KEYWORD | EXISTS_KEYWORD | TRIGGER_KEYWORD | BEFORE_KEYWORD | AFTER_KEYWORD | INSTEAD_KEYWORD | ON_KEYWORD | NESTED_KEYWORD | REFERENCING_KEYWORD | OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD | EACH_KEYWORD | ROW_KEYWORD | FOLLOWS_KEYWORD | ENABLE_KEYWORD | DISABLE_KEYWORD | OID_KEYWORD | OBJECT_KEYWORD | UNDER_KEYWORD | FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD | MEMBER_KEYWORD | STATIC_KEYWORD | CONSTRUCTOR_KEYWORD | SELF_KEYWORD | RESULT_KEYWORD | MAP_KEYWORD | ORDER_KEYWORD | JOIN_KEYWORD | IDENTIFIER | EXT_IDENTIFIER | ALIAS | THE_REST );";
+            return "1:1: Tokens : ( SEPARATOR | COMMA | PARAM_VALUE | T__204 | T__205 | T__206 | T__207 | T__208 | T__209 | T__210 | T__211 | T__212 | T__213 | T__214 | T__215 | T__216 | T__217 | T__218 | T__219 | T__220 | T__221 | T__222 | T__223 | T__224 | T__225 | T__226 | T__227 | BLOCK_COMMENT | LINE_COMMENT | WHITESPACE | OR_OPERATOR | AND_OPERATOR | NOT_OPERATOR | NUMBER_UNSIGNED | STRING | SOME_TYPES | SCALE_TYPES | SIZE_TYPES | CHAR_TYPES | CHAR_TYPE | BYTE_TYPE | RAW_TYPE | TIMESTAMP_TYPE | YEAR_TYPE | DAY_TYPE | SECOND_TYPE | KEYWORD | BEGIN_KEYWORD | END_KEYWORD | DECLARE_KEYWORD | EXCEPTION_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | NULL_KEYWORD | DEFAULT_KEYWORD | ROWTYPE_KEYWORD | LIKE_TYPE_KEYWORD | TYPE_KEYWORD | TRUE_KEYWORD | FALSE_KEYWORD | CONSTANT_KEYWORD | WITH_KEYWORD | LOCAL_KEYWORD | TIME_KEYWORD | ZONE_KEYWORD | INTERVAL_KEYWORD | TO_KEYWORD | MONTH_KEYWORD | SUBTYPE_KEYWORD | IS_KEYWORD | RECORD_KEYWORD | CREATE_KEYWORD | REPLACE_KEYWORD | FUNCTION_KEYWORD | AS_KEYWORD | RETURN_KEYWORD | IN_KEYWORD | OUT_KEYWORD | NOCOPY_KEYWORD | AUTHID_KEYWORD | CURRENT_USER_KEYWORD | DEFINER_KEYWORD | DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD | PROCEDURE_KEYWORD | IF_KEYWORD | ELSE_KEYWORD | ELSIF_KEYWORD | GOTO_KEYWORD | LOOP_KEYWORD | WHILE_KEYWORD | FOR_KEYWORD | REVERSE_KEYWORD | SELECT_KEYWORD | COUNT_KEYWORD | EXCEPTION_INIT_KEYWORD | LIKE_KEYWORD | RAISE_KEYWORD | PRAGMA_KEYWORD | AUTONOMOUS_TRANSACTION_KEYWORD | CASE_KEYWORD | CLOSE_KEYWORD | TABLE_KEYWORD | OF_KEYWORD | INDEX_KEYWORD | BY_KEYWORD | VARRAY_KEYWORD | VARYING_KEYWORD | ARRAY_KEYWORD | COMMIT_KEYWORD | REF_KEYWORD | CONTINUE_KEYWORD | CURSOR_KEYWORD | DELETE_KEYWORD | EXECUTE_KEYWORD | IMMEDIATE_KEYWORD | EXIT_KEYWORD | INTO_KEYWORD | USING_KEYWORD | BULK_KEYWORD | COLLECT_KEYWORD | FETCH_KEYWORD | LIMIT_KEYWORD | FORALL_KEYWORD | SAVE_KEYWORD | EXCEPTIONS_KEYWORD | INDICES_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | INLINE_KEYWORD | INSERT_KEYWORD | LOCK_KEYWORD | MERGE_KEYWORD | OPEN_KEYWORD | PACKAGE_KEYWORD | BODY_KEYWORD | RESTRICT_REFERENCES_KEYWORD | RETURNING_KEYWORD | ROLLBACK_KEYWORD | SAVEPOINT_KEYWORD | SERIALLY_REUSABLE_KEYWORD | SET_KEYWORD | TRANSACTION_KEYWORD | NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | SQLCODE_KEYWORD | SQLERRM_KEYWORD | UPDATE_KEYWORD | EXISTS_KEYWORD | TRIGGER_KEYWORD | BEFORE_KEYWORD | AFTER_KEYWORD | INSTEAD_KEYWORD | ON_KEYWORD | NESTED_KEYWORD | REFERENCING_KEYWORD | OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD | EACH_KEYWORD | ROW_KEYWORD | FOLLOWS_KEYWORD | ENABLE_KEYWORD | DISABLE_KEYWORD | OID_KEYWORD | OBJECT_KEYWORD | UNDER_KEYWORD | FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD | MEMBER_KEYWORD | STATIC_KEYWORD | CONSTRUCTOR_KEYWORD | SELF_KEYWORD | RESULT_KEYWORD | MAP_KEYWORD | ORDER_KEYWORD | JOIN_KEYWORD | IDENTIFIER | EXT_IDENTIFIER | ALIAS | THE_REST );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
