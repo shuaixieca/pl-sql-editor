@@ -188,6 +188,10 @@ IM_LOOP;
 IM_CASE;
 IM_PCK_SPC;
 IM_PCK_BODY;
+IM_FUNC;
+IM_PROC;
+IM_TYPE_SPC;
+IM_TYPE_BODY;
 }
 
 @parser::header {package org.netbeans.modules.languages.pl_sql.antlr;}
@@ -604,24 +608,28 @@ function_spec : FUNCTION_KEYWORD
 function_name : universal_identifier | ALIAS;
 invoker_clause : AUTHID_KEYWORD (CURRENT_USER_KEYWORD | DEFINER_KEYWORD);
 function_spec_add2 : DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD;
-function_declaration : function_spec function_procedure_body;
+function_declaration : function_spec function_procedure_body
+                     -> ^(IM_FUNC function_spec function_procedure_body);
 procedure_spec : PROCEDURE_KEYWORD procedure_name parameter_declaration?
                  invoker_clause?;
 procedure_name : universal_identifier | ALIAS;
-procedure_declaration : procedure_spec function_procedure_body;
+procedure_declaration : procedure_spec function_procedure_body
+                      -> ^(IM_PROC procedure_spec function_procedure_body);
 function_procedure_body : as_is_part (variable_declaration)* (function_declaration | procedure_declaration)* block;
 package_declaration : (PACKAGE_KEYWORD package_spec) -> ^(IM_PCK_SPC package_spec)
 		| (PACKAGE_KEYWORD package_body) -> ^(IM_PCK_BODY package_body);
 package_spec : package_spec_name invoker_clause? as_is_part
-               (variable_declaration | ((function_spec | procedure_spec) SEPARATOR))* 
+               (variable_declaration | package_spec2)* 
                END_KEYWORD universal_identifier? SEPARATOR? '/'?;
+package_spec2 :	function_spec SEPARATOR -> ^(IM_FUNC function_spec SEPARATOR) 
+                | procedure_spec SEPARATOR -> ^(IM_PROC procedure_spec SEPARATOR);
 package_spec_name : universal_identifier | ALIAS;
 package_body : BODY_KEYWORD package_body_name as_is_part
                (variable_declaration | function_declaration | procedure_declaration)*
                (BEGIN_KEYWORD (executable_section)+)?
                END_KEYWORD universal_identifier? SEPARATOR? '/'?;
 package_body_name : universal_identifier | ALIAS;
-trigger_declaration : TRIGGER_KEYWORD trigger_name trigger_type follows_part? trigger_part
+trigger_declaration : TRIGGER_KEYWORD^ trigger_name trigger_type follows_part? trigger_part
                       anonymous_block;
 trigger_name : universal_identifier | ALIAS;
 follows_part : FOLLOWS_KEYWORD universal_identifier;
@@ -641,7 +649,9 @@ dml_event_clause_factor : OF_KEYWORD (universal_identifier COMMA?)+;
 dml_event_clause_part : ON_KEYWORD ((NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD)? universal_identifier);
 referencing_clause : REFERENCING_KEYWORD ( (OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD)
                      AS_KEYWORD? (OLD_KEYWORD | NEW_KEYWORD | identifier) )+;
-type_declaration : TYPE_KEYWORD! type_spec_declaration | TYPE_KEYWORD! type_body_declaration;
+type_declaration : (TYPE_KEYWORD type_spec_declaration) -> ^(IM_TYPE_SPC type_spec_declaration)
+                   |
+                   (TYPE_KEYWORD type_body_declaration) -> ^(IM_TYPE_BODY type_body_declaration);
 type_spec_declaration : type_spec_name type_oid_part? invoker_clause? type_spec_types
                         SEPARATOR? '/'?;
 type_spec_name : universal_identifier | ALIAS;
@@ -658,7 +668,7 @@ map_order_function_spec : (MAP_KEYWORD | ORDER_KEYWORD) MEMBER_KEYWORD function_
 constructor_spec : FINAL_KEYWORD? INSTANTIABLE_KEYWORD? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD
                    data_type constructor_spec_part?;
 constructor_spec_part : '(' (SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ',')?
-                        (identifier data_type ','?)+ ')'
+                        (identifier IN_KEYWORD? data_type ','?)+ ')'
                         RETURN_KEYWORD SELF_KEYWORD AS_KEYWORD RESULT_KEYWORD;
 subprogram_spec : (MEMBER_KEYWORD | STATIC_KEYWORD) (function_spec | procedure_spec);
 inheritance_clauses : NOT_OPERATOR? (FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD);
