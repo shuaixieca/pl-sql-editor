@@ -192,6 +192,9 @@ IM_FUNC;
 IM_PROC;
 IM_TYPE_SPC;
 IM_TYPE_BODY;
+
+LPAREN = '(';
+RPAREN = ')';
 }
 
 @parser::header {package org.netbeans.modules.languages.pl_sql.antlr;}

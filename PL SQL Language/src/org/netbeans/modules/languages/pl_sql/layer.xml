@@ -19,7 +19,7 @@
                 <folder name="FoldManager">
                     <file name="org-netbeans-editor-CustomFoldManager$Factory.instance"/>
                 </folder>
-                
+
                 <folder name="Popup">
                     <file name="SeparatorFolding.instance">
                         <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
@@ -27,6 +27,12 @@
                     </file>
                     <file name="generate-fold-popup">
                         <attr name="position" intvalue="5000"/>
+                    </file>
+                </folder>
+
+                <folder name="BracesMatchers">
+                    <file name="org-netbeans-modules-languages-pl_sql-bracesmatching-PLSQLBracesMatcherFactory.instance">
+                        <attr name="position" intvalue="0"/>
                     </file>
                 </folder>
 
