@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
+<codetemplates>
+    <codetemplate abbreviation="begin" descriptionId="pl/sql block" xml:space="preserve">
+        <code><![CDATA[begin ${cursor} end;]]></code>
+    </codetemplate>
+    <codetemplate abbreviation="if" descriptionId="pl/sql if" xml:space="preserve">
+        <code><![CDATA[if (${expr}) then ${then_action};
+          else ${else_action};
+end if;]]></code>
+    </codetemplate>
+</codetemplates>

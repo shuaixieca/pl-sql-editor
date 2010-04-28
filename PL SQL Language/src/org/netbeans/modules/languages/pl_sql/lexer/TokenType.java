@@ -182,7 +182,9 @@ public enum TokenType {
     ALIAS(PL_SQLLexer.ALIAS, "identifier"),
     SEPARATOR(PL_SQLLexer.SEPARATOR, "separator"),
     COMMA(PL_SQLLexer.COMMA, "separator"),
-    PARAM_VALUE(PL_SQLLexer.PARAM_VALUE, "operator");
+    PARAM_VALUE(PL_SQLLexer.PARAM_VALUE, "operator"),
+    LPAREN(PL_SQLLexer.LPAREN, "identifier"),
+    RPAREN(PL_SQLLexer.RPAREN, "identifier");
     public int id;
     public String category;
     public String text;
