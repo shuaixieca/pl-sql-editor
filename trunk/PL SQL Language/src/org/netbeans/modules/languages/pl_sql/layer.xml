@@ -36,6 +36,18 @@
                     </file>
                 </folder>
 
+                <folder name="CompletionProviders">
+                    <file name="org-netbeans-modules-languages-pl_sql-completion-PLSQLCompletionProvider.instance"/>
+                </folder>
+
+                <folder name="CodeTemplates">
+                    <folder name="Defaults">
+                        <file name="codetemplates.xml" url="completion/codetemplates.xml">
+                            <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.modules.languages.pl_sql.Bundle"/>
+                        </file>
+                    </folder>
+                </folder>
+
                 <folder name="FontsColors">
                     <folder name="NetBeans">
                         <folder name="Defaults">
