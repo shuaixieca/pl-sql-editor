@@ -3,6 +3,7 @@
  Author:	Alexandre Soumbatov
  Homepage:	http://code.google.com/p/pl-sql-editor/
  History:	16-Mar-2010	the work began
+                07-May-2010     first stable version
 */   
 
 grammar PL_SQL;

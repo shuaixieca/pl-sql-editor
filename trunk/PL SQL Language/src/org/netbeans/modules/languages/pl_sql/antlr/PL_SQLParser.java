@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-04-27 13:23:22
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g 2010-05-07 17:11:02
 package org.netbeans.modules.languages.pl_sql.antlr;
 
 import org.antlr.runtime.*;
@@ -328,7 +328,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "grammar_def"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:592:1: grammar_def : source_element EOF ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:593:1: grammar_def : source_element EOF ;
     public final PL_SQLParser.grammar_def_return grammar_def() throws RecognitionException {
         PL_SQLParser.grammar_def_return retval = new PL_SQLParser.grammar_def_return();
         retval.start = input.LT(1);
@@ -343,8 +343,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 1) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:593:2: ( source_element EOF )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:593:4: source_element EOF
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:594:2: ( source_element EOF )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:594:4: source_element EOF
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -385,7 +385,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "source_element"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:596:1: source_element : ( anonymous_block | ( ( create_replace_part )? ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration ) ) );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:597:1: source_element : ( anonymous_block | ( ( create_replace_part )? ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration ) ) );
     public final PL_SQLParser.source_element_return source_element() throws RecognitionException {
         PL_SQLParser.source_element_return retval = new PL_SQLParser.source_element_return();
         retval.start = input.LT(1);
@@ -410,7 +410,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 2) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:596:16: ( anonymous_block | ( ( create_replace_part )? ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration ) ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:597:16: ( anonymous_block | ( ( create_replace_part )? ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration ) ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -429,7 +429,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt3) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:596:18: anonymous_block
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:597:18: anonymous_block
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -443,14 +443,14 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:597:18: ( ( create_replace_part )? ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:598:18: ( ( create_replace_part )? ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration ) )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:597:18: ( ( create_replace_part )? ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration ) )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:597:19: ( create_replace_part )? ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:598:18: ( ( create_replace_part )? ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:598:19: ( create_replace_part )? ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:597:19: ( create_replace_part )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:598:19: ( create_replace_part )?
                     int alt1=2;
                     int LA1_0 = input.LA(1);
 
@@ -473,7 +473,7 @@ public class PL_SQLParser extends Parser {
 
                     }
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:598:19: ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:599:19: ( function_declaration | procedure_declaration | package_declaration | trigger_declaration | type_declaration )
                     int alt2=5;
                     switch ( input.LA(1) ) {
                     case FUNCTION_KEYWORD:
@@ -511,7 +511,7 @@ public class PL_SQLParser extends Parser {
 
                     switch (alt2) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:598:20: function_declaration
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:599:20: function_declaration
                             {
                             pushFollow(FOLLOW_function_declaration_in_source_element4753);
                             function_declaration5=function_declaration();
@@ -523,7 +523,7 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:598:43: procedure_declaration
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:599:43: procedure_declaration
                             {
                             pushFollow(FOLLOW_procedure_declaration_in_source_element4757);
                             procedure_declaration6=procedure_declaration();
@@ -535,7 +535,7 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 3 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:598:67: package_declaration
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:599:67: package_declaration
                             {
                             pushFollow(FOLLOW_package_declaration_in_source_element4761);
                             package_declaration7=package_declaration();
@@ -547,7 +547,7 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 4 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:599:20: trigger_declaration
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:600:20: trigger_declaration
                             {
                             pushFollow(FOLLOW_trigger_declaration_in_source_element4784);
                             trigger_declaration8=trigger_declaration();
@@ -559,7 +559,7 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 5 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:599:42: type_declaration
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:600:42: type_declaration
                             {
                             pushFollow(FOLLOW_type_declaration_in_source_element4788);
                             type_declaration9=type_declaration();
@@ -608,7 +608,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "identifier"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:600:1: identifier : ( IDENTIFIER | RESULT_KEYWORD | INTERVAL_KEYWORD );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:601:1: identifier : ( IDENTIFIER | RESULT_KEYWORD | INTERVAL_KEYWORD );
     public final PL_SQLParser.identifier_return identifier() throws RecognitionException {
         PL_SQLParser.identifier_return retval = new PL_SQLParser.identifier_return();
         retval.start = input.LT(1);
@@ -621,7 +621,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 3) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:600:12: ( IDENTIFIER | RESULT_KEYWORD | INTERVAL_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:601:12: ( IDENTIFIER | RESULT_KEYWORD | INTERVAL_KEYWORD )
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
             {
             root_0 = (CommonTree)adaptor.nil();
@@ -668,7 +668,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "universal_identifier"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:601:1: universal_identifier : ( identifier | EXT_IDENTIFIER );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:602:1: universal_identifier : ( identifier | EXT_IDENTIFIER );
     public final PL_SQLParser.universal_identifier_return universal_identifier() throws RecognitionException {
         PL_SQLParser.universal_identifier_return retval = new PL_SQLParser.universal_identifier_return();
         retval.start = input.LT(1);
@@ -683,7 +683,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:601:22: ( identifier | EXT_IDENTIFIER )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:602:22: ( identifier | EXT_IDENTIFIER )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -702,7 +702,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt4) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:601:24: identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:602:24: identifier
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -716,7 +716,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:601:37: EXT_IDENTIFIER
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:602:37: EXT_IDENTIFIER
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -757,7 +757,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "label"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:602:1: label : '<<' identifier '>>' ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:603:1: label : '<<' identifier '>>' ;
     public final PL_SQLParser.label_return label() throws RecognitionException {
         PL_SQLParser.label_return retval = new PL_SQLParser.label_return();
         retval.start = input.LT(1);
@@ -774,8 +774,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 5) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:602:7: ( '<<' identifier '>>' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:602:9: '<<' identifier '>>'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:603:7: ( '<<' identifier '>>' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:603:9: '<<' identifier '>>'
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -825,7 +825,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "create_replace_part"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:603:1: create_replace_part : CREATE_KEYWORD ( OR_OPERATOR REPLACE_KEYWORD )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:604:1: create_replace_part : CREATE_KEYWORD ( OR_OPERATOR REPLACE_KEYWORD )? ;
     public final PL_SQLParser.create_replace_part_return create_replace_part() throws RecognitionException {
         PL_SQLParser.create_replace_part_return retval = new PL_SQLParser.create_replace_part_return();
         retval.start = input.LT(1);
@@ -842,8 +842,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 6) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:603:21: ( CREATE_KEYWORD ( OR_OPERATOR REPLACE_KEYWORD )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:603:23: CREATE_KEYWORD ( OR_OPERATOR REPLACE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:604:21: ( CREATE_KEYWORD ( OR_OPERATOR REPLACE_KEYWORD )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:604:23: CREATE_KEYWORD ( OR_OPERATOR REPLACE_KEYWORD )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -852,7 +852,7 @@ public class PL_SQLParser extends Parser {
             CREATE_KEYWORD16_tree = (CommonTree)adaptor.create(CREATE_KEYWORD16);
             adaptor.addChild(root_0, CREATE_KEYWORD16_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:603:38: ( OR_OPERATOR REPLACE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:604:38: ( OR_OPERATOR REPLACE_KEYWORD )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -861,7 +861,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt5) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:603:39: OR_OPERATOR REPLACE_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:604:39: OR_OPERATOR REPLACE_KEYWORD
                     {
                     OR_OPERATOR17=(Token)match(input,OR_OPERATOR,FOLLOW_OR_OPERATOR_in_create_replace_part4838); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -909,7 +909,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "as_is_part"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:604:1: as_is_part : ( IS_KEYWORD | AS_KEYWORD );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:1: as_is_part : ( IS_KEYWORD | AS_KEYWORD );
     public final PL_SQLParser.as_is_part_return as_is_part() throws RecognitionException {
         PL_SQLParser.as_is_part_return retval = new PL_SQLParser.as_is_part_return();
         retval.start = input.LT(1);
@@ -922,7 +922,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 7) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:604:12: ( IS_KEYWORD | AS_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:12: ( IS_KEYWORD | AS_KEYWORD )
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
             {
             root_0 = (CommonTree)adaptor.nil();
@@ -969,7 +969,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "parameter_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:1: parameter_type : ( IN_KEYWORD ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )? | ( OUT_KEYWORD ( NOCOPY_KEYWORD )? ) );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:1: parameter_type : ( IN_KEYWORD ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )? | ( OUT_KEYWORD ( NOCOPY_KEYWORD )? ) );
     public final PL_SQLParser.parameter_type_return parameter_type() throws RecognitionException {
         PL_SQLParser.parameter_type_return retval = new PL_SQLParser.parameter_type_return();
         retval.start = input.LT(1);
@@ -990,7 +990,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 8) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:16: ( IN_KEYWORD ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )? | ( OUT_KEYWORD ( NOCOPY_KEYWORD )? ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:16: ( IN_KEYWORD ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )? | ( OUT_KEYWORD ( NOCOPY_KEYWORD )? ) )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1009,7 +1009,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt9) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:18: IN_KEYWORD ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:18: IN_KEYWORD ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1018,7 +1018,7 @@ public class PL_SQLParser extends Parser {
                     IN_KEYWORD20_tree = (CommonTree)adaptor.create(IN_KEYWORD20);
                     adaptor.addChild(root_0, IN_KEYWORD20_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:29: ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:29: ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -1027,14 +1027,14 @@ public class PL_SQLParser extends Parser {
                     }
                     switch (alt7) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:30: OUT_KEYWORD ( NOCOPY_KEYWORD )?
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:30: OUT_KEYWORD ( NOCOPY_KEYWORD )?
                             {
                             OUT_KEYWORD21=(Token)match(input,OUT_KEYWORD,FOLLOW_OUT_KEYWORD_in_parameter_type4863); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
                             OUT_KEYWORD21_tree = (CommonTree)adaptor.create(OUT_KEYWORD21);
                             adaptor.addChild(root_0, OUT_KEYWORD21_tree);
                             }
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:42: ( NOCOPY_KEYWORD )?
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:42: ( NOCOPY_KEYWORD )?
                             int alt6=2;
                             int LA6_0 = input.LA(1);
 
@@ -1066,19 +1066,19 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:62: ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:62: ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:62: ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:63: OUT_KEYWORD ( NOCOPY_KEYWORD )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:62: ( OUT_KEYWORD ( NOCOPY_KEYWORD )? )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:63: OUT_KEYWORD ( NOCOPY_KEYWORD )?
                     {
                     OUT_KEYWORD23=(Token)match(input,OUT_KEYWORD,FOLLOW_OUT_KEYWORD_in_parameter_type4873); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     OUT_KEYWORD23_tree = (CommonTree)adaptor.create(OUT_KEYWORD23);
                     adaptor.addChild(root_0, OUT_KEYWORD23_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:605:75: ( NOCOPY_KEYWORD )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:75: ( NOCOPY_KEYWORD )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -1135,7 +1135,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "parameter_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:1: parameter_declaration : '(' identifier ( parameter_type )? data_type ( variable_def_part expression )? ( ',' identifier ( parameter_type )? data_type ( variable_def_part expression )? )* ')' ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:607:1: parameter_declaration : '(' identifier ( parameter_type )? data_type ( variable_def_part expression )? ( ',' identifier ( parameter_type )? data_type ( variable_def_part expression )? )* ')' ;
     public final PL_SQLParser.parameter_declaration_return parameter_declaration() throws RecognitionException {
         PL_SQLParser.parameter_declaration_return retval = new PL_SQLParser.parameter_declaration_return();
         retval.start = input.LT(1);
@@ -1172,8 +1172,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 9) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:23: ( '(' identifier ( parameter_type )? data_type ( variable_def_part expression )? ( ',' identifier ( parameter_type )? data_type ( variable_def_part expression )? )* ')' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:25: '(' identifier ( parameter_type )? data_type ( variable_def_part expression )? ( ',' identifier ( parameter_type )? data_type ( variable_def_part expression )? )* ')'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:607:23: ( '(' identifier ( parameter_type )? data_type ( variable_def_part expression )? ( ',' identifier ( parameter_type )? data_type ( variable_def_part expression )? )* ')' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:607:25: '(' identifier ( parameter_type )? data_type ( variable_def_part expression )? ( ',' identifier ( parameter_type )? data_type ( variable_def_part expression )? )* ')'
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1188,7 +1188,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier26.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:40: ( parameter_type )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:607:40: ( parameter_type )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1217,7 +1217,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type28.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:66: ( variable_def_part expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:607:66: ( variable_def_part expression )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1226,7 +1226,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt11) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:606:67: variable_def_part expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:607:67: variable_def_part expression
                     {
                     pushFollow(FOLLOW_variable_def_part_in_parameter_declaration4894);
                     variable_def_part29=variable_def_part();
@@ -1246,7 +1246,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:607:25: ( ',' identifier ( parameter_type )? data_type ( variable_def_part expression )? )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:608:25: ( ',' identifier ( parameter_type )? data_type ( variable_def_part expression )? )*
             loop14:
             do {
                 int alt14=2;
@@ -1259,7 +1259,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt14) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:607:26: ',' identifier ( parameter_type )? data_type ( variable_def_part expression )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:608:26: ',' identifier ( parameter_type )? data_type ( variable_def_part expression )?
             	    {
             	    char_literal31=(Token)match(input,COMMA,FOLLOW_COMMA_in_parameter_declaration4925); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1272,7 +1272,7 @@ public class PL_SQLParser extends Parser {
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier32.getTree());
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:607:41: ( parameter_type )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:608:41: ( parameter_type )?
             	    int alt12=2;
             	    int LA12_0 = input.LA(1);
 
@@ -1301,7 +1301,7 @@ public class PL_SQLParser extends Parser {
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type34.getTree());
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:607:67: ( variable_def_part expression )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:608:67: ( variable_def_part expression )?
             	    int alt13=2;
             	    int LA13_0 = input.LA(1);
 
@@ -1310,7 +1310,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    switch (alt13) {
             	        case 1 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:607:68: variable_def_part expression
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:608:68: variable_def_part expression
             	            {
             	            pushFollow(FOLLOW_variable_def_part_in_parameter_declaration4935);
             	            variable_def_part35=variable_def_part();
@@ -1374,7 +1374,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "function_spec"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:608:1: function_spec : FUNCTION_KEYWORD function_name ( parameter_declaration )? RETURN_KEYWORD data_type ( invoker_clause )? ( function_spec_add2 )* ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:609:1: function_spec : FUNCTION_KEYWORD function_name ( parameter_declaration )? RETURN_KEYWORD data_type ( invoker_clause )? ( function_spec_add2 )* ;
     public final PL_SQLParser.function_spec_return function_spec() throws RecognitionException {
         PL_SQLParser.function_spec_return retval = new PL_SQLParser.function_spec_return();
         retval.start = input.LT(1);
@@ -1399,8 +1399,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 10) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:608:15: ( FUNCTION_KEYWORD function_name ( parameter_declaration )? RETURN_KEYWORD data_type ( invoker_clause )? ( function_spec_add2 )* )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:608:17: FUNCTION_KEYWORD function_name ( parameter_declaration )? RETURN_KEYWORD data_type ( invoker_clause )? ( function_spec_add2 )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:609:15: ( FUNCTION_KEYWORD function_name ( parameter_declaration )? RETURN_KEYWORD data_type ( invoker_clause )? ( function_spec_add2 )* )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:609:17: FUNCTION_KEYWORD function_name ( parameter_declaration )? RETURN_KEYWORD data_type ( invoker_clause )? ( function_spec_add2 )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1415,7 +1415,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, function_name39.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:609:31: ( parameter_declaration )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:610:31: ( parameter_declaration )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1449,7 +1449,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type42.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:610:42: ( invoker_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:611:42: ( invoker_clause )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1472,7 +1472,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:610:58: ( function_spec_add2 )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:611:58: ( function_spec_add2 )*
             loop17:
             do {
                 int alt17=2;
@@ -1485,7 +1485,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt17) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:610:59: function_spec_add2
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:611:59: function_spec_add2
             	    {
             	    pushFollow(FOLLOW_function_spec_add2_in_function_spec4997);
             	    function_spec_add244=function_spec_add2();
@@ -1532,7 +1532,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "function_name"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:611:1: function_name : ( universal_identifier | ALIAS );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:612:1: function_name : ( universal_identifier | ALIAS );
     public final PL_SQLParser.function_name_return function_name() throws RecognitionException {
         PL_SQLParser.function_name_return retval = new PL_SQLParser.function_name_return();
         retval.start = input.LT(1);
@@ -1547,7 +1547,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 11) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:611:15: ( universal_identifier | ALIAS )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:612:15: ( universal_identifier | ALIAS )
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -1566,7 +1566,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt18) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:611:17: universal_identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:612:17: universal_identifier
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1580,7 +1580,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:611:40: ALIAS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:612:40: ALIAS
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1621,7 +1621,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "invoker_clause"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:612:1: invoker_clause : AUTHID_KEYWORD ( CURRENT_USER_KEYWORD | DEFINER_KEYWORD ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:613:1: invoker_clause : AUTHID_KEYWORD ( CURRENT_USER_KEYWORD | DEFINER_KEYWORD ) ;
     public final PL_SQLParser.invoker_clause_return invoker_clause() throws RecognitionException {
         PL_SQLParser.invoker_clause_return retval = new PL_SQLParser.invoker_clause_return();
         retval.start = input.LT(1);
@@ -1636,8 +1636,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 12) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:612:16: ( AUTHID_KEYWORD ( CURRENT_USER_KEYWORD | DEFINER_KEYWORD ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:612:18: AUTHID_KEYWORD ( CURRENT_USER_KEYWORD | DEFINER_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:613:16: ( AUTHID_KEYWORD ( CURRENT_USER_KEYWORD | DEFINER_KEYWORD ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:613:18: AUTHID_KEYWORD ( CURRENT_USER_KEYWORD | DEFINER_KEYWORD )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1688,7 +1688,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "function_spec_add2"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:613:1: function_spec_add2 : ( DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:614:1: function_spec_add2 : ( DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD );
     public final PL_SQLParser.function_spec_add2_return function_spec_add2() throws RecognitionException {
         PL_SQLParser.function_spec_add2_return retval = new PL_SQLParser.function_spec_add2_return();
         retval.start = input.LT(1);
@@ -1701,7 +1701,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 13) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:613:20: ( DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:614:20: ( DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD )
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
             {
             root_0 = (CommonTree)adaptor.nil();
@@ -1748,7 +1748,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "function_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:614:1: function_declaration : function_spec function_procedure_body -> ^( IM_FUNC function_spec function_procedure_body ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:615:1: function_declaration : function_spec function_procedure_body -> ^( IM_FUNC function_spec function_procedure_body ) ;
     public final PL_SQLParser.function_declaration_return function_declaration() throws RecognitionException {
         PL_SQLParser.function_declaration_return retval = new PL_SQLParser.function_declaration_return();
         retval.start = input.LT(1);
@@ -1764,8 +1764,8 @@ public class PL_SQLParser extends Parser {
         RewriteRuleSubtreeStream stream_function_spec=new RewriteRuleSubtreeStream(adaptor,"rule function_spec");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 14) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:614:22: ( function_spec function_procedure_body -> ^( IM_FUNC function_spec function_procedure_body ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:614:24: function_spec function_procedure_body
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:615:22: ( function_spec function_procedure_body -> ^( IM_FUNC function_spec function_procedure_body ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:615:24: function_spec function_procedure_body
             {
             pushFollow(FOLLOW_function_spec_in_function_declaration5051);
             function_spec50=function_spec();
@@ -1782,7 +1782,7 @@ public class PL_SQLParser extends Parser {
 
 
             // AST REWRITE
-            // elements: function_spec, function_procedure_body
+            // elements: function_procedure_body, function_spec
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1793,9 +1793,9 @@ public class PL_SQLParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 615:22: -> ^( IM_FUNC function_spec function_procedure_body )
+            // 616:22: -> ^( IM_FUNC function_spec function_procedure_body )
             {
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:615:25: ^( IM_FUNC function_spec function_procedure_body )
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:616:25: ^( IM_FUNC function_spec function_procedure_body )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_FUNC, "IM_FUNC"), root_1);
@@ -1838,7 +1838,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "procedure_spec"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:616:1: procedure_spec : PROCEDURE_KEYWORD procedure_name ( parameter_declaration )? ( invoker_clause )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:617:1: procedure_spec : PROCEDURE_KEYWORD procedure_name ( parameter_declaration )? ( invoker_clause )? ;
     public final PL_SQLParser.procedure_spec_return procedure_spec() throws RecognitionException {
         PL_SQLParser.procedure_spec_return retval = new PL_SQLParser.procedure_spec_return();
         retval.start = input.LT(1);
@@ -1857,8 +1857,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 15) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:616:16: ( PROCEDURE_KEYWORD procedure_name ( parameter_declaration )? ( invoker_clause )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:616:18: PROCEDURE_KEYWORD procedure_name ( parameter_declaration )? ( invoker_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:617:16: ( PROCEDURE_KEYWORD procedure_name ( parameter_declaration )? ( invoker_clause )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:617:18: PROCEDURE_KEYWORD procedure_name ( parameter_declaration )? ( invoker_clause )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1873,7 +1873,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, procedure_name53.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:616:51: ( parameter_declaration )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:617:51: ( parameter_declaration )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -1896,7 +1896,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:617:18: ( invoker_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:618:18: ( invoker_clause )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -1949,7 +1949,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "procedure_name"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:618:1: procedure_name : ( universal_identifier | ALIAS );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:619:1: procedure_name : ( universal_identifier | ALIAS );
     public final PL_SQLParser.procedure_name_return procedure_name() throws RecognitionException {
         PL_SQLParser.procedure_name_return retval = new PL_SQLParser.procedure_name_return();
         retval.start = input.LT(1);
@@ -1964,7 +1964,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 16) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:618:16: ( universal_identifier | ALIAS )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:619:16: ( universal_identifier | ALIAS )
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -1983,7 +1983,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt21) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:618:18: universal_identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:619:18: universal_identifier
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1997,7 +1997,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:618:41: ALIAS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:619:41: ALIAS
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -2038,7 +2038,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "procedure_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:619:1: procedure_declaration : procedure_spec function_procedure_body -> ^( IM_PROC procedure_spec function_procedure_body ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:620:1: procedure_declaration : procedure_spec function_procedure_body -> ^( IM_PROC procedure_spec function_procedure_body ) ;
     public final PL_SQLParser.procedure_declaration_return procedure_declaration() throws RecognitionException {
         PL_SQLParser.procedure_declaration_return retval = new PL_SQLParser.procedure_declaration_return();
         retval.start = input.LT(1);
@@ -2054,8 +2054,8 @@ public class PL_SQLParser extends Parser {
         RewriteRuleSubtreeStream stream_function_procedure_body=new RewriteRuleSubtreeStream(adaptor,"rule function_procedure_body");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 17) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:619:23: ( procedure_spec function_procedure_body -> ^( IM_PROC procedure_spec function_procedure_body ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:619:25: procedure_spec function_procedure_body
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:620:23: ( procedure_spec function_procedure_body -> ^( IM_PROC procedure_spec function_procedure_body ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:620:25: procedure_spec function_procedure_body
             {
             pushFollow(FOLLOW_procedure_spec_in_procedure_declaration5134);
             procedure_spec58=procedure_spec();
@@ -2072,7 +2072,7 @@ public class PL_SQLParser extends Parser {
 
 
             // AST REWRITE
-            // elements: function_procedure_body, procedure_spec
+            // elements: procedure_spec, function_procedure_body
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2083,9 +2083,9 @@ public class PL_SQLParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 620:23: -> ^( IM_PROC procedure_spec function_procedure_body )
+            // 621:23: -> ^( IM_PROC procedure_spec function_procedure_body )
             {
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:620:26: ^( IM_PROC procedure_spec function_procedure_body )
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:621:26: ^( IM_PROC procedure_spec function_procedure_body )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_PROC, "IM_PROC"), root_1);
@@ -2128,7 +2128,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "function_procedure_body"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:621:1: function_procedure_body : as_is_part ( variable_declaration )* ( function_declaration | procedure_declaration )* block ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:1: function_procedure_body : as_is_part ( variable_declaration )* ( function_declaration | procedure_declaration )* block ;
     public final PL_SQLParser.function_procedure_body_return function_procedure_body() throws RecognitionException {
         PL_SQLParser.function_procedure_body_return retval = new PL_SQLParser.function_procedure_body_return();
         retval.start = input.LT(1);
@@ -2149,8 +2149,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 18) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:621:25: ( as_is_part ( variable_declaration )* ( function_declaration | procedure_declaration )* block )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:621:27: as_is_part ( variable_declaration )* ( function_declaration | procedure_declaration )* block
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:25: ( as_is_part ( variable_declaration )* ( function_declaration | procedure_declaration )* block )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:27: as_is_part ( variable_declaration )* ( function_declaration | procedure_declaration )* block
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -2160,7 +2160,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, as_is_part60.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:621:38: ( variable_declaration )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:38: ( variable_declaration )*
             loop22:
             do {
                 int alt22=2;
@@ -2173,7 +2173,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt22) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:621:39: variable_declaration
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:39: variable_declaration
             	    {
             	    pushFollow(FOLLOW_variable_declaration_in_function_procedure_body5178);
             	    variable_declaration61=variable_declaration();
@@ -2190,7 +2190,7 @@ public class PL_SQLParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:621:62: ( function_declaration | procedure_declaration )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:62: ( function_declaration | procedure_declaration )*
             loop23:
             do {
                 int alt23=3;
@@ -2206,7 +2206,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt23) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:621:63: function_declaration
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:63: function_declaration
             	    {
             	    pushFollow(FOLLOW_function_declaration_in_function_procedure_body5183);
             	    function_declaration62=function_declaration();
@@ -2218,7 +2218,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:621:86: procedure_declaration
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:86: procedure_declaration
             	    {
             	    pushFollow(FOLLOW_procedure_declaration_in_function_procedure_body5187);
             	    procedure_declaration63=procedure_declaration();
@@ -2271,7 +2271,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "package_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:1: package_declaration : ( ( PACKAGE_KEYWORD package_spec ) -> ^( IM_PCK_SPC package_spec ) | ( PACKAGE_KEYWORD package_body ) -> ^( IM_PCK_BODY package_body ) );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:1: package_declaration : ( ( PACKAGE_KEYWORD package_spec ) -> ^( IM_PCK_SPC package_spec ) | ( PACKAGE_KEYWORD package_body ) -> ^( IM_PCK_BODY package_body ) );
     public final PL_SQLParser.package_declaration_return package_declaration() throws RecognitionException {
         PL_SQLParser.package_declaration_return retval = new PL_SQLParser.package_declaration_return();
         retval.start = input.LT(1);
@@ -2292,7 +2292,7 @@ public class PL_SQLParser extends Parser {
         RewriteRuleSubtreeStream stream_package_body=new RewriteRuleSubtreeStream(adaptor,"rule package_body");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 19) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:21: ( ( PACKAGE_KEYWORD package_spec ) -> ^( IM_PCK_SPC package_spec ) | ( PACKAGE_KEYWORD package_body ) -> ^( IM_PCK_BODY package_body ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:21: ( ( PACKAGE_KEYWORD package_spec ) -> ^( IM_PCK_SPC package_spec ) | ( PACKAGE_KEYWORD package_body ) -> ^( IM_PCK_BODY package_body ) )
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -2322,10 +2322,10 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt24) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:23: ( PACKAGE_KEYWORD package_spec )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:23: ( PACKAGE_KEYWORD package_spec )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:23: ( PACKAGE_KEYWORD package_spec )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:24: PACKAGE_KEYWORD package_spec
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:23: ( PACKAGE_KEYWORD package_spec )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:24: PACKAGE_KEYWORD package_spec
                     {
                     PACKAGE_KEYWORD65=(Token)match(input,PACKAGE_KEYWORD,FOLLOW_PACKAGE_KEYWORD_in_package_declaration5199); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_PACKAGE_KEYWORD.add(PACKAGE_KEYWORD65);
@@ -2353,9 +2353,9 @@ public class PL_SQLParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 622:54: -> ^( IM_PCK_SPC package_spec )
+                    // 623:54: -> ^( IM_PCK_SPC package_spec )
                     {
-                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:57: ^( IM_PCK_SPC package_spec )
+                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:57: ^( IM_PCK_SPC package_spec )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_PCK_SPC, "IM_PCK_SPC"), root_1);
@@ -2371,10 +2371,10 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:5: ( PACKAGE_KEYWORD package_body )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:624:5: ( PACKAGE_KEYWORD package_body )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:5: ( PACKAGE_KEYWORD package_body )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:6: PACKAGE_KEYWORD package_body
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:624:5: ( PACKAGE_KEYWORD package_body )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:624:6: PACKAGE_KEYWORD package_body
                     {
                     PACKAGE_KEYWORD67=(Token)match(input,PACKAGE_KEYWORD,FOLLOW_PACKAGE_KEYWORD_in_package_declaration5217); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_PACKAGE_KEYWORD.add(PACKAGE_KEYWORD67);
@@ -2402,9 +2402,9 @@ public class PL_SQLParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 623:36: -> ^( IM_PCK_BODY package_body )
+                    // 624:36: -> ^( IM_PCK_BODY package_body )
                     {
-                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:39: ^( IM_PCK_BODY package_body )
+                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:624:39: ^( IM_PCK_BODY package_body )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_PCK_BODY, "IM_PCK_BODY"), root_1);
@@ -2448,7 +2448,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "package_spec"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:624:1: package_spec : package_spec_name ( invoker_clause )? as_is_part ( variable_declaration | package_spec2 )* END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:625:1: package_spec : package_spec_name ( invoker_clause )? as_is_part ( variable_declaration | package_spec2 )* END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? ;
     public final PL_SQLParser.package_spec_return package_spec() throws RecognitionException {
         PL_SQLParser.package_spec_return retval = new PL_SQLParser.package_spec_return();
         retval.start = input.LT(1);
@@ -2477,8 +2477,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 20) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:624:14: ( package_spec_name ( invoker_clause )? as_is_part ( variable_declaration | package_spec2 )* END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:624:16: package_spec_name ( invoker_clause )? as_is_part ( variable_declaration | package_spec2 )* END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:625:14: ( package_spec_name ( invoker_clause )? as_is_part ( variable_declaration | package_spec2 )* END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:625:16: package_spec_name ( invoker_clause )? as_is_part ( variable_declaration | package_spec2 )* END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -2488,7 +2488,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, package_spec_name69.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:624:34: ( invoker_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:625:34: ( invoker_clause )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -2517,7 +2517,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, as_is_part71.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:625:16: ( variable_declaration | package_spec2 )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:626:16: ( variable_declaration | package_spec2 )*
             loop26:
             do {
                 int alt26=3;
@@ -2533,7 +2533,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt26) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:625:17: variable_declaration
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:626:17: variable_declaration
             	    {
             	    pushFollow(FOLLOW_variable_declaration_in_package_spec5258);
             	    variable_declaration72=variable_declaration();
@@ -2545,7 +2545,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:625:40: package_spec2
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:626:40: package_spec2
             	    {
             	    pushFollow(FOLLOW_package_spec2_in_package_spec5262);
             	    package_spec273=package_spec2();
@@ -2567,7 +2567,7 @@ public class PL_SQLParser extends Parser {
             END_KEYWORD74_tree = (CommonTree)adaptor.create(END_KEYWORD74);
             adaptor.addChild(root_0, END_KEYWORD74_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:626:28: ( universal_identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:627:28: ( universal_identifier )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -2590,7 +2590,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:626:50: ( SEPARATOR )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:627:50: ( SEPARATOR )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -2612,7 +2612,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:626:61: ( '/' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:627:61: ( '/' )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -2664,7 +2664,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "package_spec2"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:627:1: package_spec2 : ( function_spec SEPARATOR -> ^( IM_FUNC function_spec SEPARATOR ) | procedure_spec SEPARATOR -> ^( IM_PROC procedure_spec SEPARATOR ) );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:628:1: package_spec2 : ( function_spec SEPARATOR -> ^( IM_FUNC function_spec SEPARATOR ) | procedure_spec SEPARATOR -> ^( IM_PROC procedure_spec SEPARATOR ) );
     public final PL_SQLParser.package_spec2_return package_spec2() throws RecognitionException {
         PL_SQLParser.package_spec2_return retval = new PL_SQLParser.package_spec2_return();
         retval.start = input.LT(1);
@@ -2685,7 +2685,7 @@ public class PL_SQLParser extends Parser {
         RewriteRuleSubtreeStream stream_function_spec=new RewriteRuleSubtreeStream(adaptor,"rule function_spec");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 21) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:627:15: ( function_spec SEPARATOR -> ^( IM_FUNC function_spec SEPARATOR ) | procedure_spec SEPARATOR -> ^( IM_PROC procedure_spec SEPARATOR ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:628:15: ( function_spec SEPARATOR -> ^( IM_FUNC function_spec SEPARATOR ) | procedure_spec SEPARATOR -> ^( IM_PROC procedure_spec SEPARATOR ) )
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -2704,7 +2704,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt30) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:627:17: function_spec SEPARATOR
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:628:17: function_spec SEPARATOR
                     {
                     pushFollow(FOLLOW_function_spec_in_package_spec25298);
                     function_spec78=function_spec();
@@ -2718,7 +2718,7 @@ public class PL_SQLParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: SEPARATOR, function_spec
+                    // elements: function_spec, SEPARATOR
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2729,9 +2729,9 @@ public class PL_SQLParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 627:41: -> ^( IM_FUNC function_spec SEPARATOR )
+                    // 628:41: -> ^( IM_FUNC function_spec SEPARATOR )
                     {
-                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:627:44: ^( IM_FUNC function_spec SEPARATOR )
+                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:628:44: ^( IM_FUNC function_spec SEPARATOR )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_FUNC, "IM_FUNC"), root_1);
@@ -2748,7 +2748,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:628:19: procedure_spec SEPARATOR
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:629:19: procedure_spec SEPARATOR
                     {
                     pushFollow(FOLLOW_procedure_spec_in_package_spec25331);
                     procedure_spec80=procedure_spec();
@@ -2773,9 +2773,9 @@ public class PL_SQLParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 628:44: -> ^( IM_PROC procedure_spec SEPARATOR )
+                    // 629:44: -> ^( IM_PROC procedure_spec SEPARATOR )
                     {
-                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:628:47: ^( IM_PROC procedure_spec SEPARATOR )
+                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:629:47: ^( IM_PROC procedure_spec SEPARATOR )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_PROC, "IM_PROC"), root_1);
@@ -2820,7 +2820,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "package_spec_name"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:629:1: package_spec_name : ( universal_identifier | ALIAS );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:630:1: package_spec_name : ( universal_identifier | ALIAS );
     public final PL_SQLParser.package_spec_name_return package_spec_name() throws RecognitionException {
         PL_SQLParser.package_spec_name_return retval = new PL_SQLParser.package_spec_name_return();
         retval.start = input.LT(1);
@@ -2835,7 +2835,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 22) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:629:19: ( universal_identifier | ALIAS )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:630:19: ( universal_identifier | ALIAS )
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -2854,7 +2854,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt31) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:629:21: universal_identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:630:21: universal_identifier
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -2868,7 +2868,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:629:44: ALIAS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:630:44: ALIAS
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -2909,7 +2909,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "package_body"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:630:1: package_body : BODY_KEYWORD package_body_name as_is_part ( variable_declaration | function_declaration | procedure_declaration )* ( BEGIN_KEYWORD ( executable_section )+ )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:631:1: package_body : BODY_KEYWORD package_body_name as_is_part ( variable_declaration | function_declaration | procedure_declaration )* ( BEGIN_KEYWORD ( executable_section )+ )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? ;
     public final PL_SQLParser.package_body_return package_body() throws RecognitionException {
         PL_SQLParser.package_body_return retval = new PL_SQLParser.package_body_return();
         retval.start = input.LT(1);
@@ -2944,8 +2944,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 23) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:630:14: ( BODY_KEYWORD package_body_name as_is_part ( variable_declaration | function_declaration | procedure_declaration )* ( BEGIN_KEYWORD ( executable_section )+ )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:630:16: BODY_KEYWORD package_body_name as_is_part ( variable_declaration | function_declaration | procedure_declaration )* ( BEGIN_KEYWORD ( executable_section )+ )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:631:14: ( BODY_KEYWORD package_body_name as_is_part ( variable_declaration | function_declaration | procedure_declaration )* ( BEGIN_KEYWORD ( executable_section )+ )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:631:16: BODY_KEYWORD package_body_name as_is_part ( variable_declaration | function_declaration | procedure_declaration )* ( BEGIN_KEYWORD ( executable_section )+ )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -2966,7 +2966,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, as_is_part86.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:631:16: ( variable_declaration | function_declaration | procedure_declaration )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:632:16: ( variable_declaration | function_declaration | procedure_declaration )*
             loop32:
             do {
                 int alt32=4;
@@ -2997,7 +2997,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt32) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:631:17: variable_declaration
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:632:17: variable_declaration
             	    {
             	    pushFollow(FOLLOW_variable_declaration_in_package_body5383);
             	    variable_declaration87=variable_declaration();
@@ -3009,7 +3009,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:631:40: function_declaration
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:632:40: function_declaration
             	    {
             	    pushFollow(FOLLOW_function_declaration_in_package_body5387);
             	    function_declaration88=function_declaration();
@@ -3021,7 +3021,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:631:63: procedure_declaration
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:632:63: procedure_declaration
             	    {
             	    pushFollow(FOLLOW_procedure_declaration_in_package_body5391);
             	    procedure_declaration89=procedure_declaration();
@@ -3038,7 +3038,7 @@ public class PL_SQLParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:632:16: ( BEGIN_KEYWORD ( executable_section )+ )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:633:16: ( BEGIN_KEYWORD ( executable_section )+ )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -3047,14 +3047,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt34) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:632:17: BEGIN_KEYWORD ( executable_section )+
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:633:17: BEGIN_KEYWORD ( executable_section )+
                     {
                     BEGIN_KEYWORD90=(Token)match(input,BEGIN_KEYWORD,FOLLOW_BEGIN_KEYWORD_in_package_body5411); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     BEGIN_KEYWORD90_tree = (CommonTree)adaptor.create(BEGIN_KEYWORD90);
                     adaptor.addChild(root_0, BEGIN_KEYWORD90_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:632:31: ( executable_section )+
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:633:31: ( executable_section )+
                     int cnt33=0;
                     loop33:
                     do {
@@ -3068,7 +3068,7 @@ public class PL_SQLParser extends Parser {
 
                         switch (alt33) {
                     	case 1 :
-                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:632:32: executable_section
+                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:633:32: executable_section
                     	    {
                     	    pushFollow(FOLLOW_executable_section_in_package_body5414);
                     	    executable_section91=executable_section();
@@ -3101,7 +3101,7 @@ public class PL_SQLParser extends Parser {
             END_KEYWORD92_tree = (CommonTree)adaptor.create(END_KEYWORD92);
             adaptor.addChild(root_0, END_KEYWORD92_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:633:28: ( universal_identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:634:28: ( universal_identifier )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -3124,7 +3124,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:633:50: ( SEPARATOR )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:634:50: ( SEPARATOR )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -3146,7 +3146,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:633:61: ( '/' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:634:61: ( '/' )?
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -3198,7 +3198,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "package_body_name"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:634:1: package_body_name : ( universal_identifier | ALIAS );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:635:1: package_body_name : ( universal_identifier | ALIAS );
     public final PL_SQLParser.package_body_name_return package_body_name() throws RecognitionException {
         PL_SQLParser.package_body_name_return retval = new PL_SQLParser.package_body_name_return();
         retval.start = input.LT(1);
@@ -3213,7 +3213,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 24) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:634:19: ( universal_identifier | ALIAS )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:635:19: ( universal_identifier | ALIAS )
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -3232,7 +3232,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt38) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:634:21: universal_identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:635:21: universal_identifier
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -3246,7 +3246,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:634:44: ALIAS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:635:44: ALIAS
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -3287,7 +3287,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "trigger_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:635:1: trigger_declaration : TRIGGER_KEYWORD trigger_name trigger_type ( follows_part )? trigger_part anonymous_block ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:636:1: trigger_declaration : TRIGGER_KEYWORD trigger_name trigger_type ( follows_part )? trigger_part anonymous_block ;
     public final PL_SQLParser.trigger_declaration_return trigger_declaration() throws RecognitionException {
         PL_SQLParser.trigger_declaration_return retval = new PL_SQLParser.trigger_declaration_return();
         retval.start = input.LT(1);
@@ -3310,8 +3310,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 25) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:635:21: ( TRIGGER_KEYWORD trigger_name trigger_type ( follows_part )? trigger_part anonymous_block )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:635:23: TRIGGER_KEYWORD trigger_name trigger_type ( follows_part )? trigger_part anonymous_block
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:636:21: ( TRIGGER_KEYWORD trigger_name trigger_type ( follows_part )? trigger_part anonymous_block )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:636:23: TRIGGER_KEYWORD trigger_name trigger_type ( follows_part )? trigger_part anonymous_block
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -3332,7 +3332,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, trigger_type100.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:635:66: ( follows_part )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:636:66: ( follows_part )?
             int alt39=2;
             int LA39_0 = input.LA(1);
 
@@ -3397,7 +3397,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "trigger_name"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:637:1: trigger_name : ( universal_identifier | ALIAS );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:638:1: trigger_name : ( universal_identifier | ALIAS );
     public final PL_SQLParser.trigger_name_return trigger_name() throws RecognitionException {
         PL_SQLParser.trigger_name_return retval = new PL_SQLParser.trigger_name_return();
         retval.start = input.LT(1);
@@ -3412,7 +3412,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 26) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:637:14: ( universal_identifier | ALIAS )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:638:14: ( universal_identifier | ALIAS )
             int alt40=2;
             int LA40_0 = input.LA(1);
 
@@ -3431,7 +3431,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt40) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:637:16: universal_identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:638:16: universal_identifier
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -3445,7 +3445,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:637:39: ALIAS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:638:39: ALIAS
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -3486,7 +3486,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "follows_part"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:638:1: follows_part : FOLLOWS_KEYWORD universal_identifier ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:639:1: follows_part : FOLLOWS_KEYWORD universal_identifier ;
     public final PL_SQLParser.follows_part_return follows_part() throws RecognitionException {
         PL_SQLParser.follows_part_return retval = new PL_SQLParser.follows_part_return();
         retval.start = input.LT(1);
@@ -3501,8 +3501,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 27) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:638:14: ( FOLLOWS_KEYWORD universal_identifier )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:638:16: FOLLOWS_KEYWORD universal_identifier
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:639:14: ( FOLLOWS_KEYWORD universal_identifier )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:639:16: FOLLOWS_KEYWORD universal_identifier
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -3547,7 +3547,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "trigger_part"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:639:1: trigger_part : ( ENABLE_KEYWORD | DISABLE_KEYWORD )? ( WHEN_KEYWORD universal_expression )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:1: trigger_part : ( ENABLE_KEYWORD | DISABLE_KEYWORD )? ( WHEN_KEYWORD universal_expression )? ;
     public final PL_SQLParser.trigger_part_return trigger_part() throws RecognitionException {
         PL_SQLParser.trigger_part_return retval = new PL_SQLParser.trigger_part_return();
         retval.start = input.LT(1);
@@ -3564,12 +3564,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 28) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:639:14: ( ( ENABLE_KEYWORD | DISABLE_KEYWORD )? ( WHEN_KEYWORD universal_expression )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:639:16: ( ENABLE_KEYWORD | DISABLE_KEYWORD )? ( WHEN_KEYWORD universal_expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:14: ( ( ENABLE_KEYWORD | DISABLE_KEYWORD )? ( WHEN_KEYWORD universal_expression )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:16: ( ENABLE_KEYWORD | DISABLE_KEYWORD )? ( WHEN_KEYWORD universal_expression )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:639:16: ( ENABLE_KEYWORD | DISABLE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:16: ( ENABLE_KEYWORD | DISABLE_KEYWORD )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -3598,7 +3598,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:639:52: ( WHEN_KEYWORD universal_expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:52: ( WHEN_KEYWORD universal_expression )?
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -3607,7 +3607,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt42) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:639:53: WHEN_KEYWORD universal_expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:53: WHEN_KEYWORD universal_expression
                     {
                     WHEN_KEYWORD109=(Token)match(input,WHEN_KEYWORD,FOLLOW_WHEN_KEYWORD_in_trigger_part5533); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -3656,7 +3656,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "trigger_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:1: trigger_type : ( ( BEFORE_KEYWORD ( dml_event_clause | non_dml_trigger ) ) | ( AFTER_KEYWORD ( dml_event_clause | non_dml_trigger ) ) | ( INSTEAD_KEYWORD OF_KEYWORD dml_event_clause ) | compound_dml_trigger );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:1: trigger_type : ( ( BEFORE_KEYWORD ( dml_event_clause | non_dml_trigger ) ) | ( AFTER_KEYWORD ( dml_event_clause | non_dml_trigger ) ) | ( INSTEAD_KEYWORD OF_KEYWORD dml_event_clause ) | compound_dml_trigger );
     public final PL_SQLParser.trigger_type_return trigger_type() throws RecognitionException {
         PL_SQLParser.trigger_type_return retval = new PL_SQLParser.trigger_type_return();
         retval.start = input.LT(1);
@@ -3687,7 +3687,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 29) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:14: ( ( BEFORE_KEYWORD ( dml_event_clause | non_dml_trigger ) ) | ( AFTER_KEYWORD ( dml_event_clause | non_dml_trigger ) ) | ( INSTEAD_KEYWORD OF_KEYWORD dml_event_clause ) | compound_dml_trigger )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:14: ( ( BEFORE_KEYWORD ( dml_event_clause | non_dml_trigger ) ) | ( AFTER_KEYWORD ( dml_event_clause | non_dml_trigger ) ) | ( INSTEAD_KEYWORD OF_KEYWORD dml_event_clause ) | compound_dml_trigger )
             int alt45=4;
             switch ( input.LA(1) ) {
             case BEFORE_KEYWORD:
@@ -3720,19 +3720,19 @@ public class PL_SQLParser extends Parser {
 
             switch (alt45) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:16: ( BEFORE_KEYWORD ( dml_event_clause | non_dml_trigger ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:16: ( BEFORE_KEYWORD ( dml_event_clause | non_dml_trigger ) )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:16: ( BEFORE_KEYWORD ( dml_event_clause | non_dml_trigger ) )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:17: BEFORE_KEYWORD ( dml_event_clause | non_dml_trigger )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:16: ( BEFORE_KEYWORD ( dml_event_clause | non_dml_trigger ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:17: BEFORE_KEYWORD ( dml_event_clause | non_dml_trigger )
                     {
                     BEFORE_KEYWORD111=(Token)match(input,BEFORE_KEYWORD,FOLLOW_BEFORE_KEYWORD_in_trigger_type5545); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     BEFORE_KEYWORD111_tree = (CommonTree)adaptor.create(BEFORE_KEYWORD111);
                     adaptor.addChild(root_0, BEFORE_KEYWORD111_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:32: ( dml_event_clause | non_dml_trigger )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:32: ( dml_event_clause | non_dml_trigger )
                     int alt43=2;
                     int LA43_0 = input.LA(1);
 
@@ -3751,7 +3751,7 @@ public class PL_SQLParser extends Parser {
                     }
                     switch (alt43) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:33: dml_event_clause
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:33: dml_event_clause
                             {
                             pushFollow(FOLLOW_dml_event_clause_in_trigger_type5548);
                             dml_event_clause112=dml_event_clause();
@@ -3763,7 +3763,7 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:640:52: non_dml_trigger
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:52: non_dml_trigger
                             {
                             pushFollow(FOLLOW_non_dml_trigger_in_trigger_type5552);
                             non_dml_trigger113=non_dml_trigger();
@@ -3784,19 +3784,19 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:16: ( AFTER_KEYWORD ( dml_event_clause | non_dml_trigger ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:642:16: ( AFTER_KEYWORD ( dml_event_clause | non_dml_trigger ) )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:16: ( AFTER_KEYWORD ( dml_event_clause | non_dml_trigger ) )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:17: AFTER_KEYWORD ( dml_event_clause | non_dml_trigger )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:642:16: ( AFTER_KEYWORD ( dml_event_clause | non_dml_trigger ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:642:17: AFTER_KEYWORD ( dml_event_clause | non_dml_trigger )
                     {
                     AFTER_KEYWORD114=(Token)match(input,AFTER_KEYWORD,FOLLOW_AFTER_KEYWORD_in_trigger_type5574); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     AFTER_KEYWORD114_tree = (CommonTree)adaptor.create(AFTER_KEYWORD114);
                     adaptor.addChild(root_0, AFTER_KEYWORD114_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:31: ( dml_event_clause | non_dml_trigger )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:642:31: ( dml_event_clause | non_dml_trigger )
                     int alt44=2;
                     int LA44_0 = input.LA(1);
 
@@ -3815,7 +3815,7 @@ public class PL_SQLParser extends Parser {
                     }
                     switch (alt44) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:32: dml_event_clause
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:642:32: dml_event_clause
                             {
                             pushFollow(FOLLOW_dml_event_clause_in_trigger_type5577);
                             dml_event_clause115=dml_event_clause();
@@ -3827,7 +3827,7 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:641:51: non_dml_trigger
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:642:51: non_dml_trigger
                             {
                             pushFollow(FOLLOW_non_dml_trigger_in_trigger_type5581);
                             non_dml_trigger116=non_dml_trigger();
@@ -3848,12 +3848,12 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:642:16: ( INSTEAD_KEYWORD OF_KEYWORD dml_event_clause )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:643:16: ( INSTEAD_KEYWORD OF_KEYWORD dml_event_clause )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:642:16: ( INSTEAD_KEYWORD OF_KEYWORD dml_event_clause )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:642:17: INSTEAD_KEYWORD OF_KEYWORD dml_event_clause
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:643:16: ( INSTEAD_KEYWORD OF_KEYWORD dml_event_clause )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:643:17: INSTEAD_KEYWORD OF_KEYWORD dml_event_clause
                     {
                     INSTEAD_KEYWORD117=(Token)match(input,INSTEAD_KEYWORD,FOLLOW_INSTEAD_KEYWORD_in_trigger_type5603); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -3878,7 +3878,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:643:16: compound_dml_trigger
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:644:16: compound_dml_trigger
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -3920,7 +3920,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "compound_dml_trigger"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:644:1: compound_dml_trigger : FOR_KEYWORD dml_event_clause ( referencing_clause )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:645:1: compound_dml_trigger : FOR_KEYWORD dml_event_clause ( referencing_clause )? ;
     public final PL_SQLParser.compound_dml_trigger_return compound_dml_trigger() throws RecognitionException {
         PL_SQLParser.compound_dml_trigger_return retval = new PL_SQLParser.compound_dml_trigger_return();
         retval.start = input.LT(1);
@@ -3937,8 +3937,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 30) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:644:22: ( FOR_KEYWORD dml_event_clause ( referencing_clause )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:644:24: FOR_KEYWORD dml_event_clause ( referencing_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:645:22: ( FOR_KEYWORD dml_event_clause ( referencing_clause )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:645:24: FOR_KEYWORD dml_event_clause ( referencing_clause )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -3953,7 +3953,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, dml_event_clause122.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:644:53: ( referencing_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:645:53: ( referencing_clause )?
             int alt46=2;
             int LA46_0 = input.LA(1);
 
@@ -4006,7 +4006,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "non_dml_trigger"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:645:1: non_dml_trigger : ( identifier ( OR_OPERATOR )? )+ ON_KEYWORD universal_identifier ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:1: non_dml_trigger : ( identifier ( OR_OPERATOR )? )+ ON_KEYWORD universal_identifier ;
     public final PL_SQLParser.non_dml_trigger_return non_dml_trigger() throws RecognitionException {
         PL_SQLParser.non_dml_trigger_return retval = new PL_SQLParser.non_dml_trigger_return();
         retval.start = input.LT(1);
@@ -4025,12 +4025,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 31) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:645:17: ( ( identifier ( OR_OPERATOR )? )+ ON_KEYWORD universal_identifier )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:645:19: ( identifier ( OR_OPERATOR )? )+ ON_KEYWORD universal_identifier
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:17: ( ( identifier ( OR_OPERATOR )? )+ ON_KEYWORD universal_identifier )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:19: ( identifier ( OR_OPERATOR )? )+ ON_KEYWORD universal_identifier
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:645:19: ( identifier ( OR_OPERATOR )? )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:19: ( identifier ( OR_OPERATOR )? )+
             int cnt48=0;
             loop48:
             do {
@@ -4044,7 +4044,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt48) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:645:20: identifier ( OR_OPERATOR )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:20: identifier ( OR_OPERATOR )?
             	    {
             	    pushFollow(FOLLOW_identifier_in_non_dml_trigger5647);
             	    identifier124=identifier();
@@ -4052,7 +4052,7 @@ public class PL_SQLParser extends Parser {
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier124.getTree());
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:645:31: ( OR_OPERATOR )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:31: ( OR_OPERATOR )?
             	    int alt47=2;
             	    int LA47_0 = input.LA(1);
 
@@ -4129,7 +4129,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "dml_event_clause"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:1: dml_event_clause : ( ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) ) ( OR_OPERATOR )? ( dml_event_clause_factor )? )+ dml_event_clause_part ( referencing_clause )? ( FOR_KEYWORD EACH_KEYWORD ROW_KEYWORD )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:1: dml_event_clause : ( ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) ) ( OR_OPERATOR )? ( dml_event_clause_factor )? )+ dml_event_clause_part ( referencing_clause )? ( FOR_KEYWORD EACH_KEYWORD ROW_KEYWORD )? ;
     public final PL_SQLParser.dml_event_clause_return dml_event_clause() throws RecognitionException {
         PL_SQLParser.dml_event_clause_return retval = new PL_SQLParser.dml_event_clause_return();
         retval.start = input.LT(1);
@@ -4162,12 +4162,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 32) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:18: ( ( ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) ) ( OR_OPERATOR )? ( dml_event_clause_factor )? )+ dml_event_clause_part ( referencing_clause )? ( FOR_KEYWORD EACH_KEYWORD ROW_KEYWORD )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:20: ( ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) ) ( OR_OPERATOR )? ( dml_event_clause_factor )? )+ dml_event_clause_part ( referencing_clause )? ( FOR_KEYWORD EACH_KEYWORD ROW_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:18: ( ( ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) ) ( OR_OPERATOR )? ( dml_event_clause_factor )? )+ dml_event_clause_part ( referencing_clause )? ( FOR_KEYWORD EACH_KEYWORD ROW_KEYWORD )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:20: ( ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) ) ( OR_OPERATOR )? ( dml_event_clause_factor )? )+ dml_event_clause_part ( referencing_clause )? ( FOR_KEYWORD EACH_KEYWORD ROW_KEYWORD )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:20: ( ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) ) ( OR_OPERATOR )? ( dml_event_clause_factor )? )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:20: ( ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) ) ( OR_OPERATOR )? ( dml_event_clause_factor )? )+
             int cnt53=0;
             loop53:
             do {
@@ -4181,9 +4181,9 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt53) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:21: ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) ) ( OR_OPERATOR )? ( dml_event_clause_factor )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:21: ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) ) ( OR_OPERATOR )? ( dml_event_clause_factor )?
             	    {
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:21: ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:21: ( INSERT_KEYWORD | DELETE_KEYWORD | ( UPDATE_KEYWORD ( dml_event_clause_factor )? ) )
             	    int alt50=3;
             	    switch ( input.LA(1) ) {
             	    case INSERT_KEYWORD:
@@ -4211,7 +4211,7 @@ public class PL_SQLParser extends Parser {
 
             	    switch (alt50) {
             	        case 1 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:22: INSERT_KEYWORD
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:22: INSERT_KEYWORD
             	            {
             	            INSERT_KEYWORD128=(Token)match(input,INSERT_KEYWORD,FOLLOW_INSERT_KEYWORD_in_dml_event_clause5665); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -4222,7 +4222,7 @@ public class PL_SQLParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:646:39: DELETE_KEYWORD
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:39: DELETE_KEYWORD
             	            {
             	            DELETE_KEYWORD129=(Token)match(input,DELETE_KEYWORD,FOLLOW_DELETE_KEYWORD_in_dml_event_clause5669); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -4233,22 +4233,22 @@ public class PL_SQLParser extends Parser {
             	            }
             	            break;
             	        case 3 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:21: ( UPDATE_KEYWORD ( dml_event_clause_factor )? )
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:648:21: ( UPDATE_KEYWORD ( dml_event_clause_factor )? )
             	            {
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:21: ( UPDATE_KEYWORD ( dml_event_clause_factor )? )
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:22: UPDATE_KEYWORD ( dml_event_clause_factor )?
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:648:21: ( UPDATE_KEYWORD ( dml_event_clause_factor )? )
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:648:22: UPDATE_KEYWORD ( dml_event_clause_factor )?
             	            {
             	            UPDATE_KEYWORD130=(Token)match(input,UPDATE_KEYWORD,FOLLOW_UPDATE_KEYWORD_in_dml_event_clause5695); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
             	            UPDATE_KEYWORD130_tree = (CommonTree)adaptor.create(UPDATE_KEYWORD130);
             	            adaptor.addChild(root_0, UPDATE_KEYWORD130_tree);
             	            }
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:37: ( dml_event_clause_factor )?
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:648:37: ( dml_event_clause_factor )?
             	            int alt49=2;
             	            int LA49_0 = input.LA(1);
 
             	            if ( (LA49_0==OF_KEYWORD) ) {
-            	                int LA49_1 = input.LA(2);
+            	                int LA49_2 = input.LA(2);
 
             	                if ( (synpred68_PL_SQL()) ) {
             	                    alt49=1;
@@ -4279,7 +4279,7 @@ public class PL_SQLParser extends Parser {
 
             	    }
 
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:648:21: ( OR_OPERATOR )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:649:21: ( OR_OPERATOR )?
             	    int alt51=2;
             	    int LA51_0 = input.LA(1);
 
@@ -4301,7 +4301,7 @@ public class PL_SQLParser extends Parser {
 
             	    }
 
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:648:34: ( dml_event_clause_factor )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:649:34: ( dml_event_clause_factor )?
             	    int alt52=2;
             	    int LA52_0 = input.LA(1);
 
@@ -4344,7 +4344,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, dml_event_clause_part134.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:649:43: ( referencing_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:650:43: ( referencing_clause )?
             int alt54=2;
             int LA54_0 = input.LA(1);
 
@@ -4371,7 +4371,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:650:21: ( FOR_KEYWORD EACH_KEYWORD ROW_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:651:21: ( FOR_KEYWORD EACH_KEYWORD ROW_KEYWORD )?
             int alt55=2;
             int LA55_0 = input.LA(1);
 
@@ -4380,7 +4380,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt55) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:650:22: FOR_KEYWORD EACH_KEYWORD ROW_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:651:22: FOR_KEYWORD EACH_KEYWORD ROW_KEYWORD
                     {
                     FOR_KEYWORD136=(Token)match(input,FOR_KEYWORD,FOLLOW_FOR_KEYWORD_in_dml_event_clause5776); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -4433,7 +4433,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "dml_event_clause_factor"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:651:1: dml_event_clause_factor : OF_KEYWORD ( universal_identifier ( COMMA )? )+ ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:1: dml_event_clause_factor : OF_KEYWORD ( universal_identifier ( COMMA )? )+ ;
     public final PL_SQLParser.dml_event_clause_factor_return dml_event_clause_factor() throws RecognitionException {
         PL_SQLParser.dml_event_clause_factor_return retval = new PL_SQLParser.dml_event_clause_factor_return();
         retval.start = input.LT(1);
@@ -4450,8 +4450,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 33) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:651:25: ( OF_KEYWORD ( universal_identifier ( COMMA )? )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:651:27: OF_KEYWORD ( universal_identifier ( COMMA )? )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:25: ( OF_KEYWORD ( universal_identifier ( COMMA )? )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:27: OF_KEYWORD ( universal_identifier ( COMMA )? )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -4460,7 +4460,7 @@ public class PL_SQLParser extends Parser {
             OF_KEYWORD139_tree = (CommonTree)adaptor.create(OF_KEYWORD139);
             adaptor.addChild(root_0, OF_KEYWORD139_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:651:38: ( universal_identifier ( COMMA )? )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:38: ( universal_identifier ( COMMA )? )+
             int cnt57=0;
             loop57:
             do {
@@ -4474,7 +4474,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt57) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:651:39: universal_identifier ( COMMA )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:39: universal_identifier ( COMMA )?
             	    {
             	    pushFollow(FOLLOW_universal_identifier_in_dml_event_clause_factor5792);
             	    universal_identifier140=universal_identifier();
@@ -4482,7 +4482,7 @@ public class PL_SQLParser extends Parser {
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, universal_identifier140.getTree());
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:651:60: ( COMMA )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:60: ( COMMA )?
             	    int alt56=2;
             	    int LA56_0 = input.LA(1);
 
@@ -4548,7 +4548,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "dml_event_clause_part"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:1: dml_event_clause_part : ON_KEYWORD ( ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )? universal_identifier ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:1: dml_event_clause_part : ON_KEYWORD ( ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )? universal_identifier ) ;
     public final PL_SQLParser.dml_event_clause_part_return dml_event_clause_part() throws RecognitionException {
         PL_SQLParser.dml_event_clause_part_return retval = new PL_SQLParser.dml_event_clause_part_return();
         retval.start = input.LT(1);
@@ -4571,8 +4571,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 34) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:23: ( ON_KEYWORD ( ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )? universal_identifier ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:25: ON_KEYWORD ( ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )? universal_identifier )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:23: ( ON_KEYWORD ( ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )? universal_identifier ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:25: ON_KEYWORD ( ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )? universal_identifier )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -4581,10 +4581,10 @@ public class PL_SQLParser extends Parser {
             ON_KEYWORD142_tree = (CommonTree)adaptor.create(ON_KEYWORD142);
             adaptor.addChild(root_0, ON_KEYWORD142_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:36: ( ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )? universal_identifier )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:37: ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )? universal_identifier
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:36: ( ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )? universal_identifier )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:37: ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )? universal_identifier
             {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:37: ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:37: ( NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
@@ -4593,7 +4593,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt58) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:652:38: NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:38: NESTED_KEYWORD TABLE_KEYWORD identifier OF_KEYWORD
                     {
                     NESTED_KEYWORD143=(Token)match(input,NESTED_KEYWORD,FOLLOW_NESTED_KEYWORD_in_dml_event_clause_part5808); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -4661,7 +4661,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "referencing_clause"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:1: referencing_clause : REFERENCING_KEYWORD ( ( OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD ) ( AS_KEYWORD )? ( OLD_KEYWORD | NEW_KEYWORD | identifier ) )+ ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:654:1: referencing_clause : REFERENCING_KEYWORD ( ( OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD ) ( AS_KEYWORD )? ( OLD_KEYWORD | NEW_KEYWORD | identifier ) )+ ;
     public final PL_SQLParser.referencing_clause_return referencing_clause() throws RecognitionException {
         PL_SQLParser.referencing_clause_return retval = new PL_SQLParser.referencing_clause_return();
         retval.start = input.LT(1);
@@ -4684,8 +4684,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 35) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:20: ( REFERENCING_KEYWORD ( ( OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD ) ( AS_KEYWORD )? ( OLD_KEYWORD | NEW_KEYWORD | identifier ) )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:22: REFERENCING_KEYWORD ( ( OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD ) ( AS_KEYWORD )? ( OLD_KEYWORD | NEW_KEYWORD | identifier ) )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:654:20: ( REFERENCING_KEYWORD ( ( OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD ) ( AS_KEYWORD )? ( OLD_KEYWORD | NEW_KEYWORD | identifier ) )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:654:22: REFERENCING_KEYWORD ( ( OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD ) ( AS_KEYWORD )? ( OLD_KEYWORD | NEW_KEYWORD | identifier ) )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -4694,7 +4694,7 @@ public class PL_SQLParser extends Parser {
             REFERENCING_KEYWORD148_tree = (CommonTree)adaptor.create(REFERENCING_KEYWORD148);
             adaptor.addChild(root_0, REFERENCING_KEYWORD148_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:42: ( ( OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD ) ( AS_KEYWORD )? ( OLD_KEYWORD | NEW_KEYWORD | identifier ) )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:654:42: ( ( OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD ) ( AS_KEYWORD )? ( OLD_KEYWORD | NEW_KEYWORD | identifier ) )+
             int cnt61=0;
             loop61:
             do {
@@ -4708,7 +4708,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt61) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:653:44: ( OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD ) ( AS_KEYWORD )? ( OLD_KEYWORD | NEW_KEYWORD | identifier )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:654:44: ( OLD_KEYWORD | NEW_KEYWORD | PARENT_KEYWORD ) ( AS_KEYWORD )? ( OLD_KEYWORD | NEW_KEYWORD | identifier )
             	    {
             	    set149=(Token)input.LT(1);
             	    if ( (input.LA(1)>=OLD_KEYWORD && input.LA(1)<=PARENT_KEYWORD) ) {
@@ -4722,7 +4722,7 @@ public class PL_SQLParser extends Parser {
             	        throw mse;
             	    }
 
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:654:22: ( AS_KEYWORD )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:22: ( AS_KEYWORD )?
             	    int alt59=2;
             	    int LA59_0 = input.LA(1);
 
@@ -4744,7 +4744,7 @@ public class PL_SQLParser extends Parser {
 
             	    }
 
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:654:34: ( OLD_KEYWORD | NEW_KEYWORD | identifier )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:34: ( OLD_KEYWORD | NEW_KEYWORD | identifier )
             	    int alt60=3;
             	    switch ( input.LA(1) ) {
             	    case OLD_KEYWORD:
@@ -4774,7 +4774,7 @@ public class PL_SQLParser extends Parser {
 
             	    switch (alt60) {
             	        case 1 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:654:35: OLD_KEYWORD
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:35: OLD_KEYWORD
             	            {
             	            OLD_KEYWORD151=(Token)match(input,OLD_KEYWORD,FOLLOW_OLD_KEYWORD_in_referencing_clause5867); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -4785,7 +4785,7 @@ public class PL_SQLParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:654:49: NEW_KEYWORD
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:49: NEW_KEYWORD
             	            {
             	            NEW_KEYWORD152=(Token)match(input,NEW_KEYWORD,FOLLOW_NEW_KEYWORD_in_referencing_clause5871); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -4796,7 +4796,7 @@ public class PL_SQLParser extends Parser {
             	            }
             	            break;
             	        case 3 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:654:63: identifier
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:63: identifier
             	            {
             	            pushFollow(FOLLOW_identifier_in_referencing_clause5875);
             	            identifier153=identifier();
@@ -4854,7 +4854,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "type_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:1: type_declaration : ( ( TYPE_KEYWORD type_spec_declaration ) -> ^( IM_TYPE_SPC type_spec_declaration ) | ( TYPE_KEYWORD type_body_declaration ) -> ^( IM_TYPE_BODY type_body_declaration ) );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:656:1: type_declaration : ( ( TYPE_KEYWORD type_spec_declaration ) -> ^( IM_TYPE_SPC type_spec_declaration ) | ( TYPE_KEYWORD type_body_declaration ) -> ^( IM_TYPE_BODY type_body_declaration ) );
     public final PL_SQLParser.type_declaration_return type_declaration() throws RecognitionException {
         PL_SQLParser.type_declaration_return retval = new PL_SQLParser.type_declaration_return();
         retval.start = input.LT(1);
@@ -4875,7 +4875,7 @@ public class PL_SQLParser extends Parser {
         RewriteRuleSubtreeStream stream_type_spec_declaration=new RewriteRuleSubtreeStream(adaptor,"rule type_spec_declaration");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 36) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:18: ( ( TYPE_KEYWORD type_spec_declaration ) -> ^( IM_TYPE_SPC type_spec_declaration ) | ( TYPE_KEYWORD type_body_declaration ) -> ^( IM_TYPE_BODY type_body_declaration ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:656:18: ( ( TYPE_KEYWORD type_spec_declaration ) -> ^( IM_TYPE_SPC type_spec_declaration ) | ( TYPE_KEYWORD type_body_declaration ) -> ^( IM_TYPE_BODY type_body_declaration ) )
             int alt62=2;
             int LA62_0 = input.LA(1);
 
@@ -4905,10 +4905,10 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt62) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:20: ( TYPE_KEYWORD type_spec_declaration )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:656:20: ( TYPE_KEYWORD type_spec_declaration )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:20: ( TYPE_KEYWORD type_spec_declaration )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:21: TYPE_KEYWORD type_spec_declaration
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:656:20: ( TYPE_KEYWORD type_spec_declaration )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:656:21: TYPE_KEYWORD type_spec_declaration
                     {
                     TYPE_KEYWORD154=(Token)match(input,TYPE_KEYWORD,FOLLOW_TYPE_KEYWORD_in_type_declaration5887); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_TYPE_KEYWORD.add(TYPE_KEYWORD154);
@@ -4936,9 +4936,9 @@ public class PL_SQLParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 655:57: -> ^( IM_TYPE_SPC type_spec_declaration )
+                    // 656:57: -> ^( IM_TYPE_SPC type_spec_declaration )
                     {
-                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:60: ^( IM_TYPE_SPC type_spec_declaration )
+                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:656:60: ^( IM_TYPE_SPC type_spec_declaration )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_TYPE_SPC, "IM_TYPE_SPC"), root_1);
@@ -4954,10 +4954,10 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:657:20: ( TYPE_KEYWORD type_body_declaration )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:658:20: ( TYPE_KEYWORD type_body_declaration )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:657:20: ( TYPE_KEYWORD type_body_declaration )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:657:21: TYPE_KEYWORD type_body_declaration
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:658:20: ( TYPE_KEYWORD type_body_declaration )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:658:21: TYPE_KEYWORD type_body_declaration
                     {
                     TYPE_KEYWORD156=(Token)match(input,TYPE_KEYWORD,FOLLOW_TYPE_KEYWORD_in_type_declaration5941); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_TYPE_KEYWORD.add(TYPE_KEYWORD156);
@@ -4985,9 +4985,9 @@ public class PL_SQLParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 657:57: -> ^( IM_TYPE_BODY type_body_declaration )
+                    // 658:57: -> ^( IM_TYPE_BODY type_body_declaration )
                     {
-                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:657:60: ^( IM_TYPE_BODY type_body_declaration )
+                        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:658:60: ^( IM_TYPE_BODY type_body_declaration )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_TYPE_BODY, "IM_TYPE_BODY"), root_1);
@@ -5031,7 +5031,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "type_spec_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:658:1: type_spec_declaration : type_spec_name ( type_oid_part )? ( invoker_clause )? type_spec_types ( SEPARATOR )? ( '/' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:659:1: type_spec_declaration : type_spec_name ( type_oid_part )? ( invoker_clause )? type_spec_types ( SEPARATOR )? ( '/' )? ;
     public final PL_SQLParser.type_spec_declaration_return type_spec_declaration() throws RecognitionException {
         PL_SQLParser.type_spec_declaration_return retval = new PL_SQLParser.type_spec_declaration_return();
         retval.start = input.LT(1);
@@ -5054,8 +5054,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 37) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:658:23: ( type_spec_name ( type_oid_part )? ( invoker_clause )? type_spec_types ( SEPARATOR )? ( '/' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:658:25: type_spec_name ( type_oid_part )? ( invoker_clause )? type_spec_types ( SEPARATOR )? ( '/' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:659:23: ( type_spec_name ( type_oid_part )? ( invoker_clause )? type_spec_types ( SEPARATOR )? ( '/' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:659:25: type_spec_name ( type_oid_part )? ( invoker_clause )? type_spec_types ( SEPARATOR )? ( '/' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -5065,7 +5065,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, type_spec_name158.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:658:40: ( type_oid_part )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:659:40: ( type_oid_part )?
             int alt63=2;
             int LA63_0 = input.LA(1);
 
@@ -5088,7 +5088,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:658:55: ( invoker_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:659:55: ( invoker_clause )?
             int alt64=2;
             int LA64_0 = input.LA(1);
 
@@ -5117,7 +5117,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, type_spec_types161.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:659:25: ( SEPARATOR )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:660:25: ( SEPARATOR )?
             int alt65=2;
             int LA65_0 = input.LA(1);
 
@@ -5139,7 +5139,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:659:36: ( '/' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:660:36: ( '/' )?
             int alt66=2;
             int LA66_0 = input.LA(1);
 
@@ -5191,7 +5191,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "type_spec_name"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:660:1: type_spec_name : ( universal_identifier | ALIAS );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:661:1: type_spec_name : ( universal_identifier | ALIAS );
     public final PL_SQLParser.type_spec_name_return type_spec_name() throws RecognitionException {
         PL_SQLParser.type_spec_name_return retval = new PL_SQLParser.type_spec_name_return();
         retval.start = input.LT(1);
@@ -5206,7 +5206,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 38) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:660:16: ( universal_identifier | ALIAS )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:661:16: ( universal_identifier | ALIAS )
             int alt67=2;
             int LA67_0 = input.LA(1);
 
@@ -5225,7 +5225,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt67) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:660:18: universal_identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:661:18: universal_identifier
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5239,7 +5239,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:660:41: ALIAS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:661:41: ALIAS
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5280,7 +5280,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "type_oid_part"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:661:1: type_oid_part : OID_KEYWORD '\\'' universal_identifier '\\'' ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:1: type_oid_part : OID_KEYWORD '\\'' universal_identifier '\\'' ;
     public final PL_SQLParser.type_oid_part_return type_oid_part() throws RecognitionException {
         PL_SQLParser.type_oid_part_return retval = new PL_SQLParser.type_oid_part_return();
         retval.start = input.LT(1);
@@ -5299,8 +5299,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 39) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:661:15: ( OID_KEYWORD '\\'' universal_identifier '\\'' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:661:17: OID_KEYWORD '\\'' universal_identifier '\\''
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:15: ( OID_KEYWORD '\\'' universal_identifier '\\'' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:17: OID_KEYWORD '\\'' universal_identifier '\\''
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -5355,7 +5355,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "type_spec_types"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:1: type_spec_types : ( object_type | varray_type | nested_table_type );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:1: type_spec_types : ( object_type | varray_type | nested_table_type );
     public final PL_SQLParser.type_spec_types_return type_spec_types() throws RecognitionException {
         PL_SQLParser.type_spec_types_return retval = new PL_SQLParser.type_spec_types_return();
         retval.start = input.LT(1);
@@ -5372,7 +5372,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 40) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:17: ( object_type | varray_type | nested_table_type )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:17: ( object_type | varray_type | nested_table_type )
             int alt68=3;
             int LA68_0 = input.LA(1);
 
@@ -5408,7 +5408,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt68) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:19: object_type
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:19: object_type
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5422,7 +5422,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:33: varray_type
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:33: varray_type
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5436,7 +5436,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:47: nested_table_type
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:47: nested_table_type
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5478,7 +5478,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "object_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:1: object_type : ( ( as_is_part OBJECT_KEYWORD ) | ( UNDER_KEYWORD universal_identifier ) ) ( object_type_part )? ( ( NOT_OPERATOR )? FINAL_KEYWORD )? ( ( NOT_OPERATOR )? INSTANTIABLE_KEYWORD )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:664:1: object_type : ( ( as_is_part OBJECT_KEYWORD ) | ( UNDER_KEYWORD universal_identifier ) ) ( object_type_part )? ( ( NOT_OPERATOR )? FINAL_KEYWORD )? ( ( NOT_OPERATOR )? INSTANTIABLE_KEYWORD )? ;
     public final PL_SQLParser.object_type_return object_type() throws RecognitionException {
         PL_SQLParser.object_type_return retval = new PL_SQLParser.object_type_return();
         retval.start = input.LT(1);
@@ -5507,12 +5507,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 41) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:13: ( ( ( as_is_part OBJECT_KEYWORD ) | ( UNDER_KEYWORD universal_identifier ) ) ( object_type_part )? ( ( NOT_OPERATOR )? FINAL_KEYWORD )? ( ( NOT_OPERATOR )? INSTANTIABLE_KEYWORD )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:15: ( ( as_is_part OBJECT_KEYWORD ) | ( UNDER_KEYWORD universal_identifier ) ) ( object_type_part )? ( ( NOT_OPERATOR )? FINAL_KEYWORD )? ( ( NOT_OPERATOR )? INSTANTIABLE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:664:13: ( ( ( as_is_part OBJECT_KEYWORD ) | ( UNDER_KEYWORD universal_identifier ) ) ( object_type_part )? ( ( NOT_OPERATOR )? FINAL_KEYWORD )? ( ( NOT_OPERATOR )? INSTANTIABLE_KEYWORD )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:664:15: ( ( as_is_part OBJECT_KEYWORD ) | ( UNDER_KEYWORD universal_identifier ) ) ( object_type_part )? ( ( NOT_OPERATOR )? FINAL_KEYWORD )? ( ( NOT_OPERATOR )? INSTANTIABLE_KEYWORD )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:15: ( ( as_is_part OBJECT_KEYWORD ) | ( UNDER_KEYWORD universal_identifier ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:664:15: ( ( as_is_part OBJECT_KEYWORD ) | ( UNDER_KEYWORD universal_identifier ) )
             int alt69=2;
             int LA69_0 = input.LA(1);
 
@@ -5531,10 +5531,10 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt69) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:16: ( as_is_part OBJECT_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:664:16: ( as_is_part OBJECT_KEYWORD )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:16: ( as_is_part OBJECT_KEYWORD )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:17: as_is_part OBJECT_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:664:16: ( as_is_part OBJECT_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:664:17: as_is_part OBJECT_KEYWORD
                     {
                     pushFollow(FOLLOW_as_is_part_in_object_type6046);
                     as_is_part173=as_is_part();
@@ -5554,10 +5554,10 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:46: ( UNDER_KEYWORD universal_identifier )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:664:46: ( UNDER_KEYWORD universal_identifier )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:46: ( UNDER_KEYWORD universal_identifier )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:47: UNDER_KEYWORD universal_identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:664:46: ( UNDER_KEYWORD universal_identifier )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:664:47: UNDER_KEYWORD universal_identifier
                     {
                     UNDER_KEYWORD175=(Token)match(input,UNDER_KEYWORD,FOLLOW_UNDER_KEYWORD_in_object_type6054); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -5579,7 +5579,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:664:15: ( object_type_part )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:665:15: ( object_type_part )?
             int alt70=2;
             int LA70_0 = input.LA(1);
 
@@ -5602,25 +5602,25 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:665:16: ( ( NOT_OPERATOR )? FINAL_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:16: ( ( NOT_OPERATOR )? FINAL_KEYWORD )?
             int alt72=2;
             int LA72_0 = input.LA(1);
 
-            if ( (LA72_0==FINAL_KEYWORD) ) {
-                alt72=1;
-            }
-            else if ( (LA72_0==NOT_OPERATOR) ) {
-                int LA72_3 = input.LA(2);
+            if ( (LA72_0==NOT_OPERATOR) ) {
+                int LA72_1 = input.LA(2);
 
                 if ( (synpred94_PL_SQL()) ) {
                     alt72=1;
                 }
             }
+            else if ( (LA72_0==FINAL_KEYWORD) ) {
+                alt72=1;
+            }
             switch (alt72) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:665:17: ( NOT_OPERATOR )? FINAL_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:17: ( NOT_OPERATOR )? FINAL_KEYWORD
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:665:17: ( NOT_OPERATOR )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:17: ( NOT_OPERATOR )?
                     int alt71=2;
                     int LA71_0 = input.LA(1);
 
@@ -5653,7 +5653,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:665:47: ( ( NOT_OPERATOR )? INSTANTIABLE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:47: ( ( NOT_OPERATOR )? INSTANTIABLE_KEYWORD )?
             int alt74=2;
             int LA74_0 = input.LA(1);
 
@@ -5662,9 +5662,9 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt74) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:665:48: ( NOT_OPERATOR )? INSTANTIABLE_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:48: ( NOT_OPERATOR )? INSTANTIABLE_KEYWORD
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:665:48: ( NOT_OPERATOR )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:48: ( NOT_OPERATOR )?
                     int alt73=2;
                     int LA73_0 = input.LA(1);
 
@@ -5727,7 +5727,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "object_type_part"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:1: object_type_part : '(' ( identifier data_type ( ',' )? )+ ( element_spec ( ',' )? )* ')' ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:1: object_type_part : '(' ( identifier data_type ( ',' )? )+ ( element_spec ( ',' )? )* ')' ;
     public final PL_SQLParser.object_type_part_return object_type_part() throws RecognitionException {
         PL_SQLParser.object_type_part_return retval = new PL_SQLParser.object_type_part_return();
         retval.start = input.LT(1);
@@ -5752,8 +5752,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 42) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:18: ( '(' ( identifier data_type ( ',' )? )+ ( element_spec ( ',' )? )* ')' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:20: '(' ( identifier data_type ( ',' )? )+ ( element_spec ( ',' )? )* ')'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:18: ( '(' ( identifier data_type ( ',' )? )+ ( element_spec ( ',' )? )* ')' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:20: '(' ( identifier data_type ( ',' )? )+ ( element_spec ( ',' )? )* ')'
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -5762,7 +5762,7 @@ public class PL_SQLParser extends Parser {
             char_literal182_tree = (CommonTree)adaptor.create(char_literal182);
             adaptor.addChild(root_0, char_literal182_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:24: ( identifier data_type ( ',' )? )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:24: ( identifier data_type ( ',' )? )+
             int cnt76=0;
             loop76:
             do {
@@ -5776,7 +5776,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt76) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:25: identifier data_type ( ',' )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:25: identifier data_type ( ',' )?
             	    {
             	    pushFollow(FOLLOW_identifier_in_object_type_part6116);
             	    identifier183=identifier();
@@ -5790,7 +5790,7 @@ public class PL_SQLParser extends Parser {
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type184.getTree());
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:46: ( ',' )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:46: ( ',' )?
             	    int alt75=2;
             	    int LA75_0 = input.LA(1);
 
@@ -5826,7 +5826,7 @@ public class PL_SQLParser extends Parser {
                 cnt76++;
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:53: ( element_spec ( ',' )? )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:53: ( element_spec ( ',' )? )*
             loop78:
             do {
                 int alt78=2;
@@ -5839,7 +5839,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt78) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:54: element_spec ( ',' )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:54: element_spec ( ',' )?
             	    {
             	    pushFollow(FOLLOW_element_spec_in_object_type_part6126);
             	    element_spec186=element_spec();
@@ -5847,7 +5847,7 @@ public class PL_SQLParser extends Parser {
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, element_spec186.getTree());
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:67: ( ',' )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:67: ( ',' )?
             	    int alt77=2;
             	    int LA77_0 = input.LA(1);
 
@@ -5913,7 +5913,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "element_spec"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:1: element_spec : ( inheritance_clauses )? ( ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )? )+ ( pragma_clause )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:1: element_spec : ( inheritance_clauses )? ( ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )? )+ ( pragma_clause )? ;
     public final PL_SQLParser.element_spec_return element_spec() throws RecognitionException {
         PL_SQLParser.element_spec_return retval = new PL_SQLParser.element_spec_return();
         retval.start = input.LT(1);
@@ -5936,24 +5936,24 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 43) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:14: ( ( inheritance_clauses )? ( ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )? )+ ( pragma_clause )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:16: ( inheritance_clauses )? ( ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )? )+ ( pragma_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:14: ( ( inheritance_clauses )? ( ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )? )+ ( pragma_clause )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:16: ( inheritance_clauses )? ( ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )? )+ ( pragma_clause )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:16: ( inheritance_clauses )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:16: ( inheritance_clauses )?
             int alt79=2;
             int LA79_0 = input.LA(1);
 
-            if ( (LA79_0==OVERRIDING_KEYWORD||LA79_0==NOT_OPERATOR) ) {
-                alt79=1;
-            }
-            else if ( ((LA79_0>=FINAL_KEYWORD && LA79_0<=INSTANTIABLE_KEYWORD)) ) {
-                int LA79_3 = input.LA(2);
+            if ( ((LA79_0>=FINAL_KEYWORD && LA79_0<=INSTANTIABLE_KEYWORD)) ) {
+                int LA79_1 = input.LA(2);
 
                 if ( (synpred101_PL_SQL()) ) {
                     alt79=1;
                 }
+            }
+            else if ( (LA79_0==OVERRIDING_KEYWORD||LA79_0==NOT_OPERATOR) ) {
+                alt79=1;
             }
             switch (alt79) {
                 case 1 :
@@ -5971,7 +5971,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:37: ( ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )? )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:37: ( ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )? )+
             int cnt82=0;
             loop82:
             do {
@@ -5979,7 +5979,7 @@ public class PL_SQLParser extends Parser {
                 int LA82_0 = input.LA(1);
 
                 if ( ((LA82_0>=FINAL_KEYWORD && LA82_0<=INSTANTIABLE_KEYWORD)||(LA82_0>=MEMBER_KEYWORD && LA82_0<=CONSTRUCTOR_KEYWORD)||(LA82_0>=MAP_KEYWORD && LA82_0<=ORDER_KEYWORD)) ) {
-                    int LA82_1 = input.LA(2);
+                    int LA82_2 = input.LA(2);
 
                     if ( (synpred105_PL_SQL()) ) {
                         alt82=1;
@@ -5991,9 +5991,9 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt82) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:38: ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:38: ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )?
             	    {
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:38: ( subprogram_spec | constructor_spec | map_order_function_spec )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:38: ( subprogram_spec | constructor_spec | map_order_function_spec )
             	    int alt80=3;
             	    switch ( input.LA(1) ) {
             	    case MEMBER_KEYWORD:
@@ -6025,7 +6025,7 @@ public class PL_SQLParser extends Parser {
 
             	    switch (alt80) {
             	        case 1 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:39: subprogram_spec
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:39: subprogram_spec
             	            {
             	            pushFollow(FOLLOW_subprogram_spec_in_element_spec6145);
             	            subprogram_spec190=subprogram_spec();
@@ -6037,7 +6037,7 @@ public class PL_SQLParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:57: constructor_spec
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:57: constructor_spec
             	            {
             	            pushFollow(FOLLOW_constructor_spec_in_element_spec6149);
             	            constructor_spec191=constructor_spec();
@@ -6049,7 +6049,7 @@ public class PL_SQLParser extends Parser {
             	            }
             	            break;
             	        case 3 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:76: map_order_function_spec
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:76: map_order_function_spec
             	            {
             	            pushFollow(FOLLOW_map_order_function_spec_in_element_spec6153);
             	            map_order_function_spec192=map_order_function_spec();
@@ -6063,7 +6063,7 @@ public class PL_SQLParser extends Parser {
 
             	    }
 
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:101: ( ',' )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:101: ( ',' )?
             	    int alt81=2;
             	    int LA81_0 = input.LA(1);
 
@@ -6103,7 +6103,7 @@ public class PL_SQLParser extends Parser {
                 cnt82++;
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:16: ( pragma_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:669:16: ( pragma_clause )?
             int alt83=2;
             int LA83_0 = input.LA(1);
 
@@ -6156,7 +6156,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "pragma_clause"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:669:1: pragma_clause : PRAGMA_KEYWORD RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:670:1: pragma_clause : PRAGMA_KEYWORD RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ;
     public final PL_SQLParser.pragma_clause_return pragma_clause() throws RecognitionException {
         PL_SQLParser.pragma_clause_return retval = new PL_SQLParser.pragma_clause_return();
         retval.start = input.LT(1);
@@ -6181,8 +6181,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 44) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:669:15: ( PRAGMA_KEYWORD RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:669:17: PRAGMA_KEYWORD RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:670:15: ( PRAGMA_KEYWORD RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:670:17: PRAGMA_KEYWORD RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')'
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -6207,7 +6207,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, expression198.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:669:75: ( ',' expression )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:670:75: ( ',' expression )+
             int cnt84=0;
             loop84:
             do {
@@ -6221,7 +6221,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt84) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:669:76: ',' expression
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:670:76: ',' expression
             	    {
             	    char_literal199=(Token)match(input,COMMA,FOLLOW_COMMA_in_pragma_clause6193); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -6283,7 +6283,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "map_order_function_spec"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:670:1: map_order_function_spec : ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_spec ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:671:1: map_order_function_spec : ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_spec ;
     public final PL_SQLParser.map_order_function_spec_return map_order_function_spec() throws RecognitionException {
         PL_SQLParser.map_order_function_spec_return retval = new PL_SQLParser.map_order_function_spec_return();
         retval.start = input.LT(1);
@@ -6300,8 +6300,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 45) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:670:25: ( ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_spec )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:670:27: ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_spec
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:671:25: ( ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_spec )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:671:27: ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_spec
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -6358,7 +6358,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "constructor_spec"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:671:1: constructor_spec : ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:672:1: constructor_spec : ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )? ;
     public final PL_SQLParser.constructor_spec_return constructor_spec() throws RecognitionException {
         PL_SQLParser.constructor_spec_return retval = new PL_SQLParser.constructor_spec_return();
         retval.start = input.LT(1);
@@ -6381,12 +6381,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 46) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:671:18: ( ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:671:20: ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:672:18: ( ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:672:20: ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:671:20: ( FINAL_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:672:20: ( FINAL_KEYWORD )?
             int alt85=2;
             int LA85_0 = input.LA(1);
 
@@ -6408,7 +6408,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:671:35: ( INSTANTIABLE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:672:35: ( INSTANTIABLE_KEYWORD )?
             int alt86=2;
             int LA86_0 = input.LA(1);
 
@@ -6446,7 +6446,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type209.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:672:30: ( constructor_spec_part )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:673:30: ( constructor_spec_part )?
             int alt87=2;
             int LA87_0 = input.LA(1);
 
@@ -6499,7 +6499,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "constructor_spec_part"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:673:1: constructor_spec_part : '(' ( SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ',' )? ( identifier ( IN_KEYWORD )? data_type ( ',' )? )+ ')' RETURN_KEYWORD SELF_KEYWORD AS_KEYWORD RESULT_KEYWORD ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:674:1: constructor_spec_part : '(' ( SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ',' )? ( identifier ( IN_KEYWORD )? data_type ( ',' )? )+ ')' RETURN_KEYWORD SELF_KEYWORD AS_KEYWORD RESULT_KEYWORD ;
     public final PL_SQLParser.constructor_spec_part_return constructor_spec_part() throws RecognitionException {
         PL_SQLParser.constructor_spec_part_return retval = new PL_SQLParser.constructor_spec_part_return();
         retval.start = input.LT(1);
@@ -6538,8 +6538,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 47) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:673:23: ( '(' ( SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ',' )? ( identifier ( IN_KEYWORD )? data_type ( ',' )? )+ ')' RETURN_KEYWORD SELF_KEYWORD AS_KEYWORD RESULT_KEYWORD )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:673:25: '(' ( SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ',' )? ( identifier ( IN_KEYWORD )? data_type ( ',' )? )+ ')' RETURN_KEYWORD SELF_KEYWORD AS_KEYWORD RESULT_KEYWORD
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:674:23: ( '(' ( SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ',' )? ( identifier ( IN_KEYWORD )? data_type ( ',' )? )+ ')' RETURN_KEYWORD SELF_KEYWORD AS_KEYWORD RESULT_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:674:25: '(' ( SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ',' )? ( identifier ( IN_KEYWORD )? data_type ( ',' )? )+ ')' RETURN_KEYWORD SELF_KEYWORD AS_KEYWORD RESULT_KEYWORD
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -6548,7 +6548,7 @@ public class PL_SQLParser extends Parser {
             char_literal211_tree = (CommonTree)adaptor.create(char_literal211);
             adaptor.addChild(root_0, char_literal211_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:673:29: ( SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ',' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:674:29: ( SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ',' )?
             int alt88=2;
             int LA88_0 = input.LA(1);
 
@@ -6557,7 +6557,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt88) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:673:30: SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ','
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:674:30: SELF_KEYWORD IN_KEYWORD OUT_KEYWORD ','
                     {
                     SELF_KEYWORD212=(Token)match(input,SELF_KEYWORD,FOLLOW_SELF_KEYWORD_in_constructor_spec_part6265); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -6585,7 +6585,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:674:25: ( identifier ( IN_KEYWORD )? data_type ( ',' )? )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:675:25: ( identifier ( IN_KEYWORD )? data_type ( ',' )? )+
             int cnt91=0;
             loop91:
             do {
@@ -6599,7 +6599,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt91) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:674:26: identifier ( IN_KEYWORD )? data_type ( ',' )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:675:26: identifier ( IN_KEYWORD )? data_type ( ',' )?
             	    {
             	    pushFollow(FOLLOW_identifier_in_constructor_spec_part6300);
             	    identifier216=identifier();
@@ -6607,7 +6607,7 @@ public class PL_SQLParser extends Parser {
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier216.getTree());
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:674:37: ( IN_KEYWORD )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:675:37: ( IN_KEYWORD )?
             	    int alt89=2;
             	    int LA89_0 = input.LA(1);
 
@@ -6635,7 +6635,7 @@ public class PL_SQLParser extends Parser {
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type218.getTree());
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:674:59: ( ',' )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:675:59: ( ',' )?
             	    int alt90=2;
             	    int LA90_0 = input.LA(1);
 
@@ -6726,7 +6726,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "subprogram_spec"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:676:1: subprogram_spec : ( MEMBER_KEYWORD | STATIC_KEYWORD ) ( function_spec | procedure_spec ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:677:1: subprogram_spec : ( MEMBER_KEYWORD | STATIC_KEYWORD ) ( function_spec | procedure_spec ) ;
     public final PL_SQLParser.subprogram_spec_return subprogram_spec() throws RecognitionException {
         PL_SQLParser.subprogram_spec_return retval = new PL_SQLParser.subprogram_spec_return();
         retval.start = input.LT(1);
@@ -6743,8 +6743,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 48) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:676:17: ( ( MEMBER_KEYWORD | STATIC_KEYWORD ) ( function_spec | procedure_spec ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:676:19: ( MEMBER_KEYWORD | STATIC_KEYWORD ) ( function_spec | procedure_spec )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:677:17: ( ( MEMBER_KEYWORD | STATIC_KEYWORD ) ( function_spec | procedure_spec ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:677:19: ( MEMBER_KEYWORD | STATIC_KEYWORD ) ( function_spec | procedure_spec )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -6760,7 +6760,7 @@ public class PL_SQLParser extends Parser {
                 throw mse;
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:676:53: ( function_spec | procedure_spec )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:677:53: ( function_spec | procedure_spec )
             int alt92=2;
             int LA92_0 = input.LA(1);
 
@@ -6779,7 +6779,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt92) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:676:54: function_spec
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:677:54: function_spec
                     {
                     pushFollow(FOLLOW_function_spec_in_subprogram_spec6360);
                     function_spec226=function_spec();
@@ -6791,7 +6791,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:676:70: procedure_spec
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:677:70: procedure_spec
                     {
                     pushFollow(FOLLOW_procedure_spec_in_subprogram_spec6364);
                     procedure_spec227=procedure_spec();
@@ -6835,7 +6835,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "inheritance_clauses"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:677:1: inheritance_clauses : ( NOT_OPERATOR )? ( FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:678:1: inheritance_clauses : ( NOT_OPERATOR )? ( FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD ) ;
     public final PL_SQLParser.inheritance_clauses_return inheritance_clauses() throws RecognitionException {
         PL_SQLParser.inheritance_clauses_return retval = new PL_SQLParser.inheritance_clauses_return();
         retval.start = input.LT(1);
@@ -6850,12 +6850,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 49) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:677:21: ( ( NOT_OPERATOR )? ( FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:677:23: ( NOT_OPERATOR )? ( FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:678:21: ( ( NOT_OPERATOR )? ( FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:678:23: ( NOT_OPERATOR )? ( FINAL_KEYWORD | INSTANTIABLE_KEYWORD | OVERRIDING_KEYWORD )
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:677:23: ( NOT_OPERATOR )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:678:23: ( NOT_OPERATOR )?
             int alt93=2;
             int LA93_0 = input.LA(1);
 
@@ -6919,7 +6919,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "varray_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:678:1: varray_type : as_is_part collection_varray_datatype ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:679:1: varray_type : as_is_part collection_varray_datatype ;
     public final PL_SQLParser.varray_type_return varray_type() throws RecognitionException {
         PL_SQLParser.varray_type_return retval = new PL_SQLParser.varray_type_return();
         retval.start = input.LT(1);
@@ -6934,8 +6934,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 50) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:678:13: ( as_is_part collection_varray_datatype )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:678:15: as_is_part collection_varray_datatype
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:679:13: ( as_is_part collection_varray_datatype )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:679:15: as_is_part collection_varray_datatype
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -6981,7 +6981,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "nested_table_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:679:1: nested_table_type : as_is_part TABLE_KEYWORD OF_KEYWORD data_type ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:680:1: nested_table_type : as_is_part TABLE_KEYWORD OF_KEYWORD data_type ;
     public final PL_SQLParser.nested_table_type_return nested_table_type() throws RecognitionException {
         PL_SQLParser.nested_table_type_return retval = new PL_SQLParser.nested_table_type_return();
         retval.start = input.LT(1);
@@ -7000,8 +7000,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 51) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:679:19: ( as_is_part TABLE_KEYWORD OF_KEYWORD data_type )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:679:21: as_is_part TABLE_KEYWORD OF_KEYWORD data_type
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:680:19: ( as_is_part TABLE_KEYWORD OF_KEYWORD data_type )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:680:21: as_is_part TABLE_KEYWORD OF_KEYWORD data_type
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -7057,7 +7057,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "type_body_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:680:1: type_body_declaration : BODY_KEYWORD type_body_name as_is_part ( ( subprogram_declaration | map_order_func_declaration ) ( ',' )? )+ END_KEYWORD ( SEPARATOR )? ( '/' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:681:1: type_body_declaration : BODY_KEYWORD type_body_name as_is_part ( ( subprogram_declaration | map_order_func_declaration ) ( ',' )? )+ END_KEYWORD ( SEPARATOR )? ( '/' )? ;
     public final PL_SQLParser.type_body_declaration_return type_body_declaration() throws RecognitionException {
         PL_SQLParser.type_body_declaration_return retval = new PL_SQLParser.type_body_declaration_return();
         retval.start = input.LT(1);
@@ -7086,8 +7086,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 52) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:680:23: ( BODY_KEYWORD type_body_name as_is_part ( ( subprogram_declaration | map_order_func_declaration ) ( ',' )? )+ END_KEYWORD ( SEPARATOR )? ( '/' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:680:25: BODY_KEYWORD type_body_name as_is_part ( ( subprogram_declaration | map_order_func_declaration ) ( ',' )? )+ END_KEYWORD ( SEPARATOR )? ( '/' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:681:23: ( BODY_KEYWORD type_body_name as_is_part ( ( subprogram_declaration | map_order_func_declaration ) ( ',' )? )+ END_KEYWORD ( SEPARATOR )? ( '/' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:681:25: BODY_KEYWORD type_body_name as_is_part ( ( subprogram_declaration | map_order_func_declaration ) ( ',' )? )+ END_KEYWORD ( SEPARATOR )? ( '/' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -7108,7 +7108,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, as_is_part238.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:681:25: ( ( subprogram_declaration | map_order_func_declaration ) ( ',' )? )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:682:25: ( ( subprogram_declaration | map_order_func_declaration ) ( ',' )? )+
             int cnt96=0;
             loop96:
             do {
@@ -7122,9 +7122,9 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt96) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:681:26: ( subprogram_declaration | map_order_func_declaration ) ( ',' )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:682:26: ( subprogram_declaration | map_order_func_declaration ) ( ',' )?
             	    {
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:681:26: ( subprogram_declaration | map_order_func_declaration )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:682:26: ( subprogram_declaration | map_order_func_declaration )
             	    int alt94=2;
             	    int LA94_0 = input.LA(1);
 
@@ -7143,7 +7143,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    switch (alt94) {
             	        case 1 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:681:27: subprogram_declaration
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:682:27: subprogram_declaration
             	            {
             	            pushFollow(FOLLOW_subprogram_declaration_in_type_body_declaration6446);
             	            subprogram_declaration239=subprogram_declaration();
@@ -7155,7 +7155,7 @@ public class PL_SQLParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:681:52: map_order_func_declaration
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:682:52: map_order_func_declaration
             	            {
             	            pushFollow(FOLLOW_map_order_func_declaration_in_type_body_declaration6450);
             	            map_order_func_declaration240=map_order_func_declaration();
@@ -7169,7 +7169,7 @@ public class PL_SQLParser extends Parser {
 
             	    }
 
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:681:80: ( ',' )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:682:80: ( ',' )?
             	    int alt95=2;
             	    int LA95_0 = input.LA(1);
 
@@ -7210,7 +7210,7 @@ public class PL_SQLParser extends Parser {
             END_KEYWORD242_tree = (CommonTree)adaptor.create(END_KEYWORD242);
             adaptor.addChild(root_0, END_KEYWORD242_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:682:25: ( SEPARATOR )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:683:25: ( SEPARATOR )?
             int alt97=2;
             int LA97_0 = input.LA(1);
 
@@ -7232,7 +7232,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:682:36: ( '/' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:683:36: ( '/' )?
             int alt98=2;
             int LA98_0 = input.LA(1);
 
@@ -7284,7 +7284,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "type_body_name"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:683:1: type_body_name : ( universal_identifier | ALIAS );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:684:1: type_body_name : ( universal_identifier | ALIAS );
     public final PL_SQLParser.type_body_name_return type_body_name() throws RecognitionException {
         PL_SQLParser.type_body_name_return retval = new PL_SQLParser.type_body_name_return();
         retval.start = input.LT(1);
@@ -7299,7 +7299,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 53) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:683:16: ( universal_identifier | ALIAS )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:684:16: ( universal_identifier | ALIAS )
             int alt99=2;
             int LA99_0 = input.LA(1);
 
@@ -7318,7 +7318,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt99) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:683:18: universal_identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:684:18: universal_identifier
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -7332,7 +7332,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:683:41: ALIAS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:684:41: ALIAS
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -7373,7 +7373,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "subprogram_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:684:1: subprogram_declaration : ( MEMBER_KEYWORD | STATIC_KEYWORD )? ( function_declaration | procedure_declaration | constructor_declaration ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:685:1: subprogram_declaration : ( MEMBER_KEYWORD | STATIC_KEYWORD )? ( function_declaration | procedure_declaration | constructor_declaration ) ;
     public final PL_SQLParser.subprogram_declaration_return subprogram_declaration() throws RecognitionException {
         PL_SQLParser.subprogram_declaration_return retval = new PL_SQLParser.subprogram_declaration_return();
         retval.start = input.LT(1);
@@ -7392,12 +7392,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 54) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:684:24: ( ( MEMBER_KEYWORD | STATIC_KEYWORD )? ( function_declaration | procedure_declaration | constructor_declaration ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:684:26: ( MEMBER_KEYWORD | STATIC_KEYWORD )? ( function_declaration | procedure_declaration | constructor_declaration )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:685:24: ( ( MEMBER_KEYWORD | STATIC_KEYWORD )? ( function_declaration | procedure_declaration | constructor_declaration ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:685:26: ( MEMBER_KEYWORD | STATIC_KEYWORD )? ( function_declaration | procedure_declaration | constructor_declaration )
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:684:26: ( MEMBER_KEYWORD | STATIC_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:685:26: ( MEMBER_KEYWORD | STATIC_KEYWORD )?
             int alt100=2;
             int LA100_0 = input.LA(1);
 
@@ -7426,7 +7426,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:685:26: ( function_declaration | procedure_declaration | constructor_declaration )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:686:26: ( function_declaration | procedure_declaration | constructor_declaration )
             int alt101=3;
             switch ( input.LA(1) ) {
             case FUNCTION_KEYWORD:
@@ -7456,7 +7456,7 @@ public class PL_SQLParser extends Parser {
 
             switch (alt101) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:685:27: function_declaration
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:686:27: function_declaration
                     {
                     pushFollow(FOLLOW_function_declaration_in_subprogram_declaration6542);
                     function_declaration248=function_declaration();
@@ -7468,7 +7468,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:685:50: procedure_declaration
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:686:50: procedure_declaration
                     {
                     pushFollow(FOLLOW_procedure_declaration_in_subprogram_declaration6546);
                     procedure_declaration249=procedure_declaration();
@@ -7480,7 +7480,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:685:74: constructor_declaration
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:686:74: constructor_declaration
                     {
                     pushFollow(FOLLOW_constructor_declaration_in_subprogram_declaration6550);
                     constructor_declaration250=constructor_declaration();
@@ -7524,7 +7524,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "constructor_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:686:1: constructor_declaration : ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )? function_procedure_body ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:687:1: constructor_declaration : ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )? function_procedure_body ;
     public final PL_SQLParser.constructor_declaration_return constructor_declaration() throws RecognitionException {
         PL_SQLParser.constructor_declaration_return retval = new PL_SQLParser.constructor_declaration_return();
         retval.start = input.LT(1);
@@ -7549,12 +7549,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 55) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:686:25: ( ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )? function_procedure_body )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:686:27: ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )? function_procedure_body
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:687:25: ( ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )? function_procedure_body )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:687:27: ( FINAL_KEYWORD )? ( INSTANTIABLE_KEYWORD )? CONSTRUCTOR_KEYWORD FUNCTION_KEYWORD data_type ( constructor_spec_part )? function_procedure_body
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:686:27: ( FINAL_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:687:27: ( FINAL_KEYWORD )?
             int alt102=2;
             int LA102_0 = input.LA(1);
 
@@ -7576,7 +7576,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:686:42: ( INSTANTIABLE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:687:42: ( INSTANTIABLE_KEYWORD )?
             int alt103=2;
             int LA103_0 = input.LA(1);
 
@@ -7614,7 +7614,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type255.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:687:37: ( constructor_spec_part )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:688:37: ( constructor_spec_part )?
             int alt104=2;
             int LA104_0 = input.LA(1);
 
@@ -7673,7 +7673,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "map_order_func_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:688:1: map_order_func_declaration : ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_declaration ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:689:1: map_order_func_declaration : ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_declaration ;
     public final PL_SQLParser.map_order_func_declaration_return map_order_func_declaration() throws RecognitionException {
         PL_SQLParser.map_order_func_declaration_return retval = new PL_SQLParser.map_order_func_declaration_return();
         retval.start = input.LT(1);
@@ -7690,8 +7690,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 56) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:688:28: ( ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_declaration )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:688:30: ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_declaration
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:689:28: ( ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_declaration )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:689:30: ( MAP_KEYWORD | ORDER_KEYWORD ) MEMBER_KEYWORD function_declaration
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -7748,7 +7748,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "block"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:690:1: block : BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? -> ^( IM_BEGIN_END BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:691:1: block : BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? -> ^( IM_BEGIN_END BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD ) ;
     public final PL_SQLParser.block_return block() throws RecognitionException {
         PL_SQLParser.block_return retval = new PL_SQLParser.block_return();
         retval.start = input.LT(1);
@@ -7779,13 +7779,13 @@ public class PL_SQLParser extends Parser {
         RewriteRuleSubtreeStream stream_universal_identifier=new RewriteRuleSubtreeStream(adaptor,"rule universal_identifier");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 57) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:690:7: ( BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? -> ^( IM_BEGIN_END BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:690:9: BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:691:7: ( BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )? -> ^( IM_BEGIN_END BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:691:9: BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD ( universal_identifier )? ( SEPARATOR )? ( '/' )?
             {
             BEGIN_KEYWORD261=(Token)match(input,BEGIN_KEYWORD,FOLLOW_BEGIN_KEYWORD_in_block6624); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_BEGIN_KEYWORD.add(BEGIN_KEYWORD261);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:691:2: ( executable_section )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:692:2: ( executable_section )+
             int cnt105=0;
             loop105:
             do {
@@ -7799,7 +7799,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt105) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:691:3: executable_section
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:692:3: executable_section
             	    {
             	    pushFollow(FOLLOW_executable_section_in_block6628);
             	    executable_section262=executable_section();
@@ -7821,7 +7821,7 @@ public class PL_SQLParser extends Parser {
                 cnt105++;
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:691:25: ( exception_section )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:692:25: ( exception_section )?
             int alt106=2;
             int LA106_0 = input.LA(1);
 
@@ -7847,7 +7847,7 @@ public class PL_SQLParser extends Parser {
             END_KEYWORD264=(Token)match(input,END_KEYWORD,FOLLOW_END_KEYWORD_in_block6644); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_END_KEYWORD.add(END_KEYWORD264);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:692:21: ( universal_identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:693:21: ( universal_identifier )?
             int alt107=2;
             int LA107_0 = input.LA(1);
 
@@ -7874,7 +7874,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:692:43: ( SEPARATOR )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:693:43: ( SEPARATOR )?
             int alt108=2;
             int LA108_0 = input.LA(1);
 
@@ -7894,7 +7894,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:693:9: ( '/' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:694:9: ( '/' )?
             int alt109=2;
             int LA109_0 = input.LA(1);
 
@@ -7917,7 +7917,7 @@ public class PL_SQLParser extends Parser {
 
 
             // AST REWRITE
-            // elements: END_KEYWORD, exception_section, BEGIN_KEYWORD, executable_section
+            // elements: END_KEYWORD, BEGIN_KEYWORD, exception_section, executable_section
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -7928,9 +7928,9 @@ public class PL_SQLParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 694:9: -> ^( IM_BEGIN_END BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD )
+            // 695:9: -> ^( IM_BEGIN_END BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD )
             {
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:695:9: ^( IM_BEGIN_END BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD )
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:696:9: ^( IM_BEGIN_END BEGIN_KEYWORD ( executable_section )+ ( exception_section )? END_KEYWORD )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_BEGIN_END, "IM_BEGIN_END"), root_1);
@@ -7944,7 +7944,7 @@ public class PL_SQLParser extends Parser {
 
                 }
                 stream_executable_section.reset();
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:696:25: ( exception_section )?
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:697:25: ( exception_section )?
                 if ( stream_exception_section.hasNext() ) {
                     adaptor.addChild(root_1, stream_exception_section.nextTree());
 
@@ -7987,7 +7987,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "anonymous_block"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:698:1: anonymous_block : ( anonymous_block_declare_section )? block ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:699:1: anonymous_block : ( anonymous_block_declare_section )? block ;
     public final PL_SQLParser.anonymous_block_return anonymous_block() throws RecognitionException {
         PL_SQLParser.anonymous_block_return retval = new PL_SQLParser.anonymous_block_return();
         retval.start = input.LT(1);
@@ -8002,12 +8002,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 58) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:698:17: ( ( anonymous_block_declare_section )? block )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:698:19: ( anonymous_block_declare_section )? block
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:699:17: ( ( anonymous_block_declare_section )? block )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:699:19: ( anonymous_block_declare_section )? block
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:698:19: ( anonymous_block_declare_section )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:699:19: ( anonymous_block_declare_section )?
             int alt110=2;
             int LA110_0 = input.LA(1);
 
@@ -8066,7 +8066,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "executable_section"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:699:1: executable_section : ( statement | anonymous_block );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:1: executable_section : ( statement | anonymous_block );
     public final PL_SQLParser.executable_section_return executable_section() throws RecognitionException {
         PL_SQLParser.executable_section_return retval = new PL_SQLParser.executable_section_return();
         retval.start = input.LT(1);
@@ -8081,7 +8081,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 59) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:699:20: ( statement | anonymous_block )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:20: ( statement | anonymous_block )
             int alt111=2;
             int LA111_0 = input.LA(1);
 
@@ -8100,7 +8100,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt111) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:699:22: statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:22: statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8114,7 +8114,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:699:34: anonymous_block
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:34: anonymous_block
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8156,7 +8156,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "executable_case_section"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:1: executable_case_section : ( ( ( label )* statements ( SEPARATOR )? ) | anonymous_block );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:1: executable_case_section : ( ( ( label )* statements ( SEPARATOR )? ) | anonymous_block );
     public final PL_SQLParser.executable_case_section_return executable_case_section() throws RecognitionException {
         PL_SQLParser.executable_case_section_return retval = new PL_SQLParser.executable_case_section_return();
         retval.start = input.LT(1);
@@ -8175,7 +8175,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 60) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:25: ( ( ( label )* statements ( SEPARATOR )? ) | anonymous_block )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:25: ( ( ( label )* statements ( SEPARATOR )? ) | anonymous_block )
             int alt114=2;
             int LA114_0 = input.LA(1);
 
@@ -8194,14 +8194,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt114) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:27: ( ( label )* statements ( SEPARATOR )? )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:27: ( ( label )* statements ( SEPARATOR )? )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:27: ( ( label )* statements ( SEPARATOR )? )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:28: ( label )* statements ( SEPARATOR )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:27: ( ( label )* statements ( SEPARATOR )? )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:28: ( label )* statements ( SEPARATOR )?
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:28: ( label )*
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:28: ( label )*
                     loop112:
                     do {
                         int alt112=2;
@@ -8214,7 +8214,7 @@ public class PL_SQLParser extends Parser {
 
                         switch (alt112) {
                     	case 1 :
-                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:29: label
+                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:29: label
                     	    {
                     	    pushFollow(FOLLOW_label_in_executable_case_section6735);
                     	    label272=label();
@@ -8237,7 +8237,7 @@ public class PL_SQLParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, statements273.getTree());
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:48: ( SEPARATOR )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:48: ( SEPARATOR )?
                     int alt113=2;
                     int LA113_0 = input.LA(1);
 
@@ -8266,7 +8266,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:700:62: anonymous_block
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:62: anonymous_block
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8308,7 +8308,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:1: statement : ( label )* statements SEPARATOR ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:702:1: statement : ( label )* statements SEPARATOR ;
     public final PL_SQLParser.statement_return statement() throws RecognitionException {
         PL_SQLParser.statement_return retval = new PL_SQLParser.statement_return();
         retval.start = input.LT(1);
@@ -8325,12 +8325,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 61) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:11: ( ( label )* statements SEPARATOR )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:13: ( label )* statements SEPARATOR
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:702:11: ( ( label )* statements SEPARATOR )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:702:13: ( label )* statements SEPARATOR
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:13: ( label )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:702:13: ( label )*
             loop115:
             do {
                 int alt115=2;
@@ -8343,7 +8343,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt115) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:701:14: label
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:702:14: label
             	    {
             	    pushFollow(FOLLOW_label_in_statement6755);
             	    label276=label();
@@ -8401,7 +8401,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "statements"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:702:1: statements : ( expression | goto_statement | loop_statement | while_loop_statement | for_loop_statement | sql_statements | return_statement | if_statement | raise_statement | close_statement | continue_statement | execute_immediate_statement | exit_statement | fetch_statement | forall_statement | pragma_inline_statement | open_statement );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:703:1: statements : ( expression | goto_statement | loop_statement | while_loop_statement | for_loop_statement | sql_statements | return_statement | if_statement | raise_statement | close_statement | continue_statement | execute_immediate_statement | exit_statement | fetch_statement | forall_statement | pragma_inline_statement | open_statement );
     public final PL_SQLParser.statements_return statements() throws RecognitionException {
         PL_SQLParser.statements_return retval = new PL_SQLParser.statements_return();
         retval.start = input.LT(1);
@@ -8446,12 +8446,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 62) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:702:12: ( expression | goto_statement | loop_statement | while_loop_statement | for_loop_statement | sql_statements | return_statement | if_statement | raise_statement | close_statement | continue_statement | execute_immediate_statement | exit_statement | fetch_statement | forall_statement | pragma_inline_statement | open_statement )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:703:12: ( expression | goto_statement | loop_statement | while_loop_statement | for_loop_statement | sql_statements | return_statement | if_statement | raise_statement | close_statement | continue_statement | execute_immediate_statement | exit_statement | fetch_statement | forall_statement | pragma_inline_statement | open_statement )
             int alt116=17;
             alt116 = dfa116.predict(input);
             switch (alt116) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:702:14: expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:703:14: expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8465,7 +8465,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:702:27: goto_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:703:27: goto_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8479,7 +8479,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:702:44: loop_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:703:44: loop_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8493,7 +8493,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:703:14: while_loop_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:704:14: while_loop_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8507,7 +8507,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:703:37: for_loop_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:704:37: for_loop_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8521,7 +8521,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:703:58: sql_statements
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:704:58: sql_statements
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8535,7 +8535,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:704:14: return_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:705:14: return_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8549,7 +8549,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:704:33: if_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:705:33: if_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8563,7 +8563,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:704:48: raise_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:705:48: raise_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8577,7 +8577,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:704:66: close_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:705:66: close_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8591,7 +8591,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:705:14: continue_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:706:14: continue_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8605,7 +8605,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:705:35: execute_immediate_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:706:35: execute_immediate_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8619,7 +8619,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 13 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:705:65: exit_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:706:65: exit_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8633,7 +8633,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 14 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:706:14: fetch_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:707:14: fetch_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8647,7 +8647,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 15 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:706:32: forall_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:707:32: forall_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8661,7 +8661,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 16 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:706:51: pragma_inline_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:707:51: pragma_inline_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8675,7 +8675,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 17 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:707:14: open_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:708:14: open_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8717,7 +8717,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "sql_statements"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:708:1: sql_statements : ( select_statement | commit_statement | delete_statement | update_statement | insert_statement | lock_table_statement | merge_statement | rollback_statement | savepoint_statement | set_transaction_statement );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:709:1: sql_statements : ( select_statement | commit_statement | delete_statement | update_statement | insert_statement | lock_table_statement | merge_statement | rollback_statement | savepoint_statement | set_transaction_statement );
     public final PL_SQLParser.sql_statements_return sql_statements() throws RecognitionException {
         PL_SQLParser.sql_statements_return retval = new PL_SQLParser.sql_statements_return();
         retval.start = input.LT(1);
@@ -8748,12 +8748,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 63) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:708:16: ( select_statement | commit_statement | delete_statement | update_statement | insert_statement | lock_table_statement | merge_statement | rollback_statement | savepoint_statement | set_transaction_statement )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:709:16: ( select_statement | commit_statement | delete_statement | update_statement | insert_statement | lock_table_statement | merge_statement | rollback_statement | savepoint_statement | set_transaction_statement )
             int alt117=10;
             alt117 = dfa117.predict(input);
             switch (alt117) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:708:18: select_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:709:18: select_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8767,7 +8767,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:708:37: commit_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:709:37: commit_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8781,7 +8781,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:708:56: delete_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:709:56: delete_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8795,7 +8795,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:708:75: update_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:709:75: update_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8809,7 +8809,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:709:18: insert_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:710:18: insert_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8823,7 +8823,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:709:37: lock_table_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:710:37: lock_table_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8837,7 +8837,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:709:60: merge_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:710:60: merge_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8851,7 +8851,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:710:18: rollback_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:711:18: rollback_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8865,7 +8865,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:710:39: savepoint_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:711:39: savepoint_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8879,7 +8879,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:710:61: set_transaction_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:711:61: set_transaction_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8921,7 +8921,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "sql_operator"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:711:1: sql_operator : ( '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' | '^=' | '>' | '<' | '<=' | '>=' | '(+)' | ',' );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:712:1: sql_operator : ( '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' | '^=' | '>' | '<' | '<=' | '>=' | '(+)' | ',' );
     public final PL_SQLParser.sql_operator_return sql_operator() throws RecognitionException {
         PL_SQLParser.sql_operator_return retval = new PL_SQLParser.sql_operator_return();
         retval.start = input.LT(1);
@@ -8934,7 +8934,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 64) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:711:14: ( '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' | '^=' | '>' | '<' | '<=' | '>=' | '(+)' | ',' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:712:14: ( '+' | '-' | '*' | '/' | '**' | '||' | '=' | '<>' | '!=' | '~=' | '^=' | '>' | '<' | '<=' | '>=' | '(+)' | ',' )
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
             {
             root_0 = (CommonTree)adaptor.nil();
@@ -8981,7 +8981,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "sql_not_parsed"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:1: sql_not_parsed : ( ALIAS | KEYWORD | sql_operator | INTO_KEYWORD | IN_KEYWORD | NOT_OPERATOR IN_KEYWORD | AS_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | SOME_TYPES | BULK_KEYWORD | COLLECT_KEYWORD | RETURNING_KEYWORD | ROW_KEYWORD | SET_KEYWORD | BY_KEYWORD | WITH_KEYWORD | TABLE_KEYWORD | JOIN_KEYWORD | EXISTS_KEYWORD | REPLACE_KEYWORD | NUMBER_UNSIGNED | COUNT_KEYWORD | universal_identifier | case_statement_expression | STRING | COMMA | AND_OPERATOR | OR_OPERATOR | NOT_OPERATOR | IS_KEYWORD NOT_OPERATOR NULL_KEYWORD | IS_KEYWORD NULL_KEYWORD | NULL_KEYWORD | LIKE_KEYWORD | OF_KEYWORD | sql_statements | expression | THE_REST | ( '(' ( sql_not_parsed )* ')' ) );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:1: sql_not_parsed : ( ALIAS | KEYWORD | sql_operator | INTO_KEYWORD | IN_KEYWORD | NOT_OPERATOR IN_KEYWORD | AS_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | SOME_TYPES | BULK_KEYWORD | COLLECT_KEYWORD | RETURNING_KEYWORD | ROW_KEYWORD | SET_KEYWORD | BY_KEYWORD | WITH_KEYWORD | TABLE_KEYWORD | JOIN_KEYWORD | EXISTS_KEYWORD | REPLACE_KEYWORD | NUMBER_UNSIGNED | COUNT_KEYWORD | universal_identifier | case_statement_expression | STRING | COMMA | AND_OPERATOR | OR_OPERATOR | NOT_OPERATOR | IS_KEYWORD NOT_OPERATOR NULL_KEYWORD | IS_KEYWORD NULL_KEYWORD | NULL_KEYWORD | LIKE_KEYWORD | OF_KEYWORD | sql_statements | expression | THE_REST | ( '(' ( sql_not_parsed )* ')' ) );
     public final PL_SQLParser.sql_not_parsed_return sql_not_parsed() throws RecognitionException {
         PL_SQLParser.sql_not_parsed_return retval = new PL_SQLParser.sql_not_parsed_return();
         retval.start = input.LT(1);
@@ -9082,12 +9082,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 65) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:16: ( ALIAS | KEYWORD | sql_operator | INTO_KEYWORD | IN_KEYWORD | NOT_OPERATOR IN_KEYWORD | AS_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | SOME_TYPES | BULK_KEYWORD | COLLECT_KEYWORD | RETURNING_KEYWORD | ROW_KEYWORD | SET_KEYWORD | BY_KEYWORD | WITH_KEYWORD | TABLE_KEYWORD | JOIN_KEYWORD | EXISTS_KEYWORD | REPLACE_KEYWORD | NUMBER_UNSIGNED | COUNT_KEYWORD | universal_identifier | case_statement_expression | STRING | COMMA | AND_OPERATOR | OR_OPERATOR | NOT_OPERATOR | IS_KEYWORD NOT_OPERATOR NULL_KEYWORD | IS_KEYWORD NULL_KEYWORD | NULL_KEYWORD | LIKE_KEYWORD | OF_KEYWORD | sql_statements | expression | THE_REST | ( '(' ( sql_not_parsed )* ')' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:16: ( ALIAS | KEYWORD | sql_operator | INTO_KEYWORD | IN_KEYWORD | NOT_OPERATOR IN_KEYWORD | AS_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | SOME_TYPES | BULK_KEYWORD | COLLECT_KEYWORD | RETURNING_KEYWORD | ROW_KEYWORD | SET_KEYWORD | BY_KEYWORD | WITH_KEYWORD | TABLE_KEYWORD | JOIN_KEYWORD | EXISTS_KEYWORD | REPLACE_KEYWORD | NUMBER_UNSIGNED | COUNT_KEYWORD | universal_identifier | case_statement_expression | STRING | COMMA | AND_OPERATOR | OR_OPERATOR | NOT_OPERATOR | IS_KEYWORD NOT_OPERATOR NULL_KEYWORD | IS_KEYWORD NULL_KEYWORD | NULL_KEYWORD | LIKE_KEYWORD | OF_KEYWORD | sql_statements | expression | THE_REST | ( '(' ( sql_not_parsed )* ')' ) )
             int alt119=39;
             alt119 = dfa119.predict(input);
             switch (alt119) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:18: ALIAS
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:18: ALIAS
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9100,7 +9100,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:26: KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:26: KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9113,7 +9113,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:36: sql_operator
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:36: sql_operator
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9127,7 +9127,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:51: INTO_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:51: INTO_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9140,7 +9140,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:66: IN_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:66: IN_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9153,7 +9153,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:79: NOT_OPERATOR IN_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:79: NOT_OPERATOR IN_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9171,7 +9171,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:16: AS_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:716:16: AS_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9184,7 +9184,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:29: VALUES_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:716:29: VALUES_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9197,7 +9197,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:46: BETWEEN_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:716:46: BETWEEN_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9210,7 +9210,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:64: SOME_TYPES
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:716:64: SOME_TYPES
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9223,7 +9223,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:716:16: BULK_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:717:16: BULK_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9236,7 +9236,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:716:31: COLLECT_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:717:31: COLLECT_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9249,7 +9249,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 13 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:716:49: RETURNING_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:717:49: RETURNING_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9262,7 +9262,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 14 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:716:69: ROW_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:717:69: ROW_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9275,7 +9275,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 15 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:717:16: SET_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:718:16: SET_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9288,7 +9288,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 16 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:717:30: BY_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:718:30: BY_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9301,7 +9301,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 17 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:717:43: WITH_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:718:43: WITH_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9314,7 +9314,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 18 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:717:58: TABLE_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:718:58: TABLE_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9327,7 +9327,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 19 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:717:74: JOIN_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:718:74: JOIN_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9340,7 +9340,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 20 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:718:16: EXISTS_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:16: EXISTS_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9353,7 +9353,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 21 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:718:33: REPLACE_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:33: REPLACE_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9366,7 +9366,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 22 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:16: NUMBER_UNSIGNED
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:16: NUMBER_UNSIGNED
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9379,7 +9379,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 23 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:34: COUNT_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:34: COUNT_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9392,7 +9392,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 24 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:50: universal_identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:50: universal_identifier
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9406,7 +9406,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 25 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:73: case_statement_expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:73: case_statement_expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9420,7 +9420,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 26 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:16: STRING
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:16: STRING
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9433,7 +9433,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 27 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:25: COMMA
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:25: COMMA
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9446,7 +9446,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 28 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:33: AND_OPERATOR
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:33: AND_OPERATOR
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9459,7 +9459,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 29 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:48: OR_OPERATOR
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:48: OR_OPERATOR
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9472,7 +9472,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 30 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:62: NOT_OPERATOR
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:62: NOT_OPERATOR
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9485,7 +9485,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 31 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:16: IS_KEYWORD NOT_OPERATOR NULL_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:722:16: IS_KEYWORD NOT_OPERATOR NULL_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9508,7 +9508,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 32 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:55: IS_KEYWORD NULL_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:722:55: IS_KEYWORD NULL_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9526,7 +9526,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 33 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:81: NULL_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:722:81: NULL_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9539,7 +9539,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 34 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:96: LIKE_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:722:96: LIKE_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9552,7 +9552,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 35 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:722:16: OF_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:723:16: OF_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9565,7 +9565,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 36 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:723:16: sql_statements
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:16: sql_statements
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9579,7 +9579,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 37 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:16: expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:725:16: expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9593,7 +9593,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 38 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:29: THE_REST
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:725:29: THE_REST
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9606,19 +9606,19 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 39 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:40: ( '(' ( sql_not_parsed )* ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:725:40: ( '(' ( sql_not_parsed )* ')' )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:40: ( '(' ( sql_not_parsed )* ')' )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:41: '(' ( sql_not_parsed )* ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:725:40: ( '(' ( sql_not_parsed )* ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:725:41: '(' ( sql_not_parsed )* ')'
                     {
                     char_literal349=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_sql_not_parsed7381); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal349_tree = (CommonTree)adaptor.create(char_literal349);
                     adaptor.addChild(root_0, char_literal349_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:45: ( sql_not_parsed )*
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:725:45: ( sql_not_parsed )*
                     loop118:
                     do {
                         int alt118=2;
@@ -9631,7 +9631,7 @@ public class PL_SQLParser extends Parser {
 
                         switch (alt118) {
                     	case 1 :
-                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:46: sql_not_parsed
+                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:725:46: sql_not_parsed
                     	    {
                     	    pushFollow(FOLLOW_sql_not_parsed_in_sql_not_parsed7384);
                     	    sql_not_parsed350=sql_not_parsed();
@@ -9688,7 +9688,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "select_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:1: select_statement : SELECT_KEYWORD ( ( sql_not_parsed | ON_KEYWORD ) | ( FOR_KEYWORD UPDATE_KEYWORD ) )+ ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:1: select_statement : SELECT_KEYWORD ( ( sql_not_parsed | ON_KEYWORD ) | ( FOR_KEYWORD UPDATE_KEYWORD ) )+ ;
     public final PL_SQLParser.select_statement_return select_statement() throws RecognitionException {
         PL_SQLParser.select_statement_return retval = new PL_SQLParser.select_statement_return();
         retval.start = input.LT(1);
@@ -9709,8 +9709,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 66) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:18: ( SELECT_KEYWORD ( ( sql_not_parsed | ON_KEYWORD ) | ( FOR_KEYWORD UPDATE_KEYWORD ) )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:20: SELECT_KEYWORD ( ( sql_not_parsed | ON_KEYWORD ) | ( FOR_KEYWORD UPDATE_KEYWORD ) )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:18: ( SELECT_KEYWORD ( ( sql_not_parsed | ON_KEYWORD ) | ( FOR_KEYWORD UPDATE_KEYWORD ) )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:20: SELECT_KEYWORD ( ( sql_not_parsed | ON_KEYWORD ) | ( FOR_KEYWORD UPDATE_KEYWORD ) )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -9719,27 +9719,27 @@ public class PL_SQLParser extends Parser {
             SELECT_KEYWORD352_tree = (CommonTree)adaptor.create(SELECT_KEYWORD352);
             adaptor.addChild(root_0, SELECT_KEYWORD352_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:35: ( ( sql_not_parsed | ON_KEYWORD ) | ( FOR_KEYWORD UPDATE_KEYWORD ) )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:35: ( ( sql_not_parsed | ON_KEYWORD ) | ( FOR_KEYWORD UPDATE_KEYWORD ) )+
             int cnt121=0;
             loop121:
             do {
                 int alt121=3;
                 int LA121_0 = input.LA(1);
 
-                if ( ((LA121_0>=NUMBER_UNSIGNED && LA121_0<=OR_OPERATOR)||(LA121_0>=STRING && LA121_0<=SOME_TYPES)||(LA121_0>=KEYWORD && LA121_0<=ALIAS)||LA121_0==COMMA||LA121_0==NULL_KEYWORD||(LA121_0>=TRUE_KEYWORD && LA121_0<=FALSE_KEYWORD)||LA121_0==WITH_KEYWORD||LA121_0==INTERVAL_KEYWORD||LA121_0==IS_KEYWORD||LA121_0==REPLACE_KEYWORD||LA121_0==AS_KEYWORD||LA121_0==IN_KEYWORD||(LA121_0>=SELECT_KEYWORD && LA121_0<=COUNT_KEYWORD)||LA121_0==LIKE_KEYWORD||LA121_0==CASE_KEYWORD||(LA121_0>=TABLE_KEYWORD && LA121_0<=OF_KEYWORD)||LA121_0==BY_KEYWORD||LA121_0==COMMIT_KEYWORD||LA121_0==DELETE_KEYWORD||LA121_0==INTO_KEYWORD||(LA121_0>=BULK_KEYWORD && LA121_0<=COLLECT_KEYWORD)||(LA121_0>=VALUES_KEYWORD && LA121_0<=BETWEEN_KEYWORD)||(LA121_0>=INSERT_KEYWORD && LA121_0<=MERGE_KEYWORD)||(LA121_0>=RETURNING_KEYWORD && LA121_0<=SAVEPOINT_KEYWORD)||LA121_0==SET_KEYWORD||(LA121_0>=SQLCODE_KEYWORD && LA121_0<=EXISTS_KEYWORD)||LA121_0==ON_KEYWORD||LA121_0==ROW_KEYWORD||LA121_0==RESULT_KEYWORD||LA121_0==JOIN_KEYWORD||LA121_0==LPAREN||LA121_0==NOT_OPERATOR||LA121_0==THE_REST||LA121_0==212||(LA121_0>=214 && LA121_0<=228)) ) {
-                    int LA121_2 = input.LA(2);
+                if ( (LA121_0==FOR_KEYWORD) ) {
+                    int LA121_1 = input.LA(2);
 
-                    if ( (synpred227_PL_SQL()) ) {
-                        alt121=1;
+                    if ( (synpred228_PL_SQL()) ) {
+                        alt121=2;
                     }
 
 
                 }
-                else if ( (LA121_0==FOR_KEYWORD) ) {
+                else if ( ((LA121_0>=NUMBER_UNSIGNED && LA121_0<=OR_OPERATOR)||(LA121_0>=STRING && LA121_0<=SOME_TYPES)||(LA121_0>=KEYWORD && LA121_0<=ALIAS)||LA121_0==COMMA||LA121_0==NULL_KEYWORD||(LA121_0>=TRUE_KEYWORD && LA121_0<=FALSE_KEYWORD)||LA121_0==WITH_KEYWORD||LA121_0==INTERVAL_KEYWORD||LA121_0==IS_KEYWORD||LA121_0==REPLACE_KEYWORD||LA121_0==AS_KEYWORD||LA121_0==IN_KEYWORD||(LA121_0>=SELECT_KEYWORD && LA121_0<=COUNT_KEYWORD)||LA121_0==LIKE_KEYWORD||LA121_0==CASE_KEYWORD||(LA121_0>=TABLE_KEYWORD && LA121_0<=OF_KEYWORD)||LA121_0==BY_KEYWORD||LA121_0==COMMIT_KEYWORD||LA121_0==DELETE_KEYWORD||LA121_0==INTO_KEYWORD||(LA121_0>=BULK_KEYWORD && LA121_0<=COLLECT_KEYWORD)||(LA121_0>=VALUES_KEYWORD && LA121_0<=BETWEEN_KEYWORD)||(LA121_0>=INSERT_KEYWORD && LA121_0<=MERGE_KEYWORD)||(LA121_0>=RETURNING_KEYWORD && LA121_0<=SAVEPOINT_KEYWORD)||LA121_0==SET_KEYWORD||(LA121_0>=SQLCODE_KEYWORD && LA121_0<=EXISTS_KEYWORD)||LA121_0==ON_KEYWORD||LA121_0==ROW_KEYWORD||LA121_0==RESULT_KEYWORD||LA121_0==JOIN_KEYWORD||LA121_0==LPAREN||LA121_0==NOT_OPERATOR||LA121_0==THE_REST||LA121_0==212||(LA121_0>=214 && LA121_0<=228)) ) {
                     int LA121_4 = input.LA(2);
 
-                    if ( (synpred228_PL_SQL()) ) {
-                        alt121=2;
+                    if ( (synpred227_PL_SQL()) ) {
+                        alt121=1;
                     }
 
 
@@ -9748,9 +9748,9 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt121) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:36: ( sql_not_parsed | ON_KEYWORD )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:36: ( sql_not_parsed | ON_KEYWORD )
             	    {
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:36: ( sql_not_parsed | ON_KEYWORD )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:36: ( sql_not_parsed | ON_KEYWORD )
             	    int alt120=2;
             	    int LA120_0 = input.LA(1);
 
@@ -9769,7 +9769,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    switch (alt120) {
             	        case 1 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:37: sql_not_parsed
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:37: sql_not_parsed
             	            {
             	            pushFollow(FOLLOW_sql_not_parsed_in_select_statement7403);
             	            sql_not_parsed353=sql_not_parsed();
@@ -9781,7 +9781,7 @@ public class PL_SQLParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:54: ON_KEYWORD
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:54: ON_KEYWORD
             	            {
             	            ON_KEYWORD354=(Token)match(input,ON_KEYWORD,FOLLOW_ON_KEYWORD_in_select_statement7407); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -9798,10 +9798,10 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:68: ( FOR_KEYWORD UPDATE_KEYWORD )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:68: ( FOR_KEYWORD UPDATE_KEYWORD )
             	    {
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:68: ( FOR_KEYWORD UPDATE_KEYWORD )
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:69: FOR_KEYWORD UPDATE_KEYWORD
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:68: ( FOR_KEYWORD UPDATE_KEYWORD )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:69: FOR_KEYWORD UPDATE_KEYWORD
             	    {
             	    FOR_KEYWORD355=(Token)match(input,FOR_KEYWORD,FOLLOW_FOR_KEYWORD_in_select_statement7413); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -9860,7 +9860,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "commit_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:1: commit_statement : COMMIT_KEYWORD ( sql_not_parsed )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:1: commit_statement : COMMIT_KEYWORD ( sql_not_parsed )? ;
     public final PL_SQLParser.commit_statement_return commit_statement() throws RecognitionException {
         PL_SQLParser.commit_statement_return retval = new PL_SQLParser.commit_statement_return();
         retval.start = input.LT(1);
@@ -9875,8 +9875,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 67) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:18: ( COMMIT_KEYWORD ( sql_not_parsed )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:20: COMMIT_KEYWORD ( sql_not_parsed )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:18: ( COMMIT_KEYWORD ( sql_not_parsed )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:20: COMMIT_KEYWORD ( sql_not_parsed )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -9885,7 +9885,7 @@ public class PL_SQLParser extends Parser {
             COMMIT_KEYWORD357_tree = (CommonTree)adaptor.create(COMMIT_KEYWORD357);
             adaptor.addChild(root_0, COMMIT_KEYWORD357_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:35: ( sql_not_parsed )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:35: ( sql_not_parsed )?
             int alt122=2;
             int LA122_0 = input.LA(1);
 
@@ -9942,7 +9942,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "delete_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:1: delete_statement : DELETE_KEYWORD ( sql_not_parsed )+ ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:1: delete_statement : DELETE_KEYWORD ( sql_not_parsed )+ ;
     public final PL_SQLParser.delete_statement_return delete_statement() throws RecognitionException {
         PL_SQLParser.delete_statement_return retval = new PL_SQLParser.delete_statement_return();
         retval.start = input.LT(1);
@@ -9957,8 +9957,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 68) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:18: ( DELETE_KEYWORD ( sql_not_parsed )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:20: DELETE_KEYWORD ( sql_not_parsed )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:18: ( DELETE_KEYWORD ( sql_not_parsed )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:20: DELETE_KEYWORD ( sql_not_parsed )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -9967,7 +9967,7 @@ public class PL_SQLParser extends Parser {
             DELETE_KEYWORD359_tree = (CommonTree)adaptor.create(DELETE_KEYWORD359);
             adaptor.addChild(root_0, DELETE_KEYWORD359_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:35: ( sql_not_parsed )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:35: ( sql_not_parsed )+
             int cnt123=0;
             loop123:
             do {
@@ -9975,7 +9975,7 @@ public class PL_SQLParser extends Parser {
                 int LA123_0 = input.LA(1);
 
                 if ( ((LA123_0>=NUMBER_UNSIGNED && LA123_0<=OR_OPERATOR)||(LA123_0>=STRING && LA123_0<=SOME_TYPES)||(LA123_0>=KEYWORD && LA123_0<=ALIAS)||LA123_0==COMMA||LA123_0==NULL_KEYWORD||(LA123_0>=TRUE_KEYWORD && LA123_0<=FALSE_KEYWORD)||LA123_0==WITH_KEYWORD||LA123_0==INTERVAL_KEYWORD||LA123_0==IS_KEYWORD||LA123_0==REPLACE_KEYWORD||LA123_0==AS_KEYWORD||LA123_0==IN_KEYWORD||(LA123_0>=SELECT_KEYWORD && LA123_0<=COUNT_KEYWORD)||LA123_0==LIKE_KEYWORD||LA123_0==CASE_KEYWORD||(LA123_0>=TABLE_KEYWORD && LA123_0<=OF_KEYWORD)||LA123_0==BY_KEYWORD||LA123_0==COMMIT_KEYWORD||LA123_0==DELETE_KEYWORD||LA123_0==INTO_KEYWORD||(LA123_0>=BULK_KEYWORD && LA123_0<=COLLECT_KEYWORD)||(LA123_0>=VALUES_KEYWORD && LA123_0<=BETWEEN_KEYWORD)||(LA123_0>=INSERT_KEYWORD && LA123_0<=MERGE_KEYWORD)||(LA123_0>=RETURNING_KEYWORD && LA123_0<=SAVEPOINT_KEYWORD)||LA123_0==SET_KEYWORD||(LA123_0>=SQLCODE_KEYWORD && LA123_0<=EXISTS_KEYWORD)||LA123_0==ROW_KEYWORD||LA123_0==RESULT_KEYWORD||LA123_0==JOIN_KEYWORD||LA123_0==LPAREN||LA123_0==NOT_OPERATOR||LA123_0==THE_REST||LA123_0==212||(LA123_0>=214 && LA123_0<=228)) ) {
-                    int LA123_2 = input.LA(2);
+                    int LA123_1 = input.LA(2);
 
                     if ( (synpred230_PL_SQL()) ) {
                         alt123=1;
@@ -9987,7 +9987,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt123) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:36: sql_not_parsed
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:36: sql_not_parsed
             	    {
             	    pushFollow(FOLLOW_sql_not_parsed_in_delete_statement7438);
             	    sql_not_parsed360=sql_not_parsed();
@@ -10039,7 +10039,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "insert_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:1: insert_statement : INSERT_KEYWORD ( sql_not_parsed )+ ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:1: insert_statement : INSERT_KEYWORD ( sql_not_parsed )+ ;
     public final PL_SQLParser.insert_statement_return insert_statement() throws RecognitionException {
         PL_SQLParser.insert_statement_return retval = new PL_SQLParser.insert_statement_return();
         retval.start = input.LT(1);
@@ -10054,8 +10054,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 69) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:18: ( INSERT_KEYWORD ( sql_not_parsed )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:20: INSERT_KEYWORD ( sql_not_parsed )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:18: ( INSERT_KEYWORD ( sql_not_parsed )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:20: INSERT_KEYWORD ( sql_not_parsed )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -10064,7 +10064,7 @@ public class PL_SQLParser extends Parser {
             INSERT_KEYWORD361_tree = (CommonTree)adaptor.create(INSERT_KEYWORD361);
             adaptor.addChild(root_0, INSERT_KEYWORD361_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:35: ( sql_not_parsed )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:35: ( sql_not_parsed )+
             int cnt124=0;
             loop124:
             do {
@@ -10084,7 +10084,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt124) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:36: sql_not_parsed
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:36: sql_not_parsed
             	    {
             	    pushFollow(FOLLOW_sql_not_parsed_in_insert_statement7450);
             	    sql_not_parsed362=sql_not_parsed();
@@ -10136,7 +10136,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "lock_table_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:1: lock_table_statement : LOCK_KEYWORD TABLE_KEYWORD ( sql_not_parsed )+ ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:1: lock_table_statement : LOCK_KEYWORD TABLE_KEYWORD ( sql_not_parsed )+ ;
     public final PL_SQLParser.lock_table_statement_return lock_table_statement() throws RecognitionException {
         PL_SQLParser.lock_table_statement_return retval = new PL_SQLParser.lock_table_statement_return();
         retval.start = input.LT(1);
@@ -10153,8 +10153,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 70) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:22: ( LOCK_KEYWORD TABLE_KEYWORD ( sql_not_parsed )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:24: LOCK_KEYWORD TABLE_KEYWORD ( sql_not_parsed )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:22: ( LOCK_KEYWORD TABLE_KEYWORD ( sql_not_parsed )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:24: LOCK_KEYWORD TABLE_KEYWORD ( sql_not_parsed )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -10168,7 +10168,7 @@ public class PL_SQLParser extends Parser {
             TABLE_KEYWORD364_tree = (CommonTree)adaptor.create(TABLE_KEYWORD364);
             adaptor.addChild(root_0, TABLE_KEYWORD364_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:51: ( sql_not_parsed )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:51: ( sql_not_parsed )+
             int cnt125=0;
             loop125:
             do {
@@ -10176,7 +10176,7 @@ public class PL_SQLParser extends Parser {
                 int LA125_0 = input.LA(1);
 
                 if ( ((LA125_0>=NUMBER_UNSIGNED && LA125_0<=OR_OPERATOR)||(LA125_0>=STRING && LA125_0<=SOME_TYPES)||(LA125_0>=KEYWORD && LA125_0<=ALIAS)||LA125_0==COMMA||LA125_0==NULL_KEYWORD||(LA125_0>=TRUE_KEYWORD && LA125_0<=FALSE_KEYWORD)||LA125_0==WITH_KEYWORD||LA125_0==INTERVAL_KEYWORD||LA125_0==IS_KEYWORD||LA125_0==REPLACE_KEYWORD||LA125_0==AS_KEYWORD||LA125_0==IN_KEYWORD||(LA125_0>=SELECT_KEYWORD && LA125_0<=COUNT_KEYWORD)||LA125_0==LIKE_KEYWORD||LA125_0==CASE_KEYWORD||(LA125_0>=TABLE_KEYWORD && LA125_0<=OF_KEYWORD)||LA125_0==BY_KEYWORD||LA125_0==COMMIT_KEYWORD||LA125_0==DELETE_KEYWORD||LA125_0==INTO_KEYWORD||(LA125_0>=BULK_KEYWORD && LA125_0<=COLLECT_KEYWORD)||(LA125_0>=VALUES_KEYWORD && LA125_0<=BETWEEN_KEYWORD)||(LA125_0>=INSERT_KEYWORD && LA125_0<=MERGE_KEYWORD)||(LA125_0>=RETURNING_KEYWORD && LA125_0<=SAVEPOINT_KEYWORD)||LA125_0==SET_KEYWORD||(LA125_0>=SQLCODE_KEYWORD && LA125_0<=EXISTS_KEYWORD)||LA125_0==ROW_KEYWORD||LA125_0==RESULT_KEYWORD||LA125_0==JOIN_KEYWORD||LA125_0==LPAREN||LA125_0==NOT_OPERATOR||LA125_0==THE_REST||LA125_0==212||(LA125_0>=214 && LA125_0<=228)) ) {
-                    int LA125_1 = input.LA(2);
+                    int LA125_2 = input.LA(2);
 
                     if ( (synpred232_PL_SQL()) ) {
                         alt125=1;
@@ -10188,7 +10188,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt125) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:52: sql_not_parsed
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:52: sql_not_parsed
             	    {
             	    pushFollow(FOLLOW_sql_not_parsed_in_lock_table_statement7464);
             	    sql_not_parsed365=sql_not_parsed();
@@ -10240,7 +10240,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "merge_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:1: merge_statement : MERGE_KEYWORD ( sql_not_parsed | ON_KEYWORD | USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD | UPDATE_KEYWORD )+ ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:1: merge_statement : MERGE_KEYWORD ( sql_not_parsed | ON_KEYWORD | USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD | UPDATE_KEYWORD )+ ;
     public final PL_SQLParser.merge_statement_return merge_statement() throws RecognitionException {
         PL_SQLParser.merge_statement_return retval = new PL_SQLParser.merge_statement_return();
         retval.start = input.LT(1);
@@ -10267,8 +10267,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 71) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:17: ( MERGE_KEYWORD ( sql_not_parsed | ON_KEYWORD | USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD | UPDATE_KEYWORD )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:19: MERGE_KEYWORD ( sql_not_parsed | ON_KEYWORD | USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD | UPDATE_KEYWORD )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:17: ( MERGE_KEYWORD ( sql_not_parsed | ON_KEYWORD | USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD | UPDATE_KEYWORD )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:19: MERGE_KEYWORD ( sql_not_parsed | ON_KEYWORD | USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD | UPDATE_KEYWORD )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -10277,7 +10277,7 @@ public class PL_SQLParser extends Parser {
             MERGE_KEYWORD366_tree = (CommonTree)adaptor.create(MERGE_KEYWORD366);
             adaptor.addChild(root_0, MERGE_KEYWORD366_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:33: ( sql_not_parsed | ON_KEYWORD | USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD | UPDATE_KEYWORD )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:33: ( sql_not_parsed | ON_KEYWORD | USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD | UPDATE_KEYWORD )+
             int cnt126=0;
             loop126:
             do {
@@ -10285,7 +10285,7 @@ public class PL_SQLParser extends Parser {
                 alt126 = dfa126.predict(input);
                 switch (alt126) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:34: sql_not_parsed
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:34: sql_not_parsed
             	    {
             	    pushFollow(FOLLOW_sql_not_parsed_in_merge_statement7476);
             	    sql_not_parsed367=sql_not_parsed();
@@ -10297,7 +10297,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:51: ON_KEYWORD
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:51: ON_KEYWORD
             	    {
             	    ON_KEYWORD368=(Token)match(input,ON_KEYWORD,FOLLOW_ON_KEYWORD_in_merge_statement7480); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -10308,7 +10308,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:19: USING_KEYWORD
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:19: USING_KEYWORD
             	    {
             	    USING_KEYWORD369=(Token)match(input,USING_KEYWORD,FOLLOW_USING_KEYWORD_in_merge_statement7502); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -10319,7 +10319,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 4 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:35: WHEN_KEYWORD
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:35: WHEN_KEYWORD
             	    {
             	    WHEN_KEYWORD370=(Token)match(input,WHEN_KEYWORD,FOLLOW_WHEN_KEYWORD_in_merge_statement7506); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -10330,7 +10330,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 5 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:50: THEN_KEYWORD
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:50: THEN_KEYWORD
             	    {
             	    THEN_KEYWORD371=(Token)match(input,THEN_KEYWORD,FOLLOW_THEN_KEYWORD_in_merge_statement7510); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -10341,7 +10341,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 6 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:65: INSERT_KEYWORD
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:65: INSERT_KEYWORD
             	    {
             	    INSERT_KEYWORD372=(Token)match(input,INSERT_KEYWORD,FOLLOW_INSERT_KEYWORD_in_merge_statement7514); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -10352,7 +10352,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 7 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:19: UPDATE_KEYWORD
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:736:19: UPDATE_KEYWORD
             	    {
             	    UPDATE_KEYWORD373=(Token)match(input,UPDATE_KEYWORD,FOLLOW_UPDATE_KEYWORD_in_merge_statement7536); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -10403,7 +10403,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "rollback_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:736:1: rollback_statement : ROLLBACK_KEYWORD ( sql_not_parsed )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:737:1: rollback_statement : ROLLBACK_KEYWORD ( sql_not_parsed )? ;
     public final PL_SQLParser.rollback_statement_return rollback_statement() throws RecognitionException {
         PL_SQLParser.rollback_statement_return retval = new PL_SQLParser.rollback_statement_return();
         retval.start = input.LT(1);
@@ -10418,8 +10418,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 72) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:736:20: ( ROLLBACK_KEYWORD ( sql_not_parsed )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:736:22: ROLLBACK_KEYWORD ( sql_not_parsed )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:737:20: ( ROLLBACK_KEYWORD ( sql_not_parsed )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:737:22: ROLLBACK_KEYWORD ( sql_not_parsed )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -10428,7 +10428,7 @@ public class PL_SQLParser extends Parser {
             ROLLBACK_KEYWORD374_tree = (CommonTree)adaptor.create(ROLLBACK_KEYWORD374);
             adaptor.addChild(root_0, ROLLBACK_KEYWORD374_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:736:39: ( sql_not_parsed )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:737:39: ( sql_not_parsed )?
             int alt127=2;
             int LA127_0 = input.LA(1);
 
@@ -10485,7 +10485,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "savepoint_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:737:1: savepoint_statement : SAVEPOINT_KEYWORD identifier ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:738:1: savepoint_statement : SAVEPOINT_KEYWORD identifier ;
     public final PL_SQLParser.savepoint_statement_return savepoint_statement() throws RecognitionException {
         PL_SQLParser.savepoint_statement_return retval = new PL_SQLParser.savepoint_statement_return();
         retval.start = input.LT(1);
@@ -10500,8 +10500,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 73) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:737:21: ( SAVEPOINT_KEYWORD identifier )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:737:23: SAVEPOINT_KEYWORD identifier
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:738:21: ( SAVEPOINT_KEYWORD identifier )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:738:23: SAVEPOINT_KEYWORD identifier
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -10546,7 +10546,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "set_transaction_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:738:1: set_transaction_statement : SET_KEYWORD TRANSACTION_KEYWORD ( sql_not_parsed )+ ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:1: set_transaction_statement : SET_KEYWORD TRANSACTION_KEYWORD ( sql_not_parsed )+ ;
     public final PL_SQLParser.set_transaction_statement_return set_transaction_statement() throws RecognitionException {
         PL_SQLParser.set_transaction_statement_return retval = new PL_SQLParser.set_transaction_statement_return();
         retval.start = input.LT(1);
@@ -10563,8 +10563,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 74) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:738:27: ( SET_KEYWORD TRANSACTION_KEYWORD ( sql_not_parsed )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:738:29: SET_KEYWORD TRANSACTION_KEYWORD ( sql_not_parsed )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:27: ( SET_KEYWORD TRANSACTION_KEYWORD ( sql_not_parsed )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:29: SET_KEYWORD TRANSACTION_KEYWORD ( sql_not_parsed )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -10578,7 +10578,7 @@ public class PL_SQLParser extends Parser {
             TRANSACTION_KEYWORD379_tree = (CommonTree)adaptor.create(TRANSACTION_KEYWORD379);
             adaptor.addChild(root_0, TRANSACTION_KEYWORD379_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:738:61: ( sql_not_parsed )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:61: ( sql_not_parsed )+
             int cnt128=0;
             loop128:
             do {
@@ -10586,7 +10586,7 @@ public class PL_SQLParser extends Parser {
                 int LA128_0 = input.LA(1);
 
                 if ( ((LA128_0>=NUMBER_UNSIGNED && LA128_0<=OR_OPERATOR)||(LA128_0>=STRING && LA128_0<=SOME_TYPES)||(LA128_0>=KEYWORD && LA128_0<=ALIAS)||LA128_0==COMMA||LA128_0==NULL_KEYWORD||(LA128_0>=TRUE_KEYWORD && LA128_0<=FALSE_KEYWORD)||LA128_0==WITH_KEYWORD||LA128_0==INTERVAL_KEYWORD||LA128_0==IS_KEYWORD||LA128_0==REPLACE_KEYWORD||LA128_0==AS_KEYWORD||LA128_0==IN_KEYWORD||(LA128_0>=SELECT_KEYWORD && LA128_0<=COUNT_KEYWORD)||LA128_0==LIKE_KEYWORD||LA128_0==CASE_KEYWORD||(LA128_0>=TABLE_KEYWORD && LA128_0<=OF_KEYWORD)||LA128_0==BY_KEYWORD||LA128_0==COMMIT_KEYWORD||LA128_0==DELETE_KEYWORD||LA128_0==INTO_KEYWORD||(LA128_0>=BULK_KEYWORD && LA128_0<=COLLECT_KEYWORD)||(LA128_0>=VALUES_KEYWORD && LA128_0<=BETWEEN_KEYWORD)||(LA128_0>=INSERT_KEYWORD && LA128_0<=MERGE_KEYWORD)||(LA128_0>=RETURNING_KEYWORD && LA128_0<=SAVEPOINT_KEYWORD)||LA128_0==SET_KEYWORD||(LA128_0>=SQLCODE_KEYWORD && LA128_0<=EXISTS_KEYWORD)||LA128_0==ROW_KEYWORD||LA128_0==RESULT_KEYWORD||LA128_0==JOIN_KEYWORD||LA128_0==LPAREN||LA128_0==NOT_OPERATOR||LA128_0==THE_REST||LA128_0==212||(LA128_0>=214 && LA128_0<=228)) ) {
-                    int LA128_2 = input.LA(2);
+                    int LA128_1 = input.LA(2);
 
                     if ( (synpred241_PL_SQL()) ) {
                         alt128=1;
@@ -10598,7 +10598,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt128) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:738:62: sql_not_parsed
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:62: sql_not_parsed
             	    {
             	    pushFollow(FOLLOW_sql_not_parsed_in_set_transaction_statement7569);
             	    sql_not_parsed380=sql_not_parsed();
@@ -10650,7 +10650,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "update_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:1: update_statement : UPDATE_KEYWORD ( sql_not_parsed )+ ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:740:1: update_statement : UPDATE_KEYWORD ( sql_not_parsed )+ ;
     public final PL_SQLParser.update_statement_return update_statement() throws RecognitionException {
         PL_SQLParser.update_statement_return retval = new PL_SQLParser.update_statement_return();
         retval.start = input.LT(1);
@@ -10665,8 +10665,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 75) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:18: ( UPDATE_KEYWORD ( sql_not_parsed )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:20: UPDATE_KEYWORD ( sql_not_parsed )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:740:18: ( UPDATE_KEYWORD ( sql_not_parsed )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:740:20: UPDATE_KEYWORD ( sql_not_parsed )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -10675,7 +10675,7 @@ public class PL_SQLParser extends Parser {
             UPDATE_KEYWORD381_tree = (CommonTree)adaptor.create(UPDATE_KEYWORD381);
             adaptor.addChild(root_0, UPDATE_KEYWORD381_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:35: ( sql_not_parsed )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:740:35: ( sql_not_parsed )+
             int cnt129=0;
             loop129:
             do {
@@ -10695,7 +10695,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt129) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:36: sql_not_parsed
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:740:36: sql_not_parsed
             	    {
             	    pushFollow(FOLLOW_sql_not_parsed_in_update_statement7581);
             	    sql_not_parsed382=sql_not_parsed();
@@ -10747,7 +10747,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "goto_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:742:1: goto_statement : GOTO_KEYWORD identifier ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:743:1: goto_statement : GOTO_KEYWORD identifier ;
     public final PL_SQLParser.goto_statement_return goto_statement() throws RecognitionException {
         PL_SQLParser.goto_statement_return retval = new PL_SQLParser.goto_statement_return();
         retval.start = input.LT(1);
@@ -10762,8 +10762,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 76) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:742:16: ( GOTO_KEYWORD identifier )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:742:18: GOTO_KEYWORD identifier
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:743:16: ( GOTO_KEYWORD identifier )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:743:18: GOTO_KEYWORD identifier
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -10808,7 +10808,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "return_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:743:1: return_statement : RETURN_KEYWORD ( expression )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:744:1: return_statement : RETURN_KEYWORD ( expression )? ;
     public final PL_SQLParser.return_statement_return return_statement() throws RecognitionException {
         PL_SQLParser.return_statement_return retval = new PL_SQLParser.return_statement_return();
         retval.start = input.LT(1);
@@ -10823,8 +10823,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 77) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:743:18: ( RETURN_KEYWORD ( expression )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:743:20: RETURN_KEYWORD ( expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:744:18: ( RETURN_KEYWORD ( expression )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:744:20: RETURN_KEYWORD ( expression )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -10833,7 +10833,7 @@ public class PL_SQLParser extends Parser {
             RETURN_KEYWORD385_tree = (CommonTree)adaptor.create(RETURN_KEYWORD385);
             adaptor.addChild(root_0, RETURN_KEYWORD385_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:743:35: ( expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:744:35: ( expression )?
             int alt130=2;
             int LA130_0 = input.LA(1);
 
@@ -10890,7 +10890,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "if_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:744:1: if_statement : IF_KEYWORD expression THEN_KEYWORD ( executable_section )+ ( ELSIF_KEYWORD expression THEN_KEYWORD ( executable_section )+ )* ( ELSE_KEYWORD ( executable_section )+ )? END_KEYWORD IF_KEYWORD -> ^( IM_IF IF_KEYWORD ( executable_section )+ END_KEYWORD IF_KEYWORD ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:745:1: if_statement : IF_KEYWORD expression THEN_KEYWORD ( executable_section )+ ( ELSIF_KEYWORD expression THEN_KEYWORD ( executable_section )+ )* ( ELSE_KEYWORD ( executable_section )+ )? END_KEYWORD IF_KEYWORD -> ^( IM_IF IF_KEYWORD ( executable_section )+ END_KEYWORD IF_KEYWORD ) ;
     public final PL_SQLParser.if_statement_return if_statement() throws RecognitionException {
         PL_SQLParser.if_statement_return retval = new PL_SQLParser.if_statement_return();
         retval.start = input.LT(1);
@@ -10931,8 +10931,8 @@ public class PL_SQLParser extends Parser {
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 78) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:744:14: ( IF_KEYWORD expression THEN_KEYWORD ( executable_section )+ ( ELSIF_KEYWORD expression THEN_KEYWORD ( executable_section )+ )* ( ELSE_KEYWORD ( executable_section )+ )? END_KEYWORD IF_KEYWORD -> ^( IM_IF IF_KEYWORD ( executable_section )+ END_KEYWORD IF_KEYWORD ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:744:16: IF_KEYWORD expression THEN_KEYWORD ( executable_section )+ ( ELSIF_KEYWORD expression THEN_KEYWORD ( executable_section )+ )* ( ELSE_KEYWORD ( executable_section )+ )? END_KEYWORD IF_KEYWORD
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:745:14: ( IF_KEYWORD expression THEN_KEYWORD ( executable_section )+ ( ELSIF_KEYWORD expression THEN_KEYWORD ( executable_section )+ )* ( ELSE_KEYWORD ( executable_section )+ )? END_KEYWORD IF_KEYWORD -> ^( IM_IF IF_KEYWORD ( executable_section )+ END_KEYWORD IF_KEYWORD ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:745:16: IF_KEYWORD expression THEN_KEYWORD ( executable_section )+ ( ELSIF_KEYWORD expression THEN_KEYWORD ( executable_section )+ )* ( ELSE_KEYWORD ( executable_section )+ )? END_KEYWORD IF_KEYWORD
             {
             IF_KEYWORD387=(Token)match(input,IF_KEYWORD,FOLLOW_IF_KEYWORD_in_if_statement7611); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IF_KEYWORD.add(IF_KEYWORD387);
@@ -10946,7 +10946,7 @@ public class PL_SQLParser extends Parser {
             THEN_KEYWORD389=(Token)match(input,THEN_KEYWORD,FOLLOW_THEN_KEYWORD_in_if_statement7615); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_THEN_KEYWORD.add(THEN_KEYWORD389);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:744:51: ( executable_section )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:745:51: ( executable_section )+
             int cnt131=0;
             loop131:
             do {
@@ -10960,7 +10960,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt131) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:744:52: executable_section
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:745:52: executable_section
             	    {
             	    pushFollow(FOLLOW_executable_section_in_if_statement7618);
             	    executable_section390=executable_section();
@@ -10982,7 +10982,7 @@ public class PL_SQLParser extends Parser {
                 cnt131++;
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:745:16: ( ELSIF_KEYWORD expression THEN_KEYWORD ( executable_section )+ )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:746:16: ( ELSIF_KEYWORD expression THEN_KEYWORD ( executable_section )+ )*
             loop133:
             do {
                 int alt133=2;
@@ -10995,7 +10995,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt133) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:745:17: ELSIF_KEYWORD expression THEN_KEYWORD ( executable_section )+
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:746:17: ELSIF_KEYWORD expression THEN_KEYWORD ( executable_section )+
             	    {
             	    ELSIF_KEYWORD391=(Token)match(input,ELSIF_KEYWORD,FOLLOW_ELSIF_KEYWORD_in_if_statement7638); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_ELSIF_KEYWORD.add(ELSIF_KEYWORD391);
@@ -11009,7 +11009,7 @@ public class PL_SQLParser extends Parser {
             	    THEN_KEYWORD393=(Token)match(input,THEN_KEYWORD,FOLLOW_THEN_KEYWORD_in_if_statement7642); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_THEN_KEYWORD.add(THEN_KEYWORD393);
 
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:745:55: ( executable_section )+
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:746:55: ( executable_section )+
             	    int cnt132=0;
             	    loop132:
             	    do {
@@ -11023,7 +11023,7 @@ public class PL_SQLParser extends Parser {
 
             	        switch (alt132) {
             	    	case 1 :
-            	    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:745:56: executable_section
+            	    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:746:56: executable_section
             	    	    {
             	    	    pushFollow(FOLLOW_executable_section_in_if_statement7645);
             	    	    executable_section394=executable_section();
@@ -11054,7 +11054,7 @@ public class PL_SQLParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:746:16: ( ELSE_KEYWORD ( executable_section )+ )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:747:16: ( ELSE_KEYWORD ( executable_section )+ )?
             int alt135=2;
             int LA135_0 = input.LA(1);
 
@@ -11063,12 +11063,12 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt135) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:746:17: ELSE_KEYWORD ( executable_section )+
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:747:17: ELSE_KEYWORD ( executable_section )+
                     {
                     ELSE_KEYWORD395=(Token)match(input,ELSE_KEYWORD,FOLLOW_ELSE_KEYWORD_in_if_statement7667); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ELSE_KEYWORD.add(ELSE_KEYWORD395);
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:746:30: ( executable_section )+
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:747:30: ( executable_section )+
                     int cnt134=0;
                     loop134:
                     do {
@@ -11082,7 +11082,7 @@ public class PL_SQLParser extends Parser {
 
                         switch (alt134) {
                     	case 1 :
-                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:746:31: executable_section
+                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:747:31: executable_section
                     	    {
                     	    pushFollow(FOLLOW_executable_section_in_if_statement7670);
                     	    executable_section396=executable_section();
@@ -11119,7 +11119,7 @@ public class PL_SQLParser extends Parser {
 
 
             // AST REWRITE
-            // elements: IF_KEYWORD, executable_section, IF_KEYWORD, END_KEYWORD
+            // elements: IF_KEYWORD, executable_section, END_KEYWORD, IF_KEYWORD
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -11130,9 +11130,9 @@ public class PL_SQLParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 748:16: -> ^( IM_IF IF_KEYWORD ( executable_section )+ END_KEYWORD IF_KEYWORD )
+            // 749:16: -> ^( IM_IF IF_KEYWORD ( executable_section )+ END_KEYWORD IF_KEYWORD )
             {
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:748:19: ^( IM_IF IF_KEYWORD ( executable_section )+ END_KEYWORD IF_KEYWORD )
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:749:19: ^( IM_IF IF_KEYWORD ( executable_section )+ END_KEYWORD IF_KEYWORD )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_IF, "IM_IF"), root_1);
@@ -11184,7 +11184,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "loop_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:749:1: loop_statement : LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD ( identifier )? -> ^( IM_LOOP LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:750:1: loop_statement : LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD ( identifier )? -> ^( IM_LOOP LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD ) ;
     public final PL_SQLParser.loop_statement_return loop_statement() throws RecognitionException {
         PL_SQLParser.loop_statement_return retval = new PL_SQLParser.loop_statement_return();
         retval.start = input.LT(1);
@@ -11208,13 +11208,13 @@ public class PL_SQLParser extends Parser {
         RewriteRuleSubtreeStream stream_identifier=new RewriteRuleSubtreeStream(adaptor,"rule identifier");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 79) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:749:16: ( LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD ( identifier )? -> ^( IM_LOOP LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:749:18: LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD ( identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:750:16: ( LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD ( identifier )? -> ^( IM_LOOP LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:750:18: LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD ( identifier )?
             {
             LOOP_KEYWORD399=(Token)match(input,LOOP_KEYWORD,FOLLOW_LOOP_KEYWORD_in_loop_statement7732); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LOOP_KEYWORD.add(LOOP_KEYWORD399);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:749:31: ( executable_section )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:750:31: ( executable_section )+
             int cnt136=0;
             loop136:
             do {
@@ -11228,7 +11228,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt136) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:749:32: executable_section
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:750:32: executable_section
             	    {
             	    pushFollow(FOLLOW_executable_section_in_loop_statement7735);
             	    executable_section400=executable_section();
@@ -11256,7 +11256,7 @@ public class PL_SQLParser extends Parser {
             LOOP_KEYWORD402=(Token)match(input,LOOP_KEYWORD,FOLLOW_LOOP_KEYWORD_in_loop_statement7741); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LOOP_KEYWORD.add(LOOP_KEYWORD402);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:749:78: ( identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:750:78: ( identifier )?
             int alt137=2;
             int LA137_0 = input.LA(1);
 
@@ -11286,7 +11286,7 @@ public class PL_SQLParser extends Parser {
 
 
             // AST REWRITE
-            // elements: END_KEYWORD, executable_section, LOOP_KEYWORD, LOOP_KEYWORD
+            // elements: END_KEYWORD, LOOP_KEYWORD, LOOP_KEYWORD, executable_section
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -11297,9 +11297,9 @@ public class PL_SQLParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 750:3: -> ^( IM_LOOP LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD )
+            // 751:3: -> ^( IM_LOOP LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD )
             {
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:750:6: ^( IM_LOOP LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD )
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:751:6: ^( IM_LOOP LOOP_KEYWORD ( executable_section )+ END_KEYWORD LOOP_KEYWORD )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_LOOP, "IM_LOOP"), root_1);
@@ -11351,7 +11351,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "while_loop_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:751:1: while_loop_statement : WHILE_KEYWORD expression loop_statement ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:752:1: while_loop_statement : WHILE_KEYWORD expression loop_statement ;
     public final PL_SQLParser.while_loop_statement_return while_loop_statement() throws RecognitionException {
         PL_SQLParser.while_loop_statement_return retval = new PL_SQLParser.while_loop_statement_return();
         retval.start = input.LT(1);
@@ -11368,8 +11368,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 80) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:751:22: ( WHILE_KEYWORD expression loop_statement )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:751:24: WHILE_KEYWORD expression loop_statement
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:752:22: ( WHILE_KEYWORD expression loop_statement )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:752:24: WHILE_KEYWORD expression loop_statement
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -11420,7 +11420,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "for_loop_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:752:1: for_loop_statement : FOR_KEYWORD identifier IN_KEYWORD ( REVERSE_KEYWORD )? ( ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) ) | cursor_for_loop_statement2 ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:1: for_loop_statement : FOR_KEYWORD identifier IN_KEYWORD ( REVERSE_KEYWORD )? ( ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) ) | cursor_for_loop_statement2 ) ;
     public final PL_SQLParser.for_loop_statement_return for_loop_statement() throws RecognitionException {
         PL_SQLParser.for_loop_statement_return retval = new PL_SQLParser.for_loop_statement_return();
         retval.start = input.LT(1);
@@ -11447,8 +11447,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 81) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:752:20: ( FOR_KEYWORD identifier IN_KEYWORD ( REVERSE_KEYWORD )? ( ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) ) | cursor_for_loop_statement2 ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:752:22: FOR_KEYWORD identifier IN_KEYWORD ( REVERSE_KEYWORD )? ( ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) ) | cursor_for_loop_statement2 )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:20: ( FOR_KEYWORD identifier IN_KEYWORD ( REVERSE_KEYWORD )? ( ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) ) | cursor_for_loop_statement2 ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:22: FOR_KEYWORD identifier IN_KEYWORD ( REVERSE_KEYWORD )? ( ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) ) | cursor_for_loop_statement2 )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -11468,7 +11468,7 @@ public class PL_SQLParser extends Parser {
             IN_KEYWORD409_tree = (CommonTree)adaptor.create(IN_KEYWORD409);
             adaptor.addChild(root_0, IN_KEYWORD409_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:752:56: ( REVERSE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:56: ( REVERSE_KEYWORD )?
             int alt138=2;
             int LA138_0 = input.LA(1);
 
@@ -11490,7 +11490,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:22: ( ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) ) | cursor_for_loop_statement2 )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:22: ( ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) ) | cursor_for_loop_statement2 )
             int alt140=2;
             int LA140_0 = input.LA(1);
 
@@ -11523,10 +11523,10 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt140) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:23: ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:23: ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:23: ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:24: expression ( for_loop_statement_part | cursor_for_loop_statement1 )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:23: ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:24: expression ( for_loop_statement_part | cursor_for_loop_statement1 )
                     {
                     pushFollow(FOLLOW_expression_in_for_loop_statement7814);
                     expression411=expression();
@@ -11534,7 +11534,7 @@ public class PL_SQLParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, expression411.getTree());
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:35: ( for_loop_statement_part | cursor_for_loop_statement1 )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:35: ( for_loop_statement_part | cursor_for_loop_statement1 )
                     int alt139=2;
                     int LA139_0 = input.LA(1);
 
@@ -11553,7 +11553,7 @@ public class PL_SQLParser extends Parser {
                     }
                     switch (alt139) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:36: for_loop_statement_part
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:36: for_loop_statement_part
                             {
                             pushFollow(FOLLOW_for_loop_statement_part_in_for_loop_statement7817);
                             for_loop_statement_part412=for_loop_statement_part();
@@ -11565,7 +11565,7 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:62: cursor_for_loop_statement1
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:62: cursor_for_loop_statement1
                             {
                             pushFollow(FOLLOW_cursor_for_loop_statement1_in_for_loop_statement7821);
                             cursor_for_loop_statement1413=cursor_for_loop_statement1();
@@ -11586,7 +11586,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:24: cursor_for_loop_statement2
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:755:24: cursor_for_loop_statement2
                     {
                     pushFollow(FOLLOW_cursor_for_loop_statement2_in_for_loop_statement7850);
                     cursor_for_loop_statement2414=cursor_for_loop_statement2();
@@ -11630,7 +11630,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "for_loop_statement_part"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:755:1: for_loop_statement_part : '..' expression loop_statement ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:756:1: for_loop_statement_part : '..' expression loop_statement ;
     public final PL_SQLParser.for_loop_statement_part_return for_loop_statement_part() throws RecognitionException {
         PL_SQLParser.for_loop_statement_part_return retval = new PL_SQLParser.for_loop_statement_part_return();
         retval.start = input.LT(1);
@@ -11647,8 +11647,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 82) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:755:25: ( '..' expression loop_statement )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:755:28: '..' expression loop_statement
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:756:25: ( '..' expression loop_statement )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:756:28: '..' expression loop_statement
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -11699,7 +11699,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "cursor_for_loop_statement1"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:756:1: cursor_for_loop_statement1 : loop_statement ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:757:1: cursor_for_loop_statement1 : loop_statement ;
     public final PL_SQLParser.cursor_for_loop_statement1_return cursor_for_loop_statement1() throws RecognitionException {
         PL_SQLParser.cursor_for_loop_statement1_return retval = new PL_SQLParser.cursor_for_loop_statement1_return();
         retval.start = input.LT(1);
@@ -11712,8 +11712,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 83) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:756:28: ( loop_statement )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:756:30: loop_statement
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:757:28: ( loop_statement )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:757:30: loop_statement
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -11753,7 +11753,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "cursor_for_loop_statement2"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:757:1: cursor_for_loop_statement2 : '(' select_statement ')' loop_statement ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:758:1: cursor_for_loop_statement2 : '(' select_statement ')' loop_statement ;
     public final PL_SQLParser.cursor_for_loop_statement2_return cursor_for_loop_statement2() throws RecognitionException {
         PL_SQLParser.cursor_for_loop_statement2_return retval = new PL_SQLParser.cursor_for_loop_statement2_return();
         retval.start = input.LT(1);
@@ -11772,8 +11772,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 84) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:757:28: ( '(' select_statement ')' loop_statement )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:757:30: '(' select_statement ')' loop_statement
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:758:28: ( '(' select_statement ')' loop_statement )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:758:30: '(' select_statement ')' loop_statement
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -11829,7 +11829,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "raise_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:758:1: raise_statement : RAISE_KEYWORD ( universal_identifier )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:1: raise_statement : RAISE_KEYWORD ( universal_identifier )? ;
     public final PL_SQLParser.raise_statement_return raise_statement() throws RecognitionException {
         PL_SQLParser.raise_statement_return retval = new PL_SQLParser.raise_statement_return();
         retval.start = input.LT(1);
@@ -11844,8 +11844,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 85) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:758:17: ( RAISE_KEYWORD ( universal_identifier )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:758:19: RAISE_KEYWORD ( universal_identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:17: ( RAISE_KEYWORD ( universal_identifier )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:19: RAISE_KEYWORD ( universal_identifier )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -11854,12 +11854,12 @@ public class PL_SQLParser extends Parser {
             RAISE_KEYWORD423_tree = (CommonTree)adaptor.create(RAISE_KEYWORD423);
             adaptor.addChild(root_0, RAISE_KEYWORD423_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:758:33: ( universal_identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:33: ( universal_identifier )?
             int alt141=2;
             int LA141_0 = input.LA(1);
 
             if ( ((LA141_0>=IDENTIFIER && LA141_0<=EXT_IDENTIFIER)||LA141_0==INTERVAL_KEYWORD||LA141_0==RESULT_KEYWORD) ) {
-                int LA141_1 = input.LA(2);
+                int LA141_2 = input.LA(2);
 
                 if ( (synpred254_PL_SQL()) ) {
                     alt141=1;
@@ -11911,7 +11911,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "case_statement_expression"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:1: case_statement_expression : ( simple_case_statement_expression | searched_case_statement_expression );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:760:1: case_statement_expression : ( simple_case_statement_expression | searched_case_statement_expression );
     public final PL_SQLParser.case_statement_expression_return case_statement_expression() throws RecognitionException {
         PL_SQLParser.case_statement_expression_return retval = new PL_SQLParser.case_statement_expression_return();
         retval.start = input.LT(1);
@@ -11926,7 +11926,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 86) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:27: ( simple_case_statement_expression | searched_case_statement_expression )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:760:27: ( simple_case_statement_expression | searched_case_statement_expression )
             int alt142=2;
             int LA142_0 = input.LA(1);
 
@@ -11956,7 +11956,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt142) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:29: simple_case_statement_expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:760:29: simple_case_statement_expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -11970,7 +11970,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:64: searched_case_statement_expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:760:64: searched_case_statement_expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -12012,7 +12012,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "simple_case_statement_expression"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:760:1: simple_case_statement_expression : CASE_KEYWORD expression ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? ) -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:761:1: simple_case_statement_expression : CASE_KEYWORD expression ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? ) -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD ) ;
     public final PL_SQLParser.simple_case_statement_expression_return simple_case_statement_expression() throws RecognitionException {
         PL_SQLParser.simple_case_statement_expression_return retval = new PL_SQLParser.simple_case_statement_expression_return();
         retval.start = input.LT(1);
@@ -12052,8 +12052,8 @@ public class PL_SQLParser extends Parser {
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 87) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:760:34: ( CASE_KEYWORD expression ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? ) -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:760:36: CASE_KEYWORD expression ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:761:34: ( CASE_KEYWORD expression ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? ) -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:761:36: CASE_KEYWORD expression ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? )
             {
             CASE_KEYWORD427=(Token)match(input,CASE_KEYWORD,FOLLOW_CASE_KEYWORD_in_simple_case_statement_expression7911); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_CASE_KEYWORD.add(CASE_KEYWORD427);
@@ -12064,7 +12064,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_expression.add(expression428.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:761:25: ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:762:25: ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+
             int cnt144=0;
             loop144:
             do {
@@ -12078,7 +12078,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt144) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:761:26: WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:762:26: WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+
             	    {
             	    WHEN_KEYWORD429=(Token)match(input,WHEN_KEYWORD,FOLLOW_WHEN_KEYWORD_in_simple_case_statement_expression7941); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_WHEN_KEYWORD.add(WHEN_KEYWORD429);
@@ -12092,7 +12092,7 @@ public class PL_SQLParser extends Parser {
             	    THEN_KEYWORD431=(Token)match(input,THEN_KEYWORD,FOLLOW_THEN_KEYWORD_in_simple_case_statement_expression7945); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_THEN_KEYWORD.add(THEN_KEYWORD431);
 
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:761:63: ( executable_case_section )+
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:762:63: ( executable_case_section )+
             	    int cnt143=0;
             	    loop143:
             	    do {
@@ -12106,7 +12106,7 @@ public class PL_SQLParser extends Parser {
 
             	        switch (alt143) {
             	    	case 1 :
-            	    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:761:64: executable_case_section
+            	    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:762:64: executable_case_section
             	    	    {
             	    	    pushFollow(FOLLOW_executable_case_section_in_simple_case_statement_expression7948);
             	    	    executable_case_section432=executable_case_section();
@@ -12142,7 +12142,7 @@ public class PL_SQLParser extends Parser {
                 cnt144++;
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:762:25: ( ELSE_KEYWORD ( executable_case_section )+ )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:25: ( ELSE_KEYWORD ( executable_case_section )+ )?
             int alt146=2;
             int LA146_0 = input.LA(1);
 
@@ -12151,12 +12151,12 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt146) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:762:26: ELSE_KEYWORD ( executable_case_section )+
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:26: ELSE_KEYWORD ( executable_case_section )+
                     {
                     ELSE_KEYWORD433=(Token)match(input,ELSE_KEYWORD,FOLLOW_ELSE_KEYWORD_in_simple_case_statement_expression7979); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ELSE_KEYWORD.add(ELSE_KEYWORD433);
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:762:39: ( executable_case_section )+
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:39: ( executable_case_section )+
                     int cnt145=0;
                     loop145:
                     do {
@@ -12170,7 +12170,7 @@ public class PL_SQLParser extends Parser {
 
                         switch (alt145) {
                     	case 1 :
-                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:762:40: executable_case_section
+                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:40: executable_case_section
                     	    {
                     	    pushFollow(FOLLOW_executable_case_section_in_simple_case_statement_expression7982);
                     	    executable_case_section434=executable_case_section();
@@ -12198,18 +12198,18 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:25: ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:26: END_KEYWORD ( CASE_KEYWORD )? ( identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:764:25: ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:764:26: END_KEYWORD ( CASE_KEYWORD )? ( identifier )?
             {
             END_KEYWORD435=(Token)match(input,END_KEYWORD,FOLLOW_END_KEYWORD_in_simple_case_statement_expression8013); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_END_KEYWORD.add(END_KEYWORD435);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:38: ( CASE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:764:38: ( CASE_KEYWORD )?
             int alt147=2;
             int LA147_0 = input.LA(1);
 
             if ( (LA147_0==CASE_KEYWORD) ) {
-                int LA147_1 = input.LA(2);
+                int LA147_2 = input.LA(2);
 
                 if ( (synpred260_PL_SQL()) ) {
                     alt147=1;
@@ -12228,7 +12228,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:52: ( identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:764:52: ( identifier )?
             int alt148=2;
             int LA148_0 = input.LA(1);
 
@@ -12261,7 +12261,7 @@ public class PL_SQLParser extends Parser {
 
 
             // AST REWRITE
-            // elements: executable_case_section, END_KEYWORD, CASE_KEYWORD
+            // elements: END_KEYWORD, executable_case_section, CASE_KEYWORD
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -12272,9 +12272,9 @@ public class PL_SQLParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 764:25: -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD )
+            // 765:25: -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD )
             {
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:764:28: ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD )
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:765:28: ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_CASE, "IM_CASE"), root_1);
@@ -12325,7 +12325,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "searched_case_statement_expression"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:765:1: searched_case_statement_expression : CASE_KEYWORD ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? ) -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:766:1: searched_case_statement_expression : CASE_KEYWORD ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? ) -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD ) ;
     public final PL_SQLParser.searched_case_statement_expression_return searched_case_statement_expression() throws RecognitionException {
         PL_SQLParser.searched_case_statement_expression_return retval = new PL_SQLParser.searched_case_statement_expression_return();
         retval.start = input.LT(1);
@@ -12363,13 +12363,13 @@ public class PL_SQLParser extends Parser {
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 88) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:765:36: ( CASE_KEYWORD ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? ) -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:765:38: CASE_KEYWORD ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:766:36: ( CASE_KEYWORD ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? ) -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:766:38: CASE_KEYWORD ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+ ( ELSE_KEYWORD ( executable_case_section )+ )? ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? )
             {
             CASE_KEYWORD438=(Token)match(input,CASE_KEYWORD,FOLLOW_CASE_KEYWORD_in_searched_case_statement_expression8066); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_CASE_KEYWORD.add(CASE_KEYWORD438);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:766:25: ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:767:25: ( WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+ )+
             int cnt150=0;
             loop150:
             do {
@@ -12383,7 +12383,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt150) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:766:26: WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:767:26: WHEN_KEYWORD expression THEN_KEYWORD ( executable_case_section )+
             	    {
             	    WHEN_KEYWORD439=(Token)match(input,WHEN_KEYWORD,FOLLOW_WHEN_KEYWORD_in_searched_case_statement_expression8093); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_WHEN_KEYWORD.add(WHEN_KEYWORD439);
@@ -12397,7 +12397,7 @@ public class PL_SQLParser extends Parser {
             	    THEN_KEYWORD441=(Token)match(input,THEN_KEYWORD,FOLLOW_THEN_KEYWORD_in_searched_case_statement_expression8097); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_THEN_KEYWORD.add(THEN_KEYWORD441);
 
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:766:63: ( executable_case_section )+
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:767:63: ( executable_case_section )+
             	    int cnt149=0;
             	    loop149:
             	    do {
@@ -12411,7 +12411,7 @@ public class PL_SQLParser extends Parser {
 
             	        switch (alt149) {
             	    	case 1 :
-            	    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:766:64: executable_case_section
+            	    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:767:64: executable_case_section
             	    	    {
             	    	    pushFollow(FOLLOW_executable_case_section_in_searched_case_statement_expression8100);
             	    	    executable_case_section442=executable_case_section();
@@ -12447,7 +12447,7 @@ public class PL_SQLParser extends Parser {
                 cnt150++;
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:767:25: ( ELSE_KEYWORD ( executable_case_section )+ )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:25: ( ELSE_KEYWORD ( executable_case_section )+ )?
             int alt152=2;
             int LA152_0 = input.LA(1);
 
@@ -12456,12 +12456,12 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt152) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:767:26: ELSE_KEYWORD ( executable_case_section )+
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:26: ELSE_KEYWORD ( executable_case_section )+
                     {
                     ELSE_KEYWORD443=(Token)match(input,ELSE_KEYWORD,FOLLOW_ELSE_KEYWORD_in_searched_case_statement_expression8131); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ELSE_KEYWORD.add(ELSE_KEYWORD443);
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:767:39: ( executable_case_section )+
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:39: ( executable_case_section )+
                     int cnt151=0;
                     loop151:
                     do {
@@ -12475,7 +12475,7 @@ public class PL_SQLParser extends Parser {
 
                         switch (alt151) {
                     	case 1 :
-                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:767:40: executable_case_section
+                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:40: executable_case_section
                     	    {
                     	    pushFollow(FOLLOW_executable_case_section_in_searched_case_statement_expression8134);
                     	    executable_case_section444=executable_case_section();
@@ -12503,13 +12503,13 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:25: ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:26: END_KEYWORD ( CASE_KEYWORD )? ( identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:769:25: ( END_KEYWORD ( CASE_KEYWORD )? ( identifier )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:769:26: END_KEYWORD ( CASE_KEYWORD )? ( identifier )?
             {
             END_KEYWORD445=(Token)match(input,END_KEYWORD,FOLLOW_END_KEYWORD_in_searched_case_statement_expression8165); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_END_KEYWORD.add(END_KEYWORD445);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:38: ( CASE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:769:38: ( CASE_KEYWORD )?
             int alt153=2;
             int LA153_0 = input.LA(1);
 
@@ -12533,7 +12533,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:52: ( identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:769:52: ( identifier )?
             int alt154=2;
             int LA154_0 = input.LA(1);
 
@@ -12566,7 +12566,7 @@ public class PL_SQLParser extends Parser {
 
 
             // AST REWRITE
-            // elements: END_KEYWORD, CASE_KEYWORD, executable_case_section
+            // elements: executable_case_section, CASE_KEYWORD, END_KEYWORD
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -12577,9 +12577,9 @@ public class PL_SQLParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 769:25: -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD )
+            // 770:25: -> ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD )
             {
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:769:28: ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD )
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:770:28: ^( IM_CASE CASE_KEYWORD ( executable_case_section )+ END_KEYWORD )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IM_CASE, "IM_CASE"), root_1);
@@ -12630,7 +12630,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "close_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:770:1: close_statement : CLOSE_KEYWORD universal_identifier ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:1: close_statement : CLOSE_KEYWORD universal_identifier ;
     public final PL_SQLParser.close_statement_return close_statement() throws RecognitionException {
         PL_SQLParser.close_statement_return retval = new PL_SQLParser.close_statement_return();
         retval.start = input.LT(1);
@@ -12645,8 +12645,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 89) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:770:17: ( CLOSE_KEYWORD universal_identifier )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:770:19: CLOSE_KEYWORD universal_identifier
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:17: ( CLOSE_KEYWORD universal_identifier )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:19: CLOSE_KEYWORD universal_identifier
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -12691,7 +12691,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "continue_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:1: continue_statement : CONTINUE_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:1: continue_statement : CONTINUE_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )? ;
     public final PL_SQLParser.continue_statement_return continue_statement() throws RecognitionException {
         PL_SQLParser.continue_statement_return retval = new PL_SQLParser.continue_statement_return();
         retval.start = input.LT(1);
@@ -12710,8 +12710,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 90) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:20: ( CONTINUE_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:22: CONTINUE_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:20: ( CONTINUE_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:22: CONTINUE_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -12720,12 +12720,12 @@ public class PL_SQLParser extends Parser {
             CONTINUE_KEYWORD450_tree = (CommonTree)adaptor.create(CONTINUE_KEYWORD450);
             adaptor.addChild(root_0, CONTINUE_KEYWORD450_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:39: ( identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:39: ( identifier )?
             int alt155=2;
             int LA155_0 = input.LA(1);
 
             if ( (LA155_0==IDENTIFIER||LA155_0==INTERVAL_KEYWORD||LA155_0==RESULT_KEYWORD) ) {
-                int LA155_2 = input.LA(2);
+                int LA155_1 = input.LA(2);
 
                 if ( (synpred268_PL_SQL()) ) {
                     alt155=1;
@@ -12747,12 +12747,12 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:51: ( WHEN_KEYWORD expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:51: ( WHEN_KEYWORD expression )?
             int alt156=2;
             int LA156_0 = input.LA(1);
 
             if ( (LA156_0==WHEN_KEYWORD) ) {
-                int LA156_2 = input.LA(2);
+                int LA156_1 = input.LA(2);
 
                 if ( (synpred269_PL_SQL()) ) {
                     alt156=1;
@@ -12760,7 +12760,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt156) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:52: WHEN_KEYWORD expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:52: WHEN_KEYWORD expression
                     {
                     WHEN_KEYWORD452=(Token)match(input,WHEN_KEYWORD,FOLLOW_WHEN_KEYWORD_in_continue_statement8257); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -12809,7 +12809,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "execute_immediate_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:1: execute_immediate_statement : EXECUTE_KEYWORD IMMEDIATE_KEYWORD expression ( RETURN_KEYWORD | RETURNING_KEYWORD )? ( into_clause | bulk_collect_into_clause )? ( using_clause )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:773:1: execute_immediate_statement : EXECUTE_KEYWORD IMMEDIATE_KEYWORD expression ( RETURN_KEYWORD | RETURNING_KEYWORD )? ( into_clause | bulk_collect_into_clause )? ( using_clause )? ;
     public final PL_SQLParser.execute_immediate_statement_return execute_immediate_statement() throws RecognitionException {
         PL_SQLParser.execute_immediate_statement_return retval = new PL_SQLParser.execute_immediate_statement_return();
         retval.start = input.LT(1);
@@ -12834,8 +12834,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 91) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:29: ( EXECUTE_KEYWORD IMMEDIATE_KEYWORD expression ( RETURN_KEYWORD | RETURNING_KEYWORD )? ( into_clause | bulk_collect_into_clause )? ( using_clause )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:31: EXECUTE_KEYWORD IMMEDIATE_KEYWORD expression ( RETURN_KEYWORD | RETURNING_KEYWORD )? ( into_clause | bulk_collect_into_clause )? ( using_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:773:29: ( EXECUTE_KEYWORD IMMEDIATE_KEYWORD expression ( RETURN_KEYWORD | RETURNING_KEYWORD )? ( into_clause | bulk_collect_into_clause )? ( using_clause )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:773:31: EXECUTE_KEYWORD IMMEDIATE_KEYWORD expression ( RETURN_KEYWORD | RETURNING_KEYWORD )? ( into_clause | bulk_collect_into_clause )? ( using_clause )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -12855,7 +12855,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, expression456.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:773:31: ( RETURN_KEYWORD | RETURNING_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:774:31: ( RETURN_KEYWORD | RETURNING_KEYWORD )?
             int alt157=2;
             int LA157_0 = input.LA(1);
 
@@ -12891,7 +12891,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:774:31: ( into_clause | bulk_collect_into_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:775:31: ( into_clause | bulk_collect_into_clause )?
             int alt158=3;
             int LA158_0 = input.LA(1);
 
@@ -12903,7 +12903,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt158) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:774:32: into_clause
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:775:32: into_clause
                     {
                     pushFollow(FOLLOW_into_clause_in_execute_immediate_statement8344);
                     into_clause458=into_clause();
@@ -12915,7 +12915,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:774:46: bulk_collect_into_clause
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:775:46: bulk_collect_into_clause
                     {
                     pushFollow(FOLLOW_bulk_collect_into_clause_in_execute_immediate_statement8348);
                     bulk_collect_into_clause459=bulk_collect_into_clause();
@@ -12929,7 +12929,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:775:31: ( using_clause )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:776:31: ( using_clause )?
             int alt159=2;
             int LA159_0 = input.LA(1);
 
@@ -12982,7 +12982,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "into_clause"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:776:1: into_clause : INTO_KEYWORD universal_identifier ( ',' universal_identifier )* ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:777:1: into_clause : INTO_KEYWORD universal_identifier ( ',' universal_identifier )* ;
     public final PL_SQLParser.into_clause_return into_clause() throws RecognitionException {
         PL_SQLParser.into_clause_return retval = new PL_SQLParser.into_clause_return();
         retval.start = input.LT(1);
@@ -13001,8 +13001,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 92) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:776:13: ( INTO_KEYWORD universal_identifier ( ',' universal_identifier )* )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:776:15: INTO_KEYWORD universal_identifier ( ',' universal_identifier )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:777:13: ( INTO_KEYWORD universal_identifier ( ',' universal_identifier )* )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:777:15: INTO_KEYWORD universal_identifier ( ',' universal_identifier )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13017,7 +13017,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, universal_identifier462.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:776:49: ( ',' universal_identifier )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:777:49: ( ',' universal_identifier )*
             loop160:
             do {
                 int alt160=2;
@@ -13030,7 +13030,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt160) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:776:50: ',' universal_identifier
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:777:50: ',' universal_identifier
             	    {
             	    char_literal463=(Token)match(input,COMMA,FOLLOW_COMMA_in_into_clause8396); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -13082,7 +13082,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "bulk_collect_into_clause"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:777:1: bulk_collect_into_clause : BULK_KEYWORD COLLECT_KEYWORD INTO_KEYWORD universal_identifier ( ',' universal_identifier )* ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:778:1: bulk_collect_into_clause : BULK_KEYWORD COLLECT_KEYWORD INTO_KEYWORD universal_identifier ( ',' universal_identifier )* ;
     public final PL_SQLParser.bulk_collect_into_clause_return bulk_collect_into_clause() throws RecognitionException {
         PL_SQLParser.bulk_collect_into_clause_return retval = new PL_SQLParser.bulk_collect_into_clause_return();
         retval.start = input.LT(1);
@@ -13105,8 +13105,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 93) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:777:26: ( BULK_KEYWORD COLLECT_KEYWORD INTO_KEYWORD universal_identifier ( ',' universal_identifier )* )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:777:28: BULK_KEYWORD COLLECT_KEYWORD INTO_KEYWORD universal_identifier ( ',' universal_identifier )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:778:26: ( BULK_KEYWORD COLLECT_KEYWORD INTO_KEYWORD universal_identifier ( ',' universal_identifier )* )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:778:28: BULK_KEYWORD COLLECT_KEYWORD INTO_KEYWORD universal_identifier ( ',' universal_identifier )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13131,7 +13131,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, universal_identifier468.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:778:49: ( ',' universal_identifier )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:49: ( ',' universal_identifier )*
             loop161:
             do {
                 int alt161=2;
@@ -13144,7 +13144,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt161) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:778:50: ',' universal_identifier
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:50: ',' universal_identifier
             	    {
             	    char_literal469=(Token)match(input,COMMA,FOLLOW_COMMA_in_bulk_collect_into_clause8444); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -13196,7 +13196,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "using_clause"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:1: using_clause : USING_KEYWORD ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression ( ',' ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression )* ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:1: using_clause : USING_KEYWORD ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression ( ',' ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression )* ;
     public final PL_SQLParser.using_clause_return using_clause() throws RecognitionException {
         PL_SQLParser.using_clause_return retval = new PL_SQLParser.using_clause_return();
         retval.start = input.LT(1);
@@ -13231,8 +13231,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 94) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:14: ( USING_KEYWORD ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression ( ',' ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression )* )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:16: USING_KEYWORD ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression ( ',' ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:14: ( USING_KEYWORD ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression ( ',' ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression )* )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:16: USING_KEYWORD ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression ( ',' ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13241,7 +13241,7 @@ public class PL_SQLParser extends Parser {
             USING_KEYWORD471_tree = (CommonTree)adaptor.create(USING_KEYWORD471);
             adaptor.addChild(root_0, USING_KEYWORD471_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:30: ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:30: ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )?
             int alt162=4;
             int LA162_0 = input.LA(1);
 
@@ -13260,7 +13260,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt162) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:31: IN_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:31: IN_KEYWORD
                     {
                     IN_KEYWORD472=(Token)match(input,IN_KEYWORD,FOLLOW_IN_KEYWORD_in_using_clause8458); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -13271,7 +13271,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:44: OUT_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:44: OUT_KEYWORD
                     {
                     OUT_KEYWORD473=(Token)match(input,OUT_KEYWORD,FOLLOW_OUT_KEYWORD_in_using_clause8462); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -13282,10 +13282,10 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:58: ( IN_KEYWORD OUT_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:58: ( IN_KEYWORD OUT_KEYWORD )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:58: ( IN_KEYWORD OUT_KEYWORD )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:59: IN_KEYWORD OUT_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:58: ( IN_KEYWORD OUT_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:59: IN_KEYWORD OUT_KEYWORD
                     {
                     IN_KEYWORD474=(Token)match(input,IN_KEYWORD,FOLLOW_IN_KEYWORD_in_using_clause8467); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -13312,7 +13312,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, expression476.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:16: ( ',' ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:16: ( ',' ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression )*
             loop164:
             do {
                 int alt164=2;
@@ -13325,14 +13325,14 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt164) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:17: ',' ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:17: ',' ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )? expression
             	    {
             	    char_literal477=(Token)match(input,COMMA,FOLLOW_COMMA_in_using_clause8492); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    char_literal477_tree = (CommonTree)adaptor.create(char_literal477);
             	    adaptor.addChild(root_0, char_literal477_tree);
             	    }
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:21: ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )?
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:21: ( IN_KEYWORD | OUT_KEYWORD | ( IN_KEYWORD OUT_KEYWORD ) )?
             	    int alt163=4;
             	    int LA163_0 = input.LA(1);
 
@@ -13340,7 +13340,7 @@ public class PL_SQLParser extends Parser {
             	        alt163=2;
             	    }
             	    else if ( (LA163_0==IN_KEYWORD) ) {
-            	        int LA163_2 = input.LA(2);
+            	        int LA163_3 = input.LA(2);
 
             	        if ( (synpred280_PL_SQL()) ) {
             	            alt163=1;
@@ -13351,7 +13351,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    switch (alt163) {
             	        case 1 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:22: IN_KEYWORD
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:22: IN_KEYWORD
             	            {
             	            IN_KEYWORD478=(Token)match(input,IN_KEYWORD,FOLLOW_IN_KEYWORD_in_using_clause8495); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -13362,7 +13362,7 @@ public class PL_SQLParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:35: OUT_KEYWORD
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:35: OUT_KEYWORD
             	            {
             	            OUT_KEYWORD479=(Token)match(input,OUT_KEYWORD,FOLLOW_OUT_KEYWORD_in_using_clause8499); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -13373,10 +13373,10 @@ public class PL_SQLParser extends Parser {
             	            }
             	            break;
             	        case 3 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:49: ( IN_KEYWORD OUT_KEYWORD )
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:49: ( IN_KEYWORD OUT_KEYWORD )
             	            {
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:49: ( IN_KEYWORD OUT_KEYWORD )
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:50: IN_KEYWORD OUT_KEYWORD
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:49: ( IN_KEYWORD OUT_KEYWORD )
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:50: IN_KEYWORD OUT_KEYWORD
             	            {
             	            IN_KEYWORD480=(Token)match(input,IN_KEYWORD,FOLLOW_IN_KEYWORD_in_using_clause8504); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -13442,7 +13442,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "exit_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:1: exit_statement : EXIT_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:1: exit_statement : EXIT_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )? ;
     public final PL_SQLParser.exit_statement_return exit_statement() throws RecognitionException {
         PL_SQLParser.exit_statement_return retval = new PL_SQLParser.exit_statement_return();
         retval.start = input.LT(1);
@@ -13461,8 +13461,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 95) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:16: ( EXIT_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:18: EXIT_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:16: ( EXIT_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:18: EXIT_KEYWORD ( identifier )? ( WHEN_KEYWORD expression )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13471,12 +13471,12 @@ public class PL_SQLParser extends Parser {
             EXIT_KEYWORD483_tree = (CommonTree)adaptor.create(EXIT_KEYWORD483);
             adaptor.addChild(root_0, EXIT_KEYWORD483_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:31: ( identifier )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:31: ( identifier )?
             int alt165=2;
             int LA165_0 = input.LA(1);
 
             if ( (LA165_0==IDENTIFIER||LA165_0==INTERVAL_KEYWORD||LA165_0==RESULT_KEYWORD) ) {
-                int LA165_2 = input.LA(2);
+                int LA165_1 = input.LA(2);
 
                 if ( (synpred284_PL_SQL()) ) {
                     alt165=1;
@@ -13498,7 +13498,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:43: ( WHEN_KEYWORD expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:43: ( WHEN_KEYWORD expression )?
             int alt166=2;
             int LA166_0 = input.LA(1);
 
@@ -13511,7 +13511,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt166) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:44: WHEN_KEYWORD expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:44: WHEN_KEYWORD expression
                     {
                     WHEN_KEYWORD485=(Token)match(input,WHEN_KEYWORD,FOLLOW_WHEN_KEYWORD_in_exit_statement8526); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -13560,7 +13560,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "fetch_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:1: fetch_statement : FETCH_KEYWORD expression ( ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? ) | into_clause ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:783:1: fetch_statement : FETCH_KEYWORD expression ( ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? ) | into_clause ) ;
     public final PL_SQLParser.fetch_statement_return fetch_statement() throws RecognitionException {
         PL_SQLParser.fetch_statement_return retval = new PL_SQLParser.fetch_statement_return();
         retval.start = input.LT(1);
@@ -13583,8 +13583,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 96) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:17: ( FETCH_KEYWORD expression ( ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? ) | into_clause ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:19: FETCH_KEYWORD expression ( ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? ) | into_clause )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:783:17: ( FETCH_KEYWORD expression ( ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? ) | into_clause ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:783:19: FETCH_KEYWORD expression ( ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? ) | into_clause )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13599,7 +13599,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, expression488.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:783:19: ( ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? ) | into_clause )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:784:19: ( ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? ) | into_clause )
             int alt168=2;
             int LA168_0 = input.LA(1);
 
@@ -13618,10 +13618,10 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt168) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:783:20: ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:784:20: ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:783:20: ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:783:21: bulk_collect_into_clause ( LIMIT_KEYWORD expression )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:784:20: ( bulk_collect_into_clause ( LIMIT_KEYWORD expression )? )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:784:21: bulk_collect_into_clause ( LIMIT_KEYWORD expression )?
                     {
                     pushFollow(FOLLOW_bulk_collect_into_clause_in_fetch_statement8562);
                     bulk_collect_into_clause489=bulk_collect_into_clause();
@@ -13629,7 +13629,7 @@ public class PL_SQLParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, bulk_collect_into_clause489.getTree());
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:783:46: ( LIMIT_KEYWORD expression )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:784:46: ( LIMIT_KEYWORD expression )?
                     int alt167=2;
                     int LA167_0 = input.LA(1);
 
@@ -13638,7 +13638,7 @@ public class PL_SQLParser extends Parser {
                     }
                     switch (alt167) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:783:47: LIMIT_KEYWORD expression
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:784:47: LIMIT_KEYWORD expression
                             {
                             LIMIT_KEYWORD490=(Token)match(input,LIMIT_KEYWORD,FOLLOW_LIMIT_KEYWORD_in_fetch_statement8565); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
@@ -13664,7 +13664,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:783:78: into_clause
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:784:78: into_clause
                     {
                     pushFollow(FOLLOW_into_clause_in_fetch_statement8575);
                     into_clause492=into_clause();
@@ -13708,7 +13708,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "forall_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:784:1: forall_statement : FORALL_KEYWORD identifier IN_KEYWORD bounds_clause ( SAVE_KEYWORD EXCEPTIONS_KEYWORD )? sql_statements ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:785:1: forall_statement : FORALL_KEYWORD identifier IN_KEYWORD bounds_clause ( SAVE_KEYWORD EXCEPTIONS_KEYWORD )? sql_statements ;
     public final PL_SQLParser.forall_statement_return forall_statement() throws RecognitionException {
         PL_SQLParser.forall_statement_return retval = new PL_SQLParser.forall_statement_return();
         retval.start = input.LT(1);
@@ -13733,8 +13733,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 97) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:784:18: ( FORALL_KEYWORD identifier IN_KEYWORD bounds_clause ( SAVE_KEYWORD EXCEPTIONS_KEYWORD )? sql_statements )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:784:20: FORALL_KEYWORD identifier IN_KEYWORD bounds_clause ( SAVE_KEYWORD EXCEPTIONS_KEYWORD )? sql_statements
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:785:18: ( FORALL_KEYWORD identifier IN_KEYWORD bounds_clause ( SAVE_KEYWORD EXCEPTIONS_KEYWORD )? sql_statements )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:785:20: FORALL_KEYWORD identifier IN_KEYWORD bounds_clause ( SAVE_KEYWORD EXCEPTIONS_KEYWORD )? sql_statements
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13760,7 +13760,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, bounds_clause496.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:785:20: ( SAVE_KEYWORD EXCEPTIONS_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:786:20: ( SAVE_KEYWORD EXCEPTIONS_KEYWORD )?
             int alt169=2;
             int LA169_0 = input.LA(1);
 
@@ -13769,7 +13769,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt169) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:785:21: SAVE_KEYWORD EXCEPTIONS_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:786:21: SAVE_KEYWORD EXCEPTIONS_KEYWORD
                     {
                     SAVE_KEYWORD497=(Token)match(input,SAVE_KEYWORD,FOLLOW_SAVE_KEYWORD_in_forall_statement8611); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -13823,7 +13823,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "bounds_clause"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:786:1: bounds_clause : ( ( expression '..' expression ) | ( INDICES_KEYWORD OF_KEYWORD universal_identifier ( BETWEEN_KEYWORD expression AND_OPERATOR expression )? ) | ( VALUES_KEYWORD OF_KEYWORD universal_identifier ) );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:787:1: bounds_clause : ( ( expression '..' expression ) | ( INDICES_KEYWORD OF_KEYWORD universal_identifier ( BETWEEN_KEYWORD expression AND_OPERATOR expression )? ) | ( VALUES_KEYWORD OF_KEYWORD universal_identifier ) );
     public final PL_SQLParser.bounds_clause_return bounds_clause() throws RecognitionException {
         PL_SQLParser.bounds_clause_return retval = new PL_SQLParser.bounds_clause_return();
         retval.start = input.LT(1);
@@ -13860,7 +13860,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 98) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:786:15: ( ( expression '..' expression ) | ( INDICES_KEYWORD OF_KEYWORD universal_identifier ( BETWEEN_KEYWORD expression AND_OPERATOR expression )? ) | ( VALUES_KEYWORD OF_KEYWORD universal_identifier ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:787:15: ( ( expression '..' expression ) | ( INDICES_KEYWORD OF_KEYWORD universal_identifier ( BETWEEN_KEYWORD expression AND_OPERATOR expression )? ) | ( VALUES_KEYWORD OF_KEYWORD universal_identifier ) )
             int alt171=3;
             switch ( input.LA(1) ) {
             case NUMBER_UNSIGNED:
@@ -13905,12 +13905,12 @@ public class PL_SQLParser extends Parser {
 
             switch (alt171) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:786:17: ( expression '..' expression )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:787:17: ( expression '..' expression )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:786:17: ( expression '..' expression )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:786:18: expression '..' expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:787:17: ( expression '..' expression )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:787:18: expression '..' expression
                     {
                     pushFollow(FOLLOW_expression_in_bounds_clause8625);
                     expression500=expression();
@@ -13936,12 +13936,12 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:787:17: ( INDICES_KEYWORD OF_KEYWORD universal_identifier ( BETWEEN_KEYWORD expression AND_OPERATOR expression )? )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:788:17: ( INDICES_KEYWORD OF_KEYWORD universal_identifier ( BETWEEN_KEYWORD expression AND_OPERATOR expression )? )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:787:17: ( INDICES_KEYWORD OF_KEYWORD universal_identifier ( BETWEEN_KEYWORD expression AND_OPERATOR expression )? )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:787:18: INDICES_KEYWORD OF_KEYWORD universal_identifier ( BETWEEN_KEYWORD expression AND_OPERATOR expression )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:788:17: ( INDICES_KEYWORD OF_KEYWORD universal_identifier ( BETWEEN_KEYWORD expression AND_OPERATOR expression )? )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:788:18: INDICES_KEYWORD OF_KEYWORD universal_identifier ( BETWEEN_KEYWORD expression AND_OPERATOR expression )?
                     {
                     INDICES_KEYWORD503=(Token)match(input,INDICES_KEYWORD,FOLLOW_INDICES_KEYWORD_in_bounds_clause8651); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -13959,7 +13959,7 @@ public class PL_SQLParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, universal_identifier505.getTree());
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:788:17: ( BETWEEN_KEYWORD expression AND_OPERATOR expression )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:789:17: ( BETWEEN_KEYWORD expression AND_OPERATOR expression )?
                     int alt170=2;
                     int LA170_0 = input.LA(1);
 
@@ -13968,7 +13968,7 @@ public class PL_SQLParser extends Parser {
                     }
                     switch (alt170) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:788:18: BETWEEN_KEYWORD expression AND_OPERATOR expression
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:789:18: BETWEEN_KEYWORD expression AND_OPERATOR expression
                             {
                             BETWEEN_KEYWORD506=(Token)match(input,BETWEEN_KEYWORD,FOLLOW_BETWEEN_KEYWORD_in_bounds_clause8675); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
@@ -14005,12 +14005,12 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:789:17: ( VALUES_KEYWORD OF_KEYWORD universal_identifier )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:790:17: ( VALUES_KEYWORD OF_KEYWORD universal_identifier )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:789:17: ( VALUES_KEYWORD OF_KEYWORD universal_identifier )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:789:18: VALUES_KEYWORD OF_KEYWORD universal_identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:790:17: ( VALUES_KEYWORD OF_KEYWORD universal_identifier )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:790:18: VALUES_KEYWORD OF_KEYWORD universal_identifier
                     {
                     VALUES_KEYWORD510=(Token)match(input,VALUES_KEYWORD,FOLLOW_VALUES_KEYWORD_in_bounds_clause8706); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -14063,7 +14063,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "pragma_inline_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:790:1: pragma_inline_statement : PRAGMA_KEYWORD INLINE_KEYWORD '(' STRING ',' STRING ')' ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:791:1: pragma_inline_statement : PRAGMA_KEYWORD INLINE_KEYWORD '(' STRING ',' STRING ')' ;
     public final PL_SQLParser.pragma_inline_statement_return pragma_inline_statement() throws RecognitionException {
         PL_SQLParser.pragma_inline_statement_return retval = new PL_SQLParser.pragma_inline_statement_return();
         retval.start = input.LT(1);
@@ -14088,8 +14088,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 99) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:790:25: ( PRAGMA_KEYWORD INLINE_KEYWORD '(' STRING ',' STRING ')' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:790:27: PRAGMA_KEYWORD INLINE_KEYWORD '(' STRING ',' STRING ')'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:791:25: ( PRAGMA_KEYWORD INLINE_KEYWORD '(' STRING ',' STRING ')' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:791:27: PRAGMA_KEYWORD INLINE_KEYWORD '(' STRING ',' STRING ')'
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -14158,7 +14158,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "open_statement"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:792:1: open_statement : OPEN_KEYWORD universal_identifier ( open_params )? ( FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )? )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:1: open_statement : OPEN_KEYWORD universal_identifier ( open_params )? ( FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )? )? ;
     public final PL_SQLParser.open_statement_return open_statement() throws RecognitionException {
         PL_SQLParser.open_statement_return retval = new PL_SQLParser.open_statement_return();
         retval.start = input.LT(1);
@@ -14185,8 +14185,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 100) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:792:16: ( OPEN_KEYWORD universal_identifier ( open_params )? ( FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )? )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:792:18: OPEN_KEYWORD universal_identifier ( open_params )? ( FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )? )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:16: ( OPEN_KEYWORD universal_identifier ( open_params )? ( FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )? )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:18: OPEN_KEYWORD universal_identifier ( open_params )? ( FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )? )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -14201,7 +14201,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, universal_identifier521.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:792:52: ( open_params )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:52: ( open_params )?
             int alt172=2;
             int LA172_0 = input.LA(1);
 
@@ -14228,7 +14228,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:18: ( FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )? )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:18: ( FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )? )?
             int alt175=2;
             int LA175_0 = input.LA(1);
 
@@ -14241,14 +14241,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt175) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:19: FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:19: FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )?
                     {
                     FOR_KEYWORD523=(Token)match(input,FOR_KEYWORD,FOLLOW_FOR_KEYWORD_in_open_statement8789); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     FOR_KEYWORD523_tree = (CommonTree)adaptor.create(FOR_KEYWORD523);
                     adaptor.addChild(root_0, FOR_KEYWORD523_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:31: ( select_statement | STRING | universal_identifier )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:31: ( select_statement | STRING | universal_identifier )
                     int alt173=3;
                     switch ( input.LA(1) ) {
                     case SELECT_KEYWORD:
@@ -14279,7 +14279,7 @@ public class PL_SQLParser extends Parser {
 
                     switch (alt173) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:32: select_statement
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:32: select_statement
                             {
                             pushFollow(FOLLOW_select_statement_in_open_statement8792);
                             select_statement524=select_statement();
@@ -14291,7 +14291,7 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:51: STRING
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:51: STRING
                             {
                             STRING525=(Token)match(input,STRING,FOLLOW_STRING_in_open_statement8796); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
@@ -14302,7 +14302,7 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 3 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:60: universal_identifier
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:60: universal_identifier
                             {
                             pushFollow(FOLLOW_universal_identifier_in_open_statement8800);
                             universal_identifier526=universal_identifier();
@@ -14316,7 +14316,7 @@ public class PL_SQLParser extends Parser {
 
                     }
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:82: ( using_clause )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:82: ( using_clause )?
                     int alt174=2;
                     int LA174_0 = input.LA(1);
 
@@ -14375,7 +14375,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "open_params"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:1: open_params : '(' expression ( ',' expression )* ')' ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:795:1: open_params : '(' expression ( ',' expression )* ')' ;
     public final PL_SQLParser.open_params_return open_params() throws RecognitionException {
         PL_SQLParser.open_params_return retval = new PL_SQLParser.open_params_return();
         retval.start = input.LT(1);
@@ -14396,8 +14396,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 101) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:13: ( '(' expression ( ',' expression )* ')' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:15: '(' expression ( ',' expression )* ')'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:795:13: ( '(' expression ( ',' expression )* ')' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:795:15: '(' expression ( ',' expression )* ')'
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -14412,7 +14412,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, expression529.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:30: ( ',' expression )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:795:30: ( ',' expression )*
             loop176:
             do {
                 int alt176=2;
@@ -14425,7 +14425,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt176) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:31: ',' expression
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:795:31: ',' expression
             	    {
             	    char_literal530=(Token)match(input,COMMA,FOLLOW_COMMA_in_open_params8818); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -14482,7 +14482,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "sqlcode_function"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:795:1: sqlcode_function : SQLCODE_KEYWORD ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:1: sqlcode_function : SQLCODE_KEYWORD ;
     public final PL_SQLParser.sqlcode_function_return sqlcode_function() throws RecognitionException {
         PL_SQLParser.sqlcode_function_return retval = new PL_SQLParser.sqlcode_function_return();
         retval.start = input.LT(1);
@@ -14495,8 +14495,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 102) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:795:18: ( SQLCODE_KEYWORD )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:795:20: SQLCODE_KEYWORD
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:18: ( SQLCODE_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:20: SQLCODE_KEYWORD
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -14535,7 +14535,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "sqlerrm_function"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:1: sqlerrm_function : SQLERRM_KEYWORD ( '(' ( '+' | '-' )? NUMBER_UNSIGNED ')' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:1: sqlerrm_function : SQLERRM_KEYWORD ( '(' ( '+' | '-' )? NUMBER_UNSIGNED ')' )? ;
     public final PL_SQLParser.sqlerrm_function_return sqlerrm_function() throws RecognitionException {
         PL_SQLParser.sqlerrm_function_return retval = new PL_SQLParser.sqlerrm_function_return();
         retval.start = input.LT(1);
@@ -14556,8 +14556,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 103) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:18: ( SQLERRM_KEYWORD ( '(' ( '+' | '-' )? NUMBER_UNSIGNED ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:20: SQLERRM_KEYWORD ( '(' ( '+' | '-' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:18: ( SQLERRM_KEYWORD ( '(' ( '+' | '-' )? NUMBER_UNSIGNED ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:20: SQLERRM_KEYWORD ( '(' ( '+' | '-' )? NUMBER_UNSIGNED ')' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -14566,7 +14566,7 @@ public class PL_SQLParser extends Parser {
             SQLERRM_KEYWORD534_tree = (CommonTree)adaptor.create(SQLERRM_KEYWORD534);
             adaptor.addChild(root_0, SQLERRM_KEYWORD534_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:36: ( '(' ( '+' | '-' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:36: ( '(' ( '+' | '-' )? NUMBER_UNSIGNED ')' )?
             int alt178=2;
             int LA178_0 = input.LA(1);
 
@@ -14579,14 +14579,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt178) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:37: '(' ( '+' | '-' )? NUMBER_UNSIGNED ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:37: '(' ( '+' | '-' )? NUMBER_UNSIGNED ')'
                     {
                     char_literal535=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_sqlerrm_function8841); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal535_tree = (CommonTree)adaptor.create(char_literal535);
                     adaptor.addChild(root_0, char_literal535_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:41: ( '+' | '-' )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:41: ( '+' | '-' )?
                     int alt177=2;
                     int LA177_0 = input.LA(1);
 
@@ -14661,7 +14661,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "anonymous_block_declare_section"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:1: anonymous_block_declare_section : DECLARE_KEYWORD ( variable_declaration )* ( function_declaration | procedure_declaration )* ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:798:1: anonymous_block_declare_section : DECLARE_KEYWORD ( variable_declaration )* ( function_declaration | procedure_declaration )* ;
     public final PL_SQLParser.anonymous_block_declare_section_return anonymous_block_declare_section() throws RecognitionException {
         PL_SQLParser.anonymous_block_declare_section_return retval = new PL_SQLParser.anonymous_block_declare_section_return();
         retval.start = input.LT(1);
@@ -14680,8 +14680,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 104) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:33: ( DECLARE_KEYWORD ( variable_declaration )* ( function_declaration | procedure_declaration )* )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:35: DECLARE_KEYWORD ( variable_declaration )* ( function_declaration | procedure_declaration )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:798:33: ( DECLARE_KEYWORD ( variable_declaration )* ( function_declaration | procedure_declaration )* )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:798:35: DECLARE_KEYWORD ( variable_declaration )* ( function_declaration | procedure_declaration )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -14690,7 +14690,7 @@ public class PL_SQLParser extends Parser {
             DECLARE_KEYWORD539_tree = (CommonTree)adaptor.create(DECLARE_KEYWORD539);
             adaptor.addChild(root_0, DECLARE_KEYWORD539_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:798:35: ( variable_declaration )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:799:35: ( variable_declaration )*
             loop179:
             do {
                 int alt179=2;
@@ -14703,7 +14703,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt179) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:798:36: variable_declaration
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:799:36: variable_declaration
             	    {
             	    pushFollow(FOLLOW_variable_declaration_in_anonymous_block_declare_section8899);
             	    variable_declaration540=variable_declaration();
@@ -14720,7 +14720,7 @@ public class PL_SQLParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:799:35: ( function_declaration | procedure_declaration )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:35: ( function_declaration | procedure_declaration )*
             loop180:
             do {
                 int alt180=3;
@@ -14736,7 +14736,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt180) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:799:36: function_declaration
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:36: function_declaration
             	    {
             	    pushFollow(FOLLOW_function_declaration_in_anonymous_block_declare_section8939);
             	    function_declaration541=function_declaration();
@@ -14748,7 +14748,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:799:59: procedure_declaration
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:59: procedure_declaration
             	    {
             	    pushFollow(FOLLOW_procedure_declaration_in_anonymous_block_declare_section8943);
             	    procedure_declaration542=procedure_declaration();
@@ -14795,7 +14795,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "variable_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:1: variable_declaration : ( ( identifier data_type ( variable_declaration_part )? ) | ( identifier CONSTANT_KEYWORD data_type variable_declaration_part ) | subtype_datatype | record_collection_datatype | ( identifier EXCEPTION_KEYWORD ) | ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) ) | cursor_datatype ) SEPARATOR ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:1: variable_declaration : ( ( identifier data_type ( variable_declaration_part )? ) | ( identifier CONSTANT_KEYWORD data_type variable_declaration_part ) | subtype_datatype | record_collection_datatype | ( identifier EXCEPTION_KEYWORD ) | ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) ) | cursor_datatype ) SEPARATOR ;
     public final PL_SQLParser.variable_declaration_return variable_declaration() throws RecognitionException {
         PL_SQLParser.variable_declaration_return retval = new PL_SQLParser.variable_declaration_return();
         retval.start = input.LT(1);
@@ -14862,12 +14862,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 105) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:22: ( ( ( identifier data_type ( variable_declaration_part )? ) | ( identifier CONSTANT_KEYWORD data_type variable_declaration_part ) | subtype_datatype | record_collection_datatype | ( identifier EXCEPTION_KEYWORD ) | ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) ) | cursor_datatype ) SEPARATOR )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:24: ( ( identifier data_type ( variable_declaration_part )? ) | ( identifier CONSTANT_KEYWORD data_type variable_declaration_part ) | subtype_datatype | record_collection_datatype | ( identifier EXCEPTION_KEYWORD ) | ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) ) | cursor_datatype ) SEPARATOR
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:22: ( ( ( identifier data_type ( variable_declaration_part )? ) | ( identifier CONSTANT_KEYWORD data_type variable_declaration_part ) | subtype_datatype | record_collection_datatype | ( identifier EXCEPTION_KEYWORD ) | ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) ) | cursor_datatype ) SEPARATOR )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:24: ( ( identifier data_type ( variable_declaration_part )? ) | ( identifier CONSTANT_KEYWORD data_type variable_declaration_part ) | subtype_datatype | record_collection_datatype | ( identifier EXCEPTION_KEYWORD ) | ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) ) | cursor_datatype ) SEPARATOR
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:24: ( ( identifier data_type ( variable_declaration_part )? ) | ( identifier CONSTANT_KEYWORD data_type variable_declaration_part ) | subtype_datatype | record_collection_datatype | ( identifier EXCEPTION_KEYWORD ) | ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) ) | cursor_datatype )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:24: ( ( identifier data_type ( variable_declaration_part )? ) | ( identifier CONSTANT_KEYWORD data_type variable_declaration_part ) | subtype_datatype | record_collection_datatype | ( identifier EXCEPTION_KEYWORD ) | ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) ) | cursor_datatype )
             int alt184=7;
             switch ( input.LA(1) ) {
             case SUBTYPE_KEYWORD:
@@ -14875,11 +14875,16 @@ public class PL_SQLParser extends Parser {
                 alt184=3;
                 }
                 break;
+            case PRAGMA_KEYWORD:
+                {
+                alt184=6;
+                }
+                break;
             case IDENTIFIER:
             case INTERVAL_KEYWORD:
             case RESULT_KEYWORD:
                 {
-                int LA184_2 = input.LA(2);
+                int LA184_3 = input.LA(2);
 
                 if ( (synpred305_PL_SQL()) ) {
                     alt184=1;
@@ -14893,7 +14898,7 @@ public class PL_SQLParser extends Parser {
                 else {
                     if (state.backtracking>0) {state.failed=true; return retval;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 184, 2, input);
+                        new NoViableAltException("", 184, 3, input);
 
                     throw nvae;
                 }
@@ -14909,11 +14914,6 @@ public class PL_SQLParser extends Parser {
                 alt184=7;
                 }
                 break;
-            case PRAGMA_KEYWORD:
-                {
-                alt184=6;
-                }
-                break;
             default:
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
@@ -14924,10 +14924,10 @@ public class PL_SQLParser extends Parser {
 
             switch (alt184) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:25: ( identifier data_type ( variable_declaration_part )? )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:25: ( identifier data_type ( variable_declaration_part )? )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:25: ( identifier data_type ( variable_declaration_part )? )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:26: identifier data_type ( variable_declaration_part )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:25: ( identifier data_type ( variable_declaration_part )? )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:26: identifier data_type ( variable_declaration_part )?
                     {
                     pushFollow(FOLLOW_identifier_in_variable_declaration8954);
                     identifier543=identifier();
@@ -14941,7 +14941,7 @@ public class PL_SQLParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type544.getTree());
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:24: ( variable_declaration_part )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:802:24: ( variable_declaration_part )?
                     int alt181=2;
                     int LA181_0 = input.LA(1);
 
@@ -14971,10 +14971,10 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:803:9: ( identifier CONSTANT_KEYWORD data_type variable_declaration_part )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:804:9: ( identifier CONSTANT_KEYWORD data_type variable_declaration_part )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:803:9: ( identifier CONSTANT_KEYWORD data_type variable_declaration_part )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:803:10: identifier CONSTANT_KEYWORD data_type variable_declaration_part
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:804:9: ( identifier CONSTANT_KEYWORD data_type variable_declaration_part )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:804:10: identifier CONSTANT_KEYWORD data_type variable_declaration_part
                     {
                     pushFollow(FOLLOW_identifier_in_variable_declaration9000);
                     identifier546=identifier();
@@ -15006,7 +15006,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:805:11: subtype_datatype
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:806:11: subtype_datatype
                     {
                     pushFollow(FOLLOW_subtype_datatype_in_variable_declaration9043);
                     subtype_datatype550=subtype_datatype();
@@ -15018,7 +15018,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:806:11: record_collection_datatype
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:807:11: record_collection_datatype
                     {
                     pushFollow(FOLLOW_record_collection_datatype_in_variable_declaration9055);
                     record_collection_datatype551=record_collection_datatype();
@@ -15030,10 +15030,10 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:807:11: ( identifier EXCEPTION_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:808:11: ( identifier EXCEPTION_KEYWORD )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:807:11: ( identifier EXCEPTION_KEYWORD )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:807:12: identifier EXCEPTION_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:808:11: ( identifier EXCEPTION_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:808:12: identifier EXCEPTION_KEYWORD
                     {
                     pushFollow(FOLLOW_identifier_in_variable_declaration9068);
                     identifier552=identifier();
@@ -15053,17 +15053,17 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:809:9: ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:810:9: ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:809:9: ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:809:10: PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:810:9: ( PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:810:10: PRAGMA_KEYWORD ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) )
                     {
                     PRAGMA_KEYWORD554=(Token)match(input,PRAGMA_KEYWORD,FOLLOW_PRAGMA_KEYWORD_in_variable_declaration9093); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     PRAGMA_KEYWORD554_tree = (CommonTree)adaptor.create(PRAGMA_KEYWORD554);
                     adaptor.addChild(root_0, PRAGMA_KEYWORD554_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:809:25: ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:810:25: ( AUTONOMOUS_TRANSACTION_KEYWORD | SERIALLY_REUSABLE_KEYWORD | ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' ) | ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' ) )
                     int alt183=4;
                     switch ( input.LA(1) ) {
                     case AUTONOMOUS_TRANSACTION_KEYWORD:
@@ -15096,7 +15096,7 @@ public class PL_SQLParser extends Parser {
 
                     switch (alt183) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:809:26: AUTONOMOUS_TRANSACTION_KEYWORD
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:810:26: AUTONOMOUS_TRANSACTION_KEYWORD
                             {
                             AUTONOMOUS_TRANSACTION_KEYWORD555=(Token)match(input,AUTONOMOUS_TRANSACTION_KEYWORD,FOLLOW_AUTONOMOUS_TRANSACTION_KEYWORD_in_variable_declaration9096); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
@@ -15107,7 +15107,7 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:809:59: SERIALLY_REUSABLE_KEYWORD
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:810:59: SERIALLY_REUSABLE_KEYWORD
                             {
                             SERIALLY_REUSABLE_KEYWORD556=(Token)match(input,SERIALLY_REUSABLE_KEYWORD,FOLLOW_SERIALLY_REUSABLE_KEYWORD_in_variable_declaration9100); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
@@ -15118,10 +15118,10 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 3 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:810:7: ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' )
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:811:7: ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' )
                             {
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:810:7: ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' )
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:810:8: EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')'
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:811:7: ( EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')' )
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:811:8: EXCEPTION_INIT_KEYWORD '(' expression ',' expression ')'
                             {
                             EXCEPTION_INIT_KEYWORD557=(Token)match(input,EXCEPTION_INIT_KEYWORD,FOLLOW_EXCEPTION_INIT_KEYWORD_in_variable_declaration9111); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
@@ -15162,10 +15162,10 @@ public class PL_SQLParser extends Parser {
                             }
                             break;
                         case 4 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:811:7: ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' )
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:812:7: ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' )
                             {
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:811:7: ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' )
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:811:8: RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')'
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:812:7: ( RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')' )
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:812:8: RESTRICT_REFERENCES_KEYWORD '(' expression ( ',' expression )+ ')'
                             {
                             RESTRICT_REFERENCES_KEYWORD563=(Token)match(input,RESTRICT_REFERENCES_KEYWORD,FOLLOW_RESTRICT_REFERENCES_KEYWORD_in_variable_declaration9133); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
@@ -15183,7 +15183,7 @@ public class PL_SQLParser extends Parser {
                             state._fsp--;
                             if (state.failed) return retval;
                             if ( state.backtracking==0 ) adaptor.addChild(root_0, expression565.getTree());
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:811:51: ( ',' expression )+
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:812:51: ( ',' expression )+
                             int cnt182=0;
                             loop182:
                             do {
@@ -15197,7 +15197,7 @@ public class PL_SQLParser extends Parser {
 
                                 switch (alt182) {
                             	case 1 :
-                            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:811:52: ',' expression
+                            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:812:52: ',' expression
                             	    {
                             	    char_literal566=(Token)match(input,COMMA,FOLLOW_COMMA_in_variable_declaration9140); if (state.failed) return retval;
                             	    if ( state.backtracking==0 ) {
@@ -15245,7 +15245,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:812:11: cursor_datatype
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:813:11: cursor_datatype
                     {
                     pushFollow(FOLLOW_cursor_datatype_in_variable_declaration9163);
                     cursor_datatype569=cursor_datatype();
@@ -15294,7 +15294,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "variable_declaration_part"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:814:1: variable_declaration_part : ( NOT_OPERATOR NULL_KEYWORD )? variable_def_part expression ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:815:1: variable_declaration_part : ( NOT_OPERATOR NULL_KEYWORD )? variable_def_part expression ;
     public final PL_SQLParser.variable_declaration_part_return variable_declaration_part() throws RecognitionException {
         PL_SQLParser.variable_declaration_part_return retval = new PL_SQLParser.variable_declaration_part_return();
         retval.start = input.LT(1);
@@ -15313,12 +15313,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 106) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:814:27: ( ( NOT_OPERATOR NULL_KEYWORD )? variable_def_part expression )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:814:29: ( NOT_OPERATOR NULL_KEYWORD )? variable_def_part expression
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:815:27: ( ( NOT_OPERATOR NULL_KEYWORD )? variable_def_part expression )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:815:29: ( NOT_OPERATOR NULL_KEYWORD )? variable_def_part expression
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:814:29: ( NOT_OPERATOR NULL_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:815:29: ( NOT_OPERATOR NULL_KEYWORD )?
             int alt185=2;
             int LA185_0 = input.LA(1);
 
@@ -15327,7 +15327,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt185) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:814:30: NOT_OPERATOR NULL_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:815:30: NOT_OPERATOR NULL_KEYWORD
                     {
                     NOT_OPERATOR571=(Token)match(input,NOT_OPERATOR,FOLLOW_NOT_OPERATOR_in_variable_declaration_part9182); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -15387,7 +15387,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "variable_def_part"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:815:1: variable_def_part : ( ':=' | DEFAULT_KEYWORD );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:816:1: variable_def_part : ( ':=' | DEFAULT_KEYWORD );
     public final PL_SQLParser.variable_def_part_return variable_def_part() throws RecognitionException {
         PL_SQLParser.variable_def_part_return retval = new PL_SQLParser.variable_def_part_return();
         retval.start = input.LT(1);
@@ -15400,7 +15400,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 107) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:815:19: ( ':=' | DEFAULT_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:816:19: ( ':=' | DEFAULT_KEYWORD )
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
             {
             root_0 = (CommonTree)adaptor.nil();
@@ -15447,7 +15447,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "data_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:816:1: data_type : ( SOME_TYPES | scale_types | size_types | char_types | raw_type | timestamp_types | interval_year_type | interval_day_type | ( ( REF_KEYWORD )? universal_identifier ) | special_datatype );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:1: data_type : ( SOME_TYPES | scale_types | size_types | char_types | raw_type | timestamp_types | interval_year_type | interval_day_type | ( ( REF_KEYWORD )? universal_identifier ) | special_datatype );
     public final PL_SQLParser.data_type_return data_type() throws RecognitionException {
         PL_SQLParser.data_type_return retval = new PL_SQLParser.data_type_return();
         retval.start = input.LT(1);
@@ -15480,12 +15480,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 108) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:816:11: ( SOME_TYPES | scale_types | size_types | char_types | raw_type | timestamp_types | interval_year_type | interval_day_type | ( ( REF_KEYWORD )? universal_identifier ) | special_datatype )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:11: ( SOME_TYPES | scale_types | size_types | char_types | raw_type | timestamp_types | interval_year_type | interval_day_type | ( ( REF_KEYWORD )? universal_identifier ) | special_datatype )
             int alt187=10;
             alt187 = dfa187.predict(input);
             switch (alt187) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:816:13: SOME_TYPES
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:13: SOME_TYPES
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15498,7 +15498,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:816:26: scale_types
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:26: scale_types
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15512,7 +15512,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:816:40: size_types
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:40: size_types
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15526,7 +15526,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:816:53: char_types
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:53: char_types
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15540,7 +15540,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:816:66: raw_type
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:66: raw_type
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15554,7 +15554,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:13: timestamp_types
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:13: timestamp_types
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15568,7 +15568,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:31: interval_year_type
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:31: interval_year_type
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15582,7 +15582,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:52: interval_day_type
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:52: interval_day_type
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15596,14 +15596,14 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:13: ( ( REF_KEYWORD )? universal_identifier )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:13: ( ( REF_KEYWORD )? universal_identifier )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:13: ( ( REF_KEYWORD )? universal_identifier )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:14: ( REF_KEYWORD )? universal_identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:13: ( ( REF_KEYWORD )? universal_identifier )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:14: ( REF_KEYWORD )? universal_identifier
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:14: ( REF_KEYWORD )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:14: ( REF_KEYWORD )?
                     int alt186=2;
                     int LA186_0 = input.LA(1);
 
@@ -15638,7 +15638,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:50: special_datatype
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:50: special_datatype
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15680,7 +15680,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "char_types"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:1: char_types : ( CHAR_TYPES | CHAR_TYPE ) ( '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:1: char_types : ( CHAR_TYPES | CHAR_TYPE ) ( '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')' )? ;
     public final PL_SQLParser.char_types_return char_types() throws RecognitionException {
         PL_SQLParser.char_types_return retval = new PL_SQLParser.char_types_return();
         retval.start = input.LT(1);
@@ -15703,8 +15703,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 109) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:12: ( ( CHAR_TYPES | CHAR_TYPE ) ( '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:14: ( CHAR_TYPES | CHAR_TYPE ) ( '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:12: ( ( CHAR_TYPES | CHAR_TYPE ) ( '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:14: ( CHAR_TYPES | CHAR_TYPE ) ( '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -15720,12 +15720,12 @@ public class PL_SQLParser extends Parser {
                 throw mse;
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:39: ( '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:39: ( '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')' )?
             int alt190=2;
             int LA190_0 = input.LA(1);
 
             if ( (LA190_0==LPAREN) ) {
-                int LA190_1 = input.LA(2);
+                int LA190_2 = input.LA(2);
 
                 if ( (synpred331_PL_SQL()) ) {
                     alt190=1;
@@ -15733,14 +15733,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt190) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:40: '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:40: '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')'
                     {
                     char_literal588=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_char_types9289); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal588_tree = (CommonTree)adaptor.create(char_literal588);
                     adaptor.addChild(root_0, char_literal588_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:44: ( '+' )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:44: ( '+' )?
                     int alt188=2;
                     int LA188_0 = input.LA(1);
 
@@ -15767,7 +15767,7 @@ public class PL_SQLParser extends Parser {
                     NUMBER_UNSIGNED590_tree = (CommonTree)adaptor.create(NUMBER_UNSIGNED590);
                     adaptor.addChild(root_0, NUMBER_UNSIGNED590_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:65: ( CHAR_TYPE | BYTE_TYPE )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:65: ( CHAR_TYPE | BYTE_TYPE )?
                     int alt189=2;
                     int LA189_0 = input.LA(1);
 
@@ -15837,7 +15837,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "timestamp_types"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:1: timestamp_types : timestamp_type ( WITH_KEYWORD ( LOCAL_KEYWORD )? TIME_KEYWORD ZONE_KEYWORD )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:821:1: timestamp_types : timestamp_type ( WITH_KEYWORD ( LOCAL_KEYWORD )? TIME_KEYWORD ZONE_KEYWORD )? ;
     public final PL_SQLParser.timestamp_types_return timestamp_types() throws RecognitionException {
         PL_SQLParser.timestamp_types_return retval = new PL_SQLParser.timestamp_types_return();
         retval.start = input.LT(1);
@@ -15858,8 +15858,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 110) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:17: ( timestamp_type ( WITH_KEYWORD ( LOCAL_KEYWORD )? TIME_KEYWORD ZONE_KEYWORD )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:19: timestamp_type ( WITH_KEYWORD ( LOCAL_KEYWORD )? TIME_KEYWORD ZONE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:821:17: ( timestamp_type ( WITH_KEYWORD ( LOCAL_KEYWORD )? TIME_KEYWORD ZONE_KEYWORD )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:821:19: timestamp_type ( WITH_KEYWORD ( LOCAL_KEYWORD )? TIME_KEYWORD ZONE_KEYWORD )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -15869,7 +15869,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, timestamp_type593.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:34: ( WITH_KEYWORD ( LOCAL_KEYWORD )? TIME_KEYWORD ZONE_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:821:34: ( WITH_KEYWORD ( LOCAL_KEYWORD )? TIME_KEYWORD ZONE_KEYWORD )?
             int alt192=2;
             int LA192_0 = input.LA(1);
 
@@ -15878,14 +15878,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt192) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:35: WITH_KEYWORD ( LOCAL_KEYWORD )? TIME_KEYWORD ZONE_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:821:35: WITH_KEYWORD ( LOCAL_KEYWORD )? TIME_KEYWORD ZONE_KEYWORD
                     {
                     WITH_KEYWORD594=(Token)match(input,WITH_KEYWORD,FOLLOW_WITH_KEYWORD_in_timestamp_types9317); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     WITH_KEYWORD594_tree = (CommonTree)adaptor.create(WITH_KEYWORD594);
                     adaptor.addChild(root_0, WITH_KEYWORD594_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:48: ( LOCAL_KEYWORD )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:821:48: ( LOCAL_KEYWORD )?
                     int alt191=2;
                     int LA191_0 = input.LA(1);
 
@@ -15953,7 +15953,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "interval_year_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:821:1: interval_year_type : INTERVAL_KEYWORD year_type TO_KEYWORD MONTH_KEYWORD ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:822:1: interval_year_type : INTERVAL_KEYWORD year_type TO_KEYWORD MONTH_KEYWORD ;
     public final PL_SQLParser.interval_year_type_return interval_year_type() throws RecognitionException {
         PL_SQLParser.interval_year_type_return retval = new PL_SQLParser.interval_year_type_return();
         retval.start = input.LT(1);
@@ -15972,8 +15972,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 111) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:821:20: ( INTERVAL_KEYWORD year_type TO_KEYWORD MONTH_KEYWORD )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:821:22: INTERVAL_KEYWORD year_type TO_KEYWORD MONTH_KEYWORD
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:822:20: ( INTERVAL_KEYWORD year_type TO_KEYWORD MONTH_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:822:22: INTERVAL_KEYWORD year_type TO_KEYWORD MONTH_KEYWORD
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -16028,7 +16028,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "interval_day_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:822:1: interval_day_type : INTERVAL_KEYWORD day_type TO_KEYWORD second_type ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:823:1: interval_day_type : INTERVAL_KEYWORD day_type TO_KEYWORD second_type ;
     public final PL_SQLParser.interval_day_type_return interval_day_type() throws RecognitionException {
         PL_SQLParser.interval_day_type_return retval = new PL_SQLParser.interval_day_type_return();
         retval.start = input.LT(1);
@@ -16047,8 +16047,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 112) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:822:19: ( INTERVAL_KEYWORD day_type TO_KEYWORD second_type )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:822:21: INTERVAL_KEYWORD day_type TO_KEYWORD second_type
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:823:19: ( INTERVAL_KEYWORD day_type TO_KEYWORD second_type )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:823:21: INTERVAL_KEYWORD day_type TO_KEYWORD second_type
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -16104,7 +16104,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "subtype_datatype"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:823:1: subtype_datatype : SUBTYPE_KEYWORD identifier IS_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:824:1: subtype_datatype : SUBTYPE_KEYWORD identifier IS_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? ;
     public final PL_SQLParser.subtype_datatype_return subtype_datatype() throws RecognitionException {
         PL_SQLParser.subtype_datatype_return retval = new PL_SQLParser.subtype_datatype_return();
         retval.start = input.LT(1);
@@ -16127,8 +16127,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 113) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:823:18: ( SUBTYPE_KEYWORD identifier IS_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:823:20: SUBTYPE_KEYWORD identifier IS_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:824:18: ( SUBTYPE_KEYWORD identifier IS_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:824:20: SUBTYPE_KEYWORD identifier IS_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -16154,7 +16154,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type609.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:823:68: ( NOT_OPERATOR NULL_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:824:68: ( NOT_OPERATOR NULL_KEYWORD )?
             int alt193=2;
             int LA193_0 = input.LA(1);
 
@@ -16163,7 +16163,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt193) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:823:69: NOT_OPERATOR NULL_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:824:69: NOT_OPERATOR NULL_KEYWORD
                     {
                     NOT_OPERATOR610=(Token)match(input,NOT_OPERATOR,FOLLOW_NOT_OPERATOR_in_subtype_datatype9368); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -16211,7 +16211,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "record_collection_datatype"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:825:1: record_collection_datatype : TYPE_KEYWORD identifier IS_KEYWORD ( record_datatype | collection_table_datatype | collection_varray_datatype | ref_cursor_datatype ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:826:1: record_collection_datatype : TYPE_KEYWORD identifier IS_KEYWORD ( record_datatype | collection_table_datatype | collection_varray_datatype | ref_cursor_datatype ) ;
     public final PL_SQLParser.record_collection_datatype_return record_collection_datatype() throws RecognitionException {
         PL_SQLParser.record_collection_datatype_return retval = new PL_SQLParser.record_collection_datatype_return();
         retval.start = input.LT(1);
@@ -16236,8 +16236,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 114) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:825:28: ( TYPE_KEYWORD identifier IS_KEYWORD ( record_datatype | collection_table_datatype | collection_varray_datatype | ref_cursor_datatype ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:825:30: TYPE_KEYWORD identifier IS_KEYWORD ( record_datatype | collection_table_datatype | collection_varray_datatype | ref_cursor_datatype )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:826:28: ( TYPE_KEYWORD identifier IS_KEYWORD ( record_datatype | collection_table_datatype | collection_varray_datatype | ref_cursor_datatype ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:826:30: TYPE_KEYWORD identifier IS_KEYWORD ( record_datatype | collection_table_datatype | collection_varray_datatype | ref_cursor_datatype )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -16257,7 +16257,7 @@ public class PL_SQLParser extends Parser {
             IS_KEYWORD614_tree = (CommonTree)adaptor.create(IS_KEYWORD614);
             adaptor.addChild(root_0, IS_KEYWORD614_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:826:29: ( record_datatype | collection_table_datatype | collection_varray_datatype | ref_cursor_datatype )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:827:29: ( record_datatype | collection_table_datatype | collection_varray_datatype | ref_cursor_datatype )
             int alt194=4;
             switch ( input.LA(1) ) {
             case RECORD_KEYWORD:
@@ -16291,7 +16291,7 @@ public class PL_SQLParser extends Parser {
 
             switch (alt194) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:826:30: record_datatype
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:827:30: record_datatype
                     {
                     pushFollow(FOLLOW_record_datatype_in_record_collection_datatype9416);
                     record_datatype615=record_datatype();
@@ -16303,7 +16303,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:826:48: collection_table_datatype
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:827:48: collection_table_datatype
                     {
                     pushFollow(FOLLOW_collection_table_datatype_in_record_collection_datatype9420);
                     collection_table_datatype616=collection_table_datatype();
@@ -16315,7 +16315,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:826:76: collection_varray_datatype
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:827:76: collection_varray_datatype
                     {
                     pushFollow(FOLLOW_collection_varray_datatype_in_record_collection_datatype9424);
                     collection_varray_datatype617=collection_varray_datatype();
@@ -16327,7 +16327,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:827:29: ref_cursor_datatype
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:828:29: ref_cursor_datatype
                     {
                     pushFollow(FOLLOW_ref_cursor_datatype_in_record_collection_datatype9456);
                     ref_cursor_datatype618=ref_cursor_datatype();
@@ -16371,7 +16371,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "record_datatype"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:828:1: record_datatype : RECORD_KEYWORD '(' record_field_declaration ( ',' record_field_declaration )* ')' ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:829:1: record_datatype : RECORD_KEYWORD '(' record_field_declaration ( ',' record_field_declaration )* ')' ;
     public final PL_SQLParser.record_datatype_return record_datatype() throws RecognitionException {
         PL_SQLParser.record_datatype_return retval = new PL_SQLParser.record_datatype_return();
         retval.start = input.LT(1);
@@ -16394,8 +16394,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 115) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:828:17: ( RECORD_KEYWORD '(' record_field_declaration ( ',' record_field_declaration )* ')' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:828:19: RECORD_KEYWORD '(' record_field_declaration ( ',' record_field_declaration )* ')'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:829:17: ( RECORD_KEYWORD '(' record_field_declaration ( ',' record_field_declaration )* ')' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:829:19: RECORD_KEYWORD '(' record_field_declaration ( ',' record_field_declaration )* ')'
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -16415,7 +16415,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, record_field_declaration621.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:828:63: ( ',' record_field_declaration )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:829:63: ( ',' record_field_declaration )*
             loop195:
             do {
                 int alt195=2;
@@ -16428,7 +16428,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt195) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:828:64: ',' record_field_declaration
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:829:64: ',' record_field_declaration
             	    {
             	    char_literal622=(Token)match(input,COMMA,FOLLOW_COMMA_in_record_datatype9471); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -16485,7 +16485,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "record_field_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:829:1: record_field_declaration : identifier data_type ( variable_declaration_part )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:830:1: record_field_declaration : identifier data_type ( variable_declaration_part )? ;
     public final PL_SQLParser.record_field_declaration_return record_field_declaration() throws RecognitionException {
         PL_SQLParser.record_field_declaration_return retval = new PL_SQLParser.record_field_declaration_return();
         retval.start = input.LT(1);
@@ -16502,8 +16502,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 116) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:829:26: ( identifier data_type ( variable_declaration_part )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:829:28: identifier data_type ( variable_declaration_part )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:830:26: ( identifier data_type ( variable_declaration_part )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:830:28: identifier data_type ( variable_declaration_part )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -16519,7 +16519,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type626.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:829:49: ( variable_declaration_part )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:830:49: ( variable_declaration_part )?
             int alt196=2;
             int LA196_0 = input.LA(1);
 
@@ -16572,7 +16572,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "collection_table_datatype"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:830:1: collection_table_datatype : TABLE_KEYWORD OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? ( INDEX_KEYWORD BY_KEYWORD data_type )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:831:1: collection_table_datatype : TABLE_KEYWORD OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? ( INDEX_KEYWORD BY_KEYWORD data_type )? ;
     public final PL_SQLParser.collection_table_datatype_return collection_table_datatype() throws RecognitionException {
         PL_SQLParser.collection_table_datatype_return retval = new PL_SQLParser.collection_table_datatype_return();
         retval.start = input.LT(1);
@@ -16599,8 +16599,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 117) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:830:27: ( TABLE_KEYWORD OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? ( INDEX_KEYWORD BY_KEYWORD data_type )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:830:29: TABLE_KEYWORD OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? ( INDEX_KEYWORD BY_KEYWORD data_type )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:831:27: ( TABLE_KEYWORD OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? ( INDEX_KEYWORD BY_KEYWORD data_type )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:831:29: TABLE_KEYWORD OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? ( INDEX_KEYWORD BY_KEYWORD data_type )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -16620,7 +16620,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type630.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:830:64: ( NOT_OPERATOR NULL_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:831:64: ( NOT_OPERATOR NULL_KEYWORD )?
             int alt197=2;
             int LA197_0 = input.LA(1);
 
@@ -16629,7 +16629,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt197) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:830:65: NOT_OPERATOR NULL_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:831:65: NOT_OPERATOR NULL_KEYWORD
                     {
                     NOT_OPERATOR631=(Token)match(input,NOT_OPERATOR,FOLLOW_NOT_OPERATOR_in_collection_table_datatype9504); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -16647,7 +16647,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:831:23: ( INDEX_KEYWORD BY_KEYWORD data_type )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:832:23: ( INDEX_KEYWORD BY_KEYWORD data_type )?
             int alt198=2;
             int LA198_0 = input.LA(1);
 
@@ -16656,7 +16656,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt198) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:831:24: INDEX_KEYWORD BY_KEYWORD data_type
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:832:24: INDEX_KEYWORD BY_KEYWORD data_type
                     {
                     INDEX_KEYWORD633=(Token)match(input,INDEX_KEYWORD,FOLLOW_INDEX_KEYWORD_in_collection_table_datatype9533); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -16710,7 +16710,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "collection_varray_datatype"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:832:1: collection_varray_datatype : ( VARRAY_KEYWORD | ( VARYING_KEYWORD ARRAY_KEYWORD ) ) '(' ( '+' )? NUMBER_UNSIGNED ')' OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:833:1: collection_varray_datatype : ( VARRAY_KEYWORD | ( VARYING_KEYWORD ARRAY_KEYWORD ) ) '(' ( '+' )? NUMBER_UNSIGNED ')' OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? ;
     public final PL_SQLParser.collection_varray_datatype_return collection_varray_datatype() throws RecognitionException {
         PL_SQLParser.collection_varray_datatype_return retval = new PL_SQLParser.collection_varray_datatype_return();
         retval.start = input.LT(1);
@@ -16743,12 +16743,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 118) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:832:28: ( ( VARRAY_KEYWORD | ( VARYING_KEYWORD ARRAY_KEYWORD ) ) '(' ( '+' )? NUMBER_UNSIGNED ')' OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:832:30: ( VARRAY_KEYWORD | ( VARYING_KEYWORD ARRAY_KEYWORD ) ) '(' ( '+' )? NUMBER_UNSIGNED ')' OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:833:28: ( ( VARRAY_KEYWORD | ( VARYING_KEYWORD ARRAY_KEYWORD ) ) '(' ( '+' )? NUMBER_UNSIGNED ')' OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:833:30: ( VARRAY_KEYWORD | ( VARYING_KEYWORD ARRAY_KEYWORD ) ) '(' ( '+' )? NUMBER_UNSIGNED ')' OF_KEYWORD data_type ( NOT_OPERATOR NULL_KEYWORD )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:832:30: ( VARRAY_KEYWORD | ( VARYING_KEYWORD ARRAY_KEYWORD ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:833:30: ( VARRAY_KEYWORD | ( VARYING_KEYWORD ARRAY_KEYWORD ) )
             int alt199=2;
             int LA199_0 = input.LA(1);
 
@@ -16767,7 +16767,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt199) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:832:31: VARRAY_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:833:31: VARRAY_KEYWORD
                     {
                     VARRAY_KEYWORD636=(Token)match(input,VARRAY_KEYWORD,FOLLOW_VARRAY_KEYWORD_in_collection_varray_datatype9547); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -16778,10 +16778,10 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:832:48: ( VARYING_KEYWORD ARRAY_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:833:48: ( VARYING_KEYWORD ARRAY_KEYWORD )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:832:48: ( VARYING_KEYWORD ARRAY_KEYWORD )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:832:49: VARYING_KEYWORD ARRAY_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:833:48: ( VARYING_KEYWORD ARRAY_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:833:49: VARYING_KEYWORD ARRAY_KEYWORD
                     {
                     VARYING_KEYWORD637=(Token)match(input,VARYING_KEYWORD,FOLLOW_VARYING_KEYWORD_in_collection_varray_datatype9552); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -16807,7 +16807,7 @@ public class PL_SQLParser extends Parser {
             char_literal639_tree = (CommonTree)adaptor.create(char_literal639);
             adaptor.addChild(root_0, char_literal639_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:833:34: ( '+' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:834:34: ( '+' )?
             int alt200=2;
             int LA200_0 = input.LA(1);
 
@@ -16850,7 +16850,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type644.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:833:80: ( NOT_OPERATOR NULL_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:834:80: ( NOT_OPERATOR NULL_KEYWORD )?
             int alt201=2;
             int LA201_0 = input.LA(1);
 
@@ -16859,7 +16859,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt201) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:833:81: NOT_OPERATOR NULL_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:834:81: NOT_OPERATOR NULL_KEYWORD
                     {
                     NOT_OPERATOR645=(Token)match(input,NOT_OPERATOR,FOLLOW_NOT_OPERATOR_in_collection_varray_datatype9601); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -16907,7 +16907,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "ref_cursor_datatype"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:834:1: ref_cursor_datatype : REF_KEYWORD CURSOR_KEYWORD ( RETURN_KEYWORD data_type )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:835:1: ref_cursor_datatype : REF_KEYWORD CURSOR_KEYWORD ( RETURN_KEYWORD data_type )? ;
     public final PL_SQLParser.ref_cursor_datatype_return ref_cursor_datatype() throws RecognitionException {
         PL_SQLParser.ref_cursor_datatype_return retval = new PL_SQLParser.ref_cursor_datatype_return();
         retval.start = input.LT(1);
@@ -16926,8 +16926,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 119) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:834:21: ( REF_KEYWORD CURSOR_KEYWORD ( RETURN_KEYWORD data_type )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:834:23: REF_KEYWORD CURSOR_KEYWORD ( RETURN_KEYWORD data_type )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:835:21: ( REF_KEYWORD CURSOR_KEYWORD ( RETURN_KEYWORD data_type )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:835:23: REF_KEYWORD CURSOR_KEYWORD ( RETURN_KEYWORD data_type )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -16941,7 +16941,7 @@ public class PL_SQLParser extends Parser {
             CURSOR_KEYWORD648_tree = (CommonTree)adaptor.create(CURSOR_KEYWORD648);
             adaptor.addChild(root_0, CURSOR_KEYWORD648_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:834:50: ( RETURN_KEYWORD data_type )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:835:50: ( RETURN_KEYWORD data_type )?
             int alt202=2;
             int LA202_0 = input.LA(1);
 
@@ -16950,7 +16950,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt202) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:834:51: RETURN_KEYWORD data_type
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:835:51: RETURN_KEYWORD data_type
                     {
                     RETURN_KEYWORD649=(Token)match(input,RETURN_KEYWORD,FOLLOW_RETURN_KEYWORD_in_ref_cursor_datatype9617); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -16999,7 +16999,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "cursor_datatype"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:835:1: cursor_datatype : CURSOR_KEYWORD identifier ( cursor_parameter_declaration )? ( RETURN_KEYWORD data_type )? ( IS_KEYWORD select_statement )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:836:1: cursor_datatype : CURSOR_KEYWORD identifier ( cursor_parameter_declaration )? ( RETURN_KEYWORD data_type )? ( IS_KEYWORD select_statement )? ;
     public final PL_SQLParser.cursor_datatype_return cursor_datatype() throws RecognitionException {
         PL_SQLParser.cursor_datatype_return retval = new PL_SQLParser.cursor_datatype_return();
         retval.start = input.LT(1);
@@ -17024,8 +17024,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 120) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:835:17: ( CURSOR_KEYWORD identifier ( cursor_parameter_declaration )? ( RETURN_KEYWORD data_type )? ( IS_KEYWORD select_statement )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:835:19: CURSOR_KEYWORD identifier ( cursor_parameter_declaration )? ( RETURN_KEYWORD data_type )? ( IS_KEYWORD select_statement )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:836:17: ( CURSOR_KEYWORD identifier ( cursor_parameter_declaration )? ( RETURN_KEYWORD data_type )? ( IS_KEYWORD select_statement )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:836:19: CURSOR_KEYWORD identifier ( cursor_parameter_declaration )? ( RETURN_KEYWORD data_type )? ( IS_KEYWORD select_statement )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -17040,7 +17040,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier652.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:835:45: ( cursor_parameter_declaration )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:836:45: ( cursor_parameter_declaration )?
             int alt203=2;
             int LA203_0 = input.LA(1);
 
@@ -17063,7 +17063,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:836:19: ( RETURN_KEYWORD data_type )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:837:19: ( RETURN_KEYWORD data_type )?
             int alt204=2;
             int LA204_0 = input.LA(1);
 
@@ -17072,7 +17072,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt204) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:836:20: RETURN_KEYWORD data_type
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:837:20: RETURN_KEYWORD data_type
                     {
                     RETURN_KEYWORD654=(Token)match(input,RETURN_KEYWORD,FOLLOW_RETURN_KEYWORD_in_cursor_datatype9654); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -17091,7 +17091,7 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:836:47: ( IS_KEYWORD select_statement )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:837:47: ( IS_KEYWORD select_statement )?
             int alt205=2;
             int LA205_0 = input.LA(1);
 
@@ -17100,7 +17100,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt205) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:836:48: IS_KEYWORD select_statement
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:837:48: IS_KEYWORD select_statement
                     {
                     IS_KEYWORD656=(Token)match(input,IS_KEYWORD,FOLLOW_IS_KEYWORD_in_cursor_datatype9661); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -17149,7 +17149,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "cursor_parameter_declaration"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:837:1: cursor_parameter_declaration : '(' cursor_parameter ( ',' cursor_parameter )* ')' ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:838:1: cursor_parameter_declaration : '(' cursor_parameter ( ',' cursor_parameter )* ')' ;
     public final PL_SQLParser.cursor_parameter_declaration_return cursor_parameter_declaration() throws RecognitionException {
         PL_SQLParser.cursor_parameter_declaration_return retval = new PL_SQLParser.cursor_parameter_declaration_return();
         retval.start = input.LT(1);
@@ -17170,8 +17170,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 121) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:837:30: ( '(' cursor_parameter ( ',' cursor_parameter )* ')' )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:837:32: '(' cursor_parameter ( ',' cursor_parameter )* ')'
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:838:30: ( '(' cursor_parameter ( ',' cursor_parameter )* ')' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:838:32: '(' cursor_parameter ( ',' cursor_parameter )* ')'
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -17186,7 +17186,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, cursor_parameter659.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:837:53: ( ',' cursor_parameter )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:838:53: ( ',' cursor_parameter )*
             loop206:
             do {
                 int alt206=2;
@@ -17199,7 +17199,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt206) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:837:54: ',' cursor_parameter
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:838:54: ',' cursor_parameter
             	    {
             	    char_literal660=(Token)match(input,COMMA,FOLLOW_COMMA_in_cursor_parameter_declaration9677); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -17256,7 +17256,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "cursor_parameter"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:838:1: cursor_parameter : identifier ( IN_KEYWORD )? data_type ( variable_def_part expression )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:839:1: cursor_parameter : identifier ( IN_KEYWORD )? data_type ( variable_def_part expression )? ;
     public final PL_SQLParser.cursor_parameter_return cursor_parameter() throws RecognitionException {
         PL_SQLParser.cursor_parameter_return retval = new PL_SQLParser.cursor_parameter_return();
         retval.start = input.LT(1);
@@ -17277,8 +17277,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 122) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:838:18: ( identifier ( IN_KEYWORD )? data_type ( variable_def_part expression )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:838:20: identifier ( IN_KEYWORD )? data_type ( variable_def_part expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:839:18: ( identifier ( IN_KEYWORD )? data_type ( variable_def_part expression )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:839:20: identifier ( IN_KEYWORD )? data_type ( variable_def_part expression )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -17288,7 +17288,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier663.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:838:31: ( IN_KEYWORD )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:839:31: ( IN_KEYWORD )?
             int alt207=2;
             int LA207_0 = input.LA(1);
 
@@ -17316,7 +17316,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, data_type665.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:838:53: ( variable_def_part expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:839:53: ( variable_def_part expression )?
             int alt208=2;
             int LA208_0 = input.LA(1);
 
@@ -17325,7 +17325,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt208) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:838:54: variable_def_part expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:839:54: variable_def_part expression
                     {
                     pushFollow(FOLLOW_variable_def_part_in_cursor_parameter9699);
                     variable_def_part666=variable_def_part();
@@ -17375,7 +17375,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "special_datatype"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:840:1: special_datatype : ( identifier | EXT_IDENTIFIER ) ( LIKE_TYPE_KEYWORD | ROWTYPE_KEYWORD ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:841:1: special_datatype : ( identifier | EXT_IDENTIFIER ) ( LIKE_TYPE_KEYWORD | ROWTYPE_KEYWORD ) ;
     public final PL_SQLParser.special_datatype_return special_datatype() throws RecognitionException {
         PL_SQLParser.special_datatype_return retval = new PL_SQLParser.special_datatype_return();
         retval.start = input.LT(1);
@@ -17392,12 +17392,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 123) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:840:18: ( ( identifier | EXT_IDENTIFIER ) ( LIKE_TYPE_KEYWORD | ROWTYPE_KEYWORD ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:840:20: ( identifier | EXT_IDENTIFIER ) ( LIKE_TYPE_KEYWORD | ROWTYPE_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:841:18: ( ( identifier | EXT_IDENTIFIER ) ( LIKE_TYPE_KEYWORD | ROWTYPE_KEYWORD ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:841:20: ( identifier | EXT_IDENTIFIER ) ( LIKE_TYPE_KEYWORD | ROWTYPE_KEYWORD )
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:840:20: ( identifier | EXT_IDENTIFIER )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:841:20: ( identifier | EXT_IDENTIFIER )
             int alt209=2;
             int LA209_0 = input.LA(1);
 
@@ -17416,7 +17416,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt209) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:840:21: identifier
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:841:21: identifier
                     {
                     pushFollow(FOLLOW_identifier_in_special_datatype9712);
                     identifier668=identifier();
@@ -17428,7 +17428,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:840:34: EXT_IDENTIFIER
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:841:34: EXT_IDENTIFIER
                     {
                     EXT_IDENTIFIER669=(Token)match(input,EXT_IDENTIFIER,FOLLOW_EXT_IDENTIFIER_in_special_datatype9716); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -17483,7 +17483,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:844:1: expression : universal_expression ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:845:1: expression : universal_expression ;
     public final PL_SQLParser.expression_return expression() throws RecognitionException {
         PL_SQLParser.expression_return retval = new PL_SQLParser.expression_return();
         retval.start = input.LT(1);
@@ -17496,8 +17496,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 124) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:844:12: ( universal_expression )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:844:14: universal_expression
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:845:12: ( universal_expression )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:845:14: universal_expression
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -17537,7 +17537,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "in_notin_expression"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:845:1: in_notin_expression : ( ( NOT_OPERATOR )? IN_KEYWORD ) ( universal_expression | ( '(' select_statement ')' ) ) ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:1: in_notin_expression : ( ( NOT_OPERATOR )? IN_KEYWORD ) ( universal_expression | ( '(' select_statement ')' ) ) ;
     public final PL_SQLParser.in_notin_expression_return in_notin_expression() throws RecognitionException {
         PL_SQLParser.in_notin_expression_return retval = new PL_SQLParser.in_notin_expression_return();
         retval.start = input.LT(1);
@@ -17560,15 +17560,15 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 125) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:845:21: ( ( ( NOT_OPERATOR )? IN_KEYWORD ) ( universal_expression | ( '(' select_statement ')' ) ) )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:845:23: ( ( NOT_OPERATOR )? IN_KEYWORD ) ( universal_expression | ( '(' select_statement ')' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:21: ( ( ( NOT_OPERATOR )? IN_KEYWORD ) ( universal_expression | ( '(' select_statement ')' ) ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:23: ( ( NOT_OPERATOR )? IN_KEYWORD ) ( universal_expression | ( '(' select_statement ')' ) )
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:845:23: ( ( NOT_OPERATOR )? IN_KEYWORD )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:845:24: ( NOT_OPERATOR )? IN_KEYWORD
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:23: ( ( NOT_OPERATOR )? IN_KEYWORD )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:24: ( NOT_OPERATOR )? IN_KEYWORD
             {
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:845:24: ( NOT_OPERATOR )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:24: ( NOT_OPERATOR )?
             int alt210=2;
             int LA210_0 = input.LA(1);
 
@@ -17598,15 +17598,12 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:23: ( universal_expression | ( '(' select_statement ')' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:23: ( universal_expression | ( '(' select_statement ')' ) )
             int alt211=2;
             int LA211_0 = input.LA(1);
 
-            if ( (LA211_0==NUMBER_UNSIGNED||LA211_0==STRING||(LA211_0>=IDENTIFIER && LA211_0<=EXT_IDENTIFIER)||LA211_0==NULL_KEYWORD||(LA211_0>=TRUE_KEYWORD && LA211_0<=FALSE_KEYWORD)||LA211_0==INTERVAL_KEYWORD||LA211_0==REPLACE_KEYWORD||LA211_0==IN_KEYWORD||LA211_0==CASE_KEYWORD||(LA211_0>=SQLCODE_KEYWORD && LA211_0<=SQLERRM_KEYWORD)||LA211_0==RESULT_KEYWORD||LA211_0==NOT_OPERATOR||(LA211_0>=214 && LA211_0<=215)) ) {
-                alt211=1;
-            }
-            else if ( (LA211_0==LPAREN) ) {
-                int LA211_2 = input.LA(2);
+            if ( (LA211_0==LPAREN) ) {
+                int LA211_1 = input.LA(2);
 
                 if ( (synpred355_PL_SQL()) ) {
                     alt211=1;
@@ -17617,10 +17614,13 @@ public class PL_SQLParser extends Parser {
                 else {
                     if (state.backtracking>0) {state.failed=true; return retval;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 211, 2, input);
+                        new NoViableAltException("", 211, 1, input);
 
                     throw nvae;
                 }
+            }
+            else if ( (LA211_0==NUMBER_UNSIGNED||LA211_0==STRING||(LA211_0>=IDENTIFIER && LA211_0<=EXT_IDENTIFIER)||LA211_0==NULL_KEYWORD||(LA211_0>=TRUE_KEYWORD && LA211_0<=FALSE_KEYWORD)||LA211_0==INTERVAL_KEYWORD||LA211_0==REPLACE_KEYWORD||LA211_0==IN_KEYWORD||LA211_0==CASE_KEYWORD||(LA211_0>=SQLCODE_KEYWORD && LA211_0<=SQLERRM_KEYWORD)||LA211_0==RESULT_KEYWORD||LA211_0==NOT_OPERATOR||(LA211_0>=214 && LA211_0<=215)) ) {
+                alt211=1;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
@@ -17631,7 +17631,7 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt211) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:25: universal_expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:25: universal_expression
                     {
                     pushFollow(FOLLOW_universal_expression_in_in_notin_expression9774);
                     universal_expression674=universal_expression();
@@ -17643,10 +17643,10 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:48: ( '(' select_statement ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:48: ( '(' select_statement ')' )
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:48: ( '(' select_statement ')' )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:50: '(' select_statement ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:48: ( '(' select_statement ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:50: '(' select_statement ')'
                     {
                     char_literal675=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_in_notin_expression9780); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -17703,7 +17703,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "operator"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:1: operator : ( '+' | '-' | '*' | '/' | '**' | '||' | ':=' | '.' | '^=' | '>' | '<' | '<=' | '>=' | '=' | '<>' | '!=' | '~=' | AND_OPERATOR | OR_OPERATOR | LIKE_KEYWORD | ( ( NOT_OPERATOR )? BETWEEN_KEYWORD ) );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:1: operator : ( '+' | '-' | '*' | '/' | '**' | '||' | ':=' | '.' | '^=' | '>' | '<' | '<=' | '>=' | '=' | '<>' | '!=' | '~=' | AND_OPERATOR | OR_OPERATOR | LIKE_KEYWORD | ( ( NOT_OPERATOR )? BETWEEN_KEYWORD ) );
     public final PL_SQLParser.operator_return operator() throws RecognitionException {
         PL_SQLParser.operator_return retval = new PL_SQLParser.operator_return();
         retval.start = input.LT(1);
@@ -17758,12 +17758,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 126) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:10: ( '+' | '-' | '*' | '/' | '**' | '||' | ':=' | '.' | '^=' | '>' | '<' | '<=' | '>=' | '=' | '<>' | '!=' | '~=' | AND_OPERATOR | OR_OPERATOR | LIKE_KEYWORD | ( ( NOT_OPERATOR )? BETWEEN_KEYWORD ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:10: ( '+' | '-' | '*' | '/' | '**' | '||' | ':=' | '.' | '^=' | '>' | '<' | '<=' | '>=' | '=' | '<>' | '!=' | '~=' | AND_OPERATOR | OR_OPERATOR | LIKE_KEYWORD | ( ( NOT_OPERATOR )? BETWEEN_KEYWORD ) )
             int alt213=21;
             alt213 = dfa213.predict(input);
             switch (alt213) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:12: '+'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:12: '+'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17776,7 +17776,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:18: '-'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:18: '-'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17789,7 +17789,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:24: '*'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:24: '*'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17802,7 +17802,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:30: '/'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:30: '/'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17815,7 +17815,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:36: '**'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:36: '**'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17828,7 +17828,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:43: '||'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:43: '||'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17841,7 +17841,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:50: ':='
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:50: ':='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17854,7 +17854,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:57: '.'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:57: '.'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17867,7 +17867,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:12: '^='
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:849:12: '^='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17880,7 +17880,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:19: '>'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:849:19: '>'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17893,7 +17893,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:25: '<'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:849:25: '<'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17906,7 +17906,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:31: '<='
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:849:31: '<='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17919,7 +17919,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 13 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:38: '>='
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:849:38: '>='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17932,7 +17932,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 14 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:45: '='
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:849:45: '='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17945,7 +17945,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 15 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:51: '<>'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:849:51: '<>'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17958,7 +17958,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 16 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:58: '!='
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:849:58: '!='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17971,7 +17971,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 17 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:848:65: '~='
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:849:65: '~='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17984,7 +17984,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 18 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:849:12: AND_OPERATOR
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:850:12: AND_OPERATOR
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17997,7 +17997,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 19 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:849:27: OR_OPERATOR
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:850:27: OR_OPERATOR
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18010,7 +18010,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 20 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:850:12: LIKE_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:851:12: LIKE_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18023,14 +18023,14 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 21 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:850:27: ( ( NOT_OPERATOR )? BETWEEN_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:851:27: ( ( NOT_OPERATOR )? BETWEEN_KEYWORD )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:850:27: ( ( NOT_OPERATOR )? BETWEEN_KEYWORD )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:850:28: ( NOT_OPERATOR )? BETWEEN_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:851:27: ( ( NOT_OPERATOR )? BETWEEN_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:851:28: ( NOT_OPERATOR )? BETWEEN_KEYWORD
                     {
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:850:28: ( NOT_OPERATOR )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:851:28: ( NOT_OPERATOR )?
                     int alt212=2;
                     int LA212_0 = input.LA(1);
 
@@ -18039,7 +18039,7 @@ public class PL_SQLParser extends Parser {
                     }
                     switch (alt212) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:850:29: NOT_OPERATOR
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:851:29: NOT_OPERATOR
                             {
                             NOT_OPERATOR698=(Token)match(input,NOT_OPERATOR,FOLLOW_NOT_OPERATOR_in_operator9908); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
@@ -18092,7 +18092,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "unary_op"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:851:1: unary_op : ( NOT_OPERATOR | '+' | '-' );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:852:1: unary_op : ( NOT_OPERATOR | '+' | '-' );
     public final PL_SQLParser.unary_op_return unary_op() throws RecognitionException {
         PL_SQLParser.unary_op_return retval = new PL_SQLParser.unary_op_return();
         retval.start = input.LT(1);
@@ -18105,7 +18105,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 127) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:851:10: ( NOT_OPERATOR | '+' | '-' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:852:10: ( NOT_OPERATOR | '+' | '-' )
             // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:
             {
             root_0 = (CommonTree)adaptor.nil();
@@ -18152,7 +18152,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "postfix_op"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:852:1: postfix_op : ( ( IS_KEYWORD ( NOT_OPERATOR )? NULL_KEYWORD ) | '(+)' );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:1: postfix_op : ( ( IS_KEYWORD ( NOT_OPERATOR )? NULL_KEYWORD ) | '(+)' );
     public final PL_SQLParser.postfix_op_return postfix_op() throws RecognitionException {
         PL_SQLParser.postfix_op_return retval = new PL_SQLParser.postfix_op_return();
         retval.start = input.LT(1);
@@ -18171,7 +18171,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 128) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:852:12: ( ( IS_KEYWORD ( NOT_OPERATOR )? NULL_KEYWORD ) | '(+)' )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:12: ( ( IS_KEYWORD ( NOT_OPERATOR )? NULL_KEYWORD ) | '(+)' )
             int alt215=2;
             int LA215_0 = input.LA(1);
 
@@ -18190,19 +18190,19 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt215) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:852:14: ( IS_KEYWORD ( NOT_OPERATOR )? NULL_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:14: ( IS_KEYWORD ( NOT_OPERATOR )? NULL_KEYWORD )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:852:14: ( IS_KEYWORD ( NOT_OPERATOR )? NULL_KEYWORD )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:852:15: IS_KEYWORD ( NOT_OPERATOR )? NULL_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:14: ( IS_KEYWORD ( NOT_OPERATOR )? NULL_KEYWORD )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:15: IS_KEYWORD ( NOT_OPERATOR )? NULL_KEYWORD
                     {
                     IS_KEYWORD701=(Token)match(input,IS_KEYWORD,FOLLOW_IS_KEYWORD_in_postfix_op9936); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     IS_KEYWORD701_tree = (CommonTree)adaptor.create(IS_KEYWORD701);
                     adaptor.addChild(root_0, IS_KEYWORD701_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:852:26: ( NOT_OPERATOR )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:26: ( NOT_OPERATOR )?
                     int alt214=2;
                     int LA214_0 = input.LA(1);
 
@@ -18236,7 +18236,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:852:56: '(+)'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:56: '(+)'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18277,7 +18277,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "universal_expression"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:1: universal_expression : ( unary_op )? universal_factor ( postfix_op )? ( operator ( universal_expression | ( '(' select_statement ')' ) ) )* ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:1: universal_expression : ( unary_op )? universal_factor ( postfix_op )? ( operator ( universal_expression | ( '(' select_statement ')' ) ) )* ;
     public final PL_SQLParser.universal_expression_return universal_expression() throws RecognitionException {
         PL_SQLParser.universal_expression_return retval = new PL_SQLParser.universal_expression_return();
         retval.start = input.LT(1);
@@ -18304,17 +18304,17 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 129) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:22: ( ( unary_op )? universal_factor ( postfix_op )? ( operator ( universal_expression | ( '(' select_statement ')' ) ) )* )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:24: ( unary_op )? universal_factor ( postfix_op )? ( operator ( universal_expression | ( '(' select_statement ')' ) ) )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:22: ( ( unary_op )? universal_factor ( postfix_op )? ( operator ( universal_expression | ( '(' select_statement ')' ) ) )* )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:24: ( unary_op )? universal_factor ( postfix_op )? ( operator ( universal_expression | ( '(' select_statement ')' ) ) )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:24: ( unary_op )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:24: ( unary_op )?
             int alt216=2;
             int LA216_0 = input.LA(1);
 
             if ( (LA216_0==NOT_OPERATOR) ) {
-                int LA216_2 = input.LA(2);
+                int LA216_1 = input.LA(2);
 
                 if ( (synpred381_PL_SQL()) ) {
                     alt216=1;
@@ -18345,7 +18345,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, universal_factor706.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:51: ( postfix_op )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:51: ( postfix_op )?
             int alt217=2;
             int LA217_0 = input.LA(1);
 
@@ -18372,14 +18372,14 @@ public class PL_SQLParser extends Parser {
 
             }
 
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:63: ( operator ( universal_expression | ( '(' select_statement ')' ) ) )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:63: ( operator ( universal_expression | ( '(' select_statement ')' ) ) )*
             loop219:
             do {
                 int alt219=2;
                 int LA219_0 = input.LA(1);
 
                 if ( ((LA219_0>=AND_OPERATOR && LA219_0<=OR_OPERATOR)||LA219_0==LIKE_KEYWORD||LA219_0==BETWEEN_KEYWORD||LA219_0==NOT_OPERATOR||LA219_0==212||(LA219_0>=214 && LA219_0<=227)||(LA219_0>=230 && LA219_0<=231)) ) {
-                    int LA219_2 = input.LA(2);
+                    int LA219_1 = input.LA(2);
 
                     if ( (synpred384_PL_SQL()) ) {
                         alt219=1;
@@ -18391,7 +18391,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt219) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:64: operator ( universal_expression | ( '(' select_statement ')' ) )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:64: operator ( universal_expression | ( '(' select_statement ')' ) )
             	    {
             	    pushFollow(FOLLOW_operator_in_universal_expression9963);
             	    operator708=operator();
@@ -18399,7 +18399,7 @@ public class PL_SQLParser extends Parser {
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, operator708.getTree());
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:73: ( universal_expression | ( '(' select_statement ')' ) )
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:73: ( universal_expression | ( '(' select_statement ')' ) )
             	    int alt218=2;
             	    int LA218_0 = input.LA(1);
 
@@ -18432,7 +18432,7 @@ public class PL_SQLParser extends Parser {
             	    }
             	    switch (alt218) {
             	        case 1 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:74: universal_expression
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:74: universal_expression
             	            {
             	            pushFollow(FOLLOW_universal_expression_in_universal_expression9966);
             	            universal_expression709=universal_expression();
@@ -18444,10 +18444,10 @@ public class PL_SQLParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:97: ( '(' select_statement ')' )
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:97: ( '(' select_statement ')' )
             	            {
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:97: ( '(' select_statement ')' )
-            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:98: '(' select_statement ')'
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:97: ( '(' select_statement ')' )
+            	            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:98: '(' select_statement ')'
             	            {
             	            char_literal710=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_universal_expression9971); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -18513,7 +18513,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "universal_factor"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:1: universal_factor : ( TRUE_KEYWORD | FALSE_KEYWORD | NUMBER_UNSIGNED | in_notin_expression | STRING | NULL_KEYWORD | case_statement_expression | sub_identifier ( call_statement_param ( in_notin_expression )? )? | ( '(' universal_expression ( ',' universal_expression )* ')' ) );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:855:1: universal_factor : ( TRUE_KEYWORD | FALSE_KEYWORD | NUMBER_UNSIGNED | in_notin_expression | STRING | NULL_KEYWORD | case_statement_expression | sub_identifier ( call_statement_param ( in_notin_expression )? )? | ( '(' universal_expression ( ',' universal_expression )* ')' ) );
     public final PL_SQLParser.universal_factor_return universal_factor() throws RecognitionException {
         PL_SQLParser.universal_factor_return retval = new PL_SQLParser.universal_factor_return();
         retval.start = input.LT(1);
@@ -18554,12 +18554,12 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 130) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:18: ( TRUE_KEYWORD | FALSE_KEYWORD | NUMBER_UNSIGNED | in_notin_expression | STRING | NULL_KEYWORD | case_statement_expression | sub_identifier ( call_statement_param ( in_notin_expression )? )? | ( '(' universal_expression ( ',' universal_expression )* ')' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:855:18: ( TRUE_KEYWORD | FALSE_KEYWORD | NUMBER_UNSIGNED | in_notin_expression | STRING | NULL_KEYWORD | case_statement_expression | sub_identifier ( call_statement_param ( in_notin_expression )? )? | ( '(' universal_expression ( ',' universal_expression )* ')' ) )
             int alt223=9;
             alt223 = dfa223.predict(input);
             switch (alt223) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:20: TRUE_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:855:20: TRUE_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18572,7 +18572,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:35: FALSE_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:855:35: FALSE_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18585,7 +18585,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:51: NUMBER_UNSIGNED
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:855:51: NUMBER_UNSIGNED
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18598,7 +18598,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:855:20: in_notin_expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:856:20: in_notin_expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18612,7 +18612,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:856:20: STRING
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:20: STRING
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18625,7 +18625,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:856:29: NULL_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:29: NULL_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18638,7 +18638,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:856:44: case_statement_expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:44: case_statement_expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18652,7 +18652,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:20: sub_identifier ( call_statement_param ( in_notin_expression )? )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:20: sub_identifier ( call_statement_param ( in_notin_expression )? )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18662,12 +18662,12 @@ public class PL_SQLParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, sub_identifier720.getTree());
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:35: ( call_statement_param ( in_notin_expression )? )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:35: ( call_statement_param ( in_notin_expression )? )?
                     int alt221=2;
                     int LA221_0 = input.LA(1);
 
                     if ( (LA221_0==LPAREN) ) {
-                        int LA221_1 = input.LA(2);
+                        int LA221_2 = input.LA(2);
 
                         if ( (synpred393_PL_SQL()) ) {
                             alt221=1;
@@ -18675,7 +18675,7 @@ public class PL_SQLParser extends Parser {
                     }
                     switch (alt221) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:36: call_statement_param ( in_notin_expression )?
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:36: call_statement_param ( in_notin_expression )?
                             {
                             pushFollow(FOLLOW_call_statement_param_in_universal_factor10075);
                             call_statement_param721=call_statement_param();
@@ -18683,12 +18683,12 @@ public class PL_SQLParser extends Parser {
                             state._fsp--;
                             if (state.failed) return retval;
                             if ( state.backtracking==0 ) adaptor.addChild(root_0, call_statement_param721.getTree());
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:57: ( in_notin_expression )?
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:57: ( in_notin_expression )?
                             int alt220=2;
                             int LA220_0 = input.LA(1);
 
                             if ( (LA220_0==IN_KEYWORD||LA220_0==NOT_OPERATOR) ) {
-                                int LA220_1 = input.LA(2);
+                                int LA220_2 = input.LA(2);
 
                                 if ( (synpred392_PL_SQL()) ) {
                                     alt220=1;
@@ -18696,7 +18696,7 @@ public class PL_SQLParser extends Parser {
                             }
                             switch (alt220) {
                                 case 1 :
-                                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:58: in_notin_expression
+                                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:58: in_notin_expression
                                     {
                                     pushFollow(FOLLOW_in_notin_expression_in_universal_factor10078);
                                     in_notin_expression722=in_notin_expression();
@@ -18720,12 +18720,12 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:20: ( '(' universal_expression ( ',' universal_expression )* ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:859:20: ( '(' universal_expression ( ',' universal_expression )* ')' )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:20: ( '(' universal_expression ( ',' universal_expression )* ')' )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:21: '(' universal_expression ( ',' universal_expression )* ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:859:20: ( '(' universal_expression ( ',' universal_expression )* ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:859:21: '(' universal_expression ( ',' universal_expression )* ')'
                     {
                     char_literal723=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_universal_factor10106); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -18738,7 +18738,7 @@ public class PL_SQLParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, universal_expression724.getTree());
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:46: ( ',' universal_expression )*
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:859:46: ( ',' universal_expression )*
                     loop222:
                     do {
                         int alt222=2;
@@ -18751,7 +18751,7 @@ public class PL_SQLParser extends Parser {
 
                         switch (alt222) {
                     	case 1 :
-                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:47: ',' universal_expression
+                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:859:47: ',' universal_expression
                     	    {
                     	    char_literal725=(Token)match(input,COMMA,FOLLOW_COMMA_in_universal_factor10111); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
@@ -18813,7 +18813,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "sub_identifier"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:859:1: sub_identifier : ( sub_identifier_factor | REPLACE_KEYWORD | sqlcode_function | sqlerrm_function );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:1: sub_identifier : ( sub_identifier_factor | REPLACE_KEYWORD | sqlcode_function | sqlerrm_function );
     public final PL_SQLParser.sub_identifier_return sub_identifier() throws RecognitionException {
         PL_SQLParser.sub_identifier_return retval = new PL_SQLParser.sub_identifier_return();
         retval.start = input.LT(1);
@@ -18832,7 +18832,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 131) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:859:16: ( sub_identifier_factor | REPLACE_KEYWORD | sqlcode_function | sqlerrm_function )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:16: ( sub_identifier_factor | REPLACE_KEYWORD | sqlcode_function | sqlerrm_function )
             int alt224=4;
             switch ( input.LA(1) ) {
             case IDENTIFIER:
@@ -18868,7 +18868,7 @@ public class PL_SQLParser extends Parser {
 
             switch (alt224) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:859:18: sub_identifier_factor
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:18: sub_identifier_factor
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18882,7 +18882,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:859:42: REPLACE_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:42: REPLACE_KEYWORD
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18895,7 +18895,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:859:60: sqlcode_function
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:60: sqlcode_function
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18909,7 +18909,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:859:79: sqlerrm_function
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:79: sqlerrm_function
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -18951,7 +18951,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "sub_identifier_factor"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:1: sub_identifier_factor : universal_identifier ( NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | in_notin_expression )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:861:1: sub_identifier_factor : universal_identifier ( NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | in_notin_expression )? ;
     public final PL_SQLParser.sub_identifier_factor_return sub_identifier_factor() throws RecognitionException {
         PL_SQLParser.sub_identifier_factor_return retval = new PL_SQLParser.sub_identifier_factor_return();
         retval.start = input.LT(1);
@@ -18974,8 +18974,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 132) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:23: ( universal_identifier ( NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | in_notin_expression )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:25: universal_identifier ( NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | in_notin_expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:861:23: ( universal_identifier ( NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | in_notin_expression )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:861:25: universal_identifier ( NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | in_notin_expression )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -18985,19 +18985,9 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, universal_identifier732.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:46: ( NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | in_notin_expression )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:861:46: ( NOTFOUND_KEYWORD | FOUND_KEYWORD | ISOPEN_KEYWORD | ROWCOUNT_KEYWORD | in_notin_expression )?
             int alt225=6;
             switch ( input.LA(1) ) {
-                case ROWCOUNT_KEYWORD:
-                    {
-                    alt225=4;
-                    }
-                    break;
-                case ISOPEN_KEYWORD:
-                    {
-                    alt225=3;
-                    }
-                    break;
                 case FOUND_KEYWORD:
                     {
                     alt225=2;
@@ -19006,6 +18996,11 @@ public class PL_SQLParser extends Parser {
                 case NOTFOUND_KEYWORD:
                     {
                     alt225=1;
+                    }
+                    break;
+                case ROWCOUNT_KEYWORD:
+                    {
+                    alt225=4;
                     }
                     break;
                 case IN_KEYWORD:
@@ -19018,11 +19013,16 @@ public class PL_SQLParser extends Parser {
                     }
                     }
                     break;
+                case ISOPEN_KEYWORD:
+                    {
+                    alt225=3;
+                    }
+                    break;
             }
 
             switch (alt225) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:47: NOTFOUND_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:861:47: NOTFOUND_KEYWORD
                     {
                     NOTFOUND_KEYWORD733=(Token)match(input,NOTFOUND_KEYWORD,FOLLOW_NOTFOUND_KEYWORD_in_sub_identifier_factor10148); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -19033,7 +19033,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:860:66: FOUND_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:861:66: FOUND_KEYWORD
                     {
                     FOUND_KEYWORD734=(Token)match(input,FOUND_KEYWORD,FOLLOW_FOUND_KEYWORD_in_sub_identifier_factor10152); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -19044,7 +19044,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:861:25: ISOPEN_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:25: ISOPEN_KEYWORD
                     {
                     ISOPEN_KEYWORD735=(Token)match(input,ISOPEN_KEYWORD,FOLLOW_ISOPEN_KEYWORD_in_sub_identifier_factor10180); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -19055,7 +19055,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:861:42: ROWCOUNT_KEYWORD
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:42: ROWCOUNT_KEYWORD
                     {
                     ROWCOUNT_KEYWORD736=(Token)match(input,ROWCOUNT_KEYWORD,FOLLOW_ROWCOUNT_KEYWORD_in_sub_identifier_factor10184); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -19066,7 +19066,7 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:861:61: in_notin_expression
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:61: in_notin_expression
                     {
                     pushFollow(FOLLOW_in_notin_expression_in_sub_identifier_factor10188);
                     in_notin_expression737=in_notin_expression();
@@ -19110,7 +19110,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "call_statement_param"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:1: call_statement_param : ( ( '(' ( universal_expression ( ',' universal_expression )* )? ')' ) | ( '(' identifier '=>' universal_expression ( ',' identifier '=>' universal_expression )* ')' ) );
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:1: call_statement_param : ( ( '(' ( universal_expression ( ',' universal_expression )* )? ')' ) | ( '(' identifier '=>' universal_expression ( ',' identifier '=>' universal_expression )* ')' ) );
     public final PL_SQLParser.call_statement_param_return call_statement_param() throws RecognitionException {
         PL_SQLParser.call_statement_param_return retval = new PL_SQLParser.call_statement_param_return();
         retval.start = input.LT(1);
@@ -19149,7 +19149,7 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 133) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:22: ( ( '(' ( universal_expression ( ',' universal_expression )* )? ')' ) | ( '(' identifier '=>' universal_expression ( ',' identifier '=>' universal_expression )* ')' ) )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:22: ( ( '(' ( universal_expression ( ',' universal_expression )* )? ')' ) | ( '(' identifier '=>' universal_expression ( ',' identifier '=>' universal_expression )* ')' ) )
             int alt229=2;
             int LA229_0 = input.LA(1);
 
@@ -19179,19 +19179,19 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt229) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:24: ( '(' ( universal_expression ( ',' universal_expression )* )? ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:24: ( '(' ( universal_expression ( ',' universal_expression )* )? ')' )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:24: ( '(' ( universal_expression ( ',' universal_expression )* )? ')' )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:25: '(' ( universal_expression ( ',' universal_expression )* )? ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:24: ( '(' ( universal_expression ( ',' universal_expression )* )? ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:25: '(' ( universal_expression ( ',' universal_expression )* )? ')'
                     {
                     char_literal738=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_call_statement_param10198); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal738_tree = (CommonTree)adaptor.create(char_literal738);
                     adaptor.addChild(root_0, char_literal738_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:29: ( universal_expression ( ',' universal_expression )* )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:29: ( universal_expression ( ',' universal_expression )* )?
                     int alt227=2;
                     int LA227_0 = input.LA(1);
 
@@ -19200,7 +19200,7 @@ public class PL_SQLParser extends Parser {
                     }
                     switch (alt227) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:30: universal_expression ( ',' universal_expression )*
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:30: universal_expression ( ',' universal_expression )*
                             {
                             pushFollow(FOLLOW_universal_expression_in_call_statement_param10201);
                             universal_expression739=universal_expression();
@@ -19208,7 +19208,7 @@ public class PL_SQLParser extends Parser {
                             state._fsp--;
                             if (state.failed) return retval;
                             if ( state.backtracking==0 ) adaptor.addChild(root_0, universal_expression739.getTree());
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:51: ( ',' universal_expression )*
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:51: ( ',' universal_expression )*
                             loop226:
                             do {
                                 int alt226=2;
@@ -19221,7 +19221,7 @@ public class PL_SQLParser extends Parser {
 
                                 switch (alt226) {
                             	case 1 :
-                            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:52: ',' universal_expression
+                            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:52: ',' universal_expression
                             	    {
                             	    char_literal740=(Token)match(input,COMMA,FOLLOW_COMMA_in_call_statement_param10204); if (state.failed) return retval;
                             	    if ( state.backtracking==0 ) {
@@ -19261,12 +19261,12 @@ public class PL_SQLParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:24: ( '(' identifier '=>' universal_expression ( ',' identifier '=>' universal_expression )* ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:864:24: ( '(' identifier '=>' universal_expression ( ',' identifier '=>' universal_expression )* ')' )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:24: ( '(' identifier '=>' universal_expression ( ',' identifier '=>' universal_expression )* ')' )
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:25: '(' identifier '=>' universal_expression ( ',' identifier '=>' universal_expression )* ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:864:24: ( '(' identifier '=>' universal_expression ( ',' identifier '=>' universal_expression )* ')' )
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:864:25: '(' identifier '=>' universal_expression ( ',' identifier '=>' universal_expression )* ')'
                     {
                     char_literal743=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_call_statement_param10242); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -19290,7 +19290,7 @@ public class PL_SQLParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, universal_expression746.getTree());
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:66: ( ',' identifier '=>' universal_expression )*
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:864:66: ( ',' identifier '=>' universal_expression )*
                     loop228:
                     do {
                         int alt228=2;
@@ -19303,7 +19303,7 @@ public class PL_SQLParser extends Parser {
 
                         switch (alt228) {
                     	case 1 :
-                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:67: ',' identifier '=>' universal_expression
+                    	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:864:67: ',' identifier '=>' universal_expression
                     	    {
                     	    char_literal747=(Token)match(input,COMMA,FOLLOW_COMMA_in_call_statement_param10251); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
@@ -19376,7 +19376,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "exception_section"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:864:1: exception_section : EXCEPTION_KEYWORD ( exception_handler )+ ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:865:1: exception_section : EXCEPTION_KEYWORD ( exception_handler )+ ;
     public final PL_SQLParser.exception_section_return exception_section() throws RecognitionException {
         PL_SQLParser.exception_section_return retval = new PL_SQLParser.exception_section_return();
         retval.start = input.LT(1);
@@ -19391,8 +19391,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 134) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:864:19: ( EXCEPTION_KEYWORD ( exception_handler )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:864:21: EXCEPTION_KEYWORD ( exception_handler )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:865:19: ( EXCEPTION_KEYWORD ( exception_handler )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:865:21: EXCEPTION_KEYWORD ( exception_handler )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -19401,7 +19401,7 @@ public class PL_SQLParser extends Parser {
             EXCEPTION_KEYWORD752_tree = (CommonTree)adaptor.create(EXCEPTION_KEYWORD752);
             adaptor.addChild(root_0, EXCEPTION_KEYWORD752_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:864:39: ( exception_handler )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:865:39: ( exception_handler )+
             int cnt230=0;
             loop230:
             do {
@@ -19415,7 +19415,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt230) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:864:40: exception_handler
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:865:40: exception_handler
             	    {
             	    pushFollow(FOLLOW_exception_handler_in_exception_section10274);
             	    exception_handler753=exception_handler();
@@ -19467,7 +19467,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "exception_handler"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:865:1: exception_handler : WHEN_KEYWORD universal_identifier ( OR_OPERATOR universal_identifier )* THEN_KEYWORD ( executable_section )+ ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:866:1: exception_handler : WHEN_KEYWORD universal_identifier ( OR_OPERATOR universal_identifier )* THEN_KEYWORD ( executable_section )+ ;
     public final PL_SQLParser.exception_handler_return exception_handler() throws RecognitionException {
         PL_SQLParser.exception_handler_return retval = new PL_SQLParser.exception_handler_return();
         retval.start = input.LT(1);
@@ -19490,8 +19490,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 135) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:865:19: ( WHEN_KEYWORD universal_identifier ( OR_OPERATOR universal_identifier )* THEN_KEYWORD ( executable_section )+ )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:865:21: WHEN_KEYWORD universal_identifier ( OR_OPERATOR universal_identifier )* THEN_KEYWORD ( executable_section )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:866:19: ( WHEN_KEYWORD universal_identifier ( OR_OPERATOR universal_identifier )* THEN_KEYWORD ( executable_section )+ )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:866:21: WHEN_KEYWORD universal_identifier ( OR_OPERATOR universal_identifier )* THEN_KEYWORD ( executable_section )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -19506,7 +19506,7 @@ public class PL_SQLParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, universal_identifier755.getTree());
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:865:55: ( OR_OPERATOR universal_identifier )*
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:866:55: ( OR_OPERATOR universal_identifier )*
             loop231:
             do {
                 int alt231=2;
@@ -19519,7 +19519,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt231) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:865:56: OR_OPERATOR universal_identifier
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:866:56: OR_OPERATOR universal_identifier
             	    {
             	    OR_OPERATOR756=(Token)match(input,OR_OPERATOR,FOLLOW_OR_OPERATOR_in_exception_handler10288); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -19546,7 +19546,7 @@ public class PL_SQLParser extends Parser {
             THEN_KEYWORD758_tree = (CommonTree)adaptor.create(THEN_KEYWORD758);
             adaptor.addChild(root_0, THEN_KEYWORD758_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:866:34: ( executable_section )+
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:867:34: ( executable_section )+
             int cnt232=0;
             loop232:
             do {
@@ -19560,7 +19560,7 @@ public class PL_SQLParser extends Parser {
 
                 switch (alt232) {
             	case 1 :
-            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:866:35: executable_section
+            	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:867:35: executable_section
             	    {
             	    pushFollow(FOLLOW_executable_section_in_exception_handler10317);
             	    executable_section759=executable_section();
@@ -19612,7 +19612,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "scale_types"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:868:1: scale_types : SCALE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:1: scale_types : SCALE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')' )? ;
     public final PL_SQLParser.scale_types_return scale_types() throws RecognitionException {
         PL_SQLParser.scale_types_return retval = new PL_SQLParser.scale_types_return();
         retval.start = input.LT(1);
@@ -19639,8 +19639,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 136) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:2: ( SCALE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:4: SCALE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:2: ( SCALE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:4: SCALE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -19649,7 +19649,7 @@ public class PL_SQLParser extends Parser {
             SCALE_TYPES760_tree = (CommonTree)adaptor.create(SCALE_TYPES760);
             adaptor.addChild(root_0, SCALE_TYPES760_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:16: ( '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:16: ( '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')' )?
             int alt236=2;
             int LA236_0 = input.LA(1);
 
@@ -19662,14 +19662,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt236) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:17: '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:17: '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')'
                     {
                     char_literal761=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_scale_types10331); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal761_tree = (CommonTree)adaptor.create(char_literal761);
                     adaptor.addChild(root_0, char_literal761_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:21: ( '+' )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:21: ( '+' )?
                     int alt233=2;
                     int LA233_0 = input.LA(1);
 
@@ -19696,7 +19696,7 @@ public class PL_SQLParser extends Parser {
                     NUMBER_UNSIGNED763_tree = (CommonTree)adaptor.create(NUMBER_UNSIGNED763);
                     adaptor.addChild(root_0, NUMBER_UNSIGNED763_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:42: ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:42: ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )?
                     int alt235=2;
                     int LA235_0 = input.LA(1);
 
@@ -19705,14 +19705,14 @@ public class PL_SQLParser extends Parser {
                     }
                     switch (alt235) {
                         case 1 :
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:43: COMMA ( '+' | '-' )? NUMBER_UNSIGNED
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:43: COMMA ( '+' | '-' )? NUMBER_UNSIGNED
                             {
                             COMMA764=(Token)match(input,COMMA,FOLLOW_COMMA_in_scale_types10339); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
                             COMMA764_tree = (CommonTree)adaptor.create(COMMA764);
                             adaptor.addChild(root_0, COMMA764_tree);
                             }
-                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:49: ( '+' | '-' )?
+                            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:49: ( '+' | '-' )?
                             int alt234=2;
                             int LA234_0 = input.LA(1);
 
@@ -19793,7 +19793,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "size_types"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:871:1: size_types : SIZE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:872:1: size_types : SIZE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
     public final PL_SQLParser.size_types_return size_types() throws RecognitionException {
         PL_SQLParser.size_types_return retval = new PL_SQLParser.size_types_return();
         retval.start = input.LT(1);
@@ -19814,8 +19814,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 137) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:872:2: ( SIZE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:872:4: SIZE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:873:2: ( SIZE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:873:4: SIZE_TYPES ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -19824,7 +19824,7 @@ public class PL_SQLParser extends Parser {
             SIZE_TYPES768_tree = (CommonTree)adaptor.create(SIZE_TYPES768);
             adaptor.addChild(root_0, SIZE_TYPES768_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:872:15: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:873:15: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             int alt238=2;
             int LA238_0 = input.LA(1);
 
@@ -19837,14 +19837,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt238) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:872:17: '(' ( '+' )? NUMBER_UNSIGNED ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:873:17: '(' ( '+' )? NUMBER_UNSIGNED ')'
                     {
                     char_literal769=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_size_types10369); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal769_tree = (CommonTree)adaptor.create(char_literal769);
                     adaptor.addChild(root_0, char_literal769_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:872:21: ( '+' )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:873:21: ( '+' )?
                     int alt237=2;
                     int LA237_0 = input.LA(1);
 
@@ -19912,7 +19912,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "raw_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:874:1: raw_type : RAW_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:875:1: raw_type : RAW_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
     public final PL_SQLParser.raw_type_return raw_type() throws RecognitionException {
         PL_SQLParser.raw_type_return retval = new PL_SQLParser.raw_type_return();
         retval.start = input.LT(1);
@@ -19933,8 +19933,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 138) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:874:9: ( RAW_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:874:11: RAW_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:875:9: ( RAW_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:875:11: RAW_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -19943,12 +19943,12 @@ public class PL_SQLParser extends Parser {
             RAW_TYPE773_tree = (CommonTree)adaptor.create(RAW_TYPE773);
             adaptor.addChild(root_0, RAW_TYPE773_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:874:20: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:875:20: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             int alt240=2;
             int LA240_0 = input.LA(1);
 
             if ( (LA240_0==LPAREN) ) {
-                int LA240_2 = input.LA(2);
+                int LA240_1 = input.LA(2);
 
                 if ( (synpred419_PL_SQL()) ) {
                     alt240=1;
@@ -19956,14 +19956,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt240) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:874:22: '(' ( '+' )? NUMBER_UNSIGNED ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:875:22: '(' ( '+' )? NUMBER_UNSIGNED ')'
                     {
                     char_literal774=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_raw_type10390); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal774_tree = (CommonTree)adaptor.create(char_literal774);
                     adaptor.addChild(root_0, char_literal774_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:874:26: ( '+' )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:875:26: ( '+' )?
                     int alt239=2;
                     int LA239_0 = input.LA(1);
 
@@ -20031,7 +20031,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "year_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:876:1: year_type : YEAR_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:877:1: year_type : YEAR_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
     public final PL_SQLParser.year_type_return year_type() throws RecognitionException {
         PL_SQLParser.year_type_return retval = new PL_SQLParser.year_type_return();
         retval.start = input.LT(1);
@@ -20052,8 +20052,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 139) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:877:2: ( YEAR_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:877:4: YEAR_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:878:2: ( YEAR_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:878:4: YEAR_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -20062,7 +20062,7 @@ public class PL_SQLParser extends Parser {
             YEAR_TYPE778_tree = (CommonTree)adaptor.create(YEAR_TYPE778);
             adaptor.addChild(root_0, YEAR_TYPE778_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:877:14: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:878:14: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             int alt242=2;
             int LA242_0 = input.LA(1);
 
@@ -20071,14 +20071,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt242) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:877:16: '(' ( '+' )? NUMBER_UNSIGNED ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:878:16: '(' ( '+' )? NUMBER_UNSIGNED ')'
                     {
                     char_literal779=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_year_type10413); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal779_tree = (CommonTree)adaptor.create(char_literal779);
                     adaptor.addChild(root_0, char_literal779_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:877:20: ( '+' )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:878:20: ( '+' )?
                     int alt241=2;
                     int LA241_0 = input.LA(1);
 
@@ -20146,7 +20146,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "timestamp_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:879:1: timestamp_type : TIMESTAMP_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:880:1: timestamp_type : TIMESTAMP_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
     public final PL_SQLParser.timestamp_type_return timestamp_type() throws RecognitionException {
         PL_SQLParser.timestamp_type_return retval = new PL_SQLParser.timestamp_type_return();
         retval.start = input.LT(1);
@@ -20167,8 +20167,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 140) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:880:2: ( TIMESTAMP_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:880:4: TIMESTAMP_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:881:2: ( TIMESTAMP_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:881:4: TIMESTAMP_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -20177,12 +20177,12 @@ public class PL_SQLParser extends Parser {
             TIMESTAMP_TYPE783_tree = (CommonTree)adaptor.create(TIMESTAMP_TYPE783);
             adaptor.addChild(root_0, TIMESTAMP_TYPE783_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:880:19: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:881:19: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             int alt244=2;
             int LA244_0 = input.LA(1);
 
             if ( (LA244_0==LPAREN) ) {
-                int LA244_1 = input.LA(2);
+                int LA244_2 = input.LA(2);
 
                 if ( (synpred423_PL_SQL()) ) {
                     alt244=1;
@@ -20190,14 +20190,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt244) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:880:21: '(' ( '+' )? NUMBER_UNSIGNED ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:881:21: '(' ( '+' )? NUMBER_UNSIGNED ')'
                     {
                     char_literal784=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_timestamp_type10436); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal784_tree = (CommonTree)adaptor.create(char_literal784);
                     adaptor.addChild(root_0, char_literal784_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:880:25: ( '+' )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:881:25: ( '+' )?
                     int alt243=2;
                     int LA243_0 = input.LA(1);
 
@@ -20265,7 +20265,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "day_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:882:1: day_type : DAY_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:883:1: day_type : DAY_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
     public final PL_SQLParser.day_type_return day_type() throws RecognitionException {
         PL_SQLParser.day_type_return retval = new PL_SQLParser.day_type_return();
         retval.start = input.LT(1);
@@ -20286,8 +20286,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 141) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:883:2: ( DAY_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:883:4: DAY_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:884:2: ( DAY_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:884:4: DAY_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -20296,7 +20296,7 @@ public class PL_SQLParser extends Parser {
             DAY_TYPE788_tree = (CommonTree)adaptor.create(DAY_TYPE788);
             adaptor.addChild(root_0, DAY_TYPE788_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:883:13: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:884:13: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             int alt246=2;
             int LA246_0 = input.LA(1);
 
@@ -20305,14 +20305,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt246) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:883:15: '(' ( '+' )? NUMBER_UNSIGNED ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:884:15: '(' ( '+' )? NUMBER_UNSIGNED ')'
                     {
                     char_literal789=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_day_type10459); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal789_tree = (CommonTree)adaptor.create(char_literal789);
                     adaptor.addChild(root_0, char_literal789_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:883:19: ( '+' )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:884:19: ( '+' )?
                     int alt245=2;
                     int LA245_0 = input.LA(1);
 
@@ -20380,7 +20380,7 @@ public class PL_SQLParser extends Parser {
     };
 
     // $ANTLR start "second_type"
-    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:885:1: second_type : SECOND_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
+    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:886:1: second_type : SECOND_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? ;
     public final PL_SQLParser.second_type_return second_type() throws RecognitionException {
         PL_SQLParser.second_type_return retval = new PL_SQLParser.second_type_return();
         retval.start = input.LT(1);
@@ -20401,8 +20401,8 @@ public class PL_SQLParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 142) ) { return retval; }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:886:2: ( SECOND_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:886:4: SECOND_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:887:2: ( SECOND_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )? )
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:887:4: SECOND_TYPE ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -20411,7 +20411,7 @@ public class PL_SQLParser extends Parser {
             SECOND_TYPE793_tree = (CommonTree)adaptor.create(SECOND_TYPE793);
             adaptor.addChild(root_0, SECOND_TYPE793_tree);
             }
-            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:886:16: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
+            // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:887:16: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )?
             int alt248=2;
             int LA248_0 = input.LA(1);
 
@@ -20424,14 +20424,14 @@ public class PL_SQLParser extends Parser {
             }
             switch (alt248) {
                 case 1 :
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:886:18: '(' ( '+' )? NUMBER_UNSIGNED ')'
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:887:18: '(' ( '+' )? NUMBER_UNSIGNED ')'
                     {
                     char_literal794=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_second_type10482); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal794_tree = (CommonTree)adaptor.create(char_literal794);
                     adaptor.addChild(root_0, char_literal794_tree);
                     }
-                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:886:22: ( '+' )?
+                    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:887:22: ( '+' )?
                     int alt247=2;
                     int LA247_0 = input.LA(1);
 
@@ -20495,11 +20495,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred35_PL_SQL
     public final void synpred35_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:23: ( ( PACKAGE_KEYWORD package_spec ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:23: ( PACKAGE_KEYWORD package_spec )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:23: ( ( PACKAGE_KEYWORD package_spec ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:23: ( PACKAGE_KEYWORD package_spec )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:23: ( PACKAGE_KEYWORD package_spec )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:622:24: PACKAGE_KEYWORD package_spec
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:23: ( PACKAGE_KEYWORD package_spec )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:623:24: PACKAGE_KEYWORD package_spec
         {
         match(input,PACKAGE_KEYWORD,FOLLOW_PACKAGE_KEYWORD_in_synpred35_PL_SQL5199); if (state.failed) return ;
         pushFollow(FOLLOW_package_spec_in_synpred35_PL_SQL5201);
@@ -20517,8 +20517,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred68_PL_SQL
     public final void synpred68_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:37: ( dml_event_clause_factor )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:647:37: dml_event_clause_factor
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:648:37: ( dml_event_clause_factor )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:648:37: dml_event_clause_factor
         {
         pushFollow(FOLLOW_dml_event_clause_factor_in_synpred68_PL_SQL5697);
         dml_event_clause_factor();
@@ -20532,8 +20532,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred72_PL_SQL
     public final void synpred72_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:649:43: ( referencing_clause )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:649:43: referencing_clause
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:650:43: ( referencing_clause )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:650:43: referencing_clause
         {
         pushFollow(FOLLOW_referencing_clause_in_synpred72_PL_SQL5752);
         referencing_clause();
@@ -20547,11 +20547,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred83_PL_SQL
     public final void synpred83_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:20: ( ( TYPE_KEYWORD type_spec_declaration ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:20: ( TYPE_KEYWORD type_spec_declaration )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:656:20: ( ( TYPE_KEYWORD type_spec_declaration ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:656:20: ( TYPE_KEYWORD type_spec_declaration )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:20: ( TYPE_KEYWORD type_spec_declaration )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:655:21: TYPE_KEYWORD type_spec_declaration
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:656:20: ( TYPE_KEYWORD type_spec_declaration )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:656:21: TYPE_KEYWORD type_spec_declaration
         {
         match(input,TYPE_KEYWORD,FOLLOW_TYPE_KEYWORD_in_synpred83_PL_SQL5887); if (state.failed) return ;
         pushFollow(FOLLOW_type_spec_declaration_in_synpred83_PL_SQL5889);
@@ -20569,8 +20569,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred89_PL_SQL
     public final void synpred89_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:19: ( object_type )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:19: object_type
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:19: ( object_type )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:19: object_type
         {
         pushFollow(FOLLOW_object_type_in_synpred89_PL_SQL6029);
         object_type();
@@ -20584,8 +20584,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred90_PL_SQL
     public final void synpred90_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:33: ( varray_type )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:662:33: varray_type
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:33: ( varray_type )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:663:33: varray_type
         {
         pushFollow(FOLLOW_varray_type_in_synpred90_PL_SQL6033);
         varray_type();
@@ -20599,10 +20599,10 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred94_PL_SQL
     public final void synpred94_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:665:17: ( ( NOT_OPERATOR )? FINAL_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:665:17: ( NOT_OPERATOR )? FINAL_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:17: ( ( NOT_OPERATOR )? FINAL_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:17: ( NOT_OPERATOR )? FINAL_KEYWORD
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:665:17: ( NOT_OPERATOR )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:666:17: ( NOT_OPERATOR )?
         int alt265=2;
         int LA265_0 = input.LA(1);
 
@@ -20628,8 +20628,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred101_PL_SQL
     public final void synpred101_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:16: ( inheritance_clauses )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:16: inheritance_clauses
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:16: ( inheritance_clauses )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:16: inheritance_clauses
         {
         pushFollow(FOLLOW_inheritance_clauses_in_synpred101_PL_SQL6140);
         inheritance_clauses();
@@ -20643,8 +20643,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred104_PL_SQL
     public final void synpred104_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:101: ( ',' )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:101: ','
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:101: ( ',' )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:101: ','
         {
         match(input,COMMA,FOLLOW_COMMA_in_synpred104_PL_SQL6156); if (state.failed) return ;
 
@@ -20654,10 +20654,10 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred105_PL_SQL
     public final void synpred105_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:38: ( ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )? )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:38: ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:38: ( ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )? )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:38: ( subprogram_spec | constructor_spec | map_order_function_spec ) ( ',' )?
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:38: ( subprogram_spec | constructor_spec | map_order_function_spec )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:38: ( subprogram_spec | constructor_spec | map_order_function_spec )
         int alt269=3;
         switch ( input.LA(1) ) {
         case MEMBER_KEYWORD:
@@ -20689,7 +20689,7 @@ public class PL_SQLParser extends Parser {
 
         switch (alt269) {
             case 1 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:39: subprogram_spec
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:39: subprogram_spec
                 {
                 pushFollow(FOLLOW_subprogram_spec_in_synpred105_PL_SQL6145);
                 subprogram_spec();
@@ -20700,7 +20700,7 @@ public class PL_SQLParser extends Parser {
                 }
                 break;
             case 2 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:57: constructor_spec
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:57: constructor_spec
                 {
                 pushFollow(FOLLOW_constructor_spec_in_synpred105_PL_SQL6149);
                 constructor_spec();
@@ -20711,7 +20711,7 @@ public class PL_SQLParser extends Parser {
                 }
                 break;
             case 3 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:76: map_order_function_spec
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:76: map_order_function_spec
                 {
                 pushFollow(FOLLOW_map_order_function_spec_in_synpred105_PL_SQL6153);
                 map_order_function_spec();
@@ -20724,7 +20724,7 @@ public class PL_SQLParser extends Parser {
 
         }
 
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:667:101: ( ',' )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:668:101: ( ',' )?
         int alt270=2;
         int LA270_0 = input.LA(1);
 
@@ -20749,8 +20749,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred137_PL_SQL
     public final void synpred137_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:692:21: ( universal_identifier )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:692:21: universal_identifier
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:693:21: ( universal_identifier )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:693:21: universal_identifier
         {
         pushFollow(FOLLOW_universal_identifier_in_synpred137_PL_SQL6646);
         universal_identifier();
@@ -20764,8 +20764,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred189_PL_SQL
     public final void synpred189_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:36: ( sql_operator )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:36: sql_operator
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:36: ( sql_operator )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:36: sql_operator
         {
         pushFollow(FOLLOW_sql_operator_in_synpred189_PL_SQL7076);
         sql_operator();
@@ -20779,8 +20779,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred191_PL_SQL
     public final void synpred191_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:66: ( IN_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:66: IN_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:66: ( IN_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:66: IN_KEYWORD
         {
         match(input,IN_KEYWORD,FOLLOW_IN_KEYWORD_in_synpred191_PL_SQL7084); if (state.failed) return ;
 
@@ -20790,8 +20790,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred192_PL_SQL
     public final void synpred192_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:79: ( NOT_OPERATOR IN_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:714:79: NOT_OPERATOR IN_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:79: ( NOT_OPERATOR IN_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:715:79: NOT_OPERATOR IN_KEYWORD
         {
         match(input,NOT_OPERATOR,FOLLOW_NOT_OPERATOR_in_synpred192_PL_SQL7088); if (state.failed) return ;
         match(input,IN_KEYWORD,FOLLOW_IN_KEYWORD_in_synpred192_PL_SQL7090); if (state.failed) return ;
@@ -20802,8 +20802,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred201_PL_SQL
     public final void synpred201_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:717:16: ( SET_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:717:16: SET_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:718:16: ( SET_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:718:16: SET_KEYWORD
         {
         match(input,SET_KEYWORD,FOLLOW_SET_KEYWORD_in_synpred201_PL_SQL7171); if (state.failed) return ;
 
@@ -20813,8 +20813,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred207_PL_SQL
     public final void synpred207_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:718:33: ( REPLACE_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:718:33: REPLACE_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:33: ( REPLACE_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:33: REPLACE_KEYWORD
         {
         match(input,REPLACE_KEYWORD,FOLLOW_REPLACE_KEYWORD_in_synpred207_PL_SQL7210); if (state.failed) return ;
 
@@ -20824,8 +20824,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred208_PL_SQL
     public final void synpred208_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:16: ( NUMBER_UNSIGNED )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:16: NUMBER_UNSIGNED
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:16: ( NUMBER_UNSIGNED )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:16: NUMBER_UNSIGNED
         {
         match(input,NUMBER_UNSIGNED,FOLLOW_NUMBER_UNSIGNED_in_synpred208_PL_SQL7229); if (state.failed) return ;
 
@@ -20835,8 +20835,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred210_PL_SQL
     public final void synpred210_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:50: ( universal_identifier )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:50: universal_identifier
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:50: ( universal_identifier )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:50: universal_identifier
         {
         pushFollow(FOLLOW_universal_identifier_in_synpred210_PL_SQL7237);
         universal_identifier();
@@ -20850,8 +20850,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred211_PL_SQL
     public final void synpred211_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:73: ( case_statement_expression )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:719:73: case_statement_expression
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:73: ( case_statement_expression )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:73: case_statement_expression
         {
         pushFollow(FOLLOW_case_statement_expression_in_synpred211_PL_SQL7241);
         case_statement_expression();
@@ -20865,8 +20865,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred212_PL_SQL
     public final void synpred212_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:16: ( STRING )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:16: STRING
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:16: ( STRING )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:16: STRING
         {
         match(input,STRING,FOLLOW_STRING_in_synpred212_PL_SQL7260); if (state.failed) return ;
 
@@ -20876,8 +20876,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred213_PL_SQL
     public final void synpred213_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:25: ( COMMA )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:25: COMMA
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:25: ( COMMA )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:25: COMMA
         {
         match(input,COMMA,FOLLOW_COMMA_in_synpred213_PL_SQL7264); if (state.failed) return ;
 
@@ -20887,8 +20887,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred216_PL_SQL
     public final void synpred216_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:62: ( NOT_OPERATOR )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:720:62: NOT_OPERATOR
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:62: ( NOT_OPERATOR )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:62: NOT_OPERATOR
         {
         match(input,NOT_OPERATOR,FOLLOW_NOT_OPERATOR_in_synpred216_PL_SQL7276); if (state.failed) return ;
 
@@ -20898,8 +20898,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred217_PL_SQL
     public final void synpred217_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:16: ( IS_KEYWORD NOT_OPERATOR NULL_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:16: IS_KEYWORD NOT_OPERATOR NULL_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:722:16: ( IS_KEYWORD NOT_OPERATOR NULL_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:722:16: IS_KEYWORD NOT_OPERATOR NULL_KEYWORD
         {
         match(input,IS_KEYWORD,FOLLOW_IS_KEYWORD_in_synpred217_PL_SQL7295); if (state.failed) return ;
         match(input,NOT_OPERATOR,FOLLOW_NOT_OPERATOR_in_synpred217_PL_SQL7297); if (state.failed) return ;
@@ -20911,8 +20911,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred218_PL_SQL
     public final void synpred218_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:55: ( IS_KEYWORD NULL_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:55: IS_KEYWORD NULL_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:722:55: ( IS_KEYWORD NULL_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:722:55: IS_KEYWORD NULL_KEYWORD
         {
         match(input,IS_KEYWORD,FOLLOW_IS_KEYWORD_in_synpred218_PL_SQL7303); if (state.failed) return ;
         match(input,NULL_KEYWORD,FOLLOW_NULL_KEYWORD_in_synpred218_PL_SQL7305); if (state.failed) return ;
@@ -20923,8 +20923,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred219_PL_SQL
     public final void synpred219_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:81: ( NULL_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:721:81: NULL_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:722:81: ( NULL_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:722:81: NULL_KEYWORD
         {
         match(input,NULL_KEYWORD,FOLLOW_NULL_KEYWORD_in_synpred219_PL_SQL7309); if (state.failed) return ;
 
@@ -20934,8 +20934,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred222_PL_SQL
     public final void synpred222_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:723:16: ( sql_statements )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:723:16: sql_statements
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:16: ( sql_statements )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:16: sql_statements
         {
         pushFollow(FOLLOW_sql_statements_in_synpred222_PL_SQL7352);
         sql_statements();
@@ -20949,8 +20949,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred223_PL_SQL
     public final void synpred223_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:16: ( expression )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:724:16: expression
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:725:16: ( expression )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:725:16: expression
         {
         pushFollow(FOLLOW_expression_in_synpred223_PL_SQL7372);
         expression();
@@ -20964,10 +20964,10 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred227_PL_SQL
     public final void synpred227_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:36: ( ( sql_not_parsed | ON_KEYWORD ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:36: ( sql_not_parsed | ON_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:36: ( ( sql_not_parsed | ON_KEYWORD ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:36: ( sql_not_parsed | ON_KEYWORD )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:36: ( sql_not_parsed | ON_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:36: ( sql_not_parsed | ON_KEYWORD )
         int alt277=2;
         int LA277_0 = input.LA(1);
 
@@ -20986,7 +20986,7 @@ public class PL_SQLParser extends Parser {
         }
         switch (alt277) {
             case 1 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:37: sql_not_parsed
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:37: sql_not_parsed
                 {
                 pushFollow(FOLLOW_sql_not_parsed_in_synpred227_PL_SQL7403);
                 sql_not_parsed();
@@ -20997,7 +20997,7 @@ public class PL_SQLParser extends Parser {
                 }
                 break;
             case 2 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:54: ON_KEYWORD
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:54: ON_KEYWORD
                 {
                 match(input,ON_KEYWORD,FOLLOW_ON_KEYWORD_in_synpred227_PL_SQL7407); if (state.failed) return ;
 
@@ -21013,11 +21013,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred228_PL_SQL
     public final void synpred228_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:68: ( ( FOR_KEYWORD UPDATE_KEYWORD ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:68: ( FOR_KEYWORD UPDATE_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:68: ( ( FOR_KEYWORD UPDATE_KEYWORD ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:68: ( FOR_KEYWORD UPDATE_KEYWORD )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:68: ( FOR_KEYWORD UPDATE_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:728:69: FOR_KEYWORD UPDATE_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:68: ( FOR_KEYWORD UPDATE_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:69: FOR_KEYWORD UPDATE_KEYWORD
         {
         match(input,FOR_KEYWORD,FOLLOW_FOR_KEYWORD_in_synpred228_PL_SQL7413); if (state.failed) return ;
         match(input,UPDATE_KEYWORD,FOLLOW_UPDATE_KEYWORD_in_synpred228_PL_SQL7415); if (state.failed) return ;
@@ -21031,8 +21031,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred229_PL_SQL
     public final void synpred229_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:35: ( sql_not_parsed )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:729:35: sql_not_parsed
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:35: ( sql_not_parsed )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:35: sql_not_parsed
         {
         pushFollow(FOLLOW_sql_not_parsed_in_synpred229_PL_SQL7427);
         sql_not_parsed();
@@ -21046,8 +21046,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred230_PL_SQL
     public final void synpred230_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:36: ( sql_not_parsed )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:730:36: sql_not_parsed
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:36: ( sql_not_parsed )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:36: sql_not_parsed
         {
         pushFollow(FOLLOW_sql_not_parsed_in_synpred230_PL_SQL7438);
         sql_not_parsed();
@@ -21061,8 +21061,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred231_PL_SQL
     public final void synpred231_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:36: ( sql_not_parsed )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:731:36: sql_not_parsed
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:36: ( sql_not_parsed )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:36: sql_not_parsed
         {
         pushFollow(FOLLOW_sql_not_parsed_in_synpred231_PL_SQL7450);
         sql_not_parsed();
@@ -21076,8 +21076,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred232_PL_SQL
     public final void synpred232_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:52: ( sql_not_parsed )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:732:52: sql_not_parsed
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:52: ( sql_not_parsed )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:52: sql_not_parsed
         {
         pushFollow(FOLLOW_sql_not_parsed_in_synpred232_PL_SQL7464);
         sql_not_parsed();
@@ -21091,8 +21091,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred233_PL_SQL
     public final void synpred233_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:34: ( sql_not_parsed )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:34: sql_not_parsed
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:34: ( sql_not_parsed )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:34: sql_not_parsed
         {
         pushFollow(FOLLOW_sql_not_parsed_in_synpred233_PL_SQL7476);
         sql_not_parsed();
@@ -21106,8 +21106,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred234_PL_SQL
     public final void synpred234_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:51: ( ON_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:733:51: ON_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:51: ( ON_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:51: ON_KEYWORD
         {
         match(input,ON_KEYWORD,FOLLOW_ON_KEYWORD_in_synpred234_PL_SQL7480); if (state.failed) return ;
 
@@ -21117,8 +21117,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred235_PL_SQL
     public final void synpred235_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:19: ( USING_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:19: USING_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:19: ( USING_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:19: USING_KEYWORD
         {
         match(input,USING_KEYWORD,FOLLOW_USING_KEYWORD_in_synpred235_PL_SQL7502); if (state.failed) return ;
 
@@ -21128,8 +21128,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred236_PL_SQL
     public final void synpred236_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:35: ( WHEN_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:35: WHEN_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:35: ( WHEN_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:35: WHEN_KEYWORD
         {
         match(input,WHEN_KEYWORD,FOLLOW_WHEN_KEYWORD_in_synpred236_PL_SQL7506); if (state.failed) return ;
 
@@ -21139,8 +21139,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred237_PL_SQL
     public final void synpred237_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:50: ( THEN_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:50: THEN_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:50: ( THEN_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:50: THEN_KEYWORD
         {
         match(input,THEN_KEYWORD,FOLLOW_THEN_KEYWORD_in_synpred237_PL_SQL7510); if (state.failed) return ;
 
@@ -21150,8 +21150,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred238_PL_SQL
     public final void synpred238_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:65: ( INSERT_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:734:65: INSERT_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:65: ( INSERT_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:65: INSERT_KEYWORD
         {
         match(input,INSERT_KEYWORD,FOLLOW_INSERT_KEYWORD_in_synpred238_PL_SQL7514); if (state.failed) return ;
 
@@ -21161,8 +21161,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred239_PL_SQL
     public final void synpred239_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:19: ( UPDATE_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:735:19: UPDATE_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:736:19: ( UPDATE_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:736:19: UPDATE_KEYWORD
         {
         match(input,UPDATE_KEYWORD,FOLLOW_UPDATE_KEYWORD_in_synpred239_PL_SQL7536); if (state.failed) return ;
 
@@ -21172,8 +21172,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred240_PL_SQL
     public final void synpred240_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:736:39: ( sql_not_parsed )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:736:39: sql_not_parsed
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:737:39: ( sql_not_parsed )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:737:39: sql_not_parsed
         {
         pushFollow(FOLLOW_sql_not_parsed_in_synpred240_PL_SQL7547);
         sql_not_parsed();
@@ -21187,8 +21187,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred241_PL_SQL
     public final void synpred241_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:738:62: ( sql_not_parsed )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:738:62: sql_not_parsed
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:62: ( sql_not_parsed )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:62: sql_not_parsed
         {
         pushFollow(FOLLOW_sql_not_parsed_in_synpred241_PL_SQL7569);
         sql_not_parsed();
@@ -21202,8 +21202,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred242_PL_SQL
     public final void synpred242_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:36: ( sql_not_parsed )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:739:36: sql_not_parsed
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:740:36: ( sql_not_parsed )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:740:36: sql_not_parsed
         {
         pushFollow(FOLLOW_sql_not_parsed_in_synpred242_PL_SQL7581);
         sql_not_parsed();
@@ -21217,8 +21217,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred243_PL_SQL
     public final void synpred243_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:743:35: ( expression )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:743:35: expression
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:744:35: ( expression )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:744:35: expression
         {
         pushFollow(FOLLOW_expression_in_synpred243_PL_SQL7603);
         expression();
@@ -21232,8 +21232,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred250_PL_SQL
     public final void synpred250_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:749:78: ( identifier )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:749:78: identifier
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:750:78: ( identifier )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:750:78: identifier
         {
         pushFollow(FOLLOW_identifier_in_synpred250_PL_SQL7743);
         identifier();
@@ -21247,18 +21247,18 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred253_PL_SQL
     public final void synpred253_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:23: ( ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:23: ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:23: ( ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:23: ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:23: ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:24: expression ( for_loop_statement_part | cursor_for_loop_statement1 )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:23: ( expression ( for_loop_statement_part | cursor_for_loop_statement1 ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:24: expression ( for_loop_statement_part | cursor_for_loop_statement1 )
         {
         pushFollow(FOLLOW_expression_in_synpred253_PL_SQL7814);
         expression();
 
         state._fsp--;
         if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:35: ( for_loop_statement_part | cursor_for_loop_statement1 )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:35: ( for_loop_statement_part | cursor_for_loop_statement1 )
         int alt280=2;
         int LA280_0 = input.LA(1);
 
@@ -21277,7 +21277,7 @@ public class PL_SQLParser extends Parser {
         }
         switch (alt280) {
             case 1 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:36: for_loop_statement_part
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:36: for_loop_statement_part
                 {
                 pushFollow(FOLLOW_for_loop_statement_part_in_synpred253_PL_SQL7817);
                 for_loop_statement_part();
@@ -21288,7 +21288,7 @@ public class PL_SQLParser extends Parser {
                 }
                 break;
             case 2 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:753:62: cursor_for_loop_statement1
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:754:62: cursor_for_loop_statement1
                 {
                 pushFollow(FOLLOW_cursor_for_loop_statement1_in_synpred253_PL_SQL7821);
                 cursor_for_loop_statement1();
@@ -21311,8 +21311,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred254_PL_SQL
     public final void synpred254_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:758:33: ( universal_identifier )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:758:33: universal_identifier
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:33: ( universal_identifier )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:33: universal_identifier
         {
         pushFollow(FOLLOW_universal_identifier_in_synpred254_PL_SQL7892);
         universal_identifier();
@@ -21326,8 +21326,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred255_PL_SQL
     public final void synpred255_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:29: ( simple_case_statement_expression )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:759:29: simple_case_statement_expression
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:760:29: ( simple_case_statement_expression )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:760:29: simple_case_statement_expression
         {
         pushFollow(FOLLOW_simple_case_statement_expression_in_synpred255_PL_SQL7900);
         simple_case_statement_expression();
@@ -21341,8 +21341,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred260_PL_SQL
     public final void synpred260_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:38: ( CASE_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:38: CASE_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:764:38: ( CASE_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:764:38: CASE_KEYWORD
         {
         match(input,CASE_KEYWORD,FOLLOW_CASE_KEYWORD_in_synpred260_PL_SQL8015); if (state.failed) return ;
 
@@ -21352,8 +21352,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred261_PL_SQL
     public final void synpred261_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:52: ( identifier )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:763:52: identifier
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:764:52: ( identifier )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:764:52: identifier
         {
         pushFollow(FOLLOW_identifier_in_synpred261_PL_SQL8018);
         identifier();
@@ -21367,8 +21367,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred266_PL_SQL
     public final void synpred266_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:38: ( CASE_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:38: CASE_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:769:38: ( CASE_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:769:38: CASE_KEYWORD
         {
         match(input,CASE_KEYWORD,FOLLOW_CASE_KEYWORD_in_synpred266_PL_SQL8167); if (state.failed) return ;
 
@@ -21378,8 +21378,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred267_PL_SQL
     public final void synpred267_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:52: ( identifier )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:768:52: identifier
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:769:52: ( identifier )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:769:52: identifier
         {
         pushFollow(FOLLOW_identifier_in_synpred267_PL_SQL8170);
         identifier();
@@ -21393,8 +21393,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred268_PL_SQL
     public final void synpred268_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:39: ( identifier )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:39: identifier
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:39: ( identifier )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:39: identifier
         {
         pushFollow(FOLLOW_identifier_in_synpred268_PL_SQL8253);
         identifier();
@@ -21408,8 +21408,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred269_PL_SQL
     public final void synpred269_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:52: ( WHEN_KEYWORD expression )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:771:52: WHEN_KEYWORD expression
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:52: ( WHEN_KEYWORD expression )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:772:52: WHEN_KEYWORD expression
         {
         match(input,WHEN_KEYWORD,FOLLOW_WHEN_KEYWORD_in_synpred269_PL_SQL8257); if (state.failed) return ;
         pushFollow(FOLLOW_expression_in_synpred269_PL_SQL8259);
@@ -21424,8 +21424,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred277_PL_SQL
     public final void synpred277_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:31: ( IN_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:31: IN_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:31: ( IN_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:31: IN_KEYWORD
         {
         match(input,IN_KEYWORD,FOLLOW_IN_KEYWORD_in_synpred277_PL_SQL8458); if (state.failed) return ;
 
@@ -21435,11 +21435,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred279_PL_SQL
     public final void synpred279_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:58: ( ( IN_KEYWORD OUT_KEYWORD ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:58: ( IN_KEYWORD OUT_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:58: ( ( IN_KEYWORD OUT_KEYWORD ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:58: ( IN_KEYWORD OUT_KEYWORD )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:58: ( IN_KEYWORD OUT_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:779:59: IN_KEYWORD OUT_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:58: ( IN_KEYWORD OUT_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:59: IN_KEYWORD OUT_KEYWORD
         {
         match(input,IN_KEYWORD,FOLLOW_IN_KEYWORD_in_synpred279_PL_SQL8467); if (state.failed) return ;
         match(input,OUT_KEYWORD,FOLLOW_OUT_KEYWORD_in_synpred279_PL_SQL8469); if (state.failed) return ;
@@ -21453,8 +21453,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred280_PL_SQL
     public final void synpred280_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:22: ( IN_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:22: IN_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:22: ( IN_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:22: IN_KEYWORD
         {
         match(input,IN_KEYWORD,FOLLOW_IN_KEYWORD_in_synpred280_PL_SQL8495); if (state.failed) return ;
 
@@ -21464,11 +21464,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred282_PL_SQL
     public final void synpred282_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:49: ( ( IN_KEYWORD OUT_KEYWORD ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:49: ( IN_KEYWORD OUT_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:49: ( ( IN_KEYWORD OUT_KEYWORD ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:49: ( IN_KEYWORD OUT_KEYWORD )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:49: ( IN_KEYWORD OUT_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:780:50: IN_KEYWORD OUT_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:49: ( IN_KEYWORD OUT_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:50: IN_KEYWORD OUT_KEYWORD
         {
         match(input,IN_KEYWORD,FOLLOW_IN_KEYWORD_in_synpred282_PL_SQL8504); if (state.failed) return ;
         match(input,OUT_KEYWORD,FOLLOW_OUT_KEYWORD_in_synpred282_PL_SQL8506); if (state.failed) return ;
@@ -21482,8 +21482,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred284_PL_SQL
     public final void synpred284_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:31: ( identifier )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:31: identifier
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:31: ( identifier )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:31: identifier
         {
         pushFollow(FOLLOW_identifier_in_synpred284_PL_SQL8522);
         identifier();
@@ -21497,8 +21497,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred285_PL_SQL
     public final void synpred285_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:44: ( WHEN_KEYWORD expression )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:781:44: WHEN_KEYWORD expression
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:44: ( WHEN_KEYWORD expression )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:782:44: WHEN_KEYWORD expression
         {
         match(input,WHEN_KEYWORD,FOLLOW_WHEN_KEYWORD_in_synpred285_PL_SQL8526); if (state.failed) return ;
         pushFollow(FOLLOW_expression_in_synpred285_PL_SQL8528);
@@ -21513,8 +21513,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred292_PL_SQL
     public final void synpred292_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:792:52: ( open_params )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:792:52: open_params
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:52: ( open_params )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:52: open_params
         {
         pushFollow(FOLLOW_open_params_in_synpred292_PL_SQL8768);
         open_params();
@@ -21528,11 +21528,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred296_PL_SQL
     public final void synpred296_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:19: ( FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )? )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:19: FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:19: ( FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )? )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:19: FOR_KEYWORD ( select_statement | STRING | universal_identifier ) ( using_clause )?
         {
         match(input,FOR_KEYWORD,FOLLOW_FOR_KEYWORD_in_synpred296_PL_SQL8789); if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:31: ( select_statement | STRING | universal_identifier )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:31: ( select_statement | STRING | universal_identifier )
         int alt288=3;
         switch ( input.LA(1) ) {
         case SELECT_KEYWORD:
@@ -21563,7 +21563,7 @@ public class PL_SQLParser extends Parser {
 
         switch (alt288) {
             case 1 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:32: select_statement
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:32: select_statement
                 {
                 pushFollow(FOLLOW_select_statement_in_synpred296_PL_SQL8792);
                 select_statement();
@@ -21574,14 +21574,14 @@ public class PL_SQLParser extends Parser {
                 }
                 break;
             case 2 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:51: STRING
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:51: STRING
                 {
                 match(input,STRING,FOLLOW_STRING_in_synpred296_PL_SQL8796); if (state.failed) return ;
 
                 }
                 break;
             case 3 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:60: universal_identifier
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:60: universal_identifier
                 {
                 pushFollow(FOLLOW_universal_identifier_in_synpred296_PL_SQL8800);
                 universal_identifier();
@@ -21594,7 +21594,7 @@ public class PL_SQLParser extends Parser {
 
         }
 
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:793:82: ( using_clause )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:794:82: ( using_clause )?
         int alt289=2;
         int LA289_0 = input.LA(1);
 
@@ -21623,11 +21623,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred300_PL_SQL
     public final void synpred300_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:37: ( '(' ( '+' | '-' )? NUMBER_UNSIGNED ')' )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:37: '(' ( '+' | '-' )? NUMBER_UNSIGNED ')'
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:37: ( '(' ( '+' | '-' )? NUMBER_UNSIGNED ')' )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:37: '(' ( '+' | '-' )? NUMBER_UNSIGNED ')'
         {
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred300_PL_SQL8841); if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:796:41: ( '+' | '-' )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:797:41: ( '+' | '-' )?
         int alt290=2;
         int LA290_0 = input.LA(1);
 
@@ -21663,11 +21663,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred305_PL_SQL
     public final void synpred305_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:25: ( ( identifier data_type ( variable_declaration_part )? ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:25: ( identifier data_type ( variable_declaration_part )? )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:25: ( ( identifier data_type ( variable_declaration_part )? ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:25: ( identifier data_type ( variable_declaration_part )? )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:25: ( identifier data_type ( variable_declaration_part )? )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:800:26: identifier data_type ( variable_declaration_part )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:25: ( identifier data_type ( variable_declaration_part )? )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:26: identifier data_type ( variable_declaration_part )?
         {
         pushFollow(FOLLOW_identifier_in_synpred305_PL_SQL8954);
         identifier();
@@ -21679,7 +21679,7 @@ public class PL_SQLParser extends Parser {
 
         state._fsp--;
         if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:801:24: ( variable_declaration_part )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:802:24: ( variable_declaration_part )?
         int alt291=2;
         int LA291_0 = input.LA(1);
 
@@ -21711,11 +21711,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred306_PL_SQL
     public final void synpred306_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:803:9: ( ( identifier CONSTANT_KEYWORD data_type variable_declaration_part ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:803:9: ( identifier CONSTANT_KEYWORD data_type variable_declaration_part )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:804:9: ( ( identifier CONSTANT_KEYWORD data_type variable_declaration_part ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:804:9: ( identifier CONSTANT_KEYWORD data_type variable_declaration_part )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:803:9: ( identifier CONSTANT_KEYWORD data_type variable_declaration_part )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:803:10: identifier CONSTANT_KEYWORD data_type variable_declaration_part
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:804:9: ( identifier CONSTANT_KEYWORD data_type variable_declaration_part )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:804:10: identifier CONSTANT_KEYWORD data_type variable_declaration_part
         {
         pushFollow(FOLLOW_identifier_in_synpred306_PL_SQL9000);
         identifier();
@@ -21743,11 +21743,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred309_PL_SQL
     public final void synpred309_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:807:11: ( ( identifier EXCEPTION_KEYWORD ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:807:11: ( identifier EXCEPTION_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:808:11: ( ( identifier EXCEPTION_KEYWORD ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:808:11: ( identifier EXCEPTION_KEYWORD )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:807:11: ( identifier EXCEPTION_KEYWORD )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:807:12: identifier EXCEPTION_KEYWORD
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:808:11: ( identifier EXCEPTION_KEYWORD )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:808:12: identifier EXCEPTION_KEYWORD
         {
         pushFollow(FOLLOW_identifier_in_synpred309_PL_SQL9068);
         identifier();
@@ -21765,8 +21765,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred323_PL_SQL
     public final void synpred323_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:31: ( interval_year_type )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:31: interval_year_type
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:31: ( interval_year_type )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:31: interval_year_type
         {
         pushFollow(FOLLOW_interval_year_type_in_synpred323_PL_SQL9244);
         interval_year_type();
@@ -21780,8 +21780,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred324_PL_SQL
     public final void synpred324_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:52: ( interval_day_type )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:817:52: interval_day_type
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:52: ( interval_day_type )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:52: interval_day_type
         {
         pushFollow(FOLLOW_interval_day_type_in_synpred324_PL_SQL9248);
         interval_day_type();
@@ -21795,13 +21795,13 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred326_PL_SQL
     public final void synpred326_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:13: ( ( ( REF_KEYWORD )? universal_identifier ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:13: ( ( REF_KEYWORD )? universal_identifier )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:13: ( ( ( REF_KEYWORD )? universal_identifier ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:13: ( ( REF_KEYWORD )? universal_identifier )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:13: ( ( REF_KEYWORD )? universal_identifier )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:14: ( REF_KEYWORD )? universal_identifier
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:13: ( ( REF_KEYWORD )? universal_identifier )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:14: ( REF_KEYWORD )? universal_identifier
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:818:14: ( REF_KEYWORD )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:14: ( REF_KEYWORD )?
         int alt294=2;
         int LA294_0 = input.LA(1);
 
@@ -21834,11 +21834,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred331_PL_SQL
     public final void synpred331_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:40: ( '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')' )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:40: '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')'
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:40: ( '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')' )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:40: '(' ( '+' )? NUMBER_UNSIGNED ( CHAR_TYPE | BYTE_TYPE )? ')'
         {
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred331_PL_SQL9289); if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:44: ( '+' )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:44: ( '+' )?
         int alt295=2;
         int LA295_0 = input.LA(1);
 
@@ -21857,7 +21857,7 @@ public class PL_SQLParser extends Parser {
         }
 
         match(input,NUMBER_UNSIGNED,FOLLOW_NUMBER_UNSIGNED_in_synpred331_PL_SQL9294); if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:819:65: ( CHAR_TYPE | BYTE_TYPE )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:820:65: ( CHAR_TYPE | BYTE_TYPE )?
         int alt296=2;
         int LA296_0 = input.LA(1);
 
@@ -21892,8 +21892,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred355_PL_SQL
     public final void synpred355_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:25: ( universal_expression )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:846:25: universal_expression
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:25: ( universal_expression )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:847:25: universal_expression
         {
         pushFollow(FOLLOW_universal_expression_in_synpred355_PL_SQL9774);
         universal_expression();
@@ -21907,8 +21907,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred381_PL_SQL
     public final void synpred381_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:24: ( unary_op )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:24: unary_op
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:24: ( unary_op )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:24: unary_op
         {
         pushFollow(FOLLOW_unary_op_in_synpred381_PL_SQL9954);
         unary_op();
@@ -21922,8 +21922,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred382_PL_SQL
     public final void synpred382_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:51: ( postfix_op )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:51: postfix_op
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:51: ( postfix_op )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:51: postfix_op
         {
         pushFollow(FOLLOW_postfix_op_in_synpred382_PL_SQL9959);
         postfix_op();
@@ -21937,8 +21937,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred383_PL_SQL
     public final void synpred383_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:74: ( universal_expression )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:74: universal_expression
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:74: ( universal_expression )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:74: universal_expression
         {
         pushFollow(FOLLOW_universal_expression_in_synpred383_PL_SQL9966);
         universal_expression();
@@ -21952,23 +21952,20 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred384_PL_SQL
     public final void synpred384_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:64: ( operator ( universal_expression | ( '(' select_statement ')' ) ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:64: operator ( universal_expression | ( '(' select_statement ')' ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:64: ( operator ( universal_expression | ( '(' select_statement ')' ) ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:64: operator ( universal_expression | ( '(' select_statement ')' ) )
         {
         pushFollow(FOLLOW_operator_in_synpred384_PL_SQL9963);
         operator();
 
         state._fsp--;
         if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:73: ( universal_expression | ( '(' select_statement ')' ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:73: ( universal_expression | ( '(' select_statement ')' ) )
         int alt299=2;
         int LA299_0 = input.LA(1);
 
-        if ( (LA299_0==NUMBER_UNSIGNED||LA299_0==STRING||(LA299_0>=IDENTIFIER && LA299_0<=EXT_IDENTIFIER)||LA299_0==NULL_KEYWORD||(LA299_0>=TRUE_KEYWORD && LA299_0<=FALSE_KEYWORD)||LA299_0==INTERVAL_KEYWORD||LA299_0==REPLACE_KEYWORD||LA299_0==IN_KEYWORD||LA299_0==CASE_KEYWORD||(LA299_0>=SQLCODE_KEYWORD && LA299_0<=SQLERRM_KEYWORD)||LA299_0==RESULT_KEYWORD||LA299_0==NOT_OPERATOR||(LA299_0>=214 && LA299_0<=215)) ) {
-            alt299=1;
-        }
-        else if ( (LA299_0==LPAREN) ) {
-            int LA299_2 = input.LA(2);
+        if ( (LA299_0==LPAREN) ) {
+            int LA299_1 = input.LA(2);
 
             if ( (synpred383_PL_SQL()) ) {
                 alt299=1;
@@ -21979,10 +21976,13 @@ public class PL_SQLParser extends Parser {
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 299, 2, input);
+                    new NoViableAltException("", 299, 1, input);
 
                 throw nvae;
             }
+        }
+        else if ( (LA299_0==NUMBER_UNSIGNED||LA299_0==STRING||(LA299_0>=IDENTIFIER && LA299_0<=EXT_IDENTIFIER)||LA299_0==NULL_KEYWORD||(LA299_0>=TRUE_KEYWORD && LA299_0<=FALSE_KEYWORD)||LA299_0==INTERVAL_KEYWORD||LA299_0==REPLACE_KEYWORD||LA299_0==IN_KEYWORD||LA299_0==CASE_KEYWORD||(LA299_0>=SQLCODE_KEYWORD && LA299_0<=SQLERRM_KEYWORD)||LA299_0==RESULT_KEYWORD||LA299_0==NOT_OPERATOR||(LA299_0>=214 && LA299_0<=215)) ) {
+            alt299=1;
         }
         else {
             if (state.backtracking>0) {state.failed=true; return ;}
@@ -21993,7 +21993,7 @@ public class PL_SQLParser extends Parser {
         }
         switch (alt299) {
             case 1 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:74: universal_expression
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:74: universal_expression
                 {
                 pushFollow(FOLLOW_universal_expression_in_synpred384_PL_SQL9966);
                 universal_expression();
@@ -22004,10 +22004,10 @@ public class PL_SQLParser extends Parser {
                 }
                 break;
             case 2 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:97: ( '(' select_statement ')' )
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:97: ( '(' select_statement ')' )
                 {
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:97: ( '(' select_statement ')' )
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:853:98: '(' select_statement ')'
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:97: ( '(' select_statement ')' )
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:854:98: '(' select_statement ')'
                 {
                 match(input,LPAREN,FOLLOW_LPAREN_in_synpred384_PL_SQL9971); if (state.failed) return ;
                 pushFollow(FOLLOW_select_statement_in_synpred384_PL_SQL9973);
@@ -22032,8 +22032,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred392_PL_SQL
     public final void synpred392_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:58: ( in_notin_expression )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:58: in_notin_expression
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:58: ( in_notin_expression )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:58: in_notin_expression
         {
         pushFollow(FOLLOW_in_notin_expression_in_synpred392_PL_SQL10078);
         in_notin_expression();
@@ -22047,15 +22047,15 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred393_PL_SQL
     public final void synpred393_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:36: ( call_statement_param ( in_notin_expression )? )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:36: call_statement_param ( in_notin_expression )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:36: ( call_statement_param ( in_notin_expression )? )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:36: call_statement_param ( in_notin_expression )?
         {
         pushFollow(FOLLOW_call_statement_param_in_synpred393_PL_SQL10075);
         call_statement_param();
 
         state._fsp--;
         if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:57: ( in_notin_expression )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:57: ( in_notin_expression )?
         int alt300=2;
         int LA300_0 = input.LA(1);
 
@@ -22064,7 +22064,7 @@ public class PL_SQLParser extends Parser {
         }
         switch (alt300) {
             case 1 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:857:58: in_notin_expression
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:858:58: in_notin_expression
                 {
                 pushFollow(FOLLOW_in_notin_expression_in_synpred393_PL_SQL10078);
                 in_notin_expression();
@@ -22084,8 +22084,8 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred403_PL_SQL
     public final void synpred403_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:861:61: ( in_notin_expression )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:861:61: in_notin_expression
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:61: ( in_notin_expression )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:61: in_notin_expression
         {
         pushFollow(FOLLOW_in_notin_expression_in_synpred403_PL_SQL10188);
         in_notin_expression();
@@ -22099,14 +22099,14 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred406_PL_SQL
     public final void synpred406_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:24: ( ( '(' ( universal_expression ( ',' universal_expression )* )? ')' ) )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:24: ( '(' ( universal_expression ( ',' universal_expression )* )? ')' )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:24: ( ( '(' ( universal_expression ( ',' universal_expression )* )? ')' ) )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:24: ( '(' ( universal_expression ( ',' universal_expression )* )? ')' )
         {
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:24: ( '(' ( universal_expression ( ',' universal_expression )* )? ')' )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:25: '(' ( universal_expression ( ',' universal_expression )* )? ')'
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:24: ( '(' ( universal_expression ( ',' universal_expression )* )? ')' )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:25: '(' ( universal_expression ( ',' universal_expression )* )? ')'
         {
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred406_PL_SQL10198); if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:29: ( universal_expression ( ',' universal_expression )* )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:29: ( universal_expression ( ',' universal_expression )* )?
         int alt305=2;
         int LA305_0 = input.LA(1);
 
@@ -22115,14 +22115,14 @@ public class PL_SQLParser extends Parser {
         }
         switch (alt305) {
             case 1 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:30: universal_expression ( ',' universal_expression )*
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:30: universal_expression ( ',' universal_expression )*
                 {
                 pushFollow(FOLLOW_universal_expression_in_synpred406_PL_SQL10201);
                 universal_expression();
 
                 state._fsp--;
                 if (state.failed) return ;
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:51: ( ',' universal_expression )*
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:51: ( ',' universal_expression )*
                 loop304:
                 do {
                     int alt304=2;
@@ -22135,7 +22135,7 @@ public class PL_SQLParser extends Parser {
 
                     switch (alt304) {
                 	case 1 :
-                	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:862:52: ',' universal_expression
+                	    // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:863:52: ',' universal_expression
                 	    {
                 	    match(input,COMMA,FOLLOW_COMMA_in_synpred406_PL_SQL10204); if (state.failed) return ;
                 	    pushFollow(FOLLOW_universal_expression_in_synpred406_PL_SQL10206);
@@ -22169,11 +22169,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred415_PL_SQL
     public final void synpred415_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:17: ( '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')' )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:17: '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')'
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:17: ( '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')' )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:17: '(' ( '+' )? NUMBER_UNSIGNED ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )? ')'
         {
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred415_PL_SQL10331); if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:21: ( '+' )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:21: ( '+' )?
         int alt307=2;
         int LA307_0 = input.LA(1);
 
@@ -22192,7 +22192,7 @@ public class PL_SQLParser extends Parser {
         }
 
         match(input,NUMBER_UNSIGNED,FOLLOW_NUMBER_UNSIGNED_in_synpred415_PL_SQL10336); if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:42: ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:42: ( COMMA ( '+' | '-' )? NUMBER_UNSIGNED )?
         int alt309=2;
         int LA309_0 = input.LA(1);
 
@@ -22201,10 +22201,10 @@ public class PL_SQLParser extends Parser {
         }
         switch (alt309) {
             case 1 :
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:43: COMMA ( '+' | '-' )? NUMBER_UNSIGNED
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:43: COMMA ( '+' | '-' )? NUMBER_UNSIGNED
                 {
                 match(input,COMMA,FOLLOW_COMMA_in_synpred415_PL_SQL10339); if (state.failed) return ;
-                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:869:49: ( '+' | '-' )?
+                // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:870:49: ( '+' | '-' )?
                 int alt308=2;
                 int LA308_0 = input.LA(1);
 
@@ -22246,11 +22246,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred417_PL_SQL
     public final void synpred417_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:872:17: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:872:17: '(' ( '+' )? NUMBER_UNSIGNED ')'
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:873:17: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:873:17: '(' ( '+' )? NUMBER_UNSIGNED ')'
         {
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred417_PL_SQL10369); if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:872:21: ( '+' )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:873:21: ( '+' )?
         int alt310=2;
         int LA310_0 = input.LA(1);
 
@@ -22277,11 +22277,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred419_PL_SQL
     public final void synpred419_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:874:22: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:874:22: '(' ( '+' )? NUMBER_UNSIGNED ')'
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:875:22: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:875:22: '(' ( '+' )? NUMBER_UNSIGNED ')'
         {
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred419_PL_SQL10390); if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:874:26: ( '+' )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:875:26: ( '+' )?
         int alt311=2;
         int LA311_0 = input.LA(1);
 
@@ -22308,11 +22308,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred423_PL_SQL
     public final void synpred423_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:880:21: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:880:21: '(' ( '+' )? NUMBER_UNSIGNED ')'
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:881:21: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:881:21: '(' ( '+' )? NUMBER_UNSIGNED ')'
         {
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred423_PL_SQL10436); if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:880:25: ( '+' )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:881:25: ( '+' )?
         int alt313=2;
         int LA313_0 = input.LA(1);
 
@@ -22339,11 +22339,11 @@ public class PL_SQLParser extends Parser {
 
     // $ANTLR start synpred427_PL_SQL
     public final void synpred427_PL_SQL_fragment() throws RecognitionException {   
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:886:18: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:886:18: '(' ( '+' )? NUMBER_UNSIGNED ')'
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:887:18: ( '(' ( '+' )? NUMBER_UNSIGNED ')' )
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:887:18: '(' ( '+' )? NUMBER_UNSIGNED ')'
         {
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred427_PL_SQL10482); if (state.failed) return ;
-        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:886:22: ( '+' )?
+        // C:\\Work\\NetBeansProjects\\pl-sql-editor.svn\\trunk\\PL SQL Language\\ext_lib.antlr\\PL_SQL.g:887:22: ( '+' )?
         int alt315=2;
         int LA315_0 = input.LA(1);
 
@@ -23392,11 +23392,11 @@ public class PL_SQLParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred222_PL_SQL() {
+    public final boolean synpred72_PL_SQL() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred222_PL_SQL_fragment(); // can never throw exception
+            synpred72_PL_SQL_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -23406,11 +23406,11 @@ public class PL_SQLParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred72_PL_SQL() {
+    public final boolean synpred222_PL_SQL() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred72_PL_SQL_fragment(); // can never throw exception
+            synpred222_PL_SQL_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -23625,7 +23625,7 @@ public class PL_SQLParser extends Parser {
             this.transition = DFA116_transition;
         }
         public String getDescription() {
-            return "702:1: statements : ( expression | goto_statement | loop_statement | while_loop_statement | for_loop_statement | sql_statements | return_statement | if_statement | raise_statement | close_statement | continue_statement | execute_immediate_statement | exit_statement | fetch_statement | forall_statement | pragma_inline_statement | open_statement );";
+            return "703:1: statements : ( expression | goto_statement | loop_statement | while_loop_statement | for_loop_statement | sql_statements | return_statement | if_statement | raise_statement | close_statement | continue_statement | execute_immediate_statement | exit_statement | fetch_statement | forall_statement | pragma_inline_statement | open_statement );";
         }
     }
     static final String DFA117_eotS =
@@ -23685,7 +23685,7 @@ public class PL_SQLParser extends Parser {
             this.transition = DFA117_transition;
         }
         public String getDescription() {
-            return "708:1: sql_statements : ( select_statement | commit_statement | delete_statement | update_statement | insert_statement | lock_table_statement | merge_statement | rollback_statement | savepoint_statement | set_transaction_statement );";
+            return "709:1: sql_statements : ( select_statement | commit_statement | delete_statement | update_statement | insert_statement | lock_table_statement | merge_statement | rollback_statement | savepoint_statement | set_transaction_statement );";
         }
     }
     static final String DFA119_eotS =
@@ -23693,33 +23693,50 @@ public class PL_SQLParser extends Parser {
     static final String DFA119_eofS =
         "\67\uffff";
     static final String DFA119_minS =
-        "\1\4\3\uffff\1\0\3\uffff\1\0\2\uffff\1\0\6\uffff\1\0\5\uffff\1"+
-        "\0\1\uffff\1\0\2\uffff\1\0\6\uffff\1\0\2\uffff\1\0\4\uffff\1\0\1"+
-        "\uffff\1\0\1\uffff\1\0\3\uffff\1\0\2\uffff";
+        "\1\4\1\0\3\uffff\1\0\2\uffff\1\0\2\uffff\1\0\11\uffff\1\0\3\uffff"+
+        "\1\0\2\uffff\1\0\1\uffff\1\0\12\uffff\1\0\3\uffff\1\0\2\uffff\1"+
+        "\0\1\uffff\1\0\1\uffff\1\0\2\uffff";
     static final String DFA119_maxS =
-        "\1\u00e4\3\uffff\1\0\3\uffff\1\0\2\uffff\1\0\6\uffff\1\0\5\uffff"+
-        "\1\0\1\uffff\1\0\2\uffff\1\0\6\uffff\1\0\2\uffff\1\0\4\uffff\1\0"+
-        "\1\uffff\1\0\1\uffff\1\0\3\uffff\1\0\2\uffff";
+        "\1\u00e4\1\0\3\uffff\1\0\2\uffff\1\0\2\uffff\1\0\11\uffff\1\0\3"+
+        "\uffff\1\0\2\uffff\1\0\1\uffff\1\0\12\uffff\1\0\3\uffff\1\0\2\uffff"+
+        "\1\0\1\uffff\1\0\1\uffff\1\0\2\uffff";
     static final String DFA119_acceptS =
-        "\1\uffff\1\44\1\12\1\42\1\uffff\1\25\1\45\1\10\1\uffff\1\6\1\36"+
-        "\1\uffff\1\17\1\22\1\16\1\1\1\20\1\23\1\uffff\1\5\1\14\1\4\1\11"+
-        "\1\35\1\uffff\1\31\1\uffff\1\32\1\2\1\uffff\1\37\1\40\1\45\1\46"+
-        "\1\15\1\24\1\uffff\1\3\1\33\1\uffff\1\26\1\3\1\34\1\13\1\uffff\1"+
-        "\47\1\uffff\1\41\1\uffff\1\30\1\21\1\7\1\uffff\1\43\1\27";
+        "\2\uffff\1\17\1\44\1\24\1\uffff\1\25\1\45\1\uffff\1\30\1\44\1\uffff"+
+        "\1\32\1\45\1\42\1\7\1\35\1\2\1\20\1\34\1\27\1\uffff\1\41\1\10\1"+
+        "\11\1\uffff\1\6\1\36\1\uffff\1\47\1\uffff\1\31\1\15\1\16\1\3\1\4"+
+        "\1\23\1\43\1\13\1\1\1\21\1\uffff\1\33\1\22\1\14\1\uffff\1\5\1\46"+
+        "\1\uffff\1\12\1\uffff\1\26\1\uffff\1\37\1\40";
     static final String DFA119_specialS =
-        "\4\uffff\1\0\3\uffff\1\1\2\uffff\1\2\6\uffff\1\3\5\uffff\1\4\1"+
-        "\uffff\1\5\2\uffff\1\6\6\uffff\1\7\2\uffff\1\10\4\uffff\1\11\1\uffff"+
-        "\1\12\1\uffff\1\13\3\uffff\1\14\2\uffff}>";
+        "\1\uffff\1\0\3\uffff\1\1\2\uffff\1\2\2\uffff\1\3\11\uffff\1\4\3"+
+        "\uffff\1\5\2\uffff\1\6\1\uffff\1\7\12\uffff\1\10\3\uffff\1\11\2"+
+        "\uffff\1\12\1\uffff\1\13\1\uffff\1\14\2\uffff}>";
     static final String[] DFA119_transitionS = {
-            "\1\47\1\52\1\27\4\uffff\1\32\1\2\12\uffff\1\34\2\60\1\17\1"+
-            "\uffff\1\44\7\uffff\1\56\4\uffff\2\40\1\uffff\1\62\3\uffff\1"+
-            "\60\3\uffff\1\35\2\uffff\1\4\1\uffff\1\63\1\uffff\1\22\22\uffff"+
-            "\1\1\1\66\1\uffff\1\3\3\uffff\1\30\1\uffff\1\15\1\65\1\uffff"+
-            "\1\20\3\uffff\1\1\3\uffff\1\1\3\uffff\1\25\1\uffff\1\53\1\24"+
-            "\6\uffff\1\7\1\26\1\uffff\3\1\4\uffff\1\42\2\1\1\uffff\1\13"+
-            "\5\uffff\2\40\1\1\1\43\13\uffff\1\16\15\uffff\1\60\2\uffff\1"+
-            "\21\12\uffff\1\54\7\uffff\1\10\31\uffff\1\41\2\uffff\1\51\1"+
-            "\uffff\2\64\15\51",
+            "\1\62\1\23\1\20\4\uffff\1\13\1\61\12\uffff\1\21\2\10\1\47\1"+
+            "\uffff\1\51\7\uffff\1\25\4\uffff\2\15\1\uffff\1\50\3\uffff\1"+
+            "\10\3\uffff\1\64\2\uffff\1\5\1\uffff\1\17\1\uffff\1\55\22\uffff"+
+            "\1\12\1\24\1\uffff\1\16\3\uffff\1\36\1\uffff\1\53\1\45\1\uffff"+
+            "\1\22\3\uffff\1\12\3\uffff\1\12\3\uffff\1\43\1\uffff\1\46\1"+
+            "\54\6\uffff\1\27\1\30\1\uffff\3\12\4\uffff\1\40\2\12\1\uffff"+
+            "\1\1\5\uffff\2\15\1\12\1\4\13\uffff\1\41\15\uffff\1\10\2\uffff"+
+            "\1\44\12\uffff\1\34\7\uffff\1\31\31\uffff\1\57\2\uffff\1\42"+
+            "\1\uffff\2\60\15\42",
+            "\1\uffff",
+            "",
+            "",
+            "",
+            "\1\uffff",
+            "",
+            "",
+            "\1\uffff",
+            "",
+            "",
+            "\1\uffff",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "",
             "",
             "",
@@ -23732,6 +23749,12 @@ public class PL_SQLParser extends Parser {
             "",
             "\1\uffff",
             "",
+            "\1\uffff",
+            "",
+            "",
+            "",
+            "",
+            "",
             "",
             "",
             "",
@@ -23741,35 +23764,12 @@ public class PL_SQLParser extends Parser {
             "",
             "",
             "",
-            "",
-            "",
-            "\1\uffff",
-            "",
             "\1\uffff",
             "",
             "",
             "\1\uffff",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\uffff",
-            "",
-            "",
-            "\1\uffff",
-            "",
-            "",
-            "",
-            "",
-            "\1\uffff",
-            "",
-            "\1\uffff",
-            "",
-            "\1\uffff",
-            "",
-            "",
             "",
             "\1\uffff",
             "",
@@ -23806,192 +23806,192 @@ public class PL_SQLParser extends Parser {
             this.transition = DFA119_transition;
         }
         public String getDescription() {
-            return "714:1: sql_not_parsed : ( ALIAS | KEYWORD | sql_operator | INTO_KEYWORD | IN_KEYWORD | NOT_OPERATOR IN_KEYWORD | AS_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | SOME_TYPES | BULK_KEYWORD | COLLECT_KEYWORD | RETURNING_KEYWORD | ROW_KEYWORD | SET_KEYWORD | BY_KEYWORD | WITH_KEYWORD | TABLE_KEYWORD | JOIN_KEYWORD | EXISTS_KEYWORD | REPLACE_KEYWORD | NUMBER_UNSIGNED | COUNT_KEYWORD | universal_identifier | case_statement_expression | STRING | COMMA | AND_OPERATOR | OR_OPERATOR | NOT_OPERATOR | IS_KEYWORD NOT_OPERATOR NULL_KEYWORD | IS_KEYWORD NULL_KEYWORD | NULL_KEYWORD | LIKE_KEYWORD | OF_KEYWORD | sql_statements | expression | THE_REST | ( '(' ( sql_not_parsed )* ')' ) );";
+            return "715:1: sql_not_parsed : ( ALIAS | KEYWORD | sql_operator | INTO_KEYWORD | IN_KEYWORD | NOT_OPERATOR IN_KEYWORD | AS_KEYWORD | VALUES_KEYWORD | BETWEEN_KEYWORD | SOME_TYPES | BULK_KEYWORD | COLLECT_KEYWORD | RETURNING_KEYWORD | ROW_KEYWORD | SET_KEYWORD | BY_KEYWORD | WITH_KEYWORD | TABLE_KEYWORD | JOIN_KEYWORD | EXISTS_KEYWORD | REPLACE_KEYWORD | NUMBER_UNSIGNED | COUNT_KEYWORD | universal_identifier | case_statement_expression | STRING | COMMA | AND_OPERATOR | OR_OPERATOR | NOT_OPERATOR | IS_KEYWORD NOT_OPERATOR NULL_KEYWORD | IS_KEYWORD NULL_KEYWORD | NULL_KEYWORD | LIKE_KEYWORD | OF_KEYWORD | sql_statements | expression | THE_REST | ( '(' ( sql_not_parsed )* ')' ) );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA119_4 = input.LA(1);
+                        int LA119_1 = input.LA(1);
 
                          
-                        int index119_4 = input.index();
+                        int index119_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred207_PL_SQL()) ) {s = 5;}
+                        if ( (synpred201_PL_SQL()) ) {s = 2;}
 
-                        else if ( (synpred223_PL_SQL()) ) {s = 6;}
+                        else if ( (synpred222_PL_SQL()) ) {s = 3;}
 
                          
-                        input.seek(index119_4);
+                        input.seek(index119_1);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
+                        int LA119_5 = input.LA(1);
+
+                         
+                        int index119_5 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred207_PL_SQL()) ) {s = 6;}
+
+                        else if ( (synpred223_PL_SQL()) ) {s = 7;}
+
+                         
+                        input.seek(index119_5);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA119_8 = input.LA(1);
 
                          
                         int index119_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred192_PL_SQL()) ) {s = 9;}
+                        if ( (synpred210_PL_SQL()) ) {s = 9;}
 
-                        else if ( (synpred216_PL_SQL()) ) {s = 10;}
-
-                        else if ( (synpred223_PL_SQL()) ) {s = 6;}
+                        else if ( (synpred223_PL_SQL()) ) {s = 7;}
 
                          
                         input.seek(index119_8);
                         if ( s>=0 ) return s;
                         break;
-                    case 2 : 
+                    case 3 : 
                         int LA119_11 = input.LA(1);
 
                          
                         int index119_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred201_PL_SQL()) ) {s = 12;}
+                        if ( (synpred212_PL_SQL()) ) {s = 12;}
 
-                        else if ( (synpred222_PL_SQL()) ) {s = 1;}
+                        else if ( (synpred223_PL_SQL()) ) {s = 7;}
 
                          
                         input.seek(index119_11);
                         if ( s>=0 ) return s;
                         break;
-                    case 3 : 
-                        int LA119_18 = input.LA(1);
-
-                         
-                        int index119_18 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred191_PL_SQL()) ) {s = 19;}
-
-                        else if ( (synpred223_PL_SQL()) ) {s = 6;}
-
-                         
-                        input.seek(index119_18);
-                        if ( s>=0 ) return s;
-                        break;
                     case 4 : 
-                        int LA119_24 = input.LA(1);
+                        int LA119_21 = input.LA(1);
 
                          
-                        int index119_24 = input.index();
+                        int index119_21 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred211_PL_SQL()) ) {s = 25;}
+                        if ( (synpred219_PL_SQL()) ) {s = 22;}
 
-                        else if ( (synpred223_PL_SQL()) ) {s = 6;}
+                        else if ( (synpred223_PL_SQL()) ) {s = 13;}
 
                          
-                        input.seek(index119_24);
+                        input.seek(index119_21);
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
-                        int LA119_26 = input.LA(1);
+                        int LA119_25 = input.LA(1);
 
                          
-                        int index119_26 = input.index();
+                        int index119_25 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred212_PL_SQL()) ) {s = 27;}
+                        if ( (synpred192_PL_SQL()) ) {s = 26;}
 
-                        else if ( (synpred223_PL_SQL()) ) {s = 6;}
+                        else if ( (synpred216_PL_SQL()) ) {s = 27;}
+
+                        else if ( (synpred223_PL_SQL()) ) {s = 13;}
 
                          
-                        input.seek(index119_26);
+                        input.seek(index119_25);
                         if ( s>=0 ) return s;
                         break;
                     case 6 : 
-                        int LA119_29 = input.LA(1);
+                        int LA119_28 = input.LA(1);
 
                          
-                        int index119_29 = input.index();
+                        int index119_28 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred217_PL_SQL()) ) {s = 30;}
+                        if ( (synpred223_PL_SQL()) ) {s = 13;}
 
-                        else if ( (synpred218_PL_SQL()) ) {s = 31;}
+                        else if ( (true) ) {s = 29;}
 
                          
-                        input.seek(index119_29);
+                        input.seek(index119_28);
                         if ( s>=0 ) return s;
                         break;
                     case 7 : 
-                        int LA119_36 = input.LA(1);
+                        int LA119_30 = input.LA(1);
 
                          
-                        int index119_36 = input.index();
+                        int index119_30 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred189_PL_SQL()) ) {s = 37;}
+                        if ( (synpred211_PL_SQL()) ) {s = 31;}
 
-                        else if ( (synpred213_PL_SQL()) ) {s = 38;}
+                        else if ( (synpred223_PL_SQL()) ) {s = 13;}
 
                          
-                        input.seek(index119_36);
+                        input.seek(index119_30);
                         if ( s>=0 ) return s;
                         break;
                     case 8 : 
-                        int LA119_39 = input.LA(1);
+                        int LA119_41 = input.LA(1);
 
                          
-                        int index119_39 = input.index();
+                        int index119_41 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred208_PL_SQL()) ) {s = 40;}
+                        if ( (synpred189_PL_SQL()) ) {s = 34;}
 
-                        else if ( (synpred223_PL_SQL()) ) {s = 32;}
+                        else if ( (synpred213_PL_SQL()) ) {s = 42;}
 
                          
-                        input.seek(index119_39);
+                        input.seek(index119_41);
                         if ( s>=0 ) return s;
                         break;
                     case 9 : 
-                        int LA119_44 = input.LA(1);
+                        int LA119_45 = input.LA(1);
 
                          
-                        int index119_44 = input.index();
+                        int index119_45 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred223_PL_SQL()) ) {s = 32;}
+                        if ( (synpred191_PL_SQL()) ) {s = 46;}
 
-                        else if ( (true) ) {s = 45;}
+                        else if ( (synpred223_PL_SQL()) ) {s = 13;}
 
                          
-                        input.seek(index119_44);
+                        input.seek(index119_45);
                         if ( s>=0 ) return s;
                         break;
                     case 10 : 
-                        int LA119_46 = input.LA(1);
-
-                         
-                        int index119_46 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred219_PL_SQL()) ) {s = 47;}
-
-                        else if ( (synpred223_PL_SQL()) ) {s = 32;}
-
-                         
-                        input.seek(index119_46);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 11 : 
                         int LA119_48 = input.LA(1);
 
                          
                         int index119_48 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred210_PL_SQL()) ) {s = 49;}
+                        if ( (synpred189_PL_SQL()) ) {s = 34;}
 
-                        else if ( (synpred223_PL_SQL()) ) {s = 32;}
+                        else if ( (synpred223_PL_SQL()) ) {s = 13;}
 
                          
                         input.seek(index119_48);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 11 : 
+                        int LA119_50 = input.LA(1);
+
+                         
+                        int index119_50 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred208_PL_SQL()) ) {s = 51;}
+
+                        else if ( (synpred223_PL_SQL()) ) {s = 13;}
+
+                         
+                        input.seek(index119_50);
                         if ( s>=0 ) return s;
                         break;
                     case 12 : 
@@ -24001,9 +24001,9 @@ public class PL_SQLParser extends Parser {
                         int index119_52 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred189_PL_SQL()) ) {s = 41;}
+                        if ( (synpred217_PL_SQL()) ) {s = 53;}
 
-                        else if ( (synpred223_PL_SQL()) ) {s = 32;}
+                        else if ( (synpred218_PL_SQL()) ) {s = 54;}
 
                          
                         input.seek(index119_52);
@@ -24022,28 +24022,28 @@ public class PL_SQLParser extends Parser {
     static final String DFA126_eofS =
         "\21\uffff";
     static final String DFA126_minS =
-        "\1\4\1\0\2\uffff\1\0\2\uffff\1\0\1\uffff\2\0\2\uffff\1\0\1\uffff"+
+        "\1\4\1\0\2\uffff\1\0\2\uffff\1\0\1\uffff\1\0\1\uffff\2\0\2\uffff"+
         "\1\0\1\uffff";
     static final String DFA126_maxS =
-        "\1\u00e4\1\0\2\uffff\1\0\2\uffff\1\0\1\uffff\2\0\2\uffff\1\0\1"+
+        "\1\u00e4\1\0\2\uffff\1\0\2\uffff\1\0\1\uffff\1\0\1\uffff\2\0\2"+
         "\uffff\1\0\1\uffff";
     static final String DFA126_acceptS =
-        "\2\uffff\1\3\1\10\1\uffff\1\1\1\7\1\uffff\1\2\2\uffff\1\6\1\10"+
-        "\1\uffff\1\5\1\uffff\1\4";
+        "\2\uffff\1\3\1\10\1\uffff\1\1\1\6\1\uffff\1\5\1\uffff\1\7\2\uffff"+
+        "\1\4\1\10\1\uffff\1\2";
     static final String DFA126_specialS =
-        "\1\uffff\1\0\2\uffff\1\1\2\uffff\1\2\1\uffff\1\3\1\4\2\uffff\1"+
-        "\5\1\uffff\1\6\1\uffff}>";
+        "\1\uffff\1\0\2\uffff\1\1\2\uffff\1\2\1\uffff\1\3\1\uffff\1\4\1"+
+        "\5\2\uffff\1\6\1\uffff}>";
     static final String[] DFA126_transitionS = {
-            "\3\11\4\uffff\2\11\12\uffff\4\11\1\14\1\11\1\uffff\3\14\1\uffff"+
-            "\1\17\1\15\1\11\4\uffff\2\11\1\uffff\1\11\3\uffff\1\11\3\uffff"+
-            "\1\11\2\uffff\1\11\1\uffff\1\11\1\14\1\11\12\uffff\2\14\1\uffff"+
-            "\4\14\1\uffff\2\11\1\uffff\1\11\2\14\1\uffff\1\11\1\14\2\11"+
-            "\1\uffff\1\11\3\uffff\1\11\1\uffff\1\14\1\uffff\1\11\1\14\1"+
-            "\uffff\1\14\1\11\1\1\2\11\1\14\1\uffff\1\14\3\uffff\2\11\1\uffff"+
-            "\1\12\2\11\1\14\3\uffff\3\11\1\uffff\1\11\5\uffff\2\11\1\4\1"+
-            "\11\4\uffff\1\7\6\uffff\1\11\15\uffff\1\11\2\uffff\1\11\12\uffff"+
-            "\1\11\1\14\6\uffff\1\11\31\uffff\1\11\1\14\1\uffff\1\11\1\uffff"+
-            "\17\11",
+            "\3\13\4\uffff\2\13\12\uffff\4\13\1\16\1\13\1\uffff\3\16\1\uffff"+
+            "\1\14\1\7\1\13\4\uffff\2\13\1\uffff\1\13\3\uffff\1\13\3\uffff"+
+            "\1\13\2\uffff\1\13\1\uffff\1\13\1\16\1\13\12\uffff\2\16\1\uffff"+
+            "\4\16\1\uffff\2\13\1\uffff\1\13\2\16\1\uffff\1\13\1\16\2\13"+
+            "\1\uffff\1\13\3\uffff\1\13\1\uffff\1\16\1\uffff\1\13\1\16\1"+
+            "\uffff\1\16\1\13\1\1\2\13\1\16\1\uffff\1\16\3\uffff\2\13\1\uffff"+
+            "\1\4\2\13\1\16\3\uffff\3\13\1\uffff\1\13\5\uffff\2\13\1\11\1"+
+            "\13\4\uffff\1\17\6\uffff\1\13\15\uffff\1\13\2\uffff\1\13\12"+
+            "\uffff\1\13\1\16\6\uffff\1\13\31\uffff\1\13\1\16\1\uffff\1\13"+
+            "\1\uffff\17\13",
             "\1\uffff",
             "",
             "",
@@ -24053,10 +24053,10 @@ public class PL_SQLParser extends Parser {
             "\1\uffff",
             "",
             "\1\uffff",
-            "\1\uffff",
-            "",
             "",
             "\1\uffff",
+            "\1\uffff",
+            "",
             "",
             "\1\uffff",
             ""
@@ -24092,7 +24092,7 @@ public class PL_SQLParser extends Parser {
             this.transition = DFA126_transition;
         }
         public String getDescription() {
-            return "()+ loopback of 733:33: ( sql_not_parsed | ON_KEYWORD | USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD | UPDATE_KEYWORD )+";
+            return "()+ loopback of 734:33: ( sql_not_parsed | ON_KEYWORD | USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD | UPDATE_KEYWORD )+";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -24122,7 +24122,7 @@ public class PL_SQLParser extends Parser {
                         s = -1;
                         if ( (synpred233_PL_SQL()) ) {s = 5;}
 
-                        else if ( (synpred239_PL_SQL()) ) {s = 6;}
+                        else if ( (synpred238_PL_SQL()) ) {s = 6;}
 
                         else if ( (true) ) {s = 3;}
 
@@ -24137,7 +24137,7 @@ public class PL_SQLParser extends Parser {
                         int index126_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred234_PL_SQL()) ) {s = 8;}
+                        if ( (synpred237_PL_SQL()) ) {s = 8;}
 
                         else if ( (true) ) {s = 3;}
 
@@ -24154,6 +24154,8 @@ public class PL_SQLParser extends Parser {
                         s = -1;
                         if ( (synpred233_PL_SQL()) ) {s = 5;}
 
+                        else if ( (synpred239_PL_SQL()) ) {s = 10;}
+
                         else if ( (true) ) {s = 3;}
 
                          
@@ -24161,35 +24163,33 @@ public class PL_SQLParser extends Parser {
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA126_10 = input.LA(1);
+                        int LA126_11 = input.LA(1);
 
                          
-                        int index126_10 = input.index();
+                        int index126_11 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred233_PL_SQL()) ) {s = 5;}
 
-                        else if ( (synpred238_PL_SQL()) ) {s = 11;}
+                        else if ( (true) ) {s = 3;}
+
+                         
+                        input.seek(index126_11);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA126_12 = input.LA(1);
+
+                         
+                        int index126_12 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred236_PL_SQL()) ) {s = 13;}
 
                         else if ( (true) ) {s = 3;}
 
                          
-                        input.seek(index126_10);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
-                        int LA126_13 = input.LA(1);
-
-                         
-                        int index126_13 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred237_PL_SQL()) ) {s = 14;}
-
-                        else if ( (true) ) {s = 12;}
-
-                         
-                        input.seek(index126_13);
+                        input.seek(index126_12);
                         if ( s>=0 ) return s;
                         break;
                     case 6 : 
@@ -24199,9 +24199,9 @@ public class PL_SQLParser extends Parser {
                         int index126_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred236_PL_SQL()) ) {s = 16;}
+                        if ( (synpred234_PL_SQL()) ) {s = 16;}
 
-                        else if ( (true) ) {s = 12;}
+                        else if ( (true) ) {s = 14;}
 
                          
                         input.seek(index126_15);
@@ -24220,17 +24220,18 @@ public class PL_SQLParser extends Parser {
     static final String DFA187_eofS =
         "\15\uffff";
     static final String DFA187_minS =
-        "\1\14\5\uffff\1\0\1\uffff\1\0\4\uffff";
+        "\1\14\7\uffff\1\0\3\uffff\1\0";
     static final String DFA187_maxS =
-        "\1\u00a1\5\uffff\1\0\1\uffff\1\0\4\uffff";
+        "\1\u00a1\7\uffff\1\0\3\uffff\1\0";
     static final String DFA187_acceptS =
-        "\1\uffff\1\4\1\3\1\11\1\6\1\2\1\uffff\1\12\1\uffff\1\7\1\10\1\5"+
-        "\1\1";
+        "\1\uffff\1\2\1\1\1\6\1\5\1\3\1\4\1\11\1\uffff\1\7\1\10\1\12\1\uffff";
     static final String DFA187_specialS =
-        "\6\uffff\1\0\1\uffff\1\1\4\uffff}>";
+        "\10\uffff\1\0\3\uffff\1\1}>";
     static final String[] DFA187_transitionS = {
-            "\1\14\1\5\1\2\2\1\1\uffff\1\13\1\4\4\uffff\2\6\26\uffff\1\10"+
-            "\56\uffff\1\3\101\uffff\1\6",
+            "\1\2\1\1\1\5\2\6\1\uffff\1\4\1\3\4\uffff\2\14\26\uffff\1\10"+
+            "\56\uffff\1\7\101\uffff\1\14",
+            "",
+            "",
             "",
             "",
             "",
@@ -24238,11 +24239,9 @@ public class PL_SQLParser extends Parser {
             "",
             "\1\uffff",
             "",
-            "\1\uffff",
             "",
             "",
-            "",
-            ""
+            "\1\uffff"
     };
 
     static final short[] DFA187_eot = DFA.unpackEncodedString(DFA187_eotS);
@@ -24275,28 +24274,13 @@ public class PL_SQLParser extends Parser {
             this.transition = DFA187_transition;
         }
         public String getDescription() {
-            return "816:1: data_type : ( SOME_TYPES | scale_types | size_types | char_types | raw_type | timestamp_types | interval_year_type | interval_day_type | ( ( REF_KEYWORD )? universal_identifier ) | special_datatype );";
+            return "817:1: data_type : ( SOME_TYPES | scale_types | size_types | char_types | raw_type | timestamp_types | interval_year_type | interval_day_type | ( ( REF_KEYWORD )? universal_identifier ) | special_datatype );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA187_6 = input.LA(1);
-
-                         
-                        int index187_6 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred326_PL_SQL()) ) {s = 3;}
-
-                        else if ( (true) ) {s = 7;}
-
-                         
-                        input.seek(index187_6);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA187_8 = input.LA(1);
 
                          
@@ -24307,12 +24291,27 @@ public class PL_SQLParser extends Parser {
 
                         else if ( (synpred324_PL_SQL()) ) {s = 10;}
 
-                        else if ( (synpred326_PL_SQL()) ) {s = 3;}
+                        else if ( (synpred326_PL_SQL()) ) {s = 7;}
 
-                        else if ( (true) ) {s = 7;}
+                        else if ( (true) ) {s = 11;}
 
                          
                         input.seek(index187_8);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA187_12 = input.LA(1);
+
+                         
+                        int index187_12 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred326_PL_SQL()) ) {s = 7;}
+
+                        else if ( (true) ) {s = 11;}
+
+                         
+                        input.seek(index187_12);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -24393,7 +24392,7 @@ public class PL_SQLParser extends Parser {
             this.transition = DFA213_transition;
         }
         public String getDescription() {
-            return "847:1: operator : ( '+' | '-' | '*' | '/' | '**' | '||' | ':=' | '.' | '^=' | '>' | '<' | '<=' | '>=' | '=' | '<>' | '!=' | '~=' | AND_OPERATOR | OR_OPERATOR | LIKE_KEYWORD | ( ( NOT_OPERATOR )? BETWEEN_KEYWORD ) );";
+            return "848:1: operator : ( '+' | '-' | '*' | '/' | '**' | '||' | ':=' | '.' | '^=' | '>' | '<' | '<=' | '>=' | '=' | '<>' | '!=' | '~=' | AND_OPERATOR | OR_OPERATOR | LIKE_KEYWORD | ( ( NOT_OPERATOR )? BETWEEN_KEYWORD ) );";
         }
     }
     static final String DFA223_eotS =
@@ -24453,7 +24452,7 @@ public class PL_SQLParser extends Parser {
             this.transition = DFA223_transition;
         }
         public String getDescription() {
-            return "854:1: universal_factor : ( TRUE_KEYWORD | FALSE_KEYWORD | NUMBER_UNSIGNED | in_notin_expression | STRING | NULL_KEYWORD | case_statement_expression | sub_identifier ( call_statement_param ( in_notin_expression )? )? | ( '(' universal_expression ( ',' universal_expression )* ')' ) );";
+            return "855:1: universal_factor : ( TRUE_KEYWORD | FALSE_KEYWORD | NUMBER_UNSIGNED | in_notin_expression | STRING | NULL_KEYWORD | case_statement_expression | sub_identifier ( call_statement_param ( in_notin_expression )? )? | ( '(' universal_expression ( ',' universal_expression )* ')' ) );";
         }
     }
  
