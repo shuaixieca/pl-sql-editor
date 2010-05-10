@@ -6,14 +6,10 @@
     <fontcolor default="string" name="string"/>
     <fontcolor default="separator" name="separator"/>
     <fontcolor default="whitespace" name="whitespace"/>
-    <fontcolor default="identifier" name="identifier">
-        <font style="italic" />
-    </fontcolor>
-    <fontcolor default="operator" name="operator" foreColor="green"/>
+    <fontcolor default="identifier" name="identifier"/>
+    <fontcolor default="operator" name="operator"/>
     <fontcolor default="error" name="error"/>
-    <fontcolor default="number" name="number">
-        <font style="bold" />
-    </fontcolor>
+    <fontcolor default="number" name="number"/>
 </fontscolors>
 
 
