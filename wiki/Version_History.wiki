@@ -1,6 +1,12 @@
 #summary PL/SQL Editor Version History
 #labels Featured
 
+=== Version 2.0 ^10 May 2010^ === 
+*Changes/Fixes:*
+ * The PL/SQL language support is migrated from Generic Languages Framework (Project Schliemann) to Lexer & Parsing & Indexing API.
+ * Required NetBeans 6.8 or newer.
+ * Requirement about 500MB Java heap memory free *is obsolete*.
+
 === Version 1.2 ^4 March 2010^ === 
 *Changes/Fixes:*
  * Issue 5: Enter one-line summary
