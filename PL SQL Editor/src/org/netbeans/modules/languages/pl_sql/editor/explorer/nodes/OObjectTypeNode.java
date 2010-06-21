@@ -25,7 +25,7 @@ public class OObjectTypeNode extends AbstractNode {
         //super(Children.LEAF, Lookups.singleton(ot));
         super(Children.create(new OObjectTypeNodeChildFactory(ot), true), Lookups.singleton(ot));
         Utils.setOracleIconBase(this, ot.getObjecttype(), true);
-    //ot.addPropertyChangeListener(WeakListeners.propertyChange(this, ou));
+        //ot.addPropertyChangeListener(WeakListeners.propertyChange(this, ou));
     }
 
     private OObjectType getOObjectType() {

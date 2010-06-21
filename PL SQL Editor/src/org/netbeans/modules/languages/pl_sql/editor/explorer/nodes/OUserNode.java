@@ -140,8 +140,8 @@ public class OUserNode extends AbstractNode implements PropertyChangeListener {
     }
 
     public void propertyChange(PropertyChangeEvent evt) {
-        if ("UserName".equals(evt.getPropertyName()) ||
-                "IsConnected".equals(evt.getPropertyName())) {
+        if ("UserName".equals(evt.getPropertyName())
+                || "IsConnected".equals(evt.getPropertyName())) {
             this.resetChildren();
             this.fireDisplayNameChange(null, getHtmlDisplayName());
             this.ChangeIcon();

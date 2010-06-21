@@ -51,14 +51,17 @@ public class PLSQLStructureItem implements StructureItem {
         collectStructureItems(nestedItems, tree, document, true, visitedTree);
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public String getSortText() {
         return name.toUpperCase();
     }
 
+    @Override
     public String getHtml(HtmlFormatter hf) {
         hf.appendHtml("<font color=808080>");
         switch (type) {
@@ -90,34 +93,42 @@ public class PLSQLStructureItem implements StructureItem {
         return hf.getText();
     }
 
+    @Override
     public ElementHandle getElementHandle() {
         return null;
     }
 
+    @Override
     public ElementKind getKind() {
         return ElementKind.OTHER;
     }
 
+    @Override
     public Set<Modifier> getModifiers() {
         return Collections.emptySet();
     }
 
+    @Override
     public boolean isLeaf() {
         return nestedItems.isEmpty() ? true : false;
     }
 
+    @Override
     public List<? extends StructureItem> getNestedItems() {
         return nestedItems;
     }
 
+    @Override
     public long getPosition() {
         return start;
     }
 
+    @Override
     public long getEndPosition() {
         return end;
     }
 
+    @Override
     public ImageIcon getCustomIcon() {
         String iconPath = "";
         switch (type) {
@@ -197,4 +208,3 @@ public class PLSQLStructureItem implements StructureItem {
         }
     }
 }
-

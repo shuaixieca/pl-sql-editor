@@ -38,8 +38,8 @@
                 <package>oracle.sql.converter</package>
             </public-packages>
             <class-path-extension>
-                <runtime-relative-path>ext/ojdbc5.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/ojdbc5.jar</binary-origin>
+                <runtime-relative-path>ext/ojdbc6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ojdbc6.jar</binary-origin>
             </class-path-extension>
         </data>
     </configuration>

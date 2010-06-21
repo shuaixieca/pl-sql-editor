@@ -43,7 +43,7 @@ public class OConnectionRootNode extends AbstractNode {
     public String getDisplayName() {
         return Utils.getBundle().getString("LBL_RootNodeName");
     }
-    
+
     public static Node GetRootNode() {
         OConnectionRoot ocr = new OConnectionRoot();
         //AbstractNode an = new AbstractNode(Children.create(new RootNodeChildFactory(ocr), true), Lookups.singleton(ocr));

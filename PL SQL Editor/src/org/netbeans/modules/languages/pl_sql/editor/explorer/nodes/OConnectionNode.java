@@ -49,7 +49,7 @@ public class OConnectionNode extends AbstractNode implements PropertyChangeListe
 
     public OConnectionClass getOConnectionClass() {
         return getLookup().lookup(OConnectionClass.class);
-    //return model;
+        //return model;
     }
 
     @Override
@@ -124,9 +124,10 @@ public class OConnectionNode extends AbstractNode implements PropertyChangeListe
         return sheet;
     }
 
+    @Override
     public void propertyChange(PropertyChangeEvent evt) {
-        if ("ServerName".equals(evt.getPropertyName()) || "Port".equals(evt.getPropertyName()) || "DatabaseName".equals(evt.getPropertyName()) ||
-                "IsConnected".equals(evt.getPropertyName())) {
+        if ("ServerName".equals(evt.getPropertyName()) || "Port".equals(evt.getPropertyName()) || "DatabaseName".equals(evt.getPropertyName())
+                || "IsConnected".equals(evt.getPropertyName())) {
             this.fireDisplayNameChange(null, getDisplayName());
             this.ChangeIcon();
         }
