@@ -3,12 +3,12 @@
 
 === Version 2.1 ^22 June 2010^ === 
 *Changes/Fixes:*
- * Service release to support NetBeans 6.9 and JDK 6.
+ * Service release to support !NetBeans 6.9 and JDK 6.
 
 === Version 2.0 ^10 May 2010^ === 
 *Changes/Fixes:*
  * The PL/SQL language support is migrated from Generic Languages Framework (Project Schliemann) to Lexer & Parsing & Indexing API.
- * Required NetBeans 6.8
+ * Required !NetBeans 6.8
  * Requirement about 500MB Java heap memory free *is obsolete*.
 
 === Version 1.2 ^4 March 2010^ === 
