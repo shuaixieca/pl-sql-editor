@@ -614,11 +614,16 @@ invoker_clause : AUTHID_KEYWORD (CURRENT_USER_KEYWORD | DEFINER_KEYWORD);
 function_spec_add2 : DETERMINISTIC_KEYWORD | PARALLEL_ENABLED_KEYWORD | PIPELINED_KEYWORD | RESULT_CACHE_KEYWORD;
 function_declaration : function_spec function_procedure_body
                      -> ^(IM_FUNC function_spec function_procedure_body);
+function_declaration_in_pck_body_choose : SEPARATOR | function_procedure_body;
+function_declaration_in_pck_body : function_spec function_declaration_in_pck_body_choose
+                     -> ^(IM_FUNC function_spec function_declaration_in_pck_body_choose);                     
 procedure_spec : PROCEDURE_KEYWORD procedure_name parameter_declaration?
                  invoker_clause?;
 procedure_name : universal_identifier | ALIAS;
 procedure_declaration : procedure_spec function_procedure_body
                       -> ^(IM_PROC procedure_spec function_procedure_body);
+procedure_declaration_in_pck_body : procedure_spec function_declaration_in_pck_body_choose
+                      -> ^(IM_PROC procedure_spec function_declaration_in_pck_body_choose);
 function_procedure_body : as_is_part (variable_declaration)* (function_declaration | procedure_declaration)* block;
 package_declaration : (PACKAGE_KEYWORD package_spec) -> ^(IM_PCK_SPC package_spec)
 		| (PACKAGE_KEYWORD package_body) -> ^(IM_PCK_BODY package_body);
@@ -629,7 +634,7 @@ package_spec2 :	function_spec SEPARATOR -> ^(IM_FUNC function_spec SEPARATOR)
                 | procedure_spec SEPARATOR -> ^(IM_PROC procedure_spec SEPARATOR);
 package_spec_name : universal_identifier | ALIAS;
 package_body : BODY_KEYWORD package_body_name as_is_part
-               (variable_declaration | function_declaration | procedure_declaration)*
+               (variable_declaration | function_declaration_in_pck_body | procedure_declaration_in_pck_body)*
                (BEGIN_KEYWORD (executable_section)+)?
                END_KEYWORD universal_identifier? SEPARATOR? '/'?;
 package_body_name : universal_identifier | ALIAS;
@@ -734,7 +739,7 @@ lock_table_statement : LOCK_KEYWORD TABLE_KEYWORD (sql_not_parsed)+;
 merge_statement : MERGE_KEYWORD (sql_not_parsed | ON_KEYWORD |
                   USING_KEYWORD | WHEN_KEYWORD | THEN_KEYWORD | INSERT_KEYWORD |
                   UPDATE_KEYWORD)+;
-rollback_statement : ROLLBACK_KEYWORD sql_not_parsed?;
+rollback_statement : ROLLBACK_KEYWORD TO_KEYWORD? sql_not_parsed?;
 savepoint_statement : SAVEPOINT_KEYWORD identifier;
 set_transaction_statement : SET_KEYWORD TRANSACTION_KEYWORD (sql_not_parsed)+;
 update_statement : UPDATE_KEYWORD (sql_not_parsed)+;
@@ -753,7 +758,7 @@ while_loop_statement : WHILE_KEYWORD expression loop_statement;
 for_loop_statement : FOR_KEYWORD identifier IN_KEYWORD REVERSE_KEYWORD? 
                      ((expression (for_loop_statement_part | cursor_for_loop_statement1)) |
                        cursor_for_loop_statement2);
-for_loop_statement_part :  '..' expression loop_statement;
+for_loop_statement_part :  expression+ loop_statement;
 cursor_for_loop_statement1 : loop_statement;
 cursor_for_loop_statement2 : '(' select_statement ')' loop_statement;
 raise_statement : RAISE_KEYWORD universal_identifier?;
