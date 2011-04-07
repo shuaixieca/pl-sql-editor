@@ -300,6 +300,8 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
                 stmt = conn.createStatement();
                 ou.OutputMsg("", null, false);
                 ou.OutputMsg(NbBundle.getMessage(Utils.getCommonClass(), "LBL_Compiling", getLocalFile()), null, false);
+                // Issue 10:  When character { and } is included in a string or comment compile fails  
+                stmt.setEscapeProcessing(false);
                 stmt.execute(sb.toString());
                 ou.OutputMsg(Utils.getBundle().getString("LBL_Done"), null, false);
                 ShowErrors(stmt, dob);
