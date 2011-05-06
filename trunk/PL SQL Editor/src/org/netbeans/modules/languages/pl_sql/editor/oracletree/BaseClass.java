@@ -32,6 +32,9 @@ import org.openide.loaders.DataObject;
 import org.openide.text.Line;
 import org.openide.util.Exceptions;
 import org.openide.util.NbBundle;
+import org.openide.util.RequestProcessor;
+import org.openide.util.Task;
+import org.openide.util.TaskListener;
 import org.openide.windows.OutputEvent;
 import org.openide.windows.OutputListener;
 
@@ -266,72 +269,7 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
     }
 
     public void CompileLocalFile() {
-        File selFile = returnLocalFile();
-        FileObject file;
-        DataObject dob = null;
-        Statement stmt = null;
-        OracleConnection conn = null;
-        try {
-            file = FileUtil.toFileObject(selFile);
-            dob = DataObject.find(file);
-            SaveCookie cookie = dob.getCookie(SaveCookie.class);
-            if (cookie != null) {
-                cookie.save();
-            }
-        } catch (IOException ex) {
-            Exceptions.printStackTrace(ex);
-        }
-        if (ou.getIsConnected()) {
-            try {
-                FileReader fr = new FileReader(selFile);
-                BufferedReader br = new BufferedReader(fr);
-                StringBuilder sb = new StringBuilder();
-                String line = null;
-                while ((line = br.readLine()) != null) {
-                    sb.append(line);
-                    //sb.append(System.getProperty("line.separator"));
-                    sb.append('\n');
-                }
-
-                br.close();
-                fr.close();
-
-                conn = ou.getConn();
-                stmt = conn.createStatement();
-                ou.OutputMsg("", null, false);
-                ou.OutputMsg(NbBundle.getMessage(Utils.getCommonClass(), "LBL_Compiling", getLocalFile()), null, false);
-                // Issue 10:  When character { and } is included in a string or comment compile fails  
-                stmt.setEscapeProcessing(false);
-                stmt.execute(sb.toString());
-                ou.OutputMsg(Utils.getBundle().getString("LBL_Done"), null, false);
-                ShowErrors(stmt, dob);
-
-                stmt.close();
-                conn.close();
-            } catch (SQLException ex) {
-                while (ex != null) {
-                    ou.OutputMsg(ex.getMessage(), null, true);
-                    ex = ex.getNextException();
-                }
-            } catch (IOException ex) {
-                Exceptions.printStackTrace(ex);
-            } finally {
-                if (stmt != null) {
-                    try {
-                        stmt.close();
-                    } catch (SQLException ex) {
-                        Exceptions.printStackTrace(ex);
-                    }
-                }
-                if (conn != null) {
-                    try {
-                        conn.close();
-                    } catch (SQLException ex) {
-                        Exceptions.printStackTrace(ex);
-                    }
-                }
-            }
-        }
+        new CompileLocalFileInThread(this).post();
     }
 
     private void ShowErrors(Statement stmt, DataObject dob) throws SQLException {
@@ -462,44 +400,7 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
     }
 
     public void Compile() {
-        OracleConnection conn = null;
-        Statement stmt = null;
-        if (ou.getIsConnected()) {
-            try {
-                conn = ou.getConn();
-                stmt = conn.createStatement();
-                ou.OutputMsg("", null, false);
-                ou.OutputMsg(NbBundle.getMessage(Utils.getCommonClass(), "LBL_CompilingDB",
-                        ObjectType.toString().replace('_', ' ').toLowerCase(), toString()), null, false);
-                stmt.execute(BaseClass.getCompileString(toString(), ObjectType));
-                ou.OutputMsg(Utils.getBundle().getString("LBL_Done"), null, false);
-                ShowErrors(stmt, null);
-                stmt.close();
-                conn.close();
-            } catch (SQLException ex) {
-                while (ex != null) {
-                    ou.OutputMsg(ex.getMessage(), null, true);
-                    ex =
-                            ex.getNextException();
-                }
-
-            } finally {
-                if (stmt != null) {
-                    try {
-                        stmt.close();
-                    } catch (SQLException ex) {
-                        Exceptions.printStackTrace(ex);
-                    }
-                }
-                if (conn != null) {
-                    try {
-                        conn.close();
-                    } catch (SQLException ex) {
-                        Exceptions.printStackTrace(ex);
-                    }
-                }
-            }
-        }
+        new CompileInThread(this).post();
     }
 
     public void Delete() {
@@ -565,5 +466,201 @@ public class BaseClass implements EditCookie, CompileLocalFileCookieInterface,
     public boolean getIsConnected() {
         // to enable Delete action
         return false;
+    }
+
+    class CompileInThread {
+
+        private RequestProcessor rp;
+        private RequestProcessor.Task task;
+        private boolean interrupted = false;
+        private OracleConnection conn = null;
+        private Statement stmt = null;
+
+        public CompileInThread(final BaseClass bc) {
+            rp = new RequestProcessor(bc.toString(), 1);
+
+            task = rp.create(new Runnable() {
+
+                public void run() {
+                    if (ou.getIsConnected()) {
+                        try {
+                            conn = ou.getConn();
+                            stmt = conn.createStatement();
+                            ou.OutputMsg("", null, false);
+                            ou.OutputMsg(NbBundle.getMessage(Utils.getCommonClass(), "LBL_CompilingDB",
+                                    ObjectType.toString().replace('_', ' ').toLowerCase(), bc.toString()), null, false);
+                            stmt.execute(BaseClass.getCompileString(bc.toString(), ObjectType));
+                            ou.OutputMsg(Utils.getBundle().getString("LBL_Done"), null, false);
+                            ShowErrors(stmt, null);
+                            stmt.close();
+                            conn.close();
+                        } catch (SQLException ex) {
+                            while (ex != null) {
+                                ou.OutputMsg(ex.getMessage(), null, true);
+                                ex =
+                                        ex.getNextException();
+                            }
+
+                        } finally {
+                            taskFinish();
+                        }
+                    }
+                }
+            });
+
+            task.addTaskListener(
+                    new TaskListener() {
+
+                        public void taskFinished(Task arg0) {
+                            if (interrupted) {
+                                try {
+                                    stmt.cancel();
+                                } catch (SQLException ex) {
+                                    Exceptions.printStackTrace(ex);
+                                }
+                            }
+                            taskFinish();
+                        }
+                    });
+        }
+
+        private void taskFinish() {
+            if (stmt != null) {
+                try {
+                    stmt.close();
+                } catch (SQLException ex) {
+                    Exceptions.printStackTrace(ex);
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    Exceptions.printStackTrace(ex);
+                }
+            }
+        }
+
+        public void post() {
+            rp.post(task);
+        }
+
+        public void stop() {
+            task.cancel();
+            interrupted = true;
+        }
+    }
+
+    class CompileLocalFileInThread {
+
+        private RequestProcessor rp;
+        private RequestProcessor.Task task;
+        private boolean interrupted = false;
+        private OracleConnection conn = null;
+        private Statement stmt = null;
+
+        public CompileLocalFileInThread(final BaseClass bc) {
+            rp = new RequestProcessor(bc.toString(), 1);
+
+            task = rp.create(new Runnable() {
+
+                public void run() {
+                    File selFile = returnLocalFile();
+                    FileObject file;
+                    DataObject dob = null;
+                    Statement stmt = null;
+                    OracleConnection conn = null;
+                    try {
+                        file = FileUtil.toFileObject(selFile);
+                        dob = DataObject.find(file);
+                        SaveCookie cookie = dob.getCookie(SaveCookie.class);
+                        if (cookie != null) {
+                            cookie.save();
+                        }
+                    } catch (IOException ex) {
+                        Exceptions.printStackTrace(ex);
+                    }
+                    if (ou.getIsConnected()) {
+                        try {
+                            FileReader fr = new FileReader(selFile);
+                            BufferedReader br = new BufferedReader(fr);
+                            StringBuilder sb = new StringBuilder();
+                            String line = null;
+                            while ((line = br.readLine()) != null) {
+                                sb.append(line);
+                                //sb.append(System.getProperty("line.separator"));
+                                sb.append('\n');
+                            }
+
+                            br.close();
+                            fr.close();
+
+                            conn = ou.getConn();
+                            stmt = conn.createStatement();
+                            ou.OutputMsg("", null, false);
+                            ou.OutputMsg(NbBundle.getMessage(Utils.getCommonClass(), "LBL_Compiling", getLocalFile()), null, false);
+                            // Issue 10:  When character { and } is included in a string or comment compile fails  
+                            stmt.setEscapeProcessing(false);
+                            stmt.execute(sb.toString());
+                            ou.OutputMsg(Utils.getBundle().getString("LBL_Done"), null, false);
+                            ShowErrors(stmt, dob);
+
+                            stmt.close();
+                            conn.close();
+                        } catch (SQLException ex) {
+                            while (ex != null) {
+                                ou.OutputMsg(ex.getMessage(), null, true);
+                                ex = ex.getNextException();
+                            }
+                        } catch (IOException ex) {
+                            Exceptions.printStackTrace(ex);
+                        } finally {
+                            taskFinish();
+                        }
+                    }
+                }
+            });
+
+            task.addTaskListener(
+                    new TaskListener() {
+
+                        public void taskFinished(Task arg0) {
+                            if (interrupted) {
+                                try {
+                                    stmt.cancel();
+                                } catch (SQLException ex) {
+                                    Exceptions.printStackTrace(ex);
+                                }
+                            }
+                            taskFinish();
+                        }
+                    });
+        }
+
+        private void taskFinish() {
+            if (stmt != null) {
+                try {
+                    stmt.close();
+                } catch (SQLException ex) {
+                    Exceptions.printStackTrace(ex);
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    Exceptions.printStackTrace(ex);
+                }
+            }
+        }
+
+        public void post() {
+            rp.post(task);
+        }
+
+        public void stop() {
+            task.cancel();
+            interrupted = true;
+        }
     }
 }
