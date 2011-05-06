@@ -20,6 +20,8 @@ import org.netbeans.modules.parsing.spi.Parser;
 @LanguageRegistration(mimeType = "text/pl_sql")
 public class PLSQLLanguage extends DefaultLanguageConfig {
 
+    private static final String LINE_COMMENT_PREFIX = "--";
+
     @Override
     public Language getLexerLanguage() {
         return PLSQLTokenId.getLanguage();
@@ -43,5 +45,10 @@ public class PLSQLLanguage extends DefaultLanguageConfig {
     @Override
     public Formatter getFormatter() {
         return new PLSQLFormatter();
+    }
+
+    @Override
+    public String getLineCommentPrefix() {
+        return LINE_COMMENT_PREFIX;
     }
 }
