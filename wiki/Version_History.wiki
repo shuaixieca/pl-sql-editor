@@ -6,7 +6,7 @@
  * Support !NetBeans 7.0
  * Actions Compile and !CompileLocalFile done in threads
  * Fixing toggle-comment functionality
- * GUI. Migrate !org.jdesktop.layout.GroupLayout -> !javax.swing.GroupLayout
+ * GUI. Migrate org.jdesktop.layout.!GroupLayout -> javax.swing.!GroupLayout
  * Issue 7: Compile Local File does not recognise some syntax
  * Issue 8: Does not work with netbeans 7beta2
  * Issue 9: Not recognized statements
