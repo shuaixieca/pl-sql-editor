@@ -1,6 +1,17 @@
 #summary PL/SQL Editor Version History
 #labels Featured
 
+=== Version 2.2 ^09 May 2011^ === 
+*Changes/Fixes:*
+ * Support !NetBeans 7.0
+ * Actions Compile and CompileLocalFile done in threads
+ * Fixing toggle-comment functionality
+ * GUI. Migrate org.jdesktop.layout.GroupLayout -> javax.swing.GroupLayout
+ * Issue 7: Compile Local File does not recognise some syntax
+ * Issue 8: Does not work with netbeans 7beta2
+ * Issue 9: Not recognized statements
+ * Issue 10: When character { and } is included in a string or comment compile fails
+
 === Version 2.1 ^22 June 2010^ === 
 *Changes/Fixes:*
  * Service release to support !NetBeans 6.9 and JDK 6.
