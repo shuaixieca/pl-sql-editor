@@ -758,7 +758,7 @@ while_loop_statement : WHILE_KEYWORD expression loop_statement;
 for_loop_statement : FOR_KEYWORD identifier IN_KEYWORD REVERSE_KEYWORD? 
                      ((expression (for_loop_statement_part | cursor_for_loop_statement1)) |
                        cursor_for_loop_statement2);
-for_loop_statement_part :  expression+ loop_statement;
+for_loop_statement_part : '..' expression loop_statement;
 cursor_for_loop_statement1 : loop_statement;
 cursor_for_loop_statement2 : '(' select_statement ')' loop_statement;
 raise_statement : RAISE_KEYWORD universal_identifier?;
